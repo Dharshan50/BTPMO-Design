@@ -1051,7 +1051,7 @@
 .card_bdy {
   flex: 1 1 auto;
   padding: 7px;
-  max-height: 120px;
+  max-height: 145px;
   overflow: hidden;
   position: relative;
   transition: max-height 0.8s;
@@ -1145,8 +1145,8 @@
 }
 .notify_bar_no_mess{
     position: absolute;
-    top: 50px;
-    /* left: 17px; */
+    top: -8px;
+    left: 13px;
     display: inline-block;
     padding: 1px 5px;
     min-width: 8px;
@@ -1161,6 +1161,7 @@
     line-height: 16px;
     background-color: #dcdde1;
     color: #000000;
+    z-index: 1;
 }
 
 .proj_notify_content{
@@ -1184,3 +1185,95 @@
     background: #FFF;
 }
 
+.div_1 {
+    /* width: 990px; */
+    margin: auto;
+    /* margin-top: 90px; */
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 41%;
+}
+
+.div_1 i {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.dwn_contents {
+    max-height: 300px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.top_div {
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    width: 300px; 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.div_heder p {
+    margin: 0;
+}
+
+.div_heder {
+    padding: 10px 10px;
+    box-shadow: 0px 2px 10px -2px #cedae0;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.dwn_contents div {
+    padding: 12px 20px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.top_arrow {
+    width: 15px;
+    height: 15px;
+    box-shadow: 0px 2px 10px -2px #cedae0;
+    background-color: white;
+    color: #fff;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -6px;
+    right: 49%;
+}
+
+@keyframes fadeindown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -10%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeinup {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate3d(0, -5%, 0);
+    }
+}
+
+.fadeInDown {
+    animation: fadeindown 0.5s ease forwards;
+}
+
+.fadeInup {
+    animation: fadeinup 0.5s ease forwards;
+}

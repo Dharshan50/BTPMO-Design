@@ -110,6 +110,12 @@ $("[id^='EditRecord_']").on('click', function () {
     // $(document).find("[id^='Save_']").show();
     // $(document).find("[id^='Cancel_']").show();
     $(document).find(`.card_button_${id}`).show();
+    var current_style = $(`#card_bdy_${id}`).css('max-height')
+      if (current_style === "145px") {
+        $(`#card_bdy_${id}`).css({ 'max-height': '145px', 'transition': 'max-height:0.8s' });
+      }
+      
+      $(`#card_bdy_${id}`).css({ 'max-height': '1000px', 'transition': 'max-height:0.8s' });
     $(this).hide()
 })
 
@@ -120,6 +126,11 @@ $("[id^='Save_Rec_']").on('click', function () {
     $(document).find(`.LabelField_${id}`).show();
     $(document).find(`.EditField_${id}`).hide();
     $(document).find(`#EditRecord_${id}`).show();
+    var current_style = $(`#card_bdy_${id}`).css('max-height')
+    if (current_style === "145px") {
+      $(`#card_bdy_${id}`).css({ 'max-height': '145px', 'transition': 'max-height:0.8s' });
+    }
+    $(`#card_arrow_${id}`).trigger('click');
     $(this).hide()
     // $(document).find("[id^='Cancel_']").hide(); 
     $(document).find(`.card_button_${id}`).hide(); 
@@ -132,8 +143,12 @@ $("[id^='Cancel_Rec_']").on('click', function () {
     $(document).find(`.LabelField_${id}`).show();
     $(document).find(`.EditField_${id}`).hide();
     $(document).find(`#EditRecord_${id}`).show();
-    
-    $(document).find("[id^='Save_']").hide();
+    var current_style = $(`#card_bdy_${id}`).css('max-height')
+    if (current_style === "145px") {
+      $(`#card_bdy_${id}`).css({ 'max-height': '145px', 'transition': 'max-height:0.8s' });
+    }
+    $(`#card_arrow_${id}`).trigger('click');
+    // $(document).find("[id^='Save_']").hide();
     $(document).find(`.card_button_${id}`).hide(); 
     $(this).hide()
 })
@@ -533,5 +548,17 @@ $(document).on('click', `[id^='card_arrow_']`, function () {
     }
   })
 
-
-  
+$('#bell').on('click',function(){
+    bell();
+})
+  function bell() {
+   // alert('hi')
+    var bell = document.getElementById('top_div');
+    if (bell.classList.contains('fadeInDown')) {
+        bell.classList.remove('fadeInDown');
+        bell.classList.add('fadeInup');
+    } else {
+        bell.classList.remove('fadeInup');
+        bell.classList.add('fadeInDown');
+    }
+}
