@@ -51,7 +51,29 @@
     background: #fff;
     color: #03365f;
 }
+.card_button{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-bottom: 5px
 
+}
+
+.save_button {
+    background-color: rgb(205, 205, 23);
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 3px;
+}
+
+.submit_button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 3px;
+}
 .rag_status {
     white-space: nowrap;
     text-align: center;
