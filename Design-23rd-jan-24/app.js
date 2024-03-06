@@ -97,17 +97,31 @@ $('#proj_type').on('change',function(){
         $('#create_proj_form').show();
         $('.proj_name_text_box').hide();
         $('.proj_name_slct').show();
-        $('#buttons').show();
+        $('#buttons').show();   
+        $('#proj_currentstage').prop('disabled', true);
+        $('#proj_status').prop('disabled',true);
+        $('#proj_ragstatus').prop('disabled',true);
+        $('#proj_currentstage').val('1');
+        $('#proj_status').val('1');
+        $('#proj_ragstatus').val('1');
+
     }
     else if(val==2){
         $('#create_proj_form').show();
         $('.proj_name_text_box').show();
         $('.proj_name_slct').hide();
         $('#buttons').show();
+        $('#proj_currentstage').prop('disabled', false);
+        $('#proj_status').prop('disabled',false);
+        $('#proj_ragstatus').prop('disabled',false);
+        $('#proj_currentstage').val('0');
+        $('#proj_status').val('0');
+        $('#proj_ragstatus').val('0');
     }
     else if(val==0){
         $('#create_proj_form').hide();
         $('#buttons').hide();
+
     }
 })
 
@@ -418,3 +432,6 @@ $(document).on('click', `[id^='card_arrow_']`, function () {
       arrow_id = "";
     }
   })
+
+
+  

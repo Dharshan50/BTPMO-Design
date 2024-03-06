@@ -554,7 +554,7 @@
 @media (min-width:768px) {
 
     .task_tab+label {
-        width: 101px;
+        width: 148px;
     }
 }
 
@@ -1023,17 +1023,20 @@
     top: 50px;
     /* left: 17px; */
     display: inline-block;
-    padding: 0px 5px;
+    padding: 1px 5px;
     min-width: 8px;
     max-width: 20px;
-    height: 18px;
-    border: 1px solid #fad22f;
+    height: 19px;
+    border: 1px solid #dcdde1;
     border-radius: 50%;
     text-align: center;
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
-    background-color: #fad22f;
-    color: black;
+    background-color: #dcdde1;
+    color: #000000;
 }
+
+
+

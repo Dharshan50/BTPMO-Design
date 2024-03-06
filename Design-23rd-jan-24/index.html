@@ -29,7 +29,7 @@
                     <h2 class="main_title_head">BT PMO Tracker</h2>
                 </div>
                 <div style="margin-top: 10px;" class="notify_bar_icon">
-                    <i class="fa-solid fa-bell" style="color: red; font-size: 20px; cursor: pointer;" title="Notifications"></i><span
+                    <i class="fa-solid fa-bell" style="color: black; font-size: 20px; cursor: pointer;" title="Notifications"></i><span
                         class="notify_bar_no_mess">6</span>
                 </div>
             </div>
@@ -207,7 +207,7 @@
                     <label id="bt_task_tab" for="task_tab5" style="border-right: none;">Needs Help</label>
 
                     <input type="radio" id="task_tab6" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab6">My Project</label>
+                    <label id="bt_task_tab" for="task_tab6">My Projects</label>
                 </div>
 
                 <div class="proj_filter_select">
@@ -1764,7 +1764,7 @@
 
         </div>
         <section class="proj_tsk_mange" id="proj_tsk_manage">
-            <!-- <div>
+            <div>
                 <div class="task_tabwrap mt-4" style="font-size: 13px; margin-right: 25px !important;">
                     <input type="radio" id="proj_task_tab1" name="proj_task_tabGroup1" class="task_tab" checked>
                     <label id="bt_proj_tab" for="proj_task_tab1" style="border-right: none;">Task Assignment</label>
@@ -1776,7 +1776,7 @@
                     <input type="radio" id="proj_task_tab3" name="proj_task_tabGroup1" class="task_tab" checked>
                     <label id="bt_task_tab" for="proj_task_tab3">Not Update</label>
                 </div>
-                <div class="proj_task_filter">
+                <!-- <div class="proj_task_filter">
                     <input type="radio" id="task_inner_tab1" name="task_inner_tabGroup1" class="task_inner_tab"
                         checked>
                     <label id="bt_proj_tab" for="task_inner_tab1" style="border-right: none;">All Projects</label>
@@ -1784,8 +1784,9 @@
                     <input type="radio" id="task_inner_tab2" name="task_inner_tabGroup1" class="task_inner_tab"
                         checked>
                     <label id="bt_task_tab" for="task_inner_tab2" style="border-right: none;">My Projects</label>
-                </div>
-            </div> -->
+                </div> -->
+            </div>
+          
             <div class="proj_tsk_filter">
                 <div class="proj_tsk_crt_btn" style="margin-top: 22px;">
                     <button type="button" class="btn btn-success btn_create_proj" id="assign_tsk"><i
@@ -4399,7 +4400,17 @@
             <div class="pagination_filter_container" style="font-size: 13px;">
                 <div>
                     <span id="current_pagenumber">No.of.Pages : 1</span> |
-                    <span id="total_records">No.of.Records : 5</span>
+                    <span id="total_records">No.of.Records : 5 </span>
+                    <label style="margin-left:10px;">View Records</label>
+                <select id="page_filter" style="margin-bottom:15px;">
+                    <option value="1">1</option>
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                </select>
                 </div>
             </div>
             <div id="pagination_div" style="font-size: 13px;">
@@ -4656,27 +4667,42 @@
                         <div class="col-lg-2 col-12">
                             <select id="proj_currentstage" class="form-select select_box_chng">
                                 <option value="0" selected>Select</option>
-                                <option value="1">Test</option>
+                                <option value="1">Project Charter</option>
+                                <option value="2">Functional Requirement</option>
+                                <option value="3">Development and SIT Validation</option>
+                                <option value="4">BA Testing</option>
+                                <option value="5">User Testing</option>
+                                <option value="6">Change Management</option>
                             </select>
                         </div>
                         <div class="col-lg-2">
-                            <label for="proj_status" class="form-label label_txt_chng">Status</label>
-                        </div>
-                        <div class="col-lg-2">
-                            <select id="proj_status" class="form-select select_box_chng">
-                                <option value="" selected>Select</option>
-                                <option value="1">Test</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-2 col-12">
-                            <label for="proj_ragstatus" class="form-label label_txt_chng">RAG Status</label>
-                        </div>
-                        <div class="col-lg-2 col-12">
-                            <select id="proj_ragstatus" class="form-select select_box_chng">
-                                <option value="0" selected>Select</option>
-                                <option value="1">Test</option>
-                            </select>
-                        </div>
+                                    <label for="proj_status" class="form-label label_txt_chng">Status</label>
+                                </div>
+                                <div class="col-lg-2">
+                                    <select id="proj_status" class="form-select select_box_chng">
+                                        <option value="0" selected>Select</option>
+                                        <option value="1">Not Started</option>
+                                        <option value="1">InProgress </option>
+                                        <option value="1">Needs Help</option>
+                                        <option value="1">Delayed</option>
+                                        <option value="1">On Hold</option>
+                                        <option value="1">Completed</option>
+                                        
+                                    </select>
+                                </div>
+                                <div class="col-lg-2 col-12">
+                                    <label for="proj_ragstatus" class="form-label label_txt_chng">RAG Status</label>
+                                </div>
+                                <div class="col-lg-2 col-12">
+                                    <select id="proj_ragstatus" class="form-select select_box_chng">
+                                        <option value="0" selected>Select</option>
+                                        <option value="1">Not Started</option>
+                                        <option value="1">InProgress</option>
+                                        <option value="1">Attention</option>
+                                        <option value="1">At Risk</option>
+                                    </select>
+                                </div>
+                     
                     </div>
                     <div class="row space_btw_fields">
                         <div class="col-lg-2 col-12">
@@ -5233,5 +5259,7 @@
 
     <script src="app.js"></script>
 </body>
+
+
 
 </html>
