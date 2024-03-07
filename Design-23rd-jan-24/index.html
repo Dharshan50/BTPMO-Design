@@ -2313,9 +2313,13 @@
                                                                 style="margin-bottom:0rem !important;">
                                                                 Responsibility</p>
                                                             <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="text" placeholder="DD-MM-YYYY"
-                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='Sami Chennakesavulu' class="EditField_6">
+                                                                <select id="task_responsibility_${taskObj.taskIdentifier}" class="EditField_6" style="padding: 2px !important;">
+                                                                    <option value="Sami Chennakesavulu" selected>David</option>
+                                                                    <option value="Sangeetha" selected>Sangeetha</option>
+                                                                    <option value="John" selected>John</option>
+                                                                    <option value="David" selected>Sami Chennakesavulu</option>
+                                                                   
+                                                                </select>
                                                                 <label
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
                                                                     class="LabelField_6">Sami Chennakesavulu</label>
@@ -2384,9 +2388,15 @@
                                                                 : </p>
                                                             <p class="card_main_p_tag">
 
-                                                                <input type="text" placeholder="DD-MM-YYYY"
-                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='Not Started' class="EditField_6">
+                                                                <select id="task_status_${taskObj.taskIdentifier}" class="EditField_6"  style="padding: 2px !important;">
+                                                                    <option value="Not Started" selected>Not Started</option>
+                                                                    <option value="In Progress">In Progress</option>
+                                                                    <option value="Completed">Completed</option>
+                                                                    <option value="Completed">Delayed</option>
+                                                                    <option value="Completed">On Hold</option>
+                                                                    <option value="Completed">Pending Assignment</option>
+                                                                    <!-- Add more options here if needed -->
+                                                                </select>
                                                                 <mark
                                                                     style=" width: 100px; text-align: center; background-color: #BDE8F0; color:white;"
                                                                     class="LabelField_6">Not
@@ -2398,9 +2408,15 @@
                                                                 style="margin-bottom:0rem !important;">BA Status
                                                                 : </p>
                                                             <p class="card_main_p_tag">
-                                                                <input type="text" placeholder="DD-MM-YYYY"
-                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='Not Started' class="EditField_6">
+                                                                <select id="task_status_${taskObj.taskIdentifier}" class="EditField_6"  style="padding: 2px !important;">
+                                                                    <option value="Not Started" selected>Not Started</option>
+                                                                    <option value="In Progress">In Progress</option>
+                                                                    <option value="Completed">Completed</option>
+                                                                    <option value="Completed">Delayed</option>
+                                                                    <option value="Completed">On Hold</option>
+                                                                    <option value="Completed">Pending Assignment</option>
+                                                                    <!-- Add more options here if needed -->
+                                                                </select>
                                                                 <mark
                                                                     style=" width: 100px; text-align: center; background-color: #BDE8F0; color:white;"
                                                                     class="LabelField_6">Not
@@ -2412,9 +2428,14 @@
                                                                 style="margin-bottom:0rem !important;">Resp. :
                                                             </p>
                                                             <p class="card_main_p_tag">
-                                                                <input type="text" placeholder="DD-MM-YYYY"
-                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='BA' class="EditField_6">
+                                                                <select id="task_status_${taskObj.taskIdentifier}" class="EditField_6"  style="padding: 2px !important;">
+                                                                    <option value="Not Started" selected>BA</option>
+                                                                    <option value="In Progress">PMO</option>
+                                                                    <option value="Completed">Developer</option>
+                                                                    <option value="Completed">Tester</option>
+                                                                   
+                                                                    <!-- Add more options here if needed -->
+                                                                </select>
                                                                 <label
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
                                                                     class="LabelField_6">BA</label>
