@@ -1201,9 +1201,10 @@
 }
 
 .dwn_contents {
-    max-height: 300px;
-    overflow: auto;
+    max-height: 180px;
+    overflow: scroll;
     overflow-x: hidden;
+    text-align: center;
 }
 
 .top_div {

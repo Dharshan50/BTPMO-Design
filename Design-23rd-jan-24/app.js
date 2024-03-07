@@ -549,6 +549,7 @@ $(document).on('click', `[id^='card_arrow_']`, function () {
   })
 
 $('#bell').on('click',function(){
+
     bell();
 })
   function bell() {
@@ -557,8 +558,11 @@ $('#bell').on('click',function(){
     if (bell.classList.contains('fadeInDown')) {
         bell.classList.remove('fadeInDown');
         bell.classList.add('fadeInup');
-    } else {
+    } else  {
         bell.classList.remove('fadeInup');
         bell.classList.add('fadeInDown');
     }
+
 }
+
+
