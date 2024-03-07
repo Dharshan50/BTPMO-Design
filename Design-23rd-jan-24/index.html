@@ -18,6 +18,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -346,9 +349,8 @@
                                                     <p class="card_head_para me-5">Charter Submission</p>
 
                                                 </div>
-
                                                 <div>
-                                                    <button type="button" title="Edit" id="EditRecord_2"
+                                                    <button type="button" title="Edit" id="Action_0"
                                                         class="btn btn-danger  btn_upd_task"
                                                         style=" margin-top:6px !important; margin-right:5px !important;background-color: #dc3545 !important;">
                                                         Action needed
@@ -6138,9 +6140,9 @@
                             </button>
                         </h2>
                     </div>
-                    <div class="sample1_body" style="max-height:300px; overflow-y:auto;font-size: 12px;"
+                    <div class="sample1_body droppable" style="max-height:300px; overflow-y:auto;font-size: 12px;"
                         id="sample_task1">
-                        <div class="card_main_box show data_${stageObj.stageIdentifier}"
+                        <div class="card_main_box item1 show data_${stageObj.stageIdentifier}" data-order="1"
                             id="card_main_${taskObj.taskIdentifier}">
                             <div class="card_heda">
                                 <div>
@@ -6152,7 +6154,10 @@
                                         style=" margin-top:6px !important; margin-right:5px !important;">
                                         Edit
                                     </button>
-
+                                    <select name="" id="order" class="order_select" value="1">
+                                        <option selected value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
                                     <!-- <button type="button" title="Cancel" id="Cancel_Rec_"
                                         class="btn btn-success  btn_upd_task"
                                         style="display:none; margin-top:6px !important; margin-right:5px !important;">
@@ -6447,7 +6452,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card_main_box show data_${stageObj.stageIdentifier}"
+                        <div class="card_main_box item2 show data_${stageObj.stageIdentifier}" data-order="2"
                             id="card_main_${taskObj.taskIdentifier}">
                             <div class="card_heda">
                                 <div>
@@ -6459,6 +6464,10 @@
                                         style=" margin-top:6px !important; margin-right:5px !important;">
                                         Edit
                                     </button>
+                                    <select name="" id="order" class="order_select" value="2">
+                                        <option value="1">1</option>
+                                        <option selected value="2">2</option>
+                                    </select>
                                     <!-- <button type="button" class="btn btn-success btn_upd_task updt_proj"
                                             id="UpdateTask_${taskObj.taskIdentifier}" name="${taskObj.taskId}">
                                             Update

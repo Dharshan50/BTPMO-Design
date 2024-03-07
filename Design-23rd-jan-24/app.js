@@ -16,7 +16,27 @@ $(document).ready(function () {
     // $('#function_req_3').hide();
     hideProjData()
     $(document).find("[class^='EditField_']").hide();
+    sortElements();
 })
+
+$(document).on('change', '.order_select', function () {
+    var $selectedOption = $(this).find('option:selected');
+    var newOrder = $selectedOption.val();
+    var $parentCard = $(this).closest('.card_main_box'); 
+    $parentCard.attr("data-order", newOrder); 
+    sortElements();
+});
+
+function sortElements() {
+    var $droppable = $(".droppable");
+    var $elements = $droppable.find(".card_main_box");
+
+    $elements.sort(function (a, b) {
+        return parseInt($(a).attr("data-order")) - parseInt($(b).attr("data-order"));
+    });
+
+    $droppable.empty().append($elements);
+}
 
 function date_picker() {
     $('#upd_reviseend_date').datepicker();
@@ -91,6 +111,7 @@ $('#slct_proj_drop').on('change', function () {
     var val = $('#slct_proj_drop').val();
     if (val != "") {
         $('#proj_stage_task').show();
+        sortElements();
     }
     else {
         $('#proj_stage_task').hide();
@@ -114,7 +135,6 @@ $("[id^='EditRecord_']").on('click', function () {
       if (current_style === "145px") {
         $(`#card_bdy_${id}`).css({ 'max-height': '145px', 'transition': 'max-height:0.8s' });
       }
-      
       $(`#card_bdy_${id}`).css({ 'max-height': '1000px', 'transition': 'max-height:0.8s' });
     $(this).hide()
 })
@@ -131,7 +151,6 @@ $("[id^='Save_Rec_']").on('click', function () {
       $(`#card_bdy_${id}`).css({ 'max-height': '145px', 'transition': 'max-height:0.8s' });
     }
     $(`#card_arrow_${id}`).trigger('click');
-    $(this).hide()
     // $(document).find("[id^='Cancel_']").hide(); 
     $(document).find(`.card_button_${id}`).hide(); 
 })
@@ -150,7 +169,7 @@ $("[id^='Cancel_Rec_']").on('click', function () {
     $(`#card_arrow_${id}`).trigger('click');
     // $(document).find("[id^='Save_']").hide();
     $(document).find(`.card_button_${id}`).hide(); 
-    $(this).hide()
+    // $(this).hide()
 })
 
 $('#proj_type').on('change', function () {
@@ -567,18 +586,16 @@ $(document).on('click', `[id^='card_arrow_']`, function () {
     }
     else {
         $('#card_arrow_' + id).removeClass('fa-arrow-circle-UP')
-        $(`#card_bdy_${id}`).css({ 'max-height': '120px', 'transition': 'max-height:0.8s' });
+        $(`#card_bdy_${id}`).css({ 'max-height': '145px', 'transition': 'max-height:0.8s' });
         $('#card_arrow_' + id).addClass('fa-arrow-circle-down')
         arrow_id = "";
     }
   })
 
-$('#bell').on('click',function(){
-
+$('#bell').on('click',function(){ 
     bell();
 })
   function bell() {
-   // alert('hi')
     var bell = document.getElementById('top_div');
     if (bell.classList.contains('fadeInDown')) {
         bell.classList.remove('fadeInDown');
