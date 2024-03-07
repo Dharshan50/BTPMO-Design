@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <div class="btpmo_content_div">
+    <div class="container mt-4 mb-3">
         <div id="tab_content_bt">
             <div class="title_main_head_bar">
                 <div class="proj_title_head" id="proj_title">
@@ -33,16 +33,23 @@
                             style="width: 70px;padding: 0px 10px; margin-top: -5px;">BT PMO Tracker</h2>
                 </div>
                 <div class="div_1">
-                    <i class="fa-solid fa-bell" onclick="bell()"></i><span class="notify_bar_no_mess">3</span>
+                    <i class="fa-solid fa-bell" onclick="bell()"></i><span class="notify_bar_no_mess">10</span>
                     <div class="top_div fadeInup" id="top_div">
                         <!-- <div class="top_arrow"></div> -->
                         <div class="div_heder">
                             <p>Notifications</p>
                         </div>
                         <div class="dwn_contents">
-                            <div>Task ID - FR0001 is <span style="color: red;">Delayed</span> </div>
-                            <div>Task ID - FR0003 is <span style="color: red;">Delayed</span> </div>
-                            <div>Task ID - FR0007 is <span style="color: orange;">Onhold</span></div>
+                            <div class="dw_content_data">Task ID - FR0001 is <span style="color: red;">Delayed</span></div>
+                            <div class="dw_content_data">Task ID - FR0003 is <span style="color: red;">Delayed</span> </div>
+                            <div class="dw_content_data">Task ID - FR0007 is <span style="color: orange;">Onhold</span></div>
+                            <div class="dw_content_data">Task ID - FR0005 is <span style="color: red;">Delayed</span></div>
+                            <div class="dw_content_data">Task ID - FR0006 is <span style="color: red;">Delayed</span></div>
+                            <div class="dw_content_data">Task ID - FR0007 is <span style="color: orange;">Onhold</span></div>
+                            <div class="dw_content_data">Task ID - FR0008 is <span style="color: orange;">Onhold</span></div>
+                            <div class="dw_content_data">Task ID - FR0009 is <span style="color: red;">Delayed</span></div>
+                            <div class="dw_content_data">Task ID - FR0003 is <span style="color: orange;">Onhold</span></div>
+                            <div class="dw_content_data">Task ID - FR0004 is <span style="color: red;">Delayed</span></div>
                         </div>
                     </div>
                 </div>
@@ -3309,7 +3316,7 @@
                                                         <p class="card_head_para">Charter Feasibility</p>
                                                     </div>
                                                     <div>
-                                                        <button type="button" title="Edit" id=""
+                                                        <button type="button" title="Edit" id="editrec"
                                                             class="btn btn-danger  btn_upd_task"
                                                             style=" margin-top:6px !important; margin-right:5px !important;background-color: #dc3545 !important;">
                                                             Action needed
@@ -3330,7 +3337,7 @@
                                                             <p style=" text-align: left;" class="card_main_p_tag">
                                                                 <select
                                                                     id="task_responsibility_${taskObj.taskIdentifier}"
-                                                                    class="EditField"
+                                                                    class="EditField_12"
                                                                     style="padding: 2px !important;">
                                                                     <option value="Sami Chennakesavulu" selected>David
                                                                     </option>
@@ -3343,7 +3350,7 @@
                                                                 </select>
                                                                 <label
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="LabelFiel">Sami Chennakesavulu</label>
+                                                                    class="LabelField_12">Sami Chennakesavulu</label>
                                                             </p>
                                                         </div>
                                                         <div class="card_cnt_inner_odd">
@@ -3353,8 +3360,8 @@
                                                             <p class="card_main_p_tag">
                                                                 <input type="text" placeholder="DD-MM-YYYY"
                                                                     id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='28-02-2024' class="EditField_6">
-                                                                <label class="LabelFiel"
+                                                                    value='28-02-2024' class="EditField_12">
+                                                                <label class="LabelField_12"
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;">28-02-2024</label>
                                                             </p>
                                                         </div>
@@ -3366,10 +3373,10 @@
 
                                                                 <input type="text" placeholder="DD-MM-YYYY"
                                                                     id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='02/03/2024' class="EditFiel" disabled>
+                                                                    value='02/03/2024' class="EditField_12" disabled>
                                                                 <label
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="LabelFiel">02/03/2024</label>
+                                                                    class="LabelField_12">02/03/2024</label>
                                                             </p>
                                                         </div>
                                                         <div class="card_cnt_inner_odd">
@@ -3380,10 +3387,10 @@
 
                                                                 <input type="text" placeholder="DD-MM-YYYY"
                                                                     id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='06/03/2024' class="EditFiel">
+                                                                    value='06/03/2024' class="EditField_12">
                                                                 <label
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="LabelFiel">06/03/2024</label>
+                                                                    class="LabelField_12">06/03/2024</label>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -3396,10 +3403,10 @@
 
                                                                 <input type="text" placeholder="DD-MM-YYYY"
                                                                     id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='3' class="EditFiel">
+                                                                    value='3' class="EditField_12">
                                                                 <label
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="LabelFie">3</label>
+                                                                    class="LabelField_12">3</label>
                                                             </p>
                                                         </div>
 
@@ -3410,7 +3417,7 @@
                                                             <p class="card_main_p_tag">
 
                                                                 <select id="task_status_${taskObj.taskIdentifier}"
-                                                                    class="EditFiel"
+                                                                    class="EditField_12"
                                                                     style="padding: 2px !important;">
                                                                     <option value="Not Started" selected>Not Started
                                                                     </option>
@@ -3424,7 +3431,7 @@
                                                                 </select>
                                                                 <mark
                                                                     style=" width: 100px; text-align: center; background-color: red; color:white;"
-                                                                    class="LabelFiel">Need Help</mark>
+                                                                    class="LabelField_12">Need Help</mark>
                                                             </p>
                                                         </div>
                                                         <div class="card_cnt_inner_even">
@@ -3433,7 +3440,7 @@
                                                                 : </p>
                                                             <p class="card_main_p_tag">
                                                                 <select id="task_status_${taskObj.taskIdentifier}"
-                                                                    class="EditFie"
+                                                                    class="EditField_12"
                                                                     style="padding: 2px !important;">
                                                                     <option value="Not Started" selected>Not Started
                                                                     </option>
@@ -3447,7 +3454,7 @@
                                                                 </select>
                                                                 <mark
                                                                     style=" width: 100px; text-align: center; background-color: #BDE8F0; color:white;"
-                                                                    class="LabelFie">Not
+                                                                    class="LabelField_12">Not
                                                                     Started</mark>
                                                             </p>
                                                         </div>
@@ -3457,7 +3464,7 @@
                                                             </p>
                                                             <p class="card_main_p_tag">
                                                                 <select id="task_status_${taskObj.taskIdentifier}"
-                                                                    class="EditFiel"
+                                                                    class="EditField_12"
                                                                     style="padding: 2px !important;">
                                                                     <option value="Not Started" selected>BA</option>
                                                                     <option value="In Progress">PMO</option>
@@ -3468,7 +3475,7 @@
                                                                 </select>
                                                                 <label
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="LabelFie">BA</label>
+                                                                    class="LabelField_12">BA</label>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -3485,8 +3492,8 @@
                                                                     drafts and send the charter to BA manager. BA
                                                                     manager confirms here (end date) the charter a
                                                                     sufficiently detailed Draft was received'
-                                                                    class="EditFie">
-                                                                <label class="LabelFie"
+                                                                    class="EditField_12">
+                                                                <label class="LabelField_12"
                                                                     style="width : 100%; text-align: left; margin-bottom:0rem !important;">Function
                                                                     drafts and send the charter to BA manager. BA
                                                                     manager confirms here (end date) the charter a
@@ -3501,10 +3508,10 @@
 
                                                                 <input type="text" placeholder="DD-MM-YYYY"
                                                                     id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='28-02-2024' class="EditFiel">
+                                                                    value='28-02-2024' class="EditField_12">
                                                                 <label
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="LabelFie">28-02-2024</label>
+                                                                    class="LabelField_12">28-02-2024</label>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -3516,10 +3523,10 @@
                                                             <p class="card_main_p_tag">
                                                                 <input type="text" placeholder="DD-MM-YYYY"
                                                                     id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='0' class="EditFi">
+                                                                    value='0' class="EditField_12">
                                                                 <label
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="LabelFie">0</label>
+                                                                    class="LabelField_12">0</label>
                                                             </p>
                                                         </div>
 
@@ -3530,10 +3537,10 @@
                                                             <p class="card_main_p_tag">
                                                                 <input type="text" placeholder="DD-MM-YYYY"
                                                                     id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='28-02-2024' class="EditFie">
+                                                                    value='28-02-2024' class="EditField_12">
                                                                 <label
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="LabelFi">28-02-2024</label>
+                                                                    class="LabelField_12">28-02-2024</label>
                                                             </p>
                                                         </div>
                                                         <div class="card_cnt_inner_even">
@@ -3543,10 +3550,10 @@
                                                             <p class="card_main_p_tag">
                                                                 <input type="text" placeholder="DD-MM-YYYY"
                                                                     id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='0' class="EditFi">
+                                                                    value='0' class="EditField_12">
                                                                 <label
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="LabelFi">0</label>
+                                                                    class="LabelField_12">0</label>
                                                             </p>
                                                         </div>
                                                         <div class="card_cnt_inner_odd">
@@ -3556,10 +3563,10 @@
                                                             <p class="card_main_p_tag">
                                                                 <input type="text" placeholder="DD-MM-YYYY"
                                                                     id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='FR0001' class="EditF">
+                                                                    value='FR0001' class="EditField_12">
                                                                 <label
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="LabelFi">FR0001</label>
+                                                                    class="LabelField_12">FR0001</label>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -3571,10 +3578,10 @@
                                                             <p class="card_main_p_tag">
                                                                 <input type="text" placeholder="DD-MM-YYYY"
                                                                     id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='FRDT0016' class="EditF">
+                                                                    value='FRDT0016' class="EditField_12">
                                                                 <label
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="Label">FRDT0016</label>
+                                                                    class="LabelField_12">FRDT0016</label>
                                                             </p>
                                                         </div>
                                                         <div class="card_cnt_inner_odd">
@@ -3585,9 +3592,9 @@
 
                                                                 <input type="text" placeholder="DD-MM-YYYY"
                                                                     id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='test' class="EditFi">
+                                                                    value='test' class="EditField_12">
                                                                 <label style=" width: 100px; text-align: left;"
-                                                                    class="LabelFie">test</label>
+                                                                    class="LabelField_12">test</label>
                                                             </p>
                                                         </div>
                                                         <div class="card_cnt_inner_even">
@@ -3598,10 +3605,10 @@
 
                                                                 <input type="text" placeholder="DD-MM-YYYY"
                                                                     id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='test' class="EditFie">
+                                                                    value='test' class="EditField_12">
                                                                 <label
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="LabelFie">test</label>
+                                                                    class="LabelField_12">test</label>
                                                             </p>
                                                         </div>
                                                         <div class="card_cnt_inner_odd">
@@ -3611,10 +3618,10 @@
                                                             <p class="card_main_p_tag">
                                                                 <input type="text" placeholder="DD-MM-YYYY"
                                                                     id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='Nil' class="EditFie">
+                                                                    value='Nil' class="EditField_12">
                                                                 <label
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="LabelFie">Nil</label>
+                                                                    class="LabelField_12">Nil</label>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -3626,10 +3633,10 @@
                                                             <p class="card_main_p_tag">
                                                                 <input type="text" placeholder="DD-MM-YYYY"
                                                                     id="task_clousureDate_${taskObj.taskIdentifier}"
-                                                                    value='Sample Content' class="EditF">
+                                                                    value='Sample Content' class="EditField_12">
                                                                 <label
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="LabelFie">Sample Comment</label>
+                                                                    class="LabelField_12">Sample Comment</label>
                                                             </p>
                                                         </div>
                                                         <i id="card_arrow_13"
@@ -3644,10 +3651,370 @@
                                         </div>
                                     </td>
                                 </tr>
+                                <tr class="action_need_proj_2">
+                                    <td><i class="fa-solid fa-plus"
+                                            style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"
+                                            id="view_tsk_data_15" title="View Task"></i></td>
+                                    <td><mark style="background-color: #ffeaa7;" class="rag_status">2</mark></td>
+                                    <td>BTMPO</td>
+                                    <td>Project Charter</td>
+                                    <td><mark style="background-color: Red;" class="rag_status">Need Help</mark></td>
+                                    <td>Sami Chennakesavulu</td>
+                                    <td>Sandeep</td>
+                                    <td>02/03/2024</td>
+                                    <td>30/03/2024</td>
+                                    <td>05/03/2024</td>
+                                    <td>31/03/2024</td>
+                                </tr>
+                                <tr id="proj_tsk_data_15">
+                                    <td colspan="13">
+                                        <div class="task_main_body" style="max-height:300px; overflow-y:auto">
+                                            <div class="card_main_box show data_${stageObj.stageIdentifier}"
+                                                id="card_main_${taskObj.taskIdentifier}">
+                                                <div class="card_heda">
+                                                    <div>
+                                                        <p class="card_head_para">Charter Feasibility</p>
+                                                    </div>
+                                                    <div>
+                                                        <button type="button" title="Edit" id="editrec"
+                                                            class="btn btn-danger  btn_upd_task"
+                                                            style=" margin-top:6px !important; margin-right:5px !important;background-color: #dc3545 !important;">
+                                                            Action needed
+                                                        </button>
+                                                        <button type="button" title="Edit" id="editrec"
+                                                            class="btn btn-success  btn_upd_task"
+                                                            style=" margin-top:6px !important; margin-right:5px !important;">
+                                                            Edit
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="card_bdy" id="card_bdy_16">
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Responsibility</p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag">
+                                                                <select
+                                                                    id="task_responsibility_${taskObj.taskIdentifier}"
+                                                                    class="EditField_12"
+                                                                    style="padding: 2px !important;">
+                                                                    <option value="Sami Chennakesavulu" selected>David
+                                                                    </option>
+                                                                    <option value="Sangeetha" selected>Sangeetha
+                                                                    </option>
+                                                                    <option value="John" selected>John</option>
+                                                                    <option value="David" selected>Sami Chennakesavulu
+                                                                    </option>
+
+                                                                </select>
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_12">Sami Chennakesavulu</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Charter Signoff DeadLine</p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='28-02-2024' class="EditField_12">
+                                                                <label class="LabelField_12"
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;">28-02-2024</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Start
+                                                                Date : </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='02/03/2024' class="EditField_12" disabled>
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_12">02/03/2024</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">End
+                                                                Date </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='06/03/2024' class="EditField_12">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_12">06/03/2024</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Estimated Man Days </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='3' class="EditField_12">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_12">3</label>
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Status
+                                                                : </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <select id="task_status_${taskObj.taskIdentifier}"
+                                                                    class="EditField_12"
+                                                                    style="padding: 2px !important;">
+                                                                    <option value="Not Started" selected>Not Started
+                                                                    </option>
+                                                                    <option value="In Progress">In Progress</option>
+                                                                    <option value="Completed">Completed</option>
+                                                                    <option value="Completed">Delayed</option>
+                                                                    <option value="Completed">On Hold</option>
+                                                                    <option value="Completed">Pending Assignment
+                                                                    </option>
+                                                                    <!-- Add more options here if needed -->
+                                                                </select>
+                                                                <mark
+                                                                    style=" width: 100px; text-align: center; background-color: red; color:white;"
+                                                                    class="LabelField_12">Need Help</mark>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">BA Status
+                                                                : </p>
+                                                            <p class="card_main_p_tag">
+                                                                <select id="task_status_${taskObj.taskIdentifier}"
+                                                                    class="EditField_12"
+                                                                    style="padding: 2px !important;">
+                                                                    <option value="Not Started" selected>Not Started
+                                                                    </option>
+                                                                    <option value="In Progress">In Progress</option>
+                                                                    <option value="Completed">Completed</option>
+                                                                    <option value="Completed">Delayed</option>
+                                                                    <option value="Completed">On Hold</option>
+                                                                    <option value="Completed">Pending Assignment
+                                                                    </option>
+                                                                    <!-- Add more options here if needed -->
+                                                                </select>
+                                                                <mark
+                                                                    style=" width: 100px; text-align: center; background-color: #BDE8F0; color:white;"
+                                                                    class="LabelField_12">Not
+                                                                    Started</mark>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd on">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Resp. :
+                                                            </p>
+                                                            <p class="card_main_p_tag">
+                                                                <select id="task_status_${taskObj.taskIdentifier}"
+                                                                    class="EditField_12"
+                                                                    style="padding: 2px !important;">
+                                                                    <option value="Not Started" selected>BA</option>
+                                                                    <option value="In Progress">PMO</option>
+                                                                    <option value="Completed">Developer</option>
+                                                                    <option value="Completed">Tester</option>
+
+                                                                    <!-- Add more options here if needed -->
+                                                                </select>
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_12">BA</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even" style="width:70% !important;">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Task
+                                                                Description:</p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='Function
+                                                                    drafts and send the charter to BA manager. BA
+                                                                    manager confirms here (end date) the charter a
+                                                                    sufficiently detailed Draft was received'
+                                                                    class="EditField_12">
+                                                                <label class="LabelField_12"
+                                                                    style="width : 100%; text-align: left; margin-bottom:0rem !important;">Function
+                                                                    drafts and send the charter to BA manager. BA
+                                                                    manager confirms here (end date) the charter a
+                                                                    sufficiently detailed Draft was received</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Revised
+                                                                Start Date : </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='28-02-2024' class="EditField_12">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_12">28-02-2024</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Revised
+                                                                Man Days : </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='0' class="EditField_12">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_12">0</label>
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="card_cnt_inner_odd on">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Revised
+                                                                End Date : </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='28-02-2024' class="EditField_12">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_12">28-02-2024</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Allocation Per Day : </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='0' class="EditField_12">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_12">0</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Task ID
+                                                                : </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='FR0001' class="EditField_12">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_12">FR0001</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Dependent TaskID : </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='FRDT0016' class="EditField_12">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_12">FRDT0016</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">BT
+                                                                Comments : </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='test' class="EditField_12">
+                                                                <label style=" width: 100px; text-align: left;"
+                                                                    class="LabelField_12">test</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">PM
+                                                                Comments : </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='test' class="EditField_12">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_12">test</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Revised Fields </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='Nil' class="EditField_12">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_12">Nil</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Revised Date
+                                                                Comment </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='Sample Content' class="EditField_12">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_12">Sample Comment</label>
+                                                            </p>
+                                                        </div>
+                                                        <i id="card_arrow_16"
+                                                            class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i>
+                                                    </div>
+                                                    <div class="card_button" style="display: none;">
+                                                        <button class="save_button">Save</button>
+                                                        <button class="submit_button">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
                                 <tr class="on_hold_proj">
                                     <td><i class="fa-solid fa-plus"
                                             style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"
-                                            id="view_tsk_data_11" title="View Task"></i></td>
+                                            id="view_tsk_data_12" title="View Task"></i></td>
                                     <td><mark style="background-color: #ffeaa7;" class="rag_status">2</mark></td>
                                     <td>BTMPO</td>
                                     <td>Project Charter</td>
@@ -3988,6 +4355,361 @@
                                                             </p>
                                                         </div>
                                                         <i id="card_arrow_14"
+                                                            class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i>
+                                                    </div>
+                                                    <div class="card_button" style="display: none;">
+                                                        <button class="save_button">Save</button>
+                                                        <button class="submit_button">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="delayed_proj">
+                                    <td><i class="fa-solid fa-plus"
+                                            style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"
+                                            id="view_tsk_data_13" title="View Task"></i></td>
+                                    <td><mark style="background-color: #ffeaa7;" class="rag_status">2</mark></td>
+                                    <td>BTMPO</td>
+                                    <td>Project Charter</td>
+                                    <td><mark style="background-color: #ff9ff3;" class="rag_status">Delayed</mark></td>
+                                    <td>Sami Chennakesavulu</td>
+                                    <td>Sandeep</td>
+                                    <td>02/03/2024</td>
+                                    <td>30/03/2024</td>
+                                    <td>05/03/2024</td>
+                                    <td>31/03/2024</td>
+                                </tr>
+                                <tr id="proj_tsk_data_13">
+                                    <td colspan="13">
+                                        <div class="task_main_body" style="max-height:300px; overflow-y:auto">
+                                            <div class="card_main_box show data_${stageObj.stageIdentifier}"
+                                                id="card_main_${taskObj.taskIdentifier}">
+                                                <div class="card_heda">
+                                                    <div>
+                                                        <p class="card_head_para">Charter Feasibility</p>
+                                                    </div>
+                                                    <div>
+                                                        <button type="button" title="Edit" id="EditField_15"
+                                                            class="btn btn-success  btn_upd_task"
+                                                            style=" margin-top:6px !important; margin-right:5px !important;">
+                                                            Edit
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="card_bdy" id="card_bdy_15">
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Responsibility</p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag">
+                                                                <select
+                                                                    id="task_responsibility_${taskObj.taskIdentifier}"
+                                                                    class="EditField_15"
+                                                                    style="padding: 2px !important;">
+                                                                    <option value="Sami Chennakesavulu" selected>David
+                                                                    </option>
+                                                                    <option value="Sangeetha" selected>Sangeetha
+                                                                    </option>
+                                                                    <option value="John" selected>John</option>
+                                                                    <option value="David" selected>Sami Chennakesavulu
+                                                                    </option>
+
+                                                                </select>
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_15">Sami Chennakesavulu</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Charter Signoff DeadLine</p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='28-02-2024' class="EditField_15">
+                                                                <label class="LabelField_15"
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;">28-02-2024</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Start
+                                                                Date : </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='02/03/2024' class="EditField_15" disabled>
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_15">02/03/2024</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">End
+                                                                Date </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='06/03/2024' class="EditField_15">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="EditField_15">06/03/2024</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Estimated Man Days </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='3' class="EditField_15">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="EditField_15">3</label>
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Status
+                                                                : </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <select id="task_status_${taskObj.taskIdentifier}"
+                                                                    class="EditField_15"
+                                                                    style="padding: 2px !important;">
+                                                                    <option value="Not Started" >Not Started
+                                                                    </option>
+                                                                    <option value="In Progress">In Progress</option>
+                                                                    <option value="Completed">Completed</option>
+                                                                    <option value="Completed">Delayed</option>
+                                                                    <option value="Completed" selected>On Hold</option>
+                                                                    <option value="Completed">Pending Assignment
+                                                                    </option>
+                                                                    <!-- Add more options here if needed -->
+                                                                </select>
+                                                                <mark
+                                                                    style=" width: 100px; text-align: center; background-color: orange; color:white;"
+                                                                    class="EditField_15">On Hold</mark>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">BA Status
+                                                                : </p>
+                                                            <p class="card_main_p_tag">
+                                                                <select id="task_status_${taskObj.taskIdentifier}"
+                                                                    class="EditField_15"
+                                                                    style="padding: 2px !important;">
+                                                                    <option value="Not Started" selected>Not Started
+                                                                    </option>
+                                                                    <option value="In Progress">In Progress</option>
+                                                                    <option value="Completed">Completed</option>
+                                                                    <option value="Completed">Delayed</option>
+                                                                    <option value="Completed">On Hold</option>
+                                                                    <option value="Completed">Pending Assignment
+                                                                    </option>
+                                                                    <!-- Add more options here if needed -->
+                                                                </select>
+                                                                <mark
+                                                                    style=" width: 100px; text-align: center; background-color: #BDE8F0; color:white;"
+                                                                    class="LabelField_15">Not
+                                                                    Started</mark>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd on">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Resp. :
+                                                            </p>
+                                                            <p class="card_main_p_tag">
+                                                                <select id="task_status_${taskObj.taskIdentifier}"
+                                                                    class="EditField_15"
+                                                                    style="padding: 2px !important;">
+                                                                    <option value="Not Started" selected>BA</option>
+                                                                    <option value="In Progress">PMO</option>
+                                                                    <option value="Completed">Developer</option>
+                                                                    <option value="Completed">Tester</option>
+
+                                                                    <!-- Add more options here if needed -->
+                                                                </select>
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_15">BA</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even" style="width:70% !important;">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Task
+                                                                Description:</p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='Function
+                                                                    drafts and send the charter to BA manager. BA
+                                                                    manager confirms here (end date) the charter a
+                                                                    sufficiently detailed Draft was received'
+                                                                    class="EditField_15">
+                                                                <label class="EditField_15"
+                                                                    style="width : 100%; text-align: left; margin-bottom:0rem !important;">Function
+                                                                    drafts and send the charter to BA manager. BA
+                                                                    manager confirms here (end date) the charter a
+                                                                    sufficiently detailed Draft was received</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Revised
+                                                                Start Date : </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='28-02-2024' class="EditField_15">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_15">28-02-2024</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Revised
+                                                                Man Days : </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='0' class="EditField_15">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_15">0</label>
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="card_cnt_inner_odd on">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Revised
+                                                                End Date : </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='28-02-2024' class="EditField_15">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_15">28-02-2024</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Allocation Per Day : </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='0' class="EditField_15">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_15">0</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Task ID
+                                                                : </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='FR0001' class="EditField_15">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_15">FR0001</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Dependent TaskID : </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='FRDT0016' class="EditField_15">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_15">FRDT0016</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">BT
+                                                                Comments : </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='test' class="EditField_15">
+                                                                <label style=" width: 100px; text-align: left;"
+                                                                    class="LabelField_15">test</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">PM
+                                                                Comments : </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='test' class="EditField_15">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_15">test</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Revised Fields </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='Nil' class="EditField_15">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_15">Nil</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">Revised Date
+                                                                Comment </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    id="task_clousureDate_${taskObj.taskIdentifier}"
+                                                                    value='Sample Content' class="EditField_15">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_15">Sample Comment</label>
+                                                            </p>
+                                                        </div>
+                                                        <i id="card_arrow_15"
                                                             class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i>
                                                     </div>
                                                     <div class="card_button" style="display: none;">
@@ -6146,6 +6868,7 @@
                                         style=" margin-top:6px !important; margin-right:5px !important;">
                                         Edit
                                     </button>
+                                    <label for="" style="margin-top: 3px; color: #2f3640; font-weight: 500;">Task Order: </label>
                                     <select name="" id="order" class="order_select" value="1">
                                         <option selected value="1">1</option>
                                         <option value="2">2</option>
@@ -6456,6 +7179,7 @@
                                         style=" margin-top:6px !important; margin-right:5px !important;">
                                         Edit
                                     </button>
+                                    <label for="" style="margin-top: 3px; color: #2f3640; font-weight: 500;">Task Order: </label>
                                     <select name="" id="order" class="order_select" value="2">
                                         <option value="1">1</option>
                                         <option selected value="2">2</option>

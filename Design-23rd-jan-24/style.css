@@ -1124,10 +1124,10 @@
 /* // END CARD */
 
 .prj_title_head{
-    border-bottom: 2px solid #08305c;
+    border-bottom: 1px solid #08305c;
     /* padding-bottom: 10px; */
     /* padding-top: 10px; */
-    width: 25%;
+    width: 100%;
     margin-bottom: 15px;
 }
 .btpmo_content_div{
@@ -1203,7 +1203,7 @@
     max-height: 180px;
     overflow: scroll;
     overflow-x: hidden;
-    text-align: center;
+    text-align: left;
     font-size: 12px;
 }
 
@@ -1215,7 +1215,7 @@
     right: 20px;
     width: 300px; 
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .div_heder p {
