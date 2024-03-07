@@ -617,10 +617,11 @@ $('#proj_task_tab1').on('click',function(){
     $('.inprogress_proj').show();
     $('.action_need_proj').hide();
     $('.on_hold_proj').hide();
-    $('.pending_proj').show();
+    $('.pending_proj').hide();
     $('.not_start_proj').show();
     $('.delayed_proj').hide();
     $('.action_need_proj_2').hide();
+    $('.action_need_proj_3').hide();
     hideProjData();
 })
 $('.dw_content_data').on('click',function(){
@@ -637,10 +638,12 @@ $('#proj_task_tab2').on('click',function(){
     $('.action_need_proj').show();
     $('.on_hold_proj').show();
     $('.pending_proj').hide();
+    $('.pending_proj').hide();
     $('.not_start_proj').hide();
     $('.e_staff_proj').hide();
     $('.action_need_proj_2').hide();
     $('.delayed_proj').show();
+    $('.action_need_proj_3').hide();
     hideProjData();
     
 })
@@ -652,6 +655,49 @@ $('#proj_task_tab3').on('click',function(){
     $('.pending_proj').hide();
     $('.not_start_proj').hide();
     $('.e_staff_proj').hide();
+    $('.pending_proj').hide();
     $('.delayed_proj').hide();
+    $('.action_need_proj_3').hide();
+    hideProjData();
+})
+$('#proj_task_tab4').on('click',function(){
+    $('.inprogress_proj').hide();
+    $('.action_need_proj').hide();
+    $('.action_need_proj_2').hide();
+    $('.on_hold_proj').hide();
+    $('.pending_proj').hide();
+    $('.not_start_proj').hide();
+    $('.e_staff_proj').hide();
+    $('.pending_proj').hide();
+    $('.delayed_proj').hide();
+    $('.action_need_proj_3').hide();
+    $('.on_hold_proj_2').show();
+    hideProjData();
+})
+$('#proj_task_tab5').on('click',function(){
+    $('.inprogress_proj').hide();
+    $('.action_need_proj').hide();
+    $('.action_need_proj_2').hide();
+    $('.on_hold_proj').hide();
+    $('.pending_proj').hide();
+    $('.pending_proj').show();
+    $('.not_start_proj').hide();
+    $('.e_staff_proj').hide();
+    $('.delayed_proj').hide();
+    $('.action_need_proj_3').hide();
+    $('.on_hold_proj_2').hide();
+    hideProjData();
+})
+$('#proj_task_tab6').on('click',function(){
+    $('.inprogress_proj').hide();
+    $('.action_need_proj').hide();
+    $('.action_need_proj_2').hide();
+    $('.on_hold_proj').hide();
+    $('.pending_proj').hide();
+    $('.pending_proj').hide();
+    $('.not_start_proj').hide();
+    $('.e_staff_proj').hide();
+    $('.delayed_proj').hide();
+    $('.action_need_proj_3').show();
     hideProjData();
 })
