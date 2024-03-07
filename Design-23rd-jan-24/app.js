@@ -259,7 +259,8 @@ $('#tab2').on('click', function () {
     $('#proj_summary_tbl').hide();
     $('#pagination_container').show();
     $('#proj_tsk_manage').show();
-
+    $('#proj_task_tab1').get(0).click();
+    hideProjData();
 })
 $('.retrn_main_page').on('click', function () {
     closeContent();
@@ -590,3 +591,29 @@ $('#bell').on('click',function(){
 }
 
 
+$('#proj_task_tab1').on('click',function(){
+    $('.inprogress_proj').show();
+    $('.action_need_proj').hide();
+    $('.on_hold_proj').hide();
+    $('.pending_proj').show();
+    $('.not_start_proj').show();
+    hideProjData();
+})
+$('#proj_task_tab2').on('click',function(){
+    $('.inprogress_proj').hide();
+    $('.action_need_proj').show();
+    $('.on_hold_proj').show();
+    $('.pending_proj').hide();
+    $('.not_start_proj').hide();
+    $('.e_staff_proj').hide();
+    hideProjData();
+})
+$('#proj_task_tab3').on('click',function(){
+    $('.inprogress_proj').hide();
+    $('.action_need_proj').show();
+    $('.on_hold_proj').hide();
+    $('.pending_proj').hide();
+    $('.not_start_proj').hide();
+    $('.e_staff_proj').hide();
+    hideProjData();
+})
