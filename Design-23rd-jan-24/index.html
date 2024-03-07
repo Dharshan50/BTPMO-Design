@@ -33,23 +33,23 @@
                             style="width: 70px;padding: 0px 10px; margin-top: -5px;">BT PMO Tracker</h2>
                 </div>
                 <div class="div_1">
-                    <i class="fa-solid fa-bell" onclick="bell()" style="color: #341f97;"></i><span class="notify_bar_no_mess">10</span>
+                    <i class="fa-solid fa-bell" onclick="bell()"></i><span class="notify_bar_no_mess">10</span>
                     <div class="top_div fadeInup" id="top_div">
                         <!-- <div class="top_arrow"></div> -->
                         <div class="div_heder">
                             <p>Notifications</p>
                         </div>
                         <div class="dwn_contents">
-                            <div>Task ID - FR0001 is <span style="color: red;">Delayed</span> </div>
-                            <div>Task ID - FR0003 is <span style="color: red;">Delayed</span> </div>
-                            <div>Task ID - FR0007 is <span style="color: orange;">Onhold</span></div>
-                            <div>Task ID - FR0003 is <span style="color: red;">Delayed</span> </div>
-                            <div>Task ID - FR0003 is <span style="color: red;">Delayed</span> </div>
-                            <div>Task ID - FR0007 is <span style="color: orange;">Onhold</span></div>
-                            <div>Task ID - FR0010 <span style="color: red;">Needs Help</span></div>
-                            <div>Task ID - FR0007 is <span style="color: orange;">Onhold</span></div>
-                            <div>Task ID - FR0005 <span style="color: red;">Needs Help</span></div>
-                            <div>Task ID - FR0007 is <span style="color: orange;">Onhold</span></div>
+                            <div class="dw_content_data">Task ID - FR0001 is <span style="color: red;">Delayed</span></div>
+                            <div class="dw_content_data">Task ID - FR0003 is <span style="color: red;">Delayed</span> </div>
+                            <div class="dw_content_data">Task ID - FR0007 is <span style="color: orange;">Onhold</span></div>
+                            <div class="dw_content_data">Task ID - FR0005 is <span style="color: red;">Delayed</span></div>
+                            <div class="dw_content_data">Task ID - FR0006 is <span style="color: red;">Delayed</span></div>
+                            <div class="dw_content_data">Task ID - FR0007 is <span style="color: orange;">Onhold</span></div>
+                            <div class="dw_content_data">Task ID - FR0008 is <span style="color: orange;">Onhold</span></div>
+                            <div class="dw_content_data">Task ID - FR0009 is <span style="color: red;">Delayed</span></div>
+                            <div class="dw_content_data">Task ID - FR0003 is <span style="color: orange;">Onhold</span></div>
+                            <div class="dw_content_data">Task ID - FR0004 is <span style="color: red;">Delayed</span></div>
                         </div>
                     </div>
                 </div>
@@ -318,9 +318,9 @@
                         <tbody style="font-size: 12px;">
                             <tr class="action_needed_row" style="position: relative;">
                                 <td><i class="fa-solid fa-triangle-exclamation"
-                                        style="color: red; position: absolute; font-size: 15px; margin-top: 2px;margin-left: -6px; cursor: pointer;"
+                                        style="color: red; position: absolute; font-size: 15px; margin-top: 2px; cursor: pointer;"
                                         title="Action Needed"></i><i class="fa-solid fa-plus"
-                                        style="font-size: 20px; margin-left: 15px !important; color: #447E32; cursor: pointer;"
+                                        style="font-size: 20px; margin-left: 20px !important; color: #447E32; cursor: pointer;"
                                         id="view_tsk_data_1" title="View Task"></i></td>
                                 <td><mark style="background-color: #ffeaa7;" class="rag_status">2</mark></td>
                                 <td>E-Procurrement</td>
@@ -1960,9 +1960,9 @@
                             </tr>
                             <tr class="action_requested_row" style="position: relative;">
                                 <td><i class="fa-solid fa-circle-info"
-                                        style="color: green; position: absolute; font-size: 15px; margin-top: 5px; margin-left: -6px;cursor: pointer;"
+                                        style="color: green; position: absolute; font-size: 15px; margin-top: 2px; cursor: pointer;"
                                         title="Action requested"></i><i class="fa-solid fa-plus"
-                                        style="font-size: 20px; margin-left: 15px !important; color: #447E32; cursor: pointer;"
+                                        style="font-size: 20px; margin-left: 20px !important; color: #447E32; cursor: pointer;"
                                         id="view_tsk_data_3" title="View Task"></i></td>
                                 <td><mark style="background-color: #ffeaa7;" class="rag_status">2</mark></td>
                                 <td>E-Procurrement</td>
@@ -2627,12 +2627,6 @@
 
                     <input type="radio" id="proj_task_tab3" name="proj_task_tabGroup1" class="proj_task_tab" checked>
                     <label id="bt_task_tab" for="proj_task_tab3">Not Update</label>
-
-                    <input type="radio" id="proj_task_tab4" name="proj_task_tabGroup1" class="proj_task_tab" checked>
-                    <label id="bt_task_tab" for="proj_task_tab4" style="border-left: none;">Pending Assignment</label>
-
-                    <input type="radio" id="proj_task_tab5" name="proj_task_tabGroup1" class="proj_task_tab" checked>
-                    <label id="bt_task_tab" for="proj_task_tab5" style="border-left: none;">On Hold</label>
                 </div>
                 <!-- <div class="proj_task_filter">
                     <input type="radio" id="task_inner_tab1" name="task_inner_tabGroup1" class="task_inner_tab"
