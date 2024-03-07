@@ -1160,6 +1160,7 @@
     background-color: #dcdde1;
     color: #000000;
     z-index: 1;
+    border: 1px solid #747d8c;
 }
 
 .proj_notify_content{
@@ -1212,9 +1213,9 @@
     position: absolute;
     top: 18px;
     right: 20px;
-    z-index: 1;
-    width: 150px; 
+    width: 300px; 
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: -1;
 }
 
 .div_heder p {
@@ -1232,6 +1233,7 @@
 .dwn_contents div {
     padding: 12px 20px;
     border-bottom: 1px solid #dfdfdf;
+    cursor: pointer;
 }
 
 .top_arrow {

@@ -10,6 +10,7 @@ $(document).ready(function () {
     $('#prj_tsk_assign').hide();
     $('#proj_stage_task').hide();
     $('#create_proj_form').hide();
+    
     // $('#project_charter_data_3').hide();   
     // $('#project_charter_data_4').hide();
     // $('#project_charter_data_5').hide();
@@ -600,11 +601,12 @@ $('#bell').on('click',function(){
     if (bell.classList.contains('fadeInDown')) {
         bell.classList.remove('fadeInDown');
         bell.classList.add('fadeInup');
+        $('#top_div').css({'z-index':'-1'});
     } else  {
         bell.classList.remove('fadeInup');
         bell.classList.add('fadeInDown');
+        $('#top_div').css({'z-index':'1'});
     }
-
 }
 
 
