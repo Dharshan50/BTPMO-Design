@@ -17,7 +17,6 @@ $(document).ready(function () {
     hideProjData()
     $(document).find("[class^='EditField_']").hide();
     sortElements();
-    $('#top_div').hide();
 })
 
 $(document).on('change', '.order_select', function () {
@@ -600,11 +599,9 @@ $('#bell').on('click',function(){
     if (bell.classList.contains('fadeInDown')) {
         bell.classList.remove('fadeInDown');
         bell.classList.add('fadeInup');
-        $('#top_div').show();
     } else  {
         bell.classList.remove('fadeInup');
         bell.classList.add('fadeInDown');
-        $('#top_div').hide();
     }
 
 }
