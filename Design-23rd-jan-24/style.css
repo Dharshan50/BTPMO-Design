@@ -1141,20 +1141,21 @@
     display: flex;
     justify-content: space-between;
 }
+
 .notify_bar_no_mess{
     position: absolute;
     top: -8px;
     left: 15px;
     display: inline-block;
-    padding: 1px 5px;
-    min-width: 8px;
-    max-width: 20px;
+    padding: 1px 2px;
+    min-width: 10px;
+    max-width: 25px;
     height: 19px;
     border: 1px solid #dcdde1;
     border-radius: 50%;
     text-align: center;
     font-family: "Roboto", "Arial", sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 400;
     line-height: 16px;
     background-color: #dcdde1;
@@ -1200,7 +1201,7 @@
 }
 
 .dwn_contents {
-    max-height: 180px;
+    max-height: 216px;
     overflow: scroll;
     overflow-x: hidden;
     text-align: left;
