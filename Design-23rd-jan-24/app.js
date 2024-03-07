@@ -204,40 +204,53 @@ $('#tab3').on('click', function () {
     $('#proj_summary_tbl').hide();
     $('#pagination_container').show();
     $('#task_tab1').get(0).click();
+    hideProjData();
 })
 $('#task_tab1').on('click', function () {
     $('.action_needed_row').hide();
     $('#proj_tsk_data_1').hide();
     $('.action_requested_row').show();
+    $('#proj_tsk_data_10').hide();
+    $('#todo_task').show();
 })
 $('#task_tab2').on('click', function () {
     $('.action_needed_row').hide();
     $('.action_requested_row').show();
     $('#proj_tsk_data_3').hide();
     $('#proj_tsk_data_1').hide();
+    $('#proj_tsk_data_10').hide();
+    $('#todo_task').hide();
 })
 $('#task_tab3').on('click', function () {
     $('.action_needed_row').hide();
     $('.action_requested_row').show();
     $('#proj_tsk_data_3').hide();
     $('#proj_tsk_data_1').hide();
+    $('#proj_tsk_data_10').hide();
+    $('#todo_task').hide();
 })
 $('#task_tab4').on('click', function () {
     $('.action_needed_row').hide();
     $('.action_requested_row').show();
     $('#proj_tsk_data_3').hide();
     $('#proj_tsk_data_1').hide();
+    $('#proj_tsk_data_10').hide();
+    $('#todo_task').hide();
 })
 $('#task_tab6').on('click', function () {
     $('.action_needed_row').hide();
     $('.action_requested_row').show();
     $('#proj_tsk_data_3').hide();
     $('#proj_tsk_data_1').hide();
+    $('#proj_tsk_data_10').hide();
+    $('#todo_task').hide();
 })
 $('#task_tab5').on('click', function () {
     $('.action_needed_row').show();
     $('.action_requested_row').hide();
     $('#proj_tsk_data_3').hide();
+    $('#proj_tsk_data_10').hide();
+    $('#todo_task').hide();
 })
 
 $('#tab2').on('click', function () {
@@ -501,9 +514,10 @@ var click = 0;
 
 // })
 
-var lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10.11, 12, 13, 14];
+
 
 function hideProjData() {
+    var lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11, 12, 13, 14];
     for (var i = 0; i <= lst.length; i++) {
         $(`#proj_tsk_data_${lst[i]}`).hide();
         $(`.card_button_${lst[i]}`).hide();
