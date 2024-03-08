@@ -622,7 +622,9 @@ $('#proj_task_tab1').on('click',function(){
     $('.delayed_proj').hide();
     $('.action_need_proj_2').hide();
     $('.action_need_proj_3').hide();
+    $('.on_hold_proj_2').hide()
     hideProjData();
+    $('.e_staff_proj').show();
 })
 $('.dw_content_data').on('click',function(){
     $('#tab3').get(0).click(0);
@@ -630,7 +632,7 @@ $('.dw_content_data').on('click',function(){
     $('#card_bdy_4').css({'border':'2px solid red'});
     setTimeout(() => {
         $('#card_bdy_4').css({ 'border': 'none' });
-      }, 3000);
+      }, 5000);
 })
 
 $('#proj_task_tab2').on('click',function(){
@@ -644,6 +646,7 @@ $('#proj_task_tab2').on('click',function(){
     $('.action_need_proj_2').hide();
     $('.delayed_proj').show();
     $('.action_need_proj_3').hide();
+    $('.on_hold_proj_2').hide()
     hideProjData();
     
 })
@@ -658,6 +661,7 @@ $('#proj_task_tab3').on('click',function(){
     $('.pending_proj').hide();
     $('.delayed_proj').hide();
     $('.action_need_proj_3').hide();
+    $('.on_hold_proj_2').hide()
     hideProjData();
 })
 $('#proj_task_tab4').on('click',function(){
@@ -685,7 +689,7 @@ $('#proj_task_tab5').on('click',function(){
     $('.e_staff_proj').hide();
     $('.delayed_proj').hide();
     $('.action_need_proj_3').hide();
-    $('.on_hold_proj_2').hide();
+    $('.on_hold_proj_2').hide()
     hideProjData();
 })
 $('#proj_task_tab6').on('click',function(){
@@ -699,5 +703,6 @@ $('#proj_task_tab6').on('click',function(){
     $('.e_staff_proj').hide();
     $('.delayed_proj').hide();
     $('.action_need_proj_3').show();
+    $('.on_hold_proj_2').hide()
     hideProjData();
 })
