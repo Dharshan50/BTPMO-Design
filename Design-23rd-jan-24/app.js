@@ -233,6 +233,7 @@ $('#task_tab1').on('click', function () {
     $('.action_requested_row').show();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').show();
+    hideProjData();
 })
 $('#task_tab2').on('click', function () {
     $('.action_needed_row').hide();
@@ -241,6 +242,7 @@ $('#task_tab2').on('click', function () {
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
+    hideProjData();
 })
 $('#task_tab3').on('click', function () {
     $('.action_needed_row').hide();
@@ -249,6 +251,7 @@ $('#task_tab3').on('click', function () {
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
+    hideProjData();
 })
 $('#task_tab4').on('click', function () {
     $('.action_needed_row').hide();
@@ -257,6 +260,7 @@ $('#task_tab4').on('click', function () {
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
+    hideProjData();
 })
 $('#task_tab6').on('click', function () {
     $('.action_needed_row').hide();
@@ -265,6 +269,7 @@ $('#task_tab6').on('click', function () {
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
+    hideProjData();
 })
 $('#task_tab5').on('click', function () {
     $('.action_needed_row').show();
@@ -272,6 +277,7 @@ $('#task_tab5').on('click', function () {
     $('#proj_tsk_data_3').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
+    hideProjData();
 })
 
 $('#tab2').on('click', function () {
@@ -602,7 +608,6 @@ $('#bell').on('click',function(){
     if (bell.classList.contains('fadeInDown')) {
         bell.classList.remove('fadeInDown');
         bell.classList.add('fadeInup');
-        // $('#top_div').css({'z-index':'1'});
         $('#top_div').hide();
     } else  {
         $('#top_div').show();
@@ -625,14 +630,21 @@ $('#proj_task_tab1').on('click',function(){
     $('.on_hold_proj_2').hide()
     hideProjData();
     $('.e_staff_proj').show();
+    $(".fa-minus").each(function() {
+        $(this).removeClass('fa-minus').addClass('fa-plus');
+    });
 })
 $('.dw_content_data').on('click',function(){
     $('#tab3').get(0).click(0);
     $('#view_tsk_data_2').trigger('click');
     $('#card_bdy_4').css({'border':'2px solid red'});
+    $('html, body').animate({
+        scrollTop: $('#card_bdy_4').offset().top
+    }, 100);
     setTimeout(() => {
         $('#card_bdy_4').css({ 'border': 'none' });
       }, 5000);
+      $('#top_div').hide();
 })
 
 $('#proj_task_tab2').on('click',function(){
@@ -648,6 +660,9 @@ $('#proj_task_tab2').on('click',function(){
     $('.action_need_proj_3').hide();
     $('.on_hold_proj_2').hide()
     hideProjData();
+    $(".fa-minus").each(function() {
+        $(this).removeClass('fa-minus').addClass('fa-plus');
+    });
     
 })
 $('#proj_task_tab3').on('click',function(){
@@ -663,6 +678,9 @@ $('#proj_task_tab3').on('click',function(){
     $('.action_need_proj_3').hide();
     $('.on_hold_proj_2').hide()
     hideProjData();
+    $(".fa-minus").each(function() {
+        $(this).removeClass('fa-minus').addClass('fa-plus');
+    });
 })
 $('#proj_task_tab4').on('click',function(){
     $('.inprogress_proj').hide();
@@ -677,6 +695,9 @@ $('#proj_task_tab4').on('click',function(){
     $('.action_need_proj_3').hide();
     $('.on_hold_proj_2').show();
     hideProjData();
+    $(".fa-minus").each(function() {
+        $(this).removeClass('fa-minus').addClass('fa-plus');
+    });
 })
 $('#proj_task_tab5').on('click',function(){
     $('.inprogress_proj').hide();
@@ -691,6 +712,9 @@ $('#proj_task_tab5').on('click',function(){
     $('.action_need_proj_3').hide();
     $('.on_hold_proj_2').hide()
     hideProjData();
+    $(".fa-minus").each(function() {
+        $(this).removeClass('fa-minus').addClass('fa-plus');
+    });
 })
 $('#proj_task_tab6').on('click',function(){
     $('.inprogress_proj').hide();
@@ -705,4 +729,7 @@ $('#proj_task_tab6').on('click',function(){
     $('.action_need_proj_3').show();
     $('.on_hold_proj_2').hide()
     hideProjData();
+    $(".fa-minus").each(function() {
+        $(this).removeClass('fa-minus').addClass('fa-plus');
+    });
 })
