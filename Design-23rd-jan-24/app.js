@@ -710,6 +710,10 @@ $('.dw_content_data').on('click', function () {
     setTimeout(() => {
         $('#card_bdy_4').css({ 'border': 'none' });
     }, 3000);
+    $('html, body').animate({
+        scrollTop: $('#card_bdy_4').offset().top
+    }, 100);
+    $('#top_div').hide();
 })
 
 $('#proj_task_tab2').on('click', function () {
