@@ -259,16 +259,19 @@ $('#proj_type').on('change', function () {
 
     }
     else if (val == 2) {
-        $('#create_proj_form').show();
-        $('.proj_name_text_box').show();
-        $('.proj_name_slct').hide();
-        $('#buttons').show();
-        $('#proj_currentstage').prop('disabled', false);
-        $('#proj_status').prop('disabled', false);
-        $('#proj_ragstatus').prop('disabled', false);
-        $('#proj_currentstage').val('0');
-        $('#proj_status').val('0');
-        $('#proj_ragstatus').val('0');
+      $('#file-upload-container').show();
+      $('.form-label label_txt_chng').hide();
+      $('#proj_type').hide();
+      $('#Project_heading').hide();
+        // $('.proj_name_text_box').show();
+        // $('.proj_name_slct').hide();
+        // $('#buttons').show();
+        // $('#proj_currentstage').prop('disabled', false);
+        // $('#proj_status').prop('disabled', false);
+        // $('#proj_ragstatus').prop('disabled', false);
+        // $('#proj_currentstage').val('0');
+        // $('#proj_status').val('0');
+        // $('#proj_ragstatus').val('0');
     }
     else if (val == 0) {
         $('#create_proj_form').hide();
@@ -287,6 +290,7 @@ $('#create_proj').on('click', function () {
     //$('#rqst_cntnt').show();
     $('#proj_content').show();
     $('#buttons').hide();
+    $('#file-upload-container').hide();
 })
 $('#tab3').on('click', function () {
     $('#task_manage').show();
@@ -394,6 +398,7 @@ function closeContent() {
     $('#view_proj').hide();
     $('#buttons').hide();
     $('#upd_userlog_cmts').hide();
+    $('#file-upload-container').hide();
 }
 
 $('.view_proj_data').on('click', function () {

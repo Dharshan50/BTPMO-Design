@@ -90,16 +90,16 @@
                 <input type="radio" id="tab1" name="tabGroup1" class="tab">
                 <label id="bt_proj_tab" for="tab1">Project Summary</label>
                 <input type="radio" id="tab2" name="tabGroup1" class="tab">
-                <label for="tab2" id="bt_proj-task_tab">Project Tasks Management</label>
+                <label for="tab2" id="bt_proj-task_tab">Projects</label>
                 <input type="radio" id="tab3" name="tabGroup1" class="tab">
-                <label id="bt_task_tab" for="tab3">BT-PMO Tasks</label>
+                <label id="bt_task_tab" for="tab3">Tasks</label>
             </div>
         </div>
         <div id="proj_summary_tbl">
             <div class="bt_process_tab mt-3">
                 <div class="btn_proj">
                     <button type="button" class="btn btn-success btn_create_proj" style="padding: 8px 15px !important;"
-                        id="create_proj"><i class="fa-solid fa-plus" style="margin-right: 8px;"></i>Create
+                        id="create_proj"><i class="fa-solid fa-plus" style="margin-right: 8px;"></i>Add
                         Project</button>
                 </div>
                 <div class="serch_box">
@@ -115,126 +115,126 @@
                     <table class="table table-responsive tbl_all_proj" id="tblprojsummary" cellspacing="0">
                         <thead style="font-size: 14px;">
                             <tr>
-                                <th id="projectId" class="small_column_width">Project Id</th>
+                                <!-- <th id="projectId" class="small_column_width">Project Id</th> -->
                                 <th id="projectName" class="big_column_width">Project Name</th>
                                 <!-- <th id="tagName" class="${styles.big_column_width} project_grid_sort" >Tag Project Name</th> -->
-                                <th id="projectSize" class="big_column_width">Project Size</th>
-                                <th id="deadline" class="small_column_width">DeadLine</th>
-                                <th id="targetGoLive" class="small_column_width">Target-go-live</th>
-                                <th id="revisedGoLive" class="small_column_width">Revised-go-live</th>
-                                <th id="sponsers" class="small_column_width">Sponsers</th>
-                                <th id="pm" class="small_column_width">PM</th>
-                                <th id="ba" class="small_column_width">BA</th>
-                                <th id="baPriority" class="small_column_width">BA+PM Priority</th>
-                                <th id="dev" class="small_column_width">Developer</th>
-                                <th id="devPriority" class="small_column_width">Dev Priority</th>
+                                <th id="projectSize" class="big_column_width">Project Stage</th>
+                                <th id="deadline" class="small_column_width">Business case</th>
+                                <th id="targetGoLive" class="small_column_width">Positive ROI</th>
+                                <th id="revisedGoLive" class="small_column_width">Requestor</th>
+                                <th id="sponsers" class="small_column_width">Project Sponser</th>
+                                <th id="pm" class="small_column_width">Impacted Function</th>
+                                <th id="ba" class="small_column_width">Functional Lead(s)</th>
+                                <th id="baPriority" class="small_column_width">Project Priority</th>
+                                <th id="dev" class="small_column_width">RAG </th> 
+                                <th><i class="fa-solid fa-plus"
+                                    style="font-size: 20px; margin-left: 25px; color: white; background-color: grey; border-radius:50%; padding: 4px; cursor: pointer;"
+                                    id="Column_menus" title="Choose Column"></th>
+                                <!-- <th id="devPriority" class="small_column_width">Dev Priority</th>
                                 <th id="functionId" class="small_column_width">Function</th>
                                 <th id="priority" class="small_column_width">Functional Priority</th>
                                 <th id="currentStage" class="small_column_width">Current Stage</th>
                                 <th id="ragStatus" class="small_column_width">RAG Status</th>
-                                <th id="ragComment" class="big_column_width">RAG Comments</th>
+                                <th id="ragComment" class="big_column_width">RAG Comments</th> -->
                             </tr>
                         </thead>
                         <tbody style="font-size: 12px;">
                             <tr>
-                                <td>BP0001</td>
+                                <!-- <td>BP0001</td> -->
                                 <td>Sample</td>
-                                <td>Medium</td>
-                                <td>Q1</td>
-                                <td>29/02/2024</td>
-                                <td>29/02/2024</td>
-                                <td>Test-Sponser</td>
-                                <td>Sami Chennakesavulu</td>
-                                <td>Venice Saxon</td>
-                                <td>2</td>
-                                <td>Priya Xavior</td>
-                                <td>2</td>
-                                <td>Commerce</td>
+                                <td>Project Charter  
+                                    <i class="fa-solid fa-circle-info"
+                                    style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 3px; cursor: pointer;"
+                                    title="Action requested"></i></td>
+                                <td>Efficiency</td>
+                                <td style="color:#009500;">Yes<i class="fa-solid fa-circle-info"
+                                    style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 3px; cursor: pointer;"
+                                    title="Action requested"></i></td>
+                                    <td>Finance</td>
+
+                                <td>Yoko</td>
+                                <td>Finance & BI</td>
+                                <td>Susanna +parashuram</td>
+                                <td><i style="font-size: 15px;  color: white; background-color: green; border-radius:50%; padding: 2px 9px; border-radius: 1px solid black;"> 1 </i></td>
+
+                                <td><mark style="background-color: lightblue;" class="rag_status" >On Track</mark></td>
+                                <!-- <td>Commerce</td>
                                 <td>3</td>
                                 <td>Project Charter</td>
                                 <td><mark style="background-color: lightblue;" class="rag_status">Not Started</mark>
                                 </td>
-                                <td>Test-Comments</td>
+                                <td>Test-Comments</td> -->
                             </tr>
                             <tr>
-                                <td>BP0001</td>
-                                <td>E-Procurrement</td>
-                                <td>Medium</td>
-                                <td>Q1</td>
-                                <td>29/02/2024</td>
-                                <td>29/02/2024</td>
-                                <td>Test-Sponser</td>
-                                <td>Sami Chennakesavulu</td>
-                                <td>Venice Saxon</td>
-                                <td>2</td>
-                                <td>Priya Xavior</td>
-                                <td>2</td>
-                                <td>Commerce</td>
-                                <td>3</td>
-                                <td>Project Charter</td>
-                                <td><mark style="background-color: lightblue;" class="rag_status">Not Started</mark>
+                                <!-- <td>BP0001</td> -->
+                                <td>Sample</td>
+                                <td>Functional Requirement<i class="fa-solid fa-circle-info"
+                                    style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 14px; cursor: pointer;"
+                                    title="Action requested"></i></td>
+                                <td>ROI</td>
+                                <td style="color: red;">NO<i class="fa-solid fa-circle-info"
+                                    style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 4px; cursor: pointer;"
+                                    title="Action requested"></i></td>
+                                <td>Commercial</td>
+                                <td>Yoko</td>
+                                <td>Test</td>
+                                <td>karen</td>
+                                <td><i style="font-size: 15px;  color: white; background-color: rgb(232, 198, 135); border-radius:50%; padding: 2px 9px; border-radius: 1px solid black;"> 2 </i></td>
+                                <td><mark style="background-color: lightblue;" class="rag_status" >On Track</mark></td>
+                                <!-- <td><mark style="background-color: lightblue;" class="rag_status">Not Started</mark>
                                 </td>
-                                <td>Test-Comments</td>
+                                <td>Test-Comments</td> -->
                             </tr>
                             <tr>
-                                <td>BP0001</td>
-                                <td>E-Staff</td>
-                                <td>Medium</td>
-                                <td>Q1</td>
-                                <td>29/02/2024</td>
-                                <td>29/02/2024</td>
-                                <td>Test-Sponser</td>
-                                <td>Sami Chennakesavulu</td>
-                                <td>Venice Saxon</td>
-                                <td>2</td>
-                                <td>Priya Xavior</td>
-                                <td>2</td>
-                                <td>Commerce</td>
-                                <td>3</td>
-                                <td>Project Charter</td>
-                                <td><mark style="background-color: lightblue;" class="rag_status">Not Started</mark>
-                                </td>
-                                <td>Test-Comments</td>
+                                <!-- <td>BP0001</td> -->
+                                <td>Test Project</td>
+                                <td>Project Charter<i class="fa-solid fa-circle-info"
+                                    style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 3px; cursor: pointer;"
+                                    title="Action requested"></i></td>
+                                <td>UX</td>
+                                <td style="color:#009500;">Yes<i class="fa-solid fa-circle-info"
+                                    style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 4px; cursor: pointer;"
+                                    title="Action requested"></i></td>
+                                <td>Claims</td>
+                                <td>Peter</td>
+                                <td>Finance & BI</td>
+                                <td>Rowena +susanna+karen</td>
+                                <td><i style="font-size: 15px;  color: white; background-color: rgb(232, 198, 135); border-radius:50%; padding: 2px 9px; border-radius: 1px solid black;"> 2 </i></td>
+                                <td><mark style="background-color: rgb(167, 188, 101);" class="rag_status" >On Track</mark></td>
                             </tr>
                             <tr>
-                                <td>BP0001</td>
-                                <td>E-Training</td>
-                                <td>Medium</td>
-                                <td>Q1</td>
-                                <td>29/02/2024</td>
-                                <td>29/02/2024</td>
-                                <td>Test-Sponser</td>
-                                <td>Sami Chennakesavulu</td>
-                                <td>Venice Saxon</td>
-                                <td>2</td>
-                                <td>Priya Xavior</td>
-                                <td>2</td>
-                                <td>Commerce</td>
-                                <td>3</td>
-                                <td>Project Charter</td>
-                                <td><mark style="background-color: lightblue;" class="rag_status">Not Started</mark>
-                                </td>
-                                <td>Test-Comments</td>
+                                <!-- <td>BP0001</td> -->
+                                <td>Sample</td>
+                                <td>Functional Requirement<i class="fa-solid fa-circle-info"
+                                    style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 14px; cursor: pointer;"
+                                    title="Action requested"></i></td>
+                                <td>Group</td>
+                                <td style="color:red;">NO<i class="fa-solid fa-circle-info"
+                                    style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 4px; cursor: pointer;"
+                                    title="Action requested"></i></td>
+                                <td>BI</td>
+                                <td>Sam</td>
+                                <td>Finance & BI</td>
+                                <td>Susanna +parashuram</td>
+                                <td><i style="font-size: 15px;  color: white; background-color: green; border-radius:50%; padding: 2px 9px; border-radius: 1px solid black;"> 1 </i></td>
+                                <td><mark style="background-color: rgb(112, 115, 115);" class="rag_status" >Dropped</mark></td>
                             </tr>
                             <tr>
-                                <td>BP0001</td>
-                                <td>MOT</td>
-                                <td>Large</td>
-                                <td>Q1</td>
-                                <td>29/02/2024</td>
-                                <td>29/02/2024</td>
-                                <td>Test-Sponser</td>
-                                <td>Sami Chennakesavulu</td>
-                                <td>Venice Saxon</td>
-                                <td>2</td>
-                                <td>Priya Xavior</td>
-                                <td>2</td>
-                                <td>Commerce</td>
-                                <td>5</td>
-                                <td>Project Charter</td>
-                                <td><mark style="background-color: lightblue;" class="rag_status">Not Started</mark>
-                                </td>
-                                <td>Test-Comments</td>
+                                <!-- <td>BP0001</td> -->
+                                <td>Sample</td>
+                                <td>Functional Requirement<i class="fa-solid fa-circle-info"
+                                    style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 14px; cursor: pointer;"
+                                    title="Action requested"></i></td>
+                                <td>Group</td>
+                                <td style="color:red;">NO<i class="fa-solid fa-circle-info"
+                                    style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 4px; cursor: pointer;"
+                                    title="Action requested"></i></td>
+                                <td>BI</td>
+                                <td>Benoit</td>
+                                <td>Finance & BI</td>
+                                <td>Susanna +parashuram</td>
+                                <td><i style="font-size: 15px;  color: white; background-color: green; border-radius:50%; padding: 2px 9px; border-radius: 1px solid black;"> 1 </i></td>
+                                <td><mark style="background-color: rgb(112, 115, 115);" class="rag_status" >Dropped</mark></td>
                             </tr>
                         </tbody>
                     </table>
@@ -8688,16 +8688,27 @@
                 </div>
                 <div class="row space_btw_fields">
                     <div class="col-lg-2">
-                        <label for="" class="form-label label_txt_chng">Project Type</label>
+                        <label for="" class="form-label label_txt_chng" id="Project_heading">Project Type</label>
                     </div>
                     <div class="col-lg-2">
                         <select id="proj_type" class="form-select select_box_chng">
                             <option value="0" selected>Select</option>
-                            <option value="1">Projects</option>
-                            <option value="2">Ad-Hoc Project</option>
+                            <option value="1">Project portfolio (E-project)</option>
+                            <option value="2">Not Accepted(Bulk Upload)</option>
                         </select>
                     </div>
                 </div>
+                <div class="file-upload" id="file-upload-container" style="display: none;">
+                    <h3 class="content_head_name">Excel Upload</h3>
+                    <form action="/upload" method="post" enctype="multipart/form-data">
+                      <input type="file" name="file" id="file" style="margin: 22px;">
+                      <button type="submit" class="Excel_upload">Upload</button>
+                    </form>
+
+ 
+                 
+                </div>
+                
                 <div class="create_proj_form" id="create_proj_form">
 
                     <div class="row space_btw_fields">
