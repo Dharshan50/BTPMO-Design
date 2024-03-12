@@ -15,12 +15,15 @@ $(document).ready(function () {
     $('#proj_stage_task').hide();
     $('#create_proj_form').hide();
 
+
     // $('#project_charter_data_3').hide();   
     // $('#project_charter_data_4').hide();
     // $('#project_charter_data_5').hide();
     // $('#function_req_3').hide();
     hideProjData()
     $(document).find("[class^='EditField_']").hide();
+
+
     sortElements();
 })
 
@@ -32,14 +35,83 @@ $(document).on('change', '.order_select', function () {
     sortElements();
 });
 
+function initializeDraggable() {
+    $(".card_main_box").each(function () {
+        $(this).find(".move").on("mousedown", function (e) {
+            var $draggable = $(this).closest(".card_main_box");
+            $draggable.draggable({
+                revert: "invalid", // Snap back to original position if not dropped on droppable
+                cursor: "move",
+                helper: "clone", // Drag a clone instead of the original element
+                zIndex: 1000,
+                start: function (event, ui) {
+                    $(this).css("z-index", 1001);
+                    var parentWidth = $(this).width();
+                    ui.helper.css("width", parentWidth);
+                },
+                drag: function (event, ui) {
+                    var parent = $(this).parent();
+                    var containment = {
+                        top: parent.offset().top,
+                        left: parent.offset().left,
+                        bottom: parent.offset().top + parent.height() - $(this).outerHeight(),
+                        right: parent.offset().left + parent.width() - $(this).outerWidth()
+                    };
+                    ui.position.top = Math.min(Math.max(ui.position.top, containment.top), containment.bottom);
+                    ui.position.left = Math.min(Math.max(ui.position.left, containment.left), containment.right);
+                }
+            });
+        });
+    });
+}
 $(document).find(".droppable").droppable({
     accept: ".card_main_box", // Only accept draggable elements
+    over: function (event, ui) {
+        // Remove hover class from all items
+        $(".card_main_box").removeClass("hover");
+
+        // Find the index of the dragged item
+        var draggedIndex = $(ui.helper).index();
+
+        // Add hover class to the item directly below the dragged item
+        var $hoveredItem = $(this).children('.card_main_box').eq(draggedIndex + 1);
+        $hoveredItem.addClass("hover");
+
+        // Apply custom styles to the hovered item
+        $hoveredItem.css({
+            "opacity": "0", // Set opacity to 0
+            "border": "2px solid red" // Apply a red border
+            // Add any other styles you want to apply
+        });
+    },
+    out: function (event, ui) {
+        // Remove hover class from all items
+        $(".card_main_box").removeClass("hover");
+
+        // Reset styles of the hovered item
+        // $(this).children('.card_main_box').css({
+        //     "opacity": "", // Reset opacity
+        //     "border": "" // Reset border
+        //     // Reset any other styles you applied
+        // });
+    },
     drop: function (event, ui) {
-        // var $droppable = $(this);
         var $draggable = ui.draggable;
         var $droppable = $draggable.parent();
+
         // Remove the original draggable element
         $draggable.remove();
+
+        // Get the index of the hovered item
+        var hoveredIndex = $(this).children('.hover').index();
+
+        // Reset styles of the hovered item
+        // $(this).children('.card_main_box').eq(hoveredIndex).css({
+        //     "opacity": "", // Reset opacity
+        //     "border": "" // Reset border
+        //     // Reset any other styles you applied
+        // });
+
         lstOrder = [];
         // Find the position where the item is dropped
         var $nextItem = $droppable.find(".card_main_box").filter(function () {
@@ -57,7 +129,6 @@ $(document).find(".droppable").droppable({
         var $items = $droppable.find('.card_main_box');
         for (var i = 0; i < $items.length; i++) {
             $($items[i]).attr('data-order', i + 1);
-            // originalOrder[$($items[i]).attr('id')] = i + 1; // Track the original order
             if ($($items[i]).attr('id') !== undefined && $($items[i]).attr('id') !== null)
                 lstOrder.push($($items[i]).attr('id'))
         }
@@ -65,11 +136,12 @@ $(document).find(".droppable").droppable({
         var droppableId = $droppable.attr('name');
         originalOrder[droppableId] = lstOrder;
 
-        // Reinitialize draggable elements after a slight delay
         setTimeout(initializeDraggable, 200);
-        console.log(originalOrder)
     }
 });
+
+
+
 
 function sortElements() {
     var $droppable = $(".droppable");
@@ -81,32 +153,6 @@ function sortElements() {
 
     $droppable.empty().append($elements);
 }
-
-function initializeDraggable() {
-    $(document).find(".card_main_box").draggable({
-        revert: "invalid", // Snap back to original position if not dropped on droppable
-        cursor: "move",
-        helper: "clone", // Drag a clone instead of the original element
-        zIndex: 1000,
-        start: function (event, ui) {
-            $(this).css("z-index", 1001);
-            var parentWidth = $(this).width();
-            ui.helper.css("width", parentWidth);
-        },
-        drag: function (event, ui) {
-            var parent = $(this).parent();
-            var containment = {
-                top: parent.offset().top,
-                left: parent.offset().left,
-                bottom: parent.offset().top + parent.height() - $(this).outerHeight(),
-                right: parent.offset().left + parent.width() - $(this).outerWidth()
-            };
-            ui.position.top = Math.min(Math.max(ui.position.top, containment.top), containment.bottom);
-            ui.position.left = Math.min(Math.max(ui.position.left, containment.left), containment.right);
-        }
-    });
-}
-
 
 function date_picker() {
     $('#upd_reviseend_date').datepicker();
@@ -177,19 +223,45 @@ $('#prj_tsk_rtrn').on('click', function () {
     $('#prj_tsk_assign').hide();
     $('#pagination_container').show();
 })
+
 $('#slct_proj_drop').on('change', function () {
     var val = $('#slct_proj_drop').val();
     if (val != "") {
         $('#proj_stage_task').show();
-        // sortElements();
         initializeDraggable();
     }
     else {
         $('#proj_stage_task').hide();
     }
-
+    $(document).find("[id^='Form_Template_']").hide();
     $(document).find("[class^='LabelField_']").show();
     $(document).find("[class^='EditField_']").hide();
+})
+
+$("[id^='AddBatch_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+    var type = Number($(document).find(`#batch_type_${id}`).val());
+    if (type === 0) {
+        $(document).find(`#Form_Template_${id}`).hide()
+        $(document).find(`#Record_Template_${id}`).show()
+        $(document).find(`.card_button_${id}`).hide();
+    }
+    else {
+        $(document).find(`#Form_Template_${id}`).show()
+        $(document).find(`#Record_Template_${id}`).hide()
+        $(document).find(`.card_button_${id}`).show();
+    }
+})
+
+$("[id^='close_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+    $(document).find(`#Form_Template_${id}`).hide()
+    $(document).find(`#Record_Template_${id}`).show()
+    $(document).find(`.card_button`).hide();
 })
 
 $("[id^='EditRecord_']").on('click', function () {
@@ -259,10 +331,10 @@ $('#proj_type').on('change', function () {
 
     }
     else if (val == 2) {
-      $('#file-upload-container').show();
-      $('.form-label label_txt_chng').hide();
-      $('#proj_type').hide();
-      $('#Project_heading').hide();
+        $('#file-upload-container').show();
+        $('.form-label label_txt_chng').hide();
+        $('#proj_type').hide();
+        $('#Project_heading').hide();
         // $('.proj_name_text_box').show();
         // $('.proj_name_slct').hide();
         // $('#buttons').show();
@@ -704,7 +776,7 @@ $('#proj_task_tab1').on('click', function () {
     $('.on_hold_proj_2').hide()
     hideProjData();
     $('.e_staff_proj').show();
-    $(".fa-minus").each(function() {
+    $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
     });
 })
@@ -748,7 +820,7 @@ $('#proj_task_tab3').on('click', function () {
     $('.action_need_proj_3').hide();
     $('.on_hold_proj_2').hide()
     hideProjData();
-    $(".fa-minus").each(function() {
+    $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
     });
 })
@@ -765,7 +837,7 @@ $('#proj_task_tab4').on('click', function () {
     $('.action_need_proj_3').hide();
     $('.on_hold_proj_2').show();
     hideProjData();
-    $(".fa-minus").each(function() {
+    $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
     });
 })
@@ -782,7 +854,7 @@ $('#proj_task_tab5').on('click', function () {
     $('.action_need_proj_3').hide();
     $('.on_hold_proj_2').hide()
     hideProjData();
-    $(".fa-minus").each(function() {
+    $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
     });
 })
@@ -799,7 +871,7 @@ $('#proj_task_tab6').on('click', function () {
     $('.action_need_proj_3').show();
     $('.on_hold_proj_2').hide()
     hideProjData();
-    $(".fa-minus").each(function() {
+    $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
     });
 })
