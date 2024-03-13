@@ -22,6 +22,95 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <title>Document</title>
+    <style>
+        p.pro_align {
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        p.pro_align span {
+            display: block;
+            width: 80px;
+        }
+
+        p.pro_align i {
+            position: relative;
+            top: 1px;
+            font-size: 11px;
+        }
+
+        p.yes_no_align i {
+            font-size: 6px;
+        }
+
+        p.yes_no_align {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            gap: 3px;
+            background-color: #0080002e;
+            width: fit-content;
+            padding: 1px 6px;
+            border-radius: 3px;
+            margin: auto;
+            font-size: 10px;
+        }
+
+        span.last_num {
+            width: 25px;
+            display: block;
+            height: 23px;
+            text-align: center;
+            border-radius: 50%;
+            padding-top: 2px;
+            font-size: 12px;
+            margin: auto;
+        }
+
+        p.yes_no_align.no {
+            background-color: #ff6a6a2e;
+        }
+
+        .plus_top {
+            color: #03365f;
+            font-size: 26px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .plus_drop_dwn div {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            width: 100px;
+            gap: 7px;
+            font-weight: 400;
+        }
+
+        .plus_drop_dwn {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            position: absolute;
+            z-index: 1;
+            top: 42px;
+            right: 12px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 2px #ccc;
+        }
+
+        table thead tr th {
+            text-align: left;
+        }
+
+        table tbody tr td {
+            text-align: left;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 
 <body>
@@ -123,140 +212,125 @@
             <div class="table-responsive proj_summ_table" id="tbl_all_prj" style="margin-top: 5px;">
                 <div>
                     <table class="table table-responsive tbl_all_proj" id="tblprojsummary" cellspacing="0">
-                        <thead style="font-size: 14px;">
+                        <thead style="font-size: 11px;">
                             <tr>
                                 <!-- <th id="projectId" class="small_column_width">Project Id</th> -->
                                 <th id="projectName" class="big_column_width">Project Name</th>
                                 <!-- <th id="tagName" class="${styles.big_column_width} project_grid_sort" >Tag Project Name</th> -->
                                 <th id="projectSize" class="big_column_width">Project Stage</th>
                                 <th id="deadline" class="small_column_width">Business case</th>
-                                <th id="targetGoLive" class="small_column_width">Positive ROI</th>
+                                <th id="targetGoLive" style="text-align: center;" class="small_column_width">Positive
+                                    ROI</th>
                                 <th id="revisedGoLive" class="small_column_width">Requestor</th>
                                 <th id="sponsers" class="small_column_width">Project Sponser</th>
-                                <th id="pm" class="small_column_width">Impacted Function</th>
-                                <th id="ba" class="small_column_width">Functional Lead(s)</th>
+                                <th id="pm" class="small_column_width" style="width:12%">Impacted Function</th>
+                                <th id="ba" class="small_column_width" style="width:12%">Functional Lead(s)</th>
                                 <th id="baPriority" class="small_column_width">Project Priority</th>
-                                <th id="dev" class="small_column_width">RAG </th>
-                                <th><i class="fa-solid fa-plus"
-                                        style="font-size: 20px; margin-left: 25px; color: white; background-color: grey; border-radius:50%; padding: 4px; cursor: pointer;"
-                                        id="Column_menus" title="Choose Column"></th>
-                                <!-- <th id="devPriority" class="small_column_width">Dev Priority</th>
-                                <th id="functionId" class="small_column_width">Function</th>
-                                <th id="priority" class="small_column_width">Functional Priority</th>
-                                <th id="currentStage" class="small_column_width">Current Stage</th>
-                                <th id="ragStatus" class="small_column_width">RAG Status</th>
-                                <th id="ragComment" class="big_column_width">RAG Comments</th> -->
+                                <th id="dev" style="text-align: center;" class="small_column_width">RAG </th>
+                                <th style="position: relative;"><i class="fa-solid fa-circle-plus plus_top"
+                                        id="Column_menus" title="Choose Column"></i>
+                                    <i class=""></i>
+                                    <div class="plus_drop_dwn" style="display: none;">
+                                        <div>
+                                            <input checked id="project_name" type="checkbox">
+                                            <label for="project_name">Project Name</label>
+                                        </div>
+                                        <div>
+                                            <input checked id="project_stage" type="checkbox">
+                                            <label for="project_stage">Project Stage</label>
+                                        </div>
+                                        <div>
+                                            <input checked id="business_case" type="checkbox">
+                                            <label for="business_case">Business case</label>
+                                        </div>
+                                        <div>
+                                            <input checked id="postive_roi" type="checkbox">
+                                            <label for="postive_roi">Positive ROI</label>
+                                        </div>
+                                    </div>
+                                </th>
                             </tr>
                         </thead>
-                        <tbody style="font-size: 12px;">
+                        <tbody style="font-size: 11px;">
                             <tr>
                                 <!-- <td>BP0001</td> -->
-                                <td>Sample</td>
-                                <td>Project Charter
-                                    <i class="fa-solid fa-circle-info"
-                                        style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 3px; cursor: pointer;"
-                                        title="Action requested"></i>
+                                <td class="hide_one">Sample</td>
+                                <td class="hide_two">
+                                    <p class="pro_align"> <span>Project Charter</span>
+                                        <i class="fa-solid fa-circle-info" title="Action requested"></i>
+                                    </p>
                                 </td>
-                                <td>Efficiency</td>
-                                <td style="color:#009500;">Yes<i class="fa-solid fa-circle-info"
-                                        style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 3px; cursor: pointer;"
-                                        title="Action requested"></i></td>
+                                <td class="hide_tr">Efficiency</td>
+                                <td class="hide_fr" style="color:#009500;">
+                                    <p class="yes_no_align"><i class="fa-solid fa-circle"
+                                            title="Action requested"></i><span>Yes</span></p>
+                                </td>
                                 <td>Finance</td>
-
                                 <td>Yoko</td>
                                 <td>Finance & BI</td>
                                 <td>Susanna +parashuram</td>
-                                <td><i
-                                        style="font-size: 15px;  color: white; background-color: green; border-radius:50%; padding: 2px 9px; border-radius: 1px solid black;">
-                                        1 </i></td>
-
+                                <td><span class="last_num" style="background-color: #f06060;color: #fff;">2</span></td>
                                 <td><mark style="background-color: lightblue;" class="rag_status">On Track</mark></td>
-                                <!-- <td>Commerce</td>
-                                <td>3</td>
-                                <td>Project Charter</td>
-                                <td><mark style="background-color: lightblue;" class="rag_status">Not Started</mark>
-                                </td>
-                                <td>Test-Comments</td> -->
+
                             </tr>
                             <tr>
                                 <!-- <td>BP0001</td> -->
-                                <td>Sample</td>
-                                <td>Functional Requirement<i class="fa-solid fa-circle-info"
-                                        style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 14px; cursor: pointer;"
-                                        title="Action requested"></i></td>
-                                <td>ROI</td>
-                                <td style="color: red;">NO<i class="fa-solid fa-circle-info"
-                                        style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 4px; cursor: pointer;"
-                                        title="Action requested"></i></td>
+                                <td class="hide_one">Sample</td>
+                                <td class="hide_two">
+                                    <p class="pro_align"> <span>Functional Requirement</span>
+                                        <i class="fa-solid fa-circle-info" title="Action requested"></i>
+                                    </p>
+                                </td>
+                                <td class="hide_tr">ROI</td>
+                                <td class="hide_fr" style="color:#ff0000;">
+                                    <p class="yes_no_align no"><i class="fa-solid fa-circle"
+                                            title="Action requested"></i><span>No</span></p>
+                                </td>
                                 <td>Commercial</td>
                                 <td>Yoko</td>
                                 <td>Test</td>
                                 <td>karen</td>
-                                <td><i
-                                        style="font-size: 15px;  color: white; background-color: rgb(232, 198, 135); border-radius:50%; padding: 2px 9px; border-radius: 1px solid black;">
-                                        2 </i></td>
+                                <td><span class="last_num" style="background-color: #68f38d;color: #fff;">8</span>
                                 <td><mark style="background-color: lightblue;" class="rag_status">On Track</mark></td>
-                                <!-- <td><mark style="background-color: lightblue;" class="rag_status">Not Started</mark>
-                                </td>
-                                <td>Test-Comments</td> -->
                             </tr>
                             <tr>
                                 <!-- <td>BP0001</td> -->
-                                <td>Test Project</td>
-                                <td>Project Charter<i class="fa-solid fa-circle-info"
-                                        style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 3px; cursor: pointer;"
-                                        title="Action requested"></i></td>
-                                <td>UX</td>
-                                <td style="color:#009500;">Yes<i class="fa-solid fa-circle-info"
-                                        style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 4px; cursor: pointer;"
-                                        title="Action requested"></i></td>
+                                <td class="hide_one">Test Project</td>
+                                <td class="hide_two">
+                                    <p class="pro_align"> <span>Project Charter</span>
+                                        <i class="fa-solid fa-circle-info" title="Action requested"></i>
+                                    </p>
+                                </td>
+                                <td class="hide_tr">UX</td>
+                                <td class="hide_fr" style="color:#009500;">
+                                    <p class="yes_no_align"><i class="fa-solid fa-circle"
+                                            title="Action requested"></i><span>Yes</span></p>
+                                </td>
                                 <td>Claims</td>
                                 <td>Peter</td>
                                 <td>Finance & BI</td>
                                 <td>Rowena +susanna+karen</td>
-                                <td><i
-                                        style="font-size: 15px;  color: white; background-color: rgb(232, 198, 135); border-radius:50%; padding: 2px 9px; border-radius: 1px solid black;">
-                                        2 </i></td>
+                                <td><span class="last_num" style="background-color: #6ff1ff;color: #fff;">8</span>
                                 <td><mark style="background-color: rgb(167, 188, 101);"
                                         class="rag_status">Attention</mark></td>
                             </tr>
                             <tr>
-                                <!-- <td>BP0001</td> -->
-                                <td>Sample</td>
-                                <td>Functional Requirement<i class="fa-solid fa-circle-info"
-                                        style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 14px; cursor: pointer;"
-                                        title="Action requested"></i></td>
-                                <td>Group</td>
-                                <td style="color:red;">NO<i class="fa-solid fa-circle-info"
-                                        style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 4px; cursor: pointer;"
-                                        title="Action requested"></i></td>
+                                <td class="hide_one">Sample</td>
+                                <td class="hide_two">
+                                    <p class="pro_align"> <span>Functional Requirement</span>
+                                        <i class="fa-solid fa-circle-info" title="Action requested"></i>
+                                    </p>
+                                </td>
+                                <td class="hide_tr">Group</td>
+                                <td class="hide_fr" style="color:#ff0000;">
+                                    <p class="yes_no_align no"><i class="fa-solid fa-circle"
+                                            title="Action requested"></i><span>No</span></p>
+                                </td>
                                 <td>BI</td>
                                 <td>Sam</td>
                                 <td>Finance & BI</td>
                                 <td>Susanna +parashuram</td>
-                                <td><i
-                                        style="font-size: 15px;  color: white; background-color: green; border-radius:50%; padding: 2px 9px; border-radius: 1px solid black;">
-                                        1 </i></td>
-                                <td><mark style="background-color: rgb(112, 115, 115);"
-                                        class="rag_status">Dropped</mark></td>
-                            </tr>
-                            <tr>
-                                <!-- <td>BP0001</td> -->
-                                <td>Sample</td>
-                                <td>Functional Requirement<i class="fa-solid fa-circle-info"
-                                        style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 14px; cursor: pointer;"
-                                        title="Action requested"></i></td>
-                                <td>Group</td>
-                                <td style="color:red;">NO<i class="fa-solid fa-circle-info"
-                                        style="color: green; position: absolute; font-size: 12px; margin-top: 5px; margin-left: 4px; cursor: pointer;"
-                                        title="Action requested"></i></td>
-                                <td>BI</td>
-                                <td>Benoit</td>
-                                <td>Finance & BI</td>
-                                <td>Susanna +parashuram</td>
-                                <td><i
-                                        style="font-size: 15px;  color: white; background-color: green; border-radius:50%; padding: 2px 9px; border-radius: 1px solid black;">
-                                        1 </i></td>
+                                <td><span class="last_num" style="background-color: #ddf981;color: #fff;">10</span>
                                 <td><mark style="background-color: rgb(112, 115, 115);"
                                         class="rag_status">Dropped</mark></td>
                             </tr>
@@ -265,6 +339,93 @@
                 </div>
             </div>
         </div>
+        <script>
+            var menudiv = document.querySelector('.plus_drop_dwn');
+            var plus_icon = document.getElementById('Column_menus');
+
+            plus_icon.addEventListener("click", function () {
+                if (plus_icon.style.transform === "rotate(315deg)") {
+                    plus_icon.style.transform = "rotate(0deg)";
+                } else {
+                    plus_icon.style.transform = "rotate(315deg)";
+                }
+                if (menudiv.style.display === "none") {
+                    menudiv.style.display = "flex"; // Use '=' for assignment
+                } else {
+                    menudiv.style.display = "none"; // Use '=' for assignment
+                }
+            });
+            var project_name = document.getElementById('project_name');
+            var project_stage = document.getElementById('project_stage');
+            var business_case = document.getElementById('business_case');
+            var postive_roi = document.getElementById('postive_roi');
+
+            project_name.addEventListener("change", function () {
+                var hide_ones = document.querySelectorAll('.hide_one');
+                var projectName = document.getElementById('projectName')
+                if (!project_name.checked) {
+                    projectName.style.display = 'none';
+                    hide_ones.forEach(function (element) {
+                        element.style.display = 'none';
+                    });
+                } else {
+                    projectName.style.display = 'table-cell';
+                    hide_ones.forEach(function (element) {
+                        element.style.display = 'table-cell';
+                    });
+                }
+            });
+
+            project_stage.addEventListener("change", function () {
+                var hide_two = document.querySelectorAll('.hide_two');
+                var projectSize = document.getElementById('projectSize')
+                if (!project_stage.checked) {
+                    projectSize.style.display = 'none';
+                    hide_two.forEach(function (element) {
+                        element.style.display = 'none';
+                    });
+                } else {
+                    projectSize.style.display = 'table-cell';
+                    hide_two.forEach(function (element) {
+                        element.style.display = 'table-cell';
+                    });
+                }
+            });
+
+            business_case.addEventListener("change", function () {
+                var hide_tr = document.querySelectorAll('.hide_tr');
+                var deadline = document.getElementById('deadline')
+                if (!business_case.checked) {
+                    deadline.style.display = 'none';
+                    hide_tr.forEach(function (element) {
+                        element.style.display = 'none';
+                    });
+                } else {
+                    deadline.style.display = 'table-cell';
+                    hide_tr.forEach(function (element) {
+                        element.style.display = 'table-cell';
+                    });
+                }
+            });
+
+            postive_roi.addEventListener("change", function () {
+                var hide_fr = document.querySelectorAll('.hide_fr');
+                var targetGoLive = document.getElementById('targetGoLive')
+                if (!postive_roi.checked) {
+                    targetGoLive.style.display = 'none';
+                    hide_fr.forEach(function (element) {
+                        element.style.display = 'none';
+                    });
+                } else {
+                    targetGoLive.style.display = 'table-cell';
+                    hide_fr.forEach(function (element) {
+                        element.style.display = 'table-cell';
+                    });
+                }
+            });
+
+        </script>
+
         <div id="task_manage">
             <div class="task_content">
                 <div class="task_tabwrap mt-4" style="font-size: 13px; margin-right: 25px !important;">
@@ -7998,8 +8159,7 @@
                                 id="Record_Template_1">
                                 <div class="card_heda">
                                     <div>
-                                        <p class="card_head_para"><i lass="fa-solid move fa-grip-vertical"></i>Batch 1
-                                            LCS Set Up</p>
+                                        <p class="card_head_para"><i lass="fa-solid move fa-grip-vertical"></i>Batch 1 LCS Set Up</p>
                                     </div>
                                     <div>
                                         <button type="button" title="Edit" id="EditRecord_1"
