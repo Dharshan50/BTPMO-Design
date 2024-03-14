@@ -86,13 +86,22 @@
     color: white;
     padding: 5px 15px;
 }
+.Assign_button{
+    background-color: rgb(46, 171, 46);
+    color: white;
+    width: 80px;
+    border: none;
+    padding: 4px 0px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+}
 
 .rag_status {
     white-space: nowrap;
     text-align: center;
-    padding: 2px 9px !important;
+    padding: 4px 9px !important;
     display: inline-block;
-    width: 90%;
+    width: 73%;
     box-sizing: border-box;
 }
 
@@ -344,7 +353,9 @@
     background-color: #f7f7f7;
     margin: 0px 0;
 }
-
+table.table.table-responsive thead tr th {
+    font-size: 11px;
+}
 .task_tabwrap {
     -webkit-transition: 0.3s box-shadow ease;
     transition: 0.3s box-shadow ease;
@@ -1217,16 +1228,19 @@ p.yes_no_align {
     margin: auto;
     font-size: 10px;
 }
+.e_staff_proj{
+    display: none;
+}
 
 span.last_num {
     width: 25px;
     display: block;
-    height: 23px;
+    height: 25px;
     text-align: center;
     border-radius: 50%;
-    padding-top: 2px;
+    padding-top: 3px;
     font-size: 12px;
-    margin: auto;
+    margin-left: 25px;
 }
 
 p.yes_no_align.no {

@@ -785,7 +785,7 @@ $('#proj_task_tab1').on('click', function () {
     $('.action_need_proj_3').hide();
     $('.on_hold_proj_2').hide()
     hideProjData();
-    $('.e_staff_proj').show();
+    $('.e_staff_proj').hide();
     $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
     });
