@@ -92,16 +92,22 @@
     width: 80px;
     border: none;
     padding: 4px 0px;
-    border-radius: 4px;
-    border: 1px solid #000000;
-}
 
+}
+.E_Staff_Table{
+    display: none;
+}
+mark.rag_status.ut {
+    width:100% ;
+    /* border-radius: 5px;
+    border: 1px solid #000; */
+}
 .rag_status {
     white-space: nowrap;
     text-align: center;
     padding: 4px 9px !important;
     display: inline-block;
-    width: 73%;
+    width: 84%;
     box-sizing: border-box;
 }
 
@@ -1242,6 +1248,16 @@ span.last_num {
     font-size: 12px;
     margin-left: 25px;
 }
+span.last_num_task {
+    width: 25px;
+    display: block;
+    height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 3px;
+    font-size: 12px;
+    margin-left: 7px;
+}
 
 p.yes_no_align.no {
     background-color: #ff6a6a2e;
@@ -1284,6 +1300,7 @@ table thead tr th {
 table tbody tr td {
     text-align: left;
     vertical-align: middle;
+    font-size: 11px;
 }
 
 .file-upload-label {
