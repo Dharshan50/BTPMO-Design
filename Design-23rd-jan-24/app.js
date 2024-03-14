@@ -143,16 +143,16 @@ $(document).find(".droppable").droppable({
 
 
 
-function sortElements() {
-    var $droppable = $(".droppable");
-    var $elements = $droppable.find(".card_main_box");
+// function sortElements() {
+//     var $droppable = $(".droppable");
+//     var $elements = $droppable.find(".card_main_box");
 
-    $elements.sort(function (a, b) {
-        return parseInt($(a).attr("data-order")) - parseInt($(b).attr("data-order"));
-    });
+//     $elements.sort(function (a, b) {
+//         return parseInt($(a).attr("data-order")) - parseInt($(b).attr("data-order"));
+//     });
 
-    $droppable.empty().append($elements);
-}
+//     $droppable.empty().append($elements);
+// }
 
 function date_picker() {
     $('#upd_reviseend_date').datepicker();
@@ -372,6 +372,16 @@ $('#tab3').on('click', function () {
     $('#task_tab1').get(0).click();
     hideProjData();
 })
+
+$("[id^='task_tab']").on('click', function () {
+    $('.E_Procurement_Table').show();
+    $('.E_Staff_Table').show();
+    if (this.id === 'task_tab5') {
+        $('.E_Procurement_Table').hide();
+        $('.E_Staff_Table').show();
+    }
+})
+
 $('#task_tab1').on('click', function () {
     $('.action_needed_row').hide();
     $('#proj_tsk_data_1').hide();
@@ -418,7 +428,7 @@ $('#task_tab6').on('click', function () {
 })
 $('#task_tab5').on('click', function () {
     $('.action_needed_row').show();
-    $('.action_requested_row').hide();
+    // $('.action_requested_row').hide();
     $('#proj_tsk_data_3').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();

@@ -79,7 +79,8 @@
     padding: 5px 5px;
     border-radius: 3px;
 }
-.Excel_upload{
+
+.Excel_upload {
     background-color: green;
     border: none;
     color: white;
@@ -1177,9 +1178,98 @@
 .icon_div {
     background-color: #dfdfdf;
 }
+
 .file-upload {
     display: inline-block;
     font-family: Arial, sans-serif;
+}
+
+p.pro_align {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+p.pro_align span {
+    display: block;
+    width: 80px;
+}
+
+p.pro_align i {
+    position: relative;
+    top: 1px;
+    font-size: 11px;
+}
+
+p.yes_no_align i {
+    font-size: 6px;
+}
+
+p.yes_no_align {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 3px;
+    background-color: #0080002e;
+    width: fit-content;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin: auto;
+    font-size: 10px;
+}
+
+span.last_num {
+    width: 25px;
+    display: block;
+    height: 23px;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 2px;
+    font-size: 12px;
+    margin: auto;
+}
+
+p.yes_no_align.no {
+    background-color: #ff6a6a2e;
+}
+
+.plus_top {
+    color: #03365f;
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.plus_drop_dwn div {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    width: 100px;
+    gap: 7px;
+    font-weight: 400;
+}
+
+.plus_drop_dwn {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    position: absolute;
+    z-index: 1;
+    top: 42px;
+    right: 12px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px #ccc;
+}
+
+table thead tr th {
+    text-align: left;
+}
+
+table tbody tr td {
+    text-align: left;
+    vertical-align: middle;
 }
 
 .file-upload-label {
