@@ -36,6 +36,7 @@ $(document).find("[id^='Expand_Pending_']").on('click', function () {
     $(document).find(`.pending_Assignment_View_${id}`).show()
     $(document).find(`#Close_Pending_${id}`).show()
     $(document).find(`#Expand_Pending_${id}`).hide()
+    initializeDraggable()
 })
 
 $(document).find("[id^='Close_Pending_']").on('click', function () {
@@ -54,6 +55,7 @@ $(document).find("[id^='Expand_Assigned_']").on('click', function () {
     $(document).find(`.Assigned_Record_View_${id}`).show()
     $(document).find(`#Close_Assigned_${id}`).show()
     $(document).find(`#Expand_Assigned_${id}`).hide()
+    initializeDraggable()
 })
 
 $(document).find("[id^='Close_Assigned_']").on('click', function () {
@@ -460,7 +462,7 @@ $('#task_tab4').on('click', function () {
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
-   
+
     $('.All_tasks').hide();
     $('.delayed').show();
     hideProjData();
@@ -474,8 +476,8 @@ $('#task_tab5').on('click', function () {
     $('#todo_task').hide();
 
     $('.All_tasks').hide();
-    $('.needs_help').show(); 
-   
+    $('.needs_help').show();
+
     hideProjData();
 })
 
@@ -687,7 +689,7 @@ function bell() {
     }
 }
 
-$('#proj_task_tab1').on('click', function () { 
+$('#proj_task_tab1').on('click', function () {
     $('.pending_Assignment_Record').show();
     $(".Assigned_Record").hide();
     $("[class^='pending_Assignment_View_']").hide();
@@ -712,7 +714,7 @@ $('.dw_content_data').on('click', function () {
     $('#top_div').hide();
 })
 
-$('#proj_task_tab2').on('click', function () { 
+$('#proj_task_tab2').on('click', function () {
     $(".Assigned_Record").show();
     $('.pending_Assignment_Record').hide();
     $("[class^='Assigned_Record_View_']").hide();
@@ -758,7 +760,7 @@ $('#proj_task_tab4').on('click', function () {
     $('.action_need_proj_3').hide();
     $('.on_hold_proj_2').show();
 
-    
+
     hideProjData();
     $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
