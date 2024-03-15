@@ -95,6 +95,15 @@
     border-radius: 4px;
     border: 1px solid #000000;
 }
+.Btn_style_close{
+    background-color: rgb(171, 46, 46);
+    color: white;
+    width: 80px;
+    border: none;
+    padding: 4px 0px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+}
 
 .rag_status {
     white-space: nowrap;
