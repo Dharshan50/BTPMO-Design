@@ -414,10 +414,10 @@ $('#tab3').on('click', function () {
 
 $("[id^='task_tab']").on('click', function () {
     $('.E_Procurement_Table').show();
-    $('.E_Staff_Table').show();
+    $('.E_Staff_Table').hide();
     if (this.id === 'task_tab5') {
         $('.E_Procurement_Table').hide();
-        $('.E_Staff_Table').show();
+        $('.E_Staff_Table').hide();
     }
 })
 
@@ -454,6 +454,7 @@ $('#task_tab4').on('click', function () {
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
+   
     hideProjData();
 })
 $('#task_tab6').on('click', function () {
