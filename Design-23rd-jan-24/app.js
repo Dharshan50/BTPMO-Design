@@ -395,6 +395,10 @@ $("[id^='save_revis_']").on('click', function(){
 })
 
 $("[id^='upd_revtime_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+    console.log(id)
     $(document).find(`#label_revstrrevdate_${id}`).hide();
     $(document).find(`#label_revendrevdate_${id}`).hide();
     $(document).find(`#edit_revstrrevdate_${id}`).show();
