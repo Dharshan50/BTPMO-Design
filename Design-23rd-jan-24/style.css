@@ -5,7 +5,7 @@
 .main_title_head {
     font-size: 25px;
     color: #08305c;
-} 
+}
 
 .tab_head_content {
     background-color: #dfe6e9;
@@ -41,7 +41,8 @@
 .proj_tsk_filter {
     display: flex;
     justify-content: space-between;
-} 
+}
+
 .serch_box {
     margin-left: 10px;
 }
@@ -74,6 +75,7 @@
     padding: 5px 5px;
     border-radius: 3px;
 }
+
 .btn_proj {
     margin-right: 30px !important;
     display: flex;
@@ -83,10 +85,10 @@
     align-items: baseline;
 }
 
-.Project_Summary_Filter{
+.Project_Summary_Filter {
     display: flex;
     justify-content: space-between;
-    gap:20px;
+    gap: 20px;
     align-items: baseline;
 }
 
@@ -96,7 +98,8 @@
     color: white;
     padding: 5px 15px;
 }
-.Assign_button{
+
+.Assign_button {
     background-color: rgb(46, 171, 46) !important;
     color: white !important;
     width: 80px !important;
@@ -111,7 +114,8 @@
     color: rgb(46, 171, 46) !important;
     margin-top: 10px;
 }
-.Btn_style_close{
+
+.Btn_style_close {
     background-color: rgb(171, 46, 46);
     color: white;
     width: 80px;
@@ -120,15 +124,30 @@
     border-radius: 4px;
     border: 1px solid #000000;
 }
-.E_Staff_Table{
+
+.E_Staff_Table {
     display: none;
 }
+
+.Stage_Details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+}
+.Details{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
 mark.rag_status.ut {
-    width:100% ;
+    width: 100%;
     text-wrap: pretty;
     /* border-radius: 5px;
     border: 1px solid #000; */
 }
+
 .rag_status {
     white-space: nowrap;
     text-align: center;
@@ -136,9 +155,10 @@ mark.rag_status.ut {
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
-   
+
 }
-.Timeline_button{
+
+.Timeline_button {
     white-space: nowrap;
     text-align: center;
     padding: 7px 10px !important;
@@ -164,7 +184,8 @@ mark.rag_status.ut {
     padding-top: 10px;
     margin-bottom: 20px;
 }
-.dev_break_btn{
+
+.dev_break_btn {
     font-size: 14px !important;
     padding: 1px 10px !important;
     border-radius: 0px !important;
@@ -172,7 +193,8 @@ mark.rag_status.ut {
     background-color: #08305c !important;
     border: 1px solid #08305c !important;
 }
-.dev_break_down_content{
+
+.dev_break_down_content {
     display: flex;
     gap: 10px;
     margin-top: 14px;
@@ -283,7 +305,7 @@ mark.rag_status.ut {
     margin-left: 5px !important;
 }
 
-.accordion-button{
+.accordion-button {
     background-color: #08305c !important;
 }
 
@@ -435,9 +457,11 @@ mark.rag_status.ut {
     background-color: #f7f7f7;
     margin: 0px 0;
 }
+
 table.table.table-responsive thead tr th {
     font-size: 11px;
 }
+
 .task_tabwrap {
     -webkit-transition: 0.3s box-shadow ease;
     transition: 0.3s box-shadow ease;
@@ -1140,7 +1164,7 @@ table.table.table-responsive thead tr th {
     align-items: flex-start;
     width: 20% !important;
     flex-direction: column;
-    margin-left: 18px;
+    /* margin-left: 18px; */
     /* //   display: -ms-flexbox;
   //   display: flex;
   //   gap: 5px; */
@@ -1180,15 +1204,18 @@ table.table.table-responsive thead tr th {
     display: flex;
     justify-content: space-between;
 }
+
 .bt_dev_task_content {
     display: flex;
     justify-content: space-between;
 }
-.portfolio_tab_task{
+
+.portfolio_tab_task {
     display: flex;
     justify-content: space-between;
     margin-bottom: 19px;
 }
+
 .card_main_box {
     /* // border: 1px solid #858585;
   // padding: 20px;
@@ -1235,6 +1262,30 @@ table.table.table-responsive thead tr th {
 
 
 .card_cnt {
+    display: flex;
+    /* // flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3px;
+    /* // margin-top: 5px; */
+}
+.TaskTitle{
+    background-color: rgb(255 255 217) !important;
+}
+.batch_header{
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #c4c4c4;
+    background: white;
+    padding: 5px;
+}
+.Batch_row{
+    padding: 5px;    
+    /* background-color: #e7e7e7; */
+    margin: 5px 0px;
+}
+
+.Batch_Details {
     display: flex;
     /* // flex-wrap: wrap; */
     justify-content: space-between;
@@ -1325,7 +1376,8 @@ p.yes_no_align {
     margin: auto;
     font-size: 10px;
 }
-.e_staff_proj{
+
+.e_staff_proj {
     display: none;
 }
 
@@ -1339,6 +1391,7 @@ span.last_num {
     font-size: 12px;
     margin-left: 25px;
 }
+
 span.last_num_task {
     width: 25px;
     display: block;
