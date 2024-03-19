@@ -124,6 +124,7 @@
 }
 mark.rag_status.ut {
     width:100% ;
+    text-wrap: pretty;
     /* border-radius: 5px;
     border: 1px solid #000; */
 }
@@ -249,7 +250,7 @@ mark.rag_status.ut {
 }
 
 .accordian_head {
-    background-color: #08305c !important;
+    background-color: #08305c;
     color: #ffffff !important;
     padding: 0.4rem 1.25rem !important;
 }
@@ -259,6 +260,10 @@ mark.rag_status.ut {
     left: 0;
     position: absolute;
     margin-left: 5px !important;
+}
+
+.accordion-button{
+    background-color: #08305c !important;
 }
 
 
