@@ -225,6 +225,7 @@ function hide_all_details() {
     $('#function_req_3').hide();
     $('#project_charter_data_4').hide();
     $('#project_charter_data_5').hide();
+    //$('#bt_dev_tasks').hide();
     hideProjData();
 }
 
@@ -244,12 +245,14 @@ function task_hide_details() {
     $('#project_charter_data_4').hide();
     $('#project_charter_data_5').hide();
     hideProjData();
+    //$('#bt_dev_tasks').hide();
 }
 
 
 $('#tab1').on('click', function () {
     $('#proj_summary_tbl').show();
     $('#pagination_container').show();
+    $('#bt_dev_tasks').hide();
     hide_all_details();
 })
 $('#assign_tsk').on('click', function () {
@@ -411,6 +414,7 @@ $('#tab3').on('click', function () {
     $('#proj_summary_tbl').hide();
     $('#pagination_container').show();
     $('#task_tab1').get(0).click();
+    $('#bt_dev_tasks').hide();
     hideProjData();
 })
 
@@ -500,6 +504,7 @@ $('#tab2').on('click', function () {
     $('#pagination_container').show();
     $('#proj_tsk_manage').show();
     $('#proj_task_tab1').get(0).click();
+    $('#bt_dev_tasks').hide();
     hideProjData();
 })
 $('.retrn_main_page').on('click', function () {
@@ -745,6 +750,15 @@ $('#proj_task_tab3').on('click', function () {
     $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
     });
+})
+
+
+$('#tab4').on('click',function(){
+    $('#task_manage').hide();
+    $('#proj_summary_tbl').hide();
+    $('#bt_dev_tasks').show();
+    hide_all_details();
+    task_hide_details();
 })
 
 $('#proj_task_tab4').on('click', function () {
