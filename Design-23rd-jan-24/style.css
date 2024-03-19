@@ -663,6 +663,8 @@ table.table.table-responsive thead tr th {
     font-size: 11px;
 }
 
+
+
 @media (min-width:768px) {
 
     .tab+label {
@@ -1112,6 +1114,7 @@ table.table.table-responsive thead tr th {
     align-items: flex-start;
     width: 20% !important;
     flex-direction: column;
+    margin-left: 18px;
     /* //   display: -ms-flexbox;
   //   display: flex;
   //   gap: 5px; */
@@ -1154,6 +1157,11 @@ table.table.table-responsive thead tr th {
 .bt_dev_task_content {
     display: flex;
     justify-content: space-between;
+}
+.portfolio_tab_task{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 19px;
 }
 .card_main_box {
     /* // border: 1px solid #858585;
@@ -1221,7 +1229,7 @@ table.table.table-responsive thead tr th {
 
 .card_head_para {
     margin-top: 3px;
-    margin-bottom: 0rem !important;
+    margin-bottom: 3px !important;
     font-weight: 600;
     font-size: 13px;
 }

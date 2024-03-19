@@ -258,6 +258,7 @@ $('#tab1').on('click', function () {
     $('#proj_summary_tbl').show();
     $('#pagination_container').show();
     $('#bt_dev_tasks').hide();
+    $('#portfolio_sec_tab').hide();
     hide_all_details();
 })
 $('#assign_tsk').on('click', function () {
@@ -454,6 +455,7 @@ $('#tab3').on('click', function () {
     $('#pagination_container').show();
     $('#task_tab1').get(0).click();
     $('#bt_dev_tasks').hide();
+    $('#portfolio_sec_tab').hide();
     hideProjData();
 })
 
@@ -544,6 +546,7 @@ $('#tab2').on('click', function () {
     $('#proj_tsk_manage').show();
     $('#proj_task_tab1').get(0).click();
     $('#bt_dev_tasks').hide();
+    $('#portfolio_sec_tab').hide();
     hideProjData();
 })
 $('.retrn_main_page').on('click', function () {
@@ -819,6 +822,17 @@ $('#tab4').on('click',function(){
     $('#task_manage').hide();
     $('#proj_summary_tbl').hide();
     $('#bt_dev_tasks').show();
+    $('#portfolio_sec_tab').hide();
+    hide_all_details();
+    task_hide_details();
+})
+
+
+$('#tab5').on('click', function(){
+    $('#task_manage').hide();
+    $('#proj_summary_tbl').hide();
+    $('#bt_dev_tasks').hide();
+    $('#portfolio_sec_tab').show();
     hide_all_details();
     task_hide_details();
 })
