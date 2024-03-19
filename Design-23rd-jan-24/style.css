@@ -5,7 +5,7 @@
 .main_title_head {
     font-size: 25px;
     color: #08305c;
-}
+} 
 
 .tab_head_content {
     background-color: #dfe6e9;
@@ -17,8 +17,8 @@
 
 .bt_process_tab {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: space-between;
+    align-items: baseline;
     padding-right: 45px;
 }
 
@@ -41,12 +41,7 @@
 .proj_tsk_filter {
     display: flex;
     justify-content: space-between;
-}
-
-.btn_proj {
-    margin-right: 30px !important;
-}
-
+} 
 .serch_box {
     margin-left: 10px;
 }
@@ -78,6 +73,21 @@
     border: none;
     padding: 5px 5px;
     border-radius: 3px;
+}
+.btn_proj {
+    margin-right: 30px !important;
+    display: flex;
+    width: 35%;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: baseline;
+}
+
+.Project_Summary_Filter{
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+    align-items: baseline;
 }
 
 .Excel_upload {
@@ -534,6 +544,10 @@ table.table.table-responsive thead tr th {
 
 .task_tab {
     display: none;
+}
+
+.project_tab {
+    width: 147px !important;
 }
 
 .task_tab:checked:nth-of-type(1)~.tabcontent:nth-of-type(1) {
