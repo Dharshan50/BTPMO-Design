@@ -87,13 +87,13 @@
     padding: 5px 15px;
 }
 .Assign_button{
-    background-color: rgb(46, 171, 46);
-    color: white;
-    width: 80px;
-    border: none;
-    padding: 4px 0px;
-    border-radius: 4px;
-    border: none;
+    background-color: rgb(46, 171, 46) !important;
+    color: white !important;
+    width: 80px !important;
+    border: none !important;
+    padding: 4px 0px !important;
+    border-radius: 4px !important;
+    
 }
 .Btn_style_close{
     background-color: rgb(171, 46, 46);
@@ -1119,7 +1119,10 @@ table.table.table-responsive thead tr th {
     display: flex;
     justify-content: space-between;
 }
-
+.bt_dev_task_content {
+    display: flex;
+    justify-content: space-between;
+}
 .card_main_box {
     /* // border: 1px solid #858585;
   // padding: 20px;

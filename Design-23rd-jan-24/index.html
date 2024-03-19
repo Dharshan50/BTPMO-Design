@@ -104,9 +104,123 @@
                 <label for="tab2" id="bt_proj-task_tab">Projects</label>
                 <input type="radio" id="tab3" name="tabGroup1" class="tab">
                 <label id="bt_task_tab" for="tab3">Tasks</label>
-                
+                <input type="radio" id="tab4" class="tab" name="tabGroup1">
+                <label for="tab4" id="bt_proj_task_tab4">BT-Dev Tasks</label>
             </div>
         </div>
+
+        <section class="bt_dev_tasks" id="bt_dev_tasks">
+            <div class="bt_dev_task_content">
+                <div class="task_tabwrap mt-4" style="font-size: 13px; margin-right: 25px !important;">
+                    <input type="radio" id="bt_task_tab1" name="task_tabGroup2" class="task_tab" checked>
+                    <label id="bt_proj_tab" for="bt_task_tab1" style="border-right: none;">Assigned</label>
+
+                    <input type="radio" id="bt_task_tab2" name="task_tabGroup2" class="task_tab" checked>
+                    <label id="bt_proj_tab" for="bt_task_tab2" style="border-right: none;">Pending</label>
+
+                    <input type="radio" id="bt_task_tab3" name="task_tabGroup2" class="task_tab" checked>
+                    <label id="bt_task_tab" for="bt_task_tab3" style="border-right: none;">Current Week</label>
+
+                    <input type="radio" id="bt_task_tab4" name="task_tabGroup2" class="task_tab" checked>
+                    <label id="bt_task_tab" for="bt_task_tab4" style="border-right: none;">Next Week</label>
+
+                    <input type="radio" id="bt_task_tab5" name="task_tabGroup2" class="task_tab" checked>
+                    <label id="bt_task_tab" for="bt_task_tab5" style="border-right: none;">Delay</label>
+
+                    <input type="radio" id="bt_task_tab6" name="task_tabGroup2" class="task_tab" checked>
+                    <label id="bt_task_tab" for="bt_task_tab6" style="border-right: none;">Needs Help</label>
+
+                    <input type="radio" id="bt_task_tab7" name="task_tabGroup2" class="task_tab" checked>
+                    <label id="bt_task_tab" for="bt_task_tab7">My Projects</label>
+                </div>
+                <div class="task_serch_box d-flex align-items-center">
+                    <div class="search_icon_grp" style="width: 108% !important; margin-top: 25px !important;">
+                        <input type="text" class="form-control formtxt_box_chng"
+                            style="width: 100% !important; margin-left: 0rem !important; padding: 5px 10px;"
+                            placeholder="Search">
+                        <i class="fas fa-search search_icon" style="right: 10px !important;"></i>
+                    </div>
+                    <!-- <i class="fa-solid fa-bell" style="margin-top: 30px;color: red;"></i> -->
+                </div>
+            </div>
+            <div class="bt_dev_tbl_content" id="bt_dev_tbl_content">
+                <div class="table-responsive" id="tbl_bt_tsk">
+                    <table class="table table-responsive tbl_all_proj">
+                        <thead style="font-size: 15px;">
+                            <tr>
+                                <th>Actions</th>
+                                <th>No</th>
+                                <th>Project Priority</th>
+                                <th>Project Name</th>
+                                <th>Current Stage</th>
+                                <th>Current Task</th>
+                                <th>Current Task Status</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Revised Start Date</th>
+                                <th>Revised End Date</th>
+                                <th>Next Task</th>
+                                <th>Assigned To</th>
+                                <th>Current Stage Status</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size: 12px;">
+                            <tr>
+                                <td><div>
+                                    <i class="fa-solid fa-angle-up"></i><button type="button" class="btn_create_proj">Update Timeline</button>
+                                </div></td>
+                                <td>5</td>
+                                <td><span class="last_num_task" style="background-color: #f06060; color: #fff;">3</span>
+                                </td>
+                                <td>E-Staff</td>
+                                <td>Development</td>
+                                <td>PM Shares Signed Requirement</td>
+                                <td><mark style="background-color: #ffeaa7;" class="rag_status">Pending</mark></td>
+                                <td>
+                                    <div>
+                                        <input type="text" class="form-control formtxt_box_chng_sml"
+                                            id="edit_strdate_1" style="padding: 3px 10px !important; width: 100% !important;">
+                                    </div>
+                                    <div>
+                                        <label for="" id="label_strdate_1" style="display: none;">21/03/2024</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <input type="text" class="form-control formtxt_box_chng_sml"
+                                            id="edit_enddate_1" style="padding: 3px 10px !important; width: 100% !important;">
+                                    </div>
+                                    <div>
+                                        <label for="" id="label_enddate_1" style="display: none;">22/04/2024</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <input type="text" class="form-control formtxt_box_chng_sml"
+                                            id="edit_revstrdate_1" style="padding: 3px 10px !important; width: 100% !important; display: none;">
+                                    </div>
+                                    <div>
+                                        <label for="" id="label_revstrdate_1" >Nil</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <input type="text" class="form-control formtxt_box_chng_sml"
+                                            id="edit_revenddate_1" style="padding: 3px 10px !important; width: 100% !important; display: none;">
+                                    </div>
+                                    <div>
+                                        <label for="" id="label_revenddate_1" >Nil</label>
+                                    </div>
+                                </td>
+                                <td>PM and BT Dev Meeting</td>
+                                <td>Dharshan</td>
+                                <td><mark style="background-color: #009500;" class="rag_status">On Track</mark></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
 
         <div id="proj_summary_tbl">
             <div class="bt_process_tab mt-3">
@@ -346,9 +460,11 @@
                                 <!-- <td><i class="fa-solid fa-plus"
                                         style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"
                                         id="view_tsk_data_2" title="View Task"></i></td> -->
-                                <td><mark style="background-color: #e0dbdb;" class="rag_status ut">Update Timeline</mark></td>
+                                <td><mark style="background-color: #e0dbdb;" class="rag_status ut">Update
+                                        Timeline</mark></td>
                                 <td>1</td>
-                                <td><span class="last_num_task" style="background-color: #f06060; color: #fff;">1</span></td>
+                                <td><span class="last_num_task" style="background-color: #f06060; color: #fff;">1</span>
+                                </td>
                                 <td>China Fronters</td>
                                 <td>Project Charter</td>
                                 <td>Send charter to Function</td>
@@ -361,15 +477,17 @@
                                 <td>Aurianne(PM)</td>
                                 <td><mark style="background-color: rgb(121, 255, 97);color: black !important;"
                                         class="rag_status">On Track</mark></td>
-                                
+
                             </tr>
                             <tr class="All_tasks">
                                 <!-- <td><i class="fa-solid fa-plus"
                                         style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"
                                         id="view_tsk_data_2" title="View Task"></i></td> -->
-                                <td><mark style="background-color: #ffeaa7;" class="rag_status ut">Update Timeline</mark></td>
+                                <td><mark style="background-color: #ffeaa7;" class="rag_status ut">Update
+                                        Timeline</mark></td>
                                 <td>4</td>
-                                <td><span class="last_num_task" style="background-color: #bdd64b; color: #fff;">2</span></td>
+                                <td><span class="last_num_task" style="background-color: #bdd64b; color: #fff;">2</span>
+                                </td>
                                 <td>E-Procurement</td>
                                 <td>Project Charter</td>
                                 <td>BR Review</td>
@@ -382,19 +500,22 @@
                                 <td>Aurianne(PM)</td>
                                 <td><mark style="background-color: rgb(121, 255, 97);color: black !important;"
                                         class="rag_status">On Track</mark></td>
-                                
+
                             </tr>
                             <tr class="All_tasks delayed">
                                 <!-- <td><i class="fa-solid fa-plus"
                                         style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"
                                         id="view_tsk_data_2" title="View Task"></i></td> -->
-                                <td><mark style="background-color: #ffeaa7;" class="rag_status ut">Update Timeline</mark></td>
+                                <td><mark style="background-color: #ffeaa7;" class="rag_status ut">Update
+                                        Timeline</mark></td>
                                 <td>5</td>
-                                <td><span class="last_num_task" style="background-color: #45bcd9; color: #fff;">3</span></td>
+                                <td><span class="last_num_task" style="background-color: #45bcd9; color: #fff;">3</span>
+                                </td>
                                 <td>China Fronters</td>
                                 <td>Project Charter</td>
                                 <td>Send charter to Function</td>
-                                <td><mark style="background-color:  #f9bdb3; color: red;" class="rag_status">Delayed</mark>
+                                <td><mark style="background-color:  #f9bdb3; color: red;"
+                                        class="rag_status">Delayed</mark>
                                 </td>
                                 <td>14/03/2024</td>
                                 <td>29/03/2024</td>
@@ -403,19 +524,22 @@
                                 <td>Aurianne(PM)</td>
                                 <td><mark style="background-color: #f2d479;color: red !important;"
                                         class="rag_status">Attention</mark></td>
-                                
+
                             </tr>
                             <tr class="All_tasks needs_help">
                                 <!-- <td><i class="fa-solid fa-plus"
                                         style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"
                                         id="view_tsk_data_2" title="View Task"></i></td> -->
-                                <td><mark style="background-color: #ff542e;" class="rag_status ut">Update revised date</mark></td>
+                                <td><mark style="background-color: #ff542e;" class="rag_status ut">Update revised
+                                        date</mark></td>
                                 <td>6</td>
-                                <td><span class="last_num_task" style="background-color: #bdd64b; color: #fff;">2</span></td>
+                                <td><span class="last_num_task" style="background-color: #bdd64b; color: #fff;">2</span>
+                                </td>
                                 <td>China Fronters</td>
                                 <td>Project Charter</td>
                                 <td>Send charter to Function</td>
-                                <td><mark style="background-color:  hsl(33, 100%, 73%); color: rgb(22, 22, 22);" class="rag_status">Needs Help</mark>
+                                <td><mark style="background-color:  hsl(33, 100%, 73%); color: rgb(22, 22, 22);"
+                                        class="rag_status">Needs Help</mark>
                                 </td>
                                 <td>14/03/2024</td>
                                 <td>29/03/2024</td>
@@ -423,10 +547,10 @@
                                 <td>BR Review</td>
                                 <td>Aurianne(PM)</td>
                                 <td><mark style="background-color: #f2d479;color: red !important;"
-                                    class="rag_status">Attention</mark></td>
-                                
-                            </tr>  
-                            
+                                        class="rag_status">Attention</mark></td>
+
+                            </tr>
+
                             <!-- OTHERS -->
                             <tr id="proj_tsk_data_10">
                                 <td colspan="16">
@@ -758,7 +882,7 @@
                                         </div>
                                     </div>
                                 </td>
-                            </tr> 
+                            </tr>
                             <tr id="proj_tsk_data_2">
                                 <td colspan="16">
                                     <div class="task_main_body" style="max-height:300px; overflow-y:auto">
@@ -1381,7 +1505,7 @@
                                 <td>Aurianne(PM)</td>
                                 <td>02/03/2024</td>
                                 <td>30/03/2024</td>
-                                <td>Dharshan</td>   
+                                <td>Dharshan</td>
                                 <td><mark style="background-color: green;color: #fff !important;"
                                         class="rag_status">1</mark></td>
                                 <td><mark style="background-color: rgb(255, 215, 82);color: #fff !important;"
@@ -3072,7 +3196,8 @@
                                         <div class="accordion" style="margin-bottom: 4px;" id="PROJECT_CHARTER_1">
                                             <h2 class="accordion-header">
                                                 <button class="accordion-button collapsed accordian_head" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#pending_Assignment_Stage_1" aria-expanded="true"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#pending_Assignment_Stage_1" aria-expanded="true"
                                                     aria-controls="pending_Assignment_Stage_1">
                                                     <div style="display : flex; gap:7px;">
                                                         <span style="margin-left: 10px;">Project Charter</span>
@@ -3080,7 +3205,8 @@
                                                 </button>
                                             </h2>
                                         </div>
-                                        <div id="pending_Assignment_Stage_1" class="droppable" style="max-height:300px; overflow-y:auto;font-size: 12px;">
+                                        <div id="pending_Assignment_Stage_1" class="droppable"
+                                            style="max-height:300px; overflow-y:auto;font-size: 12px;">
                                             <div class=" project_charter droppable" id="project_charter">
                                                 <div id="item1_1" class="card_main_box draggable item1 show">
                                                     <div class="card_heda">
@@ -4299,7 +4425,8 @@
                                         <div class="accordion" style="margin-bottom: 4px;" id="PROJECT_CHARTER_1">
                                             <h2 class="accordion-header">
                                                 <button class="accordion-button collapsed accordian_head" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#pending_Assignment_Stage_2" aria-expanded="true"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#pending_Assignment_Stage_2" aria-expanded="true"
                                                     aria-controls="pending_Assignment_Stage_2">
                                                     <div style="display : flex; gap:7px;">
                                                         <span style="margin-left: 10px;">Project Charter</span>
@@ -5523,7 +5650,8 @@
                                         <div class="accordion" style="margin-bottom: 4px;" id="PROJECT_CHARTER_1">
                                             <h2 class="accordion-header">
                                                 <button class="accordion-button collapsed accordian_head" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#pending_Assignment_Stage_3" aria-expanded="true"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#pending_Assignment_Stage_3" aria-expanded="true"
                                                     aria-controls="pending_Assignment_Stage_3">
                                                     <div style="display : flex; gap:7px;">
                                                         <span style="margin-left: 10px;">Project Charter</span>
@@ -6747,7 +6875,8 @@
                                         <div class="accordion" style="margin-bottom: 4px;" id="PROJECT_CHARTER_1">
                                             <h2 class="accordion-header">
                                                 <button class="accordion-button collapsed accordian_head" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#pending_Assignment_Stage_4" aria-expanded="true"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#pending_Assignment_Stage_4" aria-expanded="true"
                                                     aria-controls="pending_Assignment_Stage_4">
                                                     <div style="display : flex; gap:7px;">
                                                         <span style="margin-left: 10px;">Project Charter</span>
@@ -7973,8 +8102,8 @@
                                         <div class="accordion" style="margin-bottom: 4px;" id="PROJECT_CHARTER_1">
                                             <h2 class="accordion-header">
                                                 <button class="accordion-button collapsed accordian_head" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#Assigned_Record_Stage_1" aria-expanded="true"
-                                                    aria-controls="Assigned_Record_Stage_1">
+                                                    data-bs-toggle="collapse" data-bs-target="#Assigned_Record_Stage_1"
+                                                    aria-expanded="true" aria-controls="Assigned_Record_Stage_1">
                                                     <div style="display : flex; gap:7px;">
                                                         <span style="margin-left: 10px;">Project Charter</span>
                                                     </div>
@@ -9188,7 +9317,7 @@
                                     <td>Project charter</td>
                                     <td><mark style="background-color: #c0c0c0;" class="rag_status">Completed</mark>
                                     </td>
-                                    <td>Yes</td> 
+                                    <td>Yes</td>
                                     <td><button class="Assign_button" id="Expand_Assigned_2">Re-Assign</button><button
                                             class="Btn_style_close" id="Close_Assigned_2">Close</button></td>
                                 </tr>
@@ -9197,7 +9326,8 @@
                                         <div class="accordion" style="margin-bottom: 4px;" id="PROJECT_CHARTER_1">
                                             <h2 class="accordion-header">
                                                 <button class="accordion-button collapsed accordian_head" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#pending_Assignment_Stage_2" aria-expanded="true"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#pending_Assignment_Stage_2" aria-expanded="true"
                                                     aria-controls="Assigned_Record_Stage_2">
                                                     <div style="display : flex; gap:7px;">
                                                         <span style="margin-left: 10px;">Project Charter</span>
@@ -10412,7 +10542,7 @@
                                     <td>Project charter</td>
                                     <td><mark style="background-color: #68f38d;" class="rag_status">InProgress</mark>
                                     </td>
-                                    <td>No</td> 
+                                    <td>No</td>
                                     <td><button class="Assign_button" id="Expand_Assigned_3">Re-Assign</button><button
                                             class="Btn_style_close" id="Close_Assigned_3">Close</button></td>
                                 </tr>
@@ -10421,8 +10551,8 @@
                                         <div class="accordion" style="margin-bottom: 4px;" id="PROJECT_CHARTER_1">
                                             <h2 class="accordion-header">
                                                 <button class="accordion-button collapsed accordian_head" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#Assigned_Record_Stage_3" aria-expanded="true"
-                                                    aria-controls="Assigned_Record_Stage_3">
+                                                    data-bs-toggle="collapse" data-bs-target="#Assigned_Record_Stage_3"
+                                                    aria-expanded="true" aria-controls="Assigned_Record_Stage_3">
                                                     <div style="display : flex; gap:7px;">
                                                         <span style="margin-left: 10px;">Project Charter</span>
                                                     </div>
