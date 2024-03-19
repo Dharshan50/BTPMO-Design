@@ -10,6 +10,7 @@ $(document).ready(function () {
     // $('#function_req_2').hide();
     // $('#project_charter_data_2').hide();
     $('#tab1').get(0).click();
+
     $('#proj_tsk_manage').hide();
     $('#prj_tsk_assign').hide();
     $('#proj_stage_task').hide();
@@ -254,11 +255,14 @@ function task_hide_details() {
 }
 
 
+
+
 $('#tab1').on('click', function () {
     $('#proj_summary_tbl').show();
     $('#pagination_container').show();
     $('#bt_dev_tasks').hide();
     $('#portfolio_sec_tab').hide();
+    $('#prot_BA_view').hide();
     hide_all_details();
 })
 $('#assign_tsk').on('click', function () {
@@ -349,6 +353,33 @@ $("[id^='upd_time_']").on('click', function () {
     $(`#save_time_${id}`).show();
 })
 
+$("[id^='Update_revis_']").on('click', function(){
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+    console.log(id)
+    $(document).find(`#rev_str_${id}`).hide();
+    $(document).find(`#rev_end_${id}`).hide();
+    $(document).find(`#edit_revstrport_${id}`).show();
+    $(document).find(`#edit_revendport_${id}`).show();
+    $(`#Update_revis_${id}`).hide();
+    $(`#save_revis_${id}`).show();
+})
+
+$("[id^='save_revis_']").on('click', function(){
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+    console.log(id)
+    $(document).find(`#rev_str_${id}`).show();
+    $(document).find(`#rev_end_${id}`).show();
+    $(document).find(`#edit_revstrport_${id}`).hide();
+    $(document).find(`#edit_revendport_${id}`).hide();
+    $(`#Update_revis_${id}`).show();
+    $(`#save_revis_${id}`).hide();
+})
+
+
 $("[id^='save_time_']").on('click', function () {
     var temp_id = this.id;
     var splitArray = temp_id.split('_');
@@ -365,6 +396,9 @@ $("[id^='save_time_']").on('click', function () {
     $(`#upd_time_${id}`).show();
     $(`#save_time_${id}`).hide();
 })
+
+
+
 
 $("[id^='Save_Rec_']").on('click', function () {
     var temp_id = this.id;
@@ -456,6 +490,7 @@ $('#tab3').on('click', function () {
     $('#task_tab1').get(0).click();
     $('#bt_dev_tasks').hide();
     $('#portfolio_sec_tab').hide();
+    $('#prot_BA_view').hide();
     hideProjData();
 })
 
@@ -547,6 +582,7 @@ $('#tab2').on('click', function () {
     $('#proj_task_tab1').get(0).click();
     $('#bt_dev_tasks').hide();
     $('#portfolio_sec_tab').hide();
+    $('#prot_BA_view').hide();
     hideProjData();
 })
 $('.retrn_main_page').on('click', function () {
@@ -673,6 +709,11 @@ function hideProjData() {
         $(`.card_button_${lst[i]}`).hide();
         $(`#assign_tsk_data_${lst[i]}`).hide();
         $(`#save_time_${lst[i]}`).hide();
+        $(`#port_delay_tab_${lst[i]}`).hide();
+        $(`#edit_revstrport_${lst[i]}`).hide();
+        $(`#edit_revendport_${lst[i]}`).hide();
+        $(`#save_revis_${lst[i]}`).hide();
+
     }
 }
 
@@ -719,6 +760,28 @@ $(document).on('click',`[id^='view_assign_tsk_']`,function(){
         open_id_dev_tsk = "";
     }
 })
+
+var open_id_port_tsk = "";
+$(document).on('click',`[id^='delay_dropdwn_']`,function(){
+    var temp_id = this.id;
+    var splitarr = temp_id.split('_');
+    var id = splitarr[splitarr.length-1];
+    if(open_id_port_tsk != id){
+        $(`#delay_dropdwn_${id}`).css({ 'transition': '0.2s', 'transform': 'rotate(180deg)' });
+        open_id_port_tsk = id;
+        //console.log(open_id);
+        $(`#port_delay_tab_${id}`).show();
+        $(`#port_delay_tab_${id}`).css({ 'transition': '0.2s'});
+
+    }
+    else {
+        $(`#delay_dropdwn_${id}`).css({ 'transition': '0.2s', 'transform': 'rotate(0deg)' });
+        $(`#port_delay_tab_${id}`).hide();
+        $(`#port_delay_tab_${id}`).css({ 'transition': '0.2s'});
+        open_id_port_tsk = "";
+    }
+})
+
 
 var arrow_id = "";
 
@@ -770,6 +833,20 @@ $('#proj_task_tab1').on('click', function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
     });
 })
+
+$(document).on('click' ,'#port_task_tab2' , function(){
+    $('#port_table_view').hide();
+    $('#prot_BA_view').show();
+
+})
+
+$(document).on('click' ,'#port_task_tab1' , function(){
+    $('#port_table_view').show();
+    $('#prot_BA_view').hide();
+})
+
+
+
 
 $('.dw_content_data').on('click', function () {
     $('#tab3').get(0).click(0);
@@ -823,6 +900,7 @@ $('#tab4').on('click',function(){
     $('#proj_summary_tbl').hide();
     $('#bt_dev_tasks').show();
     $('#portfolio_sec_tab').hide();
+    $('#prot_BA_view').hide();
     hide_all_details();
     task_hide_details();
 })
@@ -833,6 +911,8 @@ $('#tab5').on('click', function(){
     $('#proj_summary_tbl').hide();
     $('#bt_dev_tasks').hide();
     $('#portfolio_sec_tab').show();
+    $('#port_task_tab1').get(0).click();
+    $('#port_mypro_tab1').get(0).click();
     hide_all_details();
     task_hide_details();
 })

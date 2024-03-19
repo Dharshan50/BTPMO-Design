@@ -5,7 +5,7 @@
 .main_title_head {
     font-size: 25px;
     color: #08305c;
-} 
+}
 
 .tab_head_content {
     background-color: #dfe6e9;
@@ -41,7 +41,8 @@
 .proj_tsk_filter {
     display: flex;
     justify-content: space-between;
-} 
+}
+
 .serch_box {
     margin-left: 10px;
 }
@@ -74,6 +75,7 @@
     padding: 5px 5px;
     border-radius: 3px;
 }
+
 .btn_proj {
     margin-right: 30px !important;
     display: flex;
@@ -83,10 +85,10 @@
     align-items: baseline;
 }
 
-.Project_Summary_Filter{
+.Project_Summary_Filter {
     display: flex;
     justify-content: space-between;
-    gap:20px;
+    gap: 20px;
     align-items: baseline;
 }
 
@@ -96,7 +98,8 @@
     color: white;
     padding: 5px 15px;
 }
-.Assign_button{
+
+.Assign_button {
     background-color: rgb(46, 171, 46) !important;
     color: white !important;
     width: 80px !important;
@@ -104,13 +107,15 @@
     padding: 4px 0px !important;
     border-radius: 4px !important;
 }
-.icon_show_tsk{
+
+.icon_show_tsk {
     margin-left: 3px;
     font-size: 15px;
     cursor: pointer;
     color: rgb(46, 171, 46) !important;
 }
-.Btn_style_close{
+
+.Btn_style_close {
     background-color: rgb(171, 46, 46);
     color: white;
     width: 80px;
@@ -119,14 +124,17 @@
     border-radius: 4px;
     border: 1px solid #000000;
 }
-.E_Staff_Table{
+
+.E_Staff_Table {
     display: none;
 }
+
 mark.rag_status.ut {
-    width:100% ;
+    width: 100%;
     /* border-radius: 5px;
     border: 1px solid #000; */
 }
+
 .rag_status {
     white-space: nowrap;
     text-align: center;
@@ -134,9 +142,10 @@ mark.rag_status.ut {
     display: inline-block;
     width: 84%;
     box-sizing: border-box;
-   
+
 }
-.Timeline_button{
+
+.Timeline_button {
     white-space: nowrap;
     text-align: center;
     padding: 7px 10px !important;
@@ -162,7 +171,8 @@ mark.rag_status.ut {
     padding-top: 10px;
     margin-bottom: 20px;
 }
-.dev_break_btn{
+
+.dev_break_btn {
     font-size: 14px !important;
     padding: 1px 10px !important;
     border-radius: 0px !important;
@@ -170,7 +180,8 @@ mark.rag_status.ut {
     background-color: #08305c !important;
     border: 1px solid #08305c !important;
 }
-.dev_break_down_content{
+
+.dev_break_down_content {
     display: flex;
     gap: 10px;
     margin-top: 14px;
@@ -409,9 +420,11 @@ mark.rag_status.ut {
     background-color: #f7f7f7;
     margin: 0px 0;
 }
+
 table.table.table-responsive thead tr th {
     font-size: 11px;
 }
+
 .task_tabwrap {
     -webkit-transition: 0.3s box-shadow ease;
     transition: 0.3s box-shadow ease;
@@ -1070,6 +1083,143 @@ table.table.table-responsive thead tr th {
 
 }
 
+.fa-caret-down {
+    margin-left: -8px;
+    margin-top: 2px;
+    color: red;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.total_box {
+    /* margin-left: 5px; */
+    padding: 14px;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.top_div_tet {
+    margin-bottom: -5px;
+    display: flex;
+    margin-top: -14px;
+    justify-content: space-between;
+}
+
+.top_div_tet label {
+    background-color: #fff;
+    margin: 0px 10px;
+    text-align: left;
+    padding: 10px 0px;
+    font-size: 12px;
+    width: 14%;
+    font-weight: 700;
+}
+
+.Bottom_div label {
+    background-color: #fff;
+    margin: 0px 10px;
+    text-align: left;
+    padding: 10px 0px;
+    font-size: 12px;
+    width: 14%;
+}
+
+.Bottom_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Style_th_prot{
+    background-color: rgb(222 218 218);
+    padding: 0px 18px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+
+}
+.label_td_prot {
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 97px;
+    text-align: center;
+    padding: 6px 0px;
+    display: flex;
+    align-items: inherit;
+    justify-content: center;
+    gap: 5px;
+}
+i.fa-solid.prp_dot.fa-circle {
+    margin-left: -7px;
+    font-size: 7px;
+   
+    /* margin-top: -8px; */
+}
+
+td.Style_tr_prot div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 13px;
+}
+.prot_BA_view{
+    margin-top: 40px;
+    display: flex;
+    align-items: baseline;
+   
+    gap: 60px;
+    
+}
+.BA_name_sel{
+    background-color: #447E32;
+    padding: 6px 8px;
+    border: 1px solid black;
+}
+.BA_name{
+    
+    padding: 6px 8px;
+    border: 1px solid black;
+}
+.ba_name_prot{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+table.prot_tab tbody tr th {
+    vertical-align: baseline;
+}
+th.lab_dwn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+/* .Bottom_div button {
+    text-align: center;
+    font-size: 12px;
+    width: 14%;
+    margin: 0px 10px;
+} */
+
+button.btn_bot_div {
+    padding: 5px 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: red;
+    color: #fff;
+}
+
+button.btn_bot_div_save {
+    padding: 5px 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #447E32;
+    color: #fff;
+}
+
+
 
 /* // START CARD  */
 
@@ -1154,15 +1304,18 @@ table.table.table-responsive thead tr th {
     display: flex;
     justify-content: space-between;
 }
+
 .bt_dev_task_content {
     display: flex;
     justify-content: space-between;
 }
-.portfolio_tab_task{
+
+.portfolio_tab_task {
     display: flex;
     justify-content: space-between;
     margin-bottom: 19px;
 }
+
 .card_main_box {
     /* // border: 1px solid #858585;
   // padding: 20px;
@@ -1176,9 +1329,9 @@ table.table.table-responsive thead tr th {
   // border-radius: 10px;
   // box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11); */
     border: 1px solid #ddd;
-    margin-left: 5px;
+    margin-left: 0px;
     padding: 0px;
-    width: 98%;
+    width: 100%;
     border-radius: 0px;
     margin-top: 5px !important;
     /* // box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11); */
@@ -1299,7 +1452,8 @@ p.yes_no_align {
     margin: auto;
     font-size: 10px;
 }
-.e_staff_proj{
+
+.e_staff_proj {
     display: none;
 }
 
@@ -1313,6 +1467,7 @@ span.last_num {
     font-size: 12px;
     margin-left: 25px;
 }
+
 span.last_num_task {
     width: 25px;
     display: block;
@@ -1357,14 +1512,17 @@ p.yes_no_align.no {
     border-radius: 5px;
     box-shadow: 0 1px 2px #ccc;
 }
-
+label.label_td_prot span {
+    display: block;
+    margin-left: 0px;
+}
 table thead tr th {
     text-align: left;
 }
 
 table tbody tr td {
     text-align: left;
-    vertical-align: middle;
+    vertical-align:top;
     font-size: 11px;
 }
 
