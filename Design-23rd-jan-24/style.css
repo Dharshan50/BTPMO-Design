@@ -105,10 +105,11 @@
     border-radius: 4px !important;
 }
 .icon_show_tsk{
-    margin-left: 3px;
+    margin-left: 0px;
     font-size: 15px;
     cursor: pointer;
     color: rgb(46, 171, 46) !important;
+    margin-top: 10px;
 }
 .Btn_style_close{
     background-color: rgb(171, 46, 46);
@@ -133,7 +134,7 @@ mark.rag_status.ut {
     text-align: center;
     padding: 4px 9px !important;
     display: inline-block;
-    width: 84%;
+    width: 100%;
     box-sizing: border-box;
    
 }
@@ -222,11 +223,31 @@ mark.rag_status.ut {
     /* Adjust this value based on the desired distance from the right edge */
     transform: translateY(-50%);
 }
-
+.check_box_type{
+    color: #08305c;
+    font-size: 14px;
+    font-weight: 500;
+}
+.check_box_content{
+    cursor: pointer;
+}
 .cal_icon_grp {
     position: relative;
 }
-
+.submit_btn_icon{
+    background: #08305c !important;
+    color: #ffffff !important;
+    margin-right:30px !important;
+    padding: 5px 20px !important;
+    border-radius: 0 !important;
+    border: 1px solid #08305c !important;
+}
+.cancel_btn_icon{
+    border-radius: 0 !important;
+    color: #000;
+    background-color: #95a5a6 !important;
+    border: 1px solid #95a5a6 !important;
+}
 .cal_icon_grp i {
     position: absolute;
     top: 50%;
@@ -665,7 +686,7 @@ table.table.table-responsive thead tr th {
     height: 30px;
     box-sizing: border-box;
     padding: 6px 15px;
-    font-size: 11px;
+    font-size: 9px;
 }
 
 
@@ -680,7 +701,7 @@ table.table.table-responsive thead tr th {
 @media (min-width:768px) {
 
     .task_tab+label {
-        width: 101px;
+        width: 93px;
     }
 }
 

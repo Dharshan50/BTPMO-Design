@@ -5,6 +5,7 @@ $(document).ready(function () {
     date_picker();
     hide_all_details();
     $('#top_div').hide();
+    $('#dev_break_tbl').hide();
     // $('#project_charter_data').hide();
     // $('#function_req').hide();
     // $('#function_req_2').hide();
@@ -26,6 +27,7 @@ $(document).ready(function () {
     // $('#function_req_3').hide();
     hideProjData()
     $(document).find("[class^='EditField_']").hide();
+    //$(document).find("[class^='card_button_']").hide();
     $(document).find("[id^='edit_revenddate_']").hide();
     $(document).find("[id^='edit_revstrdate_']").hide();
     $(document).find("[id^='edit_enddate_']").hide();
@@ -474,7 +476,7 @@ $('#task_tab1').on('click', function () {
     $('.action_requested_row').show();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').show();
-
+    $('.development_row').show();
     $('.All_tasks').show();
     hideProjData();
 })
@@ -485,7 +487,7 @@ $('#task_tab2').on('click', function () {
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
-
+    $('.development_row').show();
     $('.All_tasks').show();
     hideProjData();
 })
@@ -496,7 +498,7 @@ $('#task_tab3').on('click', function () {
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
-
+    $('.development_row').show();
     $('.All_tasks').show();
     hideProjData();
 })
@@ -507,6 +509,7 @@ $('#task_tab4').on('click', function () {
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
+    $('.development_row').hide();
 
     $('.All_tasks').hide();
     $('.delayed').show();
@@ -519,7 +522,7 @@ $('#task_tab5').on('click', function () {
     $('#proj_tsk_data_3').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
-
+    $('.development_row').hide();
     $('.All_tasks').hide();
     $('.needs_help').show();
 
@@ -533,7 +536,7 @@ $('#task_tab6').on('click', function () {
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
-
+    $('.development_row').show();
     $('.All_tasks').show();
     hideProjData();
 })
@@ -670,7 +673,7 @@ function hideProjData() {
     var lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
     for (var i = 0; i <= lst.length; i++) {
         $(`#proj_tsk_data_${lst[i]}`).hide();
-        $(`.card_button_${lst[i]}`).hide();
+         $(`.card_button_${lst[i]}`).hide();
         $(`#assign_tsk_data_${lst[i]}`).hide();
         $(`#save_time_${lst[i]}`).hide();
     }
@@ -740,6 +743,12 @@ $(document).on('click', `[id^='card_arrow_']`, function () {
         $('#card_arrow_' + id).addClass('fa-arrow-circle-down')
         arrow_id = "";
     }
+})
+
+$('#save_modal').on('click',function(){
+    $('#dev_breakdown_data').modal('hide');
+    $('#dev_break_tbl').show();
+    $('#card_arrow_81').trigger('click');
 })
 
 $('#bell').on('click', function () {
