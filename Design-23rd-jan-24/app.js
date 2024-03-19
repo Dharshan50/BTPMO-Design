@@ -19,6 +19,7 @@ $(document).ready(function () {
     //diwakar
     $("[id^='Close_Pending_']").hide()
     $("[id^='Close_Assigned_']").hide()
+    $("[id^='Form_Template_']").hide()
     //diwakar
 
     // $('#project_charter_data_3').hide();   
@@ -44,6 +45,9 @@ $(document).find("[id^='Expand_Pending_']").on('click', function () {
     var temp_id = this.id;
     var splitArray = temp_id.split('_');
     var id = splitArray[splitArray.length - 1];
+    $("[class^='pending_Assignment_View_']").hide();
+    $("[id^='Expand_Pending_']").show();
+    $("[id^='Close_Pending_']").hide();
     $(document).find(`.pending_Assignment_View_${id}`).show()
     $(document).find(`#Close_Pending_${id}`).show()
     $(document).find(`#Expand_Pending_${id}`).hide()
@@ -63,6 +67,9 @@ $(document).find("[id^='Expand_Assigned_']").on('click', function () {
     var temp_id = this.id;
     var splitArray = temp_id.split('_');
     var id = splitArray[splitArray.length - 1];
+    $("[class^='Assigned_Record_View_']").hide();
+    $("[id^='Close_Assigned_']").hide();
+    $("[id^='Expand_Assigned_']").show();
     $(document).find(`.Assigned_Record_View_${id}`).show()
     $(document).find(`#Close_Assigned_${id}`).show()
     $(document).find(`#Expand_Assigned_${id}`).hide()
@@ -294,11 +301,12 @@ $('#slct_proj_drop').on('change', function () {
     $(document).find("[class^='EditField_']").hide();
 })
 
-$("[id^='AddBatch_']").on('click', function () {
+$(document).find("[id^='AddBatch_']").on('click', function () {
     var temp_id = this.id;
     var splitArray = temp_id.split('_');
     var id = splitArray[splitArray.length - 1];
     var type = Number($(document).find(`#batch_type_${id}`).val());
+    alert(type)
     if (type === 0) {
         $(document).find(`#Form_Template_${id}`).hide()
         $(document).find(`#Record_Template_${id}`).show()
@@ -311,7 +319,7 @@ $("[id^='AddBatch_']").on('click', function () {
     }
 })
 
-$("[id^='close_']").on('click', function () {
+$(document).find("[id^='close_']").on('click', function () {
     var temp_id = this.id;
     var splitArray = temp_id.split('_');
     var id = splitArray[splitArray.length - 1];
@@ -320,7 +328,7 @@ $("[id^='close_']").on('click', function () {
     $(document).find(`.card_button`).hide();
 })
 
-$("[id^='EditRecord_']").on('click', function () {
+$(document).find("[id^='EditRecord_']").on('click', function () {
     var temp_id = this.id;
     var splitArray = temp_id.split('_');
     var id = splitArray[splitArray.length - 1];
