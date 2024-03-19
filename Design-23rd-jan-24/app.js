@@ -32,6 +32,10 @@ $(document).ready(function () {
     $(document).find("[id^='edit_revstrdate_']").hide();
     $(document).find("[id^='edit_enddate_']").hide();
     $(document).find("[id^='edit_strdate_']").hide();
+    $(document).find("[id^='edit_revendrevdate_']").hide();
+    $(document).find("[id^='edit_revstrrevdate_']").hide();
+    $(document).find("[id^='edit_endrevdate_']").hide();
+    $(document).find("[id^='edit_strrevdate_']").hide();
 
     sortElements();
 })
@@ -350,7 +354,18 @@ $("[id^='upd_time_']").on('click', function () {
     $(`#upd_time_${id}`).hide();
     $(`#save_time_${id}`).show();
 })
-
+$("[id^='upd_revtime_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+    console.log(id)
+    $(document).find(`#label_revstrrevdate_${id}`).hide();
+    $(document).find(`#label_revendrevdate_${id}`).hide();
+    $(document).find(`#edit_revstrrevdate_${id}`).show();
+    $(document).find(`#edit_revendrevdate_${id}`).show();
+    $(`#upd_revtime_${id}`).hide();
+    $(`#save_revtime_${id}`).show();
+})
 $("[id^='save_time_']").on('click', function () {
     var temp_id = this.id;
     var splitArray = temp_id.split('_');
@@ -366,6 +381,18 @@ $("[id^='save_time_']").on('click', function () {
     $(document).find(`#edit_revenddate_${id}`).hide();
     $(`#upd_time_${id}`).show();
     $(`#save_time_${id}`).hide();
+})
+$("[id^='save_revtime_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+    console.log(id)
+    $(document).find(`#label_revstrrevdate_${id}`).show();
+    $(document).find(`#label_revendrevdate_${id}`).show();
+    $(document).find(`#edit_revstrrevdate_${id}`).hide();
+    $(document).find(`#edit_revendrevdate_${id}`).hide();
+    $(`#upd_revtime_${id}`).show();
+    $(`#save_revtime_${id}`).hide();
 })
 
 $("[id^='Save_Rec_']").on('click', function () {
@@ -479,6 +506,9 @@ $('#task_tab1').on('click', function () {
     $('.development_row').show();
     $('.All_tasks').show();
     hideProjData();
+    $(".fa-angle-down").each(function () {
+        $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
+    });
 })
 $('#task_tab2').on('click', function () {
     $('.action_needed_row').hide();
@@ -490,6 +520,9 @@ $('#task_tab2').on('click', function () {
     $('.development_row').show();
     $('.All_tasks').show();
     hideProjData();
+    $(".fa-angle-down").each(function () {
+        $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
+    });
 })
 $('#task_tab3').on('click', function () {
     $('.action_needed_row').hide();
@@ -501,6 +534,9 @@ $('#task_tab3').on('click', function () {
     $('.development_row').show();
     $('.All_tasks').show();
     hideProjData();
+    $(".fa-angle-down").each(function () {
+        $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
+    });
 })
 $('#task_tab4').on('click', function () {
     $('.action_needed_row').hide();
@@ -510,7 +546,9 @@ $('#task_tab4').on('click', function () {
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
     $('.development_row').hide();
-
+    $(".fa-angle-down").each(function () {
+        $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
+    });
     $('.All_tasks').hide();
     $('.delayed').show();
     hideProjData();
@@ -525,7 +563,9 @@ $('#task_tab5').on('click', function () {
     $('.development_row').hide();
     $('.All_tasks').hide();
     $('.needs_help').show();
-
+    $(".fa-angle-down").each(function () {
+        $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
+    });
     hideProjData();
 })
 
@@ -539,6 +579,9 @@ $('#task_tab6').on('click', function () {
     $('.development_row').show();
     $('.All_tasks').show();
     hideProjData();
+    $(".fa-angle-down").each(function () {
+        $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
+    });
 })
 
 $('#tab2').on('click', function () {
@@ -676,6 +719,7 @@ function hideProjData() {
          $(`.card_button_${lst[i]}`).hide();
         $(`#assign_tsk_data_${lst[i]}`).hide();
         $(`#save_time_${lst[i]}`).hide();
+        $(`#save_revtime_${lst[i]}`).hide();
     }
 }
 
@@ -708,16 +752,22 @@ $(document).on('click',`[id^='view_assign_tsk_']`,function(){
     var splitarr = temp_id.split('_');
     var id = splitarr[splitarr.length-1];
     if(open_id_dev_tsk != id){
-        $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s', 'transform': 'rotate(180deg)' });
+        $(`#view_assign_tsk_${id}`).removeClass('fa-angle-up');
+        $(`#view_assign_tsk_${id}`).addClass('fa-angle-down');
+        $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s' });
         open_id_dev_tsk = id;
         //console.log(open_id);
         $(`#assign_tsk_data_${id}`).show();
+        $('#dev_break_tbl').hide();
         $(`#assign_tsk_data_${id}`).css({ 'transition': '0.2s'});
 
     }
     else {
-        $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s', 'transform': 'rotate(0deg)' });
+        $(`#view_assign_tsk_${id}`).removeClass('fa-angle-down');
+        $(`#view_assign_tsk_${id}`).addClass('fa-angle-up');
+        $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s'});
         $(`#assign_tsk_data_${id}`).hide();
+        $('#dev_break_tbl').hide();
         $(`#assign_tsk_data_${id}`).css({ 'transition': '0.2s'});
         open_id_dev_tsk = "";
     }
