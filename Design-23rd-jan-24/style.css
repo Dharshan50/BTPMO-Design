@@ -93,7 +93,12 @@
     border: none !important;
     padding: 4px 0px !important;
     border-radius: 4px !important;
-    
+}
+.icon_show_tsk{
+    margin-left: 3px;
+    font-size: 15px;
+    cursor: pointer;
+    color: rgb(46, 171, 46) !important;
 }
 .Btn_style_close{
     background-color: rgb(171, 46, 46);
@@ -146,6 +151,19 @@ mark.rag_status.ut {
     padding-bottom: 10px;
     padding-top: 10px;
     margin-bottom: 20px;
+}
+.dev_break_btn{
+    font-size: 14px !important;
+    padding: 1px 10px !important;
+    border-radius: 0px !important;
+    margin-bottom: 3px !important;
+    background-color: #08305c !important;
+    border: 1px solid #08305c !important;
+}
+.dev_break_down_content{
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
 }
 
 .return_main_btn,

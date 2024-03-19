@@ -26,6 +26,11 @@ $(document).ready(function () {
     // $('#function_req_3').hide();
     hideProjData()
     $(document).find("[class^='EditField_']").hide();
+    $(document).find("[id^='edit_revenddate_']").hide();
+    $(document).find("[id^='edit_revstrdate_']").hide();
+    $(document).find("[id^='edit_enddate_']").hide();
+    $(document).find("[id^='edit_strdate_']").hide();
+
     sortElements();
 })
 
@@ -324,6 +329,40 @@ $("[id^='EditRecord_']").on('click', function () {
     }
     $(`#card_bdy_${id}`).css({ 'max-height': '1000px', 'transition': 'max-height:0.8s' });
     $(this).hide()
+})
+
+$("[id^='upd_time_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+    console.log(id)
+    $(document).find(`#label_strdate_${id}`).hide();
+    $(document).find(`#label_enddate_${id}`).hide();
+    $(document).find(`#label_revstrdate_${id}`).hide();
+    $(document).find(`#label_revenddate_${id}`).hide();
+    $(document).find(`#edit_strdate_${id}`).show();
+    $(document).find(`#edit_enddate_${id}`).show();
+    $(document).find(`#edit_revstrdate_${id}`).show();
+    $(document).find(`#edit_revenddate_${id}`).show();
+    $(`#upd_time_${id}`).hide();
+    $(`#save_time_${id}`).show();
+})
+
+$("[id^='save_time_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+    console.log(id)
+    $(document).find(`#label_strdate_${id}`).show();
+    $(document).find(`#label_enddate_${id}`).show();
+    $(document).find(`#label_revstrdate_${id}`).show();
+    $(document).find(`#label_revenddate_${id}`).show();
+    $(document).find(`#edit_strdate_${id}`).hide();
+    $(document).find(`#edit_enddate_${id}`).hide();
+    $(document).find(`#edit_revstrdate_${id}`).hide();
+    $(document).find(`#edit_revenddate_${id}`).hide();
+    $(`#upd_time_${id}`).show();
+    $(`#save_time_${id}`).hide();
 })
 
 $("[id^='Save_Rec_']").on('click', function () {
@@ -629,6 +668,8 @@ function hideProjData() {
     for (var i = 0; i <= lst.length; i++) {
         $(`#proj_tsk_data_${lst[i]}`).hide();
         $(`.card_button_${lst[i]}`).hide();
+        $(`#assign_tsk_data_${lst[i]}`).hide();
+        $(`#save_time_${lst[i]}`).hide();
     }
 }
 
@@ -652,6 +693,27 @@ $(document).on('click', `[id^='view_tsk_data_']`, function () {
         $(`#view_tsk_data_${id}`).css({ 'transition': '0.2s', 'transform': 'rotate(0deg)' });
         $(`#proj_tsk_data_${id}`).hide();
         open_id = "";
+    }
+})
+
+var open_id_dev_tsk = "";
+$(document).on('click',`[id^='view_assign_tsk_']`,function(){
+    var temp_id = this.id;
+    var splitarr = temp_id.split('_');
+    var id = splitarr[splitarr.length-1];
+    if(open_id_dev_tsk != id){
+        $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s', 'transform': 'rotate(180deg)' });
+        open_id_dev_tsk = id;
+        //console.log(open_id);
+        $(`#assign_tsk_data_${id}`).show();
+        $(`#assign_tsk_data_${id}`).css({ 'transition': '0.2s'});
+
+    }
+    else {
+        $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s', 'transform': 'rotate(0deg)' });
+        $(`#assign_tsk_data_${id}`).hide();
+        $(`#assign_tsk_data_${id}`).css({ 'transition': '0.2s'});
+        open_id_dev_tsk = "";
     }
 })
 

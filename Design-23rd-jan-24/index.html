@@ -166,55 +166,80 @@
                         </thead>
                         <tbody style="font-size: 12px;">
                             <tr>
-                                <td><div>
-                                    <i class="fa-solid fa-angle-up"></i><button type="button" class="btn_create_proj">Update Timeline</button>
-                                </div></td>
+                                <td>
+                                    <div style="display: flex; gap:5px">
+                                        <!-- <i class="fa-solid fa-angle-up"></i> -->
+                                        <button type="button" class="btn_create_proj" style="font-size: 11px !important; padding: 1px 3px !important; border-radius: 12px !important;" id="upd_time_1">Update Timeline</button>
+                                        <button type="button" class="btn_create_proj" style="font-size: 11px !important; padding: 1px 5px !important; border-radius: 12px !important;" id="save_time_1">Save Timeline</button>
+                                    </div>
+                                </td>
                                 <td>5</td>
                                 <td><span class="last_num_task" style="background-color: #f06060; color: #fff;">3</span>
                                 </td>
                                 <td>E-Staff</td>
                                 <td>Development</td>
-                                <td>PM Shares Signed Requirement</td>
-                                <td><mark style="background-color: #ffeaa7;" class="rag_status">Pending</mark></td>
+                                <td>PM Shares Signed Requirement <i class="fa-solid fa-angle-up icon_show_tsk" id="view_assign_tsk_1" title="view task"></i></td>
+                                <td><mark style="background-color: #ffeaa7;" class="rag_status">Not Started</mark></td>
                                 <td>
                                     <div>
-                                        <input type="text" class="form-control formtxt_box_chng_sml"
-                                            id="edit_strdate_1" style="padding: 3px 10px !important; width: 100% !important;">
+                                        <input type="text" class="form-control formtxt_box_chng_sml" id="edit_strdate_1"
+                                            style="padding: 3px 10px !important; width: 100% !important;">
                                     </div>
                                     <div>
-                                        <label for="" id="label_strdate_1" style="display: none;">21/03/2024</label>
+                                        <label for="" id="label_strdate_1">21/03/2024</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <input type="text" class="form-control formtxt_box_chng_sml" id="edit_enddate_1"
+                                            style="padding: 3px 10px !important; width: 100% !important;">
+                                    </div>
+                                    <div>
+                                        <label for="" id="label_enddate_1">22/04/2024</label>
                                     </div>
                                 </td>
                                 <td>
                                     <div>
                                         <input type="text" class="form-control formtxt_box_chng_sml"
-                                            id="edit_enddate_1" style="padding: 3px 10px !important; width: 100% !important;">
+                                            id="edit_revstrdate_1"
+                                            style="padding: 3px 10px !important; width: 100% !important;">
                                     </div>
                                     <div>
-                                        <label for="" id="label_enddate_1" style="display: none;">22/04/2024</label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <input type="text" class="form-control formtxt_box_chng_sml"
-                                            id="edit_revstrdate_1" style="padding: 3px 10px !important; width: 100% !important; display: none;">
-                                    </div>
-                                    <div>
-                                        <label for="" id="label_revstrdate_1" >Nil</label>
+                                        <label for="" id="label_revstrdate_1">N/A</label>
                                     </div>
                                 </td>
                                 <td>
                                     <div>
                                         <input type="text" class="form-control formtxt_box_chng_sml"
-                                            id="edit_revenddate_1" style="padding: 3px 10px !important; width: 100% !important; display: none;">
+                                            id="edit_revenddate_1"
+                                            style="padding: 3px 10px !important; width: 100% !important; display: none;">
                                     </div>
                                     <div>
-                                        <label for="" id="label_revenddate_1" >Nil</label>
+                                        <label for="" id="label_revenddate_1">N/A</label>
                                     </div>
                                 </td>
                                 <td>PM and BT Dev Meeting</td>
                                 <td>Dharshan</td>
                                 <td><mark style="background-color: #009500;" class="rag_status">On Track</mark></td>
+                            </tr>
+                            <tr id="assign_tsk_data_1">
+                              <td colspan="14">
+                                <div class="accordion" style="margin-bottom: 4px;" id="batch_dev_1">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed accordian_head" type="button" data-bs-toggle="collapse" data-bs-target="#batch_tsk_data_1" aria-expanded="false" aria-controls="batch_tsk_data_1">
+                                            <div style="display : flex; gap:7px;">
+                                                <span style="margin-left: 10px;">Batch 1-LCS Set Up</span>
+                                            </div>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="batch_tsk_data_1">
+                                    <div class="dev_break_down_content">
+                                        <h2 style="font-size: 18px !important;">Dev BreakDown</h2>
+                                        <button type="button" class="btn btn-success dev_break_btn">Add</button>
+                                    </div>
+                                </div>
+                              </td>
                             </tr>
                         </tbody>
                     </table>
@@ -375,22 +400,19 @@
                     <label id="bt_proj_tab" for="task_tab1" style="border-right: none;">Assigned</label>
 
                     <input type="radio" id="task_tab2" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab2" style="border-right: none;">Pending</label>
+                    <label id="bt_task_tab" for="task_tab2" style="border-right: none;">Current Week</label>
 
                     <input type="radio" id="task_tab3" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab3" style="border-right: none;">Current Week</label>
+                    <label id="bt_task_tab" for="task_tab3" style="border-right: none;">Next Week</label>
 
                     <input type="radio" id="task_tab4" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab4" style="border-right: none;">Next Week</label>
+                    <label id="bt_task_tab" for="task_tab4" style="border-right: none;">Delay</label>
 
                     <input type="radio" id="task_tab5" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab5" style="border-right: none;">Delay</label>
+                    <label id="bt_task_tab" for="task_tab5" style="border-right: none;">Needs Help</label>
 
                     <input type="radio" id="task_tab6" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab6">My Task</label>
-<!-- 
-                    <input type="radio" id="task_tab6" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab6">Completed</label> -->
+                    <label id="bt_task_tab" for="task_tab6">My Projects</label>
                 </div>
 
                 <div class="proj_filter_select">
