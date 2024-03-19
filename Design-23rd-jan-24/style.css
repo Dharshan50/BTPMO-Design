@@ -93,7 +93,7 @@
     border: none;
     padding: 4px 0px;
     border-radius: 4px;
-    border: 1px solid #000000;
+    border: none;
 }
 .Btn_style_close{
     background-color: rgb(171, 46, 46);
@@ -119,6 +119,18 @@ mark.rag_status.ut {
     display: inline-block;
     width: 84%;
     box-sizing: border-box;
+   
+}
+.Timeline_button{
+    white-space: nowrap;
+    text-align: center;
+    padding: 7px 10px !important;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+
 }
 
 .tbl_all_row {
