@@ -140,7 +140,8 @@
     align-items: center;
     margin-left: 10px;
 }
-.Details{
+
+.Details {
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -250,31 +251,37 @@ mark.rag_status.ut {
     /* Adjust this value based on the desired distance from the right edge */
     transform: translateY(-50%);
 }
-.check_box_type{
+
+.check_box_type {
     color: #08305c;
     font-size: 14px;
     font-weight: 500;
 }
-.check_box_content{
+
+.check_box_content {
     cursor: pointer;
 }
+
 .cal_icon_grp {
     position: relative;
 }
-.submit_btn_icon{
+
+.submit_btn_icon {
     background: #08305c !important;
     color: #ffffff !important;
-    margin-right:30px !important;
+    margin-right: 30px !important;
     padding: 5px 20px !important;
     border-radius: 0 !important;
     border: 1px solid #08305c !important;
 }
-.cancel_btn_icon{
+
+.cancel_btn_icon {
     border-radius: 0 !important;
     color: #000;
     background-color: #95a5a6 !important;
     border: 1px solid #95a5a6 !important;
 }
+
 .cal_icon_grp i {
     position: absolute;
     top: 50%;
@@ -1172,7 +1179,8 @@ table.table.table-responsive thead tr th {
     justify-content: space-between;
     align-items: center;
 }
-.Style_th_prot{
+
+.Style_th_prot {
     background-color: rgb(222 218 218);
     padding: 0px 18px;
     height: 30px;
@@ -1180,6 +1188,7 @@ table.table.table-responsive thead tr th {
     align-items: center;
 
 }
+
 .label_td_prot {
     border: 1px solid black;
     border-radius: 4px;
@@ -1191,10 +1200,11 @@ table.table.table-responsive thead tr th {
     justify-content: center;
     gap: 5px;
 }
+
 i.fa-solid.prp_dot.fa-circle {
     margin-left: -7px;
     font-size: 7px;
-   
+
     /* margin-top: -8px; */
 }
 
@@ -1205,39 +1215,46 @@ td.Style_tr_prot div {
     gap: 10px;
     margin-top: 13px;
 }
-.prot_BA_view{
+
+.prot_BA_view {
     margin-top: 40px;
     display: flex;
     align-items: baseline;
-   
+
     gap: 60px;
-    
+
 }
-.BA_name_sel{
+
+.BA_name_sel {
     background-color: #447E32;
     padding: 6px 8px;
     border: 1px solid black;
 }
-.BA_name{
-    
+
+.BA_name {
+
     padding: 6px 8px;
     border: 1px solid black;
 }
-.ba_name_prot{
+
+.ba_name_prot {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 15px;
 }
+
 table.prot_tab tbody tr th {
     vertical-align: baseline;
 }
+
 th.lab_dwn {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 15px;
 }
+
 /* .Bottom_div button {
     text-align: center;
     font-size: 12px;
@@ -1402,7 +1419,6 @@ button.btn_bot_div_save {
     padding-bottom: 30px;
 }
 
-
 .card_cnt {
     display: flex;
     /* // flex-wrap: wrap; */
@@ -1411,20 +1427,40 @@ button.btn_bot_div_save {
     padding: 3px;
     /* // margin-top: 5px; */
 }
-.TaskTitle{
-    background-color: rgb(255 255 217) !important;
+
+.TaskTitle {
+    background-color: rgb(212 212 212) !important;
+    color: black !important;
 }
-.batch_header{
+
+.batch_header {
     font-size: 16px;
     font-weight: 600;
     border: 1px solid #c4c4c4;
-    background: white;
+    background: rgb(63 63 63);
     padding: 5px;
+    color: white;
 }
-.Batch_row{
-    padding: 5px;    
-    /* background-color: #e7e7e7; */
+
+.Batch_row {
+    padding: 5px;
     margin: 5px 0px;
+}
+
+.batches_list{
+    /* border: 2px solid #3f3f3f; */
+    border: 2px solid #0bb18f;
+    margin: 5px;
+    padding: 2px;
+}
+
+.Batch_Buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+    background-color: rgb(63 63 63);
+    padding: 5px;
+    font-weight: 600 !important;
 }
 
 .Batch_Details {
@@ -1441,7 +1477,7 @@ button.btn_bot_div_save {
     border-radius: 0 !important;
     font-weight: 600;
     font-size: 10px !important;
-    background-color: #447e32 !important;
+    background-color: #447e32 ;
     margin: 6px 0px !important;
     padding: 1px 10px !important;
 }
@@ -1483,6 +1519,8 @@ button.btn_bot_div_save {
 .file-upload {
     display: inline-block;
     font-family: Arial, sans-serif;
+    font-size: 15px;
+    margin:20px 0px;
 }
 
 p.pro_align {
@@ -1578,17 +1616,19 @@ p.yes_no_align.no {
     border-radius: 5px;
     box-shadow: 0 1px 2px #ccc;
 }
+
 label.label_td_prot span {
     display: block;
     margin-left: 0px;
 }
+
 table thead tr th {
     text-align: left;
 }
 
 table tbody tr td {
     text-align: left;
-    vertical-align:top;
+    vertical-align: top;
     font-size: 11px;
 }
 
