@@ -549,6 +549,8 @@ $('#task_tab1').on('click', function () {
     $('#todo_task').show();
     $('.development_row').show();
     $('.All_tasks').show();
+    $('.pending_tasks').hide();
+    $('.completed_tasks').hide();
     hideProjData();
     $(".fa-angle-down").each(function () {
         $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
@@ -556,13 +558,15 @@ $('#task_tab1').on('click', function () {
 })
 $('#task_tab2').on('click', function () {
     $('.action_needed_row').hide();
-    $('.action_requested_row').show();
+    $('.action_requested_row').hide();
     $('#proj_tsk_data_3').hide();
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
-    $('.development_row').show();
-    $('.All_tasks').show();
+    $('.development_row').hide();
+    $('.All_tasks').hide();
+    $('.completed_tasks').hide();
+    $('.pending_tasks').show();
     hideProjData();
     $(".fa-angle-down").each(function () {
         $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
@@ -577,6 +581,8 @@ $('#task_tab3').on('click', function () {
     $('#todo_task').hide();
     $('.development_row').show();
     $('.All_tasks').show();
+    $('.completed_tasks').hide();
+    $('.pending_tasks').hide();
     hideProjData();
     $(".fa-angle-down").each(function () {
         $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
@@ -589,7 +595,25 @@ $('#task_tab4').on('click', function () {
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
+    $('.development_row').show();
+    $('.All_tasks').show();
+    $('.pending_tasks').hide();
+    $('.completed_tasks').hide();
+    hideProjData();
+    $(".fa-angle-down").each(function () {
+        $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
+    });
+})
+$('#task_tab5').on('click', function () {
+    $('.action_needed_row').hide();
+    $('.action_requested_row').show();
+    $('#proj_tsk_data_3').hide();
+    $('#proj_tsk_data_1').hide();
+    $('#proj_tsk_data_10').hide();
+    $('#todo_task').hide();
     $('.development_row').hide();
+    $('.completed_tasks').hide();
+    $('.pending_tasks').hide();
     $(".fa-angle-down").each(function () {
         $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
     });
@@ -598,7 +622,7 @@ $('#task_tab4').on('click', function () {
     hideProjData();
 })
 
-$('#task_tab5').on('click', function () {
+$('#task_tab6').on('click', function () {
     $('.action_needed_row').hide();
     $('.action_requested_row').show();
     $('#proj_tsk_data_3').hide();
@@ -607,13 +631,15 @@ $('#task_tab5').on('click', function () {
     $('.development_row').hide();
     $('.All_tasks').hide();
     $('.needs_help').show();
+    $('.pending_tasks').hide();
+    $('.completed_tasks').hide();
     $(".fa-angle-down").each(function () {
         $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
     });
     hideProjData();
 })
 
-$('#task_tab6').on('click', function () {
+$('#task_tab7').on('click', function () {
     $('.action_needed_row').hide();
     $('.action_requested_row').show();
     $('#proj_tsk_data_3').hide();
@@ -622,6 +648,24 @@ $('#task_tab6').on('click', function () {
     $('#todo_task').hide();
     $('.development_row').show();
     $('.All_tasks').show();
+    $('.pending_tasks').hide();
+    $('.completed_tasks').hide();
+    hideProjData();
+    $(".fa-angle-down").each(function () {
+        $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
+    });
+})
+$('#task_tab8').on('click', function () {
+    $('.action_needed_row').hide();
+    $('.action_requested_row').hide();
+    $('#proj_tsk_data_3').hide();
+    $('#proj_tsk_data_1').hide();
+    $('#proj_tsk_data_10').hide();
+    $('#todo_task').hide();
+    $('.development_row').hide();
+    $('.All_tasks').hide();
+    $('.pending_tasks').hide();
+    $('.completed_tasks').show();
     hideProjData();
     $(".fa-angle-down").each(function () {
         $(this).removeClass('fa-angle-down').addClass('fa-angle-up');

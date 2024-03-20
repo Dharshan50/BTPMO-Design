@@ -128,14 +128,14 @@
             <div class="portfolio_tab_task">
                 <div class="task_tabwrap mt-4" style="font-size: 13px; margin-right: 25px !important;">
                     <input type="radio" id="portfolio_task_tab4" name="task_tabGroup2" class="task_tab" checked>
-                    <label id="portfolio_task_tab" for="portfolio_task_tab4" style="border-right: none;">Not
+                    <label id="portfolio_task_tab" for="portfolio_task_tab4" style="border-right: none; font-size: 8px !important;">Not
                         Updated</label>
 
                     <input type="radio" id="portfolio_task_tab5" name="task_tabGroup2" class="task_tab" checked>
                     <label id="portfolio_task_tab" for="portfolio_task_tab5" style="border-right: none;">Delay</label>
 
                     <input type="radio" id="portfolio_task_tab6" name="task_tabGroup2" class="task_tab" checked>
-                    <label id="portfolio_task_tab" for="portfolio_task_tab6">Needs Help</label>
+                    <label id="portfolio_task_tab" for="portfolio_task_tab6" style="font-size: 8px !important;" >Needs Help</label>
 
                 </div>
                 <div>
@@ -727,22 +727,25 @@
                     <label id="bt_proj_tab" for="task_tab1" style="border-right: none;">Assigned</label>
 
                     <input type="radio" id="task_tab2" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab2" style="border-right: none;">Current Week</label>
+                    <label id="bt_task_tab" for="task_tab2" style="border-right: none;">Pending</label>
 
                     <input type="radio" id="task_tab3" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab3" style="border-right: none;">Next Week</label>
+                    <label id="bt_task_tab" for="task_tab3" style="border-right: none; font-size: 8px !important; padding: 7px 10px !important;">Current Week</label>
 
                     <input type="radio" id="task_tab4" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab4" style="border-right: none;">Delay</label>
+                    <label id="bt_task_tab" for="task_tab4" style="border-right: none;">Next Week</label>
 
                     <input type="radio" id="task_tab5" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab5" style="border-right: none;">Needs Help</label>
+                    <label id="bt_task_tab" for="task_tab5" style="border-right: none;">Delay</label>
 
                     <input type="radio" id="task_tab6" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab6" style="border-right: none;">My Tasks</label>
+                    <label id="bt_task_tab" for="task_tab6" style="border-right: none;">Needs Help</label>
 
                     <input type="radio" id="task_tab7" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab7">Completed</label>
+                    <label id="bt_task_tab" for="task_tab7" style="border-right: none;">My Tasks</label>
+
+                    <input type="radio" id="task_tab8" name="task_tabGroup1" class="task_tab" checked>
+                    <label id="bt_task_tab" for="task_tab8" >Completed</label>
                 </div>
 
                 <div class="proj_filter_select">
@@ -891,6 +894,58 @@
                         </thead>
                         <tbody style="font-size: 12px;">
                             <!-- BT - TASKS LATEST -->
+                            <tr class="completed_tasks">
+                                <!-- <td><i class="fa-solid fa-plus"
+                                        style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"
+                                        id="view_tsk_data_2" title="View Task"></i></td> -->
+                                <td></td>
+                                <td>1</td>
+                                <td><span class="last_num_task" style="background-color: #f06060; color: #fff;">1</span>
+                                </td>
+                                <td>China Fronters</td>
+                                <td>Project Charter</td>
+                                <td>Send charter to Function</td>
+                                <td><mark style="background-color:  #85f703;" class="rag_status">Completed</mark>
+                                </td>
+                                <td>14/03/2024</td>
+                                <td>29/03/2024</td>
+                                <td>30/03/2024</td>
+                                <td>04/04/2024</td>
+                                <td>BR Review</td>
+                                <td>30/03/2024</td>
+                                <td>15/04/2024</td>
+                                <td>Not Started</td>
+                                <td>Aurianne(PM)</td>
+                                <td><mark style="background-color: rgb(121, 255, 97);color: black !important;"
+                                        class="rag_status">On Track</mark></td>
+
+                            </tr>
+                            <tr class="pending_tasks">
+                                <!-- <td><i class="fa-solid fa-plus"
+                                        style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"
+                                        id="view_tsk_data_2" title="View Task"></i></td> -->
+                                <td></td>
+                                <td>1</td>
+                                <td><span class="last_num_task" style="background-color: #f06060; color: #fff;">1</span>
+                                </td>
+                                <td>China Fronters</td>
+                                <td>Project Charter</td>
+                                <td>Send charter to Function</td>
+                                <td><mark style="background-color:  #f05416;" class="rag_status">Pending</mark>
+                                </td>
+                                <td>14/03/2024</td>
+                                <td>29/03/2024</td>
+                                <td>30/03/2024</td>
+                                <td>04/04/2024</td>
+                                <td>BR Review</td>
+                                <td>30/03/2024</td>
+                                <td>15/04/2024</td>
+                                <td>Not Started</td>
+                                <td>Aurianne(PM)</td>
+                                <td><mark style="background-color: rgb(121, 255, 97);color: black !important;"
+                                        class="rag_status">On Track</mark></td>
+
+                            </tr>
                             <tr class="All_tasks">
                                 <!-- <td><i class="fa-solid fa-plus"
                                         style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"

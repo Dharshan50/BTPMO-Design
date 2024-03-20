@@ -730,7 +730,7 @@ table.table.table-responsive thead tr th {
 @media (min-width:768px) {
 
     .task_tab+label {
-        width: 93px;
+        width: 80px;
     }
 }
 
