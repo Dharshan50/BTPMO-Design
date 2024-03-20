@@ -575,7 +575,7 @@
                     </div>
                 </div>
                 <div class="btn_proj">
-                    <button type="button" class="btn btn-success btn_create_proj" style="padding: 8px 15px !important;"
+                    <button type="button" class="btn btn-success btn_create_proj_summ" style="padding: 8px 15px !important;"
                         id="create_proj"><i class="fa-solid fa-plus" style="margin-right: 8px;"></i>Add
                         Project</button>
                     <div class="serch_box">
@@ -874,22 +874,22 @@
                         <thead style="font-size: 15px;">
                             <tr>
                                 <th>Action</th>
-                                <th>No</th>
-                                <th>Project Priority</th>
-                                <th>Project Name</th>
-                                <th>Current Stage</th>
-                                <th>Current task</th>
-                                <th>Current task Status</th>
-                                <th>Start Date</th>
-                                <th>End Date</th>
-                                <th>Revised Start Date</th>
-                                <th>Revised End Date</th>
-                                <th>Next task</th>
-                                <th>Next Start Date</th>
-                                <th>Next End Date</th>
-                                <th>Next Task Status</th>
-                                <th>Assigned To</th>
-                                <th>Current stage status</th>
+                                <th class="small_column_width">No</th>
+                                <th class="small_column_width">Project Priority</th>
+                                <th class="big_column_width">Project Name</th>
+                                <th class="big_column_width">Current Stage</th>
+                                <th class="big_column_width">Current task</th>
+                                <th class="small_column_width">Current task Status</th>
+                                <th class="small_column_width">Start Date</th>
+                                <th class="small_column_width">End Date</th>
+                                <th class="small_column_width">Revised Start Date</th>
+                                <th class="small_column_width">Revised End Date</th>
+                                <th class="big_column_width">Next task</th>
+                                <th class="small_column_width">Next Start Date</th>
+                                <th class="small_column_width">Next End Date</th>
+                                <th class="small_column_width">Next Task Status</th>
+                                <th class="small_column_width">Assigned To</th>
+                                <th class="small_column_width">Current stage status</th>
                             </tr>
                         </thead>
                         <tbody style="font-size: 12px;">
@@ -905,7 +905,7 @@
                                 <td>China Fronters</td>
                                 <td>Project Charter</td>
                                 <td>Send charter to Function</td>
-                                <td><mark style="background-color:  #85f703;" class="rag_status">Completed</mark>
+                                <td><mark style="background-color:  #b0b3ad;" class="rag_status">Completed</mark>
                                 </td>
                                 <td>14/03/2024</td>
                                 <td>29/03/2024</td>
@@ -916,8 +916,8 @@
                                 <td>15/04/2024</td>
                                 <td>Not Started</td>
                                 <td>Aurianne(PM)</td>
-                                <td><mark style="background-color: rgb(121, 255, 97);color: black !important;"
-                                        class="rag_status">On Track</mark></td>
+                                <td><mark style="background-color: rgb(185, 187, 184);color: black !important;"
+                                        class="rag_status">Completed</mark></td>
 
                             </tr>
                             <tr class="pending_tasks">
@@ -976,17 +976,14 @@
                                 <!-- <td><i class="fa-solid fa-plus"
                                         style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"
                                         id="view_tsk_data_2" title="View Task"></i></td> -->
-                                <td>
-                                    <div style="display: flex; gap:5px">
-
-                                        <button type="button" class="btn_create_proj"
-                                            style="font-size: 10px !important; padding: 2px 6px !important; border-radius: 12px !important; background-color: #eeb3f9 !important; color: #fff;"
+                                        <td>
+                                            <button type="button" class="btn_create_proj"
+                                            style="font-size: 10px !important; padding: 6px 10px !important; border-radius: 12px !important; background-color: #eeb3f9 !important; color: #fff;"
                                             id="upd_time_2">Update Timeline</button>
-                                        <button type="button" class="btn_create_proj"
-                                            style="font-size: 11px !important; padding: 1px 9px !important; border-radius: 12px !important;"
+                                            <button type="button" class="btn btn-success btn_create_proj"
+                                            style="font-size: 10px !important; padding: 6px 10px !important; border-radius: 12px !important;"
                                             id="save_time_2">Save Timeline</button>
-                                    </div>
-                                </td>
+                                        </td>
                                 <td>4</td>
                                 <td><span class="last_num_task" style="background-color: #bdd64b; color: #fff;">2</span>
                                 </td>
@@ -1057,7 +1054,7 @@
                                 </td>
                                 <td>Not Started</td>
                                 <td>Dharshan</td>
-                                <td><mark style="background-color: #009500;" class="rag_status">On Track</mark></td>
+                                <td><mark style="background-color: rgb(121, 255, 97);" class="rag_status">On Track</mark></td>
 
                             </tr>
                             <tr class="All_tasks delayed">
@@ -1071,7 +1068,7 @@
                                             style="font-size: 10px !important; padding: 2px 6px !important; border-radius: 12px !important; background-color: red !important; color: #fff;"
                                             id="upd_revtime_1">Update Revised Timeline</button>
                                         <button type="button" class="btn_create_proj"
-                                            style="font-size: 11px !important; padding: 1px 9px !important; border-radius: 12px !important;"
+                                            style="font-size: 10px !important; padding: 6px 10px !important; border-radius: 12px !important;"
                                             id="save_revtime_1">Save Timeline</button>
                                     </div>
                                 </td>
@@ -1148,7 +1145,7 @@
                                 </td>
                                 <td>Not Started</td>
                                 <td>Dharshan</td>
-                                <td><mark style="background-color: #f2d479;" class="rag_status">Attention</mark></td>
+                                <td><mark style="background-color: #f2d479; color: red;" class="rag_status">Attention</mark></td>
 
                             </tr>
                             <tr class="All_tasks needs_help">
@@ -1184,13 +1181,13 @@
                             <tr class="development_row">
                                 <td>
                                     <div style="display: flex; gap:5px">
-                                        <i class="fa-solid fa-angle-up icon_show_tsk" id="view_assign_tsk_1"
+                                        <i class="fa-solid fa-plus icon_show_tsk" id="view_assign_tsk_1"
                                             title="view task"></i>
                                         <button type="button" class="btn_create_proj"
-                                            style="font-size: 11px !important; padding: 1px 11px !important; border-radius: 12px !important;"
+                                            style="font-size: 10px !important; padding: 1px 11px !important; border-radius: 12px !important; background-color: #eeb3f9 !important;"
                                             id="upd_time_1">Update Timeline</button>
                                         <button type="button" class="btn_create_proj"
-                                            style="font-size: 11px !important; padding: 1px 9px !important; border-radius: 12px !important;"
+                                            style="font-size: 10px !important; padding: 6px 10px !important; border-radius: 12px !important;"
                                             id="save_time_1">Save Timeline</button>
                                     </div>
                                 </td>
@@ -1200,7 +1197,7 @@
                                 <td>E-Staff</td>
                                 <td>Development</td>
                                 <td>PM Shares Signed Requirement </td>
-                                <td><mark style="background-color: #ffeaa7;" class="rag_status">Not Started</mark></td>
+                                <td><mark style="background-color: #eeb3f9;" class="rag_status">Not Started</mark></td>
                                 <td>
                                     <div>
                                         <input type="text" class="form-control formtxt_box_chng_sml" id="edit_strdate_1"
@@ -1263,7 +1260,7 @@
                                 </td>
                                 <td>Not Started</td>
                                 <td>Dharshan</td>
-                                <td><mark style="background-color: #009500;" class="rag_status">On Track</mark></td>
+                                <td><mark style="background-color: rgb(121, 255, 97);" class="rag_status">On Track</mark></td>
                             </tr>
                             <tr id="assign_tsk_data_1">
                                 <td colspan="18">
@@ -1280,7 +1277,7 @@
                                     </div>
                                     <div id="batch_tsk_data_1">
                                         <div class="task_main_body"
-                                            style="max-height:300px; overflow-y:auto; width: 92% !important;">
+                                            style="max-height:300px; overflow-y:auto; width: 100% !important;">
                                             <div class="card_main_box show" id="card_main_${taskObj.taskIdentifier}"
                                                 style="width: 99%;">
                                                 <div class="card_heda">
@@ -1317,7 +1314,7 @@
                                                                     class="LabelField_11">22/03/2024</label>
                                                             </p>
                                                         </div>
-                                                        <div class="card_cnt_inner_even"
+                                                        <div class="card_cnt_inner_odd"
                                                             style="margin-right: 65% !important;">
                                                             <p class="card_label"
                                                                 style="margin-bottom:0rem !important;">End
@@ -1332,8 +1329,27 @@
                                                                     class="LabelField_11">10/04/2024</label>
                                                             </p>
                                                         </div>
+                                                        <div class="card_cnt_inner_even"
+                                                            style="width: 100% !important;">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Status : </p>
+                                                            <p class="card_main_p_tag" style="width: 20% !important;">
+
+                                                                <select name="" id=""
+                                                                    class="EditField_11 form-select select_box_chng"
+                                                                    style="margin-left: 0 !important; width: 100% !important; padding: 3px 10px !important;">
+                                                                    <option value="">Select</option>
+                                                                    <option value="1" selected>Not Started</option>
+                                                                    <option value="2">Pending</option>
+                                                                </select>
+                                                                <mark
+                                                                    style=" width: 100px; text-align: center; background-color: #ffeaa7; color:white;"
+                                                                    class="LabelField_11">Not Started</mark>
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                    <div class="card_cnt">
+                                                    <!-- <div class="card_cnt">
                                                         <div class="card_cnt_inner_even"
                                                             style="width: 100% !important;">
                                                             <p class="card_label"
@@ -1353,9 +1369,9 @@
                                                                     class="LabelField_11">Not Started</mark>
                                                             </p>
                                                         </div>
-                                                    </div>
-                                                    <i id="card_arrow_11"
-                                                        class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i>
+                                                    </div> -->
+                                                    <!-- <i id="card_arrow_11"
+                                                        class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i> -->
                                                     <div class="card_button card_button_11">
                                                         <button class="save_button" id="Save_Rec_11"
                                                             style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Save</button>
@@ -1519,8 +1535,8 @@
                                                             </p>
                                                         </div>
                                                     </div>
-                                                    <i id="card_arrow_19"
-                                                        class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i>
+                                                    <!-- <i id="card_arrow_19"
+                                                        class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i> -->
                                                     <div class="card_button card_button_19">
                                                         <button class="save_button" id="Save_Rec_19"
                                                             style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Save</button>
@@ -1584,8 +1600,8 @@
                                                             </p>
                                                         </div>
                                                     </div>
-                                                    <i id="card_arrow_20"
-                                                        class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i>
+                                                    <!-- <i id="card_arrow_20"
+                                                        class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i> -->
                                                     <div class="card_button card_button_20">
                                                         <button class="save_button" id="Save_Rec_120"
                                                             style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Save</button>

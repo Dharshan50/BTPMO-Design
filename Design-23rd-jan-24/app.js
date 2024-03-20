@@ -632,8 +632,8 @@ $('#task_tab1').on('click', function () {
     $('.pending_tasks').hide();
     $('.completed_tasks').hide();
     hideProjData();
-    $(".fa-angle-down").each(function () {
-        $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
+    $(".fa-minus").each(function () {
+        $(this).removeClass('fa-minus').addClass('fa-plus');
     });
 })
 $('#task_tab2').on('click', function () {
@@ -648,8 +648,8 @@ $('#task_tab2').on('click', function () {
     $('.completed_tasks').hide();
     $('.pending_tasks').show();
     hideProjData();
-    $(".fa-angle-down").each(function () {
-        $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
+    $(".fa-minus").each(function () {
+        $(this).removeClass('fa-minus').addClass('fa-plus');
     });
 })
 $('#task_tab3').on('click', function () {
@@ -664,8 +664,8 @@ $('#task_tab3').on('click', function () {
     $('.completed_tasks').hide();
     $('.pending_tasks').hide();
     hideProjData();
-    $(".fa-angle-down").each(function () {
-        $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
+    $(".fa-minus").each(function () {
+        $(this).removeClass('fa-minus').addClass('fa-plus');
     });
 })
 $('#task_tab4').on('click', function () {
@@ -680,8 +680,8 @@ $('#task_tab4').on('click', function () {
     $('.pending_tasks').hide();
     $('.completed_tasks').hide();
     hideProjData();
-    $(".fa-angle-down").each(function () {
-        $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
+    $(".fa-minus").each(function () {
+        $(this).removeClass('fa-minus').addClass('fa-plus');
     });
 })
 $('#task_tab5').on('click', function () {
@@ -694,8 +694,8 @@ $('#task_tab5').on('click', function () {
     $('.development_row').hide();
     $('.completed_tasks').hide();
     $('.pending_tasks').hide();
-    $(".fa-angle-down").each(function () {
-        $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
+    $(".fa-minus").each(function () {
+        $(this).removeClass('fa-minus').addClass('fa-plus');
     });
     $('.All_tasks').hide();
     $('.delayed').show();
@@ -713,8 +713,8 @@ $('#task_tab6').on('click', function () {
     $('.needs_help').show();
     $('.pending_tasks').hide();
     $('.completed_tasks').hide();
-    $(".fa-angle-down").each(function () {
-        $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
+    $(".fa-minus").each(function () {
+        $(this).removeClass('fa-minus').addClass('fa-plus');
     });
     hideProjData();
 })
@@ -731,8 +731,8 @@ $('#task_tab7').on('click', function () {
     $('.pending_tasks').hide();
     $('.completed_tasks').hide();
     hideProjData();
-    $(".fa-angle-down").each(function () {
-        $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
+    $(".fa-minus").each(function () {
+        $(this).removeClass('fa-minus').addClass('fa-plus');
     });
 })
 $('#task_tab8').on('click', function () {
@@ -747,8 +747,8 @@ $('#task_tab8').on('click', function () {
     $('.pending_tasks').hide();
     $('.completed_tasks').show();
     hideProjData();
-    $(".fa-angle-down").each(function () {
-        $(this).removeClass('fa-angle-down').addClass('fa-angle-up');
+    $(".fa-minus").each(function () {
+        $(this).removeClass('fa-minus').addClass('fa-plus');
     });
 })
 
@@ -933,23 +933,21 @@ $(document).on('click',`[id^='view_assign_tsk_']`,function(){
     var splitarr = temp_id.split('_');
     var id = splitarr[splitarr.length-1];
     if(open_id_dev_tsk != id){
-        $(`#view_assign_tsk_${id}`).removeClass('fa-angle-up');
-        $(`#view_assign_tsk_${id}`).addClass('fa-angle-down');
-        $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s' });
+        $(`#view_assign_tsk_${id}`).removeClass('fa-plus');
+        $(`#view_assign_tsk_${id}`).addClass('fa-minus');
+        $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s','transform': 'rotate(180deg)' });
         open_id_dev_tsk = id;
         //console.log(open_id);
         $(`#assign_tsk_data_${id}`).show();
         $('#dev_break_tbl').hide();
-        $(`#assign_tsk_data_${id}`).css({ 'transition': '0.2s'});
-
     }
     else {
-        $(`#view_assign_tsk_${id}`).removeClass('fa-angle-down');
-        $(`#view_assign_tsk_${id}`).addClass('fa-angle-up');
-        $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s'});
+        $(`#view_assign_tsk_${id}`).removeClass('fa-plus');
+        $(`#view_assign_tsk_${id}`).addClass('fa-plus');
+        $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s','transform': 'rotate(0deg)'});
         $(`#assign_tsk_data_${id}`).hide();
         $('#dev_break_tbl').hide();
-        $(`#assign_tsk_data_${id}`).css({ 'transition': '0.2s'});
+        //$(`#assign_tsk_data_${id}`).css({ 'transition': '0.2s',});
         open_id_dev_tsk = "";
     }
 })

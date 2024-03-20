@@ -329,6 +329,16 @@ mark.rag_status.ut {
     border-radius: 0px !important;
     border: 0 !important;
     color: #fff;
+    width: 100px;
+}
+.btn_create_proj_summ {
+    background: #447E32 !important;
+    padding: 1px 11px !important;
+    font-size: 13px !important;
+    border-radius: 0px !important;
+    border: 0 !important;
+    color: #fff;
+    /* width: 100px; */
 }
 
 .formtxt_box_chng {
@@ -1851,3 +1861,11 @@ input:disabled {
     background-color: #bfbfbf !important;
     color: black;
 }
+
+.big_column_width {
+    min-width: 110px !important;
+  }
+  
+.small_column_width {
+    min-width: 100px !important;
+  }
