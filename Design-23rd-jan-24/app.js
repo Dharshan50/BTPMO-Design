@@ -379,6 +379,35 @@ $('#slct_proj_drop').on('change', function () {
     $(document).find("[class^='EditField_']").hide();
 })
 
+
+$('#port_proj_name_filter').on('change', function(){
+    var val = $('#port_proj_name_filter').val();
+    if(val == 2 ){
+        $('#prot_BA_view').show();
+        $('#port_tab_table').hide();
+        $('pagination_container').show();
+     
+    }
+    else if(val == 1){
+        $('#prot_BA_view').hide();
+        $('#port_tab_table').show();
+       
+    }
+    else if(val == 3){
+        $('#prot_BA_view').show();
+        $('#port_tab_table').hide();
+        $('pagination_container').show();
+       
+    }
+
+    else if(val == ''){
+        $('#prot_BA_view').hide();
+        $('#port_tab_table').show();
+        $('pagination_container').show();
+    }
+
+})
+
 $(document).find("[id^='AddBatch_']").on('click', function () {
     var temp_id = this.id;
     var splitArray = temp_id.split('_');
@@ -605,6 +634,19 @@ $('#tab3').on('click', function () {
     task_hide_details();
     $('#proj_summary_tbl').hide();
     $('#pagination_container').show();
+    $('#task_tab1').get(0).click();
+    $('#bt_dev_tasks').hide();
+    $('#portfolio_sec_tab').hide();
+    $('#prot_BA_view').hide();
+    hideProjData();
+})
+
+
+$('#tab6').on('click', function () {
+    $('#task_manage').hide();
+    task_hide_details();
+    $('#proj_summary_tbl').hide();
+    $('#pagination_container').hide();
     $('#task_tab1').get(0).click();
     $('#bt_dev_tasks').hide();
     $('#portfolio_sec_tab').hide();
@@ -1117,9 +1159,13 @@ $('#tab5').on('click', function(){
     $('#task_manage').hide();
     $('#proj_summary_tbl').hide();
     $('#bt_dev_tasks').hide();
+    $('#proj_tsk_manage').hide();
     $('#portfolio_sec_tab').show();
+    $('#pagination_container').show();
+    $('#port_tab_table').show();
     $('#port_task_tab1').get(0).click();
     $('#port_mypro_tab1').get(0).click();
+    $('#port_proj_name_filter').val("1");
     hide_all_details();
     task_hide_details();
 })
