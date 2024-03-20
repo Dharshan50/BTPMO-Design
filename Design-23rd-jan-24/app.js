@@ -104,7 +104,7 @@ $(document).find("[id^='Expand_Pending_']").on('click', function () {
     var temp_id = this.id;
     var splitArray = temp_id.split('_');
     var id = splitArray[splitArray.length - 1];
-    $("[class^='pending_Assignment_View_']").hide();
+    $(document).find("[class^='pending_Assignment_View_']").hide();
     $("[id^='Expand_Pending_']").show();
     $("[id^='Close_Pending_']").hide();
     $(document).find(`.pending_Assignment_View_${id}`).show()
@@ -233,7 +233,7 @@ $(document).find("[id^='Expand_Assigned_']").on('click', function () {
     var temp_id = this.id;
     var splitArray = temp_id.split('_');
     var id = splitArray[splitArray.length - 1];
-    $("[class^='Assigned_Record_View_']").hide();
+    $(document).find("[class^='Assigned_Record_View_']").hide();
     $("[id^='Close_Assigned_']").hide();
     $("[id^='Expand_Assigned_']").show();
     $(document).find(`.Assigned_Record_View_${id}`).show()
@@ -1191,10 +1191,16 @@ function bell() {
 $('#proj_task_tab1').on('click', function () {
     $('.pending_Assignment_Record').show();
     $(".Assigned_Record").hide();
-    $("[class^='pending_Assignment_View_']").hide();
-    $("[class^='Assigned_Record_View_']").hide();
+    $(document).find("[class^='pending_Assignment_View_']").hide();
+    $(document).find("[class^='Assigned_Record_View_']").hide();
     $("[id^='Expand_Pending_']").show();
     $("[id^='Close_Pending_']").hide();
+    $(document).find("[class^='Proj_detail_label_']").show();
+    $(document).find("[class^='Proj_detail_field_']").hide();
+    $(document).find("[class^='Project_Detail_Edit_']").show();
+    $(document).find("[class^='Project_Detail_Save_']").hide();
+    $(document).find("[class^='Project_Detail_Cancel_']").hide();
+    
     $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
     });
@@ -1237,8 +1243,8 @@ $('.dw_content_data').on('click', function () {
 $('#proj_task_tab2').on('click', function () {
     $(".Assigned_Record").show();
     $('.pending_Assignment_Record').hide();
-    $("[class^='Assigned_Record_View_']").hide();
-    $("[class^='pending_Assignment_View_']").hide();
+    $(document).find("[class^='Assigned_Record_View_']").hide();
+    $(document).find("[class^='pending_Assignment_View_']").hide();
     $("[id^='Close_Assigned_']").hide();
     $("[id^='Expand_Assigned_']").show();
 
@@ -1255,9 +1261,54 @@ $('#proj_task_tab2').on('click', function () {
     $(document).find(`[id^='Task_Save_']`).hide()
     $(document).find(`[id^='Task_Cancel_']`).hide()
 
+    $(document).find("[class^='Proj_detail_label_']").show();
+    $(document).find("[class^='Proj_detail_field_']").hide();
+    $(document).find("[id^='Project_Detail_Edit_']").show();
+    $(document).find("[id^='Project_Detail_Save_']").hide();
+    $(document).find("[id^='Project_Detail_Cancel_']").hide();
+
     $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
     });
+})
+
+$(document).find("[id^='Project_Detail_Edit_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+
+    $(document).find(`.Proj_detail_label_${id}`).hide();
+    $(document).find(`.Proj_detail_field_${id}`).show();
+
+    $(document).find(`#Project_Detail_Save_${id}`).show();
+    $(document).find(`#Project_Detail_Cancel_${id}`).show();
+    $(document).find(`#Project_Detail_Edit_${id}`).hide(); 
+})
+
+$(document).find("[id^='Project_Detail_Cancel_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+
+    $(document).find(`.Proj_detail_label_${id}`).show();
+    $(document).find(`.Proj_detail_field_${id}`).hide();
+
+    $(document).find(`#Project_Detail_Save_${id}`).hide();
+    $(document).find(`#Project_Detail_Cancel_${id}`).hide();
+    $(document).find(`#Project_Detail_Edit_${id}`).show(); 
+})
+
+$(document).find("[id^='Project_Detail_Save_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+
+    $(document).find(`.Proj_detail_label_${id}`).show();
+    $(document).find(`.Proj_detail_field_${id}`).hide();
+
+    $(document).find(`#Project_Detail_Save_${id}`).hide();
+    $(document).find(`#Project_Detail_Cancel_${id}`).hide();
+    $(document).find(`#Project_Detail_Edit_${id}`).show(); 
 })
 
 $('#proj_task_tab3').on('click', function () {

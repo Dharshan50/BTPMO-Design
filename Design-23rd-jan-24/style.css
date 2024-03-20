@@ -84,6 +84,15 @@
     border-radius: 3px;
 }
 
+.fields_style {
+    padding: 1px 5px !important;
+    height: 30px !important;
+}
+
+.project_task_view{
+    width: 230px;
+}
+
 .submit_button {
     background-color: green;
     color: white;
@@ -1409,13 +1418,14 @@ button.btn_bot_div_save {
 
 .card_label {
     text-align: left;
-    color: #2f3640;
-    font-weight: 500;
+    color: #171717;
+    font-weight: 600;
     margin-bottom: 0rem !important;
 
 }
 
 .card_main_p_tag {
+    width: 100%;
     margin-bottom: 0px;
 }
 
@@ -1487,23 +1497,31 @@ button.btn_bot_div_save {
     /* // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 }
 
+.Head_Edit{
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 8px;
+}
+
 .card_bdy {
-    flex: 1 1 auto;
+    /* flex: 1 1 auto; */
     padding: 7px;
-    max-height: 145px;
+    /* max-height: 145px;
     overflow: hidden;
     position: relative;
-    transition: max-height 0.8s;
-    padding-bottom: 30px;
+    transition: max-height 0.8s; */
+}
+
+.text_select_boxes {
+    width:100%
 }
 
 .card_cnt {
     display: flex;
-    /* // flex-wrap: wrap; */
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     padding: 3px;
-    /* // margin-top: 5px; */
+    gap: 7%;
 }
 
 .TaskTitle {
