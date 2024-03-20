@@ -1229,10 +1229,10 @@ td.Style_tr_prot div {
     background-color: #447E32;
     padding: 6px 8px;
     border: 1px solid black;
+    color: white;
 }
 
-.BA_name {
-
+.BA_name { 
     padding: 6px 8px;
     border: 1px solid black;
 }
