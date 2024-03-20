@@ -119,18 +119,20 @@
             <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
                 <div style="display: flex; margin-top: 15px; gap: 10px;">
                     <div class="">
-                        <select id="port_proj_name_filter" class="form-select   proj_name_filter" style="width: 100% !important">
+                        <select id="port_proj_name_filter" class="form-select   proj_name_filter"
+                            style="width: 100% !important">
                             <option value="">Select</option>
                             <option value="1" selected>All Projects</option>
-                            <option value="2" >BA View</option>
+                            <option value="2">BA View</option>
                             <option value="3">Dev View</option>
                         </select>
                     </div>
                     <div class="">
-                        <select id="port_proj_type_filter" class="form-select  proj_name_filter" style="width: 100% !important">
+                        <select id="port_proj_type_filter" class="form-select  proj_name_filter"
+                            style="width: 100% !important">
                             <option value="">Select</option>
-                            <option value="1" >Not Updated</option>
-                            <option value="2" >Needs Help</option>
+                            <option value="1">Not Updated</option>
+                            <option value="2">Needs Help</option>
                             <option value="3">Delay</option>
 
                         </select>
@@ -573,8 +575,9 @@
                     </div>
                 </div>
                 <div class="btn_proj">
-                    <button type="button" class="btn btn-success btn_create_proj_summ" style="padding: 8px 15px !important;"
-                        id="create_proj"><i class="fa-solid fa-plus" style="margin-right: 8px;"></i>Add
+                    <button type="button" class="btn btn-success btn_create_proj_summ"
+                        style="padding: 8px 15px !important;" id="create_proj"><i class="fa-solid fa-plus"
+                            style="margin-right: 8px;"></i>Add
                         Project</button>
                     <div class="serch_box">
                         <div class="search_icon_grp" style="width: 140% !important;">
@@ -719,6 +722,14 @@
         </div>
 
         <div id="task_manage">
+            <div class="task_proj_filter">
+                <div class="proj_task_tabwrap mt-4" style="font-size: 13px; margin-right: 25px !important;">
+                    <input type="radio" id="task_proj_tab1" name="task_proj_tabGroup1" class="proj_task_tab" checked>
+                    <label id="bt_proj_tab" for="task_proj_tab1" style="border-right: none;">Projects</label>
+                    <input type="radio" id="task_proj_tab2" name="task_proj_tabGroup1" class="proj_task_tab" checked>
+                    <label id="bt_task_tab" for="task_proj_tab2">Change Requests</label>
+                </div>
+            </div>
             <div class="task_content">
                 <div class="task_tabwrap mt-4" style="font-size: 13px; margin-right: 25px !important;">
                     <input type="radio" id="task_tab1" name="task_tabGroup1" class="task_tab" checked>
@@ -797,7 +808,7 @@
                         </div>
                         <div class="modal-body">
                             <div class="dev_break_down_form">
-                                <div class="row space_btw_fields">
+                                <div class="row">
                                     <div class="col-12">
                                         <label for="" class="form-label label_txt_chng">Item Description</label>
                                         <textarea id="dev_item_des" class="form-control textarea_box_chng"
@@ -950,14 +961,25 @@
                                 <!-- <td><i class="fa-solid fa-plus"
                                         style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"
                                         id="view_tsk_data_2" title="View Task"></i></td> -->
-                                <td></td>
+                                        <td>
+                                            <div style="display: flex; gap:5px">
+                                                <i class="fa-solid fa-plus icon_show_tsk" id="view_assign_tsk_3"
+                                                    title="view task" style="margin-left: 13px !important;"></i>
+                                                <!-- <button type="button" class="btn_create_proj"
+                                                    style="font-size: 10px !important; padding: 5px 11px !important; border-radius: 12px !important; background-color: #eeb3f9 !important;"
+                                                    id="upd_time_1">Update Timeline</button>
+                                                <button type="button" class="btn_create_proj"
+                                                    style="font-size: 10px !important; padding: 6px 10px !important; border-radius: 12px !important;"
+                                                    id="save_time_1">Save Timeline</button> -->
+                                            </div>
+                                        </td>
                                 <td>1</td>
                                 <td><span class="last_num_task" style="background-color: #f06060; color: #fff;">1</span>
                                 </td>
                                 <td>China Fronters</td>
-                                <td>Project Charter</td>
-                                <td>Send charter to Function</td>
-                                <td><mark style="background-color:  #c0c0c0;" class="rag_status">InProgress</mark>
+                                <td>Requirement <br><span style="font-size: 9px; color: red; font-weight: 700;">[Batch 1 LCS Set Up]</span></td>
+                                <td>Requirement Analysis Planning</td>
+                                <td><mark style="background-color:  #fdf908;" class="rag_status">InProgress</mark>
                                 </td>
                                 <td>14/03/2024</td>
                                 <td>29/03/2024</td>
@@ -972,18 +994,243 @@
                                         class="rag_status">On Track</mark></td>
 
                             </tr>
-                            <tr class="All_tasks">
+                            <tr id="assign_tsk_data_3">
+                                <td colspan="18">
+                                    <div class="accordion" style="margin-bottom: 4px;" id="batch_dev_1">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed accordian_head" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#batch_tsk_data_2"
+                                                aria-expanded="false" aria-controls="batch_tsk_data_2">
+                                                <div style="display : flex; gap:7px;">
+                                                    <span style="margin-left: 10px;">Functional Requriement</span>
+                                                </div>
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="batch_tsk_data_2">
+                                        <div class="accordion" style="margin-bottom: 4px;" id="batch_dev_1">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed accordian_head" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#batch_tsk_data_type_1"
+                                                    aria-expanded="false" aria-controls="batch_tsk_data_type_1">
+                                                    <div style="display : flex; gap:7px;">
+                                                        <span style="margin-left: 10px;">Batch 1 - LCS Set Up</span>
+                                                    </div>
+                                                </button>
+                                            </h2>
+                                        </div>
+                                        <div id="batch_tsk_data_type_1">
+                                            <div class="batches_list batch_func_1" id="batch_func_1" style="max-height: 300px; overflow-y: auto;">
+                                                <div class="batch_header"
+                                                    style="padding:5px; display:flex; justify-content: space-between;">
+                                                    <div>
+                                                        Batch 1 LCS Set Up
+                                                    </div>
+                                                    <!-- <button id="Edit_Batch_1"
+                                                        style="    padding: 2px 10px; border-radius: 0px; line-height: 10px;"
+                                                        class="Edit_Batch_1 btn btn-success">Edit</button> -->
+                                                </div>
+                                                <div class="Batch_row">
+                                                    <span style="font-size: 13px; font-weight: 600;">Batch
+                                                        Details</span>
+                                                    <div class="Batch_Details">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Start Date</p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag">
+                                                                <input type="date" value='1'
+                                                                    class="batch_field_1 form-control ">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="batch_label_1">20-12-2024</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">End
+                                                                Date</p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag">
+                                                                <input type="date" value='1'
+                                                                    class="batch_field_1 form-control ">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="batch_label_1">23-12-2024</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Estimated MD</p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag">
+                                                                <input type="number" value='1'
+                                                                    class="batch_field_1 form-control ">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="batch_label_1">3</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="Batch_Details">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Status</p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag">
+                                                                <select class="batch_field_1 form-select "
+                                                                    value='Not Started' class="">
+                                                                    <option selected value="">Select</option>
+                                                                    <option value="Not Started">Not Started</option>
+                                                                    <option value="InProgress">InProgress</option>
+                                                                    <option value="Pending">Pending</option>
+                                                                    <option value="On Hold">On Hold</option>
+                                                                </select>
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="batch_label_1">Not Started</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                SignOff</p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag">
+                                                                <input type="date" value='1'
+                                                                    class="batch_field_1 form-control ">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="batch_label_1">23-12-2024</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Stage Closure</p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag">
+                                                                <input type="date" value='1'
+                                                                    class="batch_field_1 form-control ">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="batch_label_1">23-12-2024</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="batch_header mb-1 TaskDetails">
+                                                    Tasks details
+                                                </div>
+                                                <div class="batch_header TaskTitle">
+                                                    Requirements Analysis Planning
+                                                </div>
+                                                <div class="Batch_row">
+                                                    <span style="font-size: 13px; font-weight: 600;">Batch
+                                                        Details</span>
+                                                    <div class="Batch_Details">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Start Date</p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag">
+                                                                <input type="date" value='1'
+                                                                    class="batch_field_1 form-control ">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="batch_label_1">20-12-2024</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">End
+                                                                Date</p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag">
+                                                                <input type="date" value='1'
+                                                                    class="batch_field_1 form-control ">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="batch_label_1">23-12-2024</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Estimated MD</p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag">
+                                                                <input type="number" value='1'
+                                                                    class="batch_field_1 form-control ">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="batch_label_1">3</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="Batch_Details">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Status</p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag">
+                                                                <select class="batch_field_1 form-select "
+                                                                    value='Not Started' class="">
+                                                                    <option selected value="">Select</option>
+                                                                    <option value="Not Started">Not Started</option>
+                                                                    <option value="InProgress">InProgress</option>
+                                                                    <option value="Pending">Pending</option>
+                                                                    <option value="On Hold">On Hold</option>
+                                                                </select>
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="batch_label_1">Not Started</label>
+                                                            </p>
+                                                        </div>
+                                                        <!-- <div class="card_cnt_inner_even">
+                                                            <p class="card_label" style="margin-bottom:0rem !important;">SignOff</p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag">
+                                                                <input type="date"  
+                                                                    value='1' class="batch_field_1 form-control ">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="batch_label_1">23-12-2024</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label" style="margin-bottom:0rem !important;">Stage Closure</p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag">
+                                                                <input type="date"  
+                                                                    value='1' class="batch_field_1 form-control ">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="batch_label_1">23-12-2024</label>
+                                                            </p>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="Batch_Req_1 Batch_Buttons ">
+                                                    <button class="close_batch_1 save_button " id="close_batch_1"
+                                                        style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Save</button>
+                                                    <button class="close_batch_1 submit_button" id="close_batch_1"
+                                                        style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Submit</button>
+                                                    <button class="close_batch_1 btn cancel_btn" id="close_batch_1"
+                                                        style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Cancel</button>
+                                                </div> -->
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="All_tasks" id="not_started">
                                 <!-- <td><i class="fa-solid fa-plus"
                                         style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"
                                         id="view_tsk_data_2" title="View Task"></i></td> -->
-                                        <td>
-                                            <button type="button" class="btn_create_proj"
-                                            style="font-size: 10px !important; padding: 6px 10px !important; border-radius: 12px !important; background-color: #eeb3f9 !important; color: #fff;"
-                                            id="upd_time_2">Update Timeline</button>
-                                            <button type="button" class="btn btn-success btn_create_proj"
-                                            style="font-size: 10px !important; padding: 6px 10px !important; border-radius: 12px !important;"
-                                            id="save_time_2">Save Timeline</button>
-                                        </td>
+                                <td>
+                                    <button type="button" class="btn_create_proj"
+                                        style="font-size: 10px !important; padding: 6px 10px !important; border-radius: 12px !important; background-color: #eeb3f9 !important; color: #fff;"
+                                        id="upd_time_2">Update Timeline</button>
+                                    <button type="button" class="btn btn-success btn_create_proj"
+                                        style="font-size: 10px !important; padding: 6px 10px !important; border-radius: 12px !important;"
+                                        id="save_time_2">Save Timeline</button>
+                                </td>
                                 <td>4</td>
                                 <td><span class="last_num_task" style="background-color: #bdd64b; color: #fff;">2</span>
                                 </td>
@@ -998,7 +1245,7 @@
                                             style="padding: 3px 10px !important; width: 100% !important;">
                                     </div>
                                     <div>
-                                        <label for="" id="label_strdate_2">21/03/2024</label>
+                                        <label for="" id="label_strdate_2">N/A</label>
                                     </div>
                                 </td>
                                 <td>
@@ -1007,7 +1254,7 @@
                                             style="padding: 3px 10px !important; width: 100% !important;">
                                     </div>
                                     <div>
-                                        <label for="" id="label_enddate_2">22/04/2024</label>
+                                        <label for="" id="label_enddate_2">N/A</label>
                                     </div>
                                 </td>
                                 <td>
@@ -1054,22 +1301,25 @@
                                 </td>
                                 <td>Not Started</td>
                                 <td>Dharshan</td>
-                                <td><mark style="background-color: rgb(121, 255, 97);" class="rag_status">On Track</mark></td>
+                                <td><mark style="background-color: rgb(121, 255, 97);" class="rag_status">On
+                                        Track</mark></td>
 
                             </tr>
-                            <tr class="All_tasks delayed">
+                            <tr class="All_tasks delayed" id="delayed_tasks">
                                 <!-- <td><i class="fa-solid fa-plus"
                                         style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"
                                         id="view_tsk_data_2" title="View Task"></i></td> -->
                                 <td>
                                     <div style="display: flex; gap:5px">
-
-                                        <button type="button" class="btn_create_proj"
-                                            style="font-size: 10px !important; padding: 2px 6px !important; border-radius: 12px !important; background-color: red !important; color: #fff;"
-                                            id="upd_revtime_1">Update Revised Timeline</button>
-                                        <button type="button" class="btn_create_proj"
-                                            style="font-size: 10px !important; padding: 6px 10px !important; border-radius: 12px !important;"
-                                            id="save_revtime_1">Save Timeline</button>
+                                        <div id="notify_btn"></div>
+                                        <div style="position: relative; margin-left: -5px;">
+                                            <button type="button" class="btn_create_proj"
+                                                style="font-size: 10px !important; padding: 2px 6px !important; border-radius: 12px !important; background-color: red !important; color: #fff;"
+                                                id="upd_revtime_1">Update Revised Timeline</button>
+                                            <button type="button" class="btn_create_proj"
+                                                style="font-size: 10px !important; padding: 6px 10px !important; border-radius: 12px !important;"
+                                                id="save_revtime_1">Save Timeline</button>
+                                        </div>
                                     </div>
                                 </td>
                                 <td>5</td>
@@ -1145,10 +1395,11 @@
                                 </td>
                                 <td>Not Started</td>
                                 <td>Dharshan</td>
-                                <td><mark style="background-color: #f2d479; color: red;" class="rag_status">Attention</mark></td>
+                                <td><mark style="background-color: #f2d479; color: red;"
+                                        class="rag_status">Attention</mark></td>
 
                             </tr>
-                            <tr class="All_tasks needs_help">
+                            <tr class="All_tasks needs_help" id="needs_help">
                                 <!-- <td><i class="fa-solid fa-plus"
                                         style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"
                                         id="view_tsk_data_2" title="View Task"></i></td> -->
@@ -1184,7 +1435,7 @@
                                         <i class="fa-solid fa-plus icon_show_tsk" id="view_assign_tsk_1"
                                             title="view task"></i>
                                         <button type="button" class="btn_create_proj"
-                                            style="font-size: 10px !important; padding: 1px 11px !important; border-radius: 12px !important; background-color: #eeb3f9 !important;"
+                                            style="font-size: 10px !important; padding: 5px 11px !important; border-radius: 12px !important; background-color: #eeb3f9 !important;"
                                             id="upd_time_1">Update Timeline</button>
                                         <button type="button" class="btn_create_proj"
                                             style="font-size: 10px !important; padding: 6px 10px !important; border-radius: 12px !important;"
@@ -1204,7 +1455,7 @@
                                             style="padding: 3px 10px !important; width: 100% !important;">
                                     </div>
                                     <div>
-                                        <label for="" id="label_strdate_1">21/03/2024</label>
+                                        <label for="" id="label_strdate_1">N/A</label>
                                     </div>
                                 </td>
                                 <td>
@@ -1213,7 +1464,7 @@
                                             style="padding: 3px 10px !important; width: 100% !important;">
                                     </div>
                                     <div>
-                                        <label for="" id="label_enddate_1">22/04/2024</label>
+                                        <label for="" id="label_enddate_1">N/A</label>
                                     </div>
                                 </td>
                                 <td>
@@ -1260,7 +1511,8 @@
                                 </td>
                                 <td>Not Started</td>
                                 <td>Dharshan</td>
-                                <td><mark style="background-color: rgb(121, 255, 97);" class="rag_status">On Track</mark></td>
+                                <td><mark style="background-color: rgb(121, 255, 97);" class="rag_status">On
+                                        Track</mark></td>
                             </tr>
                             <tr id="assign_tsk_data_1">
                                 <td colspan="18">
@@ -1402,7 +1654,7 @@
                                                                 <tr>
                                                                     <th>Order No</th>
                                                                     <th>Item Description</th>
-                                                                    <th>Start End</th>
+                                                                    <th>Start Date</th>
                                                                     <th>End Date</th>
                                                                     <th>Revised Start Date</th>
                                                                     <th>Revised End Date</th>
@@ -1418,8 +1670,12 @@
                                                                 <tr>
                                                                     <td>1</td>
                                                                     <td>Sample Description</td>
-                                                                    <td>22/03/2024</td>
-                                                                    <td>10/04/2024</td>
+                                                                    <td><input type="text"
+                                                                            class="form-control formtxt_box_chng_sml"
+                                                                            value="22/03/2024"></td>
+                                                                    <td><input type="text"
+                                                                            class="form-control formtxt_box_chng_sml"
+                                                                            value="10/04/2024"></td>
                                                                     <td></td>
                                                                     <td></td>
                                                                     <td>Not Started</td>
@@ -1434,8 +1690,12 @@
                                                                 <tr>
                                                                     <td>2</td>
                                                                     <td>Sample Description</td>
-                                                                    <td>22/03/2024</td>
-                                                                    <td>10/04/2024</td>
+                                                                    <td><input type="text"
+                                                                            class="form-control formtxt_box_chng_sml"
+                                                                            value="22/03/2024"></td>
+                                                                    <td><input type="text"
+                                                                            class="form-control formtxt_box_chng_sml"
+                                                                            value="10/04/2024"></td>
                                                                     <td></td>
                                                                     <td></td>
                                                                     <td>Not Started</td>
@@ -1450,8 +1710,12 @@
                                                                 <tr>
                                                                     <td>3</td>
                                                                     <td>Sample Description</td>
-                                                                    <td>30/03/2024</td>
-                                                                    <td>10/04/2024</td>
+                                                                    <td><input type="text"
+                                                                            class="form-control formtxt_box_chng_sml"
+                                                                            value="22/03/2024"></td>
+                                                                    <td><input type="text"
+                                                                            class="form-control formtxt_box_chng_sml"
+                                                                            value="10/04/2024"></td>
                                                                     <td style="background-color: #bdc3c7;">
                                                                         <div style="display: grid;">
                                                                             <span style="font-weight: bold;">1.

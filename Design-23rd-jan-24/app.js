@@ -40,6 +40,32 @@ $(document).ready(function () {
     $(document).find("[id^='edit_revstrrevdate_']").hide();
     $(document).find("[id^='edit_endrevdate_']").hide();
     $(document).find("[id^='edit_strrevdate_']").hide();
+    
+    $(document).find("[id^='edit_revenddate_']").datepicker({
+        dateFormat: 'dd/mm/yy'
+    });
+    $(document).find("[id^='edit_revstrdate_']").datepicker({
+        dateFormat: 'dd/mm/yy'
+    });
+    $(document).find("[id^='edit_enddate_']").datepicker({
+        dateFormat: 'dd/mm/yy'
+    });
+    $(document).find("[id^='edit_strdate_']").datepicker({
+        dateFormat: 'dd/mm/yy'
+    });
+    $(document).find("[id^='edit_revendrevdate_']").datepicker({
+        dateFormat: 'dd/mm/yy'
+    });
+    $(document).find("[id^='edit_revstrrevdate_']").datepicker({
+        dateFormat: 'dd/mm/yy'
+    });
+    $(document).find("[id^='edit_endrevdate_']").datepicker({
+        dateFormat: 'dd/mm/yy'
+    });
+    $(document).find("[id^='edit_strrevdate_']").datepicker({
+        dateFormat: 'dd/mm/yy'
+    });
+    
 
     sortElements();
 })
@@ -454,18 +480,20 @@ $(document).find("[id^='EditRecord_']").on('click', function () {
 })
 
 $("[id^='upd_time_']").on('click', function () {
+    $(`#edit_strdate_${id}`).val("");
+    $(`#edit_enddate_${id}`).val("");
     var temp_id = this.id;
     var splitArray = temp_id.split('_');
     var id = splitArray[splitArray.length - 1];
     console.log(id)
     $(document).find(`#label_strdate_${id}`).hide();
     $(document).find(`#label_enddate_${id}`).hide();
-    $(document).find(`#label_revstrdate_${id}`).hide();
-    $(document).find(`#label_revenddate_${id}`).hide();
+    // $(document).find(`#label_revstrdate_${id}`).hide();
+    // $(document).find(`#label_revenddate_${id}`).hide();
     $(document).find(`#edit_strdate_${id}`).show();
     $(document).find(`#edit_enddate_${id}`).show();
-    $(document).find(`#edit_revstrdate_${id}`).show();
-    $(document).find(`#edit_revenddate_${id}`).show();
+    // $(document).find(`#edit_revstrdate_${id}`).show();
+    // $(document).find(`#edit_revenddate_${id}`).show();
     $(`#upd_time_${id}`).hide();
     $(`#save_time_${id}`).show();
 })
@@ -501,6 +529,8 @@ $("[id^='upd_revtime_']").on('click', function () {
     var temp_id = this.id;
     var splitArray = temp_id.split('_');
     var id = splitArray[splitArray.length - 1];
+    $(`#edit_revendrevdate_${id}`).val('');
+    $(`#edit_revstrrevdate_${id}`).val('');
     console.log(id)
     $(document).find(`#label_revstrrevdate_${id}`).hide();
     $(document).find(`#label_revendrevdate_${id}`).hide();
@@ -513,15 +543,19 @@ $("[id^='save_time_']").on('click', function () {
     var temp_id = this.id;
     var splitArray = temp_id.split('_');
     var id = splitArray[splitArray.length - 1];
+    var strdate = $(`#edit_strdate_${id}`).val();
+    var enddate = $(`#edit_enddate_${id}`).val();
     console.log(id)
     $(document).find(`#label_strdate_${id}`).show();
     $(document).find(`#label_enddate_${id}`).show();
-    $(document).find(`#label_revstrdate_${id}`).show();
-    $(document).find(`#label_revenddate_${id}`).show();
+    $(document).find(`#label_strdate_${id}`).html(strdate);
+    $(document).find(`#label_enddate_${id}`).html(enddate);
+    // $(document).find(`#label_revstrdate_${id}`).show();
+    // $(document).find(`#label_revenddate_${id}`).show();
     $(document).find(`#edit_strdate_${id}`).hide();
     $(document).find(`#edit_enddate_${id}`).hide();
-    $(document).find(`#edit_revstrdate_${id}`).hide();
-    $(document).find(`#edit_revenddate_${id}`).hide();
+    // $(document).find(`#edit_revstrdate_${id}`).hide();
+    // $(document).find(`#edit_revenddate_${id}`).hide();
     $(`#upd_time_${id}`).show();
     $(`#save_time_${id}`).hide();
 })
@@ -529,9 +563,13 @@ $("[id^='save_revtime_']").on('click', function () {
     var temp_id = this.id;
     var splitArray = temp_id.split('_');
     var id = splitArray[splitArray.length - 1];
+    var revstr = $(`#edit_revstrrevdate_${id}`).val();
+    var revend = $(`#edit_revendrevdate_${id}`).val();
     console.log(id)
     $(document).find(`#label_revstrrevdate_${id}`).show();
     $(document).find(`#label_revendrevdate_${id}`).show();
+    $(document).find(`#label_revstrrevdate_${id}`).html(revstr);
+    $(document).find(`#label_revendrevdate_${id}`).html(revend);
     $(document).find(`#edit_revstrrevdate_${id}`).hide();
     $(document).find(`#edit_revendrevdate_${id}`).hide();
     $(`#upd_revtime_${id}`).show();
@@ -701,8 +739,11 @@ $('#task_tab3').on('click', function () {
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
-    $('.development_row').show();
+    $('.development_row').hide();
     $('.All_tasks').show();
+    $('#not_started').hide();
+    $('#delayed_tasks').hide();
+    $('#needs_help').hide();
     $('.completed_tasks').hide();
     $('.pending_tasks').hide();
     hideProjData();
@@ -717,10 +758,13 @@ $('#task_tab4').on('click', function () {
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
-    $('.development_row').show();
+    $('.development_row').hide();
     $('.All_tasks').show();
     $('.pending_tasks').hide();
+    $('#not_started').hide();
     $('.completed_tasks').hide();
+    $('#delayed_tasks').hide();
+    $('#needs_help').hide();
     hideProjData();
     $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
@@ -771,7 +815,7 @@ $('#task_tab7').on('click', function () {
     $('.development_row').show();
     $('.All_tasks').show();
     $('.pending_tasks').hide();
-    $('.completed_tasks').hide();
+    $('.completed_tasks').show();
     hideProjData();
     $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
@@ -1086,16 +1130,26 @@ $(document).on('click' ,'#port_task_tab1' , function(){
  
 $('.dw_content_data').on('click', function () {
     $('#tab3').get(0).click(0);
-    $('#view_tsk_data_2').trigger('click');
-    $('#card_bdy_4').css({ 'border': '2px solid red' });
+
+    // Create the notification icon dynamically
+    var notificationIcon = $('<i>').addClass('fas fa-bell'); // Assuming you're using Font Awesome for icons
+    notificationIcon.css({
+        'color': 'red',
+        'font-size': '14px' ,
+        'position':'absolute',
+        'left' :'60px',
+        'margin-top' : '10px'
+    });
+    // Append the notification icon to the #notify_btn div
+    $('#notify_btn').empty().append(notificationIcon);
+    // Remove the notification icon after 10 seconds
     setTimeout(() => {
-        $('#card_bdy_4').css({ 'border': 'none' });
-    }, 3000);
-    $('html, body').animate({
-        scrollTop: $('#card_bdy_4').offset().top
-    }, 100);
+        notificationIcon.remove();
+    }, 5000);
     $('#top_div').hide();
-})
+});
+
+
 
 $('#proj_task_tab2').on('click', function () {
     $(".Assigned_Record").show();
