@@ -15,12 +15,14 @@ $(document).ready(function () {
     $('#proj_tsk_manage').hide();
     $('#prj_tsk_assign').hide();
     $('#proj_stage_task').hide();
-    $('#create_proj_form').hide();
+    $('#create_proj_form_container').hide();
 
     //diwakar
     $("[id^='Close_Pending_']").hide()
     $("[id^='Close_Assigned_']").hide()
     $("[id^='Form_Template_']").hide()
+    $(document).find("[class^='batch_field_1']").hide();
+    $(document).find("[class^='Batch_Buttons']").hide();
     //diwakar
 
     // $('#project_charter_data_3').hide();   
@@ -53,6 +55,78 @@ $(document).find("[id^='Expand_Pending_']").on('click', function () {
     $(document).find(`#Close_Pending_${id}`).show()
     $(document).find(`#Expand_Pending_${id}`).hide()
     initializeDraggable()
+})
+
+$(document).find("[id^='Task_Edit_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+
+    // hide existing
+    $(document).find(`[id^='Task_Body_']`).hide().css('max-height','280px')
+    $(document).find(`[class^='Task_Field_']`).hide()
+    $(document).find(`[class^='Task_Label_']`).show()
+    $(document).find(`[id^='Task_Edit_']`).show()
+    $(document).find(`[id^='Task_Save_']`).hide()
+    $(document).find(`[id^='Task_Cancel_']`).hide()
+
+    $(document).find(`#Task_Body_${id}`).show().css('max-height','280px')
+    $(document).find(`[class^='Task_Field_${id}']`).show()
+    $(document).find(`[class^='Task_Label_${id}']`).hide()
+    $(document).find(`#Task_Edit_${id}`).hide()
+    $(document).find(`#Task_Save_${id}`).show()
+    $(document).find(`#Task_Cancel_${id}`).show()
+    // initializeDraggable()
+})
+
+$(document).find("[id^='Task_Cancel_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+    $(document).find(`#Task_Body_${id}`).hide()
+    $(document).find(`[class^='Task_Field_${id}']`).hide()
+    $(document).find(`[class^='Task_Label_${id}']`).show()
+    // $(document).find(`.Task_Field_${id}`).hide()
+    // $(document).find(`.Task_Label_${id}`).show()
+    $(document).find(`#Task_Edit_${id}`).show()
+    $(document).find(`#Task_Save_${id}`).hide()
+    $(document).find(`#Task_Cancel_${id}`).hide()
+    // initializeDraggable()
+})
+
+$(document).find("[id^='Task_Save_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+    $(document).find(`#Task_Body_${id}`).hide()
+    $(document).find(`.Task_Field_${id}`).hide()
+    $(document).find(`.Task_Label_${id}`).show()
+    $(document).find(`#Task_Edit_${id}`).show()
+    $(document).find(`#Task_Save_${id}`).hide()
+    $(document).find(`#Task_Cancel_${id}`).hide()
+    // initializeDraggable()
+})
+
+$(document).find("[id^='Edit_Batch_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+    $(document).find(`.batch_field_${id}`).show()
+    $(document).find(`.Batch_Req_${id}`).show()
+    $(document).find(`.batch_label_${id}`).hide()
+    $(document).find(`#Edit_Batch_${id}`).hide()
+    // initializeDraggable()
+})
+
+$(document).find("[class^='close_batch_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+    $(document).find(`.batch_field_${id}`).hide()
+    $(document).find(`.Batch_Req_${id}`).hide()
+    $(document).find(`.batch_label_${id}`).show()
+    $(document).find(`#Edit_Batch_${id}`).show()
+    // initializeDraggable()
 })
 
 $(document).find("[id^='Close_Pending_']").on('click', function () {
@@ -239,7 +313,7 @@ function hide_all_details() {
     $('#proj_tsk_manage').hide();
     $('#prj_tsk_assign').hide();
     $('#proj_stage_task').hide();
-    $('#create_proj_form').hide();
+    $('#create_proj_form_container').hide();
     $('#project_charter_data_3').hide();
     $('#function_req_3').hide();
     $('#project_charter_data_4').hide();
@@ -258,7 +332,7 @@ function task_hide_details() {
     $('#proj_tsk_manage').hide();
     $('#prj_tsk_assign').hide();
     $('#proj_stage_task').hide();
-    $('#create_proj_form').hide();
+    $('#create_proj_form_container').hide();
     $('#project_charter_data_3').hide();
     $('#function_req_3').hide();
     $('#project_charter_data_4').hide();
@@ -310,7 +384,7 @@ $(document).find("[id^='AddBatch_']").on('click', function () {
     var splitArray = temp_id.split('_');
     var id = splitArray[splitArray.length - 1];
     var type = Number($(document).find(`#batch_type_${id}`).val());
-    alert(type)
+    // alert(type)
     if (type === 0) {
         $(document).find(`#Form_Template_${id}`).hide()
         $(document).find(`#Record_Template_${id}`).show()
@@ -474,7 +548,11 @@ $("[id^='Cancel_Rec_']").on('click', function () {
 $('#proj_type').on('change', function () {
     var val = $('#proj_type').val();
     if (val == 1) {
+        $('#create_proj_form_container').show();
+        $('.project_type_2').show();
         $('#create_proj_form').show();
+        $('#buttons').show();
+        $('.file-upload').hide();
         $('.proj_name_text_box').hide();
         $('.proj_name_slct').show();
         $('#buttons').show();
@@ -487,10 +565,11 @@ $('#proj_type').on('change', function () {
 
     }
     else if (val == 2) {
-        $('#file-upload-container').show();
-        $('.form-label label_txt_chng').hide();
-        $('#proj_type').hide();
-        $('#Project_heading').hide();
+        $('#create_proj_form_container').show();
+        $('.project_type_2').hide();
+        $('#create_proj_form').hide();
+        $('#buttons').hide();
+        $('.file-upload').show();
         // $('.proj_name_text_box').show();
         // $('.proj_name_slct').hide();
         // $('#buttons').show();
@@ -502,7 +581,8 @@ $('#proj_type').on('change', function () {
         // $('#proj_ragstatus').val('0');
     }
     else if (val == 0) {
-        $('#create_proj_form').hide();
+        $('#create_proj_form_container').hide();
+        $('#file-upload-container').hide();
         $('#buttons').hide();
 
     }
@@ -682,6 +762,13 @@ $('#tab2').on('click', function () {
     $('#bt_dev_tasks').hide();
     $('#portfolio_sec_tab').hide();
     $('#prot_BA_view').hide();
+
+    $(document).find(`[id^='Task_Body_']`).hide().css('max-height','280px')
+    $(document).find(`[class^='Task_Field_']`).hide()
+    $(document).find(`[class^='Task_Label_']`).show()
+    $(document).find(`[id^='Task_Edit_']`).show()
+    $(document).find(`[id^='Task_Save_']`).hide()
+    $(document).find(`[id^='Task_Cancel_']`).hide()
     hideProjData();
 })
 $('.retrn_main_page').on('click', function () {
@@ -956,10 +1043,7 @@ $(document).on('click' ,'#port_task_tab1' , function(){
     $('#port_table_view').show();
     $('#prot_BA_view').hide();
 })
-
-
-
-
+ 
 $('.dw_content_data').on('click', function () {
     $('#tab3').get(0).click(0);
     $('#view_tsk_data_2').trigger('click');
@@ -980,6 +1064,19 @@ $('#proj_task_tab2').on('click', function () {
     $("[class^='pending_Assignment_View_']").hide();
     $("[id^='Close_Assigned_']").hide();
     $("[id^='Expand_Assigned_']").show();
+
+    $(document).find("[class^='batch_field_']").hide();
+    $(document).find("[class^='batch_label_']").show();
+    $(document).find("[class^='Batch_Buttons']").hide();
+    $(document).find("[class^='Batch_Req_']").hide();
+    $(document).find("[id^='Edit_Batch_']").show();
+
+    $(document).find(`[id^='Task_Body_']`).hide().css('max-height','280px')
+    $(document).find(`[class^='Task_Field_']`).hide()
+    $(document).find(`[class^='Task_Label_']`).show()
+    $(document).find(`[id^='Task_Edit_']`).show()
+    $(document).find(`[id^='Task_Save_']`).hide()
+    $(document).find(`[id^='Task_Cancel_']`).hide()
 
     $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
