@@ -1264,10 +1264,14 @@ table.table.table-responsive thead tr th {
     width: 97px;
     text-align: center;
     padding: 6px 0px;
-    display: flex;
+    display: flex; 
     align-items: inherit;
     justify-content: center;
     gap: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    background-color: whitesmoke;
+   
 }
 
 i.fa-solid.prp_dot.fa-circle {
@@ -1281,7 +1285,6 @@ td.Style_tr_prot div {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
     margin-top: 13px;
 }
 

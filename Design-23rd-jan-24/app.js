@@ -45,6 +45,35 @@ $(document).ready(function () {
     sortElements();
 })
 
+
+let draggedItem;
+
+function drag(event) {
+    draggedItem = event.target;
+}
+
+function allowDrop(event) {
+    event.preventDefault();
+}
+
+function drop(event) {
+    event.preventDefault();
+    const target = event.target.closest('.label_td_prot');
+    if (target) {
+        const rect = target.getBoundingClientRect();
+        if (event.clientY > rect.top + rect.height / 2) {
+            // Drop below the target label
+            target.parentNode.insertBefore(draggedItem, target.nextElementSibling);
+        } else {
+            // Drop above the target label
+            target.parentNode.insertBefore(draggedItem, target);
+        }
+    } else {
+        // Drop at the end if no label is present
+        event.currentTarget.appendChild(draggedItem);
+    }
+}
+
 $(document).find("[id^='Expand_Pending_']").on('click', function () {
     var temp_id = this.id;
     var splitArray = temp_id.split('_');
@@ -79,6 +108,41 @@ $(document).find("[id^='Task_Edit_']").on('click', function () {
     $(document).find(`#Task_Cancel_${id}`).show()
     // initializeDraggable()
 })
+
+
+$(document).ready(function() {
+    // Make each label draggable
+    $(".draggable").draggable({
+        revert: true,
+        zIndex: 1000,
+        cursor: "move",
+        helper: "clone"
+    });
+
+    // Make drop zone droppable
+    $(".dropzone").droppable({
+        accept: ".draggable",
+        drop: function(event, ui) {
+            // When a draggable element is dropped onto the drop zone
+            // Append the dropped element to the drop zone
+            $(this).append(ui.draggable.clone());
+        }
+    });
+});
+
+// $(document).ready(function() {
+//     // Make td elements droppable
+//     $(".droppable").droppable({
+//         accept: ".draggable",
+//         drop: function(event, ui) {
+//             // When a draggable element is dropped onto the droppable td
+//             // Append the dropped element to the td
+//             $(this).append(ui.draggable);
+//         }
+//     });
+// });
+
+
 
 $(document).find("[id^='Task_Cancel_']").on('click', function () {
     var temp_id = this.id;
@@ -200,7 +264,7 @@ function initializeDraggable() {
     });
 }
 $(document).find(".droppable").droppable({
-    accept: ".card_main_box", // Only accept draggable elements
+    // accept: ".card_main_box", // Only accept draggable elements
     over: function (event, ui) {
         // Remove hover class from all items
         $(".card_main_box").removeClass("hover");
@@ -1179,6 +1243,7 @@ $('#tab5').on('click', function () {
     $('#proj_summary_tbl').hide();
     $('#bt_dev_tasks').hide();
     $('#proj_tsk_manage').hide();
+    $('#prot_BA_view').hide();
     $('#portfolio_sec_tab').show();
     $('#pagination_container').show();
     $('#port_tab_table').show();
