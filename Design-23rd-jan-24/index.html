@@ -299,12 +299,6 @@
                         </tbody>
 
                     </table>
-
-
-
-
-
-
                 </div>
 
 
@@ -321,6 +315,7 @@
 
                 </th>
             </div>
+            <div style="background-color: #ececec; padding: 26px;">
             <table class="prot_tab" style="font-size: 11px;">
                 <thead>
                     <th> <mark class="Style_th_prot" style="background-color: #1abc9c !important;"> Charter in progress
@@ -336,41 +331,41 @@
                             progress</mark></th>
                     <th><mark class="Style_th_prot">UAT</mark></th>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td class="Style_tr_prot">
-                            <div>
-                                <label class="label_td_prot"><span><i class="fa-solid prp_dot fa-circle"
+                <tbody >
+                    <tr >
+                        <td class="Style_tr_prot " ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <div ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <label class=" label_td_prot" draggable="true" ondragstart="drag(event)" style="color: #ffc000;" ><span><i class="fa-solid prp_dot fa-circle"
                                             style="color: #ffc000;"></i></span><span> E-Staff </span></label>
-                                <label class="label_td_prot"><span><i class="fa-solid prp_dot fa-circle"
+                                <label class=" label_td_prot" draggable="true" ondragstart="drag(event)" style="color: #ffc000;"><span><i class="fa-solid prp_dot fa-circle"
                                             style="color: #00ff62;"></i></span><span> Non-Can </span></label>
-                                <label class="label_td_prot"><span><i class="fa-solid prp_dot fa-circle"
+                                <label class="label_td_prot" draggable="true" ondragstart="drag(event)" style="color: #ffc000;"><span><i class="fa-solid prp_dot fa-circle"
                                             style="color: #00ff62;"></i></span><span> China Fronters</span> </label>
                             </div>
                         </td>
-                        <td class="Style_tr_prot">
-                            <div>
-                                <label class="label_td_prot"><span><i class="fa-solid prp_dot fa-circle"
+                        <td class="Style_tr_prot " ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <div ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <label class=" label_td_prot" draggable="true" ondragstart="drag(event)" style="color: #ffc000;"><span><i class="fa-solid prp_dot fa-circle"
                                             style="color: #00988f;"></i></span><span> Sample </span></label>
 
                             </div>
                         </td>
-                        <td class="Style_tr_prot">
-                            <div>
-                                <label class="label_td_prot"><span><i class="fa-solid prp_dot fa-circle"
+                        <td class="Style_tr_prot " ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <div ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <label class=" label_td_prot" draggable="true" ondragstart="drag(event)" style="color: #ffc000;"><span><i class="fa-solid prp_dot fa-circle"
                                             style="color: #ffc000;"></i></span><span> Sample </span></label>
 
                             </div>
                         </td>
-                        <td class="Style_tr_prot">
-                            <div>
-                                <label class="label_td_prot"><span><i class="fa-solid prp_dot fa-circle"
+                        <td class="Style_tr_prot " ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <div ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <label class=" label_td_prot" draggable="true" ondragstart="drag(event)" style="color: #ffc000;"><span><i class="fa-solid prp_dot fa-circle"
                                             style="color: #00988f;"></i></span><span> Sample </span></label>
 
                             </div>
                         </td>
                         <td class="Style_tr_prot">
-                            <div>
+                            <div ondrop="drop(event)" ondragover="allowDrop(event)">
                                 <label class="label_td_prot"><span><i class="fa-solid prp_dot fa-circle"
                                             style="color: red;"></i></span><span> Sample </span></label>
                                 <label class="label_td_prot"><span><i class="fa-solid prp_dot fa-circle"
@@ -401,6 +396,7 @@
 
                 </tbody>
             </table>
+        </div>
         </div>
 
 
@@ -550,29 +546,20 @@
 
         <div id="proj_summary_tbl">
             <div class="bt_process_tab mt-3">
-                <div class="Project_Summary_Filter">
-                    <div class="task_tabwrap mt-1" style="font-size: 13px; margin-right: 25px !important;">
-                        <input type="radio" id="All_Projects" name="Project_Filter_Group" class="task_tab" checked>
-                        <label for="All_Projects" class="project_tab" style="border-right: none;">All Project</label>
-
-                        <input type="radio" id="Accepted" name="Project_Filter_Group" class="task_tab">
-                        <label for="Accepted" class="project_tab" style="border-right: none;">Accepted</label>
-
-                        <input type="radio" id="Not Accepted" name="Project_Filter_Group" class="task_tab">
-                        <label for="Not Accepted" class="project_tab">Not Accepted</label>
-                    </div>
-                    <div>
-                        <div class="search_icon_grp" style="width: 140% !important;">
-                            <select class="form-control formtxt_box_chng"
-                                style="width: 150px !important; margin-left: -1.3rem !important;" placeholder="Year">
-                                <option selected value="">Year</option>
-                                <option value="2023">2023</option>
-                                <option value="2022">2022</option>
-                                <option value="2021">2021</option>
-                                <option value="2020">2020</option>
-                            </select>
-                        </div>
-                    </div>
+                <div class="filter_Group_project">
+                    <select class="form-select rounded-0 filter select_box"  placeholder="Year">
+                        <option Selected value="0">All Projects</option>
+                        <option value="1">Accepted</option>
+                        <option value="2">Not Accepted</option>
+                    </select>
+                    <select class="form-select rounded-0 filter select_box" placeholder="Year">
+                        <option selected value="0">All Year</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                    </select>
+                    <button class="proc_filter" id ="Project_filter_Proc">Proceed</button>
                 </div>
                 <div class="btn_proj">
                     <button type="button" class="btn btn-success btn_create_proj_summ"
@@ -642,14 +629,14 @@
                                 <td class="hide_tr">Efficiency</td>
                                 <td class="hide_fr" style="color:#009500;">
                                     <p class="yes_no_align"><i class="fa-solid fa-circle"
-                                            title="Action requested"></i><span>Yes</span></p>
+                                            title="Action requested"></i><span>Yes</span> <i class="fa-solid fa-circle-info" style="font-size: 10px !important;" title="yes"></i></p>
                                 </td>
                                 <td>Finance</td>
                                 <td>Yoko</td>
                                 <td>Finance & BI</td>
                                 <td>Susanna +parashuram</td>
                                 <td><span class="last_num" style="background-color: #f06060;color: #fff;">2</span></td>
-                                <td><mark style="background-color: lightblue;" class="rag_status">On Track</mark></td>
+                                <td><mark style="background-color: lightblue;" class="rag_status">On Track <i style="color:rgb(8 153 201) !important; font-size: 10PX;" class="fa-solid fa-rotate"></i></mark></td>
 
                             </tr>
                             <tr>
@@ -663,14 +650,14 @@
                                 <td class="hide_tr">ROI</td>
                                 <td class="hide_fr" style="color:#ff0000;">
                                     <p class="yes_no_align no"><i class="fa-solid fa-circle"
-                                            title="Action requested"></i><span>No</span></p>
+                                            title="Action requested"></i><span>No</span><i class="fa-solid fa-circle-info" style="font-size: 10px !important;" title="No"></i></p>
                                 </td>
                                 <td>Commercial</td>
                                 <td>Yoko</td>
                                 <td>Test</td>
                                 <td>karen</td>
                                 <td><span class="last_num" style="background-color: #c0c0c0;color: #fff;">8</span>
-                                <td><mark style="background-color: lightblue;" class="rag_status">On Track</mark></td>
+                                <td><mark style="background-color: lightblue;" class="rag_status">On Track <i style="color:rgb(8 153 201) !important; font-size: 10PX;" class="fa-solid fa-rotate"></i></mark></td>
                             </tr>
                             <tr>
                                 <!-- <td>BP0001</td> -->
@@ -683,7 +670,7 @@
                                 <td class="hide_tr">UX</td>
                                 <td class="hide_fr" style="color:#009500;">
                                     <p class="yes_no_align"><i class="fa-solid fa-circle"
-                                            title="Action requested"></i><span>Yes</span></p>
+                                            title="Action requested"></i><span>Yes</span><i class="fa-solid fa-circle-info" style="font-size: 10px !important;" title="yes"></i></p>
                                 </td>
                                 <td>Claims</td>
                                 <td>Peter</td>
@@ -691,7 +678,7 @@
                                 <td>Rowena +susanna+karen</td>
                                 <td><span class="last_num" style="background-color: #6ff1ff;color: #fff;">8</span>
                                 <td><mark style="background-color: rgb(167, 188, 101);"
-                                        class="rag_status">Attention</mark>
+                                        class="rag_status">Attention <i style="color:rgb(72 94 0) !important; font-size: 10PX;" class="fa-solid fa-triangle-exclamation"></i></mark>
                                 </td>
                             </tr>
                             <tr>
@@ -702,9 +689,9 @@
                                     </p>
                                 </td>
                                 <td class="hide_tr">Group</td>
-                                <td class="hide_fr" style="color:#ff0000;">
-                                    <p class="yes_no_align no"><i class="fa-solid fa-circle"
-                                            title="Action requested"></i><span>No</span></p>
+                                <td class="hide_fr" style="color:#009500;">
+                                    <p class="yes_no_align"><i class="fa-solid fa-circle"
+                                        title="Action requested"></i><span>Yes</span><i class="fa-solid fa-circle-info" style="font-size: 10px !important;" title="yes"></i></p>
                                 </td>
                                 <td>BI</td>
                                 <td>Sam</td>
@@ -31500,14 +31487,14 @@
                     <div class="col-lg-2">
                         <select id="proj_type" class="form-select select_box_chng">
                             <option value="0" selected>Select</option>
-                            <option value="1">Projects</option>
-                            <option value="2">Ad-Hoc Project</option>
+                            <option value="1">Project portfolio (E-project)</option>
+                            <option value="2">Not Accepted(Bulk Upload)</option>
                         </select>
                     </div>
                 </div>
                 <div class="create_proj_form_container" id="create_proj_form_container">
 
-                    <div class="project_type_2 row space_btw_fields">
+                    <!-- <div class="project_type_2 row space_btw_fields">
                         <div class="col-lg-2">
                             <label for="" class="form-label label_txt_chng" id="Project_heading">Project Type</label>
                         </div>
@@ -31518,13 +31505,87 @@
                                 <option value="2">Not Accepted(Bulk Upload)</option>
                             </select>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="file-upload" id="file-upload-container" style="display: none;">
-                        <h4>Excel Upload</h4>
+                        <h4 style="font-size: 18px;">Excel Upload </h4><!--<i class="fa-solid fa-upload upload_icon"></i> -->
                         <form><!-- method="post" enctype="multipart/form-data"-->
-                            <input type="file" name="file" id="file" style="margin: 22px;">
-                            <button type="submit" class="Excel_upload">Upload</button>
+                            <label class="choose_file" for="upload_template">Choose File <i class="fa-solid upload_icon fa-file-import"></i></label> 
+                            <input hidden type="file" name="file" id="upload_template">
+                            <button type="FILE" class="Excel_upload">Upload</button>
                         </form>
+                        <div class="Excel_Template_view">
+                            <table class="excel-table">
+                                <tr>
+                                  <th>Project Name</th>
+                                  <th>Project Stage</th>
+                                  <th>Business case</th>
+                                  <th>Positive ROI</th>
+                                  <th>Requestor</th>
+                                  <th>Project Sponser</th>
+                                  <th>Impacted Function</th>
+                                  <th>Functional Lead(s)</th>                                  
+                                  <th>Project Priority</th>
+                                  <th>RAG</th>
+                                </tr>
+                                <tr>
+                                    <td class="hide_one">Sample</td>
+                                    <td class="hide_two">
+                                        <p class="pro_align"> <span>Project Charter</span>
+                                            <i class="fa-solid fa-circle-info" title="Action requested"></i>
+                                        </p>
+                                    </td>
+                                    <td class="hide_tr">Efficiency</td>
+                                    <td class="hide_fr" style="color:#009500;">
+                                        <p class="yes_no_align"><i class="fa-solid fa-circle"
+                                                title="Action requested"></i><span>Yes</span><i class="fa-solid fa-circle-info" style="font-size: 10px !important;" title="yes"></i></p>
+                                    </td>
+                                    <td>Finance</td>
+                                    <td>Yoko</td>
+                                    <td>Finance & BI</td>
+                                    <td>Susanna + parashuram</td>
+                                    <td><span class="last_num" style="background-color: #f06060;color: #fff;">2</span></td>
+                                    <td><mark style="background-color: lightblue;" class="rag_status">On Track</mark></td>
+                                </tr>
+                                <tr>
+                                    <td class="hide_one">Sample 2</td>
+                                    <td class="hide_two">
+                                        <p class="pro_align"> <span>Requirement</span>
+                                            <i class="fa-solid fa-circle-info" title="Action requested"></i>
+                                        </p>
+                                    </td>
+                                    <td class="hide_tr">Efficiency</td>
+                                    <td class="hide_fr" style="color:#009500;">
+                                        <p class="yes_no_align"><i class="fa-solid fa-circle"
+                                                title="Action requested"></i><span>Yes</span><i class="fa-solid fa-circle-info" style="font-size: 10px !important;" title="yes"></i></p>
+                                    </td>
+                                    <td>Finance</td>
+                                    <td>Yoko</td>
+                                    <td>Finance & BI</td>
+                                    <td>Susanna + parashuram</td>
+                                    <td><span class="last_num" style="background-color: #9dfb9b;color: #fff;">3</span></td>
+                                    <td><mark style="background-color: #9dfb9b;" class="rag_status">On Track</mark></td>
+                                </tr>
+                                <tr>
+                                    <td class="hide_one">Sample 3</td>
+                                    <td class="hide_two">
+                                        <p class="pro_align"> <span>Project Charter</span>
+                                            <i class="fa-solid fa-circle-info" title="Action requested"></i>
+                                        </p>
+                                    </td>
+                                    <td class="hide_tr">Efficiency</td>
+                                    <td class="hide_fr" style="color: #fff;">
+                                        <p class="yes_no_align"><i class="fa-solid fa-circle"
+                                                title="Action requested"></i><span>Yes</span><i class="fa-solid fa-circle-info" style="font-size: 10px !important;" title="yes"></i></p>
+                                    </td>
+                                    <td>Finance</td>
+                                    <td>Yoko</td>
+                                    <td>Finance & BI</td>
+                                    <td>Susanna + parashuram</td>
+                                    <td><span class="last_num" style="background-color: #f06060;color: #fff;">2</span></td>
+                                    <td><mark style="background-color: lightblue;" class="rag_status">On Track</mark></td>
+                                </tr>
+                              </table>
+                        </div>
                     </div>
 
                     <div class="create_proj_form" id="create_proj_form">

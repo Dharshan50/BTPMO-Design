@@ -15,11 +15,27 @@
     margin-bottom: 10px;
 }
 
+.select_box {
+    width: 150px !important;
+    border-radius: 0px !important;
+    font-size: 12px !important;
+    padding: 7px 10px !important;
+    border-color: #c5c5c5 !important;
+    border: 1px solid #bbbbbb !important;
+}
+
+.proc_filter {
+    width: 120px;
+    background-color: #03365f;
+    padding: 5px 10px;
+    color: white;
+}
+
 .bt_process_tab {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding-right: 45px;
+    /* padding-right: 45px; */
 }
 
 .task_inner_filt {
@@ -75,7 +91,11 @@
     padding: 5px 5px;
     border-radius: 3px;
 }
-
+/* .boxes {
+    height: 30px;
+    padding: 0px 5px !important;
+    width: 200px;
+} */
 .btn_proj {
     margin-right: 30px !important;
     display: flex;
@@ -83,7 +103,7 @@
     justify-content: flex-end;
     gap: 20px;
     align-items: baseline;
-}
+} 
 
 .Project_Summary_Filter {
     display: flex;
@@ -95,9 +115,38 @@
 .Excel_upload {
     background-color: green;
     border: none;
+    margin: 0px 10px;
     color: white;
     padding: 5px 15px;
 }
+
+/* Excel */
+.excel-table {
+    border-collapse: collapse;
+    margin: 20px;
+}
+
+.excel-table th,
+.excel-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.excel-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.excel-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.excel-table tr:hover {
+    background-color: #eaeaea;
+}
+
+/* Excel End */
 
 .Assign_button {
     background-color: rgb(46, 171, 46) !important;
@@ -210,6 +259,16 @@ mark.rag_status.ut {
 .create_task_btn {
     display: flex;
     align-items: center;
+}
+
+.upload_icon {
+    font-weight: 900;
+    color: #03365f;
+    font-size: 16px;
+}
+
+.choose_file {
+    cursor: pointer;
 }
 
 .content_title_head {
@@ -1205,10 +1264,14 @@ table.table.table-responsive thead tr th {
     width: 97px;
     text-align: center;
     padding: 6px 0px;
-    display: flex;
+    display: flex; 
     align-items: inherit;
     justify-content: center;
     gap: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    background-color: whitesmoke;
+   
 }
 
 i.fa-solid.prp_dot.fa-circle {
@@ -1222,7 +1285,6 @@ td.Style_tr_prot div {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
     margin-top: 13px;
 }
 
@@ -1230,9 +1292,15 @@ td.Style_tr_prot div {
     margin-top: 40px;
     display: flex;
     align-items: baseline;
-
     gap: 60px;
 
+}
+
+.filter_Group_project {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    height: 35px;
 }
 
 .BA_name_sel {
@@ -1242,7 +1310,7 @@ td.Style_tr_prot div {
     color: white;
 }
 
-.BA_name { 
+.BA_name {
     padding: 6px 8px;
     border: 1px solid black;
 }
@@ -1457,7 +1525,7 @@ button.btn_bot_div_save {
     margin: 5px 0px;
 }
 
-.batches_list{
+.batches_list {
     /* border: 2px solid #3f3f3f; */
     border: 2px solid #0bb18f;
     margin: 5px;
@@ -1487,7 +1555,7 @@ button.btn_bot_div_save {
     border-radius: 0 !important;
     font-weight: 600;
     font-size: 10px !important;
-    background-color: #447e32 ;
+    background-color: #447e32;
     margin: 6px 0px !important;
     padding: 1px 10px !important;
 }
@@ -1530,7 +1598,7 @@ button.btn_bot_div_save {
     display: inline-block;
     font-family: Arial, sans-serif;
     font-size: 15px;
-    margin:20px 0px;
+    margin: 20px 0px;
 }
 
 p.pro_align {
