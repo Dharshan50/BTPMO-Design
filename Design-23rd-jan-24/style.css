@@ -15,6 +15,15 @@
     margin-bottom: 10px;
 }
 
+.save_Ba_Project {
+    width: 100px !important;
+    /* line-height: 10px; */
+    padding: 6px 10px !important;
+    font-size: 10px !important;
+    height: 34px !important;
+    border-radius: 0px !important;
+}
+
 .select_box {
     width: 150px !important;
     border-radius: 0px !important;
@@ -89,7 +98,7 @@
     height: 30px !important;
 }
 
-.project_task_view{
+.project_task_view {
     width: 230px;
 }
 
@@ -100,6 +109,7 @@
     padding: 5px 5px;
     border-radius: 3px;
 }
+
 /* .boxes {
     height: 30px;
     padding: 0px 5px !important;
@@ -112,7 +122,7 @@
     justify-content: flex-end;
     gap: 20px;
     align-items: baseline;
-} 
+}
 
 .Project_Summary_Filter {
     display: flex;
@@ -201,8 +211,9 @@
 
 .Details {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 20px;
+    align-items: center;
 }
 
 mark.rag_status.ut {
@@ -399,6 +410,7 @@ mark.rag_status.ut {
     color: #fff;
     width: 100px;
 }
+
 .btn_create_proj_summ {
     background: #447E32 !important;
     padding: 1px 11px !important;
@@ -1275,14 +1287,14 @@ table.table.table-responsive thead tr th {
     width: 97px;
     text-align: center;
     padding: 6px 0px;
-    display: flex; 
+    display: flex;
     align-items: inherit;
     justify-content: center;
     gap: 5px;
     cursor: pointer;
     margin-top: 5px;
     background-color: whitesmoke;
-   
+
 }
 
 i.fa-solid.prp_dot.fa-circle {
@@ -1499,7 +1511,7 @@ button.btn_bot_div_save {
     /* // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 }
 
-.Head_Edit{
+.Head_Edit {
     display: flex;
     justify-content: space-between;
     padding: 1px 8px;
@@ -1515,9 +1527,10 @@ button.btn_bot_div_save {
 }
 
 .text_select_boxes {
-    width:100%
+    width: 100%
 }
-.field_style{
+
+.field_style {
     padding: 2px 5px !important;
     line-height: 20px !important;
     font-size: 10px !important;
@@ -1960,8 +1973,8 @@ input:disabled {
 
 .big_column_width {
     min-width: 110px !important;
-  }
-  
+}
+
 .small_column_width {
     min-width: 100px !important;
-  }
+}

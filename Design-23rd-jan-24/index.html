@@ -633,8 +633,8 @@
                                 <!-- <td>BP0001</td> -->
                                 <td class="hide_one">Sample</td>
                                 <td class="hide_two">
-                                    <p class="pro_align"> <span>Project Charter</span>
-                                        <i class="fa-solid fa-circle-info" title="Action requested"></i>
+                                    <p class="pro_align"> <span>1.1 Project Charter</span>
+                                        <i class="fa-solid fa-circle-info" title="Project Charter "></i>
                                     </p>
                                 </td>
                                 <td class="hide_tr">Efficiency</td>
@@ -654,8 +654,8 @@
                                 <!-- <td>BP0001</td> -->
                                 <td class="hide_one">Sample</td>
                                 <td class="hide_two">
-                                    <p class="pro_align"> <span>Functional Requirement</span>
-                                        <i class="fa-solid fa-circle-info" title="Action requested"></i>
+                                    <p class="pro_align"> <span>1.2 Functional Requirement</span>
+                                        <i class="fa-solid fa-circle-info" title="Functional Requirement"></i>
                                     </p>
                                 </td>
                                 <td class="hide_tr">ROI</td>
@@ -674,8 +674,8 @@
                                 <!-- <td>BP0001</td> -->
                                 <td class="hide_one">Test Project</td>
                                 <td class="hide_two">
-                                    <p class="pro_align"> <span>Project Charter</span>
-                                        <i class="fa-solid fa-circle-info" title="Action requested"></i>
+                                    <p class="pro_align"> <span>2.1 Project Charter</span>
+                                        <i class="fa-solid fa-circle-info" title="Project Charter"></i>
                                     </p>
                                 </td>
                                 <td class="hide_tr">UX</td>
@@ -693,10 +693,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="hide_one">Sample</td>
+                                <td class="hide_one">Test Sample</td>
                                 <td class="hide_two">
-                                    <p class="pro_align"> <span>Functional Requirement</span>
-                                        <i class="fa-solid fa-circle-info" title="Action requested"></i>
+                                    <p class="pro_align"> <span>3.1 Functional Requirement</span>
+                                        <i class="fa-solid fa-circle-info" title="Functional Requirement"></i>
                                     </p>
                                 </td>
                                 <td class="hide_tr">Group</td>
@@ -1637,8 +1637,7 @@
                                                         <p class="card_head_para">Task 2 : Development</p>
                                                     </div>
                                                 </div>
-                                                <div class="card_bdy" id="card_bdy_81"
-                                                    style="max-height: 145px !important;">
+                                                <div class="card_bdy" id="card_bdy_81" >
                                                     <div class="dev_break_down_content mb-2">
                                                         <h2 style="font-size: 16px !important;">Dev BreakDown</h2>
                                                         <button type="button" class="btn btn-success dev_break_btn"
@@ -4378,12 +4377,9 @@
                                     <th>Project Name</th>
                                     <th>Assigned Stage</th>
                                     <th>Current stage status</th>
+                                    <th>Stage to assign</th>
                                     <th>SignOff</th>
                                     <th>Action</th>
-                                    <!-- <th>Role</th>
-                                    <th>Task Start Date/End Date</th>
-                                    <th>Deadline For Closure</th>
-                                    <th>SignOff</th> -->
                                 </tr>
                             </thead>
                             <tbody style="font-size: 12px;">
@@ -4395,6 +4391,7 @@
                                     <td>Project Charter</td>
                                     <td><mark style="background-color: #c0c0c0;" class="rag_status">Completed</mark>
                                     </td>
+                                    <td>Requirement</td>
                                     <td>Yes</td>
                                     <td><button class="Assign_button" id="Expand_Pending_1">Assign</button><button
                                             class="Btn_style_close" id="Close_Pending_1">Close</button></td>
@@ -7461,6 +7458,7 @@
                                                     <label for="stage_clousre">Stage Closure</label>
                                                     <input type="date" id="stage_clousure"
                                                         class=" form-control field_style rounded-0" />
+                                                    <button class="save_Ba_Project btn btn-success " style="width: 100px !important;" id="Save_Ba">Save</button>
                                                 </div>
                                                 <div class="addBatch">
                                                     <select name="batchType" class="rounded-0 form-select field_style" id="batch_type_2">
@@ -10018,6 +10016,7 @@
                                     <td>
                                         <mark style="background-color: #82ff80;" class="rag_status">In Progress</mark>
                                     </td>
+                                    <td>Development</td>
                                     <td>No</td>
                                     <td>
                                         <button class="Assign_button" id="Expand_Pending_2">Assign</button>
@@ -15288,6 +15287,7 @@
                                     <td>Project charter</td>
                                     <td><mark style="background-color: #82ff80;" class="rag_status">In Progress</mark>
                                     </td>
+                                    <td>Requirement</td>
                                     <td>Yes</td>
                                     <td><button class="Assign_button" id="Expand_Pending_3">Assign</button><button
                                             class="Btn_style_close" id="Close_Pending_3">Close</button></td>
@@ -18104,6 +18104,7 @@
                                     <td>Pre-charter</td>
                                     <td><mark style="background-color: #c0c0c0;" class="rag_status">Completed</mark>
                                     </td>
+                                    <td>Project Charter</td>
                                     <td>Yes</td>
                                     <td><button class="Assign_button" id="Expand_Pending_4">Assign</button><button
                                             class="Btn_style_close" id="Close_Pending_4">Close</button></td>
@@ -18136,6 +18137,7 @@
                                     <td>Requirement</td>
                                     <td><mark style="background-color: #68f38d;" class="rag_status">InProgress</mark>
                                     </td>
+                                    <td>Development</td>
                                     <td>No</td>
                                     <td><button class="Assign_button" id="Expand_Assigned_1">Re-Assign</button><button
                                             class="Btn_style_close" id="Close_Assigned_1">Close</button></td>
@@ -21697,6 +21699,7 @@
                                     <td>Project charter</td>
                                     <td><mark style="background-color: #c0c0c0;" class="rag_status">Completed</mark>
                                     </td>
+                                    <td>Requirement</td>
                                     <td>Yes</td>
                                     <td><button class="Assign_button" id="Expand_Assigned_2">Re-Assign</button><button
                                             class="Btn_style_close" id="Close_Assigned_2">Close</button></td>
@@ -24513,6 +24516,7 @@
                                     <td>Project charter</td>
                                     <td><mark style="background-color: #68f38d;" class="rag_status">InProgress</mark>
                                     </td>
+                                    <td>Requirement</td>
                                     <td>No</td>
                                     <td><button class="Assign_button" id="Expand_Assigned_3">Re-Assign</button><button
                                             class="Btn_style_close" id="Close_Assigned_3">Close</button></td>
