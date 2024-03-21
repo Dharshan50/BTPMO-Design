@@ -119,14 +119,14 @@ $(document).find("[id^='Task_Edit_']").on('click', function () {
     var id = splitArray[splitArray.length - 1];
 
     // hide existing
-    $(document).find(`[id^='Task_Body_']`).hide().css('max-height', '280px')
+    $(document).find(`[id^='Task_Body_']`).hide().css('max-height', ' ')
     $(document).find(`[class^='Task_Field_']`).hide()
     $(document).find(`[class^='Task_Label_']`).show()
     $(document).find(`[id^='Task_Edit_']`).show()
     $(document).find(`[id^='Task_Save_']`).hide()
     $(document).find(`[id^='Task_Cancel_']`).hide()
 
-    $(document).find(`#Task_Body_${id}`).show().css('max-height', '280px')
+    $(document).find(`#Task_Body_${id}`).show().css('max-height', '335px')
     $(document).find(`[class^='Task_Field_${id}']`).show()
     $(document).find(`[class^='Task_Label_${id}']`).hide()
     $(document).find(`#Task_Edit_${id}`).hide()
@@ -932,7 +932,7 @@ $('#tab2').on('click', function () {
     $('#portfolio_sec_tab').hide();
     $('#prot_BA_view').hide();
 
-    $(document).find(`[id^='Task_Body_']`).hide().css('max-height', '280px')
+    $(document).find(`[id^='Task_Body_']`).hide().css('max-height', '335px')
     $(document).find(`[class^='Task_Field_']`).hide()
     $(document).find(`[class^='Task_Label_']`).show()
     $(document).find(`[id^='Task_Edit_']`).show()
@@ -1200,6 +1200,12 @@ $('#proj_task_tab1').on('click', function () {
     $(document).find("[class^='Project_Detail_Edit_']").show();
     $(document).find("[class^='Project_Detail_Save_']").hide();
     $(document).find("[class^='Project_Detail_Cancel_']").hide();
+
+    $(document).find("[class^='Development_Detail_label_']").show();
+    $(document).find("[class^='Development_Detail_field_']").hide();
+    $(document).find("[id^='Development_Detail_Edit_']").show();
+    $(document).find("[id^='Development_Detail_Save_']").hide();
+    $(document).find("[id^='Development_Detail_Cancel_']").hide();
     
     $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
@@ -1254,7 +1260,7 @@ $('#proj_task_tab2').on('click', function () {
     $(document).find("[class^='Batch_Req_']").hide();
     $(document).find("[id^='Edit_Batch_']").show();
 
-    $(document).find(`[id^='Task_Body_']`).hide().css('max-height', '280px')
+    $(document).find(`[id^='Task_Body_']`).hide().css('max-height', '335px')
     $(document).find(`[class^='Task_Field_']`).hide()
     $(document).find(`[class^='Task_Label_']`).show()
     $(document).find(`[id^='Task_Edit_']`).show()
@@ -1266,6 +1272,12 @@ $('#proj_task_tab2').on('click', function () {
     $(document).find("[id^='Project_Detail_Edit_']").show();
     $(document).find("[id^='Project_Detail_Save_']").hide();
     $(document).find("[id^='Project_Detail_Cancel_']").hide();
+
+    $(document).find("[class^='Development_Detail_label_']").show();
+    $(document).find("[class^='Development_Detail_field_']").hide();
+    $(document).find("[id^='Development_Detail_Edit_']").show();
+    $(document).find("[id^='Development_Detail_Save_']").hide();
+    $(document).find("[id^='Development_Detail_Cancel_']").hide();
 
     $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
@@ -1309,6 +1321,46 @@ $(document).find("[id^='Project_Detail_Save_']").on('click', function () {
     $(document).find(`#Project_Detail_Save_${id}`).hide();
     $(document).find(`#Project_Detail_Cancel_${id}`).hide();
     $(document).find(`#Project_Detail_Edit_${id}`).show(); 
+})
+
+
+$(document).find("[id^='Development_Detail_Edit_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+
+    $(document).find(`.Development_Detail_label_${id}`).hide();
+    $(document).find(`.Development_Detail_field_${id}`).show();
+
+    $(document).find(`#Development_Detail_Save_${id}`).show();
+    $(document).find(`#Development_Detail_Cancel_${id}`).show();
+    $(document).find(`#Development_Detail_Edit_${id}`).hide(); 
+})
+
+$(document).find("[id^='Development_Detail_Cancel_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+
+    $(document).find(`.Development_Detail_label_${id}`).show();
+    $(document).find(`.Development_Detail_field_${id}`).hide();
+
+    $(document).find(`#Development_Detail_Save_${id}`).hide();
+    $(document).find(`#Development_Detail_Cancel_${id}`).hide();
+    $(document).find(`#Development_Detail_Edit_${id}`).show(); 
+})
+
+$(document).find("[id^='Development_Detail_Save_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+
+    $(document).find(`.Development_Detail_label_${id}`).show();
+    $(document).find(`.Development_Detail_field_${id}`).hide();
+
+    $(document).find(`#Development_Detail_Save_${id}`).hide();
+    $(document).find(`#Development_Detail_Cancel_${id}`).hide();
+    $(document).find(`#Development_Detail_Edit_${id}`).show(); 
 })
 
 $('#proj_task_tab3').on('click', function () {

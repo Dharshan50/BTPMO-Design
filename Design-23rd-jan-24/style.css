@@ -1515,13 +1515,21 @@ button.btn_bot_div_save {
 .text_select_boxes {
     width:100%
 }
+.field_style{
+    padding: 2px 5px !important;
+    line-height: 20px !important;
+    font-size: 10px !important;
+    /* border: 1px solid red !important; */
+    height: 35px !important;
+}
 
 .card_cnt {
+    margin: 0px 0px 0px 20px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 3px;
-    gap: 7%;
+    gap: 6%;
 }
 
 .TaskTitle {
