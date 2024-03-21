@@ -204,16 +204,22 @@
 } */
 .Stage_Details {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     margin-left: 10px;
+}
+
+.func_ba_cls{
+    width: 60px !important;
+    /* padding: 0px !important; */
 }
 
 .Details {
     display: flex;
     justify-content: flex-start;
     gap: 20px;
-    align-items: center;
+    height: 30px;
+    /* align-items: center; */
 }
 
 mark.rag_status.ut {
@@ -1541,6 +1547,7 @@ button.btn.btn-success.btn_upd_task {
     padding: 2px 5px !important;
     line-height: 20px !important;
     font-size: 10px !important;
+    border-radius: 0px;
     /* border: 1px solid red !important; */
     height: 35px !important;
 }

@@ -1222,7 +1222,13 @@ $('#proj_task_tab1').on('click', function () {
     $(document).find("[id^='Development_Detail_Edit_']").show();
     $(document).find("[id^='Development_Detail_Save_']").hide();
     $(document).find("[id^='Development_Detail_Cancel_']").hide();
-    
+
+    $(document).find(`[class^='Func_ba_label_']`).show()
+    $(document).find(`[class^='Func_ba_field_']`).hide()
+    $(document).find("[id^='Func_Edit_Ba_']").show();
+    $(document).find("[id^='Func_Save_Ba_']").hide();
+    $(document).find("[id^='Func_Cancel_Ba_']").hide();
+
     $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
     });
@@ -1293,9 +1299,54 @@ $('#proj_task_tab2').on('click', function () {
     $(document).find("[id^='Development_Detail_Save_']").hide();
     $(document).find("[id^='Development_Detail_Cancel_']").hide();
 
+    $(document).find(`[class^='Func_ba_label_']`).show()
+    $(document).find(`[class^='Func_ba_field_']`).hide()
+    $(document).find("[id^='Func_Edit_Ba_']").show();
+    $(document).find("[id^='Func_Save_Ba_']").hide();
+    $(document).find("[id^='Func_Cancel_Ba_']").hide();
+
     $(".fa-minus").each(function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
     });
+})
+
+$(document).find("[id^='Func_Edit_Ba_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+
+    $(document).find(`.Func_ba_label_${id}`).hide();
+    $(document).find(`.Func_ba_field_${id}`).show();
+
+    $(document).find(`#Func_Save_Ba_${id}`).show();
+    $(document).find(`#Func_Cancel_Ba_${id}`).show();
+    $(document).find(`#Func_Edit_Ba_${id}`).hide(); 
+})
+
+$(document).find("[id^='Func_Save_Ba_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+
+    $(document).find(`.Func_ba_label_${id}`).show();
+    $(document).find(`.Func_ba_field_${id}`).hide();
+
+    $(document).find(`#Func_Save_Ba_${id}`).hide();
+    $(document).find(`#Func_Cancel_Ba_${id}`).hide();
+    $(document).find(`#Func_Edit_Ba_${id}`).show(); 
+})
+
+$(document).find("[id^='Func_Cancel_Ba_']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+
+    $(document).find(`.Func_ba_label_${id}`).show();
+    $(document).find(`.Func_ba_field_${id}`).hide();
+
+    $(document).find(`#Func_Save_Ba_${id}`).hide();
+    $(document).find(`#Func_Cancel_Ba_${id}`).hide();
+    $(document).find(`#Func_Edit_Ba_${id}`).show(); 
 })
 
 $(document).find("[id^='Project_Detail_Edit_']").on('click', function () {

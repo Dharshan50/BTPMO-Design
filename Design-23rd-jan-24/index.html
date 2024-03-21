@@ -2953,8 +2953,8 @@
                                                         </p>
                                                     </div>
 
-                                                    <i id="card_arrow_2"
-                                                        class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i>
+                                                    <!-- <i id="card_arrow_2"
+                                                        class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i> -->
                                                 </div>
                                                 <div class="card_button card_button_2">
                                                     <button class="save_button" id="Save_Rec_2"
@@ -3112,8 +3112,8 @@
                                                         </p>
                                                     </div>
 
-                                                    <i id="card_arrow_2"
-                                                        class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i>
+                                                    <!-- <i id="card_arrow_2"
+                                                        class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i> -->
                                                 </div>
                                                 <!-- <div class="card_cnt">
                                                     <div class="card_cnt_inner_even">
@@ -7498,508 +7498,34 @@
                                                 </button>
                                             </h2>
                                         </div>
-                                        <div id="pending_Assignment_Stage_1_2" class="collapse droppable"
+                                        <div id="pending_Assignment_Stage_1_2" class=" droppable"
                                             style="max-height:300px; overflow-y:auto;font-size: 12px;">
-                                            <div class="Stage_Details">
+                                            <div class="Stage_Details mb-2">
                                                 <div class="Details">
-                                                    <label for="Ba_responsible">BA Responsible</label>
-                                                    <select name="BA" class=" form-select field_style rounded-0 Ba_responsible"
-                                                        id="Ba_responsible">
-                                                        <option selected value="">Select</option>
-                                                        <option value="Sandeep">Sandeep</option>
-                                                        <option value="Sami">Sami</option>
-                                                    </select>
-                                                    <label for="stage_clousre">Stage Closure</label>
-                                                    <input type="date" id="stage_clousure"
-                                                        class=" form-control field_style rounded-0" />
-                                                    <button class="save_Ba_Project btn btn-success " style="width: 100px !important;" id="Save_Ba">Save</button>
-                                                </div>
-                                                <div class="addBatch">
-                                                    <select name="batchType" class="rounded-0 form-select field_style" id="batch_type_2">
-                                                        <option value="1">Yes</option>
-                                                        <option value="0">No Need</option>
-                                                    </select>
-                                                    <button class="btn btn-success" style="width: 200px !important;" id="AddBatch_2">Add Batch</button>
-                                                </div>
+                                                    <label for="Ba_responsible" style="font-weight: 600 !important;">BA Responsible</label>
+                                                    <p style=" width :120px !important;">
+                                                        <select name="BA" class="Func_ba_field_1 form-select field_style rounded-0 Ba_responsible "
+                                                            id="Ba_responsible">
+                                                            <option value="">Select</option>
+                                                            <option selected value="Sandeep">Sandeep</option>
+                                                            <option value="Sami">Sami</option>
+                                                        </select>
+                                                        <label class="Func_ba_label_1" for="Ba_responsible">Sandeep</label>
+                                                    </p>
+                                                    <label for="stage_clousre"  style="font-weight: 600 !important;">Stage Closure</label>
+                                                    <p style=" width :100px !important;">
+                                                        <input type="date" id="stage_clousure" value="30-12-2024"
+                                                            class="Func_ba_field_1 form-control field_style rounded-0" />
+                                                        <label class="Func_ba_label_1" for="">30-12-2024</label>
+                                                    </p>
+                                                    <div class="d-flex">
+                                                        <button class="save_Ba_Project mx-1 btn btn-success func_ba_cls" id="Func_Edit_Ba_1">Edit</button>
+                                                        <button class="save_Ba_Project mx-1 btn btn-success func_ba_cls" id="Func_Save_Ba_1">Save</button>
+                                                        <button class="save_Ba_Project mx-1 btn btn-danger func_ba_cls" id="Func_Cancel_Ba_1">Cancel</button>
+                                                    </div>
+                                                </div> 
                                             </div>
-                                            <div class=" project_charter droppable" id="project_charter">
-                                                <div class="card_main_box show" id="Form_Template_2">
-                                                    <div class="card_heda">
-                                                        <p class="card_head_para">Batch Name</p>
-                                                    </div>
-                                                    <div class="card_bdy" id="card_bdy_1"
-                                                        style="max-height: 335px !important;">
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    Batch Order</p>
-                                                                <p style=" text-align: left;" class="card_main_p_tag ">
-                                                                    <input type="text" value='1' class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    Batch Name</p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Start
-                                                                    Date : </p>
-                                                                <p class="card_main_p_tag">
-
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">End
-                                                                    Date </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    Allocation / Day </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    Estimated MD </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    batch/Project
-                                                                    Dependency
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Status</p>
-                                                                <p class="card_main_p_tag">
-                                                                    <select value='Not Started' class=" form-select field_style">
-                                                                        <option selected value="">Select</option>
-                                                                        <option value="Not Started">Not Started</option>
-                                                                        <option value="InProgress">InProgress</option>
-                                                                        <option value="Pending">Pending</option>
-                                                                        <option value="On Hold">On Hold</option>
-                                                                    </select>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Resp BA</p>
-                                                                <p class="card_main_p_tag">
-
-                                                                    <select value='Not Started' class=" form-select field_style">
-                                                                        <option selected value="">Select</option>
-                                                                        <option value="BA">BA</option>
-                                                                    </select>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Dependency
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-
-                                                                    <select value='Yes' class=" form-select field_style">
-                                                                        <option selected value="Yes">Yes</option>
-                                                                        <option value="No">NO</option>
-                                                                    </select>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Developer
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-
-                                                                    <select value='' class=" form-select field_style">
-                                                                        <option selected value="">Select</option>
-                                                                        <option value="Sandeep">Sandeeep</option>
-                                                                        <option value="Sami">Sami</option>
-                                                                    </select>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Dev
-                                                                    Priority
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <select value='0' class=" form-select field_style">
-                                                                        <option selected value="0">Select</option>
-                                                                        <option value="1">1</option>
-                                                                        <option value="2">2</option>
-                                                                    </select>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Deadline
-                                                                    For
-                                                                    Clousure</p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Revised
-                                                                    Start
-                                                                    Date </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Revised End
-                                                                    Date </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">SignOff</p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="date" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                        <label for="signDoc"><i style="font-size: 13px;" class="fa-brands fa-threads"></i></label>
-                                                                        <input type="file" id="signDoc" hidden>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Stage
-                                                                    Clousure
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="date" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_button card_button_2 batch_button">
-                                                            <button class="save_button" id="close_2"
-                                                                style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Save</button>
-                                                            <button class="submit_button" id="close_2"
-                                                                style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Submit</button>
-                                                            <button class="btn  cancel_btn" id="close_2"
-                                                                style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Cancel</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card_main_box show" id="Record_Template_2">
-                                                    <div class="card_heda">
-                                                        <p class="card_head_para"><i
-                                                                lass="fa-solid move fa-grip-vertical"></i>Batch 1 LCS
-                                                            Set Up
-                                                        </p>
-                                                        <div>
-                                                            <button type="button" title="Edit" id="EditRecord_1"
-                                                                class="btn btn-success  btn_upd_task"
-                                                                style=" margin-top:6px !important; margin-right:5px !important;">
-                                                                Edit
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card_bdy" id="card_bdy_1" >
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Batch Order
-                                                                </p>
-                                                                <p style=" text-align: left;" class="card_main_p_tag">
-                                                                    <input type="text" value='1' class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">1</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    Batch Name</p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='LCS Set Up' class="EditField_1 form-control field_style">
-                                                                    <label class="LabelField_1"
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;">LCS
-                                                                        Set Up</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Start
-                                                                    Date : </p>
-                                                                <p class="card_main_p_tag">
-
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='30-12-2002' class="EditField_1  form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">-</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">End Date
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='30-12-2002' class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">-</label>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    Allocation / Day </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" value='3' class="EditField_1  form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">0</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    Estimated MD </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='3' class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">0</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    Status </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <select name="Status" class="EditField_1 form-select field_style"
-                                                                        id="Status">
-                                                                        <option value="Not Started">Not Started</option>
-                                                                        <option value="Pending">Pending</option>
-                                                                        <option value="In Progress">In Progress</option>
-                                                                        <option value="Completed">Completed</option>
-                                                                        <option value="On Hold">On Hold</option>
-                                                                    </select>
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">Not Started</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Resp BA</p>
-                                                                <p class="card_main_p_tag">
-
-                                                                    <select value='Not Started' class="EditField_1 form-select field_style">
-                                                                        <option selected value=""></option>
-                                                                        <option value="BA">Sandeep</option>
-                                                                    </select>
-                                                                    <label class="LabelField_1"></mark>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Dependency
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-
-                                                                    <select value='Yes' class="EditField_1 form-select field_style">
-                                                                        <option selected value="Yes">Yes</option>
-                                                                        <option value="No">NO</option>
-                                                                    </select>
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">Yes/No</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    batch/Project
-                                                                    Dependency</p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">Batch 2 - GT & STS</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Developer
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-
-                                                                    <select value='' class="EditField_1 form-select field_style">
-                                                                        <option selected value=""></option>
-                                                                        <option value="Sandeep">Sandeeep</option>
-                                                                        <option value="Sami">Sami</option>
-                                                                    </select>
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">-</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Dev
-                                                                    Priority
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <select value='' class="EditField_1 form-select field_style">
-                                                                        <option selected value="0"></option>
-                                                                        <option selected value="1">1</option>
-                                                                        <option value="2">2</option>
-                                                                    </select>
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">1</label>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Deadline For
-                                                                    Clousure
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='30-12-2002' class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">30-12-2002</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;"> Revised
-                                                                    Start
-                                                                    Date</p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='30-12-2002' class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">30-12-2002</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Revised End
-                                                                    Date
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='30-12-2002' class="EditField_1  form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">30-12-2002</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Dev
-                                                                    Priority
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <select value='' class="EditField_1 form-control field_style">
-                                                                        <option selected value="0"></option>
-                                                                        <option selected value="1">1</option>
-                                                                        <option value="2">2</option>
-                                                                    </select>
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">1</label>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">SignOff</p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='30-12-2002' class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">30-12-2002 <br><i style="font-size: 13px;" class="fa-brands fa-threads"></i> document.pdf</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Stage
-                                                                    Clousure
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='30-12-2002' class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">30-12-2002</label>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_button card_button_1" style="display: none;">
-                                                            <button class="save_button" id="Save_Rec_1"
-                                                                style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Save</button>
-                                                            <button class="submit_button" id="Save_Rec_1"
-                                                                style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Submit</button>
-                                                            <button class="btn  cancel_btn" id="Cancel_Rec_1"
-                                                                style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Cancel</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
+                                            <div class=" project_charter droppable" id="project_charter"> 
                                                 <div id="item1_1" class="card_main_box draggable item1 show">
                                                     <div class="card_heda">
                                                         <div>
@@ -10077,7 +9603,7 @@
                                         <button class="Btn_style_close" id="Close_Pending_2">Close</button>
                                     </td>
                                 </tr>
-                                <tr class="pending_Assignment_View_2" style="display: none; background-color: #f6f6f6;">
+                                <tr class="pending_Assignment_View_2" style="display: none; ">
                                     <td colspan="8">
                                         <!-- Pre Charter -->
                                         <div class="accordion" style="margin-bottom: 4px;" id="PRE_CHARTER_1">
@@ -12893,507 +12419,34 @@
                                                 </button>
                                             </h2>
                                         </div>
-                                        <div id="pending_Assignment_Stage_2_2" class="collapse droppable"
+                                        <div id="pending_Assignment_Stage_2_2" class="droppable"
                                             style="max-height:300px; overflow-y:auto;font-size: 12px;">
-                                            <div class="Stage_Details">
+                                            <div class="Stage_Details mb-2">
                                                 <div class="Details">
-                                                    <label for="Ba_responsible">BA Responsible</label>
-                                                    <select name="BA" class=" form-select field_style rounded-0 Ba_responsible"
-                                                        id="Ba_responsible">
-                                                        <option selected value="">Select</option>
-                                                        <option value="Sandeep">Sandeep</option>
-                                                        <option value="Sami">Sami</option>
-                                                    </select>
-                                                    <label for="stage_clousre">Stage Closure</label>
-                                                    <input type="date" id="stage_clousure"
-                                                        class=" form-control field_style rounded-0" />
-                                                </div>
-                                                <div class="addBatch">
-                                                    <select name="batchType" class="rounded-0  form-select field_style" id="batch_type_3">
-                                                        <option value="1">Yes</option>
-                                                        <option value="0">No Need</option>
-                                                    </select>
-                                                    <button class="btn btn-success"  style="width: 200px !important;" id="AddBatch_3">Add Batch</button>
-                                                </div>
+                                                    <label for="Ba_responsible" style="font-weight: 600 !important;">BA Responsible</label>
+                                                    <p style=" width :120px !important;">
+                                                        <select name="BA" class="Func_ba_field_2 form-select field_style rounded-0 Ba_responsible "
+                                                            id="Ba_responsible">
+                                                            <option value="">Select</option>
+                                                            <option selected value="Sandeep">Sandeep</option>
+                                                            <option value="Sami">Sami</option>
+                                                        </select>
+                                                        <label class="Func_ba_label_2" for="Ba_responsible">Sandeep</label>
+                                                    </p>
+                                                    <label for="stage_clousre"  style="font-weight: 600 !important;">Stage Closure</label>
+                                                    <p style=" width :100px !important;">
+                                                        <input type="date" id="stage_clousure" value="30-12-2024"
+                                                            class="Func_ba_field_2 form-control field_style rounded-0" />
+                                                        <label class="Func_ba_label_2" for="">30-12-2024</label>
+                                                    </p>
+                                                    <div class="d-flex">
+                                                        <button class="save_Ba_Project mx-1 btn btn-success func_ba_cls" id="Func_Edit_Ba_2">Edit</button>
+                                                        <button class="save_Ba_Project mx-1 btn btn-success func_ba_cls" id="Func_Save_Ba_2">Save</button>
+                                                        <button class="save_Ba_Project mx-1 btn btn-danger func_ba_cls" id="Func_Cancel_Ba_2">Cancel</button>
+                                                    </div>
+                                                </div> 
                                             </div>
-                                            <div class=" project_charter droppable" id="project_charter">
-
-                                                <div class="card_main_box show" id="Form_Template_3">
-                                                    <div class="card_heda">
-                                                        <p class="card_head_para">Batch Name</p>
-                                                    </div>
-                                                    <div class="card_bdy" id="card_bdy_1"
-                                                        style="max-height: 335px !important;">
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    Batch Order</p>
-                                                                <p style=" text-align: left;" class="card_main_p_tag">
-                                                                    <input type="text" value='1' class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    Batch Name</p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Start
-                                                                    Date : </p>
-                                                                <p class="card_main_p_tag">
-
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">End
-                                                                    Date </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    Allocation / Day </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    Estimated MD </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    batch/Project
-                                                                    Dependency
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Status</p>
-                                                                <p class="card_main_p_tag">
-                                                                    <select value='Not Started' class=" form-select field_style">
-                                                                        <option selected value="">Select</option>
-                                                                        <option value="Not Started">Not Started</option>
-                                                                        <option value="InProgress">InProgress</option>
-                                                                        <option value="Pending">Pending</option>
-                                                                        <option value="On Hold">On Hold</option>
-                                                                    </select>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Resp BA</p>
-                                                                <p class="card_main_p_tag">
-
-                                                                    <select value='Not Started' class=" form-select field_style">
-                                                                        <option selected value="">Select</option>
-                                                                        <option value="BA">BA</option>
-                                                                    </select>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Dependency
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-
-                                                                    <select value='Yes' class=" form-select field_style">
-                                                                        <option selected value="Yes">Yes</option>
-                                                                        <option value="No">NO</option>
-                                                                    </select>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Developer
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-
-                                                                    <select value='' class=" form-select  field_style">
-                                                                        <option selected value="">Select</option>
-                                                                        <option value="Sandeep">Sandeeep</option>
-                                                                        <option value="Sami">Sami</option>
-                                                                    </select>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Dev
-                                                                    Priority
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <select value='0' class=" form-select field_style">
-                                                                        <option selected value="0">Select</option>
-                                                                        <option value="1">1</option>
-                                                                        <option value="2">2</option>
-                                                                    </select>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Deadline
-                                                                    For
-                                                                    Clousure</p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Revised
-                                                                    Start
-                                                                    Date </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Revised End
-                                                                    Date </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">SignOff</p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="date" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Stage
-                                                                    Clousure
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="date" placeholder="DD-MM-YYYY" value=''
-                                                                        class=" form-control field_style">
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_button card_button_3 batch_button">
-                                                            <button class="save_button" id="close_3"
-                                                                style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Save</button>
-                                                            <button class="submit_button" id="close_3"
-                                                                style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Submit</button>
-                                                            <button class="btn  cancel_btn" id="close_3"
-                                                                style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Cancel</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card_main_box show" id="Record_Template_3">
-                                                    <div class="card_heda">
-                                                        <p class="card_head_para"><i
-                                                                lass="fa-solid move fa-grip-vertical"></i>Batch 1 LCS
-                                                            Set Up
-                                                        </p>
-                                                        <div>
-                                                            <button type="button" title="Edit" id="EditRecord_1"
-                                                                class="btn btn-success  btn_upd_task"
-                                                                style=" margin-top:6px !important; margin-right:5px !important;">
-                                                                Edit
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card_bdy" id="card_bdy_1"
-                                                        style="max-height: 335px !important;">
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Batch Order
-                                                                </p>
-                                                                <p style=" text-align: left;" class="card_main_p_tag">
-                                                                    <input type="text" value='1' class="EditField_1  form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">1</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    Batch Name</p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='LCS Set Up' class="EditField_1 form-control field_style">
-                                                                    <label class="LabelField_1"
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;">LCS
-                                                                        Set Up</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Start
-                                                                    Date : </p>
-                                                                <p class="card_main_p_tag">
-
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='30-12-2002' class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">-</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">End Date
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='30-12-2002' class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">-</label>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    Allocation / Day </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" value='3' class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">0</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    Estimated MD </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='3' class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">0</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_even">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    Status </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <select name="Status" class="EditField_1 form-select field_style"
-                                                                        id="Status">
-                                                                        <option value="Not Started">Not Started</option>
-                                                                        <option value="Pending">Pending</option>
-                                                                        <option value="In Progress">In Progress</option>
-                                                                        <option value="Completed">Completed</option>
-                                                                        <option value="On Hold">On Hold</option>
-                                                                    </select>
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">Not Started</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Resp BA</p>
-                                                                <p class="card_main_p_tag">
-
-                                                                    <select value='Not Started' class="EditField_1 form-select field_style">
-                                                                        <option selected value=""></option>
-                                                                        <option value="BA">Sandeep</option>
-                                                                    </select>
-                                                                    <label class="LabelField_1"></mark>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Dependency
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-
-                                                                    <select value='Yes' class="EditField_1 form-select field_style">
-                                                                        <option selected value="Yes">Yes</option>
-                                                                        <option value="No">NO</option>
-                                                                    </select>
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">Yes/No</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">
-                                                                    batch/Project
-                                                                    Dependency</p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY" value=''
-                                                                        class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">Batch 2 - GT & STS</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Developer
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-
-                                                                    <select value='' class="EditField_1 form-select field_style">
-                                                                        <option selected value=""></option>
-                                                                        <option value="Sandeep">Sandeeep</option>
-                                                                        <option value="Sami">Sami</option>
-                                                                    </select>
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">-</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Dev
-                                                                    Priority
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <select value='' class="EditField_1 form-select field_style">
-                                                                        <option selected value="0"></option>
-                                                                        <option selected value="1">1</option>
-                                                                        <option value="2">2</option>
-                                                                    </select>
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">1</label>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Deadline For
-                                                                    Clousure
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='30-12-2002' class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">30-12-2002</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;"> Revised
-                                                                    Start
-                                                                    Date</p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='30-12-2002' class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">30-12-2002</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Revised End
-                                                                    Date
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='30-12-2002' class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">30-12-2002</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Dev
-                                                                    Priority
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <select value='' class="EditField_1 form-select field_style">
-                                                                        <option selected value="0"></option>
-                                                                        <option selected value="1">1</option>
-                                                                        <option value="2">2</option>
-                                                                    </select>
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">1</label>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_cnt">
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">SignOff</p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='30-12-2002' class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">30-12-2002</label>
-                                                                </p>
-                                                            </div>
-                                                            <div class="card_cnt_inner_odd">
-                                                                <p class="card_label text_select_boxes"
-                                                                    style="margin-bottom:0rem !important;">Stage
-                                                                    Clousure
-                                                                </p>
-                                                                <p class="card_main_p_tag">
-                                                                    <input type="text" placeholder="DD-MM-YYYY"
-                                                                        value='30-12-2002' class="EditField_1 form-control field_style">
-                                                                    <label
-                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                        class="LabelField_1">30-12-2002</label>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card_button card_button_1" style="display: none;">
-                                                            <button class="save_button" id="Save_Rec_1"
-                                                                style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Save</button>
-                                                            <button class="submit_button" id="Save_Rec_1"
-                                                                style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Submit</button>
-                                                            <button class="btn  cancel_btn" id="Cancel_Rec_1"
-                                                                style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Cancel</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
+                                            <div class=" project_charter droppable" id="project_charter"> 
                                                 <div id="item1_1" class="card_main_box draggable item1 show">
                                                     <div class="card_heda">
                                                         <div>
@@ -15346,7 +14399,7 @@
                                     <td><button class="Assign_button" id="Expand_Pending_3">Assign</button><button
                                             class="Btn_style_close" id="Close_Pending_3">Close</button></td>
                                 </tr>
-                                <tr class="pending_Assignment_View_3" style="display: none; background-color: #f6f6f6;">
+                                <tr class="pending_Assignment_View_3" style="display: none; ">
                                     <td colspan="8">
                                         <!-- Pre Charter -->
                                         <div class="accordion" style="margin-bottom: 4px;" id="PRE_CHARTER_1">
@@ -15376,7 +14429,7 @@
                                                 </button>
                                             </h2>
                                         </div>
-                                        <div id="pending_Assignment_Stage_3_1" class="collapse droppable"
+                                        <div id="pending_Assignment_Stage_3_1" class="droppable"
                                             style="max-height:300px; overflow-y:auto;font-size: 12px;">
                                             <div class=" project_charter droppable" id="project_charter">
                                                 <div id="item1_1" class="card_main_box draggable item1 show">
@@ -18163,7 +17216,7 @@
                                     <td><button class="Assign_button" id="Expand_Pending_4">Assign</button><button
                                             class="Btn_style_close" id="Close_Pending_4">Close</button></td>
                                 </tr>
-                                <tr class="pending_Assignment_View_4" style="display: none; background-color: #f6f6f6;">
+                                <tr class="pending_Assignment_View_4" style="display: none; ">
                                     <td colspan="8">
                                         <!-- Pre Charter -->
                                         <div class="accordion" style="margin-bottom: 4px;" id="PRE_CHARTER_1">
@@ -18196,7 +17249,7 @@
                                     <td><button class="Assign_button" id="Expand_Assigned_1">Re-Assign</button><button
                                             class="Btn_style_close" id="Close_Assigned_1">Close</button></td>
                                 </tr>
-                                <tr class="Assigned_Record_View_1" style="display: none; background-color: #f6f6f6;">
+                                <tr class="Assigned_Record_View_1" style="display: none; ">
                                     <td colspan="8">
                                         <!-- Pre Charter -->
                                         <div class="accordion" style="margin-bottom: 4px;" id="PROJECT_CHARTER_1">
@@ -21012,8 +20065,493 @@
                                                 </button>
                                             </h2>
                                         </div>
-                                        <div id="Assigned_Record_Stage_1_2" class="collapse"
+                                        <div id="Assigned_Record_Stage_1_2" class=""
                                             style="max-height:300px; overflow-y:auto;font-size: 12px;">
+                                            <div class="addBatch">
+                                                <select name="batchType" style="width: 100px !important;" class="rounded-0 form-select field_style" id="batch_type_2">
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No Need</option>
+                                                </select>
+                                                <button class="btn btn-success save_Ba_Project" id="AddBatch_2">Add Batch</button>
+                                            </div>
+                                            <div class="card_main_box show" id="Form_Template_2">
+                                                <div class="card_heda">
+                                                    <p class="card_head_para">Batch Name</p>
+                                                </div>
+                                                <div class="card_bdy" id="card_bdy_1"
+                                                    style="max-height: 351px !important">
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Batch Order</p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag ">
+                                                                <input type="text" value='1' class="form-control field_style">
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Batch Name</p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY" value=''
+                                                                    class=" form-control field_style">
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Start
+                                                                Date : </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY" value=''
+                                                                    class=" form-control field_style">
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">End
+                                                                Date </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY" value=''
+                                                                    class=" form-control field_style">
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Allocation / Day </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY" value=''
+                                                                    class=" form-control field_style">
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Estimated MD </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY" value=''
+                                                                    class=" form-control field_style">
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">
+                                                                batch/Project
+                                                                Dependency
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY" value=''
+                                                                    class=" form-control field_style">
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Status</p>
+                                                            <p class="card_main_p_tag">
+                                                                <select value='Not Started' class=" form-select field_style">
+                                                                    <option selected value="">Select</option>
+                                                                    <option value="Not Started">Not Started</option>
+                                                                    <option value="InProgress">InProgress</option>
+                                                                    <option value="Pending">Pending</option>
+                                                                    <option value="On Hold">On Hold</option>
+                                                                </select>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Resp BA</p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <select value='Not Started' class=" form-select field_style">
+                                                                    <option selected value="">Select</option>
+                                                                    <option value="BA">BA</option>
+                                                                </select>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Dependency
+                                                            </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <select value='Yes' class=" form-select field_style">
+                                                                    <option selected value="Yes">Yes</option>
+                                                                    <option value="No">NO</option>
+                                                                </select>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Developer
+                                                            </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <select value='' class=" form-select field_style">
+                                                                    <option selected value="">Select</option>
+                                                                    <option value="Sandeep">Sandeeep</option>
+                                                                    <option value="Sami">Sami</option>
+                                                                </select>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Dev
+                                                                Priority
+                                                            </p>
+                                                            <p class="card_main_p_tag">
+                                                                <select value='0' class=" form-select field_style">
+                                                                    <option selected value="0">Select</option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                </select>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Deadline
+                                                                For
+                                                                Clousure</p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY" value=''
+                                                                    class=" form-control field_style">
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Revised
+                                                                Start
+                                                                Date </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY" value=''
+                                                                    class=" form-control field_style">
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Revised End
+                                                                Date </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY" value=''
+                                                                    class=" form-control field_style">
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">SignOff</p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="date" placeholder="DD-MM-YYYY" value=''
+                                                                    class=" form-control field_style">
+                                                                    <label for="signDoc"><i style="font-size: 13px;" class="fa-brands fa-threads"></i></label>
+                                                                    <input type="file" id="signDoc" hidden>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Stage
+                                                                Clousure
+                                                            </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="date" placeholder="DD-MM-YYYY" value=''
+                                                                    class=" form-control field_style">
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_button card_button_2 batch_button">
+                                                        <button class="save_button" id="close_2"
+                                                            style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Save</button>
+                                                        <button class="submit_button" id="close_2"
+                                                            style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Submit</button>
+                                                        <button class="btn  cancel_btn" id="close_2"
+                                                            style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- <div class="card_main_box show" id="Record_Template_2">
+                                                <div class="card_heda">
+                                                    <p class="card_head_para"><i
+                                                            lass="fa-solid move fa-grip-vertical"></i>Batch 1 LCS
+                                                        Set Up
+                                                    </p>
+                                                    <div>
+                                                        <button type="button" title="Edit" id="EditRecord_1"
+                                                            class="btn btn-success  btn_upd_task"
+                                                            style=" margin-top:6px !important; margin-right:5px !important;">
+                                                            Edit
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="card_bdy" id="card_bdy_1" >
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Batch Order
+                                                            </p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag">
+                                                                <input type="text" value='1' class="EditField_1 form-control field_style">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_1">1</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Batch Name</p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    value='LCS Set Up' class="EditField_1 form-control field_style">
+                                                                <label class="LabelField_1"
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;">LCS
+                                                                    Set Up</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Start
+                                                                Date : </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    value='30-12-2002' class="EditField_1  form-control field_style">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_1">-</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">End Date
+                                                            </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    value='30-12-2002' class="EditField_1 form-control field_style">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_1">-</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Allocation / Day </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" value='3' class="EditField_1  form-control field_style">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_1">0</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Estimated MD </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    value='3' class="EditField_1 form-control field_style">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_1">0</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Status </p>
+                                                            <p class="card_main_p_tag">
+                                                                <select name="Status" class="EditField_1 form-select field_style"
+                                                                    id="Status">
+                                                                    <option value="Not Started">Not Started</option>
+                                                                    <option value="Pending">Pending</option>
+                                                                    <option value="In Progress">In Progress</option>
+                                                                    <option value="Completed">Completed</option>
+                                                                    <option value="On Hold">On Hold</option>
+                                                                </select>
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_1">Not Started</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Resp BA</p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <select value='Not Started' class="EditField_1 form-select field_style">
+                                                                    <option selected value=""></option>
+                                                                    <option value="BA">Sandeep</option>
+                                                                </select>
+                                                                <label class="LabelField_1"></mark>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Dependency
+                                                            </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <select value='Yes' class="EditField_1 form-select field_style">
+                                                                    <option selected value="Yes">Yes</option>
+                                                                    <option value="No">NO</option>
+                                                                </select>
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_1">Yes/No</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">
+                                                                batch/Project
+                                                                Dependency</p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY" value=''
+                                                                    class="EditField_1 form-control field_style">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_1">Batch 2 - GT & STS</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Developer
+                                                            </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <select value='' class="EditField_1 form-select field_style">
+                                                                    <option selected value=""></option>
+                                                                    <option value="Sandeep">Sandeeep</option>
+                                                                    <option value="Sami">Sami</option>
+                                                                </select>
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_1">-</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Dev
+                                                                Priority
+                                                            </p>
+                                                            <p class="card_main_p_tag">
+                                                                <select value='' class="EditField_1 form-select field_style">
+                                                                    <option selected value="0"></option>
+                                                                    <option selected value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                </select>
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_1">1</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Deadline For
+                                                                Clousure
+                                                            </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    value='30-12-2002' class="EditField_1 form-control field_style">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_1">30-12-2002</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;"> Revised
+                                                                Start
+                                                                Date</p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    value='30-12-2002' class="EditField_1 form-control field_style">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_1">30-12-2002</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Revised End
+                                                                Date
+                                                            </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    value='30-12-2002' class="EditField_1  form-control field_style">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_1">30-12-2002</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Dev
+                                                                Priority
+                                                            </p>
+                                                            <p class="card_main_p_tag">
+                                                                <select value='' class="EditField_1 form-control field_style">
+                                                                    <option selected value="0"></option>
+                                                                    <option selected value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                </select>
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_1">1</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">SignOff</p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    value='30-12-2002' class="EditField_1 form-control field_style">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_1">30-12-2002 <br><i style="font-size: 13px;" class="fa-brands fa-threads"></i> document.pdf</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Stage
+                                                                Clousure
+                                                            </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY"
+                                                                    value='30-12-2002' class="EditField_1 form-control field_style">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_1">30-12-2002</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_button card_button_1" style="display: none;">
+                                                        <button class="save_button" id="Save_Rec_1"
+                                                            style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Save</button>
+                                                        <button class="submit_button" id="Save_Rec_1"
+                                                            style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Submit</button>
+                                                        <button class="btn  cancel_btn" id="Cancel_Rec_1"
+                                                            style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+
                                             <div class="batches_list batch_func_1" id="batch_func_1">
                                                 <div class="batch_header"
                                                     style="padding:5px; display:flex; justify-content: space-between;">
@@ -21758,7 +21296,7 @@
                                     <td><button class="Assign_button" id="Expand_Assigned_2">Re-Assign</button><button
                                             class="Btn_style_close" id="Close_Assigned_2">Close</button></td>
                                 </tr>
-                                <tr class="Assigned_Record_View_2" style="display: none; background-color: #f6f6f6;">
+                                <tr class="Assigned_Record_View_2" style="display: none; ">
                                     <td colspan="8">
                                         <!-- Pre Charter -->
                                         <div class="accordion" style="margin-bottom: 4px;" id="PROJECT_CHARTER_1">
@@ -21788,7 +21326,7 @@
                                                 </button>
                                             </h2>
                                         </div>
-                                        <div id="Assigned_Record_Stage_2_1" class="collapse"
+                                        <div id="Assigned_Record_Stage_2_1" class=""
                                             style="max-height:300px; overflow-y:auto;font-size: 12px;">
                                             <div class=" project_charter droppable" id="project_charter">
                                                 <div id="item1_1" class="card_main_box draggable item1 show">
@@ -24575,7 +24113,7 @@
                                     <td><button class="Assign_button" id="Expand_Assigned_3">Re-Assign</button><button
                                             class="Btn_style_close" id="Close_Assigned_3">Close</button></td>
                                 </tr>
-                                <tr class="Assigned_Record_View_3" style="display: none; background-color: #f6f6f6;">
+                                <tr class="Assigned_Record_View_3" style="display: none; ">
                                     <td colspan="8">
                                         <!-- Pre Charter -->
                                         <div class="accordion" style="margin-bottom: 4px;" id="PROJECT_CHARTER_1">
@@ -24605,7 +24143,7 @@
                                                 </button>
                                             </h2>
                                         </div>
-                                        <div id="Assigned_Record_Stage_3_1" class="collapse"
+                                        <div id="Assigned_Record_Stage_3_1" class=""
                                             style="max-height:300px; overflow-y:auto;font-size: 12px;">
                                             <div class=" project_charter droppable" id="project_charter">
                                                 <div id="item1_1" class="card_main_box draggable item1 show">
