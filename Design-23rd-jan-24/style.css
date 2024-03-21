@@ -1191,6 +1191,7 @@ table.table.table-responsive thead tr th {
 
 
 
+
 @media (min-width:768px) {
 
     .tab_inner+label {
@@ -1247,7 +1248,7 @@ table.table.table-responsive thead tr th {
 
 .Bottom_div label {
     background-color: #fff;
-    margin: 0px 10px;
+    margin: 0px 8px;
     text-align: left;
     padding: 10px 0px;
     font-size: 12px;
@@ -1352,7 +1353,7 @@ th.lab_dwn {
 } */
 
 button.btn_bot_div {
-    padding: 5px 5px;
+    padding: 5px 2px;
     border-radius: 5px;
     border: none;
     background-color: red;

@@ -570,9 +570,11 @@ $("[id^='Update_revis_']").on('click', function () {
     var id = splitArray[splitArray.length - 1];
     console.log(id)
     $(document).find(`#rev_str_${id}`).hide();
+    $(document).find(`#rev_golive_${id}`).hide();
     $(document).find(`#rev_end_${id}`).hide();
     $(document).find(`#edit_revstrport_${id}`).show();
     $(document).find(`#edit_revendport_${id}`).show();
+    $(document).find(`#edit_revgoliveport_${id}`).show();
     $(`#Update_revis_${id}`).hide();
     $(`#save_revis_${id}`).show();
 })
@@ -584,8 +586,10 @@ $("[id^='save_revis_']").on('click', function () {
     console.log(id)
     $(document).find(`#rev_str_${id}`).show();
     $(document).find(`#rev_end_${id}`).show();
+    $(document).find(`#rev_golive_${id}`).show();
     $(document).find(`#edit_revstrport_${id}`).hide();
     $(document).find(`#edit_revendport_${id}`).hide();
+    $(document).find(`#edit_revgoliveport_${id}`).hide();
     $(`#Update_revis_${id}`).show();
     $(`#save_revis_${id}`).hide();
 })
@@ -1067,6 +1071,7 @@ function hideProjData() {
         $(`#port_delay_tab_${lst[i]}`).hide();
         $(`#edit_revstrport_${lst[i]}`).hide();
         $(`#edit_revendport_${lst[i]}`).hide();
+        $(`#edit_revgoliveport_${lst[i]}`).hide();
         $(`#save_revis_${lst[i]}`).hide();
 
         $(`#save_revtime_${lst[i]}`).hide();
@@ -1221,19 +1226,17 @@ $('.dw_content_data').on('click', function () {
     $('#tab3').get(0).click(0);
 
     // Create the notification icon dynamically
-    var notificationIcon = $('<i>').addClass('fas fa-bell'); // Assuming you're using Font Awesome for icons
-    notificationIcon.css({
-        'color': 'red',
-        'font-size': '14px' ,
-        'position':'absolute',
-        'left' :'60px',
-        'margin-top' : '10px'
+   
+    $('#delayed_tasks').css({
+        'border':'2px solid red'
     });
-    // Append the notification icon to the #notify_btn div
-    $('#notify_btn').empty().append(notificationIcon);
     // Remove the notification icon after 10 seconds
     setTimeout(() => {
-        notificationIcon.remove();
+        $('#delayed_tasks').css({
+            'border-color':'inherit',
+            'border-style':'solid',
+            'border-width':'0'
+        });
     }, 5000);
     $('#top_div').hide();
 });
