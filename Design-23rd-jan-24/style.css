@@ -1493,12 +1493,17 @@ button.btn_bot_div_save {
     border: 1px solid #ddd;
     margin-left: 0px;
     padding: 0px;
-    width: 100%;
+    width: 100% !important;
     border-radius: 0px;
     margin-top: 5px !important;
+    margin: auto;
     /* // box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11); */
 }
-
+button.btn.btn-success.btn_upd_task {
+    position: absolute;
+    left: 60%;
+    bottom: -2px;
+}
 .card_heda {
     background-color: #c5ccd4;
     margin-bottom: 0;
@@ -1508,7 +1513,8 @@ button.btn_bot_div_save {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+   
+    position: relative;
     /* // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 }
 

@@ -645,6 +645,17 @@ $("[id^='save_revtime_']").on('click', function () {
     $(`#save_revtime_${id}`).hide();
 })
 
+var elements = document.querySelectorAll('.icon_show_tsk');
+
+// Loop through each element in the collection
+for (var i = 0; i < elements.length; i++) {
+    // Check if the current element contains the class 'fa-minus'
+    if (elements[i].classList.contains('fa-minus')) {
+        alert('hi');
+        document.getElementById('task_tbl').style.overflowX = 'hidden';
+        break; // Exit loop if a matching element is found
+    }
+}
 
 
 
@@ -1107,18 +1118,18 @@ $(document).on('click', `[id^='view_assign_tsk_']`, function () {
     var splitarr = temp_id.split('_');
     var id = splitarr[splitarr.length-1];
     if(open_id_dev_tsk != id){
-        $(`#view_assign_tsk_${id}`).removeClass('fa-plus');
-        $(`#view_assign_tsk_${id}`).addClass('fa-minus');
-        $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s','transform': 'rotate(180deg)' });
+        // $(`#view_assign_tsk_${id}`).removeClass('fa-plus');
+        // $(`#view_assign_tsk_${id}`).addClass('fa-minus');
+        // $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s','transform': 'rotate(180deg)' });
         open_id_dev_tsk = id;
         //console.log(open_id);
         $(`#assign_tsk_data_${id}`).show();
         $('#dev_break_tbl').hide();
     }
     else {
-        $(`#view_assign_tsk_${id}`).removeClass('fa-plus');
-        $(`#view_assign_tsk_${id}`).addClass('fa-plus');
-        $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s','transform': 'rotate(0deg)'});
+        // $(`#view_assign_tsk_${id}`).removeClass('fa-plus');
+        // $(`#view_assign_tsk_${id}`).addClass('fa-plus');
+        // $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s','transform': 'rotate(0deg)'});
         $(`#assign_tsk_data_${id}`).hide();
         $('#dev_break_tbl').hide();
         //$(`#assign_tsk_data_${id}`).css({ 'transition': '0.2s',});
