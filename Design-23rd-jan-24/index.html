@@ -820,84 +820,6 @@
                 </div>
             </div> -->
 
-            <div class="modal fade" id="dev_breakdown_data" tabindex="-1" aria-labelledby="dev_breakdown_data"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Dev Item</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="dev_break_down_form">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <label for="" class="form-label label_txt_chng">Item Description</label>
-                                        <textarea id="dev_item_des" class="form-control textarea_box_chng"
-                                            style="margin-left: 0px !important; width: 100% !important;"></textarea>
-                                    </div>
-                                </div>
-                                <div class="row space_btw_fields">
-                                    <div class="col-12">
-                                        <label for="" class="form-label label_txt_chng">Start Date</label>
-                                        <input type="text" class="form-control formtxt_box_chng"
-                                            style="margin-left: 0px !important; width: 100% !important;">
-                                    </div>
-                                </div>
-                                <div class="row space_btw_fields">
-                                    <div class="col-12">
-                                        <label for="" class="form-label label_txt_chng">End Date</label>
-                                        <input type="text" class="form-control formtxt_box_chng"
-                                            style="margin-left: 0px !important; width: 100% !important;">
-                                    </div>
-                                </div>
-                                <div class="row space_btw_fields">
-                                    <div class="col-12">
-                                        <label for="" class="form-label label_txt_chng">Allocation Per Day</label>
-                                        <input type="text" class="form-control formtxt_box_chng"
-                                            style="margin-left: 0px !important; width: 100% !important;">
-                                    </div>
-                                </div>
-                                <div class="row space_btw_fields">
-                                    <div class="col-12">
-                                        <label for="" class="form-label label_txt_chng">Estimated MD</label>
-                                        <input type="text" class="form-control formtxt_box_chng"
-                                            style="margin-left: 0px !important; width: 100% !important;">
-                                    </div>
-                                </div>
-                                <div class="row space_btw_fields">
-                                    <div class="col-12">
-                                        <label for="" class="form-label label_txt_chng">Completion Date</label>
-                                        <input type="text" class="form-control formtxt_box_chng"
-                                            style="margin-left: 0px !important; width: 100% !important;">
-                                    </div>
-                                </div>
-                                <div class="row space_btw_fields">
-                                    <div class="col-12">
-                                        <label for="" class="form-label label_txt_chng">Developer</label>
-                                        <input type="text" class="form-control formtxt_box_chng"
-                                            style="margin-left: 0px !important; width: 100% !important;">
-                                    </div>
-                                </div>
-                                <div class="check_box_type space_btw_fields">
-                                    <div class="form-check form-check-inline">
-                                        <input type="checkbox" class="form-check-input check_box_content" value="1"
-                                            name="br">
-                                        <label for="br_operationrisk" class="form-check-label label_txt_chng">Same
-                                            Developer
-                                            For This Batch<span class="field_mandatory_fill operation"></span></label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary submit_btn_icon" id="save_modal">Save</button>
-                            <button type="button" class="btn btn-secondary cancel_btn_icon"
-                                data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="tsk_proj_seperate E_Procurement_Table mt-5">
                 <!-- <div class="prj_title_head">
                     <h2 class="prj_head_name">E-Procurement</h2>
@@ -1031,215 +953,200 @@
                                         </h2>
                                     </div>
                                     <div id="batch_tsk_data_2">
-                                        <div class="accordion" style="margin-bottom: 4px;" id="batch_dev_1">
-                                            <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed accordian_head" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#batch_tsk_data_type_1"
-                                                    aria-expanded="false" aria-controls="batch_tsk_data_type_1">
-                                                    <div style="display : flex; gap:7px;">
-                                                        <span style="margin-left: 10px;">Batch 1 - LCS Set Up</span>
-                                                    </div>
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="batch_tsk_data_type_1">
-                                            <div class="batches_list batch_func_1" id="batch_func_1" style="max-height: 300px; overflow-y: auto;">
-                                                <div class="batch_header"
-                                                    style="padding:5px; display:flex; justify-content: space-between;">
-                                                    <div>
-                                                        Batch 1 LCS Set Up
-                                                    </div>
-                                                    <!-- <button id="Edit_Batch_1"
-                                                        style="    padding: 2px 10px; border-radius: 0px; line-height: 10px;"
-                                                        class="Edit_Batch_1 btn btn-success">Edit</button> -->
+                                        <div class="batches_list batch_func_1" id="batch_func_1" style="max-height: 300px; overflow-y: auto;">
+                                            <div class="batch_header"
+                                                style="padding:5px; display:flex; justify-content: space-between;">
+                                                <div>
+                                                    Batch 1 LCS Set Up
                                                 </div>
-                                                <div class="Batch_row">
-                                                    <span style="font-size: 13px; font-weight: 600;">Batch
-                                                        Details</span>
-                                                    <div class="Batch_Details">
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label"
-                                                                style="margin-bottom:0rem !important;">
-                                                                Start Date</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="date" value='1'
-                                                                    class="batch_field_1 form-control ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">20-12-2024</label>
-                                                            </p>
-                                                        </div>
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label"
-                                                                style="margin-bottom:0rem !important;">End
-                                                                Date</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="date" value='1'
-                                                                    class="batch_field_1 form-control ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">23-12-2024</label>
-                                                            </p>
-                                                        </div>
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label"
-                                                                style="margin-bottom:0rem !important;">
-                                                                Estimated MD</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="number" value='1'
-                                                                    class="batch_field_1 form-control ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">3</label>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="Batch_Details">
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label"
-                                                                style="margin-bottom:0rem !important;">
-                                                                Status</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <select class="batch_field_1 form-select "
-                                                                    value='Not Started' class="">
-                                                                    <option selected value="">Select</option>
-                                                                    <option value="Not Started">Not Started</option>
-                                                                    <option value="InProgress">InProgress</option>
-                                                                    <option value="Pending">Pending</option>
-                                                                    <option value="On Hold">On Hold</option>
-                                                                </select>
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">Not Started</label>
-                                                            </p>
-                                                        </div>
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label"
-                                                                style="margin-bottom:0rem !important;">
-                                                                SignOff</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="date" value='1'
-                                                                    class="batch_field_1 form-control ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">23-12-2024</label>
-                                                            </p>
-                                                        </div>
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label"
-                                                                style="margin-bottom:0rem !important;">
-                                                                Stage Closure</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="date" value='1'
-                                                                    class="batch_field_1 form-control ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">23-12-2024</label>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="batch_header mb-1 TaskDetails">
-                                                    Tasks details
-                                                </div>
-                                                <div class="batch_header TaskTitle">
-                                                    Requirements Analysis Planning
-                                                </div>
-                                                <div class="Batch_row">
-                                                    <span style="font-size: 13px; font-weight: 600;">Batch
-                                                        Details</span>
-                                                    <div class="Batch_Details">
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label"
-                                                                style="margin-bottom:0rem !important;">
-                                                                Start Date</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="date" value='1'
-                                                                    class="batch_field_1 form-control ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">20-12-2024</label>
-                                                            </p>
-                                                        </div>
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label"
-                                                                style="margin-bottom:0rem !important;">End
-                                                                Date</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="date" value='1'
-                                                                    class="batch_field_1 form-control ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">23-12-2024</label>
-                                                            </p>
-                                                        </div>
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label"
-                                                                style="margin-bottom:0rem !important;">
-                                                                Estimated MD</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="number" value='1'
-                                                                    class="batch_field_1 form-control ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">3</label>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="Batch_Details">
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label"
-                                                                style="margin-bottom:0rem !important;">
-                                                                Status</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <select class="batch_field_1 form-select "
-                                                                    value='Not Started' class="">
-                                                                    <option selected value="">Select</option>
-                                                                    <option value="Not Started">Not Started</option>
-                                                                    <option value="InProgress">InProgress</option>
-                                                                    <option value="Pending">Pending</option>
-                                                                    <option value="On Hold">On Hold</option>
-                                                                </select>
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">Not Started</label>
-                                                            </p>
-                                                        </div>
-                                                        <!-- <div class="card_cnt_inner_even">
-                                                            <p class="card_label" style="margin-bottom:0rem !important;">SignOff</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="date"  
-                                                                    value='1' class="batch_field_1 form-control ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">23-12-2024</label>
-                                                            </p>
-                                                        </div>
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label" style="margin-bottom:0rem !important;">Stage Closure</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="date"  
-                                                                    value='1' class="batch_field_1 form-control ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">23-12-2024</label>
-                                                            </p>
-                                                        </div> -->
-                                                    </div>
-                                                </div>
-                                                <!-- <div class="Batch_Req_1 Batch_Buttons ">
-                                                    <button class="close_batch_1 save_button " id="close_batch_1"
-                                                        style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Save</button>
-                                                    <button class="close_batch_1 submit_button" id="close_batch_1"
-                                                        style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Submit</button>
-                                                    <button class="close_batch_1 btn cancel_btn" id="close_batch_1"
-                                                        style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Cancel</button>
-                                                </div> -->
+                                                <!-- <button id="Edit_Batch_1"
+                                                    style="    padding: 2px 10px; border-radius: 0px; line-height: 10px;"
+                                                    class="Edit_Batch_1 btn btn-success">Edit</button> -->
                                             </div>
-                                            
+                                            <div class="Batch_row">
+                                                <span style="font-size: 13px; font-weight: 600;">Batch
+                                                    Details</span>
+                                                <div class="Batch_Details">
+                                                    <div class="card_cnt_inner_even">
+                                                        <p class="card_label"
+                                                            style="margin-bottom:0rem !important;">
+                                                            Start Date</p>
+                                                        <p style=" text-align: left;" class="card_main_p_tag">
+                                                            <input type="date" value='1'
+                                                                class="batch_field_1 form-control ">
+                                                            <label
+                                                                style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                class="batch_label_1">20-12-2024</label>
+                                                        </p>
+                                                    </div>
+                                                    <div class="card_cnt_inner_even">
+                                                        <p class="card_label"
+                                                            style="margin-bottom:0rem !important;">End
+                                                            Date</p>
+                                                        <p style=" text-align: left;" class="card_main_p_tag">
+                                                            <input type="date" value='1'
+                                                                class="batch_field_1 form-control ">
+                                                            <label
+                                                                style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                class="batch_label_1">23-12-2024</label>
+                                                        </p>
+                                                    </div>
+                                                    <div class="card_cnt_inner_even">
+                                                        <p class="card_label"
+                                                            style="margin-bottom:0rem !important;">
+                                                            Estimated MD</p>
+                                                        <p style=" text-align: left;" class="card_main_p_tag">
+                                                            <input type="number" value='1'
+                                                                class="batch_field_1 form-control ">
+                                                            <label
+                                                                style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                class="batch_label_1">3</label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="Batch_Details">
+                                                    <div class="card_cnt_inner_even">
+                                                        <p class="card_label"
+                                                            style="margin-bottom:0rem !important;">
+                                                            Status</p>
+                                                        <p style=" text-align: left;" class="card_main_p_tag">
+                                                            <select class="batch_field_1 form-select "
+                                                                value='Not Started' class="">
+                                                                <option selected value="">Select</option>
+                                                                <option value="Not Started">Not Started</option>
+                                                                <option value="InProgress">InProgress</option>
+                                                                <option value="Pending">Pending</option>
+                                                                <option value="On Hold">On Hold</option>
+                                                            </select>
+                                                            <label
+                                                                style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                class="batch_label_1">InProgress</label>
+                                                        </p>
+                                                    </div>
+                                                    <div class="card_cnt_inner_even">
+                                                        <p class="card_label"
+                                                            style="margin-bottom:0rem !important;">
+                                                            SignOff</p>
+                                                        <p style=" text-align: left;" class="card_main_p_tag">
+                                                            <input type="date" value='1'
+                                                                class="batch_field_1 form-control ">
+                                                            <label
+                                                                style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                class="batch_label_1">23-12-2024</label>
+                                                        </p>
+                                                    </div>
+                                                    <div class="card_cnt_inner_even">
+                                                        <p class="card_label"
+                                                            style="margin-bottom:0rem !important;">
+                                                            Stage Closure</p>
+                                                        <p style=" text-align: left;" class="card_main_p_tag">
+                                                            <input type="date" value='1'
+                                                                class="batch_field_1 form-control ">
+                                                            <label
+                                                                style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                class="batch_label_1">23-12-2024</label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="batch_header mb-1 TaskDetails">
+                                                Tasks details
+                                            </div>
+                                            <div class="batch_header TaskTitle">
+                                                Requirements Analysis Planning
+                                            </div>
+                                            <div class="Batch_row">
+                                                <span style="font-size: 13px; font-weight: 600;">Batch
+                                                    Details</span>
+                                                <div class="Batch_Details">
+                                                    <div class="card_cnt_inner_even">
+                                                        <p class="card_label"
+                                                            style="margin-bottom:0rem !important;">
+                                                            Start Date</p>
+                                                        <p style=" text-align: left;" class="card_main_p_tag">
+                                                            <input type="date" value='1'
+                                                                class="batch_field_1 form-control ">
+                                                            <label
+                                                                style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                class="batch_label_1">20-12-2024</label>
+                                                        </p>
+                                                    </div>
+                                                    <div class="card_cnt_inner_even">
+                                                        <p class="card_label"
+                                                            style="margin-bottom:0rem !important;">End
+                                                            Date</p>
+                                                        <p style=" text-align: left;" class="card_main_p_tag">
+                                                            <input type="date" value='1'
+                                                                class="batch_field_1 form-control ">
+                                                            <label
+                                                                style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                class="batch_label_1">23-12-2024</label>
+                                                        </p>
+                                                    </div>
+                                                    <div class="card_cnt_inner_even">
+                                                        <p class="card_label"
+                                                            style="margin-bottom:0rem !important;">
+                                                            Estimated MD</p>
+                                                        <p style=" text-align: left;" class="card_main_p_tag">
+                                                            <input type="number" value='1'
+                                                                class="batch_field_1 form-control ">
+                                                            <label
+                                                                style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                class="batch_label_1">3</label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="Batch_Details">
+                                                    <div class="card_cnt_inner_even">
+                                                        <p class="card_label"
+                                                            style="margin-bottom:0rem !important;">
+                                                            Status</p>
+                                                        <p style=" text-align: left;" class="card_main_p_tag">
+                                                            <select class="batch_field_1 form-select "
+                                                                value='Not Started' class="">
+                                                                <option selected value="">Select</option>
+                                                                <option value="Not Started">Not Started</option>
+                                                                <option value="InProgress">InProgress</option>
+                                                                <option value="Pending">Pending</option>
+                                                                <option value="On Hold">On Hold</option>
+                                                            </select>
+                                                            <label
+                                                                style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                class="batch_label_1">Not Started</label>
+                                                        </p>
+                                                    </div>
+                                                    <!-- <div class="card_cnt_inner_even">
+                                                        <p class="card_label" style="margin-bottom:0rem !important;">SignOff</p>
+                                                        <p style=" text-align: left;" class="card_main_p_tag">
+                                                            <input type="date"  
+                                                                value='1' class="batch_field_1 form-control ">
+                                                            <label
+                                                                style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                class="batch_label_1">23-12-2024</label>
+                                                        </p>
+                                                    </div>
+                                                    <div class="card_cnt_inner_even">
+                                                        <p class="card_label" style="margin-bottom:0rem !important;">Stage Closure</p>
+                                                        <p style=" text-align: left;" class="card_main_p_tag">
+                                                            <input type="date"  
+                                                                value='1' class="batch_field_1 form-control ">
+                                                            <label
+                                                                style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                class="batch_label_1">23-12-2024</label>
+                                                        </p>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                            <!-- <div class="Batch_Req_1 Batch_Buttons ">
+                                                <button class="close_batch_1 save_button " id="close_batch_1"
+                                                    style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Save</button>
+                                                <button class="close_batch_1 submit_button" id="close_batch_1"
+                                                    style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Submit</button>
+                                                <button class="close_batch_1 btn cancel_btn" id="close_batch_1"
+                                                    style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Cancel</button>
+                                            </div> -->
                                         </div>
                                     </div>
-                                    
                                 </td>
                             </tr>
                             <tr class="All_tasks" id="not_started">
@@ -1550,14 +1457,118 @@
                                             </button>
                                         </h2>
                                     </div>
-                                    <div id="batch_tsk_data_1">
-                                        <div class="task_main_body"
-                                            style="max-height:300px; overflow-y:auto; width: 100% !important;">
+                                    <div id="batch_tsk_data_1"> 
+                                        <div class="task_main_body" style="max-height:300px; overflow-y:auto; width: 100% !important;">
+                                            <div id="project_details" class="card_main_box draggable project_details show">
+                                                <div class="Head_Edit" style=" background-color: #000000;">
+                                                    <div style="font-size: 15px; font-weight: 600; color:#ffffff;">
+                                                         Development Details
+                                                    </div>
+                                                    <!-- <div>
+                                                        <button type="button" title="Edit" id="Development_Detail_Edit_1"
+                                                            class="btn btn-success  btn_upd_task"
+                                                            style=" margin-top:6px !important; margin-right:5px !important;">
+                                                            Edit
+                                                        </button>
+                                                        <button type="button" title="Save" id="Development_Detail_Save_1"
+                                                            class="btn btn-success  btn_upd_task"
+                                                            style="display:none; margin-top:6px !important; margin-right:5px !important;">
+                                                            Save
+                                                        </button>
+                                                        <button type="button" title="Cancel" id="Development_Detail_Cancel_1"
+                                                            class="btn btn-danger  btn_upd_task"
+                                                            style="display:none; margin-left:6px !important;  margin-top:6px !important; margin-right:5px !important;">
+                                                            Cancel
+                                                        </button>
+                                                    </div> -->
+                                                </div>
+                                                <div class="card_bdy" id="Development_Detail_1" style="max-height: 500px !important;">
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes" style="margin-bottom:0rem !important;">Internal/External</p>
+                                                            <p style=" text-align: left;" class="card_main_p_tag">
+                                                                <!-- <select class="Development_Detail_field_1  form-select field_style text_select_boxes">
+                                                                    <option value="">Select</option>
+                                                                    <option value="Internal" selected>Internal</option>
+                                                                    <option value="External">External</option>
+                                                                </select> -->
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="Development_Detail_label_1 text_select_boxes">Internal</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Developer</p>
+                                                            <p class="card_main_p_tag">
+                                                                <!-- <input type="text" 
+                                                                    value='Thomos' class="Development_Detail_field_1 form-control field_style text_select_boxes"> -->
+                                                                <label class="Development_Detail_label_1 text_select_boxes"
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;">Thomos</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Dev Priority</p>
+                                                            <p class="card_main_p_tag">
+                                                                <!-- <select class="Development_Detail_field_1 form-select field_style text_select_boxes">
+                                                                    <option value="">Select</option>
+                                                                    <option value="High" selected>High</option>
+                                                                    <option value="Low">Low</option>
+                                                                    <option value="Medium">Medium</option>
+                                                                </select> -->
+                                                                    <label class="Development_Detail_label_1 text_select_boxes"
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;">High</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Dev Initial Order</p>
+                                                            <p class="card_main_p_tag">
+                                                                <!-- <input type="text" placeholder="DD-MM-YYYY"
+                                                                    value='3' class="Development_Detail_field_1 form-control field_style text_select_boxes" disabled> -->
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="Development_Detail_label_1 text_select_boxes">3</label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Dev Current Order</p>
+                                                            <p class="card_main_p_tag">
+                                                                <!-- <select name="" id="" class="Development_Detail_field_1 form-select field_style text_select_boxes">
+                                                                    <option value="">Select</option>
+                                                                    <option value="1" selected>1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                </select> -->
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="Development_Detail_label_1 text_select_boxes">1</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">Dev Order Comment</p>
+                                                            <p class="card_main_p_tag">
+                                                                <!-- <input type="text" placeholder="DD-MM-YYYY"
+                                                                value='Comment' class="Development_Detail_field_1 form-control field_style text_select_boxes"> -->
+                                                                <label
+                                                                    style="color:#50b10b; font-weight: 600; width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="Development_Detail_label_1 text_select_boxes">Comment</label>
+                                                            </p>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                            </div> 
                                             <div class="card_main_box show" id="card_main_${taskObj.taskIdentifier}"
                                                 style="width: 99%;">
                                                 <div class="card_heda">
                                                     <div>
-                                                        <p class="card_head_para">Task 1 : Requirement Review With BA
+                                                        <p class="card_head_para"> Requirement Review With BA
                                                         </p>
                                                     </div>
                                                     <div>
@@ -1684,7 +1695,7 @@
                                                 style="width: 99%;">
                                                 <div class="card_heda">
                                                     <div>
-                                                        <p class="card_head_para">Task 2 : Development</p>
+                                                        <p class="card_head_para"> Development</p>
                                                     </div>
                                                 </div>
                                                 <div class="card_bdy" id="card_bdy_81" >
@@ -1794,7 +1805,7 @@
                                                 style="width: 99%;">
                                                 <div class="card_heda">
                                                     <div>
-                                                        <p class="card_head_para">Task 3 : Test Plan Preparation By BA
+                                                        <p class="card_head_para"> Test Plan Preparation By BA
                                                         </p>
                                                     </div>
                                                     <div>
@@ -1901,7 +1912,7 @@
                                                 style="width: 99%;">
                                                 <div class="card_heda">
                                                     <div>
-                                                        <p class="card_head_para">Task 4 : SIT & Test Results Share With
+                                                        <p class="card_head_para"> SIT & Test Results Share With
                                                             BA
                                                         </p>
                                                     </div>
@@ -9668,6 +9679,458 @@
                                                         </div> 
                                                     </div>
                                                 </div>   
+                                            </div>
+                                            <div class="card_main_box show" id="card_main_${taskObj.taskIdentifier}"
+                                                style="width: 99%;">
+                                                <div class="card_heda">
+                                                    <div>
+                                                        <p class="card_head_para"> Requirement Review With BA
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <button type="button" title="Edit" id="EditRecord_11"
+                                                            class="btn btn-success  btn_upd_task"
+                                                            style=" margin-top:6px !important; margin-right:5px !important;">
+                                                            Edit
+                                                        </button>
+                                                        <!-- <button type="button" class="btn btn-success btn_upd_task updt_proj"
+                                                        id="UpdateTask_${taskObj.taskIdentifier}" name="${taskObj.taskId}">
+                                                        Update
+                                                    </button> -->
+                                                    </div>
+                                                </div>
+                                                <div class="card_bdy" id="card_bdy_11"
+                                                    style="max-height: 145px !important;">
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0.5rem !important;">
+                                                                Start
+                                                                Date : </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY" value=''
+                                                                    class="EditField_11">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_11">22/03/2024</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_odd"
+                                                            >
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0.5rem !important;">End
+                                                                Date </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY" value=''
+                                                                    class="EditField_11">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_11">10/04/2024</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even"
+                                                            style="width: 100% !important;">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0.5rem !important;">
+                                                                Status : </p>
+                                                            <p class="card_main_p_tag" style="width: 20% !important;">
+
+                                                                <select name="" id=""
+                                                                    class="EditField_11 form-select select_box_chng"
+                                                                    style="margin-left: 0 !important; width: 100% !important; padding: 3px 10px !important;">
+                                                                    <option value="">Select</option>
+                                                                    <option value="1" selected>Not Started</option>
+                                                                    <option value="2">Pending</option>
+                                                                </select>
+                                                                <mark
+                                                                    style=" width: 100px; text-align: center; background-color: #ffeaa7; color:white;"
+                                                                    class="LabelField_11" >Not Started</mark>
+                                                            </p>
+                                                        </div>
+
+
+                                                        <div class="card_cnt_inner_even"
+                                                        style="width: 100% !important; margin-left: -582px;">
+                                                        <p class="card_label text_select_boxes"
+                                                            style="margin-bottom:0.5rem !important;">
+                                                            Assinged To : </p>
+                                                        <p class="card_main_p_tag" style="width: 20% !important;">
+
+                                                            <select name="" id=""
+                                                                class="EditField_11 form-select select_box_chng"
+                                                                style="margin-left: 0 !important; width: 100% !important; padding: 3px 10px !important;">
+                                                                <option value="">Select</option>
+                                                                <option value="1" selected>Sandeep</option>
+                                                                <option value="2">Test</option>
+                                                            </select>
+
+                                                            <label
+                                                            style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                            class="LabelField_11">Sandeep</label>
+                                                          
+                                                        </p>
+
+
+                                                    </div>
+                                                    </div>
+                                                    <!-- <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even"
+                                                            style="width: 100% !important;">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0rem !important;">
+                                                                Status : </p>
+                                                            <p class="card_main_p_tag" style="width: 13% !important;">
+
+                                                                <select name="" id=""
+                                                                    class="EditField_11 form-select select_box_chng"
+                                                                    style="margin-left: 0 !important; width: 100% !important; padding: 3px 10px !important;">
+                                                                    <option value="">Select</option>
+                                                                    <option value="1" selected>Not Started</option>
+                                                                    <option value="2">Pending</option>
+                                                                </select>
+                                                                <mark
+                                                                    style=" width: 100px; text-align: center; background-color: #ffeaa7; color:white;"
+                                                                    class="LabelField_11">Not Started</mark>
+                                                            </p>
+                                                        </div>
+                                                    </div> -->
+                                                    <!-- <i id="card_arrow_11"
+                                                        class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i> -->
+                                                    <div class="card_button card_button_11">
+                                                        <button class="save_button" id="Save_Rec_11"
+                                                            style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Save</button>
+                                                        <button class="submit_button" id="Save_Rec_11"
+                                                            style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Submit</button>
+                                                        <button class="btn cancel_btn" id="Cancel_Rec_11"
+                                                            style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card_main_box show" id="card_main_${taskObj.taskIdentifier}"
+                                                style="width: 99%;">
+                                                <div class="card_heda">
+                                                    <div>
+                                                        <p class="card_head_para"> Development</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card_bdy" id="card_bdy_81" >
+                                                    <div class="dev_break_down_content mb-2">
+                                                        <h2 style="font-size: 16px !important;">Dev BreakDown</h2>
+                                                        <button type="button" class="btn btn-success dev_break_btn"
+                                                            data-bs-target="#dev_breakdown_data"
+                                                            data-bs-toggle="modal">Add</button>
+                                                    </div>
+
+                                                    <div class="dev_break_tbl mt-3" id="dev_break_tbl">
+                                                        <table class="table table-bordered table-responsive">
+                                                            <thead style="font-size: 15px;">
+                                                                <tr>
+                                                                    <th>Order No</th>
+                                                                    <th>Item Description</th>
+                                                                    <th>Start Date</th>
+                                                                    <th>End Date</th>
+                                                                    <th>Revised Start Date</th>
+                                                                    <th>Revised End Date</th>
+                                                                    <th>Status</th>
+                                                                    <th>Completion Date</th>
+                                                                    <th>Developer</th>
+                                                                    <th>Comment</th>
+                                                                    <th>Delete</th>
+                                                                    <th>RAG</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody style="font-size: 12px;">
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>Sample Description</td>
+                                                                    <td><input type="text"
+                                                                            class="form-control formtxt_box_chng_sml"
+                                                                            value="22/03/2024"></td>
+                                                                    <td><input type="text"
+                                                                            class="form-control formtxt_box_chng_sml"
+                                                                            value="10/04/2024"></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td>Not Started</td>
+                                                                    <td></td>
+                                                                    <td>Dharshan</td>
+                                                                    <td>Test Comment</td>
+                                                                    <td><i class="fa-solid fa-trash"
+                                                                            style="color: red; cursor: pointer;"></i>
+                                                                    </td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2</td>
+                                                                    <td>Sample Description</td>
+                                                                    <td><input type="text"
+                                                                            class="form-control formtxt_box_chng_sml"
+                                                                            value="22/03/2024"></td>
+                                                                    <td><input type="text"
+                                                                            class="form-control formtxt_box_chng_sml"
+                                                                            value="10/04/2024"></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td>Not Started</td>
+                                                                    <td></td>
+                                                                    <td>Dharshan</td>
+                                                                    <td>Test Comment</td>
+                                                                    <td><i class="fa-solid fa-trash"
+                                                                            style="color: red; cursor: pointer;"></i>
+                                                                    </td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3</td>
+                                                                    <td>Sample Description</td>
+                                                                    <td><input type="text"
+                                                                            class="form-control formtxt_box_chng_sml"
+                                                                            value="22/03/2024"></td>
+                                                                    <td><input type="text"
+                                                                            class="form-control formtxt_box_chng_sml"
+                                                                            value="10/04/2024"></td>
+                                                                    <td style="background-color: #bdc3c7;">
+                                                                        <div style="display: grid;">
+                                                                            <span style="font-weight: bold;">1.
+                                                                                23/03/2024</span>
+                                                                            <span style="font-weight: bold;">2.
+                                                                                27/03/2024</span>
+                                                                            <span style="font-weight: bold;">3.
+                                                                                30/03/2024</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td></td>
+                                                                    <td>Not Started</td>
+                                                                    <td></td>
+                                                                    <td>Dharshan</td>
+                                                                    <td>Test Comment</td>
+                                                                    <td><i class="fa-solid fa-trash"
+                                                                            style="color: red; cursor: pointer;"></i>
+                                                                    </td>
+                                                                    <td><mark
+                                                                            style="background-color: #c0392b; color: #fff !important;"
+                                                                            class="rag_status">Attention</mark></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                            <div class="card_main_box show" id="card_main_${taskObj.taskIdentifier}"
+                                                style="width: 99%;">
+                                                <div class="card_heda">
+                                                    <div>
+                                                        <p class="card_head_para"> Test Plan Preparation By BA
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <button type="button" title="Edit" id="EditRecord_19"
+                                                            class="btn btn-success  btn_upd_task"
+                                                            style=" margin-top:6px !important; margin-right:5px !important;">
+                                                            Edit
+                                                        </button>
+                                                        <!-- <button type="button" class="btn btn-success btn_upd_task updt_proj"
+                                                        id="UpdateTask_${taskObj.taskIdentifier}" name="${taskObj.taskId}">
+                                                        Update
+                                                    </button> -->
+                                                    </div>
+                                                </div>
+                                                <div class="card_bdy" id="card_bdy_19"
+                                                    style="max-height: 145px !important;">
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0.5rem !important;">
+                                                                Start
+                                                                Date : </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY" value=''
+                                                                    class="EditField_19">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_19">22/03/2024</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even"
+                                                         >
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0.5rem !important;">End
+                                                                Date </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY" value=''
+                                                                    class="EditField_19">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_19">10/04/2024</label>
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="card_cnt_inner_even"
+                                                        style="width: 100% !important;">
+                                                        <p class="card_label text_select_boxes"
+                                                            style="margin-bottom:0.5rem !important;">
+                                                            Status : </p>
+                                                        <p class="card_main_p_tag" style="width: 20% !important;">
+
+                                                            <select name="" id=""
+                                                                class="EditField_11 form-select select_box_chng"
+                                                                style="margin-left: 0 !important; width: 100% !important; padding: 3px 10px !important;">
+                                                                <option value="">Select</option>
+                                                                <option value="1" selected>Not Started</option>
+                                                                <option value="2">Pending</option>
+                                                            </select>
+                                                            <mark
+                                                                style=" width: 100px; text-align: center; background-color: #ffeaa7; color:white;"
+                                                                class="LabelField_11" style="color: #000000;">Not Started</mark>
+                                                        </p>
+                                                    </div>
+
+
+                                                    <div class="card_cnt_inner_even"
+                                                        style="width: 100% !important; margin-left: -582px;">
+                                                        <p class="card_label text_select_boxes"
+                                                            style="margin-bottom:0.5rem !important;">
+                                                            Assinged To : </p>
+                                                        <p class="card_main_p_tag" style="width: 20% !important;">
+
+                                                            <select name="" id=""
+                                                                class="EditField_11 form-select select_box_chng"
+                                                                style="margin-left: 0 !important; width: 100% !important; padding: 3px 10px !important;">
+                                                                <option value="">Select</option>
+                                                                <option value="1" selected>Sandeep</option>
+                                                                <option value="2">Test</option>
+                                                            </select>
+
+                                                            <label
+                                                            style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                            class="LabelField_11">Sandeep</label>
+                                                          
+                                                        </p>
+
+
+                                                    </div>
+                                                    </div>
+                                                    <!-- <i id="card_arrow_19"
+                                                        class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i> -->
+                                                    <div class="card_button card_button_19">
+                                                        <button class="save_button" id="Save_Rec_19"
+                                                            style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Save</button>
+                                                        <button class="submit_button" id="Save_Rec_19"
+                                                            style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Submit</button>
+                                                        <button class="btn cancel_btn" id="Cancel_Rec_19"
+                                                            style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card_main_box show" id="card_main_${taskObj.taskIdentifier}"
+                                                style="width: 99%;">
+                                                <div class="card_heda">
+                                                    <div>
+                                                        <p class="card_head_para"> SIT & Test Results Share With
+                                                            BA
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <button type="button" title="Edit" id="EditRecord_20"
+                                                            class="btn btn-success  btn_upd_task"
+                                                            style=" margin-top:6px !important; margin-right:5px !important;">
+                                                            Edit
+                                                        </button>
+                                                        <!-- <button type="button" class="btn btn-success btn_upd_task updt_proj"
+                                                        id="UpdateTask_${taskObj.taskIdentifier}" name="${taskObj.taskId}">
+                                                        Update
+                                                    </button> -->
+                                                    </div>
+                                                </div>
+                                                <div class="card_bdy" id="card_bdy_20"
+                                                    style="max-height: 145px !important;">
+                                                    <div class="card_cnt">
+                                                        <div class="card_cnt_inner_even">
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0.5rem !important;">
+                                                                Start
+                                                                Date : </p>
+                                                            <p class="card_main_p_tag">
+                                                                <input type="text" placeholder="DD-MM-YYYY" value=''
+                                                                    class="EditField_20">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_20">22/03/2024</label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="card_cnt_inner_even"
+                                                           >
+                                                            <p class="card_label text_select_boxes"
+                                                                style="margin-bottom:0.5rem !important;">End
+                                                                Date </p>
+                                                            <p class="card_main_p_tag">
+
+                                                                <input type="text" placeholder="DD-MM-YYYY" value=''
+                                                                    class="EditField_20">
+                                                                <label
+                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                    class="LabelField_20">10/04/2024</label>
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="card_cnt_inner_even"
+                                                        style="width: 100% !important;">
+                                                        <p class="card_label text_select_boxes"
+                                                            style="margin-bottom:0.5rem !important;">
+                                                            Status : </p>
+                                                        <p class="card_main_p_tag" style="width: 20% !important;">
+
+                                                            <select name="" id=""
+                                                                class="EditField_11 form-select select_box_chng"
+                                                                style="margin-left: 0 !important; width: 100% !important; padding: 3px 10px !important;">
+                                                                <option value="">Select</option>
+                                                                <option value="1" selected>Not Started</option>
+                                                                <option value="2">Pending</option>
+                                                            </select>
+                                                            <mark
+                                                                style=" width: 100px; text-align: center; background-color: #ffeaa7; color:white;"
+                                                                class="LabelField_11" style="color: #000000;">Not Started</mark>
+                                                        </p>
+                                                    </div>
+
+
+                                                    <div class="card_cnt_inner_even"
+                                                    style="width: 100% !important; margin-left: -582px;">
+                                                    <p class="card_label text_select_boxes"
+                                                        style="margin-bottom:0.5rem !important;">
+                                                        Assinged To : </p>
+                                                    <p class="card_main_p_tag" style="width: 20% !important;">
+
+                                                        <select name="" id=""
+                                                            class="EditField_11 form-select select_box_chng"
+                                                            style="margin-left: 0 !important; width: 100% !important; padding: 3px 10px !important;">
+                                                            <option value="">Select</option>
+                                                            <option value="1" selected>Sandeep</option>
+                                                            <option value="2">Test</option>
+                                                        </select>
+
+                                                        <label
+                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                        class="LabelField_11">Sandeep</label>
+                                                      
+                                                    </p>
+
+
+                                                </div>
+                                                    </div>
+                                                    <!-- <i id="card_arrow_20"
+                                                        class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i> -->
+                                                    <div class="card_button card_button_20">
+                                                        <button class="save_button" id="Save_Rec_120"
+                                                            style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Save</button>
+                                                        <button class="submit_button" id="Save_Rec_20"
+                                                            style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Submit</button>
+                                                        <button class="btn cancel_btn" id="Cancel_Rec_20"
+                                                            style="padding: 3px 15px !important; border-radius: 0px; font-size: 12px;">Cancel</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </td>
@@ -20639,103 +21102,108 @@
                                             </div> -->
 
                                             <div class="batches_list batch_func_1" id="batch_func_1">
-                                                <div class="batch_header"
-                                                    style="padding:5px; display:flex; justify-content: space-between;">
-                                                    <div>
-                                                        Batch 1 LCS Set Up
+                                                <div class="Batches_list_1">
+                                                    <div class="batch_header"
+                                                        style="padding:5px; display:flex; justify-content: space-between;">
+                                                        <div>
+                                                            Batch 1 LCS Set Up
+                                                        </div>
+                                                        <button id="Edit_Batch_1"
+                                                            style="    padding: 2px 10px; border-radius: 0px; line-height: 10px;"
+                                                            class="Edit_Batch_1 btn btn-success">Edit</button>
                                                     </div>
-                                                    <button id="Edit_Batch_1"
-                                                        style="    padding: 2px 10px; border-radius: 0px; line-height: 10px;"
-                                                        class="Edit_Batch_1 btn btn-success">Edit</button>
-                                                </div>
-                                                <div class="Batch_row">
-                                                    <span style="font-size: 13px; font-weight: 600;">Batch
-                                                        Details</span>
-                                                    <div class="Batch_Details">
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label text_select_boxes"
-                                                                style="margin-bottom:0rem !important;">
-                                                                Start Date</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="date" value='1'
-                                                                    class="batch_field_1 form-control field_style">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">20-12-2024</label>
-                                                            </p>
+                                                    <div class="Batch_row">
+                                                        <span style="font-size: 13px; font-weight: 600;">Batch
+                                                            Details</span>
+                                                        <div class="Batch_Details">
+                                                            <div class="card_cnt_inner_even">
+                                                                <p class="card_label text_select_boxes"
+                                                                    style="margin-bottom:0rem !important;">
+                                                                    Start Date</p>
+                                                                <p style=" text-align: left;" class="card_main_p_tag">
+                                                                    <input type="date" value='1'
+                                                                        class="batch_field_1 form-control field_style">
+                                                                    <label
+                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                        class="batch_label_1">20-12-2024</label>
+                                                                </p>
+                                                            </div>
+                                                            <div class="card_cnt_inner_even">
+                                                                <p class="card_label text_select_boxes"
+                                                                    style="margin-bottom:0rem !important;">End
+                                                                    Date</p>
+                                                                <p style=" text-align: left;" class="card_main_p_tag">
+                                                                    <input type="date" value='1'
+                                                                        class="batch_field_1 form-control field_style ">
+                                                                    <label
+                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                        class="batch_label_1">23-12-2024</label>
+                                                                </p>
+                                                            </div>
+                                                            <div class="card_cnt_inner_even">
+                                                                <p class="card_label text_select_boxes"
+                                                                    style="margin-bottom:0rem !important;">
+                                                                    Estimated MD</p>
+                                                                <p style=" text-align: left;" class="card_main_p_tag">
+                                                                    <input type="number" value='1'
+                                                                        class="batch_field_1 form-control field_style ">
+                                                                    <label
+                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                        class="batch_label_1">3</label>
+                                                                </p>
+                                                            </div>
                                                         </div>
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label text_select_boxes"
-                                                                style="margin-bottom:0rem !important;">End
-                                                                Date</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="date" value='1'
-                                                                    class="batch_field_1 form-control field_style ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">23-12-2024</label>
-                                                            </p>
-                                                        </div>
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label text_select_boxes"
-                                                                style="margin-bottom:0rem !important;">
-                                                                Estimated MD</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="number" value='1'
-                                                                    class="batch_field_1 form-control field_style ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">3</label>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="Batch_Details">
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label text_select_boxes"
-                                                                style="margin-bottom:0rem !important;">
-                                                                Status</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <select class="batch_field_1 form-select "
-                                                                    value='Not Started' class=" form-select field_style">
-                                                                    <option selected value="">Select</option>
-                                                                    <option value="Not Started">Not Started</option>
-                                                                    <option value="InProgress">InProgress</option>
-                                                                    <option value="Pending">Pending</option>
-                                                                    <option value="On Hold">On Hold</option>
-                                                                </select>
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">Not Started</label>
-                                                            </p>
-                                                        </div>
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label text_select_boxes"
-                                                                style="margin-bottom:0rem !important;">
-                                                                SignOff</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="date" value='1'
-                                                                    class="batch_field_1  form-control field_style ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">23-12-2024</label>
-                                                            </p>
-                                                        </div>
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label text_select_boxes"
-                                                                style="margin-bottom:0rem !important;">
-                                                                Stage Closure</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="date" value='1'
-                                                                    class="batch_field_1  form-control field_style ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_1">23-12-2024</label>
-                                                            </p>
+                                                        <div class="Batch_Details">
+                                                            <div class="card_cnt_inner_even">
+                                                                <p class="card_label text_select_boxes"
+                                                                    style="margin-bottom:0rem !important;">
+                                                                    Status</p>
+                                                                <p style=" text-align: left;" class="card_main_p_tag">
+                                                                    <select class="batch_field_1 form-select "
+                                                                        value='Not Started' class=" form-select field_style">
+                                                                        <option selected value="">Select</option>
+                                                                        <option value="Not Started">Not Started</option>
+                                                                        <option value="InProgress">InProgress</option>
+                                                                        <option value="Pending">Pending</option>
+                                                                        <option value="On Hold">On Hold</option>
+                                                                    </select>
+                                                                    <label
+                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                        class="batch_label_1">Not Started</label>
+                                                                </p>
+                                                            </div>
+                                                            <div class="card_cnt_inner_even">
+                                                                <p class="card_label text_select_boxes"
+                                                                    style="margin-bottom:0rem !important;">
+                                                                    SignOff</p>
+                                                                <p style=" text-align: left;" class="card_main_p_tag">
+                                                                    <input type="date" value='1'
+                                                                        class="batch_field_1  form-control field_style ">
+                                                                    <label
+                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                        class="batch_label_1">23-12-2024</label>
+                                                                </p>
+                                                            </div>
+                                                            <div class="card_cnt_inner_even">
+                                                                <p class="card_label text_select_boxes"
+                                                                    style="margin-bottom:0rem !important;">
+                                                                    Stage Closure</p>
+                                                                <p style=" text-align: left;" class="card_main_p_tag">
+                                                                    <input type="date" value='1'
+                                                                        class="batch_field_1  form-control field_style ">
+                                                                    <label
+                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                        class="batch_label_1">23-12-2024</label>
+                                                                </p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="batch_header mb-1 TaskDetails">
-                                                    Tasks details
+                                                    <p>Tasks details</p>
+                                                    <button id="Edit_Batch_1"
+                                                            style="    padding: 2px 10px; border-radius: 0px; line-height: 10px;"
+                                                    class="Edit_Batch_1 btn btn-success">Edit</button>
                                                 </div>
                                                 <div class="batch_header TaskTitle">
                                                     Requirements Analysis Planning
@@ -21003,103 +21471,108 @@
                                                 </div>
                                             </div>
                                             <div class="batches_list batch_func_1" id="batch_func_1">
-                                                <div class="batch_header"
-                                                    style="padding:5px; display:flex; justify-content: space-between;">
-                                                    <div>
-                                                        Batch 2 GT & ST
+                                                <div class="Batches_list_2">
+                                                    <div class="batch_header"
+                                                        style="padding:5px; display:flex; justify-content: space-between;">
+                                                        <div>
+                                                            Batch 2 GT & ST
+                                                        </div>
+                                                        <button id="Edit_Batch_2"
+                                                            style="    padding: 2px 10px; border-radius: 0px; line-height: 10px;"
+                                                            class="Edit_Batch_1 btn btn-success">Edit</button>
                                                     </div>
-                                                    <button id="Edit_Batch_2"
-                                                        style="    padding: 2px 10px; border-radius: 0px; line-height: 10px;"
-                                                        class="Edit_Batch_1 btn btn-success">Edit</button>
-                                                </div>
-                                                <div class="Batch_row">
-                                                    <span style="font-size: 13px; font-weight: 600;">Batch
-                                                        Details</span>
-                                                    <div class="Batch_Details">
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label text_select_boxes"
-                                                                style="margin-bottom:0rem !important;">
-                                                                Start Date</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="date" value='1'
-                                                                    class="batch_field_2  form-control field_style ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_2">20-12-2024</label>
-                                                            </p>
+                                                    <div class="Batch_row">
+                                                        <span style="font-size: 13px; font-weight: 600;">Batch
+                                                            Details</span>
+                                                        <div class="Batch_Details">
+                                                            <div class="card_cnt_inner_even">
+                                                                <p class="card_label text_select_boxes"
+                                                                    style="margin-bottom:0rem !important;">
+                                                                    Start Date</p>
+                                                                <p style=" text-align: left;" class="card_main_p_tag">
+                                                                    <input type="date" value='1'
+                                                                        class="batch_field_2  form-control field_style ">
+                                                                    <label
+                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                        class="batch_label_2">20-12-2024</label>
+                                                                </p>
+                                                            </div>
+                                                            <div class="card_cnt_inner_even">
+                                                                <p class="card_label text_select_boxes"
+                                                                    style="margin-bottom:0rem !important;">End
+                                                                    Date</p>
+                                                                <p style=" text-align: left;" class="card_main_p_tag">
+                                                                    <input type="date" value='1'
+                                                                        class="batch_field_2  form-control field_style ">
+                                                                    <label
+                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                        class="batch_label_2">23-12-2024</label>
+                                                                </p>
+                                                            </div>
+                                                            <div class="card_cnt_inner_even">
+                                                                <p class="card_label text_select_boxes"
+                                                                    style="margin-bottom:0rem !important;">
+                                                                    Estimated MD</p>
+                                                                <p style=" text-align: left;" class="card_main_p_tag">
+                                                                    <input type="number" value='1'
+                                                                        class="batch_field_2  form-control field_style ">
+                                                                    <label
+                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                        class="batch_label_2">3</label>
+                                                                </p>
+                                                            </div>
                                                         </div>
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label text_select_boxes"
-                                                                style="margin-bottom:0rem !important;">End
-                                                                Date</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="date" value='1'
-                                                                    class="batch_field_2  form-control field_style ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_2">23-12-2024</label>
-                                                            </p>
-                                                        </div>
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label text_select_boxes"
-                                                                style="margin-bottom:0rem !important;">
-                                                                Estimated MD</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="number" value='1'
-                                                                    class="batch_field_2  form-control field_style ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_2">3</label>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="Batch_Details">
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label text_select_boxes"
-                                                                style="margin-bottom:0rem !important;">
-                                                                Status</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <select class="batch_field_2  form-select field_style "
-                                                                    value='Not Started' class="">
-                                                                    <option selected value="">Select</option>
-                                                                    <option value="Not Started">Not Started</option>
-                                                                    <option value="InProgress">InProgress</option>
-                                                                    <option value="Pending">Pending</option>
-                                                                    <option value="On Hold">On Hold</option>
-                                                                </select>
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_2">Not Started</label>
-                                                            </p>
-                                                        </div>
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label text_select_boxes"
-                                                                style="margin-bottom:0rem !important;">
-                                                                SignOff</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="date" value='1'
-                                                                    class="batch_field_2  form-control field_style ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_2">23-12-2024</label>
-                                                            </p>
-                                                        </div>
-                                                        <div class="card_cnt_inner_even">
-                                                            <p class="card_label text_select_boxes"
-                                                                style="margin-bottom:0rem !important;">
-                                                                Stage Closure</p>
-                                                            <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <input type="date" value='1'
-                                                                    class="batch_field_2  form-control field_style ">
-                                                                <label
-                                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                                    class="batch_label_2">23-12-2024</label>
-                                                            </p>
+                                                        <div class="Batch_Details">
+                                                            <div class="card_cnt_inner_even">
+                                                                <p class="card_label text_select_boxes"
+                                                                    style="margin-bottom:0rem !important;">
+                                                                    Status</p>
+                                                                <p style=" text-align: left;" class="card_main_p_tag">
+                                                                    <select class="batch_field_2  form-select field_style "
+                                                                        value='Not Started' class="">
+                                                                        <option selected value="">Select</option>
+                                                                        <option value="Not Started">Not Started</option>
+                                                                        <option value="InProgress">InProgress</option>
+                                                                        <option value="Pending">Pending</option>
+                                                                        <option value="On Hold">On Hold</option>
+                                                                    </select>
+                                                                    <label
+                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                        class="batch_label_2">Not Started</label>
+                                                                </p>
+                                                            </div>
+                                                            <div class="card_cnt_inner_even">
+                                                                <p class="card_label text_select_boxes"
+                                                                    style="margin-bottom:0rem !important;">
+                                                                    SignOff</p>
+                                                                <p style=" text-align: left;" class="card_main_p_tag">
+                                                                    <input type="date" value='1'
+                                                                        class="batch_field_2  form-control field_style ">
+                                                                    <label
+                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                        class="batch_label_2">23-12-2024</label>
+                                                                </p>
+                                                            </div>
+                                                            <div class="card_cnt_inner_even">
+                                                                <p class="card_label text_select_boxes"
+                                                                    style="margin-bottom:0rem !important;">
+                                                                    Stage Closure</p>
+                                                                <p style=" text-align: left;" class="card_main_p_tag">
+                                                                    <input type="date" value='1'
+                                                                        class="batch_field_2  form-control field_style ">
+                                                                    <label
+                                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                                        class="batch_label_2">23-12-2024</label>
+                                                                </p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="batch_header mb-1 TaskDetails">
-                                                    Tasks details
+                                                    <p>Tasks details</p>
+                                                    <button id="Edit_Batch_2"
+                                                            style="    padding: 2px 10px; border-radius: 0px; line-height: 10px;"
+                                                    class="Edit_Batch_1 btn btn-success">Edit</button>
                                                 </div>
                                                 <div class="batch_header TaskTitle">
                                                     Requirements Analysis Planning
@@ -32359,8 +32832,85 @@
             </div>
         </div>
     </div>
-    </div>
 
+    <div class="modal fade" id="dev_breakdown_data" tabindex="-1" aria-labelledby="dev_breakdown_data"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Dev Item</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="dev_break_down_form">
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="" class="form-label label_txt_chng">Item Description</label>
+                                <textarea id="dev_item_des" class="form-control textarea_box_chng"
+                                    style="margin-left: 0px !important; width: 100% !important;"></textarea>
+                            </div>
+                        </div>
+                        <div class="row space_btw_fields">
+                            <div class="col-12">
+                                <label for="" class="form-label label_txt_chng">Start Date</label>
+                                <input type="text" class="form-control formtxt_box_chng"
+                                    style="margin-left: 0px !important; width: 100% !important;">
+                            </div>
+                        </div>
+                        <div class="row space_btw_fields">
+                            <div class="col-12">
+                                <label for="" class="form-label label_txt_chng">End Date</label>
+                                <input type="text" class="form-control formtxt_box_chng"
+                                    style="margin-left: 0px !important; width: 100% !important;">
+                            </div>
+                        </div>
+                        <div class="row space_btw_fields">
+                            <div class="col-12">
+                                <label for="" class="form-label label_txt_chng">Allocation Per Day</label>
+                                <input type="text" class="form-control formtxt_box_chng"
+                                    style="margin-left: 0px !important; width: 100% !important;">
+                            </div>
+                        </div>
+                        <div class="row space_btw_fields">
+                            <div class="col-12">
+                                <label for="" class="form-label label_txt_chng">Estimated MD</label>
+                                <input type="text" class="form-control formtxt_box_chng"
+                                    style="margin-left: 0px !important; width: 100% !important;">
+                            </div>
+                        </div>
+                        <div class="row space_btw_fields">
+                            <div class="col-12">
+                                <label for="" class="form-label label_txt_chng">Completion Date</label>
+                                <input type="text" class="form-control formtxt_box_chng"
+                                    style="margin-left: 0px !important; width: 100% !important;">
+                            </div>
+                        </div>
+                        <div class="row space_btw_fields">
+                            <div class="col-12">
+                                <label for="" class="form-label label_txt_chng">Developer</label>
+                                <input type="text" class="form-control formtxt_box_chng"
+                                    style="margin-left: 0px !important; width: 100% !important;">
+                            </div>
+                        </div>
+                        <div class="check_box_type space_btw_fields">
+                            <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input check_box_content" value="1"
+                                    name="br">
+                                <label for="br_operationrisk" class="form-check-label label_txt_chng">Same
+                                    Developer
+                                    For This Batch<span class="field_mandatory_fill operation"></span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary submit_btn_icon" id="save_modal">Save</button>
+                    <button type="button" class="btn btn-secondary cancel_btn_icon"
+                        data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
     <script>
         var menudiv = document.querySelector('.plus_drop_dwn');

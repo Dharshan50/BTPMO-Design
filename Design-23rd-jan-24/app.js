@@ -507,11 +507,13 @@ $(document).find("[id^='AddBatch_']").on('click', function () {
     // alert(type)
     if (type === 0) {
         $(document).find(`#Form_Template_${id}`).hide()
-        $(document).find(`#Record_Template_${id}`).show()
+        $(document).find("[class^='Batches_list_']").hide();
+        // $(document).find(`#Record_Template_${id}`).show()
         $(document).find(`.card_button_${id}`).hide();
     }
     else {
         $(document).find(`#Form_Template_${id}`).show()
+        $(document).find("[class^='Batches_list_']").show();
         $(document).find(`#Record_Template_${id}`).hide()
         $(document).find(`.card_button_${id}`).show();
     }
@@ -1183,7 +1185,7 @@ $(document).on('click', `[id^='card_arrow_']`, function () {
 
 $('#save_modal').on('click', function () {
     $('#dev_breakdown_data').modal('hide');
-    $('#dev_break_tbl').show();
+    $('.dev_break_tbl').show();
     $('#card_arrow_81').trigger('click');
 })
 
@@ -1211,6 +1213,9 @@ $('#proj_task_tab1').on('click', function () {
     $(document).find("[class^='Assigned_Record_View_']").hide();
     $("[id^='Expand_Pending_']").show();
     $("[id^='Close_Pending_']").hide();
+
+    $(document).find("[class^='dev_break_tbl']").hide();
+
     $(document).find("[class^='Proj_detail_label_']").show();
     $(document).find("[class^='Proj_detail_field_']").hide();
     $(document).find("[class^='Project_Detail_Edit_']").show();

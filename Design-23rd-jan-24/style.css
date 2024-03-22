@@ -1574,12 +1574,15 @@ button.btn_bot_div_save {
 }
 
 .batch_header {
+    display: flex;
+    justify-content: space-between;
     font-size: 16px;
     font-weight: 600;
     border: 1px solid #c4c4c4;
     background: rgb(63 63 63);
     padding: 5px;
     color: white;
+    height: 35px;
 }
 
 .Batch_row {
