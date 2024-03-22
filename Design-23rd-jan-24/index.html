@@ -584,12 +584,23 @@
                         <option value="2020">2020</option>
                     </select>
                     <button class="proc_filter" id ="Project_filter_Proc">Proceed</button>
+
+                    <select class="form-select rounded-0 filter select_box_1" placeholder="Filter">
+                        <option selected value="0">Project Stage</option>
+                        <option value="2023">01. Project charter</option>
+                        <option value="2022">02. Functional requirement</option>
+                        <option value="2021">03. Development</option>
+                        <option value="2020">04. BA testing</option>
+                        <option value="2020">05. UAT </option>
+                        <option value="2020">06. Completed</option>
+                        <option value="2020">07. Hypercare & CM</option>
+                    </select>
                 </div>
+                
                 <div class="btn_proj">
                     <button type="button" class="btn btn-success btn_create_proj_summ"
                         style="padding: 8px 15px !important;" id="create_proj"><i class="fa-solid fa-plus"
-                            style="margin-right: 8px;"></i>Add
-                        Project</button>
+                            style="margin-right: 8px;"></i>Add Project</button>
                     <div class="serch_box">
                         <div class="search_icon_grp" style="width: 140% !important;">
                             <input type="text" class="form-control formtxt_box_chng"
@@ -611,7 +622,7 @@
                                 <th id="deadline" class="small_column_width">Business case</th>
                                 <th id="targetGoLive" style="text-align: center;" class="small_column_width">Positive
                                     ROI</th>
-                                <th id="revisedGoLive" class="small_column_width">Requestor</th>
+                                <th id="revisedGoLive" class="small_column_width">Function</th>
                                 <th id="sponsers" class="small_column_width">Project Sponser</th>
                                 <th id="pm" class="small_column_width" style="width:12%">Impacted Function</th>
                                 <th id="ba" class="small_column_width" style="width:12%">Functional Lead(s)</th>
@@ -646,7 +657,7 @@
                                 <!-- <td>BP0001</td> -->
                                 <td class="hide_one">Sample</td>
                                 <td class="hide_two">
-                                    <p class="pro_align"> <span>1.1 Project Charter</span>
+                                    <p class="pro_align"> <span>01. Project Charter</span>
                                         <i class="fa-solid fa-circle-info" title="Project Charter "></i>
                                     </p>
                                 </td>
@@ -667,7 +678,7 @@
                                 <!-- <td>BP0001</td> -->
                                 <td class="hide_one">Sample</td>
                                 <td class="hide_two">
-                                    <p class="pro_align"> <span>1.2 Functional Requirement</span>
+                                    <p class="pro_align"> <span>02. Functional Requirement</span>
                                         <i class="fa-solid fa-circle-info" title="Functional Requirement"></i>
                                     </p>
                                 </td>
@@ -687,7 +698,7 @@
                                 <!-- <td>BP0001</td> -->
                                 <td class="hide_one">Test Project</td>
                                 <td class="hide_two">
-                                    <p class="pro_align"> <span>2.1 Project Charter</span>
+                                    <p class="pro_align"> <span>05. UAT </span>
                                         <i class="fa-solid fa-circle-info" title="Project Charter"></i>
                                     </p>
                                 </td>
@@ -708,7 +719,7 @@
                             <tr>
                                 <td class="hide_one">Test Sample</td>
                                 <td class="hide_two">
-                                    <p class="pro_align"> <span>3.1 Functional Requirement</span>
+                                    <p class="pro_align"> <span>02. Functional Requirement</span>
                                         <i class="fa-solid fa-circle-info" title="Functional Requirement"></i>
                                     </p>
                                 </td>
@@ -1610,6 +1621,31 @@
                                                                     class="LabelField_11" >Not Started</mark>
                                                             </p>
                                                         </div>
+
+
+                                                        <div class="card_cnt_inner_even"
+                                                        style="width: 100% !important; margin-left: -582px;">
+                                                        <p class="card_label text_select_boxes"
+                                                            style="margin-bottom:0.5rem !important;">
+                                                            Assinged To : </p>
+                                                        <p class="card_main_p_tag" style="width: 20% !important;">
+
+                                                            <select name="" id=""
+                                                                class="EditField_11 form-select select_box_chng"
+                                                                style="margin-left: 0 !important; width: 100% !important; padding: 3px 10px !important;">
+                                                                <option value="">Select</option>
+                                                                <option value="1" selected>Sandeep</option>
+                                                                <option value="2">Test</option>
+                                                            </select>
+
+                                                            <label
+                                                            style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                            class="LabelField_11">Sandeep</label>
+                                                          
+                                                        </p>
+
+
+                                                    </div>
                                                     </div>
                                                     <!-- <div class="card_cnt">
                                                         <div class="card_cnt_inner_even"
@@ -1822,7 +1858,32 @@
                                                                 style=" width: 100px; text-align: center; background-color: #ffeaa7; color:white;"
                                                                 class="LabelField_11" style="color: #000000;">Not Started</mark>
                                                         </p>
-                                                    </div>x
+                                                    </div>
+
+
+                                                    <div class="card_cnt_inner_even"
+                                                        style="width: 100% !important; margin-left: -582px;">
+                                                        <p class="card_label text_select_boxes"
+                                                            style="margin-bottom:0.5rem !important;">
+                                                            Assinged To : </p>
+                                                        <p class="card_main_p_tag" style="width: 20% !important;">
+
+                                                            <select name="" id=""
+                                                                class="EditField_11 form-select select_box_chng"
+                                                                style="margin-left: 0 !important; width: 100% !important; padding: 3px 10px !important;">
+                                                                <option value="">Select</option>
+                                                                <option value="1" selected>Sandeep</option>
+                                                                <option value="2">Test</option>
+                                                            </select>
+
+                                                            <label
+                                                            style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                            class="LabelField_11">Sandeep</label>
+                                                          
+                                                        </p>
+
+
+                                                    </div>
                                                     </div>
                                                     <!-- <i id="card_arrow_19"
                                                         class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i> -->
@@ -1906,6 +1967,31 @@
                                                                 class="LabelField_11" style="color: #000000;">Not Started</mark>
                                                         </p>
                                                     </div>
+
+
+                                                    <div class="card_cnt_inner_even"
+                                                    style="width: 100% !important; margin-left: -582px;">
+                                                    <p class="card_label text_select_boxes"
+                                                        style="margin-bottom:0.5rem !important;">
+                                                        Assinged To : </p>
+                                                    <p class="card_main_p_tag" style="width: 20% !important;">
+
+                                                        <select name="" id=""
+                                                            class="EditField_11 form-select select_box_chng"
+                                                            style="margin-left: 0 !important; width: 100% !important; padding: 3px 10px !important;">
+                                                            <option value="">Select</option>
+                                                            <option value="1" selected>Sandeep</option>
+                                                            <option value="2">Test</option>
+                                                        </select>
+
+                                                        <label
+                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                        class="LabelField_11">Sandeep</label>
+                                                      
+                                                    </p>
+
+
+                                                </div>
                                                     </div>
                                                     <!-- <i id="card_arrow_20"
                                                         class="fa-solid fa-ellipsis  card_arrow_1 card_down_arrow"></i> -->
