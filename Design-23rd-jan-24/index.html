@@ -1014,12 +1014,12 @@
                                 <td>30/03/2024</td>
                                 <td>04/04/2024</td>
 
-                                <td class="hide_default_Tasks_Tab">BR Review</td>
-                                <td class="hide_default_Tasks_Tab">30/03/2024</td>
-                                <td class="hide_default_Tasks_Tab">15/04/2024</td>
-                                <td class="hide_default_Tasks_Tab">Not Started</td>
-                                <td class="hide_default_Tasks_Tab">Aurianne(PM)</td>
-                                <td class="hide_default_Tasks_Tab"><mark style="background-color: rgb(185, 187, 184);color: black !important;"
+                                <td class="hide_default_Tasks_Tab Next_Task_Column">BR Review</td>
+                                <td class="hide_default_Tasks_Tab Next_Start_Date_Column">30/03/2024</td>
+                                <td class="hide_default_Tasks_Tab Next_End_Date_Column">15/04/2024</td>
+                                <td class="hide_default_Tasks_Tab Next_Task_Status_Column">Not Started</td>
+                                <td class="hide_default_Tasks_Tab Assigned_To_Column">Aurianne(PM)</td>
+                                <td class="hide_default_Tasks_Tab Current_Stage_Status"><mark style="background-color: rgb(185, 187, 184);color: black !important;"
                                         class="rag_status">Completed</mark></td>
 
                             </tr>
@@ -39237,42 +39237,7 @@
             </div>
         </div>
     </div>
-    <script src="app.js"></script>
-    <script>
-
-        var Task_menudiv = document.querySelector('.Task_plus_drop_dwn');
-        var Task_plus_icon = document.getElementById('Task_Column_menus'); 
-
-        Task_plus_icon.addEventListener("click", function () {
-            if (Task_plus_icon.style.transform === "rotate(315deg)") {
-                Task_plus_icon.style.transform = "rotate(0deg)";
-            } else {
-                Task_plus_icon.style.transform = "rotate(315deg)";
-            }
-            if (Task_menudiv.style.display === "none") {
-                Task_menudiv.style.display = "flex"; // Use '=' for assignment
-            } else {
-                Task_menudiv.style.display = "none"; // Use '=' for assignment
-            }
-        });
-        
-        var Project_menudiv = document.querySelector('.Project_plus_drop_dwn');
-        var Project_plus_icon = document.getElementById('Project_Column_menus'); 
-
-        Project_plus_icon.addEventListener("click", function () {
-            if (Project_plus_icon.style.transform === "rotate(315deg)") {
-                Project_plus_icon.style.transform = "rotate(0deg)";
-            } else {
-                Project_plus_icon.style.transform = "rotate(315deg)";
-            }
-            if (Project_menudiv.style.display === "none") {
-                Project_menudiv.style.display = "flex"; // Use '=' for assignment
-            } else {
-                Project_menudiv.style.display = "none"; // Use '=' for assignment
-            }
-        });
-        
-    </script>
+    <script src="app.js"></script> 
 </body>
 
 </html>

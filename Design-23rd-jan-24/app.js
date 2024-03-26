@@ -74,6 +74,40 @@ $(document).ready(function () {
 
 let draggedItem;
 
+
+var Task_menudiv = document.querySelector('.Task_plus_drop_dwn');
+var Task_plus_icon = document.getElementById('Task_Column_menus'); 
+
+Task_plus_icon.addEventListener("click", function () {
+    if (Task_plus_icon.style.transform === "rotate(315deg)") {
+        Task_plus_icon.style.transform = "rotate(0deg)";
+    } else {
+        Task_plus_icon.style.transform = "rotate(315deg)";
+    }
+    if (Task_menudiv.style.display === "none") {
+        Task_menudiv.style.display = "flex"; // Use '=' for assignment
+    } else {
+        Task_menudiv.style.display = "none"; // Use '=' for assignment
+    }
+});
+
+var Project_menudiv = document.querySelector('.Project_plus_drop_dwn');
+var Project_plus_icon = document.getElementById('Project_Column_menus'); 
+
+Project_plus_icon.addEventListener("click", function () {
+    if (Project_plus_icon.style.transform === "rotate(315deg)") {
+        Project_plus_icon.style.transform = "rotate(0deg)";
+    } else {
+        Project_plus_icon.style.transform = "rotate(315deg)";
+    }
+    if (Project_menudiv.style.display === "none") {
+        Project_menudiv.style.display = "flex"; // Use '=' for assignment
+    } else {
+        Project_menudiv.style.display = "none"; // Use '=' for assignment
+    }
+});
+
+
 function drag(event) {
     draggedItem = event.target;
 }
@@ -860,6 +894,7 @@ $('#create_proj').on('click', function () {
     $('#file-upload-container').hide();
 })
 $('#tab3').on('click', function () {
+    doRestoreTaskColumns();
     $('#task_manage').show();
     task_hide_details();
     $('#proj_summary_tbl').hide();
@@ -892,6 +927,7 @@ $("[id^='task_tab']").on('click', function () {
     $('.E_Procurement_Table').show();
     $('.hide_default_Tasks_Tab').hide();
     $('.E_Staff_Table').hide();
+    doRestoreTaskColumns();
     // if (this.id === 'task_tab5') {
     //     $('.E_Procurement_Table').hide();
     //     $('.E_Staff_Table').hide();

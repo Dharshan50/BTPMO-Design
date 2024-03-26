@@ -1774,6 +1774,11 @@ p.yes_no_align.no {
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 1px 2px #ccc;
+    height: 215px;
+    overflow-y: auto;
+}
+.plus_drop_dwn::-webkit-scrollbar{
+    width: 0;
 }
 
 label.label_td_prot span {
