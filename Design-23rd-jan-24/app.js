@@ -572,9 +572,11 @@ $("[id^='Update_revis_']").on('click', function () {
     var id = splitArray[splitArray.length - 1];
     console.log(id)
     $(document).find(`#rev_str_${id}`).hide();
+    $(document).find(`#rev_task_${id}`).hide();
     $(document).find(`#rev_golive_${id}`).hide();
     $(document).find(`#rev_end_${id}`).hide();
     $(document).find(`#edit_revstrport_${id}`).show();
+    $(document).find(`#edit_revstrtask_${id}`).show();
     $(document).find(`#edit_revendport_${id}`).show();
     $(document).find(`#edit_revgoliveport_${id}`).show();
     $(`#Update_revis_${id}`).hide();
@@ -587,9 +589,11 @@ $("[id^='save_revis_']").on('click', function () {
     var id = splitArray[splitArray.length - 1];
     console.log(id)
     $(document).find(`#rev_str_${id}`).show();
+    $(document).find(`#rev_task_${id}`).show();
     $(document).find(`#rev_end_${id}`).show();
     $(document).find(`#rev_golive_${id}`).show();
     $(document).find(`#edit_revstrport_${id}`).hide();
+    $(document).find(`#edit_revstrtask_${id}`).hide();
     $(document).find(`#edit_revendport_${id}`).hide();
     $(document).find(`#edit_revgoliveport_${id}`).hide();
     $(`#Update_revis_${id}`).show();
@@ -719,12 +723,12 @@ $('#proj_type').on('change', function () {
         $('.proj_name_text_box').hide();
         $('.proj_name_slct').show();
         $('#buttons').show();
-        $('#proj_currentstage').prop('disabled', true);
-        $('#proj_status').prop('disabled', true);
-        $('#proj_ragstatus').prop('disabled', true);
-        $('#proj_currentstage').val('1');
-        $('#proj_status').val('1');
-        $('#proj_ragstatus').val('1');
+        // $('#proj_currentstage').prop('disabled', true);
+        // $('#proj_status').prop('disabled', true);
+        // $('#proj_ragstatus').prop('disabled', true);
+        // $('#proj_currentstage').val('1');
+        // $('#proj_status').val('1');
+        // $('#proj_ragstatus').val('1');
 
     }
     else if (val == 2) {
@@ -776,6 +780,8 @@ $('#tab3').on('click', function () {
     $('#bt_dev_tasks').hide();
     $('#portfolio_sec_tab').hide();
     $('#prot_BA_view').hide();
+    $('#stage_clousure').hide();
+    $('#Ba_responsible').hide();
     hideProjData();
 })
 
@@ -1083,6 +1089,7 @@ function hideProjData() {
         $(`#save_time_${lst[i]}`).hide();
         $(`#port_delay_tab_${lst[i]}`).hide();
         $(`#edit_revstrport_${lst[i]}`).hide();
+        $(`#edit_revstrtask_${lst[i]}`).hide();
         $(`#edit_revendport_${lst[i]}`).hide();
         $(`#edit_revgoliveport_${lst[i]}`).hide();
         $(`#save_revis_${lst[i]}`).hide();
@@ -1183,6 +1190,21 @@ $(document).on('click', `[id^='card_arrow_']`, function () {
     }
 })
 
+$(document).on('change', '#proj_status', function () {
+
+    var selectedValue = this.value;
+    var roiFields = document.querySelectorAll('.Status_comments');
+    for(let i=0; i<roiFields.length; i++){
+    if (selectedValue == '6') {
+    
+        roiFields[i].style.display = 'block';
+    } else {
+       
+        roiFields[i].style.display = 'none';
+    }
+}
+});
+
 $('#save_modal').on('click', function () {
     $('#dev_breakdown_data').modal('hide');
     $('.dev_break_tbl').show();
@@ -1238,6 +1260,9 @@ $('#proj_task_tab1').on('click', function () {
         $(this).removeClass('fa-minus').addClass('fa-plus');
     });
 })
+
+
+
 
 $(document).on('click', '#port_task_tab2', function () {
     $('#port_table_view').hide();

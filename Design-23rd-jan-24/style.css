@@ -33,6 +33,12 @@
     border: 1px solid #bbbbbb !important;
 }
 
+.mandatory_star{
+    color: red;
+    font-size: 14px;
+    font-weight: 500; 
+}
+
 .select_box_1 {
     width: 150px !important;
     border-radius: 0px !important;
@@ -1381,19 +1387,21 @@ th.lab_dwn {
 } */
 
 button.btn_bot_div {
-    padding: 5px 2px;
-    border-radius: 5px;
+    padding: 5px 17px;
+ 
     border: none;
     background-color: red;
     color: #fff;
+    box-shadow: #950000 1px 2px;
 }
 
 button.btn_bot_div_save {
-    padding: 5px 5px;
-    border-radius: 5px;
+    padding: 5px 17px;
+  
     border: none;
     background-color: #447E32;
     color: #fff;
+    box-shadow: rgb(1, 88, 1) 1px 2px;
 }
 
 
