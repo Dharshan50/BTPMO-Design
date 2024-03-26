@@ -46,7 +46,7 @@
     padding: 7px 10px !important;
     border-color: #c5c5c5 !important;
     border: 1px solid #bbbbbb !important;
-    margin-left: 189px !important;
+    /* margin-left: 189px !important; */
 }
 
 .proc_filter {
@@ -125,16 +125,11 @@
     padding: 5px 5px;
     border-radius: 3px;
 }
-
-/* .boxes {
-    height: 30px;
-    padding: 0px 5px !important;
-    width: 200px;
-} */
+ 
 .btn_proj {
     margin-right: 30px !important;
     display: flex;
-    width: 35%;
+    width: 40%;
     justify-content: flex-end;
     gap: 20px;
     align-items: baseline;
@@ -193,8 +188,8 @@
 }
 
 .icon_show_tsk {
-    margin-left: 3px;
-    margin-left: 0px;
+    /* margin-left: 3px; */
+    /* margin-left: 0px; */
     font-size: 15px;
     cursor: pointer;
     color: rgb(46, 171, 46) !important;
@@ -220,7 +215,7 @@
 } */
 .Stage_Details {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     margin-left: 10px;
 }
@@ -250,7 +245,7 @@ mark.rag_status.ut {
     text-align: center;
     padding: 4px 9px !important;
     display: inline-block;
-    width: 100%;
+    width: 85%;
     box-sizing: border-box;
 
 }
@@ -1439,6 +1434,16 @@ button.btn_bot_div_save {
     display: flex;
     flex-direction: column;
 }
+.Btn_style_Pending{
+    border: none;
+    padding: 4px 0px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    margin: 0px 10px;
+    width: 50%;
+    background-color: orange;
+    color: black;
+}
 
 .card_cnt_inner_even {
     display: flex;
@@ -1565,6 +1570,9 @@ button.btn_bot_div_save {
     border-radius: 0px;
     /* border: 1px solid red !important; */
     height: 35px !important;
+}
+.fa-sort{
+    font-size: 12px;
 }
 
 .card_cnt {
