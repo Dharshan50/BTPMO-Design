@@ -31,6 +31,7 @@
     padding: 7px 10px !important;
     border-color: #c5c5c5 !important;
     border: 1px solid #bbbbbb !important;
+    background-size: 10px 12px !important;
 }
 
 .mandatory_star{
@@ -50,10 +51,11 @@
 }
 
 .proc_filter {
-    width: 120px;
     background-color: #03365f;
-    padding: 5px 10px;
+    padding: 5px 14px;
     color: white;
+    border: none;
+    font-size: 12px;
 }
 
 .bt_process_tab {
@@ -127,12 +129,9 @@
 }
  
 .btn_proj {
-    margin-right: 30px !important;
     display: flex;
-    width: 40%;
-    justify-content: flex-end;
+    align-items: center;
     gap: 20px;
-    align-items: baseline;
 }
 
 .Project_Summary_Filter {
@@ -404,6 +403,7 @@ mark.rag_status.ut {
     background-color: #08305c;
     color: #ffffff !important;
     padding: 0.4rem 1.25rem !important;
+    font-size: 12px !important;
 }
 
 .accordion-button:after {
@@ -428,15 +428,7 @@ mark.rag_status.ut {
     width: 100px;
 }
 
-.btn_create_proj_summ {
-    background: #447E32 !important;
-    padding: 1px 11px !important;
-    font-size: 13px !important;
-    border-radius: 0px !important;
-    border: 0 !important;
-    color: #fff;
-    /* width: 100px; */
-}
+
 
 .formtxt_box_chng {
     border-radius: 0px !important;
@@ -560,24 +552,17 @@ mark.rag_status.ut {
 }
 
 .tabwrap {
-    -webkit-transition: 0.3s box-shadow ease;
-    transition: 0.3s box-shadow ease;
     border-radius: 0px;
-    max-width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     position: relative;
     list-style: none;
     background-color: #f7f7f7;
-    margin: 0px 0;
+    margin: 0px auto 25px auto;
+    width: fit-content;
 }
 
-table.table.table-responsive thead tr th {
+table.table thead tr th {
     font-size: 11px;
 }
 
@@ -726,7 +711,7 @@ table.table.table-responsive thead tr th {
     height: 35px;
     box-sizing: border-box;
     padding: 6px 15px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .task_tab {
@@ -1339,9 +1324,8 @@ td.Style_tr_prot div {
 
 .filter_Group_project {
     display: flex;
-    gap: 10px;
-    justify-content: flex-start;
-    height: 35px;
+    align-items: center;
+    gap: 20px;
 }
 
 .BA_name_sel {
@@ -1478,7 +1462,7 @@ button.btn_bot_div_save {
     justify-content: space-between;
     width: 25%;
     margin-left: 0%;
-    margin-top: 15px;
+    margin-top: 0px;
     gap: 10px;
     margin-right: 0px;
 }
@@ -1488,12 +1472,15 @@ button.btn_bot_div_save {
     font-size: 12px !important;
     border-color: #c5c5c5 !important;
     border: 1px solid #bbbbbb !important;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .task_content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .bt_dev_task_content {
@@ -1533,7 +1520,7 @@ button.btn_bot_div_save {
     background-color: #c5ccd4;
     margin-bottom: 0;
     border-radius: 0px;
-    padding: 0px 20px;
+    padding: 5px 20px;
     /* // border-bottom: 2px solid #9aa1a9; */
     display: -ms-flexbox;
     display: flex;
@@ -1547,7 +1534,7 @@ button.btn_bot_div_save {
 .Head_Edit {
     display: flex;
     justify-content: space-between;
-    padding: 1px 8px;
+    padding: 6px 8px;
 }
 
 .card_bdy {
@@ -1592,13 +1579,12 @@ button.btn_bot_div_save {
 .batch_header {
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
     border: 1px solid #c4c4c4;
     background: rgb(63 63 63);
     padding: 5px;
     color: white;
-    height: 35px;
 }
 
 .Batch_row {
@@ -1637,15 +1623,15 @@ button.btn_bot_div_save {
     font-weight: 600;
     font-size: 10px !important;
     background-color: #447e32;
-    margin: 6px 0px !important;
+    margin: 0px 0px !important;
     padding: 1px 10px !important;
 }
 
 .card_head_para {
-    margin-top: 3px;
-    margin-bottom: 3px !important;
+    margin-top: 0px;
+    margin-bottom: 0px !important;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .edit_btn_card {
@@ -1774,7 +1760,7 @@ p.yes_no_align.no {
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 1px 2px #ccc;
-    height: 215px;
+    height: 200px;
     overflow-y: auto;
 }
 .plus_drop_dwn::-webkit-scrollbar{
@@ -1792,7 +1778,7 @@ table thead tr th {
 
 table tbody tr td {
     text-align: left;
-    vertical-align: top;
+    vertical-align: middle;
     font-size: 11px;
 }
 
@@ -1921,7 +1907,7 @@ table tbody tr td {
     display: flex;
     align-items: center;
     position: relative;
-    left: 38.5%;
+    left: 38%;
 }
 
 .div_1 i {
@@ -2023,3 +2009,42 @@ input:disabled {
 .small_column_width {
     min-width: 100px !important;
 }
+/* purushoth Starts */
+.form-select.btn_pro_select {
+    width: 150px !important;
+    font-size: 12px !important;
+}
+.btn_create_proj_summ {
+    background: #447E32 !important;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    padding: 6px 12px;
+}
+input.Search_on_p_inp.rounded-0.boxes {
+    border: none;
+    font-size: 12px;
+}
+input.Search_on_p_inp.rounded-0.boxes:focus{
+    outline: none;
+    border: none;
+}
+.Search_on_p {
+    display: flex;
+    align-items: center;
+    border: 1px solid #dfdfdf;
+    padding: 5px 15px;
+}
+.Search_on_p i {
+    font-size: 12px;
+}
+table.table.table-responsive.tbl_all_proj {
+    overflow-x: visible;
+}
+span.batch_details {
+    font-size: 12px !important;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    font-style: italic;
+}
+/* purushoth Ends */
