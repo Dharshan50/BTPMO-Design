@@ -2019,7 +2019,7 @@ table tbody tr td {
 }
 
 input:disabled {
-    background-color: #bfbfbf !important;
+    background-color: #e2e2e2 !important;
     color: black;
 }
 
@@ -2099,12 +2099,21 @@ button.accordion-button.acc_ptg_on_btn::after , button.accordion-button.acc_ptg_
     border-radius: 0 !important;
     margin-bottom: 10px;
 }
+span.edit_btn_ptg {
+    background-color: #198754;
+    font-weight: 400;
+    padding: 1px 10px;
+    font-size: 10px;
+}
 button.accordion-button.acc_ptg_on_btn {
     border-radius: 0 !important;
     padding: 5px 20px;
     font-size: 12px;
     font-weight: 600;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .acc_inn_cnt_ptg div {
     width: 25%;

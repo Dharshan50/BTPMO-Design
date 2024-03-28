@@ -2049,17 +2049,17 @@
                                                         Project Details
                                                     </div>
                                                     <div>
-                                                        <button type="button" title="Edit" id="Project_Detail_Edit_1"
+                                                        <button type="button" title="Edit" id="Project_Detail_Edit_3"
                                                             class="btn btn-success  btn_upd_task">
                                                             Edit
                                                         </button>
-                                                        <button type="button" title="Save" id="Project_Detail_Save_1"
+                                                        <button type="button" title="Save" id="Project_Detail_Save_3"
                                                             class="btn btn-success  btn_upd_task"
                                                             style="display:none; margin-top:6px !important; margin-right:5px !important;">
                                                             Save
                                                         </button>
                                                         <button type="button" title="Cancel"
-                                                            id="Project_Detail_Cancel_1"
+                                                            id="Project_Detail_Cancel_3"
                                                             class="btn btn-danger  btn_upd_task"
                                                             style="display:none; margin-left:6px !important;  margin-top:6px !important; margin-right:5px !important;">
                                                             Cancel
@@ -10495,7 +10495,7 @@
                                                     class="card_main_box draggable project_details show">
                                                     <div class="Head_Edit" style=" background-color: #000000;">
                                                         <div
-                                                            style="font-size: 12px; font-weight: 600; color:#ffffff;text-decoration: underline;letter-spacing: 1px;font-style: italic;">
+                                                            style="font-size: 12px; font-weight: 600; color:#ffffff;letter-spacing: 1px;font-style: italic;">
                                                             Project Details
                                                         </div>
                                                         <div>
@@ -10634,7 +10634,17 @@
                                                                 <button class="accordion-button acc_ptg_on_btn"
                                                                     type="button" data-bs-toggle="collapse"
                                                                     data-bs-target="#collapseOne">
-                                                                    Charter submission to Function
+                                                                    <span>Charter submission to Function</span>
+                                                                    <span>
+                                                                        <span class="edit_btn_ptg"
+                                                                            id="Project_Detail_Edit_40">Edit</span>
+                                                                        <span class="edit_btn_ptg"
+                                                                            id="Project_Detail_Save_40"
+                                                                            style="display:none;">Save</span>
+                                                                        <span class="edit_btn_ptg"
+                                                                            id="Project_Detail_Cancel_40"
+                                                                            style="display:none; background-color:red">Cancel</span>
+                                                                    </span>
                                                                 </button>
                                                                 <div id="collapseOne"
                                                                     class="accordion-collapse collapse show"
@@ -10642,9 +10652,15 @@
                                                                     <div class="accordion-body acc_ptg_on_bdy">
                                                                         <div class="acc_inn_cnt_ptg">
                                                                             <div>
-                                                                                <label for="">PM responsible</label>
-                                                                                <select
-                                                                                    class="form-select acc_inn_sel_ptg"
+                                                                                <label for=""
+                                                                                    class="card_label text_select_boxes">PM
+                                                                                    responsible <span
+                                                                                        style="color:red; font-weight:500;">*</span></label>
+
+                                                                                <p id="pm_label_in" class="Proj_detail_label_40">Test</p>
+                                                                                <select id="Proj_detail_field_"
+                                                                                    style="display: none;"
+                                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_40"
                                                                                     aria-label="Default select example">
                                                                                     <option selected>Select</option>
                                                                                     <option value="1">One</option>
@@ -10653,9 +10669,14 @@
                                                                                 </select>
                                                                             </div>
                                                                             <div>
-                                                                                <label for="">Stage Closure</label>
-                                                                                <input type="date"
-                                                                                    class="form-control acc_inn_inp_ptg">
+                                                                                <label for=""
+                                                                                    class="card_label text_select_boxes ">Stage
+                                                                                    Closure</label>
+
+                                                                                <p id="pm_label_in" class="Proj_detail_label_40">29/05/2024</p>
+                                                                                <input type="date" id="pm_sel_in"
+                                                                                    style="display: none;"
+                                                                                    class="form-control acc_inn_inp_ptg Proj_detail_field_40">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -10666,17 +10687,32 @@
                                                                     class="accordion-button collapsed acc_ptg_on_btn"
                                                                     type="button" data-bs-toggle="collapse"
                                                                     data-bs-target="#collapsetw">
-                                                                    Business requirement review & validation by BA
+                                                                   
+                                                                    <span> Business requirement review & validation by BA</span>
+                                                                    <span>
+                                                                        <span class="edit_btn_ptg"
+                                                                            id="Project_Detail_Edit_41">Edit</span>
+                                                                        <span class="edit_btn_ptg"
+                                                                            id="Project_Detail_Save_41"
+                                                                            style="display:none;">Save</span>
+                                                                        <span class="edit_btn_ptg"
+                                                                            id="Project_Detail_Cancel_41"
+                                                                            style="display:none; background-color:red">Cancel</span>
+                                                                    </span>
                                                                 </button>
                                                                 <div id="collapsetw" class="accordion-collapse collapse"
                                                                     data-bs-parent="#accordionExample">
                                                                     <div class="accordion-body acc_ptg_on_bdy">
                                                                         <div class="acc_inn_cnt_ptg">
                                                                             <div>
-                                                                                <label for="">PM responsible</label>
+                                                                                <label for="" class="card_label text_select_boxes">BA responsible <span
+                                                                                        style="color:red; font-weight:500;">*</span></label>
+
+                                                                                        <p class="Proj_detail_label_41">Sandeep</p>
                                                                                 <select
-                                                                                    class="form-select acc_inn_sel_ptg"
-                                                                                    aria-label="Default select example">
+                                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_41"
+                                                                                   
+                                                                                    aria-label="Default select example" style="display: none;">
                                                                                     <option selected>Select</option>
                                                                                     <option value="1">One</option>
                                                                                     <option value="2">Two</option>
@@ -10684,9 +10720,10 @@
                                                                                 </select>
                                                                             </div>
                                                                             <div>
-                                                                                <label for="">Stage Closure</label>
-                                                                                <input type="date"
-                                                                                    class="form-control acc_inn_inp_ptg">
+                                                                                <label for="" class="card_label text_select_boxes">Stage Closure</label>
+                                                                                <p class="Proj_detail_label_41">29/05/2024</p>
+                                                                                <input type="date" style="display: none;"
+                                                                                    class="form-control acc_inn_inp_ptg Proj_detail_field_41">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -10697,17 +10734,31 @@
                                                                     class="accordion-button collapsed acc_ptg_on_btn"
                                                                     type="button" data-bs-toggle="collapse"
                                                                     data-bs-target="#collapsetr">
-                                                                    Charter submission to PMO
+                                                                    
+                                                                    <span>Charter submission to PMO</span>
+                                                                    <span>
+                                                                        <span class="edit_btn_ptg"
+                                                                            id="Project_Detail_Edit_42">Edit</span>
+                                                                        <span class="edit_btn_ptg"
+                                                                            id="Project_Detail_Save_42"
+                                                                            style="display:none;">Save</span>
+                                                                        <span class="edit_btn_ptg"
+                                                                            id="Project_Detail_Cancel_42"
+                                                                            style="display:none; background-color:red">Cancel</span>
+                                                                    </span>
                                                                 </button>
                                                                 <div id="collapsetr" class="accordion-collapse collapse"
                                                                     data-bs-parent="#accordionExample">
                                                                     <div class="accordion-body acc_ptg_on_bdy">
                                                                         <div class="acc_inn_cnt_ptg">
                                                                             <div>
-                                                                                <label for="">Function Lead</label>
+                                                                                <label for="" class="card_label text_select_boxes">Function Lead <span
+                                                                                        style="color:red; font-weight:500;">*</span></label>
+
+                                                                                        <p class="Proj_detail_label_42">Sandeep</p>
                                                                                 <select
-                                                                                    class="form-select acc_inn_sel_ptg"
-                                                                                    aria-label="Default select example">
+                                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_42"
+                                                                                    aria-label="Default select example"- style="display: none;">
                                                                                     <option selected>Select</option>
                                                                                     <option value="1">One</option>
                                                                                     <option value="2">Two</option>
@@ -10715,14 +10766,16 @@
                                                                                 </select>
                                                                             </div>
                                                                             <div>
-                                                                                <label for="">Charter deadline</label>
-                                                                                <input type="date"
-                                                                                    class="form-control acc_inn_inp_ptg">
+                                                                                <label for="" class="card_label text_select_boxes">Charter deadline</label>
+                                                                                <p class="Proj_detail_label_42">29/05/2024</p>
+                                                                                <input type="date"style="display: none;"
+                                                                                    class="form-control acc_inn_inp_ptg Proj_detail_field_42">
                                                                             </div>
                                                                             <div>
-                                                                                <label for="">Stage Closure</label>
-                                                                                <input type="date"
-                                                                                    class="form-control acc_inn_inp_ptg">
+                                                                                <label for="" class="card_label text_select_boxes">Stage Closure</label>
+                                                                                <p class="Proj_detail_label_42">29/05/2024</p>
+                                                                                <input type="date" style="display: none;"
+                                                                                    class="form-control acc_inn_inp_ptg Proj_detail_field_42">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -10740,7 +10793,7 @@
                                                                     <div class="accordion-body acc_ptg_on_bdy">
                                                                         <div class="acc_inn_cnt_ptg">
                                                                             <div>
-                                                                                <label for="">PM responsible</label>
+                                                                                <label for="" class="card_label text_select_boxes">Responsible PMO </label>
                                                                                 <select
                                                                                     class="form-select acc_inn_sel_ptg"
                                                                                     aria-label="Default select example">
@@ -10751,7 +10804,20 @@
                                                                                 </select>
                                                                             </div>
                                                                             <div>
-                                                                                <label for="">Stage Closure</label>
+                                                                                <label for="" class="card_label text_select_boxes">Stage Closure</label>
+
+
+                                                                                <input type="date"
+                                                                                    class="form-control acc_inn_inp_ptg">
+                                                                            </div>
+                                                                            <div>
+                                                                                <label for="" class="card_label text_select_boxes">Stage Closure</label>
+
+                                                                                <input type="date"
+                                                                                    class="form-control acc_inn_inp_ptg">
+                                                                            </div>
+                                                                            <div>
+                                                                                <label for="" class="card_label text_select_boxes">Stage Closure</label>
                                                                                 <input type="date"
                                                                                     class="form-control acc_inn_inp_ptg">
                                                                             </div>
@@ -37106,7 +37172,7 @@
                                 <input type="text" class="form-control formtxt_box_chng" id="proj_sponsers">
                             </div>
                             <div class="col-lg-2 col-12">
-                                <label for="proj_pm" class="form-label label_txt_chng">PM Responsible <span
+                                <label for="proj_pm" class="form-label label_txt_chng">PM Responsible<span
                                         class="mandatory_star">*</span></label>
                             </div>
                             <div class="col-lg-2 col-12">
