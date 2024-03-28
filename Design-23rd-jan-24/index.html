@@ -644,8 +644,8 @@
                 </div>
 
             </div>
-            <div class=" proj_summ_table" id="tbl_all_prj" style="margin-top: 5px;">
-                <div>
+            <div class="proj_summ_table" id="tbl_all_prj" style="margin-top: 5px;">
+                <div class="table_div">
                     <table class="table  tbl_all_proj" id="tblprojsummary" cellspacing="0">
                         <thead style="font-size: 11px;">
                             <tr>
@@ -655,7 +655,7 @@
                                         class="fa-solid fa-sort"></i></th>
                                 <th id="deadline" class="small_column_width">Business case <i
                                         class="fa-solid fa-sort"></i></th>
-                                <th id="targetGoLive" style="text-align: center;" class="small_column_width">Positive
+                                <th id="targetGoLive" style="text-align: left;" class="small_column_width">Positive
                                     ROI <i class="fa-solid fa-sort"></i></th>
                                 <th id="revisedGoLive" class="small_column_width">Function <i
                                         class="fa-solid fa-sort"></i></th>
@@ -776,10 +776,12 @@
                                 </td>
                                 <td class="hide_tr">Efficiency</td>
                                 <td class="hide_fr" style="color:#009500;">
-                                    <p class="yes_no_align"><i class="fa-solid fa-circle"
-                                            title="Action requested"></i><span>Yes</span> <i
-                                            class="fa-solid fa-circle-info" style="font-size: 10px !important;"
-                                            title="yes"></i></p>
+                                    <div class="out_align_ptg">
+                                        <p class="yes_no_align"><i class="fa-solid fa-circle"
+                                                title="Action requested"></i><span>Yes</span></p>
+                                        <i class="fa-solid fa-circle-info" style="font-size: 10px !important;"
+                                            title="yes"></i>
+                                    </div>
                                 </td>
                                 <td>Finance</td>
                                 <td>Yoko</td>
@@ -813,10 +815,12 @@
                                 </td>
                                 <td class="hide_tr">ROI</td>
                                 <td class="hide_fr" style="color:#ff0000;">
-                                    <p class="yes_no_align no"><i class="fa-solid fa-circle"
-                                            title="Action requested"></i><span>No</span><i
-                                            class="fa-solid fa-circle-info" style="font-size: 10px !important;"
-                                            title="No"></i></p>
+                                    <div class="out_align_ptg">
+                                        <p class="yes_no_align no"><i class="fa-solid fa-circle"
+                                                title="Action requested"></i><span>No</span></p>
+                                        <i class="fa-solid fa-circle-info" style="font-size: 10px !important;"
+                                            title="No"></i>
+                                    </div>
                                 </td>
                                 <td>Commercial</td>
                                 <td>Yoko</td>
@@ -851,10 +855,12 @@
                                 </td>
                                 <td class="hide_tr">UX</td>
                                 <td class="hide_fr" style="color:#009500;">
-                                    <p class="yes_no_align"><i class="fa-solid fa-circle"
-                                            title="Action requested"></i><span>Yes</span><i
-                                            class="fa-solid fa-circle-info" style="font-size: 10px !important;"
-                                            title="yes"></i></p>
+                                    <div class="out_align_ptg">
+                                        <p class="yes_no_align"><i class="fa-solid fa-circle"
+                                                title="Action requested"></i><span>Yes</span></p>
+                                        <i class="fa-solid fa-circle-info" style="font-size: 10px !important;"
+                                            title="yes"></i>
+                                    </div>
                                 </td>
                                 <td>Claims</td>
                                 <td>Peter</td>
@@ -889,10 +895,12 @@
                                 </td>
                                 <td class="hide_tr">Group</td>
                                 <td class="hide_fr" style="color:#009500;">
-                                    <p class="yes_no_align"><i class="fa-solid fa-circle"
-                                            title="Action requested"></i><span>Yes</span><i
-                                            class="fa-solid fa-circle-info" style="font-size: 10px !important;"
-                                            title="yes"></i></p>
+                                    <div class="out_align_ptg">
+                                        <p class="yes_no_align"><i class="fa-solid fa-circle"
+                                                title="Action requested"></i><span>Yes</span></p>
+                                        <i class="fa-solid fa-circle-info" style="font-size: 10px !important;"
+                                            title="yes"></i>
+                                    </div>
                                 </td>
                                 <td>BI</td>
                                 <td>Sam</td>
@@ -925,7 +933,7 @@
 
         <div id="task_manage">
             <div class="task_proj_filter">
-                <div class="proj_task_tabwrap mt-4" style="font-size: 13px; margin-right: 25px !important;">
+                <div class="proj_task_tabwrap mt-2" style="font-size: 13px; margin-right: 25px !important;">
                     <input type="radio" id="task_proj_tab1" name="task_proj_tabGroup1" class="proj_task_tab" checked>
                     <label id="bt_proj_tab" for="task_proj_tab1" style="border-right: none;">Projects</label>
                     <input type="radio" id="task_proj_tab2" name="task_proj_tabGroup1" class="proj_task_tab">
@@ -1004,7 +1012,7 @@
                 <!-- <div class="prj_title_head">
                     <h2 class="prj_head_name">E-Procurement</h2>
                 </div> -->
-                <div class="" id="task_tbl">
+                <div class="table_div" id="task_tbl">
                     <table class="table  tbl_all_proj">
                         <thead style="font-size: 15px;">
                             <tr>
@@ -1150,7 +1158,7 @@
                                 <td><span class="last_num_task" style="background-color: #f06060; color: #fff;">1</span>
                                 </td>
                                 <td>China Fronters</td>
-                                <td>Requirement <br><span style="font-size: 9px; color: red; font-weight: 600;">[Batch 1
+                                <td>Requirement <br><span style="font-size: 7px; color: red; font-weight: 600;">[Batch 1
                                         LCS Set Up]</span></td>
                                 <td>Requirement Analysis Planning</td>
                                 <td><mark style="background-color:  #fdf908;" class="rag_status">InProgress</mark>
@@ -1717,7 +1725,7 @@
                                         style="font-size: 10px !important; padding: 5px 11px !important; border-radius: 0px !important; background-color: #3cdeb5 !important; color: #fff; box-shadow: #1a9c7b 0px 0px 2px 1px !important;"
                                         id="upd_time_2">Update</button>
                                     <button type="button" class="btn btn-success btn_create_proj"
-                                        style="font-size: 10px !important; padding: 6px 10px !important; box-shadow: #015801 1px 2px;"
+                                        style="font-size: 10px !important; padding: 6px 10px !important; box-shadow: #015801 0px 0px 2px 1px;"
                                         id="save_time_2">Save</button>
                                 </td>
                                 <td>4</td>
@@ -10390,7 +10398,7 @@
                 </div> -->
             </div>
             <div class='project_filter_bar'>
-                <div class="proj_task_tabwrap mt-4" style="font-size: 13px; margin-right: 25px !important;">
+                <div class="proj_task_tabwrap mt-2" style="font-size: 13px; margin-right: 25px !important;">
                     <input type="radio" id="proj_task_tab1" name="proj_task_tabGroup1" class="proj_task_tab" checked>
                     <label id="bt_proj_tab" for="proj_task_tab1" style="border-right: none;">Pending Assignment</label>
                     <input type="radio" id="proj_task_tab2" name="proj_task_tabGroup1" class="proj_task_tab" checked>
@@ -10415,12 +10423,12 @@
                     </div>
                 </div>
             </div>
-            <div class="proj_tsk_tbl mt-4">
+            <div class="proj_tsk_tbl mt-0">
                 <div class="e-procurrement-proj">
                     <!-- <div class="prj_title_head">
                         <h2 class="prj_head_name">E-Procurement</h2>
                     </div> -->
-                    <div class="table-responsive mt-2">
+                    <div class="table-responsive mt-0">
                         <table class="table table-responsive tbl_all_proj">
                             <thead id="Projects_Tab" style="font-size: 15px;">
                                 <tr>
@@ -10486,7 +10494,8 @@
                                                 <div id="project_details"
                                                     class="card_main_box draggable project_details show">
                                                     <div class="Head_Edit" style=" background-color: #000000;">
-                                                        <div style="font-size: 12px; font-weight: 600; color:#ffffff;text-decoration: underline;letter-spacing: 1px;font-style: italic;">
+                                                        <div
+                                                            style="font-size: 12px; font-weight: 600; color:#ffffff;text-decoration: underline;letter-spacing: 1px;font-style: italic;">
                                                             Project Details
                                                         </div>
                                                         <div>
@@ -36902,13 +36911,12 @@
                         </div>
                     </div> -->
                     <div class="file-upload" id="file-upload-container" style="display: none;">
-                        <h4 style="font-size: 18px;">Excel Upload </h4>
+                        <h4 style="font-size: 14px;">Excel Upload </h4>
                         <!--<i class="fa-solid fa-upload upload_icon"></i> -->
-                        <form><!-- method="post" enctype="multipart/form-data"-->
-                            <label class="chooseProject_file" for="upload_template">Choose File <i
-                                    class="fa-solid upload_icon fa-file-import"></i></label>
+                        <form class="file_uplaod_ptg"><!-- method="post" enctype="multipart/form-data"-->
+                            <label class="chooseProject_file" for="upload_template">Choose File</label>
                             <input hidden type="file" name="file" id="upload_template">
-                            <button type="FILE" class="Excel_upload">Upload</button>
+                            <button type="FILE" class="Excel_upload"><i class="fa-solid fa-upload"></i><span>Upload</span></button>
                         </form>
                         <div class="Excel_Template_view">
                             <table class="excel-table">
@@ -37262,21 +37270,22 @@
                             <div class="col-lg-2 col-12">
                                 <input type="text" class="form-control formtxt_box_chng" id="roi_amount">
                             </div>
+                        </div>
+
+                        <div class="row space_btw_fields">
                             <div class="col-lg-2 col-12">
-                                <label for="proj_priority" class="form-label label_txt_chng">Comments <span
+                                <label for="Comments" class="form-label label_txt_chng">Comments <span
                                         class="mandatory_star">*</span></label>
                             </div>
-                            <div class="col-lg-2 col-12">
-                                <input type="text" class="form-control formtxt_box_chng" id="roi_comment">
+                            <div class="col-lg-6 col-12 comments_textarea_ptg">
+                                <textarea class="form-select select_box_chng rounded-0 boxes" name="" id="" cols="30" rows=""></textarea>
                             </div>
-
-
-
-
                         </div>
+
                         <div class="content_head_title space_btw_fields">
                             <div class="content_title_head mt-2">
-                                <h3 class="content_head_name" style="margin-left: 4px !important;">Project Status</h3>
+                                <h3 class="content_head_name" style="margin-left: 4px !important;">Project Status
+                                </h3>
                             </div>
                         </div>
                         <div class="row space_btw_fields">
@@ -37337,13 +37346,13 @@
                             <div class="col-lg-2 col-12">
                                 <label for="proj_ragcomments" class="form-label label_txt_chng">RAG Comments</label>
                             </div>
-                            <div class="col-lg-2 col-12">
+                            <div class="col-lg-6 col-12">
                                 <textarea id="proj_ragcomments" rows="2"
                                     class="form-control textarea_box_chng"></textarea>
                             </div>
                             <div class="col-lg-2 col-12 Status_comments" style="display: none;">
-                                <label for="proj_ragcomments" class="form-label label_txt_chng">Status Comments <span
-                                        class="mandatory_star">*</span></label>
+                                <label for="proj_ragcomments" class="form-label label_txt_chng">Status Comments
+                                    <span class="mandatory_star">*</span></label>
                             </div>
                             <div class="col-lg-2 col-12 Status_comments" style="display: none;">
                                 <textarea id="proj_ragcomments" rows="2"
