@@ -3,8 +3,9 @@
 }
 
 .main_title_head {
-    font-size: 25px;
+    font-size: 20px;
     color: #08305c;
+    margin-bottom: -2px;
 }
 
 .tab_head_content {
@@ -27,17 +28,17 @@
 .select_box {
     width: 150px !important;
     border-radius: 0px !important;
-    font-size: 12px !important;
-    padding: 7px 10px !important;
+    font-size: 11px !important;
+    padding: 5px 10px !important;
     border-color: #c5c5c5 !important;
     border: 1px solid #bbbbbb !important;
     background-size: 10px 12px !important;
 }
 
-.mandatory_star{
+.mandatory_star {
     color: red;
     font-size: 14px;
-    font-weight: 500; 
+    font-weight: 500;
 }
 
 .select_box_1 {
@@ -55,7 +56,7 @@
     padding: 5px 14px;
     color: white;
     border: none;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .bt_process_tab {
@@ -127,7 +128,7 @@
     padding: 5px 5px;
     border-radius: 3px;
 }
- 
+
 .btn_proj {
     display: flex;
     align-items: center;
@@ -189,7 +190,7 @@
 .icon_show_tsk {
     /* margin-left: 3px; */
     /* margin-left: 0px; */
-    font-size: 15px;
+    font-size: 13px;
     cursor: pointer;
     color: rgb(46, 171, 46) !important;
     margin-top: 5px;
@@ -219,7 +220,7 @@
     margin-left: 10px;
 }
 
-.func_ba_cls{
+.func_ba_cls {
     width: 60px !important;
     /* padding: 0px !important; */
 }
@@ -433,7 +434,7 @@ mark.rag_status.ut {
 .formtxt_box_chng {
     border-radius: 0px !important;
     font-size: 12px !important;
-    padding: 7px 10px !important;
+    padding: 5px 10px !important;
     border-color: #c5c5c5 !important;
     border: 1px solid #bbbbbb !important;
     margin-left: -3.5rem;
@@ -558,12 +559,13 @@ mark.rag_status.ut {
     position: relative;
     list-style: none;
     background-color: #f7f7f7;
-    margin: 0px auto 25px auto;
     width: fit-content;
+    margin-bottom: 0px;
 }
 
 table.table thead tr th {
-    font-size: 11px;
+    font-size: 10px;
+    padding-top: 5px;
 }
 
 .task_tabwrap {
@@ -675,6 +677,7 @@ table.table thead tr th {
 .tab:last-of-type:not(:first-of-type)+label {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    border-right: none;
 }
 
 .tab:checked+label {
@@ -684,12 +687,12 @@ table.table thead tr th {
     cursor: pointer;
 }
 
-.tab:checked+label:hover {
+/* .tab:checked+label:hover {
     box-shadow: 0 -1px 0 #fff inset;
     background-color: #045697;
     color: #fff;
     cursor: pointer;
-}
+} */
 
 .tab+label {
     width: 100%;
@@ -708,10 +711,11 @@ table.table thead tr th {
     text-align: center;
     -webkit-transition: 0.3s background-color ease, 0.3s box-shadow ease;
     transition: 0.3s background-color ease, 0.3s box-shadow ease;
-    height: 35px;
     box-sizing: border-box;
     padding: 6px 15px;
-    font-size: 12px;
+    font-size: 11px;
+    width: 150px;
+    border-right: 1px solid #b3b3b3;
 }
 
 .task_tab {
@@ -813,18 +817,10 @@ table.table thead tr th {
     transition: 0.3s background-color ease, 0.3s box-shadow ease;
     height: 30px;
     box-sizing: border-box;
-    padding: 6px 15px;
-    font-size: 9px;
+    padding: 6px 5px;
+    font-size: 10px;
 }
 
-
-
-@media (min-width:768px) {
-
-    .tab+label {
-        width: 200px;
-    }
-}
 
 @media (min-width:768px) {
 
@@ -1367,7 +1363,7 @@ th.lab_dwn {
 
 button.btn_bot_div {
     padding: 5px 17px;
- 
+
     border: none;
     background-color: red;
     color: #fff;
@@ -1376,7 +1372,7 @@ button.btn_bot_div {
 
 button.btn_bot_div_save {
     padding: 5px 17px;
-  
+
     border: none;
     background-color: #447E32;
     color: #fff;
@@ -1418,7 +1414,8 @@ button.btn_bot_div_save {
     display: flex;
     flex-direction: column;
 }
-.Btn_style_Pending{
+
+.Btn_style_Pending {
     border: none;
     padding: 4px 0px;
     border-radius: 4px;
@@ -1469,7 +1466,7 @@ button.btn_bot_div_save {
 
 .proj_name_filter {
     border-radius: 0px !important;
-    font-size: 12px !important;
+    font-size: 11px !important;
     border-color: #c5c5c5 !important;
     border: 1px solid #bbbbbb !important;
     margin-top: 0px;
@@ -1479,7 +1476,7 @@ button.btn_bot_div_save {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 25px;
     margin-bottom: 20px;
 }
 
@@ -1526,7 +1523,7 @@ button.btn_bot_div_save {
     display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between;
-   
+
 
     /* // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 }
@@ -1534,7 +1531,7 @@ button.btn_bot_div_save {
 .Head_Edit {
     display: flex;
     justify-content: space-between;
-    padding: 6px 8px;
+    padding: 6px 20px;
 }
 
 .card_bdy {
@@ -1558,7 +1555,8 @@ button.btn_bot_div_save {
     /* border: 1px solid red !important; */
     height: 35px !important;
 }
-.fa-sort{
+
+.fa-sort {
     font-size: 12px;
 }
 
@@ -1707,24 +1705,24 @@ p.yes_no_align {
 }
 
 span.last_num {
-    width: 25px;
+    width: 20px;
     display: block;
-    height: 25px;
+    height: 20px;
     text-align: center;
     border-radius: 50%;
-    padding-top: 3px;
-    font-size: 12px;
+    padding-top: 2px;
+    font-size: 10px;
     margin-left: 25px;
 }
 
 span.last_num_task {
-    width: 25px;
+    width: 20px;
     display: block;
-    height: 25px;
+    height: 20px;
     text-align: center;
     border-radius: 50%;
-    padding-top: 3px;
-    font-size: 12px;
+    padding-top: 2px;
+    font-size: 10px;
     margin-left: 7px;
 }
 
@@ -1734,7 +1732,7 @@ p.yes_no_align.no {
 
 .plus_top {
     color: #03365f;
-    font-size: 26px;
+    font-size: 20px;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -1742,7 +1740,7 @@ p.yes_no_align.no {
 .plus_drop_dwn div {
     display: flex;
     align-items: center;
-    font-size: 13px;
+    font-size: 11px;
     width: 100px;
     gap: 7px;
     font-weight: 400;
@@ -1763,7 +1761,8 @@ p.yes_no_align.no {
     height: 200px;
     overflow-y: auto;
 }
-.plus_drop_dwn::-webkit-scrollbar{
+
+.plus_drop_dwn::-webkit-scrollbar {
     width: 0;
 }
 
@@ -1779,7 +1778,7 @@ table thead tr th {
 table tbody tr td {
     text-align: left;
     vertical-align: middle;
-    font-size: 11px;
+    font-size: 10px;
 }
 
 .file-upload-label {
@@ -1920,7 +1919,21 @@ table tbody tr td {
     overflow: scroll;
     overflow-x: hidden;
     text-align: left;
-    font-size: 12px;
+    font-size: 10px;
+}
+
+.dwn_contents::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dwn_contents::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+.dwn_contents::-webkit-scrollbar-thumb {
+    background: #03365f;
+    border-radius: 10px;
 }
 
 .top_div {
@@ -1929,7 +1942,7 @@ table tbody tr td {
     position: absolute;
     top: 18px;
     right: 20px;
-    width: 300px;
+    width: 240px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     z-index: 1;
 
@@ -1948,7 +1961,7 @@ table tbody tr td {
 }
 
 .dwn_contents div {
-    padding: 12px 20px;
+    padding: 12px 10px;
     border-bottom: 1px solid #dfdfdf;
     cursor: pointer;
 }
@@ -2009,42 +2022,127 @@ input:disabled {
 .small_column_width {
     min-width: 100px !important;
 }
+
+
+
+
+
+
 /* purushoth Starts */
 .form-select.btn_pro_select {
     width: 150px !important;
-    font-size: 12px !important;
+    font-size: 11px !important;
+    padding: 5px 10px !important;
 }
+
 .btn_create_proj_summ {
     background: #447E32 !important;
     color: #fff;
     border: none;
-    font-size: 12px;
+    font-size: 11px;
     padding: 6px 12px;
 }
+
 input.Search_on_p_inp.rounded-0.boxes {
     border: none;
     font-size: 12px;
 }
-input.Search_on_p_inp.rounded-0.boxes:focus{
+
+input.Search_on_p_inp.rounded-0.boxes:focus {
     outline: none;
     border: none;
 }
+
 .Search_on_p {
     display: flex;
     align-items: center;
     border: 1px solid #dfdfdf;
     padding: 5px 15px;
 }
+
 .Search_on_p i {
     font-size: 12px;
 }
+
 table.table.table-responsive.tbl_all_proj {
     overflow-x: visible;
 }
+
 span.batch_details {
     font-size: 12px !important;
     letter-spacing: 1px;
     text-decoration: underline;
     font-style: italic;
+}
+.tab+label:hover{
+    background-color: #d6d6d6;
+}
+.tab:checked+label:hover{
+    background-color: #03365f;
+    color: #fff;
+}
+.acc_inner_ptg {
+    padding: 20px;
+}
+button.accordion-button.acc_ptg_on_btn::after , button.accordion-button.acc_ptg_on_btn:not(.collapsed)::after{
+    background-image: none !important;
+}
+.accordion-item.acc_ptg_on_itm {
+    border-radius: 0 !important;
+    margin-bottom: 10px;
+}
+button.accordion-button.acc_ptg_on_btn {
+    border-radius: 0 !important;
+    padding: 5px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+}
+.acc_inn_cnt_ptg div {
+    width: 25%;
+}
+.acc_inn_cnt_ptg {
+   display: flex;
+   align-items: center;
+   gap: 30px;
+}
+select.form-select.acc_inn_sel_ptg {
+    font-size: 12px;
+    padding: 5px 12px;
+    margin-top: 5px;
+}
+input.form-control.acc_inn_inp_ptg {
+    border-radius: 0;
+    padding: 5px 12px;
+    margin-top: 5px;
+    font-size: 12px;
+}
+button.accordion-button.acc_ptg_on_btn:focus{
+    outline: none;
+    border:none;
+    box-shadow: none;
+}
+.wrap_acc_out_ptg {
+    border: 1px solid #dfdfdf;
+    padding-top: 5px;
+}
+.acc_inner_ptg {
+    padding: 0px 20px;
+}
+hr.hr_ptg {
+    margin: 8px 0px;
+}
+@media (min-width: 1390px) and (max-width: 2400px) {
+    table.table thead tr th {
+        font-size: 11px;
+    }
+    .container.cnt_adj.mt-4.mb-3 {
+        max-width: 1180px;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1390px){
+    .container.cnt_adj.mt-4.mb-3 {
+        max-width: 1180px;
+    }
 }
 /* purushoth Ends */
