@@ -1311,15 +1311,20 @@ table.table thead tr th {
 i.fa-solid.prp_dot.fa-circle {
     margin-left: -7px;
     font-size: 7px;
-
-    /* margin-top: -8px; */
 }
 
 td.Style_tr_prot div {
     display: flex;
+    width: 100%;
+    height: 100%;
     align-items: center;
     flex-direction: column;
-    margin-top: 13px;
+    margin-top: 5px;
+}
+
+td.Style_tr_prot{
+    padding: 5PX 10PX;
+    min-width: 120px;
 }
 
 .prot_BA_view {

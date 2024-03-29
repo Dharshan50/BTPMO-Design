@@ -37,6 +37,7 @@ $(document).ready(function () {
     $(document).find("[id^='edit_revenddate_']").hide();
     $(document).find("[id^='edit_revstrdate_']").hide();
     $(document).find("[id^='edit_enddate_']").hide();
+    $(document).find("[id^='edit_status_']").hide();
     $(document).find("[id^='edit_strdate_']").hide();
     $(document).find("[id^='edit_revendrevdate_']").hide();
     $(document).find("[id^='edit_revstrrevdate_']").hide();
@@ -677,10 +678,12 @@ $("[id^='upd_time_']").on('click', function () {
     console.log(id)
     $(document).find(`#label_strdate_${id}`).hide();
     $(document).find(`#label_enddate_${id}`).hide();
+    $(document).find(`#label_status_${id}`).hide();
     // $(document).find(`#label_revstrdate_${id}`).hide();
     // $(document).find(`#label_revenddate_${id}`).hide();
     $(document).find(`#edit_strdate_${id}`).show();
     $(document).find(`#edit_enddate_${id}`).show();
+    $(document).find(`#edit_status_${id}`).show();
     // $(document).find(`#edit_revstrdate_${id}`).show();
     // $(document).find(`#edit_revenddate_${id}`).show();
     $(`#upd_time_${id}`).hide();
@@ -745,12 +748,12 @@ $("[id^='save_time_']").on('click', function () {
     console.log(id)
     $(document).find(`#label_strdate_${id}`).show();
     $(document).find(`#label_enddate_${id}`).show();
-    $(document).find(`#label_strdate_${id}`).html(strdate);
-    $(document).find(`#label_enddate_${id}`).html(enddate);
+    $(document).find(`#label_status_${id}`).show();
     // $(document).find(`#label_revstrdate_${id}`).show();
     // $(document).find(`#label_revenddate_${id}`).show();
     $(document).find(`#edit_strdate_${id}`).hide();
     $(document).find(`#edit_enddate_${id}`).hide();
+    $(document).find(`#edit_status_${id}`).hide();
     // $(document).find(`#edit_revstrdate_${id}`).hide();
     // $(document).find(`#edit_revenddate_${id}`).hide();
     $(`#upd_time_${id}`).show();
@@ -765,8 +768,6 @@ $("[id^='save_revtime_']").on('click', function () {
     console.log(id)
     $(document).find(`#label_revstrrevdate_${id}`).show();
     $(document).find(`#label_revendrevdate_${id}`).show();
-    $(document).find(`#label_revstrrevdate_${id}`).html(revstr);
-    $(document).find(`#label_revendrevdate_${id}`).html(revend);
     $(document).find(`#edit_revstrrevdate_${id}`).hide();
     $(document).find(`#edit_revendrevdate_${id}`).hide();
     $(`#upd_revtime_${id}`).show();
@@ -1260,9 +1261,10 @@ $(document).on('click', `[id^='view_assign_tsk_']`, function () {
         // $(`#view_assign_tsk_${id}`).removeClass('fa-plus');
         // $(`#view_assign_tsk_${id}`).addClass('fa-minus');
         // $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s','transform': 'rotate(180deg)' });
+        $(document).find(`[id^='assign_tsk_data_']`).hide();
         open_id_dev_tsk = id;
         //console.log(open_id);
-        $(`#assign_tsk_data_${id}`).show();
+        $(document).find(`[id^='assign_tsk_data_${id}']`).show();
         $('#dev_break_tbl').hide();
     }
     else {
