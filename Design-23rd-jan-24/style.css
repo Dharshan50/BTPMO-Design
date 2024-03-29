@@ -1311,6 +1311,10 @@ table.table thead tr th {
 
 }
 
+.offcanvas{
+    width: 300px !important;
+}
+
 i.fa-solid.prp_dot.fa-circle {
     margin-left: -7px;
     font-size: 7px;

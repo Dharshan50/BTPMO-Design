@@ -896,7 +896,7 @@ $('#create_proj').on('click', function () {
     $('#retrn_task_page').attr('data-bs-action', '');
     $('#proj_summary_tbl').hide();
     $('.hide_default_Projects_Tab').hide();
-    // $('#tab_content_bt').hide();
+    $('.tabwrap').hide();
     $('#pagination_container').hide();
     //$('#rqst_cntnt').show();
     $('#proj_content').show();
@@ -919,6 +919,10 @@ $('#tab3').on('click', function () {
     hideProjData();
 })
 
+$('#sumbit_values').on('click', function () {
+    closeContent();
+    $('.tabwrap').show();   
+})
 
 $('#tab6').on('click', function () {
     $('#task_manage').hide();
@@ -1129,6 +1133,7 @@ $('#cancel_btn').on('click', function () {
     else {
         closeContent();
     }
+    $('.tabwrap').show();
 })
 function closeContent() {
     $('#tab1').get(0).click();
