@@ -248,13 +248,22 @@ mark.rag_status.ut {
     /* border-radius: 5px;
     border: 1px solid #000; */
 }
-
+span.i_txt_spn_ptg i {
+    font-size: 12px;
+    cursor: pointer;
+    color: #03365f;
+}
+span.i_txt_spn_ptg {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .rag_status {
     white-space: nowrap;
     text-align: center;
     padding: 4px 9px !important;
     display: inline-block;
-    width: 85%;
+    width: 80px;
     box-sizing: border-box;
 
 }
