@@ -1255,7 +1255,7 @@
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed accordian_head" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#batch_tsk_data_2"
-                                                aria-expanded="false" aria-controls="batch_tsk_data_2">
+                                                aria-expanded="false" aria-controls="batch_tsk_data_2" style="background-color: #0BB18F !important;">
                                                 <div style="display : flex; gap:7px;">
                                                     <span style="margin-left: 10px;">Functional Requriement</span>
                                                 </div>
@@ -2136,19 +2136,1043 @@
                                             </button>
                                         </h2>
                                     </div>
-                                    <div class="accordion" style="margin-bottom: 4px;" id="PRE_task_2">
+                                    <div class="accordion" style="margin-bottom: 4px;" id="PROJECT_CHARTER_1">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed accordian_head" type="button"
-                                                data-bs-toggle="collapse" style="background-color: #8f8f8f !important;"
-                                                data-bs-target="#task_Assignment_Stage_1_0" aria-expanded="true"
-                                                aria-controls="task_Assignment_Stage_1_0">
+                                                data-bs-toggle="collapse"
+                                                style="background-color: #8f8f8f !important;"
+                                                data-bs-target="#pending_Assignment_Stage_1_1" aria-expanded="true"
+                                                aria-controls="pending_Assignment_Stage_1_1">
                                                 <div style="display : flex; gap:7px;">
                                                     <span style="margin-left: 10px;">Project Charter</span>
                                                 </div>
                                             </button>
                                         </h2>
                                     </div>
-                                    <div id="task_Assignment_Stage_1_0" class="collapse droppable"
+                                    <div id="pending_Assignment_Stage_1_1" class="collapse droppable"
+                                    style="max-height:300px; overflow-y:auto;font-size: 12px;">
+                                    <div class=" project_charter droppable" id="project_charter">
+                                        <div id="project_details"
+                                            class="card_main_box draggable project_details show">
+                                            <div class="Head_Edit" style=" background-color: #000000;">
+                                                <div
+                                                    style="font-size: 12px; font-weight: 600; color:#ffffff;letter-spacing: 1px;font-style: italic;">
+                                                    Project Details
+                                                </div>
+                                                <div>
+                                                    <button type="button" title="Edit"
+                                                        id="Project_Detail_Edit_1"
+                                                        class="btn btn-success  btn_upd_task">
+                                                        Edit
+                                                    </button>
+                                                    <button type="button" title="Save"
+                                                        id="Project_Detail_Save_1"
+                                                        class="btn btn-success  btn_upd_task"
+                                                        style="display:none;">
+                                                        Save
+                                                    </button>
+                                                    <button type="button" title="Cancel"
+                                                        id="Project_Detail_Cancel_1"
+                                                        class="btn btn-danger  btn_upd_task"
+                                                        style="display:none;">
+                                                        Cancel
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="wrap_acc_out_ptg">
+                                            <div class="card_cnt">
+                                                <div class="card_cnt_inner_odd">
+                                                    <p class="card_label text_select_boxes"
+                                                        style="margin-bottom:0rem !important;">Function</p>
+                                                    <p style=" text-align: left;" class="card_main_p_tag">
+                                                        <select style="display: none;"
+                                                            class=" Proj_detail_field_1 form-select  field_style">
+                                                            <option value="">Select</option>
+                                                            <option value="Sami" selected>Sami</option>
+                                                        </select>
+                                                        <label
+                                                            style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                            class="Proj_detail_label_1 text_select_boxes">Sami</label>
+                                                    </p>
+                                                </div>
+                                                <div class="card_cnt_inner_even">
+                                                    <p class="card_label text_select_boxes"
+                                                        style="margin-bottom:0rem !important;">Sponser</p>
+                                                    <p class="card_main_p_tag">
+                                                        <input type="text" value='Yoko' style="display: none;"
+                                                            class=" Proj_detail_field_1 form-control  field_style">
+                                                        <label class="Proj_detail_label_1 text_select_boxes"
+                                                            style=" width: 100px; text-align: left; margin-bottom:0rem !important;">Yoko</label>
+                                                    </p>
+                                                </div>
+                                                <div class="card_cnt_inner_odd">
+                                                    <p class="card_label text_select_boxes"
+                                                        style="margin-bottom:0rem !important;">Function Lead(s)
+                                                    </p>
+                                                    <p class="card_main_p_tag">
+                                                        <input type="text" placeholder="DD-MM-YYYY" style="display: none;"
+                                                            value='Karen'
+                                                            class=" Proj_detail_field_1 form-control  field_style"
+                                                            disabled>
+                                                        <label class="Proj_detail_label_1 text_select_boxes"
+                                                            style=" width: 100px; text-align: left; margin-bottom:0rem !important;">Karen</label>
+                                                    </p>
+                                                </div>
+                                                <div class="card_cnt_inner_even">
+                                                    <p class="card_label text_select_boxes"
+                                                        style="margin-bottom:0rem !important;">Impacted Function
+                                                    </p>
+                                                    <p class="card_main_p_tag">
+                                                        <input type="text" placeholder="DD-MM-YYYY" value='BA' style="display: none;"
+                                                            class=" Proj_detail_field_1 form-control field_style"
+                                                            disabled>
+                                                        <label
+                                                            style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                            class="Proj_detail_label_1 text_select_boxes">N/A</label>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card_cnt">
+                                                <div class="card_cnt_inner_even">
+                                                    <p class="card_label text_select_boxes"
+                                                        style="margin-bottom:0rem !important;">Business Case</p>
+                                                    <p class="card_main_p_tag">
+                                                        <select name="" id=""
+                                                            class=" Proj_detail_field_1 form-select  field_style" style="display: none;">
+                                                            <option value="">Select</option>
+                                                            <option value="efficiency" selected>efficiency
+                                                            </option>
+                                                            <option value="ROI">ROI</option>
+                                                        </select>
+                                                        <label
+                                                            style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                            class="Proj_detail_label_1 text_select_boxes">efficiency</label>
+                                                    </p>
+                                                </div>
+                                                <div class="card_cnt_inner_odd">
+                                                    <p class="card_label text_select_boxes"
+                                                        style="margin-bottom:0rem !important;">Project Descision
+                                                    </p>
+                                                    <p class="card_main_p_tag">
+
+                                                        <select name="" id="" style="display: none;"
+                                                            class=" Proj_detail_field_1 form-select  field_style">
+                                                            <option value="">Select</option>
+                                                            <option value="Accepted" selected>Accepted</option>
+                                                            <option value="Not Accepted">Not Accepted</option>
+                                                        </select>
+                                                        <label
+                                                            style="color:#50b10b; font-weight: 600; width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                            class="Proj_detail_label_1 text_select_boxes">Accepted</label>
+                                                    </p>
+                                                </div>
+                                                <div class="card_cnt_inner_even">
+                                                    <p class="card_label text_select_boxes"
+                                                        style="margin-bottom:0rem !important;">Project Priority
+                                                    </p>
+                                                    <p class="card_main_p_tag">
+                                                        <select name="" id="" style="display: none;"
+                                                            class=" Proj_detail_field_1 form-select  field_style">
+                                                            <option value="">Select</option>
+                                                            <option value="1" selected>1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                        <label
+                                                            style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                            class="Proj_detail_label_1">1</label>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <hr class="hr_ptg">
+                                            <div class="acc_inner_ptg">
+                                                <div class="accordion acc_ptg_on" id="accordionExample">
+                                                    <div class="accordion-item acc_ptg_on_itm">
+                                                        <button
+                                                            class="accordion-button collapsed acc_ptg_on_btn"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#collapseOne">
+                                                            <span><i
+                                                                    class="fa-solid acc_ptg_plus fa-plus"></i>Charter
+                                                                submission to Function</span>
+                                                            <span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Edit_40">Edit</span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Save_40"
+                                                                    style="display:none;">Save</span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Cancel_40"
+                                                                    style="display:none; background-color:red">Cancel</span>
+                                                            </span>
+                                                        </button>
+                                                        <div id="collapseOne"
+                                                            class="accordion-collapse collapse"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body acc_ptg_on_bdy">
+                                                                <div class="acc_inn_cnt_ptg">
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">PM
+                                                                            responsible <span
+                                                                                style="color:red; font-weight:500;">*</span></label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_40">Test
+                                                                        </p>
+                                                                       
+                                                                        <select id="Proj_detail_field_40"
+                                                                            style="display: none;"
+                                                                            class="form-select acc_inn_sel_ptg Proj_detail_field_40"
+                                                                            aria-label="Default select example">
+                                                                            <option selected>Select</option>
+                                                                            <option value="1">One</option>
+                                                                            <option value="2">Two</option>
+                                                                            <option value="3">Three</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Start
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_40">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_40">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">End
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_40">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_40">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes "> Revised Start
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_40">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_40">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Revised End Date
+                                                                            </label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_40">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_40">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Revised date comment
+                                                                            </label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_40">
+                                                                            29/05/2024</p>
+                                                                        <input type="text" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control  acc_inn_inp_ptg Proj_detail_field_40">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Status
+                                                                            </label>
+
+                                                                            <mark
+                                                                            style=" width: 100px; text-align: center; background-color: #BDE8F0; color:white;"
+                                                                            class="Task_Label_5 Proj_detail_label_40">Not
+                                                                            Started</mark>
+                                                                            <select id="Proj_detail_field_"
+                                                                            style="display: none;"
+                                                                            class="form-select acc_inn_sel_ptg Proj_detail_field_40"
+                                                                            aria-label="Default select example">
+                                                                            <option selected>Select</option>
+                                                                            <option value="1">One</option>
+                                                                            <option value="2">Two</option>
+                                                                            <option value="3">Three</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Stage
+                                                                            Closure</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_40">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_40">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item acc_ptg_on_itm">
+                                                        <button
+                                                            class="accordion-button collapsed acc_ptg_on_btn"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#collapsetw">
+
+                                                            <span> <i class="fa-solid acc_ptg_plus fa-plus"></i>
+                                                                Business requirement review & validation by
+                                                                BA</span>
+                                                            <span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Edit_41">Edit</span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Save_41"
+                                                                    style="display:none;">Save</span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Cancel_41"
+                                                                    style="display:none; background-color:red">Cancel</span>
+                                                            </span>
+                                                        </button>
+                                                        <div id="collapsetw" class="accordion-collapse collapse"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body acc_ptg_on_bdy">
+                                                                <div class="acc_inn_cnt_ptg">
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">BA
+                                                                            responsible <span
+                                                                                style="color:red; font-weight:500;">*</span></label>
+
+                                                                        <p class="Proj_detail_label_41">Sandeep
+                                                                        </p>
+                                                                        <select
+                                                                            class="form-select acc_inn_sel_ptg Proj_detail_field_41"
+                                                                            aria-label="Default select example"
+                                                                            style="display: none;">
+                                                                            <option selected>Select</option>
+                                                                            <option value="1">One</option>
+                                                                            <option value="2">Two</option>
+                                                                            <option value="3">Three</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Start
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_41">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_41">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">End
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_41">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_41">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes "> Revised Start
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_41">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_41">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Revised End Date
+                                                                            </label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_41">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_41">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Revised date comment
+                                                                            </label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_41">
+                                                                            29/05/2024</p>
+                                                                        <input type="text" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_41">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Status
+                                                                            </label>
+
+                                                                            <mark
+                                                                            style=" width: 100px; text-align: center; background-color: #BDE8F0; color:white;"
+                                                                            class="Task_Label_5 Proj_detail_label_41">Not
+                                                                            Started</mark>
+                                                                            <select id="Proj_detail_field_"
+                                                                            style="display: none;"
+                                                                            class="form-select acc_inn_sel_ptg Proj_detail_field_41"
+                                                                            aria-label="Default select example">
+                                                                            <option selected>Select</option>
+                                                                            <option value="1">One</option>
+                                                                            <option value="2">Two</option>
+                                                                            <option value="3">Three</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">Stage
+                                                                            Closure</label>
+                                                                        <p class="Proj_detail_label_41">
+                                                                            29/05/2024</p>
+                                                                        <input type="date"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_41">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item acc_ptg_on_itm">
+                                                        <button
+                                                            class="accordion-button collapsed acc_ptg_on_btn"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#collapsetr">
+
+                                                            <span><i class="fa-solid acc_ptg_plus fa-plus"></i>
+                                                                Charter submission to PMO</span>
+                                                            <span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Edit_42">Edit</span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Save_42"
+                                                                    style="display:none;">Save</span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Cancel_42"
+                                                                    style="display:none; background-color:red">Cancel</span>
+                                                            </span>
+                                                        </button>
+                                                        <div id="collapsetr" class="accordion-collapse collapse"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body acc_ptg_on_bdy">
+                                                                <div class="acc_inn_cnt_ptg">
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">Function
+                                                                            Lead <span
+                                                                                style="color:red; font-weight:500;">*</span></label>
+
+                                                                        <p class="Proj_detail_label_42">Sandeep
+                                                                        </p>
+                                                                        <select
+                                                                            class="form-select acc_inn_sel_ptg Proj_detail_field_42"
+                                                                            aria-label="Default select example"
+                                                                            - style="display: none;">
+                                                                            <option selected>Select</option>
+                                                                            <option value="1">One</option>
+                                                                            <option value="2">Two</option>
+                                                                            <option value="3">Three</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Start
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_42">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_42">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">End
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_42">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_42">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes "> Revised Start
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_42">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_42">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Revised End Date
+                                                                            </label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_42">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_42">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Revised date comment
+                                                                            </label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_42">
+                                                                            29/05/2024</p>
+                                                                        <input type="text" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_42">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Status
+                                                                            </label>
+
+                                                                            <mark
+                                                                            style=" width: 100px; text-align: center; background-color: #BDE8F0; color:white;"
+                                                                            class="Task_Label_5 Proj_detail_label_42">Not
+                                                                            Started</mark>
+                                                                            <select id="Proj_detail_field_"
+                                                                            style="display: none;"
+                                                                            class="form-select acc_inn_sel_ptg Proj_detail_field_42"
+                                                                            aria-label="Default select example">
+                                                                            <option selected>Select</option>
+                                                                            <option value="1">One</option>
+                                                                            <option value="2">Two</option>
+                                                                            <option value="3">Three</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">Charter
+                                                                            deadline</label>
+                                                                        <p class="Proj_detail_label_42">
+                                                                            29/05/2024</p>
+                                                                        <input type="date"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_42">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">Stage
+                                                                            Closure</label>
+                                                                        <p class="Proj_detail_label_42">
+                                                                            29/05/2024</p>
+                                                                        <input type="date"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_42">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item acc_ptg_on_itm">
+                                                        <button
+                                                            class="accordion-button collapsed acc_ptg_on_btn"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#collapsefr">
+                                                            <span><i class="fa-solid acc_ptg_plus fa-plus"></i>
+                                                                PMO Review</span>
+                                                            <span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Edit_43">Edit</span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Save_43"
+                                                                    style="display:none;">Save</span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Cancel_43"
+                                                                    style="display:none; background-color:red">Cancel</span>
+                                                            </span>
+                                                        </button>
+                                                        <div id="collapsefr" class="accordion-collapse collapse"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body acc_ptg_on_bdy">
+                                                                <div class="acc_inn_cnt_ptg">
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">Responsible PMO 
+                                                                            </label>
+
+                                                                        <p class="Proj_detail_label_43">Test
+                                                                        </p>
+                                                                        <select
+                                                                            class="form-select acc_inn_sel_ptg Proj_detail_field_43"
+                                                                            aria-label="Default select example"
+                                                                            - style="display: none;">
+                                                                            <option selected>Select</option>
+                                                                            <option value="1">One</option>
+                                                                            <option value="2">Two</option>
+                                                                            <option value="3">Three</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Start
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_43">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_43">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">End
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_43">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_43">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes "> Revised Start
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_43">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_43">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Revised End Date
+                                                                            </label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_43">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_43">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Revised date comment
+                                                                            </label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_43">
+                                                                            29/05/2024</p>
+                                                                        <input type="text" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_43">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Status
+                                                                            </label>
+
+                                                                            <mark
+                                                                            style=" width: 100px; text-align: center; background-color: #BDE8F0; color:white;"
+                                                                            class="Task_Label_5 Proj_detail_label_43">Not
+                                                                            Started</mark>
+                                                                            <select id="Proj_detail_field_"
+                                                                            style="display: none;"
+                                                                            class="form-select acc_inn_sel_ptg Proj_detail_field_43"
+                                                                            aria-label="Default select example">
+                                                                            <option selected>Select</option>
+                                                                            <option value="1">One</option>
+                                                                            <option value="2">Two</option>
+                                                                            <option value="3">Three</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">Charter
+                                                                            deadline</label>
+                                                                        <p class="Proj_detail_label_43">
+                                                                            29/05/2024</p>
+                                                                        <input type="date"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_43">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">Stage
+                                                                            Closure</label>
+                                                                        <p class="Proj_detail_label_43">
+                                                                            29/05/2024</p>
+                                                                        <input type="date"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_43">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">Charter submission date
+                                                                            </label>
+                                                                        <p class="Proj_detail_label_43">
+                                                                            29/05/2024</p>
+                                                                        <input type="date"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_43">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item acc_ptg_on_itm">
+                                                        <button
+                                                            class="accordion-button collapsed acc_ptg_on_btn"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#collapsefv">
+                                                            <span><i class="fa-solid acc_ptg_plus fa-plus"></i>
+                                                                Kick-off
+                                                            </span>
+                                                            <span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Edit_44">Edit</span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Save_44"
+                                                                    style="display:none;">Save</span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Cancel_44"
+                                                                    style="display:none; background-color:red">Cancel</span>
+                                                            </span>
+                                                        </button>
+                                                        <div id="collapsefv" class="accordion-collapse collapse"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body acc_ptg_on_bdy">
+                                                                <div class="acc_inn_cnt_ptg">
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">PMO Responsible 
+                                                                            </label>
+
+                                                                        <p class="Proj_detail_label_44">Test
+                                                                        </p>
+                                                                        <select
+                                                                            class="form-select acc_inn_sel_ptg Proj_detail_field_44"
+                                                                            aria-label="Default select example"
+                                                                            - style="display: none;">
+                                                                            <option selected>Select</option>
+                                                                            <option value="1">One</option>
+                                                                            <option value="2">Two</option>
+                                                                            <option value="3">Three</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Start
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_44">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_44">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">End
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_44">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_44">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes "> Revised Start
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_44">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_44">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Revised End Date
+                                                                            </label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_44">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_44">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Revised date comment
+                                                                            </label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_44">
+                                                                            29/05/2024</p>
+                                                                        <input type="text" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_44">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Status
+                                                                            </label>
+
+                                                                            <mark
+                                                                            style=" width: 100px; text-align: center; background-color: #BDE8F0; color:white;"
+                                                                            class="Task_Label_5 Proj_detail_label_44">Not
+                                                                            Started</mark>
+                                                                            <select id="Proj_detail_field_"
+                                                                            style="display: none;"
+                                                                            class="form-select acc_inn_sel_ptg Proj_detail_field_44"
+                                                                            aria-label="Default select example">
+                                                                            <option selected>Select</option>
+                                                                            <option value="1">One</option>
+                                                                            <option value="2">Two</option>
+                                                                            <option value="3">Three</option>
+                                                                        </select>
+                                                                    </div>
+                                                                 
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">Stage
+                                                                            Closure</label>
+                                                                        <p class="Proj_detail_label_44">
+                                                                            29/05/2024</p>
+                                                                        <input type="date"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_44">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">Kick off date
+                                                                            </label>
+                                                                        <p class="Proj_detail_label_44">
+                                                                            29/05/2024</p>
+                                                                        <input type="date"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_44">
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item acc_ptg_on_itm">
+                                                        <button
+                                                            class="accordion-button collapsed acc_ptg_on_btn"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#collapsesx">
+                                                            <span> <i class="fa-solid acc_ptg_plus fa-plus"></i>
+                                                                Charter signoff
+                                                            </span>
+                                                            <span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Edit_48">Edit</span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Save_48"
+                                                                    style="display:none;">Save</span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Cancel_48"
+                                                                    style="display:none; background-color:red">Cancel</span>
+                                                            </span>
+                                                        </button>
+                                                        <div id="collapsesx" class="accordion-collapse collapse"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body acc_ptg_on_bdy">
+                                                                <div class="acc_inn_cnt_ptg">
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">PMO Responsible 
+                                                                            </label>
+
+                                                                        <p class="Proj_detail_label_48">Test
+                                                                        </p>
+                                                                        <select
+                                                                            class="form-select acc_inn_sel_ptg Proj_detail_field_48"
+                                                                            aria-label="Default select example"
+                                                                            - style="display: none;">
+                                                                            <option selected>Select</option>
+                                                                            <option value="1">One</option>
+                                                                            <option value="2">Two</option>
+                                                                            <option value="3">Three</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Start
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_48">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_48">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">End
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_48">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_48">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes "> Revised Start
+                                                                            Date</label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_48">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_48">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Revised End Date
+                                                                            </label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_48">
+                                                                            29/05/2024</p>
+                                                                        <input type="date" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_48">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Revised date comment
+                                                                            </label>
+
+                                                                        <p id="pm_label_in"
+                                                                            class="Proj_detail_label_48">
+                                                                            29/05/2024</p>
+                                                                        <input type="text" id="pm_sel_in"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_48">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes ">Status
+                                                                            </label>
+
+                                                                            <mark
+                                                                            style=" width: 100px; text-align: center; background-color: #BDE8F0; color:white;"
+                                                                            class="Task_Label_5 Proj_detail_label_48">Not
+                                                                            Started</mark>
+                                                                            <select id="Proj_detail_field_"
+                                                                            style="display: none;"
+                                                                            class="form-select acc_inn_sel_ptg Proj_detail_field_48"
+                                                                            aria-label="Default select example">
+                                                                            <option selected>Select</option>
+                                                                            <option value="1">One</option>
+                                                                            <option value="2">Two</option>
+                                                                            <option value="3">Three</option>
+                                                                        </select>
+                                                                    </div>
+                                                                   
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">Stage
+                                                                            Closure</label>
+                                                                        <p class="Proj_detail_label_48">
+                                                                            29/05/2024</p>
+                                                                        <input type="date"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_48">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">Signoff deadline
+                                                                            </label>
+                                                                        <p class="Proj_detail_label_48">
+                                                                            29/05/2024</p>
+                                                                        <input type="date"
+                                                                            style="display: none;"
+                                                                            class="form-control acc_inn_inp_ptg Proj_detail_field_48">
+                                                                    </div>
+                                                                    <div>
+                                                                        <label for=""
+                                                                            class="card_label text_select_boxes">Signoff status
+                                                                            </label>
+
+                                                                        <p class="Proj_detail_label_48">Test
+                                                                        </p>
+                                                                        <select
+                                                                            class="form-select acc_inn_sel_ptg Proj_detail_field_48"
+                                                                            aria-label="Default select example"
+                                                                            - style="display: none;">
+                                                                            <option selected>Select</option>
+                                                                            <option value="1">Signed</option>
+                                                                            <option value="2">Not signed</option>
+                                                                            
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                  
+                                    <!-- <div id="task_Assignment_Stage_1_0" class="collapse droppable"
                                         style="max-height:300px; overflow-y:auto;font-size: 12px;">
                                         <div class=" project_charter droppable" id="project_charter">
                                             <div id="project_details"
@@ -4459,10 +5483,10 @@
                                                                 style="margin-bottom:0rem !important;">
                                                                 Responsibility</p>
                                                             <p style=" text-align: left;" class="card_main_p_tag">
-                                                                <!-- <input type="text" placeholder="DD-MM-YYYY"
+                                                                <input type="text" placeholder="DD-MM-YYYY"
                                                  
                                                 value='Sami Chennakesavulu' class="EditField_1"> -->
-                                                                <select class="EditField_1">
+                                                                <!-- <select class="EditField_1">
                                                                     <option value="">Select</option>
                                                                     <option value="1" selected>Sami Chennakesavulu
                                                                     </option>
@@ -4472,8 +5496,8 @@
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
                                                                     class="LabelField_1">Sami Chennakesavulu</label>
                                                             </p>
-                                                        </div>
-                                                        <div class="card_cnt_inner_odd">
+                                                        </div> -->
+                                                        <!-- <div class="card_cnt_inner_odd">
                                                             <p class="card_label text_select_boxes"
                                                                 style="margin-bottom:0rem !important;">
                                                                 Charter Signoff DeadLine</p>
@@ -4483,8 +5507,8 @@
                                                                 <label class="LabelField_1"
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;">28-02-2024</label>
                                                             </p>
-                                                        </div>
-                                                        <div class="card_cnt_inner_even">
+                                                        </div> -->
+                                                        <!-- <div class="card_cnt_inner_even">
                                                             <p class="card_label text_select_boxes"
                                                                 style="margin-bottom:0rem !important;">Start
                                                                 Date : </p>
@@ -4496,8 +5520,8 @@
                                                                     style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
                                                                     class="LabelField_1">-</label>
                                                             </p>
-                                                        </div>
-                                                        <div class="card_cnt_inner_odd">
+                                                        </div> -->
+                                                        <!-- <div class="card_cnt_inner_odd">
                                                             <p class="card_label text_select_boxes"
                                                                 style="margin-bottom:0rem !important;">End
                                                                 Date </p>
@@ -5262,8 +6286,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="accordion" style="margin-bottom: 4px;" id="PROJECT_CHARTER_1">
+                                    </div> -->
+                                    <!-- <div class="accordion" style="margin-bottom: 4px;" id="PROJECT_CHARTER_1">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed accordian_head" type="button"
                                                 data-bs-toggle="collapse" style="background-color: #8f8f8f !important;"
@@ -5281,8 +6305,8 @@
                                         <div id="project_details" class="card_main_box draggable project_details show">
                                             <div class="Head_Edit" style=" background-color: #000000;">
                                                 <div style="font-size: 12px; font-weight: 600; color:#ffffff;">
-                                                    Functional Requirement Details
-                                                </div>
+                                                    Functional Requirement Details -->
+                                                <!-- </div>  -->
                                                 <!-- <div>
                                                         <button type="button" title="Edit" id="Development_Detail_Edit_1"
                                                             class="btn btn-success  btn_upd_task"
@@ -5300,20 +6324,20 @@
                                                             Cancel
                                                         </button>
                                                     </div> -->
-                                            </div>
+                                            <!-- </div>
                                             <div class="card_bdy" id="Development_Detail_1"
                                                 style="max-height: 500px !important;">
                                                 <div class="card_cnt">
                                                     <div class="card_cnt_inner_odd">
                                                         <p class="card_label text_select_boxes"
                                                             style="margin-bottom:0rem !important;">Start Date</p>
-                                                        <p style=" text-align: left;" class="card_main_p_tag">
+                                                        <p style=" text-align: left;" class="card_main_p_tag"> -->
                                                             <!-- <select class="Development_Detail_field_1  form-select field_style text_select_boxes">
                                                                     <option value="">Select</option>
                                                                     <option value="Internal" selected>Internal</option>
-                                                                    <option value="External">External</option>
-                                                                </select> -->
-                                                            <label
+                                                                     <option value="External">External</option>
+ </select> -->
+                                                            <!-- <label
                                                                 style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
                                                                 class="Development_Detail_label_1 text_select_boxes">01/03/2024</label>
                                                         </p>
@@ -5321,34 +6345,34 @@
                                                     <div class="card_cnt_inner_even">
                                                         <p class="card_label text_select_boxes"
                                                             style="margin-bottom:0rem !important;">End Date</p>
-                                                        <p class="card_main_p_tag">
+                                                        <p class="card_main_p_tag">  -->
                                                             <!-- <input type="text" 
                                                                     value='Thomos' class="Development_Detail_field_1 form-control field_style text_select_boxes"> -->
-                                                            <label class="Development_Detail_label_1 text_select_boxes"
+                                                            <!-- <label class="Development_Detail_label_1 text_select_boxes"
                                                                 style=" width: 100px; text-align: left; margin-bottom:0rem !important;">10/03/2024</label>
                                                         </p>
                                                     </div>
                                                     <div class="card_cnt_inner_odd">
                                                         <p class="card_label text_select_boxes"
                                                             style="margin-bottom:0rem !important;">Allocation/day</p>
-                                                        <p class="card_main_p_tag">
+                                                        <p class="card_main_p_tag"> -->
                                                             <!-- <select class="Development_Detail_field_1 form-select field_style text_select_boxes">
                                                                     <option value="">Select</option>
                                                                     <option value="High" selected>High</option>
                                                                     <option value="Low">Low</option>
                                                                     <option value="Medium">Medium</option>
                                                                 </select> -->
-                                                            <label class="Development_Detail_label_1 text_select_boxes"
+                                                            <!-- <label class="Development_Detail_label_1 text_select_boxes"
                                                                 style=" width: 100px; text-align: left; margin-bottom:0rem !important;">0</label>
                                                         </p>
                                                     </div>
                                                     <div class="card_cnt_inner_even">
                                                         <p class="card_label text_select_boxes"
                                                             style="margin-bottom:0rem !important;">Estimated MD</p>
-                                                        <p class="card_main_p_tag">
+                                                        <p class="card_main_p_tag"> -->
                                                             <!-- <input type="text" placeholder="DD-MM-YYYY"
                                                                     value='3' class="Development_Detail_field_1 form-control field_style text_select_boxes" disabled> -->
-                                                            <label
+                                                            <!-- <label
                                                                 style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
                                                                 class="Development_Detail_label_1 text_select_boxes">3</label>
                                                         </p>
@@ -5358,7 +6382,7 @@
                                                     <div class="card_cnt_inner_even">
                                                         <p class="card_label text_select_boxes"
                                                             style="margin-bottom:0rem !important;">Resp BA</p>
-                                                        <p class="card_main_p_tag">
+                                                        <p class="card_main_p_tag"> -->
                                                             <!-- <select name="" id="" class="Development_Detail_field_1 form-select field_style text_select_boxes">
                                                                     <option value="">Select</option>
                                                                     <option value="1" selected>1</option>
@@ -5366,7 +6390,7 @@
                                                                     <option value="3">3</option>
                                                                     <option value="4">4</option>
                                                                 </select> -->
-                                                            <label
+                                                            <!-- <label
                                                                 style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
                                                                 class="Development_Detail_label_1 text_select_boxes">Sandeep</label>
                                                         </p>
@@ -5374,10 +6398,10 @@
                                                     <div class="card_cnt_inner_odd">
                                                         <p class="card_label text_select_boxes"
                                                             style="margin-bottom:0rem !important;">Developer</p>
-                                                        <p class="card_main_p_tag">
+                                                        <p class="card_main_p_tag"> -->
                                                             <!-- <input type="text" placeholder="DD-MM-YYYY"
                                                                 value='Comment' class="Development_Detail_field_1 form-control field_style text_select_boxes"> -->
-                                                            <label
+                                                            <!-- <label
                                                                 style=" font-weight: 600; width: 100px; text-align: left; margin-bottom:0rem !important;"
                                                                 class="Development_Detail_label_1 text_select_boxes">Thomas</label>
                                                         </p>
@@ -5396,9 +6420,9 @@
                                                         <p class="card_label text_select_boxes"
                                                             style="margin-bottom:0rem !important;">Signoff</p>
                                                         <p class="card_main_p_tag">
-                                                            <!-- <input type="text" placeholder="DD-MM-YYYY"
+                                                           <input type="text" placeholder="DD-MM-YYYY"
                                                                 value='Comment' class="Development_Detail_field_1 form-control field_style text_select_boxes"> -->
-                                                            <label
+                                                            <!-- <label
                                                                 style="  width: 100px; text-align: left; margin-bottom:0rem !important;"
                                                                 class="Development_Detail_label_1 text_select_boxes">signed
                                                                 <i class="fa-solid fa-paperclip"
@@ -5409,7 +6433,7 @@
                                             </div>
                                         </div>
 
-
+ -->
 
                                         <!-- <div class=" project_charter droppable" id="project_charter"> 
                                                 <div id="item1_1" class="card_main_box draggable item1 show">
@@ -7348,12 +8372,12 @@
                                     </div>
 
 
-                                    <div class="accordion" style="margin-bottom: 4px;" id="batch_dev_1">
-                                        <h2 class="accordion-header">
+                                    <div class="accordion" style="margin-bottom: 4px; " id="batch_dev_1">
+                                        <h2 class="accordion-header" >
                                             <button class="accordion-button collapsed accordian_head" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#batch_tsk_data_1"
-                                                aria-expanded="false" aria-controls="batch_tsk_data_1">
-                                                <div style="display : flex; gap:7px;">
+                                                aria-expanded="false" aria-controls="batch_tsk_data_1" style="background-color: #0BB18F !important;">
+                                                <div style="display : flex; gap:7px; ">
                                                     <span style="margin-left: 10px;">Development</span>
                                                 </div>
                                             </button>
@@ -11820,12 +12844,12 @@
                                                             class="fa-solid acc_ptg_plus fa-plus"></i>Requirement review with Developer</span>
                                                     <span>
                                                         <span class="edit_btn_ptg"
-                                                            id="Project_Detail_Edit_45">Edit</span>
+                                                            id="Project_Detail_Edit_49">Edit</span>
                                                         <span class="edit_btn_ptg"
-                                                            id="Project_Detail_Save_45"
+                                                            id="Project_Detail_Save_49"
                                                             style="display:none;">Save</span>
                                                         <span class="edit_btn_ptg"
-                                                            id="Project_Detail_Cancel_45"
+                                                            id="Project_Detail_Cancel_49"
                                                             style="display:none; background-color:red">Cancel</span>
                                                     </span>
                                                 </button>
@@ -11840,259 +12864,11 @@
                                                                         style="color:red; font-weight:500;">*</span></label>
                                     
                                                                 <p id="pm_label_in"
-                                                                    class="Proj_detail_label_45">Test
-                                                                </p>
-                                                                <select id="Proj_detail_field_45"
-                                                                    style="display: none;"
-                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_45"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Select</option>
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
-                                                                </select>
-                                                            </div>
-                                                            <div>
-                                                                <label for=""
-                                                                    class="card_label text_select_boxes ">Start Date
-                                                                    </label>
-
-                                                                <p id="pm_label_in"
-                                                                    class="Proj_detail_label_45">
-                                                                    29/05/2024</p>
-                                                                <input type="date" id="pm_sel_in"
-                                                                    style="display: none;"
-                                                                    class="form-control acc_inn_inp_ptg Proj_detail_field_45">
-                                                            </div>
-                                                            <div>
-                                                                <label for=""
-                                                                    class="card_label text_select_boxes ">End date 
-                                                                    </label>
-
-                                                                <p id="pm_label_in"
-                                                                    class="Proj_detail_label_45">
-                                                                    29/05/2024</p>
-                                                                    <input type="date" id="pm_sel_in"
-                                                                    style="display: none;"
-                                                                    class="form-control acc_inn_inp_ptg Proj_detail_field_45">
-                                                            </div>
-                                                            <div>
-                                                                <label for=""
-                                                                    class="card_label text_select_boxes ">Status
-                                                                    </label>
-
-                                                                    <mark
-                                                                    style=" width: 100px; text-align: center; background-color: #BDE8F0; color:white;"
-                                                                    class="Task_Label_5 Proj_detail_label_45">Not
-                                                                    Started</mark>
-                                                                    <select id="Proj_detail_field_"
-                                                                    style="display: none;"
-                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_45"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Select</option>
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item acc_ptg_on_itm">
-                                                <button
-                                                    class="accordion-button collapsed acc_ptg_on_btn"
-                                                    type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsetw_dev">
-                                    
-                                                    <span> <i class="fa-solid acc_ptg_plus fa-plus"></i>
-                                                        Development</span>
-                                                    <span>
-                                                        <span class="edit_btn_ptg"
-                                                            id="Project_Detail_Edit_41">Edit</span>
-                                                        <span class="edit_btn_ptg"
-                                                            id="Project_Detail_Save_41"
-                                                            style="display:none;">Save</span>
-                                                        <span class="edit_btn_ptg"
-                                                            id="Project_Detail_Cancel_41"
-                                                            style="display:none; background-color:red">Cancel</span>
-                                                    </span>
-                                                </button>
-                                                <div id="collapsetw_dev" class="accordion-collapse collapse"
-                                                    data-bs-parent="#accordionExample_dev">
-                                                    <div class="accordion-body acc_ptg_on_bdy">
-                                                        <div class="acc_inn_cnt_ptg">
-                                                            <div>
-                                                                <label for=""
-                                                                    class="card_label text_select_boxes">BA
-                                                                    responsible <span
-                                                                        style="color:red; font-weight:500;">*</span></label>
-                                    
-                                                                <p class="Proj_detail_label_41">Sandeep
-                                                                </p>
-                                                                <select
-                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_41"
-                                                                    aria-label="Default select example"
-                                                                    style="display: none;">
-                                                                    <option selected>Select</option>
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
-                                                                </select>
-                                                            </div>
-                                                            <div>
-                                                                <label for=""
-                                                                    class="card_label text_select_boxes">Stage
-                                                                    Closure</label>
-                                                                <p class="Proj_detail_label_41">
-                                                                    29/05/2024</p>
-                                                                <input type="date"
-                                                                    style="display: none;"
-                                                                    class="form-control acc_inn_inp_ptg Proj_detail_field_41">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item acc_ptg_on_itm">
-                                                <button
-                                                    class="accordion-button collapsed acc_ptg_on_btn"
-                                                    type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsetr_dev">
-                                    
-                                                    <span><i class="fa-solid acc_ptg_plus fa-plus"></i>
-                                                        Test cases preparation for Dev & users </span>
-                                                    <span>
-                                                        <span class="edit_btn_ptg"
-                                                            id="Project_Detail_Edit_47">Edit</span>
-                                                        <span class="edit_btn_ptg"
-                                                            id="Project_Detail_Save_47"
-                                                            style="display:none;">Save</span>
-                                                        <span class="edit_btn_ptg"
-                                                            id="Project_Detail_Cancel_47"
-                                                            style="display:none; background-color:red">Cancel</span>
-                                                    </span>
-                                                </button>
-                                                <div id="collapsetr_dev" class="accordion-collapse collapse"
-                                                    data-bs-parent="#accordionExample_dev">
-                                                    <div class="accordion-body acc_ptg_on_bdy">
-                                                        <div class="acc_inn_cnt_ptg">
-                                                            <div>
-                                                                <label for=""
-                                                                    class="card_label text_select_boxes">BA responsible <span
-                                                                        style="color:red; font-weight:500;">*</span></label>
-                                    
-                                                                <p id="pm_label_in"
-                                                                    class="Proj_detail_label_47">Test
-                                                                </p>
-                                                                <select id="Proj_detail_field_47"
-                                                                    style="display: none;"
-                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_47"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Select</option>
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
-                                                                </select>
-                                                            </div>
-                                                            <div>
-                                                                <label for=""
-                                                                    class="card_label text_select_boxes ">Start Date
-                                                                    </label>
-
-                                                                <p id="pm_label_in"
-                                                                    class="Proj_detail_label_47">
-                                                                    29/05/2024</p>
-                                                                <input type="date" id="pm_sel_in"
-                                                                    style="display: none;"
-                                                                    class="form-control acc_inn_inp_ptg Proj_detail_field_47">
-                                                            </div>
-                                                            <div>
-                                                                <label for=""
-                                                                    class="card_label text_select_boxes ">End date 
-                                                                    </label>
-
-                                                                <p id="pm_label_in"
-                                                                    class="Proj_detail_label_47">
-                                                                    29/05/2024</p>
-                                                                    <input type="date" id="pm_sel_in"
-                                                                    style="display: none;"
-                                                                    class="form-control acc_inn_inp_ptg Proj_detail_field_47">
-                                                            </div>
-                                                            <div>
-                                                                <label for=""
-                                                                    class="card_label text_select_boxes ">Status
-                                                                    </label>
-
-                                                                    <mark
-                                                                    style=" width: 100px; text-align: center; background-color: #BDE8F0; color:white;"
-                                                                    class="Task_Label_5 Proj_detail_label_47">Not
-                                                                    Started</mark>
-                                                                    <select id="Proj_detail_field_"
-                                                                    style="display: none;"
-                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_47"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Select</option>
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item acc_ptg_on_itm">
-                                                <button
-                                                    class="accordion-button collapsed acc_ptg_on_btn"
-                                                    type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsefr_dev">
-                                                    <span><i class="fa-solid acc_ptg_plus fa-plus"></i>
-                                                        Development completion & delivery to BA</span>
-                                                    <span>
-                                                        <span class="edit_btn_ptg"
-                                                            id="Project_Detail_Edit_49">Edit</span>
-                                                        <span class="edit_btn_ptg"
-                                                            id="Project_Detail_Save_49"
-                                                            style="display:none;">Save</span>
-                                                        <span class="edit_btn_ptg"
-                                                            id="Project_Detail_Cancel_49"
-                                                            style="display:none; background-color:red">Cancel</span>
-                                                    </span>
-                                                </button>
-                                                <div id="collapsefr_dev" class="accordion-collapse collapse"
-                                                    data-bs-parent="#accordionExample_dev">
-                                                    <div class="accordion-body acc_ptg_on_bdy">
-                                                        <div class="acc_inn_cnt_ptg">
-                                                            <div>
-                                                                <label for=""
-                                                                    class="card_label text_select_boxes">BA responsible <span
-                                                                        style="color:red; font-weight:500;">*</span></label>
-                                    
-                                                                <p id="pm_label_in"
                                                                     class="Proj_detail_label_49">Test
                                                                 </p>
                                                                 <select id="Proj_detail_field_49"
                                                                     style="display: none;"
-                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_49"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Select</option>
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
-                                                                </select>
-                                                            </div>
-                                                            <div>
-                                                                <label for=""
-                                                                    class="card_label text_select_boxes">Developer <span
-                                                                        style="color:red; font-weight:500;">*</span></label>
-                                    
-                                                                <p id="pm_label_in"
-                                                                    class="Proj_detail_label_49">Test
-                                                                </p>
-                                                                <select id="Proj_detail_field_49"
-                                                                    style="display: none;"
-                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_49"
+                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_45"
                                                                     aria-label="Default select example">
                                                                     <option selected>Select</option>
                                                                     <option value="1">One</option>
@@ -12133,9 +12909,260 @@
                                                                     style=" width: 100px; text-align: center; background-color: #BDE8F0; color:white;"
                                                                     class="Task_Label_5 Proj_detail_label_49">Not
                                                                     Started</mark>
-                                                                    <select id="Proj_detail_field_49"
+                                                                    <select 
                                                                     style="display: none;"
                                                                     class="form-select acc_inn_sel_ptg Proj_detail_field_49"
+                                                                    aria-label="Default select example">
+                                                                    <option selected>Select</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                                                       
+                                                          
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item acc_ptg_on_itm">
+                                                <button
+                                                    class="accordion-button collapsed acc_ptg_on_btn"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsetw_dev">
+                                    
+                                                    <span> <i class="fa-solid acc_ptg_plus fa-plus"></i>
+                                                        Development</span>
+                                                    <span>
+                                                        <span class="edit_btn_ptg"
+                                                            id="Project_Detail_Edit_50">Edit</span>
+                                                        <span class="edit_btn_ptg"
+                                                            id="Project_Detail_Save_50"
+                                                            style="display:none;">Save</span>
+                                                        <span class="edit_btn_ptg"
+                                                            id="Project_Detail_Cancel_50"
+                                                            style="display:none; background-color:red">Cancel</span>
+                                                    </span>
+                                                </button>
+                                                <div id="collapsetw_dev" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionExample_dev">
+                                                    <div class="accordion-body acc_ptg_on_bdy">
+                                                        <div class="acc_inn_cnt_ptg">
+                                                            <div>
+                                                                <label for=""
+                                                                    class="card_label text_select_boxes">BA
+                                                                    responsible <span
+                                                                        style="color:red; font-weight:500;">*</span></label>
+                                    
+                                                                <p class="Proj_detail_label_50">Sandeep
+                                                                </p>
+                                                                <select
+                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_50"
+                                                                    aria-label="Default select example"
+                                                                    style="display: none;">
+                                                                    <option selected>Select</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                                                            <div>
+                                                                <label for=""
+                                                                    class="card_label text_select_boxes">Stage
+                                                                    Closure</label>
+                                                                <p class="Proj_detail_label_50">
+                                                                    29/05/2024</p>
+                                                                <input type="date"
+                                                                    style="display: none;"
+                                                                    class="form-control acc_inn_inp_ptg Proj_detail_field_50">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item acc_ptg_on_itm">
+                                                <button
+                                                    class="accordion-button collapsed acc_ptg_on_btn"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsetr_dev">
+                                    
+                                                    <span><i class="fa-solid acc_ptg_plus fa-plus"></i>
+                                                        Test cases preparation for Dev & users </span>
+                                                    <span>
+                                                        <span class="edit_btn_ptg"
+                                                            id="Project_Detail_Edit_51">Edit</span>
+                                                        <span class="edit_btn_ptg"
+                                                            id="Project_Detail_Save_51"
+                                                            style="display:none;">Save</span>
+                                                        <span class="edit_btn_ptg"
+                                                            id="Project_Detail_Cancel_51"
+                                                            style="display:none; background-color:red">Cancel</span>
+                                                    </span>
+                                                </button>
+                                                <div id="collapsetr_dev" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionExample_dev">
+                                                    <div class="accordion-body acc_ptg_on_bdy">
+                                                        <div class="acc_inn_cnt_ptg">
+                                                            <div>
+                                                                <label for=""
+                                                                    class="card_label text_select_boxes">BA responsible <span
+                                                                        style="color:red; font-weight:500;">*</span></label>
+                                    
+                                                                <p id="pm_label_in"
+                                                                    class="Proj_detail_label_51">Test
+                                                                </p>
+                                                                <select id="Proj_detail_field_51"
+                                                                    style="display: none;"
+                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_51"
+                                                                    aria-label="Default select example">
+                                                                    <option selected>Select</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                                                            <div>
+                                                                <label for=""
+                                                                    class="card_label text_select_boxes ">Start Date
+                                                                    </label>
+
+                                                                <p id="pm_label_in"
+                                                                    class="Proj_detail_label_51">
+                                                                    29/05/2024</p>
+                                                                <input type="date" id="pm_sel_in"
+                                                                    style="display: none;"
+                                                                    class="form-control acc_inn_inp_ptg Proj_detail_field_51">
+                                                            </div>
+                                                            <div>
+                                                                <label for=""
+                                                                    class="card_label text_select_boxes ">End date 
+                                                                    </label>
+
+                                                                <p id="pm_label_in"
+                                                                    class="Proj_detail_label_51">
+                                                                    29/05/2024</p>
+                                                                    <input type="date" id="pm_sel_in"
+                                                                    style="display: none;"
+                                                                    class="form-control acc_inn_inp_ptg Proj_detail_field_51">
+                                                            </div>
+                                                            <div>
+                                                                <label for=""
+                                                                    class="card_label text_select_boxes ">Status
+                                                                    </label>
+
+                                                                    <mark
+                                                                    style=" width: 100px; text-align: center; background-color: #BDE8F0; color:white;"
+                                                                    class="Task_Label_5 Proj_detail_label_51">Not
+                                                                    Started</mark>
+                                                                    <select id="Proj_detail_field_"
+                                                                    style="display: none;"
+                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_51"
+                                                                    aria-label="Default select example">
+                                                                    <option selected>Select</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item acc_ptg_on_itm">
+                                                <button
+                                                    class="accordion-button collapsed acc_ptg_on_btn"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsefr_dev">
+                                                    <span><i class="fa-solid acc_ptg_plus fa-plus"></i>
+                                                        Development completion & delivery to BA</span>
+                                                    <span>
+                                                        <span class="edit_btn_ptg"
+                                                            id="Project_Detail_Edit_52">Edit</span>
+                                                        <span class="edit_btn_ptg"
+                                                            id="Project_Detail_Save_52"
+                                                            style="display:none;">Save</span>
+                                                        <span class="edit_btn_ptg"
+                                                            id="Project_Detail_Cancel_52"
+                                                            style="display:none; background-color:red">Cancel</span>
+                                                    </span>
+                                                </button>
+                                                <div id="collapsefr_dev" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionExample_dev">
+                                                    <div class="accordion-body acc_ptg_on_bdy">
+                                                        <div class="acc_inn_cnt_ptg">
+                                                            <div>
+                                                                <label for=""
+                                                                    class="card_label text_select_boxes">BA responsible <span
+                                                                        style="color:red; font-weight:500;">*</span></label>
+                                    
+                                                                <p id="pm_label_in"
+                                                                    class="Proj_detail_label_52">Test
+                                                                </p>
+                                                                <select 
+                                                                    style="display: none;"
+                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_52"
+                                                                    aria-label="Default select example">
+                                                                    <option selected>Select</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                                                            <div>
+                                                                <label for=""
+                                                                    class="card_label text_select_boxes">Developer <span
+                                                                        style="color:red; font-weight:500;">*</span></label>
+                                    
+                                                                <p id="pm_label_in"
+                                                                    class="Proj_detail_label_52">Test
+                                                                </p>
+                                                                <select 
+                                                                    style="display: none;"
+                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_52"
+                                                                    aria-label="Default select example">
+                                                                    <option selected>Select</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                                                            <div>
+                                                                <label for=""
+                                                                    class="card_label text_select_boxes ">Start Date
+                                                                    </label>
+
+                                                                <p id="pm_label_in"
+                                                                    class="Proj_detail_label_52">
+                                                                    29/05/2024</p>
+                                                                <input type="date" id="pm_sel_in"
+                                                                    style="display: none;"
+                                                                    class="form-control acc_inn_inp_ptg Proj_detail_field_52">
+                                                            </div>
+                                                            <div>
+                                                                <label for=""
+                                                                    class="card_label text_select_boxes ">End date 
+                                                                    </label>
+
+                                                                <p id="pm_label_in"
+                                                                    class="Proj_detail_label_52">
+                                                                    29/05/2024</p>
+                                                                    <input type="date" id="pm_sel_in"
+                                                                    style="display: none;"
+                                                                    class="form-control acc_inn_inp_ptg Proj_detail_field_52">
+                                                            </div>
+                                                            <div>
+                                                                <label for=""
+                                                                    class="card_label text_select_boxes ">Status
+                                                                    </label>
+
+                                                                    <mark
+                                                                    style=" width: 100px; text-align: center; background-color: #BDE8F0; color:white;"
+                                                                    class="Task_Label_5 Proj_detail_label_52">Not
+                                                                    Started</mark>
+                                                                    <select 
+                                                                    style="display: none;"
+                                                                    class="form-select acc_inn_sel_ptg Proj_detail_field_52"
                                                                     aria-label="Default select example">
                                                                     <option selected>Select</option>
                                                                     <option value="1">One</option>
