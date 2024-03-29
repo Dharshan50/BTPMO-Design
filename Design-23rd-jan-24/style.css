@@ -551,13 +551,7 @@ span.i_txt_spn_ptg {
     gap: 20px;
 }
 
-.big_column_width {
-    min-width: 100px !important;
-}
 
-.small_column_width {
-    min-width: 100px !important;
-}
 
 .upd_initial_name {
     border: 1px solid #8F742E;
@@ -2045,11 +2039,11 @@ input:disabled {
 }
 
 .big_column_width {
-    min-width: 110px !important;
+    min-width: 90px !important;
 }
 
 .small_column_width {
-    min-width: 100px !important;
+    min-width: 90px !important;
 }
 
 
