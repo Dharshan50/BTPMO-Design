@@ -43,6 +43,7 @@ $(document).ready(function () {
     $(document).find("[id^='edit_revstrrevdate_']").hide();
     $(document).find("[id^='edit_endrevdate_']").hide();
     $(document).find("[id^='edit_strrevdate_']").hide();
+    $(document).find("[id^='edit_revstatus_']").hide();
 
     $(document).find("[id^='edit_revenddate_']").datepicker({
         dateFormat: 'dd/mm/yy'
@@ -734,7 +735,10 @@ $("[id^='upd_revtime_']").on('click', function () {
     console.log(id)
     $(document).find(`#label_revstrrevdate_${id}`).hide();
     $(document).find(`#label_revendrevdate_${id}`).hide();
-    $(document).find(`#edit_revstrrevdate_${id}`).show();
+    $(document).find(`#label_revstatus_${id}`).hide();
+
+    $(document).find(`#edit_revstatus_${id}`).show();
+    $(document).find(`#edit_revstrrevdate_${id}`).show(); 
     $(document).find(`#edit_revendrevdate_${id}`).show();
     $(`#upd_revtime_${id}`).hide();
     $(`#save_revtime_${id}`).show();
@@ -768,8 +772,12 @@ $("[id^='save_revtime_']").on('click', function () {
     console.log(id)
     $(document).find(`#label_revstrrevdate_${id}`).show();
     $(document).find(`#label_revendrevdate_${id}`).show();
+    $(document).find(`#label_revstatus_${id}`).show();
+
     $(document).find(`#edit_revstrrevdate_${id}`).hide();
+    $(document).find(`#edit_revstatus_${id}`).hide();
     $(document).find(`#edit_revendrevdate_${id}`).hide();
+ 
     $(`#upd_revtime_${id}`).show();
     $(`#save_revtime_${id}`).hide();
 })
