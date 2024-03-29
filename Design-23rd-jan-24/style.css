@@ -2183,6 +2183,12 @@ button.accordion-button.acc_ptg_on_btn span i {
     transform: rotate(225deg) !important;
     transition: transform 0.3s ease;
 }
+.accordion-item.acc_ptg_on_itm {
+    border: 1px solid #d1d1d1;
+}
+.accordion-body.acc_ptg_on_bdy {
+    padding: 1rem;
+}
 @media (min-width: 1390px) and (max-width: 2400px) {
     table.table thead tr th {
         font-size: 11px;
