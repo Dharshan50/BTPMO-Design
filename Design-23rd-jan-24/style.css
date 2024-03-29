@@ -148,16 +148,20 @@
     font-size: 12px;
     margin-left: 75px;
 }
+
 .Excel_upload span {
     margin-left: 7px;
 }
+
 form.file_uplaod_ptg {
     margin-top: 20px;
 }
+
 form.file_uplaod_ptg {
     margin-top: 20px;
     font-size: 12px;
 }
+
 /* Excel */
 .excel-table {
     border-collapse: collapse;
@@ -248,16 +252,19 @@ mark.rag_status.ut {
     /* border-radius: 5px;
     border: 1px solid #000; */
 }
+
 span.i_txt_spn_ptg i {
     font-size: 12px;
     cursor: pointer;
     color: #03365f;
 }
+
 span.i_txt_spn_ptg {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .rag_status {
     white-space: nowrap;
     text-align: center;
@@ -1311,7 +1318,11 @@ table.table thead tr th {
 
 }
 
-.offcanvas{
+.fa-filter {
+    cursor: pointer;
+}
+
+.offcanvas {
     width: 300px !important;
 }
 
@@ -1329,7 +1340,7 @@ td.Style_tr_prot div {
     margin-top: 5px;
 }
 
-td.Style_tr_prot{
+td.Style_tr_prot {
     padding: 5PX 10PX;
     min-width: 120px;
 }
@@ -1581,7 +1592,7 @@ button.btn_bot_div_save {
     font-size: 10px !important;
     border-radius: 0px;
     /* border: 1px solid red !important; */
-   
+
 }
 
 .fa-sort {
@@ -2101,29 +2112,37 @@ span.batch_details {
     text-decoration: underline;
     font-style: italic;
 }
-.tab+label:hover{
+
+.tab+label:hover {
     background-color: #d6d6d6;
 }
-.tab:checked+label:hover{
+
+.tab:checked+label:hover {
     background-color: #03365f;
     color: #fff;
 }
+
 .acc_inner_ptg {
     padding: 20px;
 }
-button.accordion-button.acc_ptg_on_btn::after , button.accordion-button.acc_ptg_on_btn:not(.collapsed)::after{
+
+button.accordion-button.acc_ptg_on_btn::after,
+button.accordion-button.acc_ptg_on_btn:not(.collapsed)::after {
     background-image: none !important;
 }
+
 .accordion-item.acc_ptg_on_itm {
     border-radius: 0 !important;
     margin-bottom: 3px;
 }
+
 span.edit_btn_ptg {
     background-color: #198754;
     font-weight: 400;
     padding: 1px 10px;
     font-size: 10px;
 }
+
 button.accordion-button.acc_ptg_on_btn {
     border-radius: 0 !important;
     padding: 5px 20px;
@@ -2134,82 +2153,102 @@ button.accordion-button.acc_ptg_on_btn {
     align-items: center;
     justify-content: space-between;
 }
+
 .acc_inn_cnt_ptg div {
     width: 22%;
     /* flex-grow: 1; */
 }
+
 .acc_inn_cnt_ptg div p {
     margin-bottom: 0;
 }
+
 .acc_inn_cnt_ptg {
     display: flex;
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
 }
+
 select.form-select.acc_inn_sel_ptg {
     font-size: 12px;
     padding: 5px 12px;
     margin-top: 5px;
 }
+
 input.form-control.acc_inn_inp_ptg {
     border-radius: 0;
     padding: 5px 12px;
     margin-top: 5px;
     font-size: 12px;
 }
-button.accordion-button.acc_ptg_on_btn:focus{
+
+button.accordion-button.acc_ptg_on_btn:focus {
     outline: none;
-    border:none;
+    border: none;
     box-shadow: none;
 }
+
 .wrap_acc_out_ptg {
     border: 1px solid #dfdfdf;
     padding-top: 5px;
 }
+
 .acc_inner_ptg {
     padding: 0px 20px;
 }
+
 hr.hr_ptg {
     margin: 8px 0px;
 }
+
 .table_div {
     overflow-x: auto;
 }
+
 .out_align_ptg {
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
 .col-lg-6.col-12.comments_textarea_ptg {
     width: 44.5%;
 }
+
 i.fa-solid.acc_ptg_plus.fa-plus {
     margin-right: 10px;
 }
+
 button.accordion-button.acc_ptg_on_btn.collapsed span i {
     transform: rotate(0deg) !important;
     transition: transform 0.3s ease;
 }
+
 button.accordion-button.acc_ptg_on_btn span i {
     transform: rotate(225deg) !important;
     transition: transform 0.3s ease;
 }
+
 .accordion-item.acc_ptg_on_itm {
     border: 1px solid #d1d1d1;
 }
+
 .accordion-body.acc_ptg_on_bdy {
     padding: 1rem;
 }
+
 @media (min-width: 1390px) and (max-width: 2400px) {
     table.table thead tr th {
         font-size: 11px;
     }
+
     .container.cnt_adj.mt-4.mb-3 {
         max-width: 1180px;
     }
 }
-@media (min-width: 1200px) and (max-width: 1390px){
+
+@media (min-width: 1200px) and (max-width: 1390px) {
     .container.cnt_adj.mt-4.mb-3 {
         max-width: 1180px;
     }

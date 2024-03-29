@@ -941,11 +941,31 @@ $("[id^='task_tab']").on('click', function () {
     $('.E_Procurement_Table').show();
     $('.hide_default_Tasks_Tab').hide();
     $('.E_Staff_Table').hide();
-    doRestoreTaskColumns();
-    // if (this.id === 'task_tab5') {
-    //     $('.E_Procurement_Table').hide();
-    //     $('.E_Staff_Table').hide();
-    // }
+    doRestoreTaskColumns(); 
+})
+
+$("[id^='clone_']").on('click', function () {
+    $('#proj_summary_tbl').hide();
+    $('.tabwrap').hide();
+    $('#pagination_container').hide();
+    $('#buttons').show();
+    $('#proj_content').show();
+    $('.requst_form').show();
+    $('.create_proj_form_container').show();
+    // $('.create_proj_form').show();
+    $('#proj_type').val("1").trigger('change');  
+})
+
+$("[id^='Edit_Project_']").on('click', function () {
+    $('#proj_summary_tbl').hide();
+    $('.tabwrap').hide();
+    $('#pagination_container').hide();
+    $('#buttons').show();
+    $('#proj_content').show();
+    $('.requst_form').show();
+    $('.create_proj_form_container').show();
+    // $('.create_proj_form').show();
+    $('#proj_type').val("1").trigger('change');
 })
 
 $('#task_tab1').on('click', function () {
