@@ -19,10 +19,10 @@
 .save_Ba_Project {
     width: 100px !important;
     /* line-height: 10px; */
-    padding: 6px 10px !important;
+    padding: 2px 10px !important;
     font-size: 10px !important;
-    height: 34px !important;
     border-radius: 0px !important;
+    height: fit-content;
 }
 
 .select_box {
@@ -226,6 +226,7 @@ form.file_uplaod_ptg {
     justify-content: space-between;
     align-items: center;
     margin-left: 10px;
+    padding: 5px 0px;
 }
 
 .func_ba_cls {
@@ -237,8 +238,8 @@ form.file_uplaod_ptg {
     display: flex;
     justify-content: flex-start;
     gap: 20px;
-    height: 30px;
-    /* align-items: center; */
+    /* height: 30px; */
+    align-items: center;
 }
 
 mark.rag_status.ut {
@@ -1562,7 +1563,7 @@ button.btn_bot_div_save {
     font-size: 10px !important;
     border-radius: 0px;
     /* border: 1px solid red !important; */
-    height: 35px !important;
+   
 }
 
 .fa-sort {
@@ -2159,6 +2160,17 @@ hr.hr_ptg {
 }
 .col-lg-6.col-12.comments_textarea_ptg {
     width: 44.5%;
+}
+i.fa-solid.acc_ptg_plus.fa-plus {
+    margin-right: 10px;
+}
+button.accordion-button.acc_ptg_on_btn.collapsed span i {
+    transform: rotate(0deg) !important;
+    transition: transform 0.3s ease;
+}
+button.accordion-button.acc_ptg_on_btn span i {
+    transform: rotate(225deg) !important;
+    transition: transform 0.3s ease;
 }
 @media (min-width: 1390px) and (max-width: 2400px) {
     table.table thead tr th {
