@@ -2123,12 +2123,14 @@ button.accordion-button.acc_ptg_on_btn {
     justify-content: space-between;
 }
 .acc_inn_cnt_ptg div {
-    width: 25%;
+    width: 20%;
+    flex-grow: 1;
 }
 .acc_inn_cnt_ptg {
-   display: flex;
-   align-items: center;
-   gap: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 select.form-select.acc_inn_sel_ptg {
     font-size: 12px;
