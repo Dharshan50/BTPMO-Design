@@ -2,6 +2,7 @@ var originalOrder = {};
 var lstOrder = [];
 
 $(document).ready(function () {
+
     date_picker();
     hide_all_details();
     $('#top_div').hide();
@@ -68,7 +69,7 @@ $(document).ready(function () {
     });
 
 
-    sortElements();
+    // sortElements();
 })
 
 
@@ -1072,6 +1073,7 @@ $('#task_tab8').on('click', function () {
 })
 
 $('#tab2').on('click', function () {
+   // alert("jjj")
     $('#task_manage').hide();
     task_hide_details();
     $('#proj_summary_tbl').hide();
@@ -1529,11 +1531,13 @@ $(document).find("[id^='Func_Cancel_Ba_']").on('click', function () {
 })
 
 $(document).find("[id^='Project_Detail_Edit_']").on('click', function () {
+ 
     var temp_id = this.id;
     var splitArray = temp_id.split('_');
     var id = splitArray[splitArray.length - 1];
 
     $(document).find(`.Proj_detail_label_${id}`).hide();
+    
     $(document).find(`.Proj_detail_field_${id}`).show();
 
     $(document).find(`#Project_Detail_Save_${id}`).show();
