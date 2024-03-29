@@ -299,6 +299,7 @@ mark.rag_status.ut {
     display: flex;
     gap: 10px;
     margin-top: 14px;
+    align-items: center;
 }
 
 .return_main_btn,
@@ -1324,9 +1325,9 @@ td.Style_tr_prot div {
 .prot_BA_view {
     margin-top: 40px;
     display: flex;
-    align-items: baseline;
+    align-items: flex-start;
     gap: 60px;
-
+    justify-content: space-between;
 }
 
 .filter_Group_project {
@@ -1337,14 +1338,19 @@ td.Style_tr_prot div {
 
 .BA_name_sel {
     background-color: #447E32;
-    padding: 6px 8px;
+    padding: 2px 15px;
     border: 1px solid black;
     color: white;
+    font-size: 12px;
+    width: 100px;
 }
 
 .BA_name {
-    padding: 6px 8px;
+    padding: 2px 15px;
     border: 1px solid black;
+    font-size: 12px;
+    width: 100px;
+    text-align: center;
 }
 
 .ba_name_prot {
