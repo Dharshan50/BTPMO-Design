@@ -2104,7 +2104,7 @@ button.accordion-button.acc_ptg_on_btn::after , button.accordion-button.acc_ptg_
 }
 .accordion-item.acc_ptg_on_itm {
     border-radius: 0 !important;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
 }
 span.edit_btn_ptg {
     background-color: #198754;
