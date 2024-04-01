@@ -2168,6 +2168,11 @@ button.accordion-button.acc_ptg_on_btn {
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+    padding: 18px;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+
 }
 
 select.form-select.acc_inn_sel_ptg {
@@ -2255,3 +2260,26 @@ button.accordion-button.acc_ptg_on_btn span i {
 }
 
 /* purushoth Ends */
+
+
+/* sundar */
+.navfilter{
+    margin: 0px 21px;
+    background-color:#08305c;
+    margin-bottom: 3px;
+}
+.filter_btns{
+background-color:#08305c;
+color: #fff;
+padding:5px 20px;
+}
+.filter_btns:hover{
+    cursor: pointer;
+}
+.bg_highlight{
+    background-color: #198754;
+}
+.filter_body{
+    padding: 20px;
+}
+/* sundar ends */

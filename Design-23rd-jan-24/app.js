@@ -12,7 +12,7 @@ $(document).ready(function () {
     // $('#function_req_2').hide();
     // $('#project_charter_data_2').hide();
     $('#tab1').get(0).click();
-
+    
     $('#proj_tsk_manage').hide();
     $('#prj_tsk_assign').hide();
     $('#proj_stage_task').hide();
@@ -565,6 +565,149 @@ $('#tab1').on('click', function () {
     hide_all_details();
     doRestoreProjectColumns();
 })
+$('#tasktab1').on('click', function () {
+    $('#task_tab1_details').show();
+    $('#task_tab2_details').hide();
+    $('#task_tab3_details').hide();
+    $('#task_tab4_details').hide();
+    $('#task_tab6_details').hide();
+
+
+})
+$('#tasktab2').on('click', function () {
+    $('#task_tab2_details').show();
+    $('#task_tab1_details').hide();
+    $('#task_tab3_details').hide();
+    $('#task_tab6_details').hide();
+
+    $('#task_tab5_details').hide();
+
+})
+$('#tasktab3').on('click', function () {
+    $('#task_tab1_details').hide();
+    $('#task_tab2_details').hide();
+    $('#task_tab4_details').hide();
+    $('#task_tab5_details').hide();
+    $('#task_tab6_details').hide();
+
+    $('#task_tab3_details').show();
+})
+$('#tasktab5').on('click', function () {
+    $('#task_tab1_details').hide();
+    $('#task_tab2_details').hide();
+    $('#task_tab3_details').hide();
+    $('#task_tab4_details').show();
+    $('#task_tab5_details').hide();
+
+    $('#task_tab6_details').hide();
+
+
+})
+$('#tasktab6').on('click', function () {
+    $('#task_tab1_details').hide();
+    $('#task_tab2_details').hide();
+    $('#task_tab3_details').hide();
+    $('#task_tab4_details').hide();
+    $('#task_tab6_details').hide();
+
+    $('#task_tab5_details').show();
+
+})
+$('#tasktab7').on('click', function () {
+    $('#task_tab1_details').hide();
+    $('#task_tab2_details').hide();
+    $('#task_tab3_details').hide();
+    $('#task_tab4_details').hide();
+    $('#task_tab5_details').hide();
+
+    $('#task_tab6_details').show();
+
+})
+
+$('#taskfuntab1').on('click', function () {
+    $('#task_fun1_details').show();
+    $('#task_fun2_details').hide();
+    $('#task_fun3_details').hide();
+    $('#task_fun4_details').hide();
+    $('#task_fun5_details').hide();
+
+})
+$('#taskfuntab2').on('click', function () {
+    $('#task_fun1_details').hide();
+    $('#task_fun3_details').hide();
+    $('#task_fun4_details').hide();
+    $('#task_fun5_details').hide();
+
+    $('#task_fun2_details').show();
+})
+$('#taskfuntab3').on('click', function () {
+    $('#task_fun1_details').hide();
+    $('#task_fun2_details').hide();
+    $('#task_fun4_details').hide();
+    $('#task_fun3_details').show();
+    $('#task_fun5_details').hide();
+
+})
+$('#taskfuntab5').on('click', function () {
+    $('#task_fun1_details').hide();
+    $('#task_fun2_details').hide();
+    $('#task_fun3_details').hide();
+    $('#task_fun5_details').hide();
+
+    $('#task_fun4_details').show();
+})
+$('#taskfuntab6').on('click', function () {
+    $('#task_fun1_details').hide();
+    $('#task_fun2_details').hide();
+    $('#task_fun3_details').hide();
+    $('#task_fun4_details').hide();
+
+    $('#task_fun5_details').show();
+})
+$('#taskdevtab1').on('click', function () {
+    $('#task_dev3_details').hide();
+    $('#task_dev2_details').hide();
+
+    $('#task_dev4_details').hide();
+
+    $('#task_dev1_details').show();
+})
+$('#taskdevtab2').on('click', function () {
+    $('#task_dev3_details').hide();
+    $('#task_dev2_details').show();
+
+    $('#task_dev4_details').hide();
+
+    $('#task_dev1_details').hide();
+})
+$('#taskdevtab3').on('click', function () {
+    $('#task_dev3_details').show();
+    $('#task_dev2_details').hide();
+
+    $('#task_dev4_details').hide();
+
+    $('#task_dev1_details').hide();
+})
+$('#taskdevtab5').on('click', function () {
+    $('#task_dev3_details').hide();
+    $('#task_dev2_details').hide();
+
+    $('#task_dev4_details').show();
+
+    $('#task_dev1_details').hide();
+})
+$('#taskfuntab1').on('click', function () {
+   
+    $('#task_batch1_details').show();
+
+    $('#task_batch2_details').hide();
+})
+$('#taskfuntab2').on('click', function () {
+   
+    $('#task_batch1_details').hide();
+
+    $('#task_batch2_details').show();
+})
 $('#assign_tsk').on('click', function () {
     $('#slct_proj_drop').val("");
     $('#proj_tsk_manage').hide();
@@ -914,6 +1057,9 @@ $('#tab3').on('click', function () {
     $('#bt_dev_tasks').hide();
     $('#portfolio_sec_tab').hide();
     $('#prot_BA_view').hide();
+    $('#Func_Cancel_Ba_1').hide();
+    $('#Func_Save_Ba_1').hide();
+$('.Proj_detail_field_1').hide();
     $('#stage_clousure').hide();
     $('#Ba_responsible').hide();
     hideProjData();
@@ -1572,8 +1718,10 @@ $(document).find("[id^='Project_Detail_Edit_']").on('click', function () {
     var id = splitArray[splitArray.length - 1];
 
     $(document).find(`.Proj_detail_label_${id}`).hide();
+    $(document).find(`#Proj_detail_label_${id}`).hide();
     
     $(document).find(`.Proj_detail_field_${id}`).show();
+    $(document).find(`#Proj_detail_field_${id}`).show();
 
     $(document).find(`#Project_Detail_Save_${id}`).show();
     $(document).find(`#Project_Detail_Cancel_${id}`).show();
@@ -1586,7 +1734,11 @@ $(document).find("[id^='Project_Detail_Cancel_']").on('click', function () {
     var id = splitArray[splitArray.length - 1];
 
     $(document).find(`.Proj_detail_label_${id}`).show();
+    $(document).find(`#Proj_detail_label_${id}`).show();
+
     $(document).find(`.Proj_detail_field_${id}`).hide();
+    $(document).find(`#Proj_detail_field_${id}`).hide();
+
 
     $(document).find(`#Project_Detail_Save_${id}`).hide();
     $(document).find(`#Project_Detail_Cancel_${id}`).hide();
@@ -1599,7 +1751,11 @@ $(document).find("[id^='Project_Detail_Save_']").on('click', function () {
     var id = splitArray[splitArray.length - 1];
 
     $(document).find(`.Proj_detail_label_${id}`).show();
+    $(document).find(`#Proj_detail_label_${id}`).show();
+
     $(document).find(`.Proj_detail_field_${id}`).hide();
+    $(document).find(`#Proj_detail_field_${id}`).hide();
+
 
     $(document).find(`#Project_Detail_Save_${id}`).hide();
     $(document).find(`#Project_Detail_Cancel_${id}`).hide();
