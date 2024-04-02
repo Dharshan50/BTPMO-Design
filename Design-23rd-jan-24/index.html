@@ -2149,10 +2149,6 @@
                                                     </div>
                                                 </div>
                                                 <hr class="hr_ptg">
-                                              
-                                                  
-                                                 
-
                                                 <div class="tabwrap new_tab_ptg">
                                                     <input type="radio" id="taskfuntab1" name="tskbatchGroup1" class="tab" checked>
                                                     <label id="task_fun_1" for="taskfuntab1">Batch 1-Lcs Setup</label>
@@ -2160,15 +2156,15 @@
                                                     <label for="taskfuntab2" id="task_fun_2">Batch 2</label>
                                                 </div>
                                                 <div class="tabwrap new_tab_ptg">
-                                                    <input type="radio" id="taskfun_tab1" name="funtabtask" class="tab" checked>
+                                                    <input type="radio" id="taskfun_tab1" name="funtabtaskreq" class="tab" checked>
                                                     <label class="tabs_pgt_1" id="task_fun_tab1" for="taskfun_tab1">Requirement analysis & draft with Function</label>
-                                                    <input type="radio" id="taskfun_tab2" name="funtabtask" class="tab">
+                                                    <input type="radio" id="taskfun_tab2" name="funtabtaskreq" class="tab">
                                                     <label class="tabs_pgt_1" for="taskfun_tab2" id="task_fun_tab2">Rounds of review with Function</label>
-                                                    <input type="radio" id="taskfun_tab3" name="funtabtask" class="tab">
+                                                    <input type="radio" id="taskfun_tab3" name="funtabtaskreq" class="tab">
                                                     <label class="tabs_pgt_1" for="taskfun_tab3" id="task_fun_tab3">Requirement Finlization</label>
-                                                    <input type="radio" id="taskfun_tab4" name="funtabtask" class="tab">
+                                                    <input type="radio" id="taskfun_tab4" name="funtabtaskreq" class="tab">
                                                     <label class="tabs_pgt_1" for="taskfun_tab4" id="task_fun_tab4">Requirement signoff</label>
-                                                    <input type="radio" id="taskfun_tab5" name="funtabtask" class="tab">
+                                                    <input type="radio" id="taskfun_tab5" name="funtabtaskreq" class="tab">
                                                     <label class="tabs_pgt_1" for="taskfun_tab5" id="task_fun_tab5">Batch Summary</label>
                                                 </div>
                                                
@@ -2193,7 +2189,7 @@
                                                             <div>
                                                                 <label for="" class="card_label text_select_boxes ">End
                                                                     Date  <span style="color:red; font-weight:500;">*</span></label>
-<!--     
+                                                                   <!--     
                                                                 <p id="pm_label_in" class="Proj_detail_label_81">
                                                                     29/05/2024</p> -->
                                                                 <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg ">
@@ -2258,7 +2254,12 @@
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="filter_body" style="padding: 0px;" id="task_batch1_details">
+                                                        <div class="ssc_btn">
+                                                            <button>Save</button>
+                                                           
+                                                        </div>
+                                                </div>
+                                                <div class="filter_body" style=" display: none;" id="task_rev1_details">
                                                             <button
                                                               class="accordion-button collapsed acc_ptg_on_btn"
                                                               type="button" data-bs-toggle="collapse"
@@ -2310,7 +2311,7 @@
                                                                            <span style="color:red; font-weight:500;">*</span></label>
           
                                                                      
-                                                                      <select id="" style="display: none;" class="form-select acc_inn_sel_ptg  rounded-0 boxes" aria-label="Default select example">
+                                                                      <select id=""  class="form-select acc_inn_sel_ptg  rounded-0 boxes" aria-label="Default select example">
                                                                           <option selected="">Select</option>
                                                                           <option value="1">1</option>
                                                                           <option value="2">2</option>
@@ -2331,8 +2332,13 @@
                                                                       </select>
                                                                   </div>
                                                               </div>
+                                                              <div class="ssc_btn">
+                                                                <button>Save</button>
+                                                               
+                                                            </div>
                                                           </div>
-                                                          <div class="filter_body" style="padding: 0px;" id="task_batch1_details" >
+                                                         
+                                                          <div class="filter_body" style="display: none;" id="task_reqfun1_details" >
                                                             <button
                                                               class="accordion-button collapsed acc_ptg_on_btn"
                                                               type="button" data-bs-toggle="collapse"
@@ -2407,9 +2413,15 @@
                                                                     </select>
                                                                 </div>
                                                             </div>
+                                                            <div class="ssc_btn">
+                                                                <button>Save</button>
+                                                               
                                                             </div>
+                                                            </div>
+                                                        
+                                                        
                                                           
-                                                          <div class="filter_body" style="padding: 0px;" id="task_batch1_details">
+                                                          <div class="filter_body" style="display: none;" id="task_signof1_details">
                                                             <button
                                                               class="accordion-button collapsed acc_ptg_on_btn"
                                                               type="button" data-bs-toggle="collapse"
@@ -2482,11 +2494,15 @@
                                                                     </select>
                                                                 </div>
                                                             </div>
+                                                            <div class="ssc_btn">
+                                                                <button>Save</button>
+                                                               
+                                                            </div>
                                                                  
                                                             </div>
                                                              
         
-                                                          <div class="filter_body" style="padding: 0px;" id="task_batch1_details" >
+                                                          <div class="filter_body" style="display: none;" id="task_reqsingoff1_details" >
                                                             <button
                                                               class="accordion-button collapsed acc_ptg_on_btn"
                                                               type="button" data-bs-toggle="collapse"
@@ -2569,7 +2585,7 @@
                                                                 </div>
                                                        
                                                             </div>
-                                                                 
+                                                       
                                                         
 
                                                             <div class="ssc_btn">
@@ -2578,6 +2594,7 @@
                                                                 <button>Cancel</button>
                                                             </div>
                                                     </div>
+                                                </div>
 
 
                                                     <div class="filter_body" id="task_batch2_details" style="display: none;">
@@ -3071,7 +3088,7 @@
                                                                 </div>
                                                                      
                                                                 </div>
-                                                        </div>
+                                                      
                                 </td>
                             </tr>
                             <tr class="All_tasks" id="not_started">

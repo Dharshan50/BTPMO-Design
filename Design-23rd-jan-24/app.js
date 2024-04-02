@@ -698,15 +698,79 @@ $('#taskdevtab5').on('click', function () {
 })
 $('#taskfuntab1').on('click', function () {
    
-    $('#task_batch1_details').show();
+    // $('#task_batch1_details').show();
 
-    $('#task_batch2_details').hide();
+    // $('#task_batch2_details').hide();
 })
 $('#taskfuntab2').on('click', function () {
    
+    // $('#task_batch1_details').hide();
+
+    // $('#task_batch2_details').show();
+})
+
+$('#taskfun_tab1').on('click', function(){
+    $('#task_batch1_details').show();
+    $('#task_rev1_details').hide();
+    $('#task_reqfun1_details').hide();
+    $('#task_reqfun1_details').hide();
+
+
+    $('#task_reqsingoff1_details').hide();
+    $('#task_signof1_details').hide();
+    
+
+    
+})
+$('#taskfun_tab2').on('click', function(){
+
+    $('#task_batch1_details').hide();
+    $('#task_rev1_details').show();
+    $('#task_reqfun1_details').hide();
+
+    $('#task_reqsingoff1_details').hide();
+    $('#task_signof1_details').hide();
     $('#task_batch1_details').hide();
 
-    $('#task_batch2_details').show();
+    
+})
+$('#taskfun_tab3').on('click', function(){
+
+    $('#task_batch1_details').hide();
+    $('#task_rev1_details').hide();
+    $('#task_reqfun1_details').show();
+   
+    $('#task_reqsingoff1_details').hide();
+    $('#task_signof1_details').hide();
+    $('#task_batch1_details').hide();
+
+    
+})
+$('#taskfun_tab4').on('click', function(){
+
+    $('#task_batch1_details').hide();
+    $('#task_rev1_details').hide();
+    $('#task_reqfun1_details').hide();
+
+    
+    $('#task_reqsingoff1_details').hide();
+    $('#task_signof1_details').show();
+    $('#task_batch1_details').hide();
+
+    
+})
+$('#taskfun_tab5').on('click', function(){
+
+    $('#task_batch1_details').hide();
+    $('#task_rev1_details').hide();
+    $('#task_reqfun1_details').hide();
+
+
+    $('#task_reqsingoff1_details').show();
+    $('#task_signof1_details').hide();
+    $('#task_batch1_details').hide();
+
+    
 })
 $('#assign_tsk').on('click', function () {
     $('#slct_proj_drop').val("");
