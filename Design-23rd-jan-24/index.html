@@ -616,7 +616,7 @@
                         <option value="2020">2020</option>
                     </select>
                     <button class="proc_filter" id="Project_filter_Proc">Proceed</button>
-                    <i class="fa-solid fa-filter" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="font-size: 15px; color: grey"></i>
+                    <i title="Filter" class="fa-solid fa-filter" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="font-size: 15px; color: grey"></i>
                 </div>
 
                 <div class="btn_proj">
@@ -40536,7 +40536,16 @@
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-    
+            <label for="proj_type" style="font-size: 12px;" >Business Case Name</label>
+            <select id="proj_type" style="font-size: 12px;" class="form-select mb-2">
+                <option value="0" selected>Select</option>
+                <option value="1">Efficiency</option>
+                <option value="2">ROI</option>
+                <option value="3">UX</option>
+                <option value="4">Group</option>
+            </select>
+            <button type="button" class="btn btn-success  " data-bs-dismiss="offcanvas" aria-label="Close">Apply</button>
+            <button type="button" class="btn btn-danger " data-bs-dismiss="offcanvas" aria-label="Close">Close</button>
         </div>
     </div>
 

@@ -1303,6 +1303,7 @@ $('#cancel_btn').on('click', function () {
 })
 function closeContent() {
     $('#tab1').get(0).click();
+    $('.tabwrap').show();
     $('#task_content').hide();
     $('#proj_content').hide();
     $('#update_task').hide();
