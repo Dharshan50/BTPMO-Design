@@ -1583,7 +1583,11 @@ p.up_t_ptg {
     display: flex;
     justify-content: space-between;
     padding: 6px 20px;
+    border: 1px solid #dfdfdf;
+    border-bottom: none;
+    
 }
+
 
 .card_bdy {
     /* flex: 1 1 auto; */

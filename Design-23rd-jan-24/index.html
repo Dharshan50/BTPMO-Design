@@ -13099,19 +13099,19 @@
                                                     <p class="up_t_ptg">Update Task</p>
                                                     <div class="tabwrap new_tab_ptg">
                                                         <input type="radio" id="tasktab1" name="tabpcGroup1" class="tab" checked>
-                                                        <label id="task_tab_1" for="tasktab1">Task 1</label>
+                                                        <label id="task_tab_1" for="tasktab1">Charter Submission To Function </label>
                                                         <input type="radio" id="tasktab2" name="tabpcGroup1" class="tab">
-                                                        <label for="tasktab2" id="task_tab_2">Task 2</label>
+                                                        <label for="tasktab2" id="task_tab_2">Business requirement review & validation by BA</label>
                                                         <input type="radio" id="tasktab3" name="tabpcGroup1" class="tab">
-                                                        <label id="task_tab_3" for="tasktab3">Task 3</label>
+                                                        <label id="task_tab_3" for="tasktab3">Charter submission to PMO</label>
                                                         <!-- <input type="radio" id="tab4" class="tab" name="tabGroup1">
                                                         <label for="tab4" id="bt_proj_task_tab4">BT-Dev Tasks</label> -->
                                                         <input type="radio" id="tasktab5" class="tab" name="tabpcGroup1"> 
-                                                        <label for="tasktab5" id="task_tab_4">Task 4</label>
+                                                        <label for="tasktab5" id="task_tab_4">PMO Review</label>
                                                         <input type="radio" id="tasktab6" class="tab" name="tabpcGroup1">
-                                                        <label for="tasktab6" id="task_tab_5">Task 5</label>
+                                                        <label for="tasktab6" id="task_tab_5">Kick-off </label>
                                                         <input type="radio" id="tasktab7" class="tab" name="tabpcGroup1">
-                                                        <label for="tasktab7" id="task_tab_6">Task 6</label>
+                                                        <label for="tasktab7" id="task_tab_6">Charter signoff</label>
                                                     </div>
                                                     <div class="filter_body" id="task_tab1_details">
                                                     <button
@@ -13285,6 +13285,9 @@
                                                                 <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg  ">
                                                             </div>
                                                         </div>
+                                                        <div class="ssc_btn">
+                                                            <button>Save</button>
+                                                         </div>
                                                     </div>
                                                     <div class="filter_body" id="task_tab3_details" style="display: none !important;">
                                                         <button
@@ -13400,6 +13403,9 @@
                                                                 <label for="req4" class="form-check-label">Charter presented to Sponsor for validation</label>
                                                             </div>
                                                         </div>
+                                                        <div class="ssc_btn">
+                                                            <button>Save</button>
+                                                         </div>
                                                         </div>
                                                         
                                                       
@@ -13495,6 +13501,9 @@
                                                               <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg  ">
                                                           </div>
                                                         </div>
+                                                        <div class="ssc_btn">
+                                                            <button>Save</button>
+                                                         </div>
                                                              
                                                         </div>
                                                          
@@ -13588,7 +13597,9 @@
                                                               <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg  ">
                                                           </div>
                                                         </div>
-                                                             
+                                                        <div class="ssc_btn">
+                                                            <button>Save</button>
+                                                         </div>
                                                         </div>
                                                         <div class="filter_body" id="task_tab6_details" style="display: none !important;">
                                                             <button
@@ -13697,8 +13708,14 @@
                                                                     <option value="3">Three</option>
                                                                 </select>
                                                             </div>
-                                                       
+                                                           
                                                             </div>
+                                                            <div class="ssc_btn">
+                                                                <button>Save</button>
+                                                                <button>Submit</button>
+                                                                <button>Cancel</button>
+
+                                                             </div>
                                                                  
                                                             </div>
                                                               </div>
@@ -15043,7 +15060,7 @@
                                             </h2>
                                         </div>
                                         <div id="pending_Assignment_Stage_1_2" class=" droppable"
-                                        style="max-height:300px; overflow-y:auto;font-size: 12px;">
+                                        style=" overflow-y:auto;font-size: 12px;">
                                         <div class=" project_charter droppable" id="PROJECT_CHARTER_1">
                                             <div id="project_details"
                                                 class="card_main_box draggable project_details show" style="margin-top: -2px !important;">
@@ -15270,28 +15287,16 @@
                         </h2>
                     </div>
                     <div id="pending_Assignment_Stage_1_3" class="collapse droppable"
-                        style="max-height:300px; overflow-y:auto;font-size: 12px;">
+                        style="overflow-y:auto;font-size: 12px;">
                         <div class=" project_charter droppable" id="project_charter">
                             <div id="project_details" class=" draggable project_details show">
 
-                                <div class="Head_Edit">
-                                    <div style="font-size: 12px; font-weight: 600; color:#ffffff;">
+                                <div class="Head_Edit" style="border-bottom: 1px solid;
+                                width: 100%;">
+                                    <div style="font-size: 12px; font-weight: 600; color:rgb(3, 54, 95);;">
                                         Development Details
                                     </div>
-                                    <div>
-                                        <button type="button" title="Edit" id="Development_Detail_Edit_1"
-                                            class="btn btn-success  btn_upd_task">
-                                            Edit
-                                        </button>
-                                        <button type="button" title="Save" id="Development_Detail_Save_1"
-                                            class="btn btn-success  btn_upd_task" style="display:none;">
-                                            Save
-                                        </button>
-                                        <button type="button" title="Cancel" id="Development_Detail_Cancel_1"
-                                            class="btn btn-danger  btn_upd_task" style="display:none;">
-                                            Cancel
-                                        </button>
-                                    </div>
+                               
                                 </div>
                                 <div class="wrap_acc_out_ptg">
                                     <div class="card_bdy" id="Development_Detail_1"
