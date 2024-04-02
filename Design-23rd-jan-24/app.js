@@ -672,6 +672,14 @@ $('#taskdevtab1').on('click', function () {
 
     $('#task_dev1_details').show();
 })
+$('#taskdevtsktab1').on('click', function () {
+    $('#task_devtask3_details').hide();
+    $('#task_devtask2_details').hide();
+
+    $('#task_devtask4_details').hide();
+
+    $('#task_devtask1_details').show();
+})
 $('#taskdevtab2').on('click', function () {
     $('#task_dev3_details').hide();
     $('#task_dev2_details').show();
@@ -679,6 +687,14 @@ $('#taskdevtab2').on('click', function () {
     $('#task_dev4_details').hide();
 
     $('#task_dev1_details').hide();
+})
+$('#taskdevtsktab2').on('click', function () {
+    $('#task_devtask3_details').hide();
+    $('#task_devtask2_details').show();
+
+    $('#task_devtask4_details').hide();
+
+    $('#task_devtask1_details').hide();
 })
 $('#taskdevtab3').on('click', function () {
     $('#task_dev3_details').show();
@@ -688,6 +704,14 @@ $('#taskdevtab3').on('click', function () {
 
     $('#task_dev1_details').hide();
 })
+$('#taskdevtsktab3').on('click', function () {
+    $('#task_devtask3_details').show();
+    $('#task_devtask2_details').hide();
+
+    $('#task_devtask4_details').hide();
+
+    $('#task_devtask1_details').hide();
+})
 $('#taskdevtab5').on('click', function () {
     $('#task_dev3_details').hide();
     $('#task_dev2_details').hide();
@@ -695,6 +719,14 @@ $('#taskdevtab5').on('click', function () {
     $('#task_dev4_details').show();
 
     $('#task_dev1_details').hide();
+})
+$('#taskdevtsktab5').on('click', function () {
+    $('#task_devtask3_details').hide();
+    $('#task_devtask2_details').hide();
+
+    $('#task_devtask4_details').show();
+
+    $('#task_devtask1_details').hide();
 })
 $('#taskfuntab1').on('click', function () {
    
