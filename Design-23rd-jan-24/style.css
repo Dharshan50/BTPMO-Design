@@ -440,9 +440,9 @@ span.i_txt_spn_ptg {
     margin-left: 5px !important;
 }
 
-.accordion-button {
+/* .accordion-button {
     background-color: #08305c !important;
-}
+} */
 
 
 .btn_create_proj {
@@ -2145,15 +2145,38 @@ span.edit_btn_ptg {
 
 button.accordion-button.acc_ptg_on_btn {
     border-radius: 0 !important;
-    padding: 5px 20px;
+  
     font-size: 12px;
     font-weight: 600;
-    color: #fff;
+    color: #03365f;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid rgb(3, 54, 95);
+    padding: 2px 2px;
 }
-
+.ssc_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.ssc_btn :nth-child(1),.ssc_btn :nth-child(2){
+    background-color: rgb(3, 54, 95);
+    border: none;
+    color: white;
+    padding: 3px 0px;
+    width: 70px;
+    font-size: 12px;
+}
+.ssc_btn :nth-child(3){
+    background-color:red;
+    border: none;
+    color: white;
+    padding: 3px 0px;
+    width: 70px;
+    font-size: 12px; 
+}
 .acc_inn_cnt_ptg div {
     width: 22%;
     /* flex-grow: 1; */
@@ -2169,9 +2192,9 @@ button.accordion-button.acc_ptg_on_btn {
     gap: 20px;
     flex-wrap: wrap;
     padding: 18px;
-    border-left: 1px solid #dfdfdf;
+    /* border-left: 1px solid #dfdfdf;
     border-right: 1px solid #dfdfdf;
-    border-bottom: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf; */
 
 }
 
