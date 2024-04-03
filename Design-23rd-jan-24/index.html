@@ -100,7 +100,7 @@
                 <input type="radio" id="tab2" name="tabGroup1" class="tab">
                 <label for="tab2" id="bt_proj-task_tab">Projects</label>
                 <input type="radio" id="tab3" name="tabGroup1" class="tab">
-                <label id="bt_task_tab" for="tab3">Tasks</label>
+                <label id="bt_task_tab" for="tab3">Tasks <span class="count_num">2</span></label>
                 <!-- <input type="radio" id="tab4" class="tab" name="tabGroup1">
                 <label for="tab4" id="bt_proj_task_tab4">BT-Dev Tasks</label> -->
                 <input type="radio" id="tab5" class="tab" name="tabGroup1">
@@ -954,13 +954,13 @@
                     <input type="radio" id="task_proj_tab1" name="task_proj_tabGroup1" class="proj_task_tab" checked>
                     <label id="bt_proj_tab" for="task_proj_tab1" style="border-right: none;">Projects</label>
                     <input type="radio" id="task_proj_tab2" name="task_proj_tabGroup1" class="proj_task_tab">
-                    <label id="bt_task_tab" for="task_proj_tab2">Change Requests</label>
+                    <label id="bt_task_tab" for="task_proj_tab2">Change Requests <span class="count_num">2</span></label>
                 </div>
             </div>
-            <div class="task_content">
-                <div class="task_tabwrap" style="font-size: 13px; margin-right: 25px !important;">
-                    <input type="radio" id="task_tab1" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_proj_tab" for="task_tab1" style="border-right: none;">Assigned</label>
+            <div class="task_content" id="task_content_proj">
+                <div class="task_tabwrap" style="font-size: 13px; margin-right: 25px !important; ">
+                    <input type="radio" id="task_tab1" name="task_tabGroup1" class="task_tab"  checked>
+                    <label id="bt_proj_tab" for="task_tab1" style="border-left: none; border-right: none; width: 100px;" >Assigned<span class="count_num">2</span></label>
 
                     <input type="radio" id="task_tab2" name="task_tabGroup1" class="task_tab" checked>
                     <label id="bt_task_tab" for="task_tab2" style="border-right: none;">Pending</label>
@@ -983,7 +983,7 @@
                     <label id="bt_task_tab" for="task_tab7" style="border-right: none;">My Tasks</label>
 
                     <input type="radio" id="task_tab8" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab8">Completed</label>
+                    <label id="bt_task_tab" for="task_tab8"style="border-right: none;" >Completed</label>
                 </div>
 
                 <div class="proj_filter_select">
@@ -1015,15 +1015,50 @@
                     <!-- <i class="fa-solid fa-bell" style="margin-top: 30px;color: red;"></i> -->
                 </div>
             </div>
-            <!-- <div class="task_inner_filt mt-4">
-                <div class="task_serch_box">
-                    <div class="search_icon_grp" style="width: 140% !important;">
+            <div class="task_content" style="display: none;" id="task_content_changereq">
+                <div class="task_tabwrap" style="font-size: 13px; margin-right: 440px !important;">
+                    <input type="radio" id="task_tabch1" name="task_tabGroupch1" class="task_tab" checked>
+                    <label id="bt_proj_tab" for="task_tabch1" style="border-right: none; border-left: none; width: 89px; ">Assigned <span class="count_num">2</span></label>
+
+                    <input type="radio" id="task_tabch2" name="task_tabGroupch1" class="task_tab" checked>
+                    <label id="bt_task_tab" for="task_tabch2" style="border-right: none;">Pending</label>
+
+                   
+
+                    <input type="radio" id="task_tabch8" name="task_tabGroupch1" class="task_tab" >
+                    <label id="bt_task_tab" for="task_tabch8" style="border-right: none;">Completed</label>
+                </div>
+
+                <div class="proj_filter_select">
+                    <select id="proj_name_filter" class="form-select  proj_name_filter">
+                        <option value="">Select</option>
+                        <option value="1" selected>All Project</option>
+                        <option value="2">BTPMO</option>
+                        <option value="3">E-Project</option>
+                        <option value="4">E-Staff</option>
+                    </select>
+                    <select id="proj_priority_filter" class="form-select proj_name_filter">
+                        <option value="">Select</option>
+                        <option value="1" selected>All Priority</option>
+                        <option value="2">1</option>
+                        <option value="3">2</option>
+                        <option value="4">3</option>
+                        <option value="5">4</option>
+                        <option value="6">5</option>
+                        <option value="7">6</option>
+                    </select>
+                </div>
+                <div class="task_serch_box d-flex align-items-center">
+                    <div class="search_icon_grp" style="width: 108% !important;">
                         <input type="text" class="form-control formtxt_box_chng"
-                            style="width: 93% !important; margin-left: 0rem !important;" placeholder="Search">
+                            style="width: 93% !important; margin-left: 0rem !important; padding: 5px 10px;"
+                            placeholder="Search">
                         <i class="fas fa-search search_icon" style="right: 25px !important;"></i>
                     </div>
+                    <!-- <i class="fa-solid fa-bell" style="margin-top: 30px;color: red;"></i> -->
                 </div>
-            </div> -->
+            </div>
+           
 
             <div class="tsk_proj_seperate E_Procurement_Table">
                 <!-- <div class="prj_title_head">
@@ -1425,21 +1460,21 @@
                                                 </div>
                                             </div>
                                             <hr class="hr_ptg">
-                                            <div class="tabwrap ">
+                                            <div class="tabwrap new_tab_ptg ">
                                                 <input type="radio" id="task_task1" name="tabtaskGroup1" class="tab" checked>
-                                                <label id="task_tabtsk_1" for="task_task1">Task 1</label>
+                                                <label id="task_tabtsk_1" for="task_task1">Charter Submission To Function</label>
                                                 <input type="radio" id="task_task2" name="tabtaskGroup1" class="tab">
-                                                <label for="task_task2" id="task_tabtsk_2">Task 2</label>
+                                                <label for="task_task2" id="task_tabtsk_2">Business requirement review & validation by BA</label>
                                                 <input type="radio" id="task_task3" name="tabtaskGroup1" class="tab">
-                                                <label id="task_tabtsk_3" for="task_task3">Task 3</label>
+                                                <label id="task_tabtsk_3" for="task_task3">Charter submission to PMO</label>
                                                 <!-- <input type="radio" id="tab4" class="tab" name="tabGroup1">
                                                 <label for="tab4" id="bt_proj_task_tab4">BT-Dev Tasks</label> -->
                                                 <input type="radio" id="task_task5" class="tab" name="tabtaskGroup1"> 
-                                                <label for="task_task5" id="task_tabtsk_4">Task 4</label>
+                                                <label for="task_task5" id="task_tabtsk_4">PMO Review</label>
                                                 <input type="radio" id="task_task6" class="tab" name="tabtaskGroup1">
-                                                <label for="task_task6" id="task_tabtsk_5">Task 5</label>
+                                                <label for="task_task6" id="task_tabtsk_5">Kick-off</label>
                                                 <input type="radio" id="task_task7" class="tab" name="tabtaskGroup1">
-                                                <label for="task_task7" id="task_tabtsk_6">Task 6</label>
+                                                <label for="task_task7" id="task_tabtsk_6">Charter signoff</label>
                                             </div>
                                             <div class="filter_body" id="task_tabtsk1_details">
                                             <button
@@ -2135,7 +2170,7 @@
                                                             </p>
                                                             <div class="d-flex">
                                                                 <button class="save_Ba_Project mx-1 btn btn-success func_ba_cls"
-                                                                    id="Save_btn_batch4">Save</button>
+                                                                    id="Save_btn_batch4">Re-assign</button>
                                                                 <!-- <button class="save_Ba_Project mx-1 btn btn-success func_ba_cls"
                                                                     id="Func_Save_Ba_1">Save</button>
                                                                 <button class="save_Ba_Project mx-1 btn btn-danger func_ba_cls"
@@ -2145,15 +2180,15 @@
                                                        
                                                     </div>
                                                     <div class="addBatch" style="margin-left: 269px;">
-                                                        <select name="batchType" style="width: 86px !important;"
-                                                            class="rounded-0 form-select field_style" id="batch_type_2">
-                                                            <option value="0">Yes</option>
-                                                            <!-- <option value="1">Yes</option> -->
-                                                            <option value="2">No Need</option>
-                                                        </select>
-                                                        <button class="btn btn-success save_Ba_Project" id="AddBatch_2" style="    height: 29px;">Add
-                                                            Batch</button>
+                                                        <div class="dropdown">
+                                                            <button class="btn btn-success save_Ba_Project dropbtn" id="AddBatch_2" style="height: 29px; margin-left: 100px;">Add Batch</button>
+                                                            <!-- <div class="dropdown-content">
+                                                                <a href="#" class="dropdown-item">Yes</a>
+                                                                <a href="#" class="dropdown-item">No</a>
+                                                            </div> -->
+                                                        </div>
                                                     </div>
+                                                    
                                                 </div>
                                                 <hr class="hr_ptg">
                                                 <div class="tabwrap new_tab_ptg">

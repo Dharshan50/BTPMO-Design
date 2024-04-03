@@ -19,7 +19,7 @@
 .save_Ba_Project {
     width: 100px !important;
     /* line-height: 10px; */
-    padding: 2px 10px !important;
+    padding: 5px 8px !important;
     font-size: 10px !important;
     border-radius: 0px !important;
     height: fit-content;
@@ -809,7 +809,7 @@ table.table thead tr th {
 }
 
 .task_tab:checked+label {
-    background-color: #447E32;
+    background-color: #03365f;
     color: #fff;
     /* box-shadow: 0 -1px 0 #fff inset; */
     cursor: pointer;
@@ -817,8 +817,8 @@ table.table thead tr th {
 
 .task_tab:checked+label:hover {
     /* box-shadow: 0 -1px 0 #fff inset; */
-    background-color: #447E32;
-    color: #fff;
+    background-color: #045697;
+    color: white;
     cursor: pointer;
 }
 
@@ -826,15 +826,16 @@ table.table thead tr th {
     width: 100%;
     /* box-shadow: 0 -1px 0 #eee inset; */
     border-radius: 0;
+    
     cursor: pointer;
     display: block;
     text-decoration: none;
     color: #000;
     font-size: 12px;
     font-weight: 500;
-    border: 2px solid #447E32;
+    /* border: 2px solid #03365f; */
     text-align: center;
-    background-color: #fff;
+    background-color: #f2f2f2;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -846,8 +847,26 @@ table.table thead tr th {
     box-sizing: border-box;
     padding: 6px 5px;
     font-size: 10px;
+    border: 1px solid #b3b3b3;
+    border-top: none;
+    border-bottom: none;
 }
-
+.count_num{
+        /* border: 2px solid black; */
+        padding: 2px 6px;
+        border-radius: 50px;
+        /* margin-bottom: 0px; */
+        /* position: absolute; */
+        /* top: 0%; */
+        /* bottom: 0px; */
+        position: absolute;
+        top: 5px;
+        /* left: 20%; */
+        margin-left: 3px;
+        font-size: 8px;
+        background-color: red;
+        color: white;
+}
 
 @media (min-width:768px) {
 
@@ -985,7 +1004,7 @@ table.table thead tr th {
     transition: 0.3s background-color ease, 0.3s box-shadow ease;
     height: 30px;
     box-sizing: border-box;
-    padding: 5px 15px;
+    padding: 3px 15px;
     font-size: 11px;
 }
 
@@ -2146,6 +2165,11 @@ span.batch_details {
 .acc_inner_ptg {
     padding: 20px;
 }
+.dropdown-content{
+    background-color: gray;
+}
+
+  
 
 button.accordion-button.acc_ptg_on_btn::after,
 button.accordion-button.acc_ptg_on_btn:not(.collapsed)::after {

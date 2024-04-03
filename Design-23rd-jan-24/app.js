@@ -729,7 +729,18 @@ $('#taskdevtsktab5').on('click', function () {
     $('#task_devtask1_details').hide();
 })
 $('#task_proj_tab2').on('click', function () {
-alert('yu9')
+   
+    $('#task_tabch1').get(0).click();
+    $('#task_content_changereq').show();
+    $('#task_content_proj').hide();
+   
+
+})
+$('#task_proj_tab1').on('click', function () {
+   
+    $('#task_content_changereq').hide();
+    $('#task_content_proj').show();
+
 })
 $('#taskfuntab1').on('click', function () {
    
@@ -1163,6 +1174,13 @@ $('.Proj_detail_field_1').hide();
     $('#Ba_responsible').hide();
     hideProjData();
 })
+$('#portfolio_tab6').on('click', function () {
+ 
+    doRestoreTaskColumns();
+   
+ 
+    hideProjData();
+})
 
 $('#sumbit_values').on('click', function () {
     closeContent();
@@ -1176,9 +1194,18 @@ $('#tab6').on('click', function () {
     $('.hide_default_Projects_Tab').hide();
     $('#pagination_container').hide();
     $('#task_tab1').get(0).click();
+    $('#proj_task_tab1').get(0).click();
     $('#bt_dev_tasks').hide();
     $('#portfolio_sec_tab').hide();
     $('#prot_BA_view').hide();
+    $('#proj_tsk_manage').show();
+    $('#pagination_container').show()
+    $(document).find(`[id^='Task_Body_']`).hide().css('max-height', '335px')
+    $(document).find(`[class^='Task_Field_']`).hide()
+    $(document).find(`[class^='Task_Label_']`).show()
+    $(document).find(`[id^='Task_Edit_']`).show()
+    $(document).find(`[id^='Task_Save_']`).hide()
+    $(document).find(`[id^='Task_Cancel_']`).hide()
     hideProjData();
 })
 
@@ -1212,6 +1239,21 @@ $("[id^='Edit_Project_']").on('click', function () {
     // $('.create_proj_form').show();
     $('#proj_type').val("1").trigger('change');
 })
+$('#AddBatch_2').on('click', function (){
+    document.getElementById("myDropdown").classList.toggle("show");
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+
+})
+
 
 $('#task_tab1').on('click', function () {
     $('.action_needed_row').hide();
