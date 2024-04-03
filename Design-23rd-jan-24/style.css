@@ -2313,7 +2313,12 @@ button.accordion-button.acc_ptg_on_btn span i {
 .accordion-body.acc_ptg_on_bdy {
     padding: 1rem;
 }
-
+.port_table_view_ptg {
+    width: 140%;
+}
+.port_table_view {
+    overflow-x: scroll;
+}
 @media (min-width: 1390px) and (max-width: 2400px) {
     table.table thead tr th {
         font-size: 11px;
