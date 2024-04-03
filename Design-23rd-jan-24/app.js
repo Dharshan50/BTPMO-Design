@@ -110,6 +110,23 @@ Project_plus_icon.addEventListener("click", function () {
     }
 });
 
+// var Project_menudiv = document.querySelector('.portfolio_Column_dropdowm');
+// var Project_plus_icon = document.getElementById('portfolio_Column_menus'); 
+
+// Portfolio_plus_icon.addEventListener("click", function () {
+//     if (Project_plus_icon.style.transform === "rotate(315deg)") {
+//         Project_plus_icon.style.transform = "rotate(0deg)";
+//     } else {
+//         Project_plus_icon.style.transform = "rotate(315deg)";
+//     }
+//     if (Project_menudiv.style.display === "none") {
+//         Project_menudiv.style.display = "flex"; // Use '=' for assignment
+//     } else {
+//         Project_menudiv.style.display = "none"; // Use '=' for assignment
+//     }
+// });
+
+
 
 function drag(event) {
     draggedItem = event.target;

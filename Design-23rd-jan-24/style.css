@@ -1526,6 +1526,12 @@ button.btn_bot_div_save {
     gap: 10px;
     margin-right: 0px;
 }
+.btn_prot{
+    border: 1px solid red;
+    background-color: white;
+    color: red;
+    padding: 3px 8px;
+}
 
 .proj_name_filter {
     border-radius: 0px !important;
@@ -1539,7 +1545,7 @@ button.btn_bot_div_save {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 8px;
+    margin-top: 12px;
     margin-bottom: 8px;
 }
 

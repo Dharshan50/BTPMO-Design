@@ -152,9 +152,9 @@
 
             </div>
 
-            <div class="port_table_view" id="port_table_view">
-                <div class="table-responsive" id="port_tab_table">
-                    <table class="table table-responsive tbl_all_proj">
+            <div class="port_table_view" id="port_table_view" >
+                <div class="port_tab_table" id="port_tab_table" style="width: 150%;" >
+                    <table class="table tbl_all_proj">
                         <thead style="font-size: 15px;">
                             <tr>
                                 <th>No</th>
@@ -166,6 +166,7 @@
                                 <th>Stage status</th>
                                 <th>Start Date</th>
                                 <th>End Date</th>
+                                <th>Revised Start Date</th>
                                 <th>Revised End Date</th>
                                 <th>Charter signed</th>
                                 <th>RAG</th>
@@ -175,6 +176,7 @@
                                 <th>BA</th>
                                 <th>PMO Comment</th>
                                 <th>BT Comment</th>
+                                <th>Task Details</th>
                             </tr>
                         </thead>
                         <tbody style="font-size: 12px;">
@@ -185,23 +187,152 @@
                                 <td>China Fronters</td>
                                 <td><mark style="background-color: #a7ffbe; width: 100% !important;"
                                     class="rag_status">Inprogress</mark></td>
-                                <td>N/A</td>
-                                <td>N/A</td>
+                                <td>Project Charter</td>
+                                <td>Charter submission to PMO</td>
                                 <td><mark style="background-color: #a7ffbe; width: 100% !important;"
                                         class="rag_status">Completed</mark></td>
-                                <td>N/A</td>
+                                <td>03-Apr-2024</td>
+                                <td>05-Apr-2024</td>
                                 <td>N/A</td>
                                 <td>N/A</td>
                                 <td>Yes</td>
                                 <td><mark style="background-color: #a7ffbe; width: 100% !important;"
                                         class="rag_status">Completed</mark></td>
                                 <td>Q1</td>
-                                <td>18-Jan-2024</td>
+                                <td>18-Jun-2024</td>
                                 <td>N/A</td>
                                 <td>Chandana</td>
                                 <td>Sample Comment</td>
                                 <td>Sample Comment</td>
+                                <td><i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2" title="Choose Column" aria-hidden="true"></i></td>
                             </tr>
+                            <tr id="port_delay_tab_2">
+                                <td colspan="20" style="border-bottom: none;">
+                                    <div class="delay_main_body" style="max-height:300px; overflow-y:auto">
+                                        <div class="card_main_box" id="card_main_box">
+                                            <div class="card_heda">
+                                                <div class="d-flex">
+                                                    <p class="card_head_para me-5">Task Details</p>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="total_box">
+                                            <div class="top_div_tet">
+                                                <label for="">Previous Task</label>
+                                             
+                                                <label for="">Start Date</label>
+                                                <label for="">End Date</label>
+                                                <label for="">Revised Start Date</label>
+                                                <label for="">Revised End Date</label>
+                                                <label for="">Revised go-live date</label>
+                                                <label for="">Status</label>
+                                            </div>
+                                            <div class="Bottom_div">
+                                                <label for="">
+                                                  Business requirement review & validation by BA
+                                                </label>	
+                                       
+                                                <label for="">13-Apr-24</label>
+                                                <label for="">15-Apr-24</label>
+                                                <label class="prot_str">
+                                                   
+                                                    <label for="" id="rev_str_2">-</label>
+                                                </label>
+                                                <label class="prot_str">
+                                                   
+                                                    <label for="" id="rev_end_2">-</label>
+                                                </label>
+                                                <label class="prot_str">
+                                                  
+                                                    <label for="" id="rev_golive_2">-</label>
+                                                </label>
+                                                <label for=""><mark style="background-color: #d4d9da;"
+                                                        class="rag_status">Completed</mark></label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- <div class="delay_main_body" style="max-height:300px; overflow-y:auto"> -->
+                                        
+                                        <div class="total_box">
+                                            <div class="top_div_tet">
+                                                <label for="">Current Task</label>
+                                            
+                                                <label for="">Start Date</label>
+                                                <label for="">End Date</label>
+                                                <label for="">Revised Start Date</label>
+                                                <label for="">Revised End Date</label>
+                                                <label for="">Revised go-live date</label>
+                                                <label for="">Status</label>
+                                            </div>
+                                            <div class="Bottom_div">
+                                                <label for="">
+                                                    Charter submission to PMO
+                                                </label>	
+                                       
+                                                <label for="">15-Apr-24</label>
+                                                <label for="">16-Apr-24</label>
+                                                <label class="prot_str">
+                                                
+                                                    <label for="" id="rev_str_2">-</label>
+                                                </label>
+                                                <label class="prot_str">
+                                                  
+                                                    <label for="" id="rev_end_2">-</label>
+                                                </label>
+                                                <label class="prot_str">
+                                                   
+                                                    <label for="" id="rev_golive_2">-</label>
+                                                </label>
+                                                <label for=""><mark style="background-color: #5df167;"
+                                                        class="rag_status">InProgress</mark></label>
+                                            </div>
+                                        </div>
+
+                                        <div class="total_box">
+                                            <div class="top_div_tet">
+                                                <label for="">Next Task</label>
+                                            
+                                                <label for="">Start Date</label>
+                                                <label for="">End Date</label>
+                                                <label for="">Revised Start Date</label>
+                                                <label for="">Revised End Date</label>
+                                                <label for="">Revised go-live date</label>
+                                                <label for="">Status</label>
+                                            </div>
+                                            <div class="Bottom_div">
+                                                <label for="">
+                                                    PMO Review
+                                                </label>	
+                                       
+                                                <label for="">17-Apr-24</label>
+                                                <label for="">18-Apr-24</label>
+                                                <label class="prot_str">
+                                                
+                                                    <label for="" id="rev_str_2">-</label>
+                                                </label>
+                                                <label class="prot_str">
+                                                  
+                                                    <label for="" id="rev_end_2">-</label>
+                                                </label>
+                                                <label class="prot_str">
+                                                   
+                                                    <label for="" id="rev_golive_2">-</label>
+                                                </label>
+                                                <label for=""><mark style="background-color: #BDE8F0;"
+                                                        class="rag_status">Not Started</mark></label>
+                                            </div>
+                                        </div>
+
+
+                                 
+                                </td>
+                                
+                            </tr>
+                            
 
                             <tr>
 
@@ -223,15 +354,17 @@
                                 <td>02-Apr-2024</td>
                                 <td>15-Apr-2024</td>
                                 <td>17-Apr-2024</td>
+                                <td>N/A</td>
                                 <td>Yes</td>
                                 <td><mark style="background-color: #add8e6; width: 100% !important;"
                                         class="rag_status">On Track</mark></td>
                                 <td>Q2</td>
-                                <td>-</td>
+                                <td>02-May-2024</td>
                                 <td>-</td>
                                 <td>Chandana</td>
                                 <td>Sample Comment</td>
                                 <td>Sample Comment</td>
+                                <td><i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_3" title="Choose Column" aria-hidden="true"></i></td>
                             </tr>
 
                             <tr>
@@ -248,21 +381,23 @@
                                 <td><mark style="background-color: #f2d479; width: 100% !important; color: red;"
                                     class="rag_status">Attention</mark></td>
                                 <td>Requirement</td>
-                                <td>Requirement Finalizationtd>
+                                <td>Requirement Finalization</td>
                                 <td><mark style="background-color: #f9bdb3; width: 100% !important;color: red;"
                                         class="rag_status">Delayed</mark></td>
-                                <td>02-Apr-2024</td>
-                                <td>15-Apr-2024</td>
-                                <td>17-Apr-2024</td>
+                                <td><button class="btn_prot">Update</button></td>
+                                <td><button class="btn_prot">Update</button></td>
+                                <td>N/A</td>
+                                <td>N/A</td>
                                 <td>Yes</td>
-                                <td><mark style="background-color: #f2d479;color: red; width: 100% !important;"
-                                        class="rag_status">Attention</mark></td>
+                                <td><mark style="background-color: #6bd8f6; width: 100% !important;"
+                                        class="rag_status">On Track</mark></td>
                                 <td>Q2</td>
-                                <td>-</td>
-                                <td>-</td>
+                                <td><button class="btn_prot">Update</button></td>
+                                <td><button class="btn_prot">Update</button></td>
                                 <td>Chandana</td>
                                 <td>Sample Comment</td>
                                 <td>Sample Comment</td>
+                                <td><i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_4" title="Choose Column" aria-hidden="true"></i></td>
                             </tr>
 
                             <tr id="port_delay_tab_1">
@@ -341,6 +476,35 @@
                                     </div>
                                 </td>
                             </tr>
+                            <tr>
+                            <td>
+                                
+                                    <label for="">4</label>
+                                </div>
+                            </td>
+                            <td>2023</td>
+                            <td>Test Project</td>
+                            <td><mark style="background-color: #a7ffbe; width: 100% !important;"
+                                class="rag_status">Inprogress</mark></td></td>
+                            <td>Developement</td>
+                            <td>Requirement review with Developer</td>
+                            <td><mark style="background-color: #9eec86; width: 100% !important;"
+                                    class="rag_status">Not Started</mark></td>
+                            <td>02-Apr-2024</td>
+                            <td>03-Apr-2024</td>
+                            <td><button class="btn_prot">Revise</button></td>
+                            <td><button class="btn_prot">Revise</button></td>
+                            <td>Yes</td>
+                            <td><mark style="background-color: #f2d479;color: red; width: 100% !important;"
+                                    class="rag_status">Attention</mark></td>
+                            <td>Q2</td>
+                            <td><button class="btn_prot">Revise</button></td>
+                            <td><button class="btn_prot">Update</button></td>
+                            <td>Chandana</td>
+                            <td>Sample Comment</td>
+                            <td>Sample Comment</td>
+                            <td><i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_5" title="Choose Column" aria-hidden="true"></i></td>
+                        </tr>
                         </tbody>
 
                     </table>
@@ -2181,7 +2345,7 @@
                                                     </div>
                                                     <div class="addBatch" style="margin-left: 269px;">
                                                         <div class="dropdown">
-                                                            <button class="btn btn-success save_Ba_Project dropbtn" id="AddBatch_2" style="height: 29px; margin-left: 100px;">Add Batch</button>
+                                                            <button class="btn btn-success save_Ba_Project dropbtn" id="AddBatch_2" style="height: 29px; margin-left: 100px; font-size: 9px;" ><i class="fa-solid fa-plus" aria-hidden="true" style="margin-left: -14px;margin-right: 9px;"></i>Add Batch</button>
                                                             <!-- <div class="dropdown-content">
                                                                 <a href="#" class="dropdown-item">Yes</a>
                                                                 <a href="#" class="dropdown-item">No</a>
