@@ -1257,20 +1257,22 @@ $("[id^='Edit_Project_']").on('click', function () {
     $('#proj_type').val("1").trigger('change');
 })
 $('#AddBatch_2').on('click', function (){
-    document.getElementById("myDropdown").classList.toggle("show");
-    if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
+    $('#batch_options').show();
 
 })
 
+$('input[name ="addbatch"]').on('click',function(){
+    var val = $('input[name="addbatch"]:checked').val();
+    if(val == 1){
+        $('#batch_divisions').show();
+        $('#batch_options').hide()
+    }
+    else if(val == 2){
+        $('#batch_divisions').hide();
+        $('#batch_options').hide();
+    }
+  
+})
 
 $('#task_tab1').on('click', function () {
     $('.action_needed_row').hide();
@@ -1705,6 +1707,7 @@ $('#proj_task_tab1').on('click', function () {
         <th>Project Priority</th>
         <th>Project Name</th>
         <th>Current Stage</th>
+        <th>Batch Name</th>
         <th>Current stage status</th>
         <th>Stage to assign</th>
         <th>Status</th>
@@ -1783,6 +1786,7 @@ $('#proj_task_tab2').on('click', function () {
         <th>Project Priority</th>
         <th>Project Name</th>
         <th>Assigned Stage</th>
+        <th>Batch</th>
         <th>Status</th>
         <th>Current Stage Status</th>
         <th>Signoff</th>

@@ -100,7 +100,7 @@
                 <input type="radio" id="tab2" name="tabGroup1" class="tab">
                 <label for="tab2" id="bt_proj-task_tab">Projects</label>
                 <input type="radio" id="tab3" name="tabGroup1" class="tab">
-                <label id="bt_task_tab" for="tab3">Tasks <span class="count_num">2</span></label>
+                <label id="bt_task_tab" for="tab3">Tasks <span class="count_num">5</span></label>
                 <!-- <input type="radio" id="tab4" class="tab" name="tabGroup1">
                 <label for="tab4" id="bt_proj_task_tab4">BT-Dev Tasks</label> -->
                 <input type="radio" id="tab5" class="tab" name="tabGroup1">
@@ -531,17 +531,19 @@
                         <th> <mark class="Style_th_prot" style="background-color: #1abc9c !important;"> Charter in
                                 progress
                             </mark></th>
-                        <th> <mark class="Style_th_prot">Pending REQ</mark></th>
-                        <th><mark class="Style_th_prot" style="background-color: #f06060 !important;">REQ in
+                        <th> <mark class="Style_th_prot">Requirement queue</mark></th>
+                        <th><mark class="Style_th_prot" style="background-color: #f06060 !important;">Requirement in
                                 progress</mark>
                         </th>
-                        <th><mark class="Style_th_prot">Pending Dev</mark></th>
-                        <th><mark class="Style_th_prot" style="background-color: #1abc9c !important;">Dev in
+                        <th><mark class="Style_th_prot">Developement queue</mark></th>
+                        <th><mark class="Style_th_prot" style="background-color: #1abc9c !important;">Developement in
                                 progress</mark>
                         </th>
-                        <th><mark class="Style_th_prot">Pending BA testing</mark></th>
+                        <th><mark class="Style_th_prot">BA testing queue</mark></th>
                         <th><mark class="Style_th_prot" style="background-color: #f06060 !important;">BA testing in
                                 progress</mark></th>
+                                <th><mark class="Style_th_prot" style="background-color: #bfc2b9 !important;">User testing 
+                                    </mark></th>
                         <th><mark class="Style_th_prot">UAT</mark></th>
                     </thead>
                     <tbody>
@@ -550,10 +552,11 @@
                                 <div>
                                     <label class=" label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
                                                 class="fa-solid prp_dot fa-circle"
-                                                style="color: #ffc000;"></i></span><span> E-Staff </span></label>
+                                                style="color: #ffc000;"></i></span><span> E-Staff  </span></label>
                                     <label class=" label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
                                                 class="fa-solid prp_dot fa-circle"
-                                                style="color: #00ff62;"></i></span><span> Non-Can </span></label>
+                                                style="color: #00ff62;"></i></span><span> Non-Can <i class="fa-solid fa-spinner" style="color: #15b815; font-size: 12px; margin-left: 12px;
+                                                    "></i> </span></label>
                                     <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
                                                 class="fa-solid prp_dot fa-circle"
                                                 style="color: #00ff62;"></i></span><span> China Fronters</span> </label>
@@ -563,7 +566,8 @@
                                 <div>
                                     <label class=" label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
                                                 class="fa-solid prp_dot fa-circle"
-                                                style="color: #00988f;"></i></span><span> Sample </span></label>
+                                                style="color: #00988f;"></i></span><span> Sample <i class="fa-solid fa-spinner" style="color: #15b815; font-size: 12px; margin-left: 12px;
+                                                    "></i> </span></label>
 
                                 </div>
                             </td>
@@ -571,7 +575,7 @@
                                 <div>
                                     <label class=" label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
                                                 class="fa-solid prp_dot fa-circle"
-                                                style="color: #ffc000;"></i></span><span> Sample </span></label>
+                                                style="color: #ffc000;"></i></span><span> Sample </label>
 
                                 </div>
                             </td>
@@ -579,7 +583,8 @@
                                 <div>
                                     <label class=" label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
                                                 class="fa-solid prp_dot fa-circle"
-                                                style="color: #00988f;"></i></span><span> Sample </span></label>
+                                                style="color: #00988f;"></i></span><span> Sample<i class="fa-solid fa-check" style="color: #07d307; margin-left: 12px;
+                                                    "></i></span> </span></label>
 
                                 </div>
                             </td>
@@ -587,13 +592,16 @@
                                 <div>
                                     <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
                                                 class="fa-solid prp_dot fa-circle" style="color: red;"></i></span><span>
-                                            Sample </span></label>
+                                            Sample <i class="fa-solid fa-triangle-exclamation" style="color: #e20212;
+                                            margin-left: 6px;"> </i></span></label>
                                     <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
                                                 class="fa-solid prp_dot fa-circle"
-                                                style="color: #00ff62;"></i></span><span> Sample </span></label>
+                                                style="color: #00ff62;"></i></span><span> Sample <i class="fa-solid fa-spinner" style="color: #15b815; font-size: 12px; margin-left: 12px;
+                                                    "></i></span></label>
                                     <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
                                                 class="fa-solid prp_dot fa-circle"
-                                                style="color: #00ff62;"></i></span><span> Sample </span></label>
+                                                style="color: #00ff62;"></i></span><span> Sample <i class="fa-solid fa-spinner" style="color: #15b815; font-size: 12px; margin-left: 12px;
+                                                    "></i></span></label>
                                 </div>
                             </td>
                             <td class="Style_tr_prot" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -608,7 +616,8 @@
                                 <div>
                                     <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
                                                 class="fa-solid prp_dot fa-circle" style="color: red;"></i></span><span>
-                                            E-procurment </span></label>
+                                            E-procurment <i class="fa-solid fa-triangle-exclamation" style="color: #e20212;
+                                            margin-left: 0px;"> </i></span></label>
                                     <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
                                                 class="fa-solid prp_dot fa-circle"
                                                 style="color: #ffc000;"></i></span><span> Sample </span></label>
@@ -1118,13 +1127,13 @@
                     <input type="radio" id="task_proj_tab1" name="task_proj_tabGroup1" class="proj_task_tab" checked>
                     <label id="bt_proj_tab" for="task_proj_tab1" style="border-right: none;">Projects</label>
                     <input type="radio" id="task_proj_tab2" name="task_proj_tabGroup1" class="proj_task_tab">
-                    <label id="bt_task_tab" for="task_proj_tab2">Change Requests <span class="count_num">2</span></label>
+                    <label id="bt_task_tab" for="task_proj_tab2">Change Requests <span class="count_num">5</span></label>
                 </div>
             </div>
             <div class="task_content" id="task_content_proj">
                 <div class="task_tabwrap" style="font-size: 13px; margin-right: 25px !important; ">
                     <input type="radio" id="task_tab1" name="task_tabGroup1" class="task_tab"  checked>
-                    <label id="bt_proj_tab" for="task_tab1" style="border-left: none; border-right: none; width: 100px;" >Assigned<span class="count_num">2</span></label>
+                    <label id="bt_proj_tab" for="task_tab1" style="border-left: none; border-right: none; width: 100px;" >Assigned<span class="count_num">5</span></label>
 
                     <input type="radio" id="task_tab2" name="task_tabGroup1" class="task_tab" checked>
                     <label id="bt_task_tab" for="task_tab2" style="border-right: none;">Pending</label>
@@ -1182,7 +1191,7 @@
             <div class="task_content" style="display: none;" id="task_content_changereq">
                 <div class="task_tabwrap" style="font-size: 13px; margin-right: 440px !important;">
                     <input type="radio" id="task_tabch1" name="task_tabGroupch1" class="task_tab" checked>
-                    <label id="bt_proj_tab" for="task_tabch1" style="border-right: none; border-left: none; width: 89px; ">Assigned <span class="count_num">2</span></label>
+                    <label id="bt_proj_tab" for="task_tabch1" style="border-right: none; border-left: none; width: 89px; ">Assigned <span class="count_num">5</span></label>
 
                     <input type="radio" id="task_tabch2" name="task_tabGroupch1" class="task_tab" checked>
                     <label id="bt_task_tab" for="task_tabch2" style="border-right: none;">Pending</label>
@@ -2343,19 +2352,32 @@
                                                         </div>
                                                        
                                                     </div>
-                                                    <div class="addBatch" style="margin-left: 269px;">
+                                                    <div class="addBatch" style="margin-left: 269px; position: relative;">
                                                         <div class="dropdown">
-                                                            <button class="btn btn-success save_Ba_Project dropbtn" id="AddBatch_2" style="height: 29px; margin-left: 100px; font-size: 9px;" ><i class="fa-solid fa-plus" aria-hidden="true" style="margin-left: -14px;margin-right: 9px;"></i>Add Batch</button>
+                                                            <button class="btn btn-success save_Ba_Project dropbtn" id="AddBatch_2" style="height: 29px; margin-left: 100px; font-size: 9px;" ><i class="fa-solid fa-plus" aria-hidden="true" style="margin-left: -14px;margin-right: 9px; "></i>Add Batch</button>
                                                             <!-- <div class="dropdown-content">
                                                                 <a href="#" class="dropdown-item">Yes</a>
                                                                 <a href="#" class="dropdown-item">No</a>
                                                             </div> -->
                                                         </div>
+                                                        <div class="Task_plus_drop_dwn plus_drop_dwn_batch" style="WIDTH:80PX; height: 75px; display: none;" id="batch_options">
+                                                            <div style="width:100%">
+                                                                <input id="" type="radio"
+                                                                    class="" name="addbatch" value="1">
+                                                                <label for="">Yes</label>
+                                                            </div>
+                                                            <div style="width:100%">
+                                                                <input id="" type="radio"
+                                                                    class="" name="addbatch" value="2">
+                                                                <label for="">No</label>
+                                                            </div>
+                                                            
+                                                        </div>
                                                     </div>
                                                     
                                                 </div>
                                                 <hr class="hr_ptg">
-                                                <div class="tabwrap new_tab_ptg">
+                                                <div class="tabwrap new_tab_ptg" id="batch_divisions" style="display: none;">
                                                     <input type="radio" id="taskfuntab1" name="tskbatchGroup1" class="tab" checked>
                                                     <label id="task_fun_1" for="taskfuntab1">Batch 1-Lcs Setup</label>
                                                     <input type="radio" id="taskfuntab2" name="tskbatchGroup1" class="tab">
@@ -13426,7 +13448,7 @@
                                     <th>Project Priority</th>
                                     <th>Project Name</th>
                                     <th>Current Stage</th>
-                               <th>Batch Name</th>
+                                     <th>Batch Name</th>
                                     <th>Current stage status</th>
                                     <th>Stage to assign</th>
                                     <th>Status</th>
@@ -13436,16 +13458,18 @@
                             </thead>
                             <tbody style="font-size: 12px;">
                                 <!-- PENDING ASSIGNMENT PROJECTS -->
-                                <tr class="pending_Assignment_Record">
+                                <tr class="pending_Assignment_View_1">
                                     <td>1</td>
                                     <td><span class="last_num" style="background-color: #f06060; color: #fff;">1</span>
                                     </td>
                                     <td>China Fronters</td>
                                     <td>Project Charter</td>
+                                    <td>N/A</td>
                                     
                                     <td><mark style="background-color: #c0c0c0;" class="rag_status">Completed</mark>
                                     </td>
                                     <td>Requirement</td>
+                                 
                                     <td><mark style="background-color: #ffd469;" class="rag_status">Pending
                                             Assignment</mark></td>
                                     <td><button class="Assign_button" id="Expand_Pending_1">Assign</button><button
@@ -14864,6 +14888,7 @@
                         </td>
                         <td>E-Procurement</td>
                         <td>Requirement</td>
+                        <td>Batch -1 [Lcs setup]</td>
                         <td>
                             <mark style="background-color: #82ff80;" class="rag_status">In Progress</mark>
                         </td>
@@ -16133,9 +16158,11 @@
                         </td>
                         <td>E-Staff</td>
                         <td>Project charter</td>
+                        <td>N/A</td>
                         <td><mark style="background-color: #82ff80;" class="rag_status">In Progress</mark>
                         </td>
                         <td>Requirement</td>
+                      
                         <td><mark style="background-color: #ffd469;" class="rag_status">Pending
                                 Assignment</mark></td>
                         <td><button class="Assign_button" id="Expand_Pending_3">Assign</button><button
@@ -18980,6 +19007,7 @@
                         </td>
                         <td>Non-Can</td>
                         <td>Pre-charter</td>
+                        <td>N/A</td>
                         <td><mark style="background-color: #ff96f8;" class="rag_status">Not Started</mark>
                         </td>
                         <td>Project Charter</td>
@@ -19013,6 +19041,7 @@
                         </td>
                         <td>Non-Can</td>
                         <td>Requirement</td>
+                        <td>Batch-2 [GT & ST setup]</td>
                         <td><mark style="background-color: #68f38d;" class="rag_status">Assigned</mark>
                         </td>
                         <td><mark style="background-color: #68f38d;" class="rag_status">In Progress</mark>
@@ -23840,6 +23869,7 @@
                         </td>
                         <td>Sample Project</td>
                         <td>Project charter</td>
+                        <td>N/A</td>
                         <td><mark style="background-color: #68f38d;" class="rag_status">Assigned</mark>
                         </td>
                         <td><mark style="background-color: #c0c0c0;" class="rag_status">Completed</mark>
@@ -26670,6 +26700,7 @@
                         </td>
                         <td>SBI Template</td>
                         <td>Project charter</td>
+                        <td>N/A</td>
                         <td><mark style="background-color: #68f38d;" class="rag_status">Assigned</mark>
                         </td>
                         <td><mark style="background-color: #68f38d;" class="rag_status">In Progress</mark>

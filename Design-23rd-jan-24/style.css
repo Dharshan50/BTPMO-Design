@@ -1351,7 +1351,7 @@ table.table thead tr th {
 }
 
 i.fa-solid.prp_dot.fa-circle {
-    margin-left: -7px;
+    margin-left: -4px;
     font-size: 7px;
 }
 
@@ -1847,6 +1847,34 @@ p.yes_no_align.no {
 }
 
 .plus_drop_dwn::-webkit-scrollbar {
+    width: 0;
+}
+.plus_drop_dwn_batch div {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    width: 100px;
+    gap: 7px;
+    font-weight: 400;
+}
+
+.plus_drop_dwn_batch {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    position: absolute;
+    z-index: 1;
+    top: 33px;
+    right: 0px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px #ccc;
+    height: 200px;
+    overflow-y: auto;
+}
+
+.plus_drop_dwn_batch::-webkit-scrollbar {
     width: 0;
 }
 
