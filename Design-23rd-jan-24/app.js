@@ -728,6 +728,9 @@ $('#taskdevtsktab5').on('click', function () {
 
     $('#task_devtask1_details').hide();
 })
+$('#task_proj_tab2').on('click', function () {
+alert('yu9')
+})
 $('#taskfuntab1').on('click', function () {
    
     // $('#task_batch1_details').show();
