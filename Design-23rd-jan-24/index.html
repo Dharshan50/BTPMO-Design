@@ -134,30 +134,65 @@
             </div>
 
             <div class="port_table_view" id="port_table_view" >
-                <div class="port_tab_table" id="port_tab_table" style="width: 150%;" >
+                <div class="port_tab_table" id="port_tab_table"  >
                     <table class="table tbl_all_proj">
                         <thead style="font-size: 15px;">
                             <tr>
-                                <th>No</th>
-                                <th>Project Year</th>
-                                <th>Project</th>
-                                <th>Project Status</th>
-                                <th>Current stage</th>
-                                <th>Current task</th>
-                                <th>Stage status</th>
-                                <th>Start Date</th>
-                                <th>End Date</th>
-                                <th>Revised Start Date</th>
-                                <th>Revised End Date</th>
-                                <th>Charter signed</th>
-                                <th>RAG</th>
-                                <th>Target Go-live</th>
-                                <th>Go-live date</th>
-                                <th>Revised go-live date</th>
-                                <th>BA</th>
-                                <th>PMO Comment</th>
-                                <th>BT Comment</th>
-                                <th>Task Details</th>
+                                <th style="width: 20px;">No</th>
+                                <th class="sm_column_width">Project Year</th>
+                                <th class="bg_column_width">Project</th>
+                                <th class="bg_column_width">Project Status</th>
+                                <th class="bg_column_width">Current stage</th>
+                                <th class="bg_column_width">Current task</th>
+                                <th class="sm_column_width">Stage status</th>
+                                <th class="sm_column_width">Start Date</th>
+                                <th class="sm_column_width">End Date</th>
+                                <th class="sm_column_width">Revised Start Date</th>
+                                <th class="sm_column_width">Revised End Date</th>
+                                <th class="sm_column_width">Charter signed</th>
+                                <th class="hide_default_portfolio_Tab RAG_Column sm_column_width">RAG</th>
+                                <th class="hide_default_portfolio_Tab Target_Go_Live_Column sm_column_width">Target Go-live</th>
+                                <th class="hide_default_portfolio_Tab Go_Live_Date_Column sm_column_width">Go-live date</th>
+                                <th class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column sm_column_width">Revised go-live date</th>
+                                <th class="hide_default_portfolio_Tab BA_Columnsm_column_width sm_column_width">BA</th>
+                                <th class="hide_default_portfolio_Tab PMO_Comment_Column sm_column_width">PMO Comment</th>
+                                <th class="hide_default_portfolio_Tab BTComment_Column sm_column_width">BT Comment</th>
+                                <th class="sm_column_width">Task Details</th> 
+                                
+                                <th style="position: relative;"><i class="fa-solid fa-circle-plus plus_top"
+                                    id="Portfolio_Column_menus" title="Choose Column"></i> <i class=""></i>
+                                    <div class="Portfolio_plus_drop_dwn plus_drop_dwn" style="WIDTH:200PX;display: none;">
+                                        <div style="width:100%">
+                                            <input id="RAG_Column" type="checkbox"
+                                                class="choosePortfolio__RAG_Column">
+                                            <label for="RAG_Column">RAG</label>
+                                        </div>
+                                        <div style="width:100%">
+                                            <input id="Target_Go_Live_Column" type="checkbox" class="choosePortfolio__Target_Go_Live_Column">
+                                            <label for="Target_Go_Live_Column">Target Go-live</label>
+                                        </div>
+                                        <div style="width:100%">
+                                            <input id="Go_Live_Date_Column" type="checkbox" class="choosePortfolio__Go_Live_Date_Column">
+                                            <label for="Go_Live_Date_Column">Go-live date</label>
+                                        </div>
+                                        <div style="width:100%">
+                                            <input id="Revised_Go_Live_Date_Column" type="checkbox" class="choosePortfolio__Revised_Go_Live_Date_Column">
+                                            <label for="Revised_Go_Live_Date_Column">Revised go-live date</label>
+                                        </div>
+                                        <div style="width:100%">
+                                            <input id="BA_Column" type="checkbox" class="choosePortfolio__BA_Column">
+                                            <label for="BA_Column">BA</label>
+                                        </div>
+                                        <div style="width:100%">
+                                            <input id="PMO_Comment_Column" type="checkbox" class="choosePortfolio__PMO_Comment_Column">
+                                            <label for="PMO_Comment_Column">PMO Comment</label>
+                                        </div>
+                                        <div style="width:100%">
+                                            <input id="BTComment_Column" type="checkbox" class="choosePortfolio__BTComment_Column">
+                                            <label for="BTComment_Column">BT Comment</label>
+                                        </div>
+                                    </div>
+                                </th>
                             </tr>
                         </thead>
                         <tbody style="font-size: 12px;">
@@ -177,14 +212,16 @@
                                 <td>N/A</td>
                                 <td>N/A</td>
                                 <td>Yes</td>
-                                <td><mark style="background-color: #a7ffbe; width: 100% !important;"
+                                
+                                
+                                <td class="hide_default_portfolio_Tab RAG_Column"><mark style="background-color: #a7ffbe; width: 100% !important;"
                                         class="rag_status">Completed</mark></td>
-                                <td>Q1</td>
-                                <td>18-Jun-2024</td>
-                                <td>N/A</td>
-                                <td>Chandana</td>
-                                <td>Sample Comment</td>
-                                <td>Sample Comment</td>
+                                <td class="hide_default_portfolio_Tab Target_Go_Live_Column">Q1</td>
+                                <td class="hide_default_portfolio_Tab Go_Live_Date_Column">18-Jun-2024</td>
+                                <td class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column">N/A</td>
+                                <td class="hide_default_portfolio_Tab BA_Column">Chandana</td>
+                                <td class="hide_default_portfolio_Tab PMO_Comment_Column">Sample Comment</td>
+                                <td class="hide_default_portfolio_Tab BTComment_Column">Sample Comment</td>
                                 <td><i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2" title="Choose Column" aria-hidden="true"></i></td>
                             </tr>
                             <tr id="port_delay_tab_2">
@@ -337,14 +374,15 @@
                                 <td>17-Apr-2024</td>
                                 <td>N/A</td>
                                 <td>Yes</td>
-                                <td><mark style="background-color: #add8e6; width: 100% !important;"
+                                
+                                <td class="hide_default_portfolio_Tab RAG_Column"><mark style="background-color: #add8e6; width: 100% !important;"
                                         class="rag_status">On Track</mark></td>
-                                <td>Q2</td>
-                                <td>02-May-2024</td>
-                                <td>-</td>
-                                <td>Chandana</td>
-                                <td>Sample Comment</td>
-                                <td>Sample Comment</td>
+                                <td class="hide_default_portfolio_Tab Target_Go_Live_Column">Q2</td>
+                                <td class="hide_default_portfolio_Tab Go_Live_Date_Column">02-May-2024</td>
+                                <td class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column">-</td>
+                                <td class="hide_default_portfolio_Tab BA_Column">Chandana</td>
+                                <td class="hide_default_portfolio_Tab PMO_Comment_Column">Sample Comment</td>
+                                <td class="hide_default_portfolio_Tab BTComment_Column">Sample Comment</td>
                                 <td><i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_3" title="Choose Column" aria-hidden="true"></i></td>
                             </tr>
 
@@ -370,14 +408,15 @@
                                 <td>N/A</td>
                                 <td>N/A</td>
                                 <td>Yes</td>
-                                <td><mark style="background-color: #6bd8f6; width: 100% !important;"
+                                
+                                <td class="hide_default_portfolio_Tab RAG_Column"><mark style="background-color: #6bd8f6; width: 100% !important;"
                                         class="rag_status">On Track</mark></td>
-                                <td>Q2</td>
-                                <td><button class="btn_prot">Update</button></td>
-                                <td><button class="btn_prot">Update</button></td>
-                                <td>Chandana</td>
-                                <td>Sample Comment</td>
-                                <td>Sample Comment</td>
+                                <td class="hide_default_portfolio_Tab Target_Go_Live_Column">Q2</td>
+                                <td class="hide_default_portfolio_Tab Go_Live_Date_Column"><button class="btn_prot">Update</button></td>
+                                <td class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column"><button class="btn_prot">Update</button></td>
+                                <td class="hide_default_portfolio_Tab BA_Column">Chandana</td>
+                                <td class="hide_default_portfolio_Tab PMO_Comment_Column">Sample Comment</td>
+                                <td class="hide_default_portfolio_Tab BTComment_Column">Sample Comment</td>
                                 <td><i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_4" title="Choose Column" aria-hidden="true"></i></td>
                             </tr>
 
@@ -476,14 +515,15 @@
                             <td><button class="btn_prot">Revise</button></td>
                             <td><button class="btn_prot">Revise</button></td>
                             <td>Yes</td>
-                            <td><mark style="background-color: #f2d479;color: red; width: 100% !important;"
-                                    class="rag_status">Attention</mark></td>
-                            <td>Q2</td>
-                            <td><button class="btn_prot">Revise</button></td>
-                            <td><button class="btn_prot">Update</button></td>
-                            <td>Chandana</td>
-                            <td>Sample Comment</td>
-                            <td>Sample Comment</td>
+                            
+                            <td class="hide_default_portfolio_Tab RAG_Column"><mark style="background-color: #f2d479;color: red; width: 100% !important;"
+                                class="rag_status">Attention</mark></td>
+                            <td class="hide_default_portfolio_Tab Target_Go_Live_Column">Q2</td>
+                            <td class="hide_default_portfolio_Tab Go_Live_Date_Column"><button class="btn_prot">Revise</button></td>
+                            <td class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column"><button class="btn_prot">Update</button></td>
+                            <td class="hide_default_portfolio_Tab BA_Column">Chandana</td>
+                            <td class="hide_default_portfolio_Tab PMO_Comment_Column">Sample Comment</td>
+                            <td class="hide_default_portfolio_Tab BTComment_Column">Sample Comment</td>
                             <td><i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_5" title="Choose Column" aria-hidden="true"></i></td>
                         </tr>
                         </tbody>
