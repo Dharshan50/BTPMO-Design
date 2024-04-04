@@ -1011,7 +1011,7 @@ table.table thead tr th {
     transition: 0.3s background-color ease, 0.3s box-shadow ease;
     height: 30px;
     box-sizing: border-box;
-    padding: 3px 15px;
+    padding: 8px 15px;
     font-size: 11px;
 }
 

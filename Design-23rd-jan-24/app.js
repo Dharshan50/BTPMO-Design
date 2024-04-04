@@ -77,54 +77,56 @@ $(document).ready(function () {
 
 let draggedItem;
 
+// For Task menu
+var $Task_menudiv = $('.Task_plus_drop_dwn');
+var $Task_plus_icon = $('#Task_Column_menus');
 
-var Task_menudiv = document.querySelector('.Task_plus_drop_dwn');
-var Task_plus_icon = document.getElementById('Task_Column_menus'); 
-
-Task_plus_icon.addEventListener("click", function () {
-    if (Task_plus_icon.style.transform === "rotate(315deg)") {
-        Task_plus_icon.style.transform = "rotate(0deg)";
+$Task_plus_icon.on("click", function () {
+    if ($Task_plus_icon.css('transform') === "rotate(315deg)") {
+        $Task_plus_icon.css('transform', "rotate(0deg)");
     } else {
-        Task_plus_icon.style.transform = "rotate(315deg)";
+        $Task_plus_icon.css('transform', "rotate(315deg)");
     }
-    if (Task_menudiv.style.display === "none") {
-        Task_menudiv.style.display = "flex"; // Use '=' for assignment
+    if ($Task_menudiv.css('display') === "none") {
+        $Task_menudiv.css('display', "flex");
     } else {
-        Task_menudiv.style.display = "none"; // Use '=' for assignment
-    }
-});
-
-var Project_menudiv = document.querySelector('.Project_plus_drop_dwn');
-var Project_plus_icon = document.getElementById('Project_Column_menus'); 
-
-Project_plus_icon.addEventListener("click", function () {
-    if (Project_plus_icon.style.transform === "rotate(315deg)") {
-        Project_plus_icon.style.transform = "rotate(0deg)";
-    } else {
-        Project_plus_icon.style.transform = "rotate(315deg)";
-    }
-    if (Project_menudiv.style.display === "none") {
-        Project_menudiv.style.display = "flex"; // Use '=' for assignment
-    } else {
-        Project_menudiv.style.display = "none"; // Use '=' for assignment
+        $Task_menudiv.css('display', "none");
     }
 });
 
-var Portfolio_menudiv = document.querySelector('.Portfolio_plus_drop_dwn');
-var Portfolio_plus_icon = document.getElementById('Portfolio_Column_menus'); 
+// For Project menu
+var $Project_menudiv = $('.Project_plus_drop_dwn');
+var $Project_plus_icon = $('#Project_Column_menus');
 
-Portfolio_plus_icon.addEventListener("click", function () {
-    if (Portfolio_plus_icon.style.transform === "rotate(315deg)") {
-        Portfolio_plus_icon.style.transform = "rotate(0deg)";
+$Project_plus_icon.on("click", function () {
+    if ($Project_plus_icon.css('transform') === "rotate(315deg)") {
+        $Project_plus_icon.css('transform', "rotate(0deg)");
     } else {
-        Portfolio_plus_icon.style.transform = "rotate(315deg)";
+        $Project_plus_icon.css('transform', "rotate(315deg)");
     }
-    if (Portfolio_menudiv.style.display === "none") {
-        Portfolio_menudiv.style.display = "flex"; // Use '=' for assignment
+    if ($Project_menudiv.css('display') === "none") {
+        $Project_menudiv.css('display', "flex");
     } else {
-        Portfolio_menudiv.style.display = "none"; // Use '=' for assignment
+        $Project_menudiv.css('display', "none");
     }
-}); 
+});
+
+// For Portfolio menu
+var $Portfolio_menudiv = $('.Portfolio_plus_drop_dwn');
+var $Portfolio_plus_icon = $('#Portfolio_Column_menus');
+
+$Portfolio_plus_icon.on("click", function () {
+    if ($Portfolio_plus_icon.css('transform') === "rotate(315deg)") {
+        $Portfolio_plus_icon.css('transform', "rotate(0deg)");
+    } else {
+        $Portfolio_plus_icon.css('transform', "rotate(315deg)");
+    }
+    if ($Portfolio_menudiv.css('display') === "none") {
+        $Portfolio_menudiv.css('display', "flex");
+    } else {
+        $Portfolio_menudiv.css('display', "none");
+    }
+});
 
 
 function drag(event) {
