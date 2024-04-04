@@ -835,6 +835,69 @@ $('#taskfun_tab5').on('click', function(){
 
     
 })
+$('#task_assfun_tab1').on('click', function(){
+    $('#task_batch2_details').show();
+    $('#task_rev2_details').hide();
+    $('#task_reqfun2_details').hide();
+    $('#task_reqfun2_details').hide();
+
+
+    $('#task_reqsingoff2_details').hide();
+    $('#task_signof2_details').hide();
+    
+
+    
+})
+$('#task_assfun_tab2').on('click', function(){
+
+    $('#task_batch2_details').hide();
+    $('#task_rev2_details').show();
+    $('#task_reqfun2_details').hide();
+
+    $('#task_reqsingoff2_details').hide();
+    $('#task_signof2_details').hide();
+    $('#task_batch2_details').hide();
+
+    
+})
+$('#task_assfun_tab3').on('click', function(){
+
+    $('#task_batch2_details').hide();
+    $('#task_rev2_details').hide();
+    $('#task_reqfun2_details').show();
+   
+    $('#task_reqsingoff2_details').hide();
+    $('#task_signof2_details').hide();
+    $('#task_batch2_details').hide();
+
+    
+})
+$('#task_assfun_tab4').on('click', function(){
+
+    $('#task_batch2_details').hide();
+    $('#task_rev2_details').hide();
+    $('#task_reqfun2_details').hide();
+
+    
+    $('#task_reqsingoff2_details').hide();
+    $('#task_signof2_details').show();
+    $('#task_batch2_details').hide();
+
+    
+})
+$('#task_assfun_tab5').on('click', function(){
+
+    $('#task_batch2_details').hide();
+    $('#task_rev2_details').hide();
+    $('#task_reqfun2_details').hide();
+
+
+    $('#task_reqsingoff2_details').show();
+    $('#task_signof2_details').hide();
+    $('#task_batch2_details').hide();
+
+    
+})
 $('#assign_tsk').on('click', function () {
     $('#slct_proj_drop').val("");
     $('#proj_tsk_manage').hide();
@@ -891,28 +954,7 @@ $('#port_proj_name_filter').on('change', function () {
 
 })
 
-$(document).find("[id^='AddBatch_']").on('click', function () {
-    var temp_id = this.id;
-    var splitArray = temp_id.split('_');
-    var id = splitArray[splitArray.length - 1];
-    var type = Number($(document).find(`#batch_type_${id}`).val());
-    $(document).find("[id^='Form_Template_']").hide();
-    // $(document).find("[class^='card_button_']").hide();
-    $(document).find('.card_button').show();
-    // alert(type)
-    if (type === 0) {
-        $(document).find(`[id^='Form_Template_${type}']`).show();
-        $(document).find(`[class^='card_button_${type}']`).show();
-        // $(document).find("[class^='Batches_list_']").hide();
-        // $(document).find(`#Record_Template_${id}`).show();
-    }
-    else {
-        $(document).find(`[id^='Form_Template_${type}']`).show();
-        $(document).find(`[class^='card_button_${type}']`).show();
-        // $(document).find("[class^='Batches_list_']").show();
-        // $(document).find(`#Record_Template_${id}`).hide()
-    }
-})
+
 
 $(document).find("[id^='close_']").on('click', function () {
     var temp_id = this.id;
@@ -1212,6 +1254,7 @@ $('#tab6').on('click', function () {
     $('#pagination_container').hide();
     $('#task_tab1').get(0).click();
     $('#proj_task_tab1').get(0).click();
+  
     $('#bt_dev_tasks').hide();
     $('#portfolio_sec_tab').hide();
     $('#prot_BA_view').hide();
@@ -1260,19 +1303,48 @@ $('#AddBatch_2').on('click', function (){
     $('#batch_options').show();
 
 })
+var Batch_id_tem = "";
+$(document).on('click', `[id^='AddBatch_']`, function () {
+    var temp_id = this.id;
+    var splitarr = temp_id.split('_');
+    var id = splitarr[splitarr.length - 1];
+    if (Batch_id_tem != id) {
+       
+        // $(document).find(`[id^='batch_options_']`).hide();
+        Batch_id_tem = id;
+     
+        $(document).find(`[id^='batch_options_${id}']`).show();
+        // $('#dev_break_tbl').hide();
+    }
+    else {
+       
+        $(`#batch_options_${id}`).hide();
 
-$('input[name ="addbatch"]').on('click',function(){
-    var val = $('input[name="addbatch"]:checked').val();
-    if(val == 1){
-        $('#batch_divisions').show();
-        $('#batch_options').hide()
+   
+        Batch_id_tem = "";
     }
-    else if(val == 2){
-        $('#batch_divisions').hide();
-        $('#batch_options').hide();
-    }
-  
 })
+function toggleBatchOptions(inputName, value, number) {
+    var divisionsID = '#batch_divisions_' + number;
+    var optionsID = '#batch_options_' + number;
+    var val = $('input[name="' + inputName + '"][value="' + value + '"]:checked').val();
+
+    if (val == value) {
+        $(divisionsID).show();
+        $(optionsID).hide();
+    } else {
+        $(divisionsID).hide();
+        $(optionsID).hide();
+    }
+}
+
+$('[name^="addbatch_"]').on('change', function () {
+   
+    var id = $(this).attr('name').split('_')[1];
+ 
+    toggleBatchOptions("addbatch_" + id, 1, id);
+});
+
 
 $('#task_tab1').on('click', function () {
     $('.action_needed_row').hide();
@@ -1701,9 +1773,11 @@ function bell() {
 }
 
 $('#proj_task_tab1').on('click', function () {
+    $("[id^='assign_tsk_data_']").hide()
     $('.pending_Assignment_Record').show();
     $(document).find('#Projects_Tab').html(`<tr>
-        <th>No.</th>
+     
+    <th>No.</th>
         <th>Project Priority</th>
         <th>Project Name</th>
         <th>Current Stage</th>
@@ -1715,6 +1789,7 @@ $('#proj_task_tab1').on('click', function () {
     </tr>`)
     $(".Assigned_Record").hide();
     $(document).find("[class^='pending_Assignment_View_']").hide();
+    // $(document).find("[class^='pending_Assignment_View_']").hide();
     $(document).find("[class^='Assigned_Record_View_']").hide();
     $("[id^='Expand_Pending_']").show();
     $("[id^='Close_Pending_']").hide();
@@ -1782,6 +1857,7 @@ $('.dw_content_data').on('click', function () {
 $('#proj_task_tab2').on('click', function () {
     $(".Assigned_Record").show();
     $(document).find('#Projects_Tab').html(`<tr>
+    <th>Task details</th>
         <th>No.</th>
         <th>Project Priority</th>
         <th>Project Name</th>

@@ -2333,7 +2333,7 @@
                                                         </div>
                                                        
                                                     </div>
-                                                    <div class="addBatch" style="margin-left: 269px; position: relative;">
+                                                    <div class="addBatch_2" style="margin-left: 269px; position: relative;">
                                                         <div class="dropdown">
                                                             <button class="btn btn-success save_Ba_Project dropbtn" id="AddBatch_2" style="height: 29px; margin-left: 100px; font-size: 9px;" ><i class="fa-solid fa-plus" aria-hidden="true" style="margin-left: -14px;margin-right: 9px; "></i>Add Batch</button>
                                                             <!-- <div class="dropdown-content">
@@ -2344,12 +2344,12 @@
                                                         <div class="Task_plus_drop_dwn plus_drop_dwn_batch" style="WIDTH:80PX; height: 75px; display: none;" id="batch_options">
                                                             <div style="width:100%">
                                                                 <input id="" type="radio"
-                                                                    class="" name="addbatch" value="1">
+                                                                    class="" name="addbatch_2" value="1">
                                                                 <label for="">Yes</label>
                                                             </div>
                                                             <div style="width:100%">
                                                                 <input id="" type="radio"
-                                                                    class="" name="addbatch" value="2">
+                                                                    class="" name="addbatch_2" value="2">
                                                                 <label for="">No</label>
                                                             </div>
                                                             
@@ -2358,7 +2358,7 @@
                                                     
                                                 </div>
                                                 <hr class="hr_ptg">
-                                                <div class="tabwrap new_tab_ptg" id="batch_divisions" style="display: none;">
+                                                <div class="tabwrap new_tab_ptg" id="batch_divisions_2" style="display: none;">
                                                     <input type="radio" id="taskfuntab1" name="tskbatchGroup1" class="tab" checked>
                                                     <label id="task_fun_1" for="taskfuntab1">Batch 1-Lcs Setup</label>
                                                     <input type="radio" id="taskfuntab2" name="tskbatchGroup1" class="tab">
@@ -2391,16 +2391,12 @@
                                                                 <label for="" class="card_label text_select_boxes ">Start
                                                                     Date  <span style="color:red; font-weight:500;">*</span></label>
     
-                                                                <!-- <p id="pm_label_in" class="Proj_detail_label_81">
-                                                                    29/05/2024</p> -->
                                                                 <input type="date" id="pm_sel_in" class="form-control acc_inn_inp_ptg ">
                                                             </div>
                                                             <div>
                                                                 <label for="" class="card_label text_select_boxes ">End
                                                                     Date  <span style="color:red; font-weight:500;">*</span></label>
-                                                                   <!--     
-                                                                <p id="pm_label_in" class="Proj_detail_label_81">
-                                                                    29/05/2024</p> -->
+                                                                
                                                                 <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg ">
                                                             </div>
                                                             <div>
@@ -2417,14 +2413,7 @@
                                                               
                                                                 <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg ">
                                                             </div>
-                                                            <!-- <div>
-                                                                <label for="" class="card_label text_select_boxes ">Revised date comment
-                                                                    </label>
-    
-                                                                <p id="pm_label_in" class="Proj_detail_label_81">
-                                                                    29/05/2024</p>
-                                                                <input type="text" id="pm_sel_in" style="display: none;" class="form-control acc_inn_inp_ptg Proj_detail_field_81 rounded-0 boxes">
-                                                            </div> -->
+                                                          
                                                             <div>
                                                                 <label for="" class="card_label text_select_boxes ">Status
                                                                     </label>
@@ -13425,6 +13414,8 @@
                         <table class="table table-responsive tbl_all_proj">
                             <thead id="Projects_Tab" style="font-size: 15px;">
                                 <tr>
+                                    <th>Action</th>
+                                
                                     <th>No.</th>
                                     <th>Project Priority</th>
                                     <th>Project Name</th>
@@ -13440,7 +13431,8 @@
                             <tbody style="font-size: 12px;">
                                 <!-- PENDING ASSIGNMENT PROJECTS -->
                                 <tr class="pending_Assignment_Record">
-                                    <td>1</td>
+                              
+                                    <td> 1</td>
                                     <td><span class="last_num" style="background-color: #f06060; color: #fff;">1</span>
                                     </td>
                                     <td>China Fronters</td>
@@ -19017,6 +19009,7 @@
 
                     <!-- ASSIGNED PROJECTS -->
                     <tr class="Assigned_Record">
+                   <td>   <i class="fa-solid fa-plus icon_show_tsk ps-2" id="view_assign_tsk_4" title="view task"></i></td>
                         <td>1</td>
                         <td><span class="last_num" style="background-color: #f06060; color: #fff;">1</span>
                         </td>
@@ -19034,6 +19027,538 @@
                             <button class="Btn_style_close" id="Close_Assigned_1">Close</button>
                         </td>
                     </tr>
+                    <tr id="assign_tsk_data_4">
+                        <td colspan="18">
+                            <div class="accordion" style="margin-bottom: 4px;" id="batch_dev_1">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed accordian_head" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#batch_tsk_data_2"
+                                        aria-expanded="false" aria-controls="batch_tsk_data_2" style="background-color: #0BB18F !important;">
+                                        <div style="display : flex; gap:7px;">
+                                            <span style="margin-left: 10px;">Functional Requriement</span>
+                                        </div>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="batch_tsk_data_2" class=" droppable"
+                                style=" overflow-y:auto;font-size: 12px;">
+                                <div class=" project_charter droppable" id="PROJECT_CHARTER_1">
+                                    <div id="project_details"
+                                        class="card_main_box project_details show" style="margin-top: -2px !important;">
+                                      
+
+                                    </div>
+                                    <div class="wrap_acc_out_ptg">
+                                        <div class="card_cnt" >
+                                          
+                                            <div class="Stage_Details">
+                                                <div class="Details">
+                                                    <label for="Ba_responsible" style="font-weight: 600 !important;">BA
+                                                        Responsible <span style="color:red; font-weight:500;">*</span></label>
+                                                    <p style=" width :120px !important;margin-bottom: 0;">
+                                                        <select name="BA"
+                                                            class="Func_ba_field_1 form-select field_style rounded-0 Ba_responsible "
+                                                            id="Ba_responsible">
+                                                            <option value="">Select</option>
+                                                            <option selected value="Sandeep">Sandeep</option>
+                                                            <option value="Sami">Sami</option>
+                                                        </select>
+                                                        <label class="Func_ba_label_1"
+                                                            for="Ba_responsible">Sandeep</label>
+                                                    </p>
+                                                    <label for="stage_clousre"
+                                                        style="font-weight: 600 !important;">Stage Closure</label>
+                                                    <p style=" width :100px !important;margin-bottom: 0;">
+                                                        <input type="date" id="stage_clousure" value="30-12-2024"
+                                                            class="Func_ba_field_1 form-control field_style rounded-0" />
+                                                        <label class="Func_ba_label_1" for="">30-12-2024</label>
+                                                    </p>
+                                                    <div class="d-flex">
+                                                        <button class="save_Ba_Project mx-1 btn btn-success func_ba_cls"
+                                                            id="Save_btn_batch4">Re-assign stage</button>
+                                                        <!-- <button class="save_Ba_Project mx-1 btn btn-success func_ba_cls"
+                                                            id="Func_Save_Ba_1">Save</button>
+                                                        <button class="save_Ba_Project mx-1 btn btn-danger func_ba_cls"
+                                                            id="Func_Cancel_Ba_1">Cancel</button> -->
+                                                    </div>
+                                                </div>
+                                               
+                                            </div>
+                                            <div class="addBatch_3" style="margin-left: 269px; position: relative;">
+                                                <div class="dropdown">
+                                                    <button class="btn btn-success save_Ba_Project dropbtn" id="AddBatch_3" style="height: 29px; margin-left: 100px; font-size: 9px;" ><i class="fa-solid fa-plus" aria-hidden="true" style="margin-left: -14px;margin-right: 9px; "></i>Add Batch</button>
+                                                    <!-- <div class="dropdown-content">
+                                                        <a href="#" class="dropdown-item">Yes</a>
+                                                        <a href="#" class="dropdown-item">No</a>
+                                                    </div> -->
+                                                </div>
+                                                <div class="Task_plus_drop_dwn plus_drop_dwn_batch" style="WIDTH:80PX; height: 75px; display: none;" id="batch_options_3">
+                                                    <div style="width:100%">
+                                                        <input id="" type="radio"
+                                                            class="" name="addbatch_3"  value="1" checked>
+                                                        <label for="">Yes</label>
+                                                    </div>
+                                                    <div style="width:100%">
+                                                        <input id="" type="radio"
+                                                            class="" name="addbatch_3" value="2">
+                                                        <label for="">No</label>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <hr class="hr_ptg">
+                                        <div class="tabwrap new_tab_ptg" id="batch_divisions_3">
+                                            <input type="radio" id="taskfun_assitab1" name="tskAssbatchGroup1" class="tab" checked>
+                                            <label id="task_funass_1" for="taskfun_assitab1">Batch 1-Lcs Setup</label>
+                                            <input type="radio" id="taskfun_assitab2" name="tskAssbatchGroup1" class="tab">
+                                            <label for="taskfun_assitab2" id="task_funass_2">Batch 2</label>
+                                        </div>
+                                        <div class="tabwrap new_tab_ptg">
+                                            <input type="radio" id="task_assfun_tab1" name="funtab_ass_taskreq" class="tab" checked>
+                                            <label class="tabs_pgt_1" id="task_fun_tab1" for="task_assfun_tab1">Requirement analysis & draft with Function</label>
+                                            <input type="radio" id="task_assfun_tab2" name="funtab_ass_taskreq" class="tab">
+                                            <label class="tabs_pgt_1" for="task_assfun_tab2" id="task_fun_tab2">Rounds of review with Function</label>
+                                            <input type="radio" id="task_assfun_tab3" name="funtab_ass_taskreq" class="tab">
+                                            <label class="tabs_pgt_1" for="task_assfun_tab3" id="task_fun_tab3">Requirement Finalization</label>
+                                            <input type="radio" id="task_assfun_tab4" name="funtab_ass_taskreq" class="tab">
+                                            <label class="tabs_pgt_1" for="task_assfun_tab4" id="task_fun_tab4">Requirement signoff</label>
+                                            <input type="radio" id="task_assfun_tab5" name="funtab_ass_taskreq" class="tab">
+                                            <label class="tabs_pgt_1" for="task_assfun_tab5" id="task_fun_tab5">Batch Summary</label>
+                                        </div>
+                                       
+                                        <div class="filter_body" id="task_batch2_details">
+                                            <button
+                                                class="accordion-button collapsed acc_ptg_on_btn"
+                                                type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne_dev">
+                                                <!-- <span>Task 1: Requirement analysis & draft with Function</span> -->
+                                               
+                                            </button>
+                                                <div class="acc_inn_cnt_ptg">
+                                                    
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Start
+                                                            Date  <span style="color:red; font-weight:500;">*</span></label>
+
+                                                        <!-- <p id="pm_label_in" class="Proj_detail_label_81">
+                                                            29/05/2024</p> -->
+                                                        <input type="date" id="pm_sel_in" class="form-control acc_inn_inp_ptg ">
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">End
+                                                            Date  <span style="color:red; font-weight:500;">*</span></label>
+                                                           <!--     
+                                                        <p id="pm_label_in" class="Proj_detail_label_81">
+                                                            29/05/2024</p> -->
+                                                        <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg ">
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes "> Revised Start
+                                                            Date</label>
+
+                                                     
+                                                        <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg ">
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Revised End Date
+                                                            </label>
+
+                                                      
+                                                        <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg ">
+                                                    </div>
+                                                    <!-- <div>
+                                                        <label for="" class="card_label text_select_boxes ">Revised date comment
+                                                            </label>
+
+                                                        <p id="pm_label_in" class="Proj_detail_label_81">
+                                                            29/05/2024</p>
+                                                        <input type="text" id="pm_sel_in" style="display: none;" class="form-control acc_inn_inp_ptg Proj_detail_field_81 rounded-0 boxes">
+                                                    </div> -->
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Status
+                                                            </label>
+
+                                                            <select id="Proj_detail_field_" class="form-select acc_inn_sel_ptg  rounded-0 boxes" aria-label="Default select example">
+                                                            <option selected="">Select</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes">Allocation Perday
+                                                             <span style="color:red; font-weight:500;">*</span></label>
+
+                                                     
+                                                       
+                                                        <select id=""  class="form-select acc_inn_sel_ptg  rounded-0 boxes" aria-label="Default select example">
+                                                            <option selected="">Select</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">2</option>
+                                                        </select>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes"> Estimated MD
+                                                             <span style="color:red; font-weight:500;">*</span></label>
+
+                                                       
+                                                       
+                                                        <select id=""  class="form-select acc_inn_sel_ptg  rounded-0 boxes" aria-label="Default select example">
+                                                            <option selected="">Select</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="ssc_btn">
+                                                    <button>Save</button>
+                                                   
+                                                </div>
+                                        </div>
+                                        <div class="filter_body" style=" display: none;" id="task_rev2_details">
+                                                    <button
+                                                      class="accordion-button collapsed acc_ptg_on_btn"
+                                                      type="button" data-bs-toggle="collapse"
+                                                      data-bs-target="#collapseOne_dev">
+                                                      <!-- <span>Task 2: Rounds of review with Function</span> -->
+                                                     
+                                                    </button>
+                                                      <div class="acc_inn_cnt_ptg">
+                                                          <div>
+                                                              <label for="" class="card_label text_select_boxes ">Start
+                                                                  Date  <span style="color:red; font-weight:500;">*</span></label>
+  
+                                                              <input type="date" id="pm_sel_in" class="form-control acc_inn_inp_ptg ">
+                                                          </div>
+                                                          <div>
+                                                              <label for="" class="card_label text_select_boxes ">End
+                                                                  Date  <span style="color:red; font-weight:500;">*</span></label>
+  
+                                                              
+                                                              <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg ">
+                                                          </div>
+                                                          <div>
+                                                              <label for="" class="card_label text_select_boxes "> Revised Start
+                                                                  Date</label>
+  
+                                                              <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg ">
+                                                          </div>
+                                                          <div>
+                                                              <label for="" class="card_label text_select_boxes ">Revised End Date
+                                                                  </label>
+  
+                                                              <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg ">
+                                                          </div>
+                      
+                                                          <div>
+                                                              <label for="" class="card_label text_select_boxes ">Status
+                                                                  </label>
+  
+                                                                
+                                                                  <select id="Proj_detail_field_" class="form-select acc_inn_sel_ptg  rounded-0 boxes" aria-label="Default select example">
+                                                                  <option selected="">Select</option>
+                                                                  <option value="1">One</option>
+                                                                  <option value="2">Two</option>
+                                                                  <option value="3">Three</option>
+                                                              </select>
+                                                          </div>
+                                                          <div>
+                                                              <label for="" class="card_label text_select_boxes">Allocation Perday
+                                                                   <span style="color:red; font-weight:500;">*</span></label>
+  
+                                                             
+                                                              <select id=""  class="form-select acc_inn_sel_ptg  rounded-0 boxes" aria-label="Default select example">
+                                                                  <option selected="">Select</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">2</option>
+                                                              </select>
+                                                          </div>
+                                                          <div>
+                                                              <label for="" class="card_label text_select_boxes"> Estimated MD
+                                                                   <span style="color:red; font-weight:500;">*</span></label>
+  
+                                                              
+                                                             
+                                                              <select  class="form-select acc_inn_sel_ptg  rounded-0 boxes" aria-label="Default select example">
+                                                                  <option selected="">Select</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">2</option>
+                                                              </select>
+                                                          </div>
+                                                      </div>
+                                                      <div class="ssc_btn">
+                                                        <button>Save</button>
+                                                       
+                                                    </div>
+                                                  </div>
+                                                 
+                                                  <div class="filter_body" style="display: none;" id="task_reqfun2_details" >
+                                                    <button
+                                                      class="accordion-button collapsed acc_ptg_on_btn"
+                                                      type="button" data-bs-toggle="collapse"
+                                                      data-bs-target="#collapseOne_dev">
+                                                      <!-- <span>Task 3: Requirement Finlization</span> -->
+                                                    </button>
+                                                      <div class="acc_inn_cnt_ptg">
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">Start
+                                                                Date  <span style="color:red; font-weight:500;">*</span></label>
+
+                                                            <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg ">
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">End
+                                                                Date  <span style="color:red; font-weight:500;">*</span></label>
+
+                                                           
+                                                            <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg ">
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes "> Revised Start
+                                                                Date</label>
+
+                                                          
+                                                            <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg ">
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">Revised End Date
+                                                                </label>
+
+                                                            
+                                                            <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg ">
+                                                        </div>
+                    
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">Status
+                                                                </label>
+
+                                                               
+                                                                <select id=""  class="form-select acc_inn_sel_ptg  rounded-0 boxes" aria-label="Default select example">
+                                                                <option selected="">Select</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes">Allocation Perday
+                                                                 <span style="color:red; font-weight:500;">*</span></label>
+
+                                                          
+                                                           
+                                                            <select id=""  class="form-select acc_inn_sel_ptg  rounded-0 boxes" aria-label="Default select example">
+                                                                <option selected="">Select</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">2</option>
+                                                            </select>
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes"> Estimated MD
+                                                                 <span style="color:red; font-weight:500;">*</span></label>
+
+                                                        
+                                                           
+                                                            <select id=""  class="form-select acc_inn_sel_ptg  rounded-0 boxes" aria-label="Default select example">
+                                                                <option selected="">Select</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ssc_btn">
+                                                        <button>Save</button>
+                                                       
+                                                    </div>
+                                                    </div>
+                                                
+                                                
+                                                  
+                                                  <div class="filter_body" style="display: none;" id="task_signof2_details">
+                                                    <button
+                                                      class="accordion-button collapsed acc_ptg_on_btn"
+                                                      type="button" data-bs-toggle="collapse"
+                                                      data-bs-target="#collapseOne_dev">
+                                                      <!-- <span>Task 4: Requirement signoff </span> -->
+                                                  
+                                                    </button>
+                                                      <div class="acc_inn_cnt_ptg">
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">Start
+                                                                Date  <span style="color:red; font-weight:500;">*</span></label>
+
+                                                            <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg ">
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">End
+                                                                Date  <span style="color:red; font-weight:500;">*</span></label>
+
+                                                            <input type="date" id="pm_sel_in" class="form-control acc_inn_inp_ptg ">
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes "> Revised Start
+                                                                Date</label>
+
+                                                           
+                                                            <input type="date" id="pm_sel_in" class="form-control acc_inn_inp_ptg ">
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">Revised End Date
+                                                                </label>
+
+                                                            
+                                                            <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg ">
+                                                        </div>
+                    
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">Status
+                                                                </label>
+
+                                                                <select   class="form-select acc_inn_sel_ptg  rounded-0 boxes" aria-label="Default select example">
+                                                                <option selected="">Select</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes">Allocation Perday
+                                                                 <span style="color:red; font-weight:500;">*</span></label>
+
+                                                           
+                                                           
+                                                            <select id=""  class="form-select acc_inn_sel_ptg  rounded-0 boxes" aria-label="Default select example">
+                                                                <option selected="">Select</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">2</option>
+                                                            </select>
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes"> Estimated MD
+                                                                 <span style="color:red; font-weight:500;">*</span></label>
+
+                                                           
+                                                            <select id=""  class="form-select acc_inn_sel_ptg  rounded-0 boxes" aria-label="Default select example">
+                                                                <option selected="">Select</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ssc_btn">
+                                                        <button>Save</button>
+                                                       
+                                                    </div>
+                                                         
+                                                    </div>
+                                                     
+
+                                                  <div class="filter_body" style="display: none;" id="task_reqsingoff2_details" >
+                                                    <button
+                                                      class="accordion-button collapsed acc_ptg_on_btn"
+                                                      type="button" data-bs-toggle="collapse"
+                                                      data-bs-target="#collapseOne_dev">
+                                                      <!-- <span>Batch Summary</span> -->
+                                                     
+                                                    </button>
+                                                      <div class="acc_inn_cnt_ptg">
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">Start
+                                                                Date  <span style="color:red; font-weight:500;">*</span></label>
+
+                                                            
+                                                            <input type="date" id="pm_sel_in" class="form-control acc_inn_inp_ptg ">
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">End
+                                                                Date  <span style="color:red; font-weight:500;">*</span></label>
+
+                                                            
+                                                            <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg  ">
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes "> Revised Start
+                                                                Date</label>
+
+                                                            <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg  ">
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">Revised End Date
+                                                                </label>
+
+                                                           
+                                                            <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg  ">
+                                                        </div>
+                    
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">Status
+                                                                </label>
+
+                                                               
+                                                                <select id="Proj_detail_field_"  class="form-select acc_inn_sel_ptg   rounded-0 boxes" aria-label="Default select example">
+                                                                <option selected="">Select</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes">Allocation Perday
+                                                                 <span style="color:red; font-weight:500;">*</span></label>
+
+                                                          
+                                                           
+                                                            <select id=""  class="form-select acc_inn_sel_ptg   rounded-0 boxes" aria-label="Default select example">
+                                                                <option selected="">Select</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">2</option>
+                                                            </select>
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes"> Estimated MD
+                                                                 <span style="color:red; font-weight:500;">*</span></label>
+
+                                                           
+                                                            <select id="" class="form-select acc_inn_sel_ptg   rounded-0 boxes" aria-label="Default select example">
+                                                                <option selected="">Select</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">2</option>
+                                                            </select>
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">Stage
+                                                                Closure</label>
+
+                                                          
+                                                            <input type="date" id="pm_sel_in"  class="form-control acc_inn_inp_ptg  ">
+                                                        </div>
+                                               
+                                                    </div>
+                                               
+                                                
+
+                                                    <div class="ssc_btn">
+                                                        <button>Save</button>
+                                                        <button>Submit</button>
+                                                        <button>Cancel</button>
+                                                    </div>
+                                                    
+                                            </div>
+                                            </div>
+                                        </div>
+                                            
+                                        </div>
                     <tr class="Assigned_Record_View_1" style="display: none; ">
                         <td colspan="8">
                             <!-- Pre Charter -->
@@ -23845,6 +24370,7 @@
                         </td>
                     </tr>
                     <tr class="Assigned_Record">
+                        <td>   <i class="fa-solid fa-plus icon_show_tsk ps-2" id="view_assign_tsk_3" title="view task"></i></td>
                         <td>2</td>
                         <td><span class="last_num" style="background-color: #45bcd9; color: #fff;">3</span>
                         </td>
@@ -26676,6 +27202,7 @@
                         </td>
                     </tr>
                     <tr class="Assigned_Record">
+                        <td><i class="fa-solid fa-plus icon_show_tsk ps-2" id="view_assign_tsk_6" title="view task"></i></td>
                         <td>3</td>
                         <td><span class="last_num" style="background-color: #68f38d; color: #fff;">2</span>
                         </td>
