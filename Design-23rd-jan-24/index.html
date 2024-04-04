@@ -81,7 +81,7 @@
                 <input type="radio" id="tab2" name="tabGroup1" class="tab">
                 <label for="tab2" id="bt_proj-task_tab">Projects</label>
                 <input type="radio" id="tab3" name="tabGroup1" class="tab">
-                <label id="bt_task_tab" for="tab3">Tasks <span class="count_num">5</span></label>
+                <label id="bt_task_tab" for="tab3">Tasks <span class="count_num">6</span></label>
                 <!-- <input type="radio" id="tab4" class="tab" name="tabGroup1">
                 <label for="tab4" id="bt_proj_task_tab4">BT-Dev Tasks</label> -->
                 <input type="radio" id="tab5" class="tab" name="tabGroup1">
@@ -1148,13 +1148,13 @@
                     <input type="radio" id="task_proj_tab1" name="task_proj_tabGroup1" class="proj_task_tab" checked>
                     <label id="bt_proj_tab" for="task_proj_tab1" style="border-right: none;">Projects</label>
                     <input type="radio" id="task_proj_tab2" name="task_proj_tabGroup1" class="proj_task_tab">
-                    <label id="bt_task_tab" for="task_proj_tab2">Change Requests <span class="count_num">2</span></label>
+                    <label id="bt_task_tab" for="task_proj_tab2">Change Requests <span class="count_num">3</span></label>
                 </div>
             </div>
             <div class="task_content" id="task_content_proj">
                 <div class="task_tabwrap" style="font-size: 13px; margin-right: 25px !important; ">
                     <input type="radio" id="task_tab1" name="task_tabGroup1" class="task_tab"  checked>
-                    <label id="bt_proj_tab" for="task_tab1" style="border-left: none; border-right: none; width: 100px;" >Assigned<span class="count_num">5</span></label>
+                    <label id="bt_proj_tab" for="task_tab1" style="border-left: none; border-right: none; width: 100px;" >Assigned<span class="count_num">3</span></label>
 
                     <input type="radio" id="task_tab2" name="task_tabGroup1" class="task_tab" checked>
                     <label id="bt_task_tab" for="task_tab2" style="border-right: none;">Pending</label>
@@ -1167,17 +1167,17 @@
                     <input type="radio" id="task_tab4" name="task_tabGroup1" class="task_tab" checked>
                     <label id="bt_task_tab" for="task_tab4" style="border-right: none;">Next Week</label>
 
-                    <input type="radio" id="task_tab5" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab5" style="border-right: none;">Delay</label>
+                    <!-- <input type="radio" id="task_tab5" name="task_tabGroup1" class="task_tab" checked>
+                    <label id="bt_task_tab" for="task_tab5" style="border-right: none;">Delay</label> -->
 
-                    <input type="radio" id="task_tab6" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab6" style="border-right: none;">Needs Help</label>
+                    <!-- <input type="radio" id="task_tab6" name="task_tabGroup1" class="task_tab" checked>
+                    <label id="bt_task_tab" for="task_tab6" style="border-right: none;">Needs Help</label> -->
 
                     <input type="radio" id="task_tab7" name="task_tabGroup1" class="task_tab" checked>
                     <label id="bt_task_tab" for="task_tab7" style="border-right: none;">My Tasks</label>
-
+<!-- 
                     <input type="radio" id="task_tab8" name="task_tabGroup1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_tab8"style="border-right: none;" >Completed</label>
+                    <label id="bt_task_tab" for="task_tab8"style="border-right: none;" >Completed</label> -->
                 </div>
 
                 <div class="proj_filter_select">
@@ -1212,7 +1212,7 @@
             <div class="task_content" style="display: none;" id="task_content_changereq">
                 <div class="task_tabwrap" style="font-size: 13px; margin-right: 440px !important;">
                     <input type="radio" id="task_tabch1" name="task_tabGroupch1" class="task_tab" checked>
-                    <label id="bt_proj_tab" for="task_tabch1" style="border-right: none; border-left: none; width: 89px; ">Assigned <span class="count_num">5</span></label>
+                    <label id="bt_proj_tab" for="task_tabch1" style="border-right: none; border-left: none; width: 89px; ">Assigned <span class="count_num">2</span></label>
 
                     <input type="radio" id="task_tabch2" name="task_tabGroupch1" class="task_tab" checked>
                     <label id="bt_task_tab" for="task_tabch2" style="border-right: none;">Pending</label>
@@ -1270,17 +1270,17 @@
                                 <th class="">Batch Name</th>
                                 <th class="">Current task <i class=""></i></th>
                                 <th class="">Current task Status <i class=""></i></th>
-                                <th class="">Start Date <i class=""></i></th>
-                                <th class="">End Date <i class=""></i></th>
+                                <th class="">Task Start Date <i class=""></i></th>
+                                <th class="">Task End Date <i class=""></i></th>
                                 <th class="">Revised Start Date <i class=""></i></th>
                                 <th class="">Revised End Date <i class=""></i></th>
 
 
                                 <th class="hide_default_Tasks_Tab Next_Task_Column big_column_width">Next task <i
                                         class=""></i></th>
-                                <th class="hide_default_Tasks_Tab Next_Start_Date_Column small_column_width">Next Start
+                                <th class="hide_default_Tasks_Tab Next_Start_Date_Column small_column_width">Next Task Start
                                     Date <i class=""></i></th>
-                                <th class="hide_default_Tasks_Tab Next_End_Date_Column small_column_width">Next End Date
+                                <th class="hide_default_Tasks_Tab Next_End_Date_Column small_column_width">Next Task End Date
                                     <i class=""></i>
                                 </th>
                                 <th class="hide_default_Tasks_Tab Next_Task_Status_Column small_column_width">Next Task
@@ -1301,12 +1301,12 @@
                                         <div style="width:100%">
                                             <input id="Next_Start_Date_Column" type="checkbox"
                                                 class="chooseTask__Next_Start_Date_Column">
-                                            <label for="Next_Start_Date_Column">Next Start Date </label>
+                                            <label for="Next_Start_Date_Column">Next Task Start Date </label>
                                         </div>
                                         <div style="width:100%">
                                             <input id="Next_End_Date_Column" type="checkbox"
                                                 class="chooseTask__Next_End_Date_Column">
-                                            <label for="Next_End_Date_Column">Next End Date</label>
+                                            <label for="Next_End_Date_Column">Next Task End Date</label>
                                         </div>
                                         <div style="width:100%">
                                             <input id="Next_Task_Status_Column" type="checkbox"
@@ -1340,6 +1340,7 @@
                                 <td>China Fronters</td>
                                 <td>Project Charter</td>
                                 <td>Send charter to Function</td>
+                                <td>N/A</td>
                                 <td><mark style="background-color:  #b0b3ad;" class="rag_status">Completed</mark>
                                 </td>
                                 <td>14-Apr-2024</td>
@@ -1384,7 +1385,7 @@
                                         class="rag_status">On Track</mark></td>
 
                             </tr>
-                            <tr class="All_tasks">
+                            <tr class="Current_task">
                                 <!-- <td><i class="fa-solid fa-plus"
                                         style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"
                                         id="view_tsk_data_2" title="View Task"></i></td> -->
@@ -1418,7 +1419,111 @@
                                         </select>
                                     </div>
                                     <div>
-                                        <mark style="background-color:  #fdf908;" id="label_status_3" class="rag_status">InProgress</mark>
+                                        <mark style="background-color:  #82ff80;" id="label_status_3" class="rag_status">Inprogress</mark>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <input type="text" class="form-control formtxt_box_chng_sml" id="edit_strdate_3"
+                                            style="padding: 3px 10px !important; width: 100% !important;">
+                                    </div>
+                                    <div>
+                                        <label for="" id="label_strdate_3">14-Apr-2024</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <input type="text" class="form-control formtxt_box_chng_sml" id="edit_enddate_3"
+                                            style="padding: 3px 10px !important; width: 100% !important;">
+                                    </div>
+                                    <div>
+                                        <label for="" id="label_enddate_3">29-Apr-2024</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <input type="text" class="form-control formtxt_box_chng_sml"
+                                            id="edit_revstrdate_3"
+                                            style="padding: 3px 10px !important; width: 100% !important;">  
+                                    </div>
+                                    <div>
+                                        <label for="" id="label_revstrdate_3">30-Apr-2024</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <input type="text" class="form-control formtxt_box_chng_sml"
+                                            id="edit_revenddate_3"
+                                            style="padding: 3px 10px !important; width: 100% !important; display: none;">
+                                    </div>
+                                    <div>
+                                        <label for="" id="label_revenddate_3">04-Apr-2024</label>
+                                    </div>
+                                </td>
+
+                                <td class="hide_default_Tasks_Tab Next_Task_Column">BR Review</td>
+                                <td class="hide_default_Tasks_Tab Next_Start_Date_Column">
+                                    <div>
+                                        <input type="text" class="form-control formtxt_box_chng_sml"
+                                            id="edit_nextstrdate_3"
+                                            style="padding: 3px 10px !important; width: 100% !important; display: none;">
+                                    </div>
+                                    <div>
+                                        <label for="" id="label_nextstrdate_3">30-Apr-2024</label>
+                                    </div>
+                                </td>
+                                <td class="hide_default_Tasks_Tab Next_End_Date_Column">
+                                    <div>
+                                        <input type="text" class="form-control formtxt_box_chng_sml"
+                                            id="edit_nextenddate_3"
+                                            style="padding: 3px 10px !important; width: 100% !important; display: none;">
+                                    </div>
+                                    <div>
+                                        <label for="" id="label_nextenddate_3">15-Apr-2024</label>
+                                    </div>
+                                </td>
+                                <td class="hide_default_Tasks_Tab Next_Task_Status_Column">Not Started</td>
+                                <td class="hide_default_Tasks_Tab Assigned_To_Column">Aurianne(PM)</td>
+                                <td class="hide_default_Tasks_Tab Current_Stage_Status"><mark
+                                        style="background-color: rgb(121, 255, 97);color: black !important;"
+                                        class="rag_status">On Track</mark></td>
+
+                            </tr>
+                            <tr class="Next_week">
+                                <!-- <td><i class="fa-solid fa-plus"
+                                        style="font-size: 20px; margin-left: 15px; color: #447E32; cursor: pointer;"
+                                        id="view_tsk_data_2" title="View Task"></i></td> -->
+                                <td>
+                                    <div style="display: flex; gap:5px"> 
+                                        <button type="button" class="btn_create_proj"
+                                            style="font-size: 10px !important; padding: 5px 11px !important; border-radius: 0px !important; background-color: #3cdeb5 !important; color: #fff; box-shadow: #1a9c7b 0px 0px 2px 1px !important;"
+                                            id="upd_time_11">Update</button>
+                                        <button type="button" class="btn_create_proj"
+                                            style="font-size: 10px !important; padding: 6px 10px !important;  box-shadow: rgb(1, 88, 1) 0px 0px 2px 1px;"
+                                            id="save_time_11">Save</button>
+                                        <i class="fa-solid fa-plus icon_show_tsk ps-2" id="view_assign_tsk_3" title="view task"></i> 
+                                    </div>
+                                </td>
+                                <td>1</td>
+                                <td><span class="last_num_task" style="background-color: #f06060; color: #fff;">1</span>
+                                </td>
+                                <td>China Fronters</td>
+                                <td>Requirement </td>
+                                        <td>Batch 1 LCS Set Up</td>
+                                <td>Requirement Analysis Planning</td>
+                                <td>
+                                    <div>
+                                        <select style="padding: 3px 10px !important; width: 100% !important; font-size: 10px;" class="form-select" id="edit_status_3"
+                                            value='Not Started' class="">
+                                            <option  value="">Select</option>
+                                            <option value="Not Started">Not Started</option>
+                                            <option selected value="InProgress">InProgress</option>
+                                            <option value="Pending">Pending</option>
+                                            <option value="On Hold">On Hold</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <mark style="background-color:  #82ff80;" id="label_status_3" class="rag_status">Yet to start</mark>
                                     </div>
                                 </td>
                                 <td>
@@ -2362,9 +2467,9 @@
                                                                     class="Func_ba_field_1 form-control field_style rounded-0" />
                                                                 <label class="Func_ba_label_1" for="">30-12-2024</label>
                                                             </p>
-                                                            <div class="d-flex">
-                                                                <button class="save_Ba_Project mx-1 btn btn-success func_ba_cls"
-                                                                    id="Save_btn_batch4">Re-assign stage</button>
+                                                            <div>
+                                                                <!-- <button class="save_Ba_Project btn btn-success func_ba_cls"
+                                                                    id="Save_btn_batch4">Re-assign stage</button> -->
                                                                 <!-- <button class="save_Ba_Project mx-1 btn btn-success func_ba_cls"
                                                                     id="Func_Save_Ba_1">Save</button>
                                                                 <button class="save_Ba_Project mx-1 btn btn-danger func_ba_cls"
@@ -3225,7 +3330,7 @@
                                                                     <div class="acc_inn_cnt_ptg">
         
                                                                         <div>
-                                                                            <label for="" class="card_label text_select_boxes">BA responsible <span style="color:red; font-weight:500;">*</span></label>
+                                                                            <label for="" class="card_label text_select_boxes">Developer <span style="color:red; font-weight:500;">*</span></label>
         
                                                                         
                                                                         
@@ -3672,7 +3777,7 @@
                                         </select>
                                     </div>
                                     <div>
-                                        <mark style="background-color:  #eeb3f9;" id="label_status_2" class="rag_status">Not Started</mark>
+                                        <mark style="background-color:  #82ff80;" id="label_status_2" class="rag_status">Assinged</mark>
                                     </div>
                                 </td>
                                 <td>
@@ -3945,7 +4050,7 @@
                                         </select>
                                     </div>
                                     <div>
-                                        <mark style="background-color: #eeb3f9;" id="label_status_4"  class="rag_status">Not Started</mark>
+                                        <mark style="background-color: #82ff80;" id="label_status_4"  class="rag_status">Assinged</mark>
                                     </div>
                                 </td>
                                 <td>
@@ -14714,7 +14819,7 @@
                                                         </button>
                                                             <div class="acc_inn_cnt_ptg">
                                                                 <div>
-                                                                    <label for="" class="card_label text_select_boxes">BA Responsible<span style="color:red; font-weight:500;">*</span></label>
+                                                                    <label for="" class="card_label text_select_boxes">Developer <span style="color:red; font-weight:500;">*</span></label>
 
                                                                 
                                                                     <select id=" "  class="form-select acc_inn_sel_ptg   rounded-0 boxes" aria-label="Default select example">
@@ -14830,7 +14935,7 @@
                                                             <div class="acc_inn_cnt_ptg">
 
                                                                 <div>
-                                                                    <label for="" class="card_label text_select_boxes">BA responsible <span style="color:red; font-weight:500;">*</span></label>
+                                                                    <label for="" class="card_label text_select_boxes">Developer <span style="color:red; font-weight:500;">*</span></label>
 
                                                                 
                                                                 
@@ -19126,7 +19231,7 @@
                                             </div>
                                             <div class="addBatch_3" style="margin-left: 269px; position: relative;">
                                                 <div class="dropdown">
-                                                    <button class="btn btn-success save_Ba_Project dropbtn" id="AddBatch_3" style="height: 29px; margin-left: 100px; font-size: 9px;" ><i class="fa-solid fa-plus" aria-hidden="true" style="margin-left: -14px;margin-right: 9px; "></i>Add Batch</button>
+                                                    <button class="btn btn-success save_Ba_Project batch_assign_btn " id="AddBatch_3" ><i class="fa-solid fa-plus" aria-hidden="true" style="margin-left: -14px;margin-right: 9px; "></i>Add Batch</button>
                                                     <!-- <div class="dropdown-content">
                                                         <a href="#" class="dropdown-item">Yes</a>
                                                         <a href="#" class="dropdown-item">No</a>
@@ -19135,7 +19240,7 @@
                                                 <div class="Task_plus_drop_dwn plus_drop_dwn_batch" style="WIDTH:80PX; height: 75px; display: none;" id="batch_options_3">
                                                     <div style="width:100%">
                                                         <input id="" type="radio"
-                                                            class="" name="addbatch_3"  value="1" checked>
+                                                            class="" name="addbatch_3"  value="1" >
                                                         <label for="">Yes</label>
                                                     </div>
                                                     <div style="width:100%">
@@ -19150,10 +19255,10 @@
                                         </div>
                                         <hr class="hr_ptg">
                                         <div class="tabwrap new_tab_ptg" id="batch_divisions_3">
-                                            <input type="radio" id="taskfun_assitab1" name="tskAssbatchGroup1" class="tab" checked>
+                                            <input type="radio" id="taskfun_assitab1" name="tskAssbatchGroup1" class="tab" >
                                             <label id="task_funass_1" for="taskfun_assitab1">Batch 1-Lcs Setup</label>
-                                            <input type="radio" id="taskfun_assitab2" name="tskAssbatchGroup1" class="tab">
-                                            <label for="taskfun_assitab2" id="task_funass_2">Batch 2</label>
+                                            <input type="radio" id="taskfun_assitab2" name="tskAssbatchGroup1" class="tab" checked>
+                                            <label for="taskfun_assitab2" id="task_funass_2">Batch 2-GT & ST setup</label>
                                         </div>
                                         <div class="tabwrap new_tab_ptg">
                                             <input type="radio" id="task_assfun_tab1" name="funtab_ass_taskreq" class="tab" checked>

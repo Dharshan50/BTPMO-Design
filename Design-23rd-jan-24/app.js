@@ -1387,6 +1387,9 @@ $('#task_tab1').on('click', function () {
     $('#todo_task').show();
     $('.development_row').show();
     $('.All_tasks').show();
+    $('#needs_help').hide();
+    $('.Next_week').hide();
+    $('.Current_task').hide();
     $('.pending_tasks').hide();
     $('.completed_tasks').hide();
     hideProjData();
@@ -1397,11 +1400,13 @@ $('#task_tab1').on('click', function () {
 $('#task_tab2').on('click', function () {
     $('.action_needed_row').hide();
     $('.action_requested_row').hide();
+    $('.Current_task').hide();
     $('#proj_tsk_data_3').hide();
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
     $('.development_row').hide();
+    $('.Next_week').hide();
     $('.All_tasks').hide();
     $('.completed_tasks').hide();
     $('.pending_tasks').show();
@@ -1417,10 +1422,12 @@ $('#task_tab3').on('click', function () {
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
+    $('.Current_task').show();
     $('.development_row').hide();
     $('.All_tasks').show();
     $('#not_started').hide();
     $('#delayed_tasks').hide();
+    $('.Next_week').hide();
     $('#needs_help').hide();
     $('.completed_tasks').hide();
     $('.pending_tasks').hide();
@@ -1433,11 +1440,13 @@ $('#task_tab4').on('click', function () {
     $('.action_needed_row').hide();
     $('.action_requested_row').show();
     $('#proj_tsk_data_3').hide();
+    $('.Current_task').hide();
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').hide();
     $('.development_row').hide();
-    $('.All_tasks').show();
+    $('.All_tasks').hide();
+    $('.Next_week').show();
     $('.pending_tasks').hide();
     $('#not_started').hide();
     $('.completed_tasks').hide();
