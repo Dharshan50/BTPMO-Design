@@ -7,6 +7,13 @@
     color: #08305c;
     margin-bottom: -2px;
 }
+.sm_column_width{
+    width: 80px;
+}
+.bg_column_width{
+    width: 110px;
+}
+
 
 .tab_head_content {
     background-color: #dfe6e9;
@@ -1004,7 +1011,7 @@ table.table thead tr th {
     transition: 0.3s background-color ease, 0.3s box-shadow ease;
     height: 30px;
     box-sizing: border-box;
-    padding: 3px 15px;
+    padding: 8px 15px;
     font-size: 11px;
 }
 
