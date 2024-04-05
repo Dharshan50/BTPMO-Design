@@ -174,6 +174,9 @@ form.file_uplaod_ptg {
     margin-top: 20px;
     font-size: 12px;
 }
+.space_btn{
+    padding: 4px 21px 8px 0px;
+}
 
 /* Excel */
 .excel-table {
@@ -1391,10 +1394,15 @@ td.Style_tr_prot {
     margin-top: 40px;
     display: flex;
     align-items: flex-start;
-    gap: 60px;
+    gap: 20px;
     justify-content: space-between;
 }
-
+body {
+    overflow-x: hidden;
+}
+.prot_ali_items {
+    overflow-x: scroll;
+}
 .filter_Group_project {
     display: flex;
     align-items: center;
@@ -1494,8 +1502,16 @@ button.btn_bot_div_save {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
-
+.requ_priority_iner_div p {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 13px;
+}
+.requ_priority_iner_div ul {
+    padding-left: 10px;
+}
 .Btn_style_Pending {
     border: none;
     padding: 4px 0px;
@@ -2252,6 +2268,19 @@ button.accordion-button.acc_ptg_on_btn {
   
     padding: 2px 2px;
 }
+
+.Add_ba_btn {
+    border: none;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* gap: 20px; */
+    margin-top: 8px;
+    padding: 5px 14px;
+    margin-left: 18px;
+    background-color: #198754;
+    color: white;
+}
 .ssc_btn {
     display: flex;
     justify-content: center;
@@ -2279,7 +2308,25 @@ button.accordion-button.acc_ptg_on_btn {
     width: 22%;
     /* flex-grow: 1; */
 }
-
+.requ_priority {
+    margin-top: 30px;
+    width: 100%;
+}
+.requ_priority h1 {
+    font-size: 14px;
+}
+.requ_priority_iner_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-right: 50px;
+}
+.Stage_Details.change_ptg {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width:100%;
+}
 .acc_inn_cnt_ptg div p {
     margin-bottom: 0;
 }
@@ -2368,9 +2415,9 @@ button.accordion-button.acc_ptg_on_btn span i {
 .port_table_view_ptg {
     width: 140%;
 }
-.port_table_view {
+/* .port_table_view {
     overflow-x: scroll;
-}
+} */
 @media (min-width: 1390px) and (max-width: 2400px) {
     table.table thead tr th {
         font-size: 11px;
