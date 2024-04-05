@@ -1545,6 +1545,9 @@ button.btn_bot_div_save {
     margin-bottom: 0rem !important;
 
 }
+#port_tab_table{
+    overflow-x: auto;
+}
 
 .card_main_p_tag {
     width: 100%;
