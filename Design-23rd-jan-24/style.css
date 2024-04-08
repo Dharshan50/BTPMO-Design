@@ -902,12 +902,13 @@ select.form-select.requ_priority_slt_ptg.rounded-0.boxes {
     margin-bottom: 0 !important;
 }
 .requ_priority_ptg p:nth-child(1) {
-    background-color: red;
+    background-color: #f06060;
     width: 25px;
     height: 25px;
     text-align: center;
-    padding-top: 3px;
+    padding-top: 5px;
     color: #fff;
+    border-radius: 50%;
 }
 .requ_priority_ptg p:nth-child(5) {
     background-color: #08305c;
@@ -1868,7 +1869,7 @@ span.last_num {
     border-radius: 50%;
     padding-top: 2px;
     font-size: 10px;
-    margin-left: 25px;
+
 }
 
 span.last_num_task {
@@ -2377,9 +2378,9 @@ button.accordion-button.acc_ptg_on_btn {
     margin: auto;
     border-bottom: 1px solid #000;
     display: flex;
-    align-items: end;
-    justify-content: space-between;
+    align-items: center;
     padding-bottom: 10px;
+    gap: 20px;
 }
 .Stage_Details.change_ptg {
     flex-direction: column;

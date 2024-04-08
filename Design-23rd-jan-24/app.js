@@ -1113,8 +1113,73 @@ $('#port_proj_name_filter').on('change', function () {
     }
 
 })
+$('#proj_namealltask_filter').on('change', function () {
+    var val = $('#proj_namealltask_filter').val();
+    if (val == 2) {
+        $('#task_tbl').hide();
+        $('.ba_name_prot').hide();
+        $('#task_proj_filter').show();
+        $('#task_content_proj').show();
+        $('#prot_BA_view').show();
+        $('#port_tab_table').hide();
+        $('pagination_container').show();
+        $('.prot_ali_items').show();
+        $('.proj_task_tabwrap').show();
+        $('#port_proj_type_filter').hide();
+        $('#port_BA_type_filter').show();
+        $('.task_tabwrap').hide();
+        $('.task_content').css('justify-content', 'flex-end')
+
+    }
+    if(val == 1){
+        $('.task_tabwrap').show();
+        $('.task_content').css('justify-content', 'space-between')
+        $('#task_tbl').show();
+        $('.ba_name_prot').show();
+        $('#task_proj_filter').hide();
+        $('#task_content_proj').hide();
+        $('#prot_BA_view').hide();
+        $('#port_tab_table').show();
+        $('pagination_container').show();
+        $('.prot_ali_items').hide();
+        $('.proj_task_tabwrap').show();
+        $('#port_proj_type_filter').hide();
+        $('#port_BA_type_filter').show();
+        
+        $('#task_content_proj').show();
 
 
+    }
+
+})
+$('#port_all_tab2').on('click', function () {
+    $('#port_table_view').hide();
+    $('#task_tbl').hide();
+    $('.ba_name_prot').hide();
+    $('#task_proj_filter').show();
+    $('#task_content_proj').show();
+    $('#prot_BA_view').show();
+    $('#port_tab_table').hide();
+    $('pagination_container').show();
+    $('.prot_ali_items').show();
+    $('.proj_task_tabwrap').show();
+    $('#port_proj_type_filter').hide();
+    $('#port_BA_type_filter').show();
+})
+$('#port_mypro_tab1').on('click', function () {
+    $('#port_table_view').show();
+    $('#task_tbl').show();
+    $('.ba_name_prot').show();
+    $('#task_proj_filter').hide();
+    $('#task_content_proj').hide();
+    $('#prot_BA_view').hide();
+    $('#port_tab_table').show();
+    $('pagination_container').hide();
+    $('.prot_ali_items').hide();
+    $('.proj_task_tabwrap').show();
+    $('#port_proj_type_filter').show();
+    $('#port_BA_type_filter').hide();
+})
 
 
 $(document).find("[id^='close_']").on('click', function () {
@@ -1379,6 +1444,8 @@ $('#create_proj').on('click', function () {
 $('#tab3').on('click', function () {
     doRestoreTaskColumns();
     $('#task_manage').show();
+    $('.task_tabwrap').show();
+    $('#task_tbl').show();
     task_hide_details();
     $('#proj_summary_tbl').hide();
     $('.prot_ali_items').hide();
@@ -2293,16 +2360,20 @@ $('#tab5').on('click', function () {
     $('.hide_default_portfolio_Tab').hide();
     $('.prot_ali_items').hide();
     $('#ba_manag_view').hide();
+    $('#port_BA_type_filter').hide();
     doRestorePortfolioColumns();
-
+    $('#port_table_view').show();
+    
+    $('#port_proj_type_filter').show();
     $('#bt_dev_tasks').hide();
     $('#proj_tsk_manage').hide();
     $('#prot_BA_view').hide();
     $('#portfolio_sec_tab').show();
     $('#pagination_container').show();
     $('#port_tab_table').show();
-    $('#port_task_tab1').get(0).click();
+ 
     $('#port_mypro_tab1').get(0).click();
+
     $('#port_proj_name_filter').val("1");
     hide_all_details();
     task_hide_details();

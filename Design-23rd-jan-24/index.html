@@ -102,692 +102,6 @@
 
         <!--PORTFOLIO TAB-->
 
-        <section class="portfolio_sec_tab" id="portfolio_sec_tab">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
-                <div style=" display: flex; margin-top: 15px; gap: 10px; justify-content: space-between; width: 100%;">
-                    <div class="" style="display: flex; gap: 20px;">
-                        <select id="port_proj_name_filter" class="form-select   proj_name_filter"
-                            style="width: 100% !important">
-                            <option value="">Select</option>
-                            <option value="1" selected>All Projects</option>
-                            <option value="2">BA View</option>
-                            <option value="3">Dev View</option>
-                        </select>
-                        <select id="port_proj_type_filter" class="form-select  proj_name_filter"
-                            style="width: 100% !important">
-                            <option value="">Portfolio</option>
-                            <option value="1">Current Week</option>
-                            <option value="2">Next Week</option>
-                            <option value="3">Delayed</option>
-                        </select>
-                    </div> 
-                    <div class="proj_task_tabwrap" style="font-size: 13px;">
-                        <input type="radio" id="port_mypro_tab1" name="proj_task_tabGroup3" class="proj_task_tab" checked>
-                        <label id="port_proj_tab" for="port_mypro_tab1" style="border-right: none;">BTPMO View</label>
-                        <input type="radio" id="port_all_tab2" name="proj_task_tabGroup3" class="proj_task_tab">
-                        <label id="port_task_tab" for="port_all_tab2">Portfolio View</label>  
-                    </div>
-                </div>  
-            </div>
-
-            <div class="port_table_view" id="port_table_view">
-                <div class="port_tab_table" id="port_tab_table">
-                    <table class="table tbl_all_proj">
-                        <thead style="font-size: 15px;">
-                            <tr>
-                                <th style="width: 20px;">No</th>
-                                <th class="sm_column_width">Project Year</th>
-                                <th class="bg_column_width">Project</th>
-                                <th class="bg_column_width">BA + PM Priority</th>
-                                <th class="bg_column_width">BA + PM</th>
-                                <th class="bg_column_width">Current Stage</th>
-                                <th class="bg_column_width">Assinged Status</th>
-                                <th class="bg_column_width">Current Task</th>
-                                <th class="sm_column_width">Task Owner</th>
-                                <th class="sm_column_width">Task Status</th>
-                                <th class="sm_column_width">Stage Start Date</th>
-                                <th class="sm_column_width">Stage End Date</th>
-                                <th class="sm_column_width">Revised start Date</th>
-                                <th class="sm_column_width">Revised end Date</th>
-                                <th class="sm_column_width">Target Go-live</th>
-                                <th class="RAG_Column sm_column_width">RAG</th>
-
-                                <th class="hide_default_portfolio_Tab Charter_Signed_Column sm_column_width">Stage Signoff</th> 
-                                <th class="hide_default_portfolio_Tab Project_Charter_Priority_Column">Project Charter Priority</th>
-                                <th class="hide_default_portfolio_Tab Requriement_Priority_Column">Requriement Priority</th> 
-                                <th class="hide_default_portfolio_Tab Task_Start_Date_Column sm_column_width">Task Start Date</th>
-                                <th class="hide_default_portfolio_Tab Task_End_Date_Column sm_column_width"> Task End Date</th>
-                                <th class="hide_default_portfolio_Tab Go_Live_Date_Column sm_column_width">Go-live date </th>
-                                <th class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column sm_column_width">  Revised go-live date</th>
-                                <th class="hide_default_portfolio_Tab Task_Details_Column sm_column_width">Task Details </th>
-
-                                <th style="position: relative;"><i class="fa-solid fa-circle-plus plus_top"
-                                        id="Portfolio_Column_menus" title="Choose Column"></i> <i class=""></i>
-                                    <div class="Portfolio_plus_drop_dwn plus_drop_dwn"
-                                        style="WIDTH:200PX;display: none;">
-                                        <div style="width:100%">
-                                            <input id="Project_Charter_Priority_Column" type="checkbox"
-                                                class="choosePortfolio__Project_Charter_Priority_Column">
-                                            <label for="Project_Charter_Priority_Column">Project Charter
-                                                Priority</label>
-                                        </div>
-                                        <div style="width:100%">
-                                            <input id="Requriement_Priority_Column" type="checkbox"
-                                                class="choosePortfolio__Requriement_Priority_Column">
-                                            <label for="Requriement_Priority_Column">Requriement Priority</label>
-                                        </div>
-
-                                        <div style="width:100%">
-                                            <input id="Charter_Signed_Column" type="checkbox"
-                                                class="choosePortfolio__Charter_Signed_Column">
-                                            <label for="Charter_Signed_Column">Stage SignOff</label>
-                                        </div>
-                                        <!-- <div style="width:100%">
-                                            <input id="Requirement_Signed_Column" type="checkbox"
-                                                class="choosePortfolio__Requirement_Signed_Column">
-                                            <label for="Requirement_Signed_Column">Requirement signed</label>
-                                        </div> -->
-                                        <div style="width:100%">
-                                            <input id="Task_Start_Date_Column" type="checkbox"
-                                                class="choosePortfolio__Task_Start_Date_Column">
-                                            <label for="Task_Start_Date_Column">Task Start Date</label>
-                                        </div>
-                                        <div style="width:100%">
-                                            <input id="Task_End_Date_Column" type="checkbox"
-                                                class="choosePortfolio__Task_End_Date_Column">
-                                            <label for="Task_End_Date_Column">Task End Date</label>
-                                        </div>
-                                        <div style="width:100%">
-                                            <input id="Go_Live_Date_Column" type="checkbox"
-                                                class="choosePortfolio__Go_Live_Date_Column">
-                                            <label for="Go_Live_Date_Column">Go-live date</label>
-                                        </div>
-                                        <div style="width:100%">
-                                            <input id="Revised_Go_Live_Date_Column" type="checkbox"
-                                                class="choosePortfolio__Revised_Go_Live_Date_Column">
-                                            <label for="Revised_Go_Live_Date_Column">Revised go-live date</label>
-                                        </div>
-                                        <div style="width:100%">
-                                            <input id="Task_Details_Column" type="checkbox"
-                                                class="choosePortfolio__Task_Details_Column">
-                                            <label for="Task_Details_Column">Task Details</label>
-                                        </div>
-                                    </div>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody style="font-size: 12px;">
-                            <tr>
-                                <td>1</td>
-                                <td>2023</td>
-                                <td>China Fronters</td>
-                                <td><span class="last_num" style="background-color: #f06060; color: #fff;">1</span></td>
-                                <td>Sample + sample</td>
-                                <td>Project Charter</td>
-                                <td><mark style="background-color: #a7ffbe; width: 100% !important;"
-                                        class="rag_status">Assinged</mark></td>
-                                <td>Charter submission to PMO</td>
-                                <td>Chandana</td>
-                                <td><mark style="background-color: #a7ffbe; width: 100% !important;"
-                                        class="rag_status">Inprogress</mark></td>
-                                <td>03-Apr-2024</td>
-                                <td>05-Apr-2024</td>
-                                <td>03-Apr-2024</td>
-                                <td>05-Apr-2024</td>
-                                <td>28-Apr-2024</td>
-                                <td><mark style="background-color: #a7ffbe; width: 100% !important;"
-                                        class="rag_status">On Track</mark></td>
-
-                                <td class="hide_default_Tasks_Tab Project_Charter_Priority_Column">2</td>
-                                <td class="hide_default_Tasks_Tab Requriement_Priority_Column">1</td>
-
-                                <td class="hide_default_portfolio_Tab Charter_Signed_Column">Yes</td>
-                                <!-- <td class="hide_default_portfolio_Tab Requirement_Signed_Column">No</td> -->
-                                <td class="hide_default_portfolio_Tab Task_Start_Date_Column">18-Jun-2024</td>
-                                <td class="hide_default_portfolio_Tab Task_End_Date_Column">20-Jun-2024</td>
-                                <td class="hide_default_portfolio_Tab Task_Start_Date_Column bg_column_width">
-                                    18-Jun-2024 </td>
-                                <td class="hide_default_portfolio_Tab Task_End_Date_Column bg_column_width">18-Jun-2024
-                                </td>
-                                <td class="hide_default_portfolio_Tab Go_Live_Date_Column bg_column_width">18-Jun-2024
-                                </td>
-                                <td class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column bg_column_width">
-                                    18-Jun-2024</td>
-                                <td class="hide_default_portfolio_Tab Task_Details_Column">
-                                    <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2"
-                                        title="Choose Column" aria-hidden="true"></i>
-                                </td>
-                            </tr>
-                            <tr id="port_delay_tab_2">
-                                <td colspan="20" style="border-bottom: none;">
-                                    <div class="delay_main_body" style="max-height:300px; overflow-y:auto">
-                                        <div class="card_main_box" id="card_main_box">
-                                            <div class="card_heda">
-                                                <div class="d-flex">
-                                                    <p class="card_head_para me-5">Task Details</p>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <div class="total_box">
-                                            <div class="top_div_tet">
-                                                <label for="">Previous Task</label>
-
-                                                <label for="">Start Date</label>
-
-                                                <label for="">End Date</label>
-                                                <label for="">Revised Start Date</label>
-                                                <label for="">Revised End Date</label>
-                                                <label for="">Revised go-live date</label>
-                                                <label for="">Comment</label>
-                                                <label for="">Status</label>
-                                            </div>
-                                            <div class="Bottom_div">
-                                                <label for="">
-                                                    Business requirement review & validation by BA
-                                                </label>
-
-                                                <label for="">13-Apr-24</label>
-                                                <label for="">15-Apr-24</label>
-                                                <label class="prot_str">
-
-                                                    <label for="" id="rev_str_2">-</label>
-                                                </label>
-                                                <label class="prot_str">
-
-                                                    <label for="" id="rev_end_2">-</label>
-                                                </label>
-                                                <label class="prot_str">
-
-                                                    <label for="" id="rev_golive_2">-</label>
-                                                </label>
-                                                <label class="prot_str">
-
-                                                    <label for="">Test</label>
-                                                </label>
-                                                <label for=""><mark style="background-color: #d4d9da;"
-                                                        class="rag_status">Completed</mark></label>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- <div class="delay_main_body" style="max-height:300px; overflow-y:auto"> -->
-
-                                    <div class="total_box">
-                                        <div class="top_div_tet">
-                                            <label for="">Current Task</label>
-
-                                            <label for="">Start Date</label>
-                                            <label for="">End Date</label>
-                                            <label for="">Revised Start Date</label>
-                                            <label for="">Revised End Date</label>
-                                            <label for="">Revised go-live date</label>
-                                            <label for="">Comment</label>
-                                            <label for="">Status</label>
-                                        </div>
-                                        <div class="Bottom_div">
-                                            <label for="">
-                                                Charter submission to PMO
-                                            </label>
-
-                                            <label for="">15-Apr-24</label>
-                                            <label for="">16-Apr-24</label>
-                                            <label class="prot_str">
-
-                                                <label for="" id="rev_str_2">-</label>
-                                            </label>
-                                            <label class="prot_str">
-
-                                                <label for="" id="rev_end_2">-</label>
-                                            </label>
-                                            <label class="prot_str">
-
-                                                <label for="" id="rev_golive_2">-</label>
-                                            </label>
-                                            <label class="prot_str">
-
-                                                <label for="">Test</label>
-                                            </label>
-
-                                            <label for=""><mark style="background-color: #5df167;"
-                                                    class="rag_status">InProgress</mark></label>
-                                        </div>
-                                    </div>
-
-                                    <div class="total_box">
-                                        <div class="top_div_tet">
-                                            <label for="">Next Task</label>
-
-                                            <label for="">Start Date</label>
-                                            <label for="">End Date</label>
-                                            <label for="">Revised Start Date</label>
-                                            <label for="">Revised End Date</label>
-                                            <label for="">Revised go-live date</label>
-                                            <label for="">Comment</label>
-                                            <label for="">Status</label>
-                                        </div>
-                                        <div class="Bottom_div">
-                                            <label for="">
-                                                PMO Review
-                                            </label>
-
-                                            <label for="">17-Apr-24</label>
-                                            <label for="">18-Apr-24</label>
-                                            <label class="prot_str">
-
-                                                <label for="" id="rev_str_2">-</label>
-                                            </label>
-                                            <label class="prot_str">
-
-                                                <label for="" id="rev_end_2">-</label>
-                                            </label>
-                                            <label class="prot_str">
-
-                                                <label for="" id="rev_golive_2">-</label>
-                                            </label>
-                                            <label class="prot_str">
-
-                                                <label for="">Test</label>
-                                            </label>
-                                            <label for=""><mark style="background-color: #BDE8F0;"
-                                                    class="rag_status">Not Started</mark></label>
-                                        </div>
-                                    </div>
-
-
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="delay_dropdwn">
-                                        <i class="fa-solid fa-caret-down" class="delay_dropdwn"
-                                            id="delay_dropdwn_1"></i>
-                                        <label for="">2</label>
-                                    </div>
-                                </td>
-                                <td>2023</td>
-                                <td>Test Project</td>
-
-                                <td><span class="last_num" style="background-color: #bcef45; color: #fff;">3</span></td>
-                                <td>Sample + sample</td>
-                                <td>Developement</td>
-                                <td><mark style="background-color: #a7ffbe; width: 100% !important;"
-                                        class="rag_status">Back Pending Assignment</mark></td>
-                                <td>Requirement review with Developer</td>
-                                <td>Chandana</td>
-                                <td><mark style="background-color: #a7ffbe; width: 100% !important;"
-                                        class="rag_status">Inprogress</mark></td>
-                                <td>02-Apr-2024</td>
-                                <td>15-Apr-2024</td>
-                                <td>17-Apr-2024</td>
-                                <td>17-Apr-2024</td>
-                                <td>30-May-2024</td>
-                                <td><mark style="background-color: #a7ffbe; width: 100% !important;"
-                                        class="rag_status">On Track</mark></td>
-
-                                <td class="hide_default_Tasks_Tab Project_Charter_Priority_Column">2</td>
-                                <td class="hide_default_Tasks_Tab Requriement_Priority_Column">1</td>
-
-                                <td class="hide_default_portfolio_Tab Charter_Signed_Column">Yes</td>
-                                <!-- <td class="hide_default_portfolio_Tab Requirement_Signed_Column">Yes</td> -->
-
-                                <td class="hide_default_portfolio_Tab Task_Start_Date_Column">18-Jun-2024</td>
-                                <td class="hide_default_portfolio_Tab Task_End_Date_Column">20-Jun-2024</td>
-                                <td class="hide_default_portfolio_Tab Task_Start_Date_Column bg_column_width">
-                                    18-Jun-2024 </td>
-                                <td class="hide_default_portfolio_Tab Task_End_Date_Column bg_column_width">18-Jun-2024
-                                </td>
-                                <td class="hide_default_portfolio_Tab Go_Live_Date_Column bg_column_width">02-May-2024
-                                </td>
-                                <td class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column bg_column_width">
-                                    02-May-2024</td>
-                                <td class="hide_default_portfolio_Tab Task_Details_Column">
-                                    <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2"
-                                        title="Choose Column" aria-hidden="true"></i>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <div class="delay_dropdwn">
-                                        <i class="fa-solid fa-caret-down" class="delay_dropdwn"
-                                            id="delay_dropdwn_1"></i>
-                                        <label for="">3</label>
-                                    </div>
-                                </td>
-                                <td>2024</td>
-                                <td>Test2</td>
-                                <td><span class="last_num" style="background-color: #f06060; color: #fff;">3</span></td>
-                                <td>Sample+sample</td>
-                                <td>Requirement</td>
-                                <td><mark style="background-color: #a7ffbe; width: 100% !important;" class="rag_status">
-                                        Assinged</mark></td>
-                                <td>Requirement Finalization</td>
-                                <td>Sandeep</td>
-                                <td><mark style="background-color: #f9bdb3; width: 100% !important;color: red;"
-                                        class="rag_status">Delayed <i class="fa-solid fa-circle-info"
-                                            style="font-size: 10px !important;" title="Comments"
-                                            aria-hidden="true"></i></mark></td>
-                                <td>02-Apr-2024</td>
-                                <td>10-Apr-2024</td>
-                                <td><button class="btn_prot">Revise</button></td>
-                                <td><button class="btn_prot">Revise</button></td>
-                                <td>13-May-2024</td>
-                                <td><mark style="background-color: #f2d479; width: 100% !important; color: red;"
-                                        class="rag_status">Attention</mark></td>
-
-                                <td class="hide_default_Tasks_Tab Project_Charter_Priority_Column">2</td>
-                                <td class="hide_default_Tasks_Tab Requriement_Priority_Column">1</td>
-
-                                <td class="hide_default_portfolio_Tab Charter_Signed_Column">Yes</td>
-                                <!-- <td class="hide_default_portfolio_Tab Requirement_Signed_Column">Yes</td> -->
-
-                                <td class="hide_default_portfolio_Tab Task_Start_Date_Column">18-Jun-2024</td>
-                                <td class="hide_default_portfolio_Tab Task_End_Date_Column">20-Jun-2024</td>
-                                <td class="hide_default_portfolio_Tab Task_Start_Date_Column bg_column_width">
-                                    18-Jun-2024 </td>
-                                <td class="hide_default_portfolio_Tab Task_End_Date_Column bg_column_width">18-Jun-2024
-                                </td>
-                                <td class="hide_default_portfolio_Tab Go_Live_Date_Column bg_column_width">02-May-2024
-                                </td>
-                                <td class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column bg_column_width">
-                                    02-May-2024</td>
-                                <td class="hide_default_portfolio_Tab Task_Details_Column">
-                                    <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2"
-                                        title="Choose Column" aria-hidden="true"></i>
-                                </td>
-                            </tr>
-
-                            <tr id="port_delay_tab_1">
-                                <td colspan="16" style="border-bottom: none;">
-                                    <div class="delay_main_body" style="max-height:300px; overflow-y:auto">
-                                        <div class="card_main_box" id="card_main_box">
-                                            <div class="card_heda">
-                                                <div class="d-flex">
-                                                    <p class="card_head_para me-5">Details</p>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <div class="total_box">
-                                            <div class="top_div_tet">
-                                                <label for="">Action</label>
-                                                <label for="">Next Task</label>
-                                                <label for="">Start Date</label>
-                                                <label for="">End Date</label>
-                                                <label for="">Revised Start Date</label>
-                                                <label for="">Revised End Date</label>
-                                                <label for="">Revised go-live date</label>
-                                                <label for="">Next Task Status</label>
-                                            </div>
-                                            <div class="Bottom_div">
-                                                <label for="">
-                                                    <button class="btn_bot_div" id="Update_revis_1">Revise</button>
-                                                    <button class="btn_bot_div_save" id="save_revis_1">Save </button>
-                                                </label>
-                                                <label class="prot_str">
-                                                    <!-- <input type="text" class="form-control formtxt_box_chng_sml"
-                                                        id="edit_revstrtask_1"> -->
-
-                                                    <select class="form-select rounded-0 filter select_box"
-                                                        placeholder="Year" id="edit_revstrtask_1"
-                                                        style="width: 118px !important; padding: 10px 29px 9px 7px !important;">
-                                                        <option value="0" selected>02.Functional Requirement</option>
-                                                        <option value="1">0.Pre-Charter</option>
-                                                        <option value="2">01.Project Charter</option>
-                                                        <option value="3">02.Functional Requirement</option>
-                                                        <option value="4">03.Development</option>
-                                                        <option value="5">04.BA Testing</option>
-                                                        <option value="6">05.User Testing</option>
-                                                        <option value="7">06.Deployment</option>
-                                                        <option value="8">07.Completed</option>
-                                                        <option value="9">08.Hypercare & CM</option>
-                                                        <option value="10">09.Closed</option>
-                                                    </select>
-
-
-                                                    <label for="" id="rev_task_1">Requirement Signoff</label>
-                                                </label>
-                                                <label for="">13-Apr-24</label>
-                                                <label for="">15-Apr-24</label>
-                                                <label class="prot_str">
-                                                    <input type="text" class="form-control formtxt_box_chng_sml"
-                                                        id="edit_revstrport_1">
-                                                    <label for="" id="rev_str_1">-</label>
-                                                </label>
-                                                <label class="prot_str">
-                                                    <input type="text" class="form-control formtxt_box_chng_sml"
-                                                        id="edit_revendport_1">
-                                                    <label for="" id="rev_end_1">-</label>
-                                                </label>
-                                                <label class="prot_str">
-                                                    <input type="text" class="form-control formtxt_box_chng_sml"
-                                                        id="edit_revgoliveport_1">
-                                                    <label for="" id="rev_golive_1">-</label>
-                                                </label>
-                                                <label for=""><mark style="background-color: #BDE8F0;"
-                                                        class="rag_status">Not Started</mark></label>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="delay_dropdwn">
-                                        <label for="">4</label>
-                                    </div>
-                                </td>
-                                <td>2023</td>
-                                <td>E Procurement</td>
-                                <td><span class="last_num" style="background-color: #09aff6; color: #fff;">1</span></td>
-                                <td>Sample+sample</td>
-                                <td>Developement</td>
-                                <td><mark style="background-color: #a7ffbe; width: 100% !important;"
-                                        class="rag_status">View</mark></td>
-                                <td>Requirement review with Developer</td>
-                                <td>Sandeep</td>
-                                <td><mark style="background-color: #9eec86; width: 100% !important;"
-                                        class="rag_status">Not Started <i class="fa-solid fa-circle-info"
-                                            style="font-size: 10px !important;" title="Comments"
-                                            aria-hidden="true"></i></mark></td>
-                                <td><button class="btn_prot">Update</button></td>
-                                <td><button class="btn_prot">Update</button></td>
-                                <td>N/A</td>
-                                <td>N/A</td>
-                                <td>29-May-2024</td>
-                                <td><mark style="background-color: #a7ffbe; width: 100% !important;"
-                                        class="rag_status">On Track</mark></td>
-
-                                <td class="hide_default_Tasks_Tab Project_Charter_Priority_Column">2</td>
-                                <td class="hide_default_Tasks_Tab Requriement_Priority_Column">1</td>
-
-                                <td class="hide_default_portfolio_Tab Charter_Signed_Column">Yes</td>
-                                <!-- <td class="hide_default_portfolio_Tab Requirement_Signed_Column">No</td> -->
-
-                                <td class="hide_default_portfolio_Tab Task_Start_Date_Column">18-Jun-2024</td>
-                                <td class="hide_default_portfolio_Tab Task_End_Date_Column">20-Jun-2024</td>
-                                <td class="hide_default_portfolio_Tab Task_Start_Date_Column bg_column_width">
-                                    18-Jun-2024 </td>
-                                <td class="hide_default_portfolio_Tab Task_End_Date_Column bg_column_width">18-Jun-2024
-                                </td>
-                                <td class="hide_default_portfolio_Tab Go_Live_Date_Column bg_column_width">04-May-2024
-                                </td>
-                                <td class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column bg_column_width">
-                                    20-May-2024</td>
-                                <td class="hide_default_portfolio_Tab Task_Details_Column">
-                                    <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2"
-                                        title="Choose Column" aria-hidden="true"></i>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-
-
-            </div>
-        </section>
-        <div class="prot_ali_items">
-            <div class="prot_BA_view" id="prot_BA_view">
-
-                <div class="ba_name_prot">
-                    <th class="lab_dwn">
-                        <label for="" class="BA_name_sel">Indumathi</label>
-                        <label for="" class="BA_name">Diwakar</label>
-                        <label for="" class="BA_name">Deva raj</label>
-                        <label for="" class="BA_name">Diwakar</label>
-                        <label for="" class="BA_name">Deva raj</label>
-                    </th>
-                </div>
-                <div style="background-color: #ececec; padding: 15px;">
-                    <table class="prot_tab" style="font-size: 11px;">
-                        <thead>
-                            <th> <mark class="Style_th_prot" style="background-color: #1abc9c !important;"> Charter in
-                                    progress
-                                </mark></th>
-                            <th> <mark class="Style_th_prot">Requirement queue</mark></th>
-                            <th><mark class="Style_th_prot" style="background-color: #f06060 !important;">Requirement in
-                                    progress</mark>
-                            </th>
-                            <th><mark class="Style_th_prot" style="background-color: #f06060 !important;">Requirement
-                                    Completed
-                                </mark>
-                            </th>
-                            <th><mark class="Style_th_prot">Developement queue</mark></th>
-                            <th><mark class="Style_th_prot" style="background-color: #1abc9c !important;">Developement
-                                    Completed</mark>
-                            </th>
-                            <th><mark class="Style_th_prot" style="background-color: #f06060 !important;">Developement
-                                    in
-                                    progress</mark>
-                            </th>
-                            <th><mark class="Style_th_prot">BA testing queue</mark></th>
-                            <th><mark class="Style_th_prot"
-                                    style="background-color: #f06060 !important; width: 103px;">BA testing in
-                                    progress</mark></th>
-                            <th><mark class="Style_th_prot"
-                                    style="background-color: #f06060 !important; width: 103px;">BA testing
-                                    ompleted</mark>
-                            </th>
-                            <th><mark class="Style_th_prot"
-                                    style="background-color: #bfc2b9 !important; width: 103px;">User testing
-                                </mark></th>
-
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="Style_tr_prot " ondrop="drop(event)" ondragover="allowDrop(event)">
-                                    <div>
-                                        <label class=" label_td_prot" draggable="true"
-                                            ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
-                                                    style="color: #ffc000;"></i></span><span> E-Staff </span></label>
-                                        <label class=" label_td_prot" draggable="true"
-                                            ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
-                                                    style="color: #00ff62;"></i></span><span> Non-Can <i
-                                                    class="fa-solid fa-spinner" style="color: #15b815; font-size: 12px; margin-left: 12px;
-                                                    "></i> </span></label>
-                                        <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
-                                                    class="fa-solid prp_dot fa-circle"
-                                                    style="color: #00ff62;"></i></span><span> China Fronters</span>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td class="Style_tr_prot " ondrop="drop(event)" ondragover="allowDrop(event)">
-                                    <div>
-                                        <label class=" label_td_prot" draggable="true"
-                                            ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
-                                                    style="color: #00988f;"></i></span><span> Sample <i
-                                                    class="fa-solid fa-spinner" style="color: #15b815; font-size: 12px; margin-left: 12px;
-                                                    "></i> </span></label>
-
-                                    </div>
-                                </td>
-                                <td class="Style_tr_prot " ondrop="drop(event)" ondragover="allowDrop(event)">
-                                    <div>
-                                        <label class=" label_td_prot" draggable="true"
-                                            ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
-                                                    style="color: #ffc000;"></i></span><span> Sample </label>
-
-                                    </div>
-                                </td>
-                                <td class="Style_tr_prot " ondrop="drop(event)" ondragover="allowDrop(event)">
-                                    <div>
-                                        <label class=" label_td_prot" draggable="true"
-                                            ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
-                                                    style="color: #00988f;"></i></span><span> Sample<i
-                                                    class="fa-solid fa-check" style="color: #07d307; margin-left: 12px;
-                                                    "></i></span> </span></label>
-
-                                    </div>
-                                </td>
-                                <td class="Style_tr_prot" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                    <div>
-                                        <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
-                                                    class="fa-solid prp_dot fa-circle"
-                                                    style="color: red;"></i></span><span>
-                                                Sample <i class="fa-solid fa-triangle-exclamation" style="color: #e20212;
-                                            margin-left: 6px;"> </i></span></label>
-                                        <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
-                                                    class="fa-solid prp_dot fa-circle"
-                                                    style="color: #00ff62;"></i></span><span> Sample <i
-                                                    class="fa-solid fa-spinner" style="color: #15b815; font-size: 12px; margin-left: 12px;
-                                                    "></i></span></label>
-                                        <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
-                                                    class="fa-solid prp_dot fa-circle"
-                                                    style="color: #00ff62;"></i></span><span> Sample <i
-                                                    class="fa-solid fa-spinner" style="color: #15b815; font-size: 12px; margin-left: 12px;
-                                                    "></i></span></label>
-                                    </div>
-                                </td>
-                                <td class="Style_tr_prot" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                    <div>
-                                        <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
-                                                    class="fa-solid prp_dot fa-circle"
-                                                    style="color: #ffc000;"></i></span><span> Sample </span></label>
-
-                                    </div>
-                                </td>
-                                <td class="Style_tr_prot" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                    <div>
-                                        <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
-                                                    class="fa-solid prp_dot fa-circle"
-                                                    style="color: red;"></i></span><span>
-                                                E-procurment <i class="fa-solid fa-triangle-exclamation" style="color: #e20212;
-                                            margin-left: 0px;"> </i></span></label>
-                                        <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
-                                                    class="fa-solid prp_dot fa-circle"
-                                                    style="color: #ffc000;"></i></span><span> Sample </span></label>
-
-                                    </div>
-                                </td>
-
-
-                                <td class="Style_tr_prot" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                    <div>
-                                        <!-- <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
-                                            style="color: red;"></i></span><span> E-procurment </span></label>
-                                <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
-                                            style="color: #ffc000;"></i></span><span> Sample </span></label> -->
-
-                                    </div>
-                                </td>
-
-                            </tr>
-
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
 
 
         <!--PORTFOLIO TAB end-->
@@ -1201,6 +515,8 @@
 
         </section>
 
+
+       
 
         <div id="proj_summary_tbl">
             <div class="bt_process_tab mt-2">
@@ -1698,7 +1014,7 @@
                                     <div class="Task_plus_drop_dwn plus_drop_dwn" style="WIDTH:200PX;display: none;">
                                         <div style="width:100%">
                                             <input id="Project_Charter_Priority_Column" type="checkbox"
-                                                class="chooseTask__Project_Charter_Priority_Column">
+                                                class="chooseTask__Project_Charter_Priority_Column" >
                                             <label for="Project_Charter_Priority_Column">Project Charter
                                                 Priority</label>
                                         </div>
@@ -31039,6 +30355,701 @@
             </div>
         </div>
     </section>
+    
+    <section class="portfolio_sec_tab" id="portfolio_sec_tab">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+            <div style=" display: flex; margin-top: 15px; gap: 10px; justify-content: space-between; width: 100%;">
+                <div class="" style="display: flex; gap: 20px;">
+                    <select id="port_proj_name_filter" class="form-select   proj_name_filter"
+                        style="width: 100% !important">
+                        <option value="">Select</option>
+                        <option value="1" selected>All Projects</option>
+                        <option value="2">BA View</option>
+                        <option value="3">Dev View</option>
+                    </select>
+                     <select id="port_BA_type_filter" class="form-select   proj_name_filter"
+                        style="width: 100% !important; display: none;">
+                        <option value="">Select</option>
+                        <option value="1" selected>This View</option>
+                        <option value="2">Resource Allocation</option>
+                        
+                    </select>
+                    <select id="port_proj_type_filter" class="form-select  proj_name_filter"
+                        style="width: 100% !important">
+                        <option value="">Portfolio</option>
+                        <option value="1">Current Week</option>
+                        <option value="2">Next Week</option>
+                        <option value="3">Delayed</option>
+                    </select>
+                </div> 
+                <div class="proj_task_tabwrap" style="font-size: 13px;">
+                    <input type="radio" id="port_mypro_tab1" name="proj_task_tabGroup3" class="proj_task_tab" checked>
+                    <label id="port_proj_tab" for="port_mypro_tab1" style="border-right: none;">BTPMO View</label>
+                    <input type="radio" id="port_all_tab2" name="proj_task_tabGroup3" class="proj_task_tab">
+                    <label id="port_task_tab" for="port_all_tab2">Portfolio View</label>  
+                </div>
+            </div>  
+        </div>
+
+        <div class="port_table_view" id="port_table_view">
+            <div class="port_tab_table" id="port_tab_table">
+                <table class="table tbl_all_proj">
+                    <thead style="font-size: 15px;">
+                        <tr>
+                            <th style="width: 20px;">No</th>
+                            <th class="sm_column_width">Project Year</th>
+                            <th class="bg_column_width">Project</th>
+                            <th class="bg_column_width">BA + PM Priority</th>
+                            <th class="bg_column_width">BA + PM</th>
+                            <th class="bg_column_width">Current Stage</th>
+                            <th class="bg_column_width">Assinged Status</th>
+                            <th class="bg_column_width">Current Task</th>
+                            <th class="sm_column_width">Task Owner</th>
+                            <th class="sm_column_width">Task Status</th>
+                            <th class="sm_column_width">Stage Start Date</th>
+                            <th class="sm_column_width">Stage End Date</th>
+                            <th class="sm_column_width">Revised start Date</th>
+                            <th class="sm_column_width">Revised end Date</th>
+                            <th class="sm_column_width">Target Go-live</th>
+                            <th class="RAG_Column sm_column_width">RAG</th>
+
+                            <th class="hide_default_portfolio_Tab Charter_Signed_Column sm_column_width">Stage Signoff</th> 
+                            <th class="hide_default_portfolio_Tab Project_Charter_Priority_Column">Project Charter Priority</th>
+                            <th class="hide_default_portfolio_Tab Requriement_Priority_Column">Requriement Priority</th> 
+                            <th class="hide_default_portfolio_Tab Task_Start_Date_Column sm_column_width">Task Start Date</th>
+                            <th class="hide_default_portfolio_Tab Task_End_Date_Column sm_column_width"> Task End Date</th>
+                            <th class="hide_default_portfolio_Tab Go_Live_Date_Column sm_column_width">Go-live date </th>
+                            <th class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column sm_column_width">  Revised go-live date</th>
+                            <th class="hide_default_portfolio_Tab Task_Details_Column sm_column_width">Task Details </th>
+
+                            <th style="position: relative;"><i class="fa-solid fa-circle-plus plus_top"
+                                    id="Portfolio_Column_menus" title="Choose Column"></i> <i class=""></i>
+                                <div class="Portfolio_plus_drop_dwn plus_drop_dwn"
+                                    style="WIDTH:200PX;display: none;">
+                                    <div style="width:100%">
+                                        <input id="Project_Charter_Priority_Column" type="checkbox"
+                                            class="choosePortfolio__Project_Charter_Priority_Column">
+                                        <label for="Project_Charter_Priority_Column">Project Charter
+                                            Priority</label>
+                                    </div>
+                                    <div style="width:100%">
+                                        <input id="Requriement_Priority_Column" type="checkbox"
+                                            class="choosePortfolio__Requriement_Priority_Column">
+                                        <label for="Requriement_Priority_Column">Requriement Priority</label>
+                                    </div>
+
+                                    <div style="width:100%">
+                                        <input id="Charter_Signed_Column" type="checkbox"
+                                            class="choosePortfolio__Charter_Signed_Column">
+                                        <label for="Charter_Signed_Column">Stage SignOff</label>
+                                    </div>
+                                    <!-- <div style="width:100%">
+                                        <input id="Requirement_Signed_Column" type="checkbox"
+                                            class="choosePortfolio__Requirement_Signed_Column">
+                                        <label for="Requirement_Signed_Column">Requirement signed</label>
+                                    </div> -->
+                                    <div style="width:100%">
+                                        <input id="Task_Start_Date_Column" type="checkbox"
+                                            class="choosePortfolio__Task_Start_Date_Column">
+                                        <label for="Task_Start_Date_Column">Task Start Date</label>
+                                    </div>
+                                    <div style="width:100%">
+                                        <input id="Task_End_Date_Column" type="checkbox"
+                                            class="choosePortfolio__Task_End_Date_Column">
+                                        <label for="Task_End_Date_Column">Task End Date</label>
+                                    </div>
+                                    <div style="width:100%">
+                                        <input id="Go_Live_Date_Column" type="checkbox"
+                                            class="choosePortfolio__Go_Live_Date_Column">
+                                        <label for="Go_Live_Date_Column">Go-live date</label>
+                                    </div>
+                                    <div style="width:100%">
+                                        <input id="Revised_Go_Live_Date_Column" type="checkbox"
+                                            class="choosePortfolio__Revised_Go_Live_Date_Column">
+                                        <label for="Revised_Go_Live_Date_Column">Revised go-live date</label>
+                                    </div>
+                                    <div style="width:100%">
+                                        <input id="Task_Details_Column" type="checkbox"
+                                            class="choosePortfolio__Task_Details_Column">
+                                        <label for="Task_Details_Column">Task Details</label>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody style="font-size: 12px;">
+                        <tr>
+                            <td>1</td>
+                            <td>2023</td>
+                            <td>China Fronters</td>
+                            <td><span class="last_num" style="background-color: #f06060; color: #fff;">1</span></td>
+                            <td>Sample + sample</td>
+                            <td>Project Charter</td>
+                            <td><mark style="background-color: #a7ffbe; width: 100% !important;"
+                                    class="rag_status">Assinged</mark></td>
+                            <td>Charter submission to PMO</td>
+                            <td>Chandana</td>
+                            <td><mark style="background-color: #a7ffbe; width: 100% !important;"
+                                    class="rag_status">Inprogress</mark></td>
+                            <td>03-Apr-2024</td>
+                            <td>05-Apr-2024</td>
+                            <td>03-Apr-2024</td>
+                            <td>05-Apr-2024</td>
+                            <td>28-Apr-2024</td>
+                            <td><mark style="background-color: #a7ffbe; width: 100% !important;"
+                                    class="rag_status">On Track</mark></td>
+
+                            <td class="hide_default_Tasks_Tab Project_Charter_Priority_Column">2</td>
+                            <td class="hide_default_Tasks_Tab Requriement_Priority_Column">1</td>
+
+                            <td class="hide_default_portfolio_Tab Charter_Signed_Column">Yes</td>
+                            <!-- <td class="hide_default_portfolio_Tab Requirement_Signed_Column">No</td> -->
+                            <td class="hide_default_portfolio_Tab Task_Start_Date_Column">18-Jun-2024</td>
+                            <td class="hide_default_portfolio_Tab Task_End_Date_Column">20-Jun-2024</td>
+                            <td class="hide_default_portfolio_Tab Task_Start_Date_Column bg_column_width">
+                                18-Jun-2024 </td>
+                            <td class="hide_default_portfolio_Tab Task_End_Date_Column bg_column_width">18-Jun-2024
+                            </td>
+                            <td class="hide_default_portfolio_Tab Go_Live_Date_Column bg_column_width">18-Jun-2024
+                            </td>
+                            <td class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column bg_column_width">
+                                18-Jun-2024</td>
+                            <td class="hide_default_portfolio_Tab Task_Details_Column">
+                                <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2"
+                                    title="Choose Column" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                        <tr id="port_delay_tab_2">
+                            <td colspan="20" style="border-bottom: none;">
+                                <div class="delay_main_body" style="max-height:300px; overflow-y:auto">
+                                    <div class="card_main_box" id="card_main_box">
+                                        <div class="card_heda">
+                                            <div class="d-flex">
+                                                <p class="card_head_para me-5">Task Details</p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="total_box">
+                                        <div class="top_div_tet">
+                                            <label for="">Previous Task</label>
+
+                                            <label for="">Start Date</label>
+
+                                            <label for="">End Date</label>
+                                            <label for="">Revised Start Date</label>
+                                            <label for="">Revised End Date</label>
+                                            <label for="">Revised go-live date</label>
+                                            <label for="">Comment</label>
+                                            <label for="">Status</label>
+                                        </div>
+                                        <div class="Bottom_div">
+                                            <label for="">
+                                                Business requirement review & validation by BA
+                                            </label>
+
+                                            <label for="">13-Apr-24</label>
+                                            <label for="">15-Apr-24</label>
+                                            <label class="prot_str">
+
+                                                <label for="" id="rev_str_2">-</label>
+                                            </label>
+                                            <label class="prot_str">
+
+                                                <label for="" id="rev_end_2">-</label>
+                                            </label>
+                                            <label class="prot_str">
+
+                                                <label for="" id="rev_golive_2">-</label>
+                                            </label>
+                                            <label class="prot_str">
+
+                                                <label for="">Test</label>
+                                            </label>
+                                            <label for=""><mark style="background-color: #d4d9da;"
+                                                    class="rag_status">Completed</mark></label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- <div class="delay_main_body" style="max-height:300px; overflow-y:auto"> -->
+
+                                <div class="total_box">
+                                    <div class="top_div_tet">
+                                        <label for="">Current Task</label>
+
+                                        <label for="">Start Date</label>
+                                        <label for="">End Date</label>
+                                        <label for="">Revised Start Date</label>
+                                        <label for="">Revised End Date</label>
+                                        <label for="">Revised go-live date</label>
+                                        <label for="">Comment</label>
+                                        <label for="">Status</label>
+                                    </div>
+                                    <div class="Bottom_div">
+                                        <label for="">
+                                            Charter submission to PMO
+                                        </label>
+
+                                        <label for="">15-Apr-24</label>
+                                        <label for="">16-Apr-24</label>
+                                        <label class="prot_str">
+
+                                            <label for="" id="rev_str_2">-</label>
+                                        </label>
+                                        <label class="prot_str">
+
+                                            <label for="" id="rev_end_2">-</label>
+                                        </label>
+                                        <label class="prot_str">
+
+                                            <label for="" id="rev_golive_2">-</label>
+                                        </label>
+                                        <label class="prot_str">
+
+                                            <label for="">Test</label>
+                                        </label>
+
+                                        <label for=""><mark style="background-color: #5df167;"
+                                                class="rag_status">InProgress</mark></label>
+                                    </div>
+                                </div>
+
+                                <div class="total_box">
+                                    <div class="top_div_tet">
+                                        <label for="">Next Task</label>
+
+                                        <label for="">Start Date</label>
+                                        <label for="">End Date</label>
+                                        <label for="">Revised Start Date</label>
+                                        <label for="">Revised End Date</label>
+                                        <label for="">Revised go-live date</label>
+                                        <label for="">Comment</label>
+                                        <label for="">Status</label>
+                                    </div>
+                                    <div class="Bottom_div">
+                                        <label for="">
+                                            PMO Review
+                                        </label>
+
+                                        <label for="">17-Apr-24</label>
+                                        <label for="">18-Apr-24</label>
+                                        <label class="prot_str">
+
+                                            <label for="" id="rev_str_2">-</label>
+                                        </label>
+                                        <label class="prot_str">
+
+                                            <label for="" id="rev_end_2">-</label>
+                                        </label>
+                                        <label class="prot_str">
+
+                                            <label for="" id="rev_golive_2">-</label>
+                                        </label>
+                                        <label class="prot_str">
+
+                                            <label for="">Test</label>
+                                        </label>
+                                        <label for=""><mark style="background-color: #BDE8F0;"
+                                                class="rag_status">Not Started</mark></label>
+                                    </div>
+                                </div>
+
+
+
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="delay_dropdwn">
+                                    <i class="fa-solid fa-caret-down" class="delay_dropdwn"
+                                        id="delay_dropdwn_1"></i>
+                                    <label for="">2</label>
+                                </div>
+                            </td>
+                            <td>2023</td>
+                            <td>Test Project</td>
+
+                            <td><span class="last_num" style="background-color: #bcef45; color: #fff;">3</span></td>
+                            <td>Sample + sample</td>
+                            <td>Developement</td>
+                            <td><mark style="background-color: #a7ffbe; width: 106% !important; white-space: normal;"
+                                    class="rag_status">Back Pending Assignment</mark></td>
+                            <td>Requirement review with Developer</td>
+                            <td>Chandana</td>
+                            <td><mark style="background-color: #a7ffbe; width: 100% !important;"
+                                    class="rag_status">Inprogress</mark></td>
+                            <td>02-Apr-2024</td>
+                            <td>15-Apr-2024</td>
+                            <td>17-Apr-2024</td>
+                            <td>17-Apr-2024</td>
+                            <td>30-May-2024</td>
+                            <td><mark style="background-color: #a7ffbe; width: 100% !important;"
+                                    class="rag_status">On Track</mark></td>
+
+                            <td class="hide_default_Tasks_Tab Project_Charter_Priority_Column">2</td>
+                            <td class="hide_default_Tasks_Tab Requriement_Priority_Column">1</td>
+
+                            <td class="hide_default_portfolio_Tab Charter_Signed_Column">Yes</td>
+                            <!-- <td class="hide_default_portfolio_Tab Requirement_Signed_Column">Yes</td> -->
+
+                            <td class="hide_default_portfolio_Tab Task_Start_Date_Column">18-Jun-2024</td>
+                            <td class="hide_default_portfolio_Tab Task_End_Date_Column">20-Jun-2024</td>
+                            <td class="hide_default_portfolio_Tab Task_Start_Date_Column bg_column_width">
+                                18-Jun-2024 </td>
+                            <td class="hide_default_portfolio_Tab Task_End_Date_Column bg_column_width">18-Jun-2024
+                            </td>
+                            <td class="hide_default_portfolio_Tab Go_Live_Date_Column bg_column_width">02-May-2024
+                            </td>
+                            <td class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column bg_column_width">
+                                02-May-2024</td>
+                            <td class="hide_default_portfolio_Tab Task_Details_Column">
+                                <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2"
+                                    title="Choose Column" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="delay_dropdwn">
+                                    <i class="fa-solid fa-caret-down" class="delay_dropdwn"
+                                        id="delay_dropdwn_1"></i>
+                                    <label for="">3</label>
+                                </div>
+                            </td>
+                            <td>2024</td>
+                            <td>Test2</td>
+                            <td><span class="last_num" style="background-color: #f06060; color: #fff;">3</span></td>
+                            <td>Sample+sample</td>
+                            <td>Requirement</td>
+                            <td><mark style="background-color: #a7ffbe; width: 100% !important;" class="rag_status">
+                                    Assinged</mark></td>
+                            <td>Requirement Finalization</td>
+                            <td>Sandeep</td>
+                            <td><mark style="background-color: #f9bdb3; width: 100% !important;color: red;"
+                                    class="rag_status">Delayed <i class="fa-solid fa-circle-info"
+                                        style="font-size: 10px !important;" title="Comments"
+                                        aria-hidden="true"></i></mark></td>
+                            <td>02-Apr-2024</td>
+                            <td>10-Apr-2024</td>
+                            <td><button class="btn_prot">Revise</button></td>
+                            <td><button class="btn_prot">Revise</button></td>
+                            <td>13-May-2024</td>
+                            <td><mark style="background-color: #f2d479; width: 100% !important; color: red;"
+                                    class="rag_status">Attention</mark></td>
+
+                            <td class="hide_default_Tasks_Tab Project_Charter_Priority_Column">2</td>
+                            <td class="hide_default_Tasks_Tab Requriement_Priority_Column">1</td>
+
+                            <td class="hide_default_portfolio_Tab Charter_Signed_Column">Yes</td>
+                            <!-- <td class="hide_default_portfolio_Tab Requirement_Signed_Column">Yes</td> -->
+
+                            <td class="hide_default_portfolio_Tab Task_Start_Date_Column">18-Jun-2024</td>
+                            <td class="hide_default_portfolio_Tab Task_End_Date_Column">20-Jun-2024</td>
+                            <td class="hide_default_portfolio_Tab Task_Start_Date_Column bg_column_width">
+                                18-Jun-2024 </td>
+                            <td class="hide_default_portfolio_Tab Task_End_Date_Column bg_column_width">18-Jun-2024
+                            </td>
+                            <td class="hide_default_portfolio_Tab Go_Live_Date_Column bg_column_width">02-May-2024
+                            </td>
+                            <td class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column bg_column_width">
+                                02-May-2024</td>
+                            <td class="hide_default_portfolio_Tab Task_Details_Column">
+                                <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2"
+                                    title="Choose Column" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+
+                        <tr id="port_delay_tab_1">
+                            <td colspan="16" style="border-bottom: none;">
+                                <div class="delay_main_body" style="max-height:300px; overflow-y:auto">
+                                    <div class="card_main_box" id="card_main_box">
+                                        <div class="card_heda">
+                                            <div class="d-flex">
+                                                <p class="card_head_para me-5">Details</p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="total_box">
+                                        <div class="top_div_tet">
+                                            <label for="">Action</label>
+                                            <label for="">Next Task</label>
+                                            <label for="">Start Date</label>
+                                            <label for="">End Date</label>
+                                            <label for="">Revised Start Date</label>
+                                            <label for="">Revised End Date</label>
+                                            <label for="">Revised go-live date</label>
+                                            <label for="">Next Task Status</label>
+                                        </div>
+                                        <div class="Bottom_div">
+                                            <label for="">
+                                                <button class="btn_bot_div" id="Update_revis_1">Revise</button>
+                                                <button class="btn_bot_div_save" id="save_revis_1">Save </button>
+                                            </label>
+                                            <label class="prot_str">
+                                                <!-- <input type="text" class="form-control formtxt_box_chng_sml"
+                                                    id="edit_revstrtask_1"> -->
+
+                                                <select class="form-select rounded-0 filter select_box"
+                                                    placeholder="Year" id="edit_revstrtask_1"
+                                                    style="width: 118px !important; padding: 10px 29px 9px 7px !important;">
+                                                    <option value="0" selected>02.Functional Requirement</option>
+                                                    <option value="1">0.Pre-Charter</option>
+                                                    <option value="2">01.Project Charter</option>
+                                                    <option value="3">02.Functional Requirement</option>
+                                                    <option value="4">03.Development</option>
+                                                    <option value="5">04.BA Testing</option>
+                                                    <option value="6">05.User Testing</option>
+                                                    <option value="7">06.Deployment</option>
+                                                    <option value="8">07.Completed</option>
+                                                    <option value="9">08.Hypercare & CM</option>
+                                                    <option value="10">09.Closed</option>
+                                                </select>
+
+
+                                                <label for="" id="rev_task_1">Requirement Signoff</label>
+                                            </label>
+                                            <label for="">13-Apr-24</label>
+                                            <label for="">15-Apr-24</label>
+                                            <label class="prot_str">
+                                                <input type="text" class="form-control formtxt_box_chng_sml"
+                                                    id="edit_revstrport_1">
+                                                <label for="" id="rev_str_1">-</label>
+                                            </label>
+                                            <label class="prot_str">
+                                                <input type="text" class="form-control formtxt_box_chng_sml"
+                                                    id="edit_revendport_1">
+                                                <label for="" id="rev_end_1">-</label>
+                                            </label>
+                                            <label class="prot_str">
+                                                <input type="text" class="form-control formtxt_box_chng_sml"
+                                                    id="edit_revgoliveport_1">
+                                                <label for="" id="rev_golive_1">-</label>
+                                            </label>
+                                            <label for=""><mark style="background-color: #BDE8F0;"
+                                                    class="rag_status">Not Started</mark></label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="delay_dropdwn">
+                                    <label for="">4</label>
+                                </div>
+                            </td>
+                            <td>2023</td>
+                            <td>E Procurement</td>
+                            <td><span class="last_num" style="background-color: #09aff6; color: #fff;">1</span></td>
+                            <td>Sample+sample</td>
+                            <td>Developement</td>
+                            <td><mark style="background-color: #a7ffbe; width: 100% !important;"
+                                    class="rag_status">View</mark></td>
+                            <td>Requirement review with Developer</td>
+                            <td>Sandeep</td>
+                            <td><mark style="background-color: #9eec86; width: 100% !important;"
+                                    class="rag_status">Not Started <i class="fa-solid fa-circle-info"
+                                        style="font-size: 10px !important;" title="Comments"
+                                        aria-hidden="true"></i></mark></td>
+                            <td><button class="btn_prot">Update</button></td>
+                            <td><button class="btn_prot">Update</button></td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>29-May-2024</td>
+                            <td><mark style="background-color: #a7ffbe; width: 100% !important;"
+                                    class="rag_status">On Track</mark></td>
+
+                            <td class="hide_default_Tasks_Tab Project_Charter_Priority_Column">2</td>
+                            <td class="hide_default_Tasks_Tab Requriement_Priority_Column">1</td>
+
+                            <td class="hide_default_portfolio_Tab Charter_Signed_Column">Yes</td>
+                            <!-- <td class="hide_default_portfolio_Tab Requirement_Signed_Column">No</td> -->
+
+                            <td class="hide_default_portfolio_Tab Task_Start_Date_Column">18-Jun-2024</td>
+                            <td class="hide_default_portfolio_Tab Task_End_Date_Column">20-Jun-2024</td>
+                            <td class="hide_default_portfolio_Tab Task_Start_Date_Column bg_column_width">
+                                18-Jun-2024 </td>
+                            <td class="hide_default_portfolio_Tab Task_End_Date_Column bg_column_width">18-Jun-2024
+                            </td>
+                            <td class="hide_default_portfolio_Tab Go_Live_Date_Column bg_column_width">04-May-2024
+                            </td>
+                            <td class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column bg_column_width">
+                                20-May-2024</td>
+                            <td class="hide_default_portfolio_Tab Task_Details_Column">
+                                <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2"
+                                    title="Choose Column" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+        </div>
+    </section> 
+    <div class="prot_ali_items">
+        <div class="prot_BA_view" id="prot_BA_view">
+
+            <div class="ba_name_prot">
+                <th class="lab_dwn">
+                    <label for="" class="BA_name_sel">Indumathi</label>
+                    <label for="" class="BA_name">Diwakar</label>
+                    <label for="" class="BA_name">Deva raj</label>
+                    <label for="" class="BA_name">Diwakar</label>
+                    <label for="" class="BA_name">Deva raj</label>
+                </th>
+            </div>
+            <div style="background-color: #ececec; padding: 15px;">
+                <table class="prot_tab" style="font-size: 11px;">
+                    <thead>
+                        <th> <mark class="Style_th_prot" style="background-color: #1abc9c !important;"> Charter in
+                                progress
+                            </mark></th>
+                        <th> <mark class="Style_th_prot">Requirement queue</mark></th>
+                        <th><mark class="Style_th_prot" style="background-color: #f06060 !important;">Requirement in
+                                progress</mark>
+                        </th>
+                        <th><mark class="Style_th_prot" style="background-color: #f06060 !important;">Requirement
+                                Completed
+                            </mark>
+                        </th>
+                        <th><mark class="Style_th_prot">Developement queue</mark></th>
+                        <th><mark class="Style_th_prot" style="background-color: #1abc9c !important;">Developement
+                                Completed</mark>
+                        </th>
+                        <th><mark class="Style_th_prot" style="background-color: #f06060 !important;">Developement
+                                in
+                                progress</mark>
+                        </th>
+                        <th><mark class="Style_th_prot">BA testing queue</mark></th>
+                        <th><mark class="Style_th_prot"
+                                style="background-color: #f06060 !important; width: 103px;">BA testing in
+                                progress</mark></th>
+                        <th><mark class="Style_th_prot"
+                                style="background-color: #f06060 !important; width: 103px;">BA testing
+                                ompleted</mark>
+                        </th>
+                        <th><mark class="Style_th_prot"
+                                style="background-color: #bfc2b9 !important; width: 103px;">User testing
+                            </mark></th>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="Style_tr_prot " ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div>
+                                    <label class=" label_td_prot" draggable="true"
+                                        ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
+                                                style="color: #ffc000;"></i></span><span> E-Staff </span></label>
+                                    <label class=" label_td_prot" draggable="true"
+                                        ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
+                                                style="color: #00ff62;"></i></span><span> Non-Can <i
+                                                class="fa-solid fa-spinner" style="color: #15b815; font-size: 12px; margin-left: 12px;
+                                                "></i> </span></label>
+                                    <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
+                                                class="fa-solid prp_dot fa-circle"
+                                                style="color: #00ff62;"></i></span><span> China Fronters</span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="Style_tr_prot " ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div>
+                                    <label class=" label_td_prot" draggable="true"
+                                        ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
+                                                style="color: #00988f;"></i></span><span> Sample <i
+                                                class="fa-solid fa-spinner" style="color: #15b815; font-size: 12px; margin-left: 12px;
+                                                "></i> </span></label>
+
+                                </div>
+                            </td>
+                            <td class="Style_tr_prot " ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div>
+                                    <label class=" label_td_prot" draggable="true"
+                                        ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
+                                                style="color: #ffc000;"></i></span><span> Sample </label>
+
+                                </div>
+                            </td>
+                            <td class="Style_tr_prot " ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div>
+                                    <label class=" label_td_prot" draggable="true"
+                                        ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
+                                                style="color: #00988f;"></i></span><span> Sample<i
+                                                class="fa-solid fa-check" style="color: #07d307; margin-left: 12px;
+                                                "></i></span> </span></label>
+
+                                </div>
+                            </td>
+                            <td class="Style_tr_prot" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div>
+                                    <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
+                                                class="fa-solid prp_dot fa-circle"
+                                                style="color: red;"></i></span><span>
+                                            Sample <i class="fa-solid fa-triangle-exclamation" style="color: #e20212;
+                                        margin-left: 6px;"> </i></span></label>
+                                    <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
+                                                class="fa-solid prp_dot fa-circle"
+                                                style="color: #00ff62;"></i></span><span> Sample <i
+                                                class="fa-solid fa-spinner" style="color: #15b815; font-size: 12px; margin-left: 12px;
+                                                "></i></span></label>
+                                    <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
+                                                class="fa-solid prp_dot fa-circle"
+                                                style="color: #00ff62;"></i></span><span> Sample <i
+                                                class="fa-solid fa-spinner" style="color: #15b815; font-size: 12px; margin-left: 12px;
+                                                "></i></span></label>
+                                </div>
+                            </td>
+                            <td class="Style_tr_prot" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div>
+                                    <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
+                                                class="fa-solid prp_dot fa-circle"
+                                                style="color: #ffc000;"></i></span><span> Sample </span></label>
+
+                                </div>
+                            </td>
+                            <td class="Style_tr_prot" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div>
+                                    <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
+                                                class="fa-solid prp_dot fa-circle"
+                                                style="color: red;"></i></span><span>
+                                            E-procurment <i class="fa-solid fa-triangle-exclamation" style="color: #e20212;
+                                        margin-left: 0px;"> </i></span></label>
+                                    <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
+                                                class="fa-solid prp_dot fa-circle"
+                                                style="color: #ffc000;"></i></span><span> Sample </span></label>
+
+                                </div>
+                            </td>
+
+
+                            <td class="Style_tr_prot" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div>
+                                    <!-- <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
+                                        style="color: red;"></i></span><span> E-procurment </span></label>
+                            <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
+                                        style="color: #ffc000;"></i></span><span> Sample </span></label> -->
+
+                                </div>
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
 
     <div id="pagination_container" class="pagination_cont_dv">
         <div class="pagination_filter_container" style="font-size: 11px;">
@@ -31839,6 +31850,9 @@
 
         </section>
 
+
+        
+
         <section class="view_proj_project" id="view_proj" style="margin-top: 0px !important;">
             <div class="content_head_title">
                 <div class="return_main_btn ">
@@ -32166,6 +32180,9 @@
             </div>
         </div>
     </div>
+
+
+    
 
 
 
