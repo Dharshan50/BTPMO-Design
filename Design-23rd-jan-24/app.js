@@ -128,6 +128,23 @@ $Portfolio_plus_icon.on("click", function () {
     }
 });
 
+// Ba Manager menu 
+var $BaManager_menudiv = $('.BAManager_plus_drop_dwn');
+var $BaManager_plus_icon = $('#BAManager_Column_menus');
+
+$BaManager_plus_icon.on("click", function () {
+    if ($BaManager_plus_icon.css('transform') === "rotate(315deg)") {
+        $BaManager_plus_icon.css('transform', "rotate(0deg)");
+    } else {
+        $BaManager_plus_icon.css('transform', "rotate(315deg)");
+    }
+    if ($BaManager_menudiv.css('display') === "none") {
+        $BaManager_menudiv.css('display', "flex");
+    } else {
+        $BaManager_menudiv.css('display', "none");
+    }
+});
+
 
 function drag(event) {
     draggedItem = event.target;
@@ -240,6 +257,38 @@ $(document).find("[class^='choosePortfolio__']").on('click', function () {
 
 function doRestorePortfolioColumns() {
     $(document).find("[class^='choosePortfolio__']").each(function () {
+        var temp_id = this.id;
+        var splitArray = temp_id.split('__');
+        var id = splitArray[splitArray.length - 1];
+
+        var flag = $(this).prop('checked');
+        if (flag) {
+            $(document).find(`.${id}`).show();
+        }
+        else {
+            $(document).find(`.${id}`).hide();
+        }
+    });
+}
+
+$(document).find("[class^='chooseBaManger__']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('__');
+    var id = splitArray[splitArray.length - 1];
+
+    var flag = $(this).prop('checked');
+    if (flag) {
+        // $(this).prop('checked', false);
+        $(document).find(`.${id}`).show();
+    }
+    else {
+        // $(this).prop('checked', true);
+        $(document).find(`.${id}`).hide();
+    }
+})
+
+function doRestoreBaManagerColumns() {
+    $(document).find("[class^='chooseBaManger__']").each(function () {
         var temp_id = this.id;
         var splitArray = temp_id.split('__');
         var id = splitArray[splitArray.length - 1];
@@ -2136,11 +2185,12 @@ $('#tab4').on('click', function () {
     $('#task_manage').hide();
     $('.prot_ali_items').hide();
     $('#proj_summary_tbl').hide();
-    $('.hide_default_Projects_Tab').hide();
+    $('.hide_default_BaManger_Tab').hide();
     $('#bt_dev_tasks').show();
     $('#portfolio_sec_tab').hide();
     $('#ba_manag_view').show();
     $('#prot_BA_view').hide();
+    doRestoreBaManagerColumns();
     hideProjData()
     hide_all_details();
     task_hide_details();
