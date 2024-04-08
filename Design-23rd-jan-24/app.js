@@ -146,6 +146,8 @@ $BaManager_plus_icon.on("click", function () {
 });
 
 
+
+
 function drag(event) {
     draggedItem = event.target;
 }
@@ -183,6 +185,11 @@ $(document).find("[id^='Expand_Pending_']").on('click', function () {
     $(document).find(`#Close_Pending_${id}`).show()
     $(document).find(`#Expand_Pending_${id}`).hide()
     initializeDraggable()
+})
+
+
+$(document).find("[id^='Ba_view_reassign_']").on('click', function () {
+    // $(this).parent().parent().hide();
 })
 
 $(document).find("[id^='Task_Edit_']").on('click', function () {
