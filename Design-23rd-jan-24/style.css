@@ -888,7 +888,39 @@ table.table thead tr th {
         background-color: #e64300;
         color: white;
 }
-
+select.form-select.requ_priority_slt_ptg.rounded-0.boxes {
+    width: auto;
+    font-size: 12px;
+}
+.requ_priority_ptg {
+    display: flex;
+    align-items: center;
+   gap: 20px;
+    width: 100%;
+}
+.requ_priority_ptg p{
+    margin-bottom: 0 !important;
+}
+.requ_priority_ptg p:nth-child(1) {
+    background-color: red;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    padding-top: 3px;
+    color: #fff;
+}
+.requ_priority_ptg p:nth-child(5) {
+    background-color: #08305c;
+    text-align: center;
+    color: #fff;
+    padding: 5px 20px;
+}
+.requ_priority_ptg p:nth-child(7) {
+    background-color: #ffee32;
+    text-align: center;
+    color: red;
+    padding: 5px 20px;
+}
 @media (min-width:768px) {
 
     .task_tab+label {
@@ -1509,7 +1541,7 @@ button.btn_bot_div_save {
 .requ_priority_iner_div p {
     margin-bottom: 10px;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 10px;
 }
 .requ_priority_iner_div ul {
     padding-left: 10px;
