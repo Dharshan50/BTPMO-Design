@@ -1513,6 +1513,7 @@ button.btn_bot_div_save {
 }
 .requ_priority_iner_div ul {
     padding-left: 10px;
+    line-height: 25px;
 }
 .Btn_style_Pending {
     border: none;
@@ -2312,6 +2313,17 @@ button.accordion-button.acc_ptg_on_btn {
 .acc_inn_cnt_ptg div {
     width: 22%;
     /* flex-grow: 1; */
+}
+.upd_btn{
+    margin-left: 956px;
+    /* margin-top: -23px; */
+    /* margin-bottom: -13px; */
+    border: none;
+    background-color: #198754;
+    color: white;
+    font-size: 10px;
+    padding: 6px 8px;
+    border-radius: 4px;
 }
 .requ_priority {
     margin-top: 30px;
