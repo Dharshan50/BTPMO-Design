@@ -2494,7 +2494,32 @@ button.accordion-button.acc_ptg_on_btn span i {
         max-width: 1180px;
     }
 }
-
+ul.bt_pro_taskdrp {
+    position: absolute;
+    background-color: #f6f6f6;
+    font-size: 12px;
+    z-index: 1;
+    top: 28px;
+    left: 149px;
+    padding: 0px 0px 0px 0px;
+}
+.tabwrap.fr_drp_ptg {
+    position: relative;
+}
+ul.bt_pro_taskdrp li {
+    list-style-type: none;
+    border-bottom: 1px solid #dfdfdf;
+    padding: 3px 20px 3px 24px;
+}
+ul.bt_pro_taskdrp.tw {
+    left: 299px;
+}
+ul.bt_pro_taskdrp.tr {
+    left: 449px;
+}
+ul.bt_pro_taskdrp.fr {
+    left: 608px;
+}
 /* purushoth Ends */
 
 

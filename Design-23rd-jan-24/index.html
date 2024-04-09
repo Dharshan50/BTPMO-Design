@@ -78,15 +78,34 @@
 
             </div>
 
-            <div class="tabwrap">
+            <div class="tabwrap fr_drp_ptg">
                 <input type="radio" id="tab1" name="tabGroup1" class="tab">
                 <label id="bt_proj_tab" for="tab1">Project Summary</label>
                 <input type="radio" id="tab2" name="tabGroup1" class="tab">
-                <label for="tab2" id="bt_proj-task_tab">Projects</label>
+                <label for="tab2" id="bt_proj-task_ta">Projects</label>
+                <ul class="bt_pro_taskdrp" id="bt_pro_taskdrp" style="display: none;">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
                 <input type="radio" id="tab3" name="tabGroup1" class="tab">
                 <label id="bt_task_tab" for="tab3">Tasks <span class="count_num">6</span></label>
+                <ul class="bt_pro_taskdrp tw" id="bt_pro_taskdrp_2" style="display: none;">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
                 <input type="radio" id="tab4" class="tab" name="tabGroup1">
                 <label for="tab4" id="BaMan_tab4">BA Manager</label>
+                <ul class="bt_pro_taskdrp tr" id="bt_pro_taskdrp_3" style="display: none;">
+                    <li id="mouse_hover"><a class="dropdown-item" href="#">Hover</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                <ul class="bt_pro_taskdrp fr" id="bt_pro_taskdrp_4" style="display: none;">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                </ul>
                 <input type="radio" id="tab7" class="tab" name="tabGroup1">
                 <label for="tab7" id="Devman_tab7">Dev Manager</label>
 
@@ -99,6 +118,58 @@
 
             </div>
         </div>
+
+        <script>
+
+            var button_on = document.getElementById('bt_proj-task_ta');
+            var display_ul = document.getElementById('bt_pro_taskdrp');
+
+            button_on.addEventListener('click', function () {
+                if (button_on.classList.contains('active')) {
+                    display_ul.style.display = 'none';
+                    button_on.classList.remove('active');
+                } else {
+                    display_ul.style.display = 'block';
+                    button_on.classList.add('active');
+                }
+            });
+
+            var button_tw = document.getElementById('bt_task_tab');
+            var display_ul_tw = document.getElementById('bt_pro_taskdrp_2');
+
+            button_tw.addEventListener('click', function () {
+                if (button_tw.classList.contains('active')) {
+                    display_ul_tw.style.display = 'none';
+                    button_tw.classList.remove('active');
+                } else {
+                    display_ul_tw.style.display = 'block';
+                    button_tw.classList.add('active');
+                }
+            });
+
+            var button_tr = document.getElementById('BaMan_tab4');
+            var display_ul_tr = document.getElementById('bt_pro_taskdrp_3');
+
+            button_tr.addEventListener('click', function () {
+                if (button_tr.classList.contains('active')) {
+                    display_ul_tr.style.display = 'none';
+                    button_tr.classList.remove('active');
+                    display_ul_fr.style.display = 'none';
+                } else {
+                    display_ul_tr.style.display = 'block';
+                    button_tr.classList.add('active');
+                    display_ul_fr.style.display = 'none';
+                }
+            });
+
+            var mouse_hover = document.getElementById('mouse_hover');
+            var display_ul_fr = document.getElementById('bt_pro_taskdrp_4');
+
+            mouse_hover.addEventListener('mouseover', function () {
+                display_ul_fr.style.display = 'block';
+            });
+
+        </script>
 
         <!--PORTFOLIO TAB-->
 
@@ -155,24 +226,36 @@
                                 <th class="bg_column_width">Current Stage</th>
                                 <th class="bg_column_width">Current Task</th>
                                 <th class="bg_column_width">Assigned Status</th>
-                                <th class="bg_column_width">Assinged To</th> 
+                                <th class="bg_column_width">Assinged To</th>
                                 <th class="sm_column_width">Task Owner</th>
                                 <th class="sm_column_width">Task Status</th>
                                 <th class="RAG_Column sm_column_width">RAG</th>
 
-                                <th class="hide_default_BaManger_Tab BA_Stage_start_Date_Column sm_column_width">Stage Start Date</th>
-                                <th class="hide_default_BaManger_Tab BA_Stage_End_Date_Column sm_column_width">Stage End Date</th>
-                                <th class="hide_default_BaManger_Tab BA_Revised_Start_Date_Column sm_column_width">Revised start Date</th>
-                                <th class="hide_default_BaManger_Tab BA_Revised_End_Date_Column sm_column_width">Revised end Date</th>
-                                <th class="hide_default_BaManger_Tab BA_Task_start_Date_Column sm_column_width">Task Start Date</th>
-                                <th class="hide_default_BaManger_Tab BA_Task_End_Date_Column sm_column_width">Task End Date</th>
-                                <th class="hide_default_BaManger_Tab BA_Target_GO_Live_Column sm_column_width">Target Go-live</th>
+                                <th class="hide_default_BaManger_Tab BA_Stage_start_Date_Column sm_column_width">Stage
+                                    Start Date</th>
+                                <th class="hide_default_BaManger_Tab BA_Stage_End_Date_Column sm_column_width">Stage End
+                                    Date</th>
+                                <th class="hide_default_BaManger_Tab BA_Revised_Start_Date_Column sm_column_width">
+                                    Revised start Date</th>
+                                <th class="hide_default_BaManger_Tab BA_Revised_End_Date_Column sm_column_width">Revised
+                                    end Date</th>
+                                <th class="hide_default_BaManger_Tab BA_Task_start_Date_Column sm_column_width">Task
+                                    Start Date</th>
+                                <th class="hide_default_BaManger_Tab BA_Task_End_Date_Column sm_column_width">Task End
+                                    Date</th>
+                                <th class="hide_default_BaManger_Tab BA_Target_GO_Live_Column sm_column_width">Target
+                                    Go-live</th>
 
-                                <th class="hide_default_BaManger_Tab BA_Charter_Signed_Column sm_column_width">Stage Signoff</th>
-                                <th class="hide_default_BaManger_Tab BA_Requirement_Signed_Column sm_column_width">Requirement signed</th>
-                                <th class="hide_default_BaManger_Tab BA_Go_Live_Date_Column sm_column_width">Go-live date</th>
-                                <th class="hide_default_BaManger_Tab BA_Revised_Go_Live_Date_Column sm_column_width">Revised go-live date</th>
-                                <th class="hide_default_BaManger_Tab BA_Task_Details_Column sm_column_width">Task Details</th>
+                                <th class="hide_default_BaManger_Tab BA_Charter_Signed_Column sm_column_width">Stage
+                                    Signoff</th>
+                                <th class="hide_default_BaManger_Tab BA_Requirement_Signed_Column sm_column_width">
+                                    Requirement signed</th>
+                                <th class="hide_default_BaManger_Tab BA_Go_Live_Date_Column sm_column_width">Go-live
+                                    date</th>
+                                <th class="hide_default_BaManger_Tab BA_Revised_Go_Live_Date_Column sm_column_width">
+                                    Revised go-live date</th>
+                                <th class="hide_default_BaManger_Tab BA_Task_Details_Column sm_column_width">Task
+                                    Details</th>
                                 <th class="sm_column_width">Actions</th>
 
                                 <th style="position: relative;"><i class="fa-solid fa-circle-plus plus_top"
@@ -261,18 +344,20 @@
                                         class="rag_status">Inprogress</mark></td>
                                 <td><mark style="background-color: #a7ffbe; width: 100% !important;"
                                         class="rag_status">On Track</mark></td>
-                                        
-                                <td  class="hide_default_BaManger_Tab BA_Stage_start_Date_Column">03-Apr-2024</td>
-                                <td  class="hide_default_BaManger_Tab BA_Stage_End_Date_Column">05-Apr-2024</td>
-                                <td  class="hide_default_BaManger_Tab BA_Revised_Start_Date_Column">03-Apr-2024</td>
-                                <td  class="hide_default_BaManger_Tab BA_Revised_End_Date_Column">05-Apr-2024</td>
-                                <td  class="hide_default_BaManger_Tab BA_Task_start_Date_Column">05-Apr-2024</td>
-                                <td  class="hide_default_BaManger_Tab BA_Task_End_Date_Column">05-Apr-2024</td>
-                                <td  class="hide_default_BaManger_Tab BA_Target_GO_Live_Column">28-Apr-2024</td>
+
+                                <td class="hide_default_BaManger_Tab BA_Stage_start_Date_Column">03-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Stage_End_Date_Column">05-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Revised_Start_Date_Column">03-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Revised_End_Date_Column">05-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Task_start_Date_Column">05-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Task_End_Date_Column">05-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Target_GO_Live_Column">28-Apr-2024</td>
                                 <td class="hide_default_BaManger_Tab BA_Charter_Signed_Column">Yes</td>
                                 <td class="hide_default_BaManger_Tab BA_Requirement_Signed_Column">No</td>
-                                <td class="hide_default_BaManger_Tab BA_Go_Live_Date_Column bg_column_width">18-Jun-2024</td>
-                                <td class="hide_default_BaManger_Tab BA_Revised_Go_Live_Date_Column bg_column_width">18-Jun-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Go_Live_Date_Column bg_column_width">18-Jun-2024
+                                </td>
+                                <td class="hide_default_BaManger_Tab BA_Revised_Go_Live_Date_Column bg_column_width">
+                                    18-Jun-2024</td>
                                 <td class="hide_default_BaManger_Tab BA_Task_Details_Column">
                                     <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_5"
                                         title="Choose Column" aria-hidden="true"></i>
@@ -442,20 +527,23 @@
                                 <td>Test</td>
                                 <td>Chandana</td>
                                 <td><mark style="background-color: #a7ffbe; width: 100% !important;"
-                                    class="rag_status">Inprogress</mark></td>
-                                <td><mark style="background-color: #a7ffbe; width: 100% !important;" class="rag_status">On Track</mark></td>
-                                
-                                <td class="hide_default_BaManger_Tab BA_Stage_start_Date_Column" >02-Apr-2024</td>
-                                <td class="hide_default_BaManger_Tab BA_Stage_End_Date_Column" >15-Apr-2024</td>
-                                <td class="hide_default_BaManger_Tab BA_Revised_Start_Date_Column" >15-Apr-2024</td>
-                                <td class="hide_default_BaManger_Tab BA_Revised_End_Date_Column" >15-Apr-2024</td>
-                                <td class="hide_default_BaManger_Tab BA_Task_start_Date_Column" >17-Apr-2024</td>
-                                <td class="hide_default_BaManger_Tab BA_Task_End_Date_Column" >17-Apr-2024</td>
-                                <td class="hide_default_BaManger_Tab BA_Target_GO_Live_Column" >30-May-2024</td>
+                                        class="rag_status">Inprogress</mark></td>
+                                <td><mark style="background-color: #a7ffbe; width: 100% !important;"
+                                        class="rag_status">On Track</mark></td>
+
+                                <td class="hide_default_BaManger_Tab BA_Stage_start_Date_Column">02-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Stage_End_Date_Column">15-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Revised_Start_Date_Column">15-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Revised_End_Date_Column">15-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Task_start_Date_Column">17-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Task_End_Date_Column">17-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Target_GO_Live_Column">30-May-2024</td>
                                 <td class="hide_default_BaManger_Tab BA_Charter_Signed_Column">Yes</td>
                                 <td class="hide_default_BaManger_Tab BA_Requirement_Signed_Column">Yes</td>
-                                <td class="hide_default_BaManger_Tab BA_Go_Live_Date_Column bg_column_width">02-May-2024</td>
-                                <td class="hide_default_BaManger_Tab BA_Revised_Go_Live_Date_Column bg_column_width">02-May-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Go_Live_Date_Column bg_column_width">02-May-2024
+                                </td>
+                                <td class="hide_default_BaManger_Tab BA_Revised_Go_Live_Date_Column bg_column_width">
+                                    02-May-2024</td>
                                 <td class="hide_default_BaManger_Tab BA_Task_Details_Column">
                                     <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_6"
                                         title="Choose Column" aria-hidden="true"></i>
@@ -483,16 +571,16 @@
                                 <td>Chandana</td>
                                 <td><mark style="background-color: #a7ffbe; width: 100% !important;"
                                         class="rag_status">Inprogress</mark></td>
-                                
+
                                 <td><mark style="background-color: #a7ffbe; width: 100% !important;"
-                                        class="rag_status">On Track</mark></td>  
-                                <td class="hide_default_BaManger_Tab BA_Stage_start_Date_Column" >02-Apr-2024</td>
-                                <td class="hide_default_BaManger_Tab BA_Stage_End_Date_Column" >15-Apr-2024</td>
-                                <td class="hide_default_BaManger_Tab BA_Revised_Start_Date_Column" >15-Apr-2024</td>
-                                <td class="hide_default_BaManger_Tab BA_Revised_End_Date_Column" >15-Apr-2024</td>
-                                <td class="hide_default_BaManger_Tab BA_Task_start_Date_Column" >17-Apr-2024</td>
-                                <td class="hide_default_BaManger_Tab BA_Task_End_Date_Column" >17-Apr-2024</td>
-                                <td class="hide_default_BaManger_Tab BA_Target_GO_Live_Column" >30-May-2024</td>
+                                        class="rag_status">On Track</mark></td>
+                                <td class="hide_default_BaManger_Tab BA_Stage_start_Date_Column">02-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Stage_End_Date_Column">15-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Revised_Start_Date_Column">15-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Revised_End_Date_Column">15-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Task_start_Date_Column">17-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Task_End_Date_Column">17-Apr-2024</td>
+                                <td class="hide_default_BaManger_Tab BA_Target_GO_Live_Column">30-May-2024</td>
                                 <td class="hide_default_BaManger_Tab BA_Charter_Signed_Column">Yes</td>
                                 <td class="hide_default_BaManger_Tab BA_Requirement_Signed_Column">Yes</td>
                                 <td class="hide_default_BaManger_Tab BA_Go_Live_Date_Column bg_column_width">02-May-2024
@@ -516,7 +604,7 @@
         </section>
 
 
-       
+
 
         <div id="proj_summary_tbl">
             <div class="bt_process_tab mt-2">
@@ -885,11 +973,12 @@
                 </div>
 
                 <div class="proj_filter_select" style="margin-left: 21%;">
-                    <select id="proj_namealltask_filter" class="form-select  proj_name_filter" style="display: none; width: 86px;"> 
+                    <select id="proj_namealltask_filter" class="form-select  proj_name_filter"
+                        style="display: none; width: 86px;">
                         <option value="">Select</option>
                         <option value="1" selected>All Task</option>
                         <option value="2">Project Priority</option>
-                   
+
                     </select>
                     <select id="proj_name_filter" class="form-select  proj_name_filter">
                         <option value="">Select</option>
@@ -919,7 +1008,7 @@
                     <!-- <i class="fa-solid fa-bell" style="margin-top: 30px;color: red;"></i> -->
                 </div>
             </div>
-            
+
             <div class="task_content" style="display: none;" id="task_content_changereq">
                 <div class="task_tabwrap" style="font-size: 13px; margin-right: 440px !important;">
                     <input type="radio" id="task_tabch1" name="task_tabGroupch1" class="task_tab" checked>
@@ -1014,7 +1103,7 @@
                                     <div class="Task_plus_drop_dwn plus_drop_dwn" style="WIDTH:200PX;display: none;">
                                         <div style="width:100%">
                                             <input id="Project_Charter_Priority_Column" type="checkbox"
-                                                class="chooseTask__Project_Charter_Priority_Column" >
+                                                class="chooseTask__Project_Charter_Priority_Column">
                                             <label for="Project_Charter_Priority_Column">Project Charter
                                                 Priority</label>
                                         </div>
@@ -2340,13 +2429,14 @@
                         <div class="requ_priority">
                             <div class="requ_priority_ptg_sub_hed" style="margin-left: 29px;margin-top: -23px;">
                                 <h1 style="margin-bottom: -3px;">Requirement Priority</h1>
-                            
+
                             </div>
                             <div class="requ_priority_iner_div" style="padding-left: 30px;padding-top: 20px;">
                                 <div class="requ_priority_ptg">
                                     <p>1</p>
                                     <p>Priority</p>
-                                    <select class="form-select requ_priority_slt_ptg" aria-label="Default select example">
+                                    <select class="form-select requ_priority_slt_ptg"
+                                        aria-label="Default select example">
                                         <option selected>Chinna Fronter</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -2357,15 +2447,16 @@
                                     <p>Status</p>
                                     <p>Pending assignment</p>
                                 </div>
-                                
-                             
-                    
+
+
+
                             </div>
                             <div class="requ_priority_iner_div" style="padding-left: 30px;padding-top: 20px;">
                                 <div class="requ_priority_ptg">
                                     <p>1</p>
                                     <p>Priority</p>
-                                    <select class="form-select requ_priority_slt_ptg" aria-label="Default select example">
+                                    <select class="form-select requ_priority_slt_ptg"
+                                        aria-label="Default select example">
                                         <option selected>Chinna Fronter</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -2376,15 +2467,16 @@
                                     <p>Status</p>
                                     <p>Pending assignment</p>
                                 </div>
-                                
-                             
-                    
+
+
+
                             </div>
                             <div class="requ_priority_iner_div" style="padding-left: 30px;padding-top: 20px;">
                                 <div class="requ_priority_ptg">
                                     <p>2</p>
                                     <p>Priority</p>
-                                    <select class="form-select requ_priority_slt_ptg" aria-label="Default select example">
+                                    <select class="form-select requ_priority_slt_ptg"
+                                        aria-label="Default select example">
                                         <option selected>Chinna Fronter</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -2395,15 +2487,16 @@
                                     <p>Status</p>
                                     <p>Pending assignment</p>
                                 </div>
-                                
-                             
-                    
+
+
+
                             </div>
                             <div class="requ_priority_iner_div" style="padding-left: 30px;padding-top: 20px;">
                                 <div class="requ_priority_ptg">
                                     <p>3</p>
                                     <p>Priority</p>
-                                    <select class="form-select requ_priority_slt_ptg" aria-label="Default select example">
+                                    <select class="form-select requ_priority_slt_ptg"
+                                        aria-label="Default select example">
                                         <option selected>Chinna Fronter</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -2414,9 +2507,9 @@
                                     <p>Status</p>
                                     <p>Pending assignment</p>
                                 </div>
-                                
-                             
-                    
+
+
+
                             </div>
                         </div>
 
@@ -10377,7 +10470,8 @@
                                 <div class="requ_priority_ptg">
                                     <p>1</p>
                                     <p>Priority</p>
-                                    <select class="form-select requ_priority_slt_ptg" aria-label="Default select example">
+                                    <select class="form-select requ_priority_slt_ptg"
+                                        aria-label="Default select example">
                                         <option selected>Chinna Fronter</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -10388,15 +10482,16 @@
                                     <p>Status</p>
                                     <p>Pending assignment</p>
                                 </div>
-                                
-                             
-                    
+
+
+
                             </div>
                             <div class="requ_priority_iner_div" style="padding-left: 4px;padding-top: 20px;">
                                 <div class="requ_priority_ptg">
                                     <p>1</p>
                                     <p>Priority</p>
-                                    <select class="form-select requ_priority_slt_ptg" aria-label="Default select example">
+                                    <select class="form-select requ_priority_slt_ptg"
+                                        aria-label="Default select example">
                                         <option selected>Chinna Fronter</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -10407,15 +10502,16 @@
                                     <p>Status</p>
                                     <p>Pending assignment</p>
                                 </div>
-                                
-                             
-                    
+
+
+
                             </div>
                             <div class="requ_priority_iner_div" style="padding-left: 4px;padding-top: 20px;">
                                 <div class="requ_priority_ptg">
                                     <p>2</p>
                                     <p>Priority</p>
-                                    <select class="form-select requ_priority_slt_ptg" aria-label="Default select example">
+                                    <select class="form-select requ_priority_slt_ptg"
+                                        aria-label="Default select example">
                                         <option selected>Chinna Fronter</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -10426,15 +10522,16 @@
                                     <p>Status</p>
                                     <p>Pending assignment</p>
                                 </div>
-                                
-                             
-                    
+
+
+
                             </div>
                             <div class="requ_priority_iner_div" style="padding-left: 4px;padding-top: 20px;">
                                 <div class="requ_priority_ptg">
                                     <p>3</p>
                                     <p>Priority</p>
-                                    <select class="form-select requ_priority_slt_ptg" aria-label="Default select example">
+                                    <select class="form-select requ_priority_slt_ptg"
+                                        aria-label="Default select example">
                                         <option selected>Chinna Fronter</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -10445,9 +10542,9 @@
                                     <p>Status</p>
                                     <p>Pending assignment</p>
                                 </div>
-                                
-                             
-                    
+
+
+
                             </div>
                         </div>
 
@@ -15169,7 +15266,7 @@
                                     </div>
 
                                 </div>
-                                
+
                                 <div class="addBatch_3" style="margin-left: 269px; position: relative;">
                                     <!-- <div class="dropdown">
                                         <button class="btn btn-success save_Ba_Project batch_assign_btn "
@@ -15195,13 +15292,15 @@
                             <div class="requ_priority">
                                 <div class="requ_priority_ptg_sub_hed" style="margin-left: 29px;margin-top: -23px;">
                                     <h1 style="margin-bottom: -3px;">Requirement Priority</h1>
-                                    <button class="upd_btn" id="Pri_upd_btn" style="display: none;">Update Priority</button>
+                                    <button class="upd_btn" id="Pri_upd_btn" style="display: none;">Update
+                                        Priority</button>
                                 </div>
                                 <div class="requ_priority_iner_div" style="padding-left: 30px;padding-top: 20px;">
                                     <div class="requ_priority_ptg">
                                         <p>1</p>
                                         <p>Priority</p>
-                                        <select class="form-select requ_priority_slt_ptg" aria-label="Default select example">
+                                        <select class="form-select requ_priority_slt_ptg"
+                                            aria-label="Default select example">
                                             <option selected>Chinna Fronter</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
@@ -15212,15 +15311,16 @@
                                         <p>Status</p>
                                         <p>Pending assignment</p>
                                     </div>
-                                    
-                                 
-                        
+
+
+
                                 </div>
                                 <div class="requ_priority_iner_div" style="padding-left: 30px;padding-top: 20px;">
                                     <div class="requ_priority_ptg">
                                         <p>1</p>
                                         <p>Priority</p>
-                                        <select class="form-select requ_priority_slt_ptg" aria-label="Default select example">
+                                        <select class="form-select requ_priority_slt_ptg"
+                                            aria-label="Default select example">
                                             <option selected>Chinna Fronter</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
@@ -15231,15 +15331,16 @@
                                         <p>Status</p>
                                         <p>Pending assignment</p>
                                     </div>
-                                    
-                                 
-                        
+
+
+
                                 </div>
                                 <div class="requ_priority_iner_div" style="padding-left: 30px;padding-top: 20px;">
                                     <div class="requ_priority_ptg">
                                         <p>2</p>
                                         <p>Priority</p>
-                                        <select class="form-select requ_priority_slt_ptg" aria-label="Default select example">
+                                        <select class="form-select requ_priority_slt_ptg"
+                                            aria-label="Default select example">
                                             <option selected>Chinna Fronter</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
@@ -15250,15 +15351,16 @@
                                         <p>Status</p>
                                         <p>Pending assignment</p>
                                     </div>
-                                    
-                                 
-                        
+
+
+
                                 </div>
                                 <div class="requ_priority_iner_div" style="padding-left: 30px;padding-top: 20px;">
                                     <div class="requ_priority_ptg">
                                         <p>3</p>
                                         <p>Priority</p>
-                                        <select class="form-select requ_priority_slt_ptg" aria-label="Default select example">
+                                        <select class="form-select requ_priority_slt_ptg"
+                                            aria-label="Default select example">
                                             <option selected>Chinna Fronter</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
@@ -15269,12 +15371,12 @@
                                         <p>Status</p>
                                         <p>Pending assignment</p>
                                     </div>
-                                    
-                                 
-                        
+
+
+
                                 </div>
                             </div>
-    
+
                             <hr class="hr_ptg">
                             <!-- <div class="tabwrap new_tab_ptg" id="batch_divisions_3">
                                 <input type="radio" id="taskfun_assitab1" name="tskAssbatchGroup1" class="tab">
@@ -30355,7 +30457,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="portfolio_sec_tab" id="portfolio_sec_tab">
         <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
             <div style=" display: flex; margin-top: 15px; gap: 10px; justify-content: space-between; width: 100%;">
@@ -30367,12 +30469,12 @@
                         <option value="2">BA View</option>
                         <option value="3">Dev View</option>
                     </select>
-                     <select id="port_BA_type_filter" class="form-select   proj_name_filter"
+                    <select id="port_BA_type_filter" class="form-select   proj_name_filter"
                         style="width: 100% !important; display: none;">
                         <option value="">Select</option>
                         <option value="1" selected>This View</option>
                         <option value="2">Resource Allocation</option>
-                        
+
                     </select>
                     <select id="port_proj_type_filter" class="form-select  proj_name_filter"
                         style="width: 100% !important">
@@ -30381,14 +30483,14 @@
                         <option value="2">Next Week</option>
                         <option value="3">Delayed</option>
                     </select>
-                </div> 
+                </div>
                 <div class="proj_task_tabwrap" style="font-size: 13px;">
                     <input type="radio" id="port_mypro_tab1" name="proj_task_tabGroup3" class="proj_task_tab" checked>
                     <label id="port_proj_tab" for="port_mypro_tab1" style="border-right: none;">BTPMO View</label>
                     <input type="radio" id="port_all_tab2" name="proj_task_tabGroup3" class="proj_task_tab">
-                    <label id="port_task_tab" for="port_all_tab2">Portfolio View</label>  
+                    <label id="port_task_tab" for="port_all_tab2">Portfolio View</label>
                 </div>
-            </div>  
+            </div>
         </div>
 
         <div class="port_table_view" id="port_table_view">
@@ -30413,19 +30515,25 @@
                             <th class="sm_column_width">Target Go-live</th>
                             <th class="RAG_Column sm_column_width">RAG</th>
 
-                            <th class="hide_default_portfolio_Tab Charter_Signed_Column sm_column_width">Stage Signoff</th> 
-                            <th class="hide_default_portfolio_Tab Project_Charter_Priority_Column">Project Charter Priority</th>
-                            <th class="hide_default_portfolio_Tab Requriement_Priority_Column">Requriement Priority</th> 
-                            <th class="hide_default_portfolio_Tab Task_Start_Date_Column sm_column_width">Task Start Date</th>
-                            <th class="hide_default_portfolio_Tab Task_End_Date_Column sm_column_width"> Task End Date</th>
-                            <th class="hide_default_portfolio_Tab Go_Live_Date_Column sm_column_width">Go-live date </th>
-                            <th class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column sm_column_width">  Revised go-live date</th>
-                            <th class="hide_default_portfolio_Tab Task_Details_Column sm_column_width">Task Details </th>
+                            <th class="hide_default_portfolio_Tab Charter_Signed_Column sm_column_width">Stage Signoff
+                            </th>
+                            <th class="hide_default_portfolio_Tab Project_Charter_Priority_Column">Project Charter
+                                Priority</th>
+                            <th class="hide_default_portfolio_Tab Requriement_Priority_Column">Requriement Priority</th>
+                            <th class="hide_default_portfolio_Tab Task_Start_Date_Column sm_column_width">Task Start
+                                Date</th>
+                            <th class="hide_default_portfolio_Tab Task_End_Date_Column sm_column_width"> Task End Date
+                            </th>
+                            <th class="hide_default_portfolio_Tab Go_Live_Date_Column sm_column_width">Go-live date
+                            </th>
+                            <th class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column sm_column_width"> Revised
+                                go-live date</th>
+                            <th class="hide_default_portfolio_Tab Task_Details_Column sm_column_width">Task Details
+                            </th>
 
                             <th style="position: relative;"><i class="fa-solid fa-circle-plus plus_top"
                                     id="Portfolio_Column_menus" title="Choose Column"></i> <i class=""></i>
-                                <div class="Portfolio_plus_drop_dwn plus_drop_dwn"
-                                    style="WIDTH:200PX;display: none;">
+                                <div class="Portfolio_plus_drop_dwn plus_drop_dwn" style="WIDTH:200PX;display: none;">
                                     <div style="width:100%">
                                         <input id="Project_Charter_Priority_Column" type="checkbox"
                                             class="choosePortfolio__Project_Charter_Priority_Column">
@@ -30496,8 +30604,8 @@
                             <td>03-Apr-2024</td>
                             <td>05-Apr-2024</td>
                             <td>28-Apr-2024</td>
-                            <td><mark style="background-color: #a7ffbe; width: 100% !important;"
-                                    class="rag_status">On Track</mark></td>
+                            <td><mark style="background-color: #a7ffbe; width: 100% !important;" class="rag_status">On
+                                    Track</mark></td>
 
                             <td class="hide_default_Tasks_Tab Project_Charter_Priority_Column">2</td>
                             <td class="hide_default_Tasks_Tab Requriement_Priority_Column">1</td>
@@ -30515,8 +30623,8 @@
                             <td class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column bg_column_width">
                                 18-Jun-2024</td>
                             <td class="hide_default_portfolio_Tab Task_Details_Column">
-                                <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2"
-                                    title="Choose Column" aria-hidden="true"></i>
+                                <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2" title="Choose Column"
+                                    aria-hidden="true"></i>
                             </td>
                         </tr>
                         <tr id="port_delay_tab_2">
@@ -30652,8 +30760,8 @@
 
                                             <label for="">Test</label>
                                         </label>
-                                        <label for=""><mark style="background-color: #BDE8F0;"
-                                                class="rag_status">Not Started</mark></label>
+                                        <label for=""><mark style="background-color: #BDE8F0;" class="rag_status">Not
+                                                Started</mark></label>
                                     </div>
                                 </div>
 
@@ -30665,8 +30773,7 @@
                         <tr>
                             <td>
                                 <div class="delay_dropdwn">
-                                    <i class="fa-solid fa-caret-down" class="delay_dropdwn"
-                                        id="delay_dropdwn_1"></i>
+                                    <i class="fa-solid fa-caret-down" class="delay_dropdwn" id="delay_dropdwn_1"></i>
                                     <label for="">2</label>
                                 </div>
                             </td>
@@ -30687,8 +30794,8 @@
                             <td>17-Apr-2024</td>
                             <td>17-Apr-2024</td>
                             <td>30-May-2024</td>
-                            <td><mark style="background-color: #a7ffbe; width: 100% !important;"
-                                    class="rag_status">On Track</mark></td>
+                            <td><mark style="background-color: #a7ffbe; width: 100% !important;" class="rag_status">On
+                                    Track</mark></td>
 
                             <td class="hide_default_Tasks_Tab Project_Charter_Priority_Column">2</td>
                             <td class="hide_default_Tasks_Tab Requriement_Priority_Column">1</td>
@@ -30707,16 +30814,15 @@
                             <td class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column bg_column_width">
                                 02-May-2024</td>
                             <td class="hide_default_portfolio_Tab Task_Details_Column">
-                                <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2"
-                                    title="Choose Column" aria-hidden="true"></i>
+                                <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2" title="Choose Column"
+                                    aria-hidden="true"></i>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
                                 <div class="delay_dropdwn">
-                                    <i class="fa-solid fa-caret-down" class="delay_dropdwn"
-                                        id="delay_dropdwn_1"></i>
+                                    <i class="fa-solid fa-caret-down" class="delay_dropdwn" id="delay_dropdwn_1"></i>
                                     <label for="">3</label>
                                 </div>
                             </td>
@@ -30758,8 +30864,8 @@
                             <td class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column bg_column_width">
                                 02-May-2024</td>
                             <td class="hide_default_portfolio_Tab Task_Details_Column">
-                                <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2"
-                                    title="Choose Column" aria-hidden="true"></i>
+                                <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2" title="Choose Column"
+                                    aria-hidden="true"></i>
                             </td>
                         </tr>
 
@@ -30854,17 +30960,16 @@
                                     class="rag_status">View</mark></td>
                             <td>Requirement review with Developer</td>
                             <td>Sandeep</td>
-                            <td><mark style="background-color: #9eec86; width: 100% !important;"
-                                    class="rag_status">Not Started <i class="fa-solid fa-circle-info"
-                                        style="font-size: 10px !important;" title="Comments"
-                                        aria-hidden="true"></i></mark></td>
+                            <td><mark style="background-color: #9eec86; width: 100% !important;" class="rag_status">Not
+                                    Started <i class="fa-solid fa-circle-info" style="font-size: 10px !important;"
+                                        title="Comments" aria-hidden="true"></i></mark></td>
                             <td><button class="btn_prot">Update</button></td>
                             <td><button class="btn_prot">Update</button></td>
                             <td>N/A</td>
                             <td>N/A</td>
                             <td>29-May-2024</td>
-                            <td><mark style="background-color: #a7ffbe; width: 100% !important;"
-                                    class="rag_status">On Track</mark></td>
+                            <td><mark style="background-color: #a7ffbe; width: 100% !important;" class="rag_status">On
+                                    Track</mark></td>
 
                             <td class="hide_default_Tasks_Tab Project_Charter_Priority_Column">2</td>
                             <td class="hide_default_Tasks_Tab Requriement_Priority_Column">1</td>
@@ -30883,8 +30988,8 @@
                             <td class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column bg_column_width">
                                 20-May-2024</td>
                             <td class="hide_default_portfolio_Tab Task_Details_Column">
-                                <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2"
-                                    title="Choose Column" aria-hidden="true"></i>
+                                <i class="fa-solid fa-circle-plus plus_top" id="delay_dropdwn_2" title="Choose Column"
+                                    aria-hidden="true"></i>
                             </td>
                         </tr>
                     </tbody>
@@ -30894,7 +30999,7 @@
 
 
         </div>
-    </section> 
+    </section>
     <div class="prot_ali_items">
         <div class="prot_BA_view" id="prot_BA_view">
 
@@ -30930,15 +31035,15 @@
                                 progress</mark>
                         </th>
                         <th><mark class="Style_th_prot">BA testing queue</mark></th>
-                        <th><mark class="Style_th_prot"
-                                style="background-color: #f06060 !important; width: 103px;">BA testing in
+                        <th><mark class="Style_th_prot" style="background-color: #f06060 !important; width: 103px;">BA
+                                testing in
                                 progress</mark></th>
-                        <th><mark class="Style_th_prot"
-                                style="background-color: #f06060 !important; width: 103px;">BA testing
+                        <th><mark class="Style_th_prot" style="background-color: #f06060 !important; width: 103px;">BA
+                                testing
                                 ompleted</mark>
                         </th>
-                        <th><mark class="Style_th_prot"
-                                style="background-color: #bfc2b9 !important; width: 103px;">User testing
+                        <th><mark class="Style_th_prot" style="background-color: #bfc2b9 !important; width: 103px;">User
+                                testing
                             </mark></th>
 
                     </thead>
@@ -30946,11 +31051,11 @@
                         <tr>
                             <td class="Style_tr_prot " ondrop="drop(event)" ondragover="allowDrop(event)">
                                 <div>
-                                    <label class=" label_td_prot" draggable="true"
-                                        ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
+                                    <label class=" label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
+                                                class="fa-solid prp_dot fa-circle"
                                                 style="color: #ffc000;"></i></span><span> E-Staff </span></label>
-                                    <label class=" label_td_prot" draggable="true"
-                                        ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
+                                    <label class=" label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
+                                                class="fa-solid prp_dot fa-circle"
                                                 style="color: #00ff62;"></i></span><span> Non-Can <i
                                                 class="fa-solid fa-spinner" style="color: #15b815; font-size: 12px; margin-left: 12px;
                                                 "></i> </span></label>
@@ -30962,8 +31067,8 @@
                             </td>
                             <td class="Style_tr_prot " ondrop="drop(event)" ondragover="allowDrop(event)">
                                 <div>
-                                    <label class=" label_td_prot" draggable="true"
-                                        ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
+                                    <label class=" label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
+                                                class="fa-solid prp_dot fa-circle"
                                                 style="color: #00988f;"></i></span><span> Sample <i
                                                 class="fa-solid fa-spinner" style="color: #15b815; font-size: 12px; margin-left: 12px;
                                                 "></i> </span></label>
@@ -30972,16 +31077,16 @@
                             </td>
                             <td class="Style_tr_prot " ondrop="drop(event)" ondragover="allowDrop(event)">
                                 <div>
-                                    <label class=" label_td_prot" draggable="true"
-                                        ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
+                                    <label class=" label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
+                                                class="fa-solid prp_dot fa-circle"
                                                 style="color: #ffc000;"></i></span><span> Sample </label>
 
                                 </div>
                             </td>
                             <td class="Style_tr_prot " ondrop="drop(event)" ondragover="allowDrop(event)">
                                 <div>
-                                    <label class=" label_td_prot" draggable="true"
-                                        ondragstart="drag(event)"><span><i class="fa-solid prp_dot fa-circle"
+                                    <label class=" label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
+                                                class="fa-solid prp_dot fa-circle"
                                                 style="color: #00988f;"></i></span><span> Sample<i
                                                 class="fa-solid fa-check" style="color: #07d307; margin-left: 12px;
                                                 "></i></span> </span></label>
@@ -30991,8 +31096,7 @@
                             <td class="Style_tr_prot" ondrop="drop(event)" ondragover="allowDrop(event)">
                                 <div>
                                     <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
-                                                class="fa-solid prp_dot fa-circle"
-                                                style="color: red;"></i></span><span>
+                                                class="fa-solid prp_dot fa-circle" style="color: red;"></i></span><span>
                                             Sample <i class="fa-solid fa-triangle-exclamation" style="color: #e20212;
                                         margin-left: 6px;"> </i></span></label>
                                     <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
@@ -31018,8 +31122,7 @@
                             <td class="Style_tr_prot" ondrop="drop(event)" ondragover="allowDrop(event)">
                                 <div>
                                     <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
-                                                class="fa-solid prp_dot fa-circle"
-                                                style="color: red;"></i></span><span>
+                                                class="fa-solid prp_dot fa-circle" style="color: red;"></i></span><span>
                                             E-procurment <i class="fa-solid fa-triangle-exclamation" style="color: #e20212;
                                         margin-left: 0px;"> </i></span></label>
                                     <label class="label_td_prot" draggable="true" ondragstart="drag(event)"><span><i
@@ -31851,7 +31954,7 @@
         </section>
 
 
-        
+
 
         <section class="view_proj_project" id="view_proj" style="margin-top: 0px !important;">
             <div class="content_head_title">
@@ -32182,7 +32285,7 @@
     </div>
 
 
-    
+
 
 
 
