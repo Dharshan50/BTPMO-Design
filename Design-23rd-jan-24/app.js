@@ -3,6 +3,13 @@ var lstOrder = [];
 
 $(document).ready(function () {
 
+    $('.page_content').show()
+    $('.loading_container').hide()
+    $("[class^='header_']").hide()
+    $('.CanvasZone').css('max-width', '100%');
+    $("[class^='pageContent_']").css('max-width', '100%').css('position', 'unset');
+    $("#workbenchCommandBar").hide();
+
     date_picker();
     hide_all_details();
     $('#top_div').hide();
@@ -483,7 +490,7 @@ $(document).on('change', '.order_select', function () {
     var newOrder = $selectedOption.val();
     var $parentCard = $(this).closest('.card_main_box');
     $parentCard.attr("data-order", newOrder);
-    sortElements();
+    // sortElements();
 });
 
 function initializeDraggable() {
@@ -1606,7 +1613,7 @@ $('[name^="addbatch_"]').on('change', function () {
    
     var id = $(this).attr('name').split('_')[1];
  
-    toggleBatchOptions("addbatch_" + id, 1, id);
+    // toggleBatchOptions("addbatch_" + id, 1, id);
 });
 
 
@@ -2149,19 +2156,14 @@ $(document).on('click', `[id^='card_arrow_']`, function () {
 })
 
 $(document).on('change', '#proj_status', function () {
-
-    var selectedValue = this.value;
-    var roiFields = document.querySelectorAll('.Status_comments');
-    for(let i=0; i<roiFields.length; i++){
+    var selectedValue = $(this).val();
     if (selectedValue == '6') {
-    
-        roiFields[i].style.display = 'block';
+        $('.Status_comments').show();
     } else {
-       
-        roiFields[i].style.display = 'none';
+        $('.Status_comments').hide();
     }
-}
 });
+
 
 $('#save_modal').on('click', function () {
     $('#dev_breakdown_data').modal('hide');
