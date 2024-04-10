@@ -1780,7 +1780,10 @@ $(document).ready(function() {
     $('#bt_pro_taskdrp_2').click(function() {
         toggleDropdown($('#bt_task_tab'), $(this));
     });
-
+    $('#Devman_tab7').click(function() {
+        toggleDropdown($(this), $('#bt_pro_taskdrp_5'));
+        hideDropdown($('#bt_pro_taskdrp_6'));
+    });
     $('#BaMan_tab4').click(function() {
         toggleDropdown($(this), $('#bt_pro_taskdrp_3'));
         hideDropdown($('#bt_pro_taskdrp_4')); // Additional line to hide other dropdown
@@ -1793,6 +1796,9 @@ $(document).ready(function() {
 
     $('#mouse_hover').mouseover(function() {
         $('#bt_pro_taskdrp_4').css('display', 'block');
+    });
+    $('#mouse_hover_tw').mouseover(function() {
+        $('#bt_pro_taskdrp_6').css('display', 'block');
     });
 
     // Function to toggle dropdown visibility

@@ -245,7 +245,7 @@ form.file_uplaod_ptg {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 10px;
+    margin-left: 5px;
     padding: 5px 0px;
 }
 .pro_reass_stage{
@@ -262,11 +262,13 @@ form.file_uplaod_ptg {
 .Details {
     display: flex;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 60px;
     /* height: 30px; */
     align-items: center;
 }
-
+.Details label {
+    margin-bottom: 5px;
+}
 mark.rag_status.ut {
     width: 100%;
     text-wrap: pretty;
@@ -1047,7 +1049,7 @@ select.form-select.requ_priority_slt_ptg.rounded-0.boxes {
     color: #000;
     font-size: 12px;
     font-weight: 500;
-   
+    border-right: 1px solid #b3b3b3;
     text-align: center;
     background-color: #f2f2f2;
     -webkit-user-select: none;
@@ -1062,7 +1064,46 @@ select.form-select.requ_priority_slt_ptg.rounded-0.boxes {
     padding: 5px 15px;
     font-size: 11px;
 }
-
+.inu_the_ms {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 12px;
+}
+.btn_app_rej button{
+    border: none;
+    padding: 3px 8px;
+}
+.btn_app_rej {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 89%;
+    margin-top: -19px;
+    margin-bottom: 5px;
+}
+ul.bt_pro_taskdrp.fv {
+    left: 599px;
+}
+ul.bt_pro_taskdrp.sx {
+    left: 760px;
+}
+.btn_app_rej button:nth-child(1){
+    background-color: #0BB18F;
+    color: white;
+}
+.btn_app_rej button:nth-child(2){
+    background-color: red;
+    color: white;
+}
+.inu_the_ms p:nth-child(2) {
+    border: 1px solid red;
+    padding: 2px 9px;
+}
+.inu_the_ms p{
+    margin-bottom: 0px;
+}
 @media (min-width:768px) {
 
     .proj_task_tab+label {
@@ -2353,20 +2394,42 @@ button.accordion-button.acc_ptg_on_btn {
     /* margin-top: -23px; */
     /* margin-bottom: -13px; */
     border: none;
-    background-color: #198754;
+    background-color: #0BB18F;
     color: white;
     font-size: 10px;
-    padding: 6px 8px;
+    padding: 3px 15px;
     border-radius: 4px;
 }
-
+.assgin_to_ptg{
+    font-size: 12px;
+    padding-bottom: 5px;
+    width: 95%;
+    margin: auto;
+    border-bottom: 1px solid #000;
+    color: rgb(3, 54, 95);
+    margin-bottom: 5px;
+}
 .requ_priority {
-    margin-top: 30px;
+    margin-top: 40px;
     width: 100%;
+    margin-bottom: 40px;
 }
 .requ_priority h1 {
     color: rgb(3, 54, 95);
-    font-size: 14px;
+    font-size: 12px;
+}
+.batch_s p {
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 4px;
+}
+.batch_s {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    gap: 20px;
 }
 .requ_priority_iner_div{
     display: flex;
@@ -2375,12 +2438,12 @@ button.accordion-button.acc_ptg_on_btn {
     padding-right: 50px;
 }
 .requ_priority_ptg_sub_hed {
-    width: 95%;
+    width: 98%;
     margin: auto;
     border-bottom: 1px solid #000;
     display: flex;
     align-items: center;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     gap: 20px;
 }
 .Stage_Details.change_ptg {
@@ -2511,6 +2574,8 @@ ul.bt_pro_taskdrp li {
     list-style-type: none;
     border-bottom: 1px solid #dfdfdf;
     padding: 3px 20px 3px 24px;
+    font-size: 10px;
+    width: 152px;
 }
 ul.bt_pro_taskdrp.tw {
     left: 299px;
