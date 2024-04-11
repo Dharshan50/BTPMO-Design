@@ -196,7 +196,16 @@ $(document).find("[id^='Expand_Pending_']").on('click', function () {
 
 
 $(document).find("[id^='Ba_view_reassign_']").on('click', function () {
-    // $(this).parent().parent().hide();
+    var temp_id = this.id;
+    var splitArray = temp_id.split('_');
+    var id = splitArray[splitArray.length - 1];
+    $(document).find("[class^='pending_Assignment_View_']").hide();
+    $("[id^='Ba_view_reassign_']").show();
+    $("[id^='Close_Pending_']").hide();
+    $(document).find(`.pending_Assignment_View_${id}`).show()
+    $(document).find(`#Close_Pending_${id}`).show()
+    $(document).find(`#Expand_Pending_${id}`).hide()
+    initializeDraggable()
 })
 
 $(document).find("[id^='Task_Edit_']").on('click', function () {
@@ -844,10 +853,11 @@ $('#taskdevtsktab5').on('click', function () {
     $('#task_devtask1_details').hide();
 })
 $('#task_proj_tab2').on('click', function () {
-   
+    $('#tab3').get(0).click();
     $('#task_tabch1').get(0).click();
     $('#task_content_changereq').show();
     $('#task_content_proj').hide();
+    $('.pro_hd_tab').hide();
     doRestoreTaskColumns();
     $('#task_manage').show();
     $('.task_tabwrap').show();
@@ -1104,7 +1114,35 @@ $('#slct_proj_drop').on('change', function () {
     $(document).find("[class^='EditField_']").hide();
 })
 
+$('#res_stage_sel').on('change', function () {
+ 
+    var val = $('#res_stage_sel').val();
+    if (val == 1){
+        $('.reass_req_pri').hide()
+        $('.btn_app_rej').hide()
+    }
+    else{
+        $('.reass_req_pri').show()
+        $('.btn_app_rej').show()
+    }
+    
 
+})
+
+$('#res_stage_Devsel').on('change', function () {
+ 
+    var val = $('#res_stage_Devsel').val();
+    if (val == 1){
+        $('.reass_dev_pri').hide()
+        $('.btn_appsen_rej').hide()
+    }
+    else{
+        $('.reass_dev_pri').show()
+        $('.btn_appsen_rej').show()
+    }
+    
+
+})
 $('#port_proj_name_filter').on('change', function () {
     var val = $('#port_proj_name_filter').val();
     if (val == 2) {
@@ -1471,9 +1509,10 @@ $('#create_proj').on('click', function () {
     $('#file-upload-container').hide();
 })
 $('#task_pro_view').on('click', function () {
+    $('#tab3').get(0).click();
     doRestoreTaskColumns();
     $('#task_manage').show();
-    
+    $('.pro_hd_tab').show();
     $('.task_tabwrap').show();
     $('#task_tbl').show();
     task_hide_details();
@@ -1772,26 +1811,28 @@ $('#task_tab8').on('click', function () {
 })
 
 $(document).ready(function() {
-    $('#bt_proj-task_ta').click(function() {
+    $('#bt_proj-task_ta').mouseover(function() {
         toggleDropdown($(this), $('#bt_pro_taskdrp'));
+
     });
+    
 
     $('#bt_pro_taskdrp').click(function() {
         toggleDropdown($('#bt_proj-task_ta'), $(this));
     });
 
-    $('#bt_task_tab').click(function() {
+    $('#bt_task_tab').mouseover(function() {
         toggleDropdown($(this), $('#bt_pro_taskdrp_2'));
     });
 
     $('#bt_pro_taskdrp_2').click(function() {
         toggleDropdown($('#bt_task_tab'), $(this));
     });
-    $('#Devman_tab7').click(function() {
+    $('#Devman_tab7').mouseover(function() {
         toggleDropdown($(this), $('#bt_pro_taskdrp_5'));
         hideDropdown($('#bt_pro_taskdrp_6'));
     });
-    $('#BaMan_tab4').click(function() {
+    $('#BaMan_tab4').mouseover(function() {
         toggleDropdown($(this), $('#bt_pro_taskdrp_3'));
         hideDropdown($('#bt_pro_taskdrp_4')); // Additional line to hide other dropdown
     });
@@ -1800,13 +1841,18 @@ $(document).ready(function() {
         toggleDropdown($('#BaMan_tab4'), $(this));
         hideDropdown($('#bt_pro_taskdrp_4')); // Additional line to hide other dropdown
     });
-
-    $('#mouse_hover').mouseover(function() {
+$('#mouse_hover').mouseover(function() {
         $('#bt_pro_taskdrp_4').css('display', 'block');
+    }).mouseout(function() {
+        $('#bt_pro_taskdrp_4').css('display', 'none');
     });
+
     $('#mouse_hover_tw').mouseover(function() {
         $('#bt_pro_taskdrp_6').css('display', 'block');
+    }).mouseout(function() {
+        $('#bt_pro_taskdrp_6').css('display', 'none');
     });
+
 
     // Function to toggle dropdown visibility
     function toggleDropdown(button, dropdown) {
@@ -1831,6 +1877,7 @@ $(document).ready(function() {
 
 $('#Projects_tab_pendAss').on('click', function () {
    // alert("jjj")
+   $('#tab2').get(0).click();
     $('#task_manage').hide();
     $('.prot_ali_items').hide();
     task_hide_details();
@@ -1856,6 +1903,7 @@ $('#Projects_tab_pendAss').on('click', function () {
     hideProjData();
 })
 $('#Projects_tab_ResPri').on('click', function () {
+    $('#tab2').get(0).click();
     $('#task_manage').hide();
     $('.prot_ali_items').hide();
     task_hide_details();
@@ -1889,8 +1937,32 @@ $('#Projects_tab_ResPri').on('click', function () {
 
 })
 
-
+$('#btn_pri_viw').on('click', function () {
+    $('#viw_cur_div').show();
+    $('#btn_pri_viw').hide();
+    $('#close_pri_viw').show();
+ 
+})
+$('#close_pri_viw').on('click', function () {
+    $('#viw_cur_div').hide();
+    $('#btn_pri_viw').show();
+    $('#close_pri_viw').hide();
+    $('#btn_app_rej').hide();
+})
+$('#btn_pri_viw1').on('click', function () {
+    $('#viw_cur_div1').show();
+    $('#btn_pri_viw1').hide();
+    $('#close_pri_viw1').show();
+    $('.btn_app_rej').show();
+})
+$('#close_pri_viw1').on('click', function () {
+    $('#viw_cur_div1').hide();
+    $('#btn_pri_viw1').show();
+    $('#close_pri_viw1').hide();
+    $('.btn_app_rej').hide();
+})
 $('#res_ba_tab').on('click', function () {
+    $('#tab4').get(0).click();
     $('#task_manage').hide();
     $('.prot_ali_items').hide();
     task_hide_details();
@@ -2480,6 +2552,7 @@ $('#proj_task_tab3').on('click', function () {
 
 
 $('#proj_vw_id').on('click', function () {
+    $('#tab4').get(0).click();
     $('#task_manage').hide();
     $('.prot_ali_items').hide();
     $('#proj_summary_tbl').hide();

@@ -935,9 +935,20 @@ select.form-select.requ_priority_slt_ptg.rounded-0.boxes {
     background-color: #f9f9f9;
     /* box-shadow: 0 1px 0 #f4f4f4 inset; */
 }
-
+label.pen_sm_ds {
+    font-size: 10px;
+    height: fit-content;
+    width: 125px;
+}
 .proj_task_tab {
     display: none;
+    
+}
+p.pro_hd_tab , .pro_hd_tab_chg {
+    margin: 20px 0px 20px 0px;
+    color: #03365f;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 .proj_task_tab:checked:nth-of-type(1)~.tabcontent:nth-of-type(1) {
@@ -2438,7 +2449,7 @@ button.accordion-button.acc_ptg_on_btn {
     padding-right: 50px;
 }
 .requ_priority_ptg_sub_hed {
-    width: 98%;
+    width: 95%;
     margin: auto;
     border-bottom: 1px solid #000;
     display: flex;
@@ -2577,6 +2588,40 @@ ul.bt_pro_taskdrp li {
     font-size: 10px;
     width: 152px;
 }
+button#btn_pri_viw {
+    border: none;
+    background-color: #0BB18F;
+    color: white;
+    padding: 5px 5px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+}
+button#btn_pri_viw1 {
+    border: none;
+    background-color: #0BB18F;
+    color: white;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+button#close_pri_viw1 {
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 5px 5px;
+    margin-bottom: -6px;
+    border-radius: 5px;
+}
+
+
+button#close_pri_viw {
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 5px 5px;
+    margin-bottom: -6px;
+    border-radius: 5px;
+}
 ul.bt_pro_taskdrp.tw {
     left: 299px;
 }
@@ -2584,11 +2629,17 @@ ul.bt_pro_taskdrp.tr {
     left: 449px;
 }
 ul.bt_pro_taskdrp.fr {
-    left: 608px;
+    left: 152px;
+    top: 0;
+}
+.Hov_cl_txt:hover{
+    background-color: #d6d6d6;
 }
 /* purushoth Ends */
 
-
+.curr_pri_btn{
+    margin-top: 15px;
+}
 /* sundar */
 .navfilter{
     margin: 0px 21px;
