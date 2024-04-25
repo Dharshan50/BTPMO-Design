@@ -1124,7 +1124,7 @@ ul.bt_pro_taskdrp.sx {
 @media (min-width:768px) {
 
     .proj_task_tab+label {
-        width: 134px;
+        width: 156px;
     }
 }
 
@@ -1504,7 +1504,7 @@ body {
 .BA_name_sel {
     background-color: #0BB18F;
     padding: 2px 15px;
-   
+    border: 1px solid black;
     color: white;
     font-size: 12px;
     width: 100px;
@@ -1512,7 +1512,7 @@ body {
 
 .BA_name {
     padding: 2px 15px;
-  background-color: #f2f2f2;
+    border: 1px solid black;
     font-size: 12px;
     width: 100px;
     text-align: center;
@@ -1522,7 +1522,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 3px;
+    gap: 15px;
 }
 
 table.prot_tab tbody tr th {

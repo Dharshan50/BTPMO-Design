@@ -167,7 +167,17 @@
                         style="border-right: none; font-size: 10px !important; padding: 7px 3px !important;">
                         Reassinged</label>
 
-          
+                    <!-- <input type="radio" id="task_BAtab4" name="task_tabBA1" class="task_tab">
+                    <label id="bt_task_tab" for="task_BAtab4" style="border-right: none;">Approved</label>
+
+                    <input type="radio" id="task_BAtab5" name="task_tabBA1" class="task_tab">
+                    <label id="bt_task_tab" for="task_BAtab5" style="border-right: none;">Rejected</label>
+
+                    <input type="radio" id="task_BAtab6" name="task_tabBA1" class="task_tab">
+                    <label id="bt_task_tab" for="task_BAtab6" style="border-right: none;">Send Back</label>
+
+                    <input type="radio" id="task_BAtab7" name="task_tabBA1" class="task_tab">
+                    <label id="bt_task_tab" for="task_BAtab7" style="border-right: none;">My Team</label> -->
 
                 </div>
             </div>
@@ -10675,7 +10685,11 @@
                 <input type="radio" id="proj_taskpri_tab2" name="proj_task_tabGroup1" class="proj_task_tab" checked>
                 <label id="bt_task_tab_1" for="proj_taskpri_tab2" style="border-right: none;"
                     class="pen_sm_ds">Priority</label>
-                    
+                    <ul class="bt_pro_taskdrp pr" id="bt_pro_taskdrp_8" style="display: none;">
+                        <li class="Hov_cl_txt"><a class="dropdown-item" href="#" id="Projects_tab_pendAss">Resource & Priority</a></li>
+                      
+    
+                    </ul>
             </div>
             <div class="proj_task_inner_filt mt-4">
                 <!-- <div class="task_inner_tabwrap" style="font-size: 16px;">
@@ -33078,7 +33092,7 @@
                     <select id="port_BA_type_filter" class="form-select   proj_name_filter"
                         style="width: 100% !important; display: none;">
                         <option value="">Select</option>
-                        <option value="1" selected>All Projects</option>
+                        <option value="1" selected>This View</option>
                         <option value="2">Resource Allocation</option>
 
                     </select>
