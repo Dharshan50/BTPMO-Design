@@ -152,7 +152,22 @@ $BaManager_plus_icon.on("click", function () {
     }
 });
 
+// PM Manager menu 
+var $PMManager_menudiv = $('.PMManager_plus_drop_dwn');
+var $PMManager_plus_icon = $('#PMManager_Column_menus');
 
+$PMManager_plus_icon.on("click", function () {
+    if ($PMManager_plus_icon.css('transform') === "rotate(315deg)") {
+        $PMManager_plus_icon.css('transform', "rotate(0deg)");
+    } else {
+        $PMManager_plus_icon.css('transform', "rotate(315deg)");
+    }
+    if ($PMManager_menudiv.css('display') === "none") {
+        $PMManager_menudiv.css('display', "flex");
+    } else {
+        $PMManager_menudiv.css('display', "none");
+    }
+});
 
 
 function drag(event) {
@@ -312,6 +327,39 @@ $(document).find("[class^='chooseBaManger__']").on('click', function () {
 
 function doRestoreBaManagerColumns() {
     $(document).find("[class^='chooseBaManger__']").each(function () {
+        var temp_id = this.id;
+        var splitArray = temp_id.split('__');
+        var id = splitArray[splitArray.length - 1];
+
+        var flag = $(this).prop('checked');
+        if (flag) {
+            $(document).find(`.${id}`).show();
+        }
+        else {
+            $(document).find(`.${id}`).hide();
+        }
+    });
+}
+
+
+$(document).find("[class^='choosePMManger__']").on('click', function () {
+    var temp_id = this.id;
+    var splitArray = temp_id.split('__');
+    var id = splitArray[splitArray.length - 1];
+
+    var flag = $(this).prop('checked');
+    if (flag) {
+        // $(this).prop('checked', false);
+        $(document).find(`.${id}`).show();
+    }
+    else {
+        // $(this).prop('checked', true);
+        $(document).find(`.${id}`).hide();
+    }
+})
+
+function doRestorePMManagerColumns() {
+    $(document).find("[class^='choosePMManger__']").each(function () {
         var temp_id = this.id;
         var splitArray = temp_id.split('__');
         var id = splitArray[splitArray.length - 1];
@@ -1630,7 +1678,7 @@ $('.Proj_detail_field_1').hide();
 $('#portfolio_tab6').on('click', function () {
  
     doRestoreTaskColumns();
-   
+   doRestorePMManagerColumns();
  
     hideProjData();
 })
@@ -1645,6 +1693,8 @@ $('#tab6').on('click', function () {
     
     $('#ba_manag_view').hide();
     $('#task_manage').hide();
+    $('.hide_default_PMManger_Tab').hide();
+    doRestorePMManagerColumns();
     task_hide_details();
     $('#proj_summary_tbl').hide();
     $('.hide_default_Projects_Tab').hide();
