@@ -1118,14 +1118,27 @@ $('#res_stage_sel').on('change', function () {
  
     var val = $('#res_stage_sel').val();
     if (val == 1){
-        $('.reass_req_pri').hide()
+        $('#res_req_id').hide()
         $('.btn_app_rej').hide()
     }
     else{
-        $('.reass_req_pri').show()
+        $('#res_req_id').show()
         $('.btn_app_rej').show()
     }
     
+
+})
+$('#add_batch_task').on('click',function(){
+
+    $('#add_batch_task').hide();
+    $('#add_btc_det').show();
+    $('#del_btch').show();
+})
+
+$('#del_btch').on('click',function(){
+    $('#add_batch_task').show();
+    $('#add_btc_det').hide();
+    $('#del_btch').hide();
 
 })
 
@@ -1148,6 +1161,7 @@ $('#port_proj_name_filter').on('change', function () {
     if (val == 2) {
         $('#prot_BA_view').show();
         $('#port_tab_table').hide();
+        $('.ba_name_prot').Show();
         $('pagination_container').show();
         $('.prot_ali_items').show();
         $('.proj_task_tabwrap').hide();
@@ -1162,6 +1176,7 @@ $('#port_proj_name_filter').on('change', function () {
         $('.prot_ali_items').hide();
         $('#port_proj_type_filter').show();
         $('#port_BA_type_filter').hide();
+       
     }
     else if (val == 3) {
         $('#prot_BA_view').show();
@@ -1231,8 +1246,8 @@ $('#port_all_tab2').on('click', function () {
     $('.prot_ali_items').show();
     $('.proj_task_tabwrap').show();
     $('#port_proj_type_filter').hide();
-    $('#port_proj_name_filter').hide();
-
+    $('#port_proj_name_filter').show();
+    
     $('#port_BA_type_filter').show();
 })
 $('#port_mypro_tab1').on('click', function () {
@@ -1633,12 +1648,12 @@ $('#tab6').on('click', function () {
     $('#bt_dev_tasks').hide();
     $('#portfolio_sec_tab').hide();
     $('#prot_BA_view').hide();
-    $('#proj_tsk_manage').show();
-    $('#pagination_container').show()
+    $('#proj_tsk_manage').hide();
+    $('#pagination_container').hide()
     $(document).find(`[id^='Task_Body_']`).hide().css('max-height', '335px')
     $(document).find(`[class^='Task_Field_']`).hide()
-    $(document).find(`[class^='Task_Label_']`).show()
-    $(document).find(`[id^='Task_Edit_']`).show()
+    $(document).find(`[class^='Task_Label_']`).hide()
+    $(document).find(`[id^='Task_Edit_']`).hide()
     $(document).find(`[id^='Task_Save_']`).hide()
     $(document).find(`[id^='Task_Cancel_']`).hide()
     hideProjData();
@@ -1734,8 +1749,8 @@ $('#task_tab1').on('click', function () {
     $('.action_requested_row').show();
     $('#proj_tsk_data_10').hide();
     $('#todo_task').show();
-    $('.development_row').show();
-    $('.All_tasks').show();
+    $('.development_row').hide();
+    $('.All_tasks').hide();
     $('#needs_help').hide();
     $('.Next_week').hide();
     $('.Current_task').show();
@@ -1772,11 +1787,12 @@ $('#task_tab3').on('click', function () {
     $('#proj_tsk_data_3').hide();
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
+
     $('#todo_task').hide();
-    $('.Current_task').show();
+    $('.Current_task').hide();
     $('#proj_namealltask_filter').hide();
-    $('.development_row').hide();
-    $('.All_tasks').hide();
+    $('.development_row').show();
+    $('.All_tasks').show();
 
     $('#delayed_tasks').hide();
     $('.Next_week').hide();
@@ -2034,18 +2050,7 @@ $('#Projects_tab_ResPri').on('click', function () {
 
 })
 
-$('#btn_pri_viw').on('click', function () {
-    $('#viw_cur_div').show();
-    $('#btn_pri_viw').hide();
-    $('#close_pri_viw').show();
- 
-})
-$('#close_pri_viw').on('click', function () {
-    $('#viw_cur_div').hide();
-    $('#btn_pri_viw').show();
-    $('#close_pri_viw').hide();
-    $('#btn_app_rej').hide();
-})
+
 $('#btn_pri_viw1').on('click', function () {
     $('#viw_cur_div1').show();
     $('#btn_pri_viw1').hide();
@@ -2260,25 +2265,55 @@ $(document).on('click', `[id^='view_assign_tsk_']`, function () {
     var splitarr = temp_id.split('_');
     var id = splitarr[splitarr.length - 1];
     if (open_id_dev_tsk != id) {
-        // $(`#view_assign_tsk_${id}`).removeClass('fa-plus');
-        // $(`#view_assign_tsk_${id}`).addClass('fa-minus');
-        // $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s','transform': 'rotate(180deg)' });
+
         $(document).find(`[id^='assign_tsk_data_']`).hide();
         open_id_dev_tsk = id;
         //console.log(open_id);
         $(document).find(`[id^='assign_tsk_data_${id}']`).show();
+  
         $('#dev_break_tbl').hide();
     }
     else {
-        // $(`#view_assign_tsk_${id}`).removeClass('fa-plus');
-        // $(`#view_assign_tsk_${id}`).addClass('fa-plus');
-        // $(`#view_assign_tsk_${id}`).css({ 'transition': '0.2s','transform': 'rotate(0deg)'});
+      
         $(`#assign_tsk_data_${id}`).hide();
         $('#dev_break_tbl').hide();
         //$(`#assign_tsk_data_${id}`).css({ 'transition': '0.2s',});
         open_id_dev_tsk = "";
     }
 })
+
+
+$(document).on('click', '[class^="viw_pri_btn_"]', function () {
+ 
+   var temp_id = $(this).attr('class');
+   
+    var splitarr = temp_id.split('_');
+    var id = splitarr[splitarr.length - 1];
+  
+    $(document).find(`[class^='cls_pri_btn_${id}']`).show();
+      
+        $(`.viw_pri_btn_${id}`).hide();
+        $(`#viw_cur_${id}`).show();
+    
+        $(`#btn_apprej_${id}`).show();
+      
+});
+
+
+$(document).on('click', '[class^="cls_pri_btn_"]', function () {
+  
+   var temp_id = $(this).attr('class');
+   
+    var splitarr = temp_id.split('_');
+    var id = splitarr[splitarr.length - 1];
+    $(`.cls_pri_btn_${id}`).hide();
+        $(`.cls_pri_btn_${id}`).hide();
+        $(`.viw_pri_btn_${id}`).show();
+        $(`#viw_cur_${id}`).hide();
+        $(`#btn_apprej_${id}`).hide();
+       
+});
+
 
 var open_id_port_tsk = "";
 $(document).on('click', `[id^='delay_dropdwn_']`, function () {
@@ -2689,7 +2724,7 @@ $('#tab5').on('click', function () {
     $('#port_BA_type_filter').hide();
     doRestorePortfolioColumns();
     $('#port_table_view').show();
-    $('#port_proj_name_filter').show();
+    $('#port_proj_name_filter').hide();
 
     
     $('#port_proj_type_filter').show();
@@ -2702,7 +2737,7 @@ $('#tab5').on('click', function () {
  
     $('#port_mypro_tab1').get(0).click();
 
-    $('#port_proj_name_filter').val("1");
+   
     hide_all_details();
     task_hide_details();
 })

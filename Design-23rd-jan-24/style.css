@@ -1524,7 +1524,22 @@ body {
     flex-direction: row;
     gap: 3px;
 }
-
+.task_name{
+    font-weight: 400;
+    position: relative;
+    top: -2px;
+}
+.add_btn_name{
+  
+        margin-left: 27px;
+        margin-top: 19px;
+        font-weight: 600;
+ 
+}
+.border_des{
+    border: 1px solid #ced4da;
+    margin-left: 4px;
+}
 table.prot_tab tbody tr th {
     vertical-align: baseline;
 }
@@ -2401,7 +2416,7 @@ button.accordion-button.acc_ptg_on_btn {
     font-size: 12px; 
 }
 .acc_inn_cnt_ptg div {
-    width: 22%;
+    width: 19%;
     /* flex-grow: 1; */
 }
 .upd_btn{
@@ -2420,7 +2435,7 @@ button.accordion-button.acc_ptg_on_btn {
     padding-bottom: 5px;
     width: 95%;
     margin: auto;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid rgb(3, 54, 95);
     color: rgb(3, 54, 95);
     margin-bottom: 5px;
 }
@@ -2741,6 +2756,34 @@ button.accordion-button.acc_flsh_btn {
 }
 .accordion-item.acc_flsh_item {
     margin: 0px 15px;
+}
+.add_btn_name div {
+    display: flex;
+    align-items: baseline;
+}
+.add_btn_name div p:nth-child(1){
+    width: 275px;
+}
+.add_btn_name div p:nth-child(2){
+    width: 150px;
+    margin-bottom: 10px;
+}
+.add_btn_name div p:nth-child(3){
+    width: 126px;
+    margin-bottom: 0px;
+}
+.add_btn_name div p:nth-child(4){
+    width: 126px;
+    margin-bottom: 0px;
+}
+.btn_submit {
+    border: none;
+    background-color: #0BB18F;
+    color: white;
+    padding: 5px 17px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    margin-top: 12px;
 }
 /* purushoth Ends */
 
