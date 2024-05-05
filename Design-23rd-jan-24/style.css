@@ -231,13 +231,13 @@ form.file_uplaod_ptg {
 }
 
 .Btn_style_close {
-    background-color: rgb(171, 46, 46);
+    background-color: rgb(229 15 15);;
     color: white;
     width: 80px;
     border: none;
     padding: 4px 0px;
     border-radius: 4px;
-    border: 1px solid #000000;
+   
 }
 
 .E_Staff_Table {
@@ -270,9 +270,9 @@ form.file_uplaod_ptg {
 .Details {
     display: flex;
     justify-content: flex-start;
-    gap: 60px;
+    gap: 40px;
     /* height: 30px; */
-    align-items: center;
+    align-items: end;
 }
 
 .Details label {
@@ -1530,7 +1530,16 @@ td.Style_tr_prot {
 body {
     overflow-x: hidden;
 }
-
+.imp_sec{
+    color: red;
+    background-color: #dfdfdf;
+    padding: 2px 6px;
+}
+.cal_time{
+    margin-top: -15px;
+    /* margin-left: 11px; */
+    border-bottom: 1px solid #03365f;
+}
 .filter_Group_project {
     display: flex;
     align-items: center;
@@ -1539,19 +1548,55 @@ body {
 
 .BA_name_sel {
     background-color: #0BB18F;
-    padding: 2px 15px;
-
+    padding: 3px 15px;
+   
     color: white;
     font-size: 12px;
     width: 100px;
 }
-
+.req_sec{
+    top: 14px;
+   margin-bottom: -8px;
+   position: relative;
+    left: -30px;
+}
+.req_sec{
+    position: relative;
+    top: 18px;
+    left: -31px;
+    background-color: #f6f6f6;
+ 
+    padding: 12px 0px 12px 21px;
+}
 .BA_name {
+    border: 1px solid #03365f;
     padding: 2px 15px;
     background-color: #f2f2f2;
     font-size: 12px;
     width: 100px;
     text-align: center;
+}
+.hr_ptg_line{
+    position: relative;
+    left: -15px;
+    color: #03365f;
+    width: 102%;
+    border-top: 1px solid #03365f;
+}
+.align_cls{
+    position: relative;
+    left: -41px;
+    padding: 12px 24px 12px 21px; 
+    width: 103%;
+    background-color: #f6f6f6;
+}
+.Summary_cls{
+    position: relative;
+    background-color: #f6f6f6;
+    top: -16px;
+    left: -33px;
+    width: 107%;
+    padding: 17px 5px 17px 20px;
 }
 
 .ba_name_prot {
@@ -1573,7 +1618,7 @@ body {
     margin-top: 19px;
     font-weight: 600;
     position: relative;
-
+margin-bottom: 9px;
 }
 
 .border_des {
@@ -2487,15 +2532,33 @@ button.accordion-button.acc_ptg_on_btn {
     padding: 3px 15px;
     border-radius: 4px;
 }
+.sts_td{
+   
+    padding: 3px 6px;
+}
+.send_BA{
+    font-size: 12px;
+    /* text-align: center; */
+    position: relative;
+    left: 22px;
+    padding: 2px 14px;
+    border: none;
+    background-color: #0BB18F;
+    color: white;
+    border-radius: 5px;
+}
 
 .assgin_to_ptg {
     font-size: 12px;
     padding-bottom: 5px;
+    margin-top: 15px;
     width: 95%;
-    margin: auto;
+    /* margin: auto; */
     border-bottom: 1px solid rgb(3, 54, 95);
     color: rgb(3, 54, 95);
     margin-bottom: 5px;
+    /* margin-right: 8px; */
+    margin-left: 26px;
 }
 
 .requ_priority {
@@ -2555,7 +2618,7 @@ button.accordion-button.acc_ptg_on_btn {
 .acc_inn_cnt_ptg {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 12px;
     flex-wrap: wrap;
     padding: 8px 16px;
 
@@ -2705,7 +2768,7 @@ button#btn_pri_viw {
     background-color: #0BB18F;
     color: white;
     padding: 5px 5px;
-    margin-bottom: 16px;
+
     border-radius: 5px;
 }
 
@@ -2717,7 +2780,12 @@ button#btn_pri_viw1 {
     margin-bottom: 10px;
     border-radius: 5px;
 }
-
+.task_des{
+    margin-top: 6px;
+    font-weight: 600;
+    color: #03365f;
+    margin-left: 27px;
+}
 button#close_pri_viw1 {
     border: none;
     background-color: red;
@@ -2733,7 +2801,7 @@ button#close_pri_viw {
     background-color: red;
     color: white;
     padding: 5px 5px;
-    margin-bottom: -6px;
+
     border-radius: 5px;
 }
 
@@ -2859,7 +2927,7 @@ button.accordion-button.acc_flsh_btn {
 }
 
 .add_btn_name div p:nth-child(1) {
-    width: 275px;
+    width: 330px;
 }
 
 .add_btn_name div p:nth-child(2) {
@@ -2871,7 +2939,34 @@ button.accordion-button.acc_flsh_btn {
     width: 126px;
     margin-bottom: 0px;
 }
-
+.border_des_reass{
+    border: 1px solid red;
+    position: relative;
+    top: 30px;
+    left: -16px;
+    width: 104%;
+}
+.reaa_req_approval{
+    position: relative;
+    top: 16px;
+    left: -17px;
+    /* bottom: 19px; */
+    margin-bottom: 8px;
+}
+.reass_reason{
+    width: 51%;
+    border: 1px solid #03365f;
+    border-radius: 3px;
+    padding: 8px 8px;
+    background: #f6f6f6;
+}
+.reass_req{
+    border: none;
+    position: relative;
+    top: -6px;
+    left: -18px;
+    color: red;
+}
 .add_btn_name div p:nth-child(4) {
     width: 126px;
     margin-bottom: 0px;
@@ -2883,7 +2978,7 @@ button.accordion-button.acc_flsh_btn {
     color: white;
     border-radius: 5px;
     padding: 1px 10px;
-    margin-left: -7px;
+    margin-left: 5px;
 }
 
 .btn_submit {
@@ -2897,15 +2992,37 @@ button.accordion-button.acc_flsh_btn {
 }
 .floating_tol {
     position: absolute;
-    top: 50px;
-    right: 130px;
-    display: flex !important;
+    top: 52px;
+    right: 80px;
+    display: flex ;
     flex-direction: column;
     padding: 10px;
     border: 1px solid #03365f;
 }
 .floating_tol div p {
     width: 110px !important;
+}
+.date_filt_btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.date_filt_btn button:nth-child(1){
+    border: none;
+    background-color: #0BB18F;
+    color: white;
+    border-radius: 5px;
+    padding: 2px 9px;
+    margin-left: 31px;
+}
+.date_filt_btn button:nth-child(2){
+    border: none;
+    background-color: #0BB18F;
+    color: white;
+    border-radius: 5px;
+    padding: 2px 9px;
+    margin-right: 42px;
 }
 button.floating_btn {
     background-color: #03365f;
@@ -2923,6 +3040,32 @@ button.floating_btn {
     top: 55px;
     left: -7px;
     z-index: -4;
+}
+.btn_dwn_new_nw div {
+  
+    width: fit-content;
+    padding: 10px;
+}
+.btn_dwn_new_nw div p {
+    margin-bottom: 8px;
+}
+td.frs_dt i {
+    position: absolute;
+    left: -10px;
+    font-size: 19px;
+}
+td.frs_dt {
+    position: relative;
+}
+p.btn_dwn_new_nw_p {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.btn_dwn_new_nw div select {
+    margin-bottom: 10px;
+    width: 75%;
+    margin-left: 4px;
+    padding: 3px 3px;
 }
 /* purushoth Ends */
 
