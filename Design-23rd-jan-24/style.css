@@ -299,6 +299,7 @@ span.i_txt_spn_ptg {
 }
 
 .rag_status {
+    border-radius: 5px;
     white-space: nowrap;
     text-align: center;
     padding: 4px 9px !important;
@@ -488,7 +489,11 @@ span.i_txt_spn_ptg {
     width: 100px;
 }
 
-
+i.fa-solid.fa-caret-down.fa_dwn {
+    position: relative;
+    right: -20px;
+    color: #03365f;
+}
 
 .formtxt_box_chng {
     border-radius: 0px !important;
@@ -1740,6 +1745,9 @@ button.btn_bot_div_save {
     top: 9px;
     font-size: 19px;
     color: red;
+}
+p.rev_date.imp {
+    display: block !important;
 }
 .card_label {
     text-align: left;
