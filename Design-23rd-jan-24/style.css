@@ -1734,7 +1734,13 @@ button.btn_bot_div_save {
   //   display: flex;
   //   gap: 5px; */
 }
-
+.stye_tick{
+    position: relative;
+    left: 786px;
+    top: 9px;
+    font-size: 19px;
+    color: red;
+}
 .card_label {
     text-align: left;
     color: #171717;
