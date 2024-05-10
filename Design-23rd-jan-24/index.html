@@ -3284,27 +3284,27 @@ color: red;">Re-assign Request</h1>
                         <tr>
                             <!-- <th id="projectName" class="big_column_width">Action</th> -->
                             <th id="projectName" class="action_width">Action</th>
-                            <th id="projectSize" class="big_column_width">Project Name <i class="fa-solid fa-filter"
+                            <th id="projectSize" class="hide_default_Projects_Tab Project_Name_Column big_column_width">Project Name <i class="fa-solid fa-filter"
                                     aria-hidden="true"></i></th>
-                            <th id="projectSize" class="big_column_width">Project Stage <i class="fa-solid fa-filter"
+                            <th id="projectSize" class="hide_default_Projects_Tab Project_Stage_Column big_column_width">Project Stage <i class="fa-solid fa-filter"
                                     aria-hidden="true"></i></th>
-                            <th id="deadline" class="small_column_width">Business case <i class="fa-solid fa-filter"
+                            <th id="deadline" class="hide_default_Projects_Tab Business_Case_Column small_column_width">Business case <i class="fa-solid fa-filter"
                                     aria-hidden="true"></i></th>
-                            <th id="targetGoLive" style="text-align: left;" class="small_column_width">Positive
+                            <th id="targetGoLive" style="text-align: left;" class="hide_default_Projects_Tab Positive_ROI_Column small_column_width">Positive
                                 ROI <i class="fa-solid fa-filter" aria-hidden="true"></i></th>
-                            <th id="revisedGoLive" class="small_column_width">Function <i class="fa-solid fa-filter"
+                            <th id="revisedGoLive" class="hide_default_Projects_Tab Function_Column small_column_width">Function <i class="fa-solid fa-filter"
                                     aria-hidden="true"></i></th>
-                            <th id="sponsers" class="small_column_width">Project Sponser <i class="fa-solid fa-filter"
+                            <th id="sponsers" class="hide_default_Projects_Tab Project_Sponser_Column small_column_width">Project Sponser <i class="fa-solid fa-filter"
                                     aria-hidden="true"></i></th>
-                            <th id="pm" class="small_column_width" style="width:11%">Impacted Function <i
+                            <th id="pm" class="hide_default_Projects_Tab Imapacted_Function_Column small_column_width" style="width:11%">Impacted Function <i
                                     class="fa-solid fa-filter" aria-hidden="true"></i></i>
                             </th>
-                            <th id="ba" class="small_column_width" style="width:11%">Functional Lead(s) <i
+                            <th id="ba" class="hide_default_Projects_Tab Function_Lead_Column small_column_width" style="width:11%">Functional Lead(s) <i
                                     class="fa-solid fa-filter" aria-hidden="true"></i></i>
                             </th>
-                            <th id="baPriority" class="small_column_width">Project Priority <i
+                            <th id="baPriority" class="hide_default_Projects_Tab Project_Priority_Column small_column_width">Project Priority <i
                                     class="fa-solid fa-filter" aria-hidden="true"></i></th>
-                            <th id="dev" style="text-align: center;" class="small_column_width">RAG <i
+                            <th id="dev" style="text-align: center;" class="hide_default_Projects_Tab RAG_Column small_column_width">RAG <i
                                     class="fa-solid fa-filter" aria-hidden="true"></i>
                             </th>
                             <th class="hide_default_Projects_Tab Project_Size_Column small_column_width">Project
@@ -3335,7 +3335,57 @@ color: red;">Re-assign Request</h1>
                                     class=""></i></th>
                             <th style="position: relative;"><i class="fa-solid fa-circle-plus plus_top"
                                     id="Project_Column_menus" title="Choose Column"></i> <i class=""></i>
-                                <div class="Project_plus_drop_dwn plus_drop_dwn" style="WIDTH:200PX;display: none;">
+                                <div class="Project_plus_drop_dwn plus_drop_dwn" style="WIDTH:200PX;display: none;">  
+                                    <div style="width:100%">
+                                        <input id="Project_Name_Column" type="checkbox" checked
+                                            class="chooseProject__Project_Name_Column">
+                                        <label for="Project_Name_Column">Project Name</label>
+                                    </div>
+                                    <div style="width:100%">
+                                        <input id="Project_Stage_Column" type="checkbox" checked
+                                            class="chooseProject__Project_Stage_Column">
+                                        <label for="Project_Stage_Column">Project Stage</label>
+                                    </div>
+                                    <div style="width:100%">
+                                        <input id="Business_Case_Column" type="checkbox" checked
+                                            class="chooseProject__Business_Case_Column">
+                                        <label for="Business_Case_Column">Business Case</label>
+                                    </div>
+                                    <div style="width:100%">
+                                        <input id="Positive_ROI_Column" type="checkbox" checked
+                                            class="chooseProject__Positive_ROI_Column">
+                                        <label for="Positive_ROI_Column">Positive ROI</label>
+                                    </div>
+                                    <div style="width:100%">
+                                        <input id="Function_Column" type="checkbox" checked
+                                            class="chooseProject__Function_Column">
+                                        <label for="Function_Column">Function</label>
+                                    </div>
+                                    <div style="width:100%">
+                                        <input id="Project_Sponser_Column" type="checkbox" checked
+                                            class="chooseProject__Project_Sponser_Column">
+                                        <label for="Project_Sponser_Column">Project Sponser</label>
+                                    </div>
+                                    <div style="width:100%">
+                                        <input id="Imapacted_Function_Column" type="checkbox" checked
+                                            class="chooseProject__Imapacted_Function_Column">
+                                        <label for="Imapacted_Function_Column">Impacted Function</label>
+                                    </div>
+                                    <div style="width:100%">
+                                        <input id="Function_Lead_Column" type="checkbox" checked
+                                            class="chooseProject__Function_Lead_Column">
+                                        <label for="Function_Lead_Column">Functional Lead(s)</label>
+                                    </div>
+                                    <div style="width:100%">
+                                        <input id="Project_Priority_Column" type="checkbox" checked
+                                            class="chooseProject__Project_Priority_Column">
+                                        <label for="Project_Priority_Column">Project Priority</label>
+                                    </div>
+                                    <div style="width:100%">
+                                        <input id="RAG_Column" type="checkbox" checked
+                                            class="chooseProject__RAG_Column">
+                                        <label for="RAG_Column">RAG</label>
+                                    </div>
                                     <div style="width:100%">
                                         <input id="Project_Size_Column" type="checkbox"
                                             class="chooseProject__Project_Size_Column">
@@ -3409,14 +3459,14 @@ color: red;">Re-assign Request</h1>
                             <!-- <td><span><i class="fa-solid fa-pen-to-square"></i> <i class="fa-solid fa-clone"></i></span></td> -->
                             <td><span class="i_txt_spn_ptg"><i id="clone_1" class="fa-solid fa-clone" title="Clone"></i> <i
                                         id="Edit_Project_1" class="fa-solid fa-pen-to-square" title="Edit"></i></span> </td>
-                            <td class="hide_one"></i> Sample</td>
-                            <td class="hide_two">
+                            <td class=" hide_default_Projects_Tab Project_Name_Column hide_one"></i> Sample</td>
+                            <td class=" hide_default_Projects_Tab Project_Stage_Column hide_two">
                                 <p class="pro_align"> <span>01. Project Charter</span>
                                     <i class="fa-solid fa-circle-info" title="Dependency text"></i>
                                 </p>
                             </td>
-                            <td class="hide_tr">Efficiency</td>
-                            <td class="hide_fr" style="color:#009500;">
+                            <td class="Business_Case_Column hide_default_Projects_Tab hide_tr">Efficiency</td>
+                            <td class="Positive_ROI_Column hide_default_Projects_Tab hide_fr" style="color:#009500;">
                                 <div class="out_align_ptg">
                                     <p class="yes_no_align"><i class="fa-solid fa-circle"
                                             title="Action requested"></i><span>Yes</span></p>
@@ -3424,12 +3474,12 @@ color: red;">Re-assign Request</h1>
                                         title="ROI Amount"></i>
                                 </div>
                             </td>
-                            <td>Finance</td>
-                            <td>Yoko</td>
-                            <td>Finance & BI</td>
-                            <td>Susanna +parashuram</td>
-                            <td><span class="last_num" style="background-color: #f06060;color: #fff;">2</span></td>
-                            <td><mark style="background-color: #0bcda5; color: white;" class="rag_status">On Track <i 
+                            <td class="Function_Column hide_default_Projects_Tab ">Finance</td>
+                            <td class="Project_Sponser_Column hide_default_Projects_Tab ">Yoko</td>
+                            <td class="Imapacted_Function_Column hide_default_Projects_Tab ">Finance & BI</td>
+                            <td class="Function_Lead_Column hide_default_Projects_Tab ">Susanna +parashuram</td>
+                            <td class="Project_Priority_Column hide_default_Projects_Tab "><span class="last_num" style="background-color: #f06060;color: #fff;">2</span></td>
+                            <td class="RAG_Column hide_default_Projects_Tab "><mark style="background-color: #0bcda5; color: white;" class="rag_status">On Track <i 
                                         data-bs-toggle="offcanvas" data-bs-target="#offcanvasRAG_rr"
                                         aria-controls="offcanvasRight" class="fa-solid fa-message" style=" color: black; font-size: 10px !important;position: relative;
                                 right: -3px; cursor: pointer;" title="Comments" aria-hidden="true" ></i></mark></td>
@@ -3451,14 +3501,14 @@ color: red;">Re-assign Request</h1>
                             <!-- <td>BP0001</td> -->
                             <td><span class="i_txt_spn_ptg"><i id="clone_2" class="fa-solid fa-clone" title="Clone"></i> <i
                                         id="Edit_Project_2" class="fa-solid fa-pen-to-square" title="Edit"></i></span> </td>
-                            <td class="hide_one">Sample</td>
-                            <td class="hide_two">
+                            <td class="hide_default_Projects_Tab Project_Name_Column hide_one">Sample</td>
+                            <td class="hide_default_Projects_Tab Project_Stage_Column hide_two">
                                 <p class="pro_align"> <span>02. Functional Requirement</span>
                                     <i class="fa-solid fa-circle-info" title="Dependency text"></i>
                                 </p>
                             </td>
-                            <td class="hide_tr">ROI</td>
-                            <td class="hide_fr" style="color:#ff0000;">
+                            <td class="hide_default_Projects_Tab Business_Case_Column hide_tr">ROI</td>
+                            <td class="hide_default_Projects_Tab Positive_ROI_Column hide_fr" style="color:#ff0000;">
                                 <div class="out_align_ptg">
                                     <p class="yes_no_align no"><i class="fa-solid fa-circle"
                                             title="Action requested"></i><span>No</span></p>
@@ -3466,12 +3516,12 @@ color: red;">Re-assign Request</h1>
                                         title="ROI Amount"></i>
                                 </div>
                             </td>
-                            <td>Commercial</td>
-                            <td>Yoko</td>
-                            <td>Test</td>
-                            <td>karen</td>
-                            <td><span class="last_num" style="background-color: #c0c0c0;color: #fff;">8</span>
-                            <td><mark style="background-color: #0bcda5; color: white;" class="rag_status">On Track  <i 
+                            <td class="hide_default_Projects_Tab Function_Column">Commercial</td>
+                            <td class="hide_default_Projects_Tab Project_Sponser_Column">Yoko</td>
+                            <td class="hide_default_Projects_Tab Imapacted_Function_Column">Test</td>
+                            <td class="hide_default_Projects_Tab Function_Lead_Column">karen</td>
+                            <td class="hide_default_Projects_Tab Project_Priority_Column"><span class="last_num" style="background-color: #c0c0c0;color: #fff;">8</span>
+                            <td class="hide_default_Projects_Tab RAG_Column"><mark style="background-color: #0bcda5; color: white;" class="rag_status">On Track  <i 
                                         data-bs-toggle="offcanvas" data-bs-target="#offcanvasRAG_rr"
                                         aria-controls="offcanvasRight" class="fa-solid fa-message" style="color: black;font-size: 10px !important;position: relative;
                                 right: -3px;  cursor: pointer;" title="Comments" aria-hidden="true"></i></mark></td>
@@ -3493,14 +3543,14 @@ color: red;">Re-assign Request</h1>
                             <!-- <td>BP0001</td> -->
                             <td><span class="i_txt_spn_ptg"><i id="clone_3" class="fa-solid fa-clone" title="Clone"></i> <i
                                         id="Edit_Project_3" class="fa-solid fa-pen-to-square" title="Edit"></i></span> </td>
-                            <td class="hide_one">Test Project</td>
-                            <td class="hide_two">
+                            <td class="hide_default_Projects_Tab Project_Name_Column hide_one">Test Project</td>
+                            <td class="hide_default_Projects_Tab Project_Stage_Column hide_two">
                                 <p class="pro_align"> <span>05. UAT </span>
                                     <i class="fa-solid fa-circle-info" title="Dependency text"></i>
                                 </p>
                             </td>
-                            <td class="hide_tr">UX</td>
-                            <td class="hide_fr" style="color:#009500;">
+                            <td class="hide_tr hide_default_Projects_Tab Business_Case_Column">UX</td>
+                            <td class="hide_fr hide_default_Projects_Tab Positive_ROI_Column" style="color:#009500;">
                                 <div class="out_align_ptg">
                                     <p class="yes_no_align"><i class="fa-solid fa-circle"
                                             title="Action requested"></i><span>Yes</span></p>
@@ -3508,12 +3558,12 @@ color: red;">Re-assign Request</h1>
                                         title="ROI Amount"></i>
                                 </div>
                             </td>
-                            <td>Claims</td>
-                            <td>Peter</td>
-                            <td>Finance & BI</td>
-                            <td>Rowena +susanna+karen</td>
-                            <td><span class="last_num" style="background-color: #6ff1ff;color: #fff;">8</span>
-                            <td><mark style="background-color: #ffc000;
+                            <td class="hide_default_Projects_Tab Function_Column">Claims</td>
+                            <td class="hide_default_Projects_Tab Project_Sponser_Column">Peter</td>
+                            <td class="hide_default_Projects_Tab Imapacted_Function_Column">Finance & BI</td>
+                            <td class="hide_default_Projects_Tab Function_Lead_Column">Rowena +susanna+karen</td>
+                            <td class="hide_default_Projects_Tab Project_Priority_Column"><span class="last_num" style="background-color: #6ff1ff;color: #fff;">8</span>
+                            <td class="hide_default_Projects_Tab RAG_Column"><mark style="background-color: #ffc000;
                                 color: red;" class="rag_status">Attention <i
                                         data-bs-toggle="offcanvas" data-bs-target="#offcanvasRAG_rr"
                                         aria-controls="offcanvasRight" class="fa-solid fa-message" style="font-size: 10px !important;position: relative;
@@ -3536,14 +3586,14 @@ color: red;">Re-assign Request</h1>
                         <tr>
                             <td><span class="i_txt_spn_ptg"><i id="clone_4" class="fa-solid fa-clone" title="Clone"></i> <i
                                         id="Edit_Project_4" class="fa-solid fa-pen-to-square" title="Edit"></i></span> </td>
-                            <td class="hide_one">Test Sample</td>
-                            <td class="hide_two">
+                            <td class=" hide_default_Projects_Tab Project_Name_Column hide_one">Test Sample</td>
+                            <td class=" hide_default_Projects_Tab Project_Stage_Column hide_two">
                                 <p class="pro_align"> <span>02. Functional Requirement</span>
                                     <i class="fa-solid fa-circle-info" title="Dependency text"></i>
                                 </p>
                             </td>
-                            <td class="hide_tr">Group</td>
-                            <td class="hide_fr" style="color:#009500;">
+                            <td class=" hide_default_Projects_Tab Business_Case_Column hide_tr">Group</td>
+                            <td class=" hide_default_Projects_Tab Positive_ROI_Column hide_fr" style="color:#009500;">
                                 <div class="out_align_ptg">
                                     <p class="yes_no_align"><i class="fa-solid fa-circle"
                                             title="Action requested"></i><span>Yes</span></p>
@@ -3551,12 +3601,12 @@ color: red;">Re-assign Request</h1>
                                         title="ROI Amount"></i>
                                 </div>
                             </td>
-                            <td>BI</td>
-                            <td>Sam</td>
-                            <td>Finance & BI</td>
-                            <td>Susanna +parashuram</td>
-                            <td><span class="last_num" style="background-color: #ddf981;color: #fff;">10</span>
-                            <td><mark style="background-color: rgb(181 181 181);" class="rag_status">Dropped <i
+                            <td class="hide_default_Projects_Tab Function_Column">BI</td>
+                            <td class="hide_default_Projects_Tab Project_Sponser_Column">Sam</td>
+                            <td class="hide_default_Projects_Tab Imapacted_Function_Column">Finance & BI</td>
+                            <td class="hide_default_Projects_Tab Function_Lead_Column">Susanna +parashuram</td>
+                            <td class="hide_default_Projects_Tab Project_Priority_Column"><span class="last_num" style="background-color: #ddf981;color: #fff;">10</span>
+                            <td class="hide_default_Projects_Tab RAG_Column"><mark style="background-color: rgb(181 181 181);" class="rag_status">Dropped <i
                                         data-bs-toggle="offcanvas" data-bs-target="#offcanvasRAG_rr"
                                         aria-controls="offcanvasRight" class="fa-solid fa-message" style="font-size: 10px !important;position: relative;
                                 right: -3px;  cursor: pointer;" title="Comments" aria-hidden="true"></i></mark>
@@ -35874,33 +35924,27 @@ color: red;">Re-assign Request</h1>
                             <th class="bg_column_width">Current Stage <i class="fa-solid fa-filter"></i></th>
                             <th class="bg_column_width">Batch Name</th>
                             <th class="bg_column_width">Assinged Status</th>
-
+                            
+                            
                             <th class="bg_column_width">Stage Status</th>
-                            <th class="bg_column_width">Current Task</th>
-                            <th class="sm_column_width">Task Owner</th>
-                            <th class="sm_column_width">Task Status <i class="fa-solid fa-filter"></i></th>
+                            <th class="hide_default_portfolio_Tab Current_Task_Column bg_column_width">Current Task</th>
+                            <th class="hide_default_portfolio_Tab Task_Owner_Column sm_column_width">Task Owner</th>
+                            <th class="hide_default_portfolio_Tab Task_Status_Column sm_column_width">Task Status <i class="fa-solid fa-filter"></i></th>
                             <th class="sm_column_width">Stage Start Date</th>
                             <th class="sm_column_width">Stage End Date</th>
                             <th class="sm_column_width">Revised stage start Date</th>
                             <th class="sm_column_width">Revised stage end Date</th>
                             <th class="sm_column_width">Target Go-live <i class="fa-solid fa-filter"></i></th>
                             <th class="RAG_Column sm_column_width">RAG <i class="fa-solid fa-filter"></i></th>
-
-                            <th class="hide_default_portfolio_Tab Charter_Signed_Column sm_column_width">Stage Signoff
-                            </th>
-                            <th class="hide_default_portfolio_Tab Project_Charter_Priority_Column">Project Charter
-                                Priority</th>
+                            
+                            <th class="hide_default_portfolio_Tab Charter_Signed_Column sm_column_width">Stage Signoff</th>
+                            <th class="hide_default_portfolio_Tab Project_Charter_Priority_Column">Project Charter Priority</th>
                             <th class="hide_default_portfolio_Tab Requriement_Priority_Column">Requriement Priority</th>
-                            <th class="hide_default_portfolio_Tab Task_Start_Date_Column sm_column_width">Task Start
-                                Date</th>
-                            <th class="hide_default_portfolio_Tab Task_End_Date_Column sm_column_width"> Task End Date
-                            </th>
-                            <th class="hide_default_portfolio_Tab Go_Live_Date_Column sm_column_width">Go-live date
-                            </th>
-                            <th class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column sm_column_width"> Revised
-                                go-live date</th>
-                            <th class="hide_default_portfolio_Tab Task_Details_Column sm_column_width">Task Details
-                            </th>
+                            <th class="hide_default_portfolio_Tab Task_Start_Date_Column sm_column_width">Task Start Date</th>
+                            <th class="hide_default_portfolio_Tab Task_End_Date_Column sm_column_width"> Task End Date </th>
+                            <th class="hide_default_portfolio_Tab Go_Live_Date_Column sm_column_width">Go-live date</th>
+                            <th class="hide_default_portfolio_Tab Revised_Go_Live_Date_Column sm_column_width"> Revised go-live date</th>
+                            <th class="hide_default_portfolio_Tab Task_Details_Column sm_column_width">Task Details </th>
 
                             <th style="position: relative;"><i class="fa-solid fa-circle-plus plus_top"
                                     id="Portfolio_Column_menus" title="Choose Column"></i> <i class=""></i>
@@ -35926,7 +35970,22 @@ color: red;">Re-assign Request</h1>
                                         <input id="Requirement_Signed_Column" type="checkbox"
                                             class="choosePortfolio__Requirement_Signed_Column">
                                         <label for="Requirement_Signed_Column">Requirement signed</label>
-                                    </div> -->
+                                    </div> --> 
+                                    <div style="width:100%">
+                                        <input id="Current_Task_Column" type="checkbox"
+                                            class="choosePortfolio__Current_Task_Column">
+                                        <label for="Current_Task_Column">Current Task Column</label>
+                                    </div>
+                                    <div style="width:100%">
+                                        <input id="Task_Owner_Column" type="checkbox"
+                                            class="choosePortfolio__Task_Owner_Column">
+                                        <label for="Task_Owner_Column">Task Owner Column</label>
+                                    </div>
+                                    <div style="width:100%">
+                                        <input id="Task_Status_Column" type="checkbox"
+                                            class="choosePortfolio__Task_Status_Column">
+                                        <label for="Task_Status_Column">Task Status Colun</label>
+                                    </div>
                                     <div style="width:100%">
                                         <input id="Task_Start_Date_Column" type="checkbox"
                                             class="choosePortfolio__Task_Start_Date_Column">
@@ -36016,9 +36075,9 @@ color: red;">Re-assign Request</h1>
 
                             <td><mark style="background-color: #a7ffbe; width: 100% !important;"
                                     class="rag_status">InProgress</mark></td>
-                            <td>Charter submission to PMO</td>
-                            <td>Chandana</td>
-                            <td><mark style="background-color: #a7ffbe; width: 100% !important;"
+                            <td class="hide_default_Tasks_Tab Current_Task_Column">Charter submission to PMO</td>
+                            <td class="hide_default_Tasks_Tab Task_Owner_Column">Chandana</td>
+                            <td class="hide_default_Tasks_Tab Task_Status_Column"><mark style="background-color: #a7ffbe; width: 100% !important;"
                                     class="rag_status">InProgress <i data-bs-toggle="offcanvas"
                                         data-bs-target="#offcanvasRight_r1" aria-controls="offcanvasRight"
                                         class="fa-solid fa-message" style="font-size: 10px !important;color: green;"
@@ -36266,9 +36325,9 @@ color: red;">Re-assign Request</h1>
 
                             <td><mark style="background-color: #a7ffbe; width: 100% !important;"
                                     class="rag_status">Inprogress</mark></td>
-                            <td>Requirement review with Developer</td>
-                            <td>Chandana</td>
-                            <td><mark style="background-color: #a7ffbe; width: 100% !important;"
+                            <td class="hide_default_Tasks_Tab Current_Task_Column">Requirement review with Developer</td>
+                            <td class="hide_default_Tasks_Tab Task_Owner_Column">Chandana</td>
+                            <td class="hide_default_Tasks_Tab Task_Status_Column"><mark style="background-color: #a7ffbe; width: 100% !important;"
                                     class="rag_status">Inprogress <i data-bs-toggle="offcanvas"
                                         data-bs-target="#offcanvasRight_r2" aria-controls="offcanvasRight"
                                         class="fa-solid fa-message" style="font-size: 10px !important;color: green;"
@@ -36375,9 +36434,9 @@ color: red;">Re-assign Request</h1>
 
                             <td><mark style="background-color: #a7ffbe; width: 100% !important;" class="rag_status">Not
                                     Started</mark></td>
-                            <td></td>
-                            <td>Chandana</td>
-                            <td><mark style="background-color: #a7ffbe; width: 100% !important;" class="rag_status">Not
+                            <td class="hide_default_Tasks_Tab Current_Task_Column"></td>
+                            <td class="hide_default_Tasks_Tab Task_Owner_Column">Chandana</td>
+                            <td class="hide_default_Tasks_Tab Task_Status_Column"><mark style="background-color: #a7ffbe; width: 100% !important;" class="rag_status">Not
                                     Started <i data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight_r2"
                                         aria-controls="offcanvasRight" class="fa-solid fa-message"
                                         style="font-size: 10px !important;color: green;" title="Comments"
@@ -36483,9 +36542,9 @@ color: red;">Re-assign Request</h1>
 
                             <td><mark style="background-color: #f9bdb3;color: red; width: 100% !important;"
                                     class="rag_status">Delayed</mark></td>
-                            <td>Requirement Finalization</td>
-                            <td>Sandeep</td>
-                            <td><mark style="background-color: #f9bdb3; width: 100% !important;color: red;"
+                            <td class="hide_default_Tasks_Tab Current_Task_Column">Requirement Finalization</td>
+                            <td class="hide_default_Tasks_Tab Task_Owner_Column">Sandeep</td>
+                            <td class="hide_default_Tasks_Tab Task_Status_Column"><mark style="background-color: #f9bdb3; width: 100% !important;color: red;"
                                     class="rag_status">Delayeddd <i data-bs-toggle="offcanvas"
                                         data-bs-target="#offcanvasRight_rw" aria-controls="offcanvasRight"
                                         class="fa-solid fa-message" style="font-size: 10px !important;" title="Comments"
@@ -36539,9 +36598,9 @@ color: red;">Re-assign Request</h1>
 
                             <td><mark style="background-color: #a7ffbe; width: 100% !important;" class="rag_status">Not
                                     Started</mark></td>
-                            <td>Requirement Finalization</td>
-                            <td>Sandeep</td>
-                            <td><mark style="background-color: #a7ffbe; width: 100% !important;" class="rag_status">Not
+                            <td class="hide_default_Tasks_Tab Current_Task_Column">Requirement Finalization</td>
+                            <td class="hide_default_Tasks_Tab Task_Owner_Column">Sandeep</td>
+                            <td class="hide_default_Tasks_Tab Task_Status_Column"><mark style="background-color: #a7ffbe; width: 100% !important;" class="rag_status">Not
                                     Started <i data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight_rw"
                                         aria-controls="offcanvasRight" class="fa-solid fa-message"
                                         style="font-size: 10px !important; color: green;" title="Comments"
@@ -36694,9 +36753,9 @@ color: red;">Re-assign Request</h1>
 
                             <td><mark style="background-color: #f1a7ff; width: 100% !important;" class="rag_status">Not
                                     Started</mark></td>
-                            <td>Charter Submission To Function</td>
-                            <td>Sandeep</td>
-                            <td><mark style="background-color: #f1a7ff; width: 100% !important;" class="rag_status">Not
+                            <td class="hide_default_Tasks_Tab Current_Task_Column" >Charter Submission To Function</td>
+                            <td class="hide_default_Tasks_Tab Task_Owner_Column" >Sandeep</td>
+                            <td class="hide_default_Tasks_Tab Task_Status_Column" ><mark style="background-color: #f1a7ff; width: 100% !important;" class="rag_status">Not
                                     Started <i data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight_rr"
                                         aria-controls="offcanvasRight" class="fa-solid fa-message"
                                         style="font-size: 10px !important;color: #9b009b;" title="Comments"
