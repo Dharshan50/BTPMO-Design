@@ -451,7 +451,6 @@ span.i_txt_spn_ptg {
 .retrn_main_page {
     color: #447E32;
     cursor: pointer;
-    margin-left: 12px;
 }
 
 .btn_page_number {
@@ -569,9 +568,23 @@ i.fa-solid.fa-caret-down.fa_dwn {
     margin-left: -3.5rem;
     width: 120% !important;
 }
+.notification_bell{
+    margin-top: 9px;
+    font-size: 16px;
+    color: #03365f;
+    margin-right: 6px;
+}
 
+.priority_one{
+    background-color: #0BB18F;
+    color: white;
+}
+.priority_two{
+    background-color: rgb(113 219 212);
+    color: white;
+}
 .pagination_cont_dv {
-    margin-top: 35px;
+    margin-top: 21px;
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #08305c;
@@ -1004,7 +1017,7 @@ p.pro_hd_tab,
 .project_filter_bar {
     display: flex;
     justify-content: space-between;
-    margin-top: 9px;
+    margin-top: -3px;
 }
 
 .proj_task_tab:checked:nth-of-type(3)~.tabcontent:nth-of-type(3) {
@@ -1109,7 +1122,6 @@ p.pro_hd_tab,
     display: flex;
     align-items: center;
     gap: 20px;
-    padding-top: 12px;
     margin-left: 5px;
     margin-bottom: 6px;
 }
@@ -1541,8 +1553,7 @@ body {
     padding: 2px 6px;
 }
 .cal_time{
-    margin-top: -15px;
-    /* margin-left: 11px; */
+    margin-top: -23px;
     border-bottom: 1px solid #03365f;
 }
 .filter_Group_project {
@@ -1654,7 +1665,6 @@ button.btn_bot_div {
     border: none;
     background-color: red;
     color: #fff;
-    box-shadow: #950000 0px 0px 2px 1px;
 }
 
 button.btn_bot_div_save {
@@ -1663,7 +1673,6 @@ button.btn_bot_div_save {
     border: none;
     background-color: #447E32;
     color: #fff;
-    box-shadow: rgb(1, 88, 1) 1px 2px;
 }
 
 
@@ -1848,7 +1857,7 @@ p.up_t_ptg {
 }
 
 .card_heda {
-    background-color: #c5ccd4;
+    background-color: #00c1a9;
     margin-bottom: 0;
     border-radius: 0px;
     padding: 5px 20px;
@@ -2375,22 +2384,57 @@ table tbody tr td {
 .fadeInup {
     animation: fadeinup 0.5s ease forwards;
 }
+.cal_des{
+    background-color: #f6f6f6;
+    padding: 4px 4px;
+    text-align: center;
+    font-weight: 500;
+}
+.summary_calcu{
+    font-size: 14px;
+    color: #08305c;
+    font-weight: 600;
+    background-color: #f6f6f6;
+    padding: 4px 3px;
+}
+.cal_summary{
+    border: 1px solid #03365f;
+    padding: 10px 9px;
+    font-weight: 600;
+    font-size: 13px;
 
+}
 input:disabled {
     background-color: #e2e2e2 !important;
     color: black;
 }
-
+.calc_allocation{
+    border: none;
+    background-color: #0BB18F;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+.Alloca_proj_name{
+    border: none;
+    color: white;
+    background-color: #03365f;
+    padding: 3px 13px;
+    font-size: 14px;
+}
 .big_column_width {
-    min-width: 90px !important;
+    min-width: 93px !important;
 }
 
 .small_column_width {
-    min-width: 90px !important;
+    min-width: 92px !important;
 }
 
 
-
+p.rev_date_1.imp {
+    display: block !important;
+}
 
 
 
@@ -2400,13 +2444,19 @@ input:disabled {
     font-size: 11px !important;
     padding: 5px 10px !important;
 }
-
+.comments_class{
+    position: relative;
+    top: 15px;
+    color: #03365f;
+    font-weight: 600;
+}
 .btn_create_proj_summ {
-    background: #447E32 !important;
+    background: #0BB18F !important;
     color: #fff;
     border: none;
     font-size: 11px;
     padding: 6px 12px;
+    border-radius: 5px;
 }
 
 input.Search_on_p_inp.rounded-0.boxes {
@@ -2762,6 +2812,7 @@ ul.bt_pro_taskdrp {
 
 .tabwrap.fr_drp_ptg {
     position: relative;
+    top: -5px;
 }
 
 ul#bt_pro_taskdrp_8 {
