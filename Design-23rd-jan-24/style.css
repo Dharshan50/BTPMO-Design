@@ -159,6 +159,22 @@
     gap: 20px;
     align-items: baseline;
 }
+.self_assign{
+    background-color: rgb(80, 101, 236);
+    color: white;
+    padding: 3px 9px;
+    border-radius: 5px;
+    font-size: 10px;
+    border: none;
+}
+.bck_ass_queue{
+    border: none;
+    padding: 2px 9px;
+    background-color: #969696;
+    color: white;
+    border-radius: 5px;
+
+}
 
 .Excel_upload {
     background-color: #03365f;
@@ -209,6 +225,15 @@ form.file_uplaod_ptg {
 .excel-table tr:hover {
     background-color: #eaeaea;
 }
+.dev_name_section{
+   
+        margin-top: 8px;
+        background-color: #0BB18F;
+        padding: 5px 8px;
+        width: 236px;
+        color: white;
+        margin-bottom: -15px;
+}
 
 /* Excel End */
 
@@ -217,7 +242,7 @@ form.file_uplaod_ptg {
     color: white !important;
     width: 80px !important;
     border: none !important;
-    padding: 4px 0px !important;
+    padding: 4px 0px ;
     border-radius: 4px !important;
 }
 
@@ -569,10 +594,11 @@ i.fa-solid.fa-caret-down.fa_dwn {
     width: 120% !important;
 }
 .notification_bell{
-    margin-top: 9px;
-    font-size: 16px;
+    margin-top: 5px;
+    font-size: 13px;
     color: #03365f;
-    margin-right: 6px;
+    margin-right: 4px;
+    margin-left: 6px;
 }
 
 .priority_one{
@@ -948,14 +974,14 @@ select.form-select.requ_priority_slt_ptg.rounded-0.boxes {
     border-radius: 50%;
 }
 
-.requ_priority_ptg p:nth-child(5) {
+.requ_priority_ptg p:nth-child(6) {
     background-color: #08305c;
     text-align: center;
     color: #fff;
     padding: 5px 20px;
 }
 
-.requ_priority_ptg p:nth-child(7) {
+.requ_priority_ptg p:nth-child(8) {
     background-color: #ffee32;
     text-align: center;
     color: red;
@@ -2390,6 +2416,39 @@ table tbody tr td {
     text-align: center;
     font-weight: 500;
 }
+.ba_name{
+    margin-bottom: 0;
+    border: 1px solid;
+    padding: 1px 4px;
+
+}
+.pr_detail_name{
+    display: flex;
+    gap: 24px;
+    font-size: 13px;
+}
+.project_details_cls{
+    background-color: #f6f6f6;
+    padding: 4px 4px;
+    width: 106px;
+    margin-bottom: -6px;
+}
+.in_cal_all{
+    margin-bottom: 5px;
+    display: flex;
+    gap: 10px;
+}
+.span_class{
+    width: 140px !important;
+    display: block;
+}
+.ds_allocation{
+    background-color: #ededed;
+    padding: 4px 4px;
+    width: 40px;
+    text-align: left;
+
+}
 .summary_calcu{
     font-size: 14px;
     color: #08305c;
@@ -2398,9 +2457,10 @@ table tbody tr td {
     padding: 4px 3px;
 }
 .cal_summary{
-    border: 1px solid #03365f;
     padding: 10px 9px;
-    font-weight: 600;
+    position: relative;
+    left: -10px;
+    margin-bottom: -18px;
     font-size: 13px;
 
 }
@@ -2412,9 +2472,9 @@ input:disabled {
     border: none;
     background-color: #0BB18F;
     color: white;
-    font-size: 14px;
+    font-size: 11px;
     border-radius: 5px;
-    padding: 3px 10px;
+    padding: 5px 10px;
 }
 .Alloca_proj_name{
     border: none;

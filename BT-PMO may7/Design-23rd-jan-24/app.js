@@ -1014,32 +1014,12 @@ $('#taskdevtsktab5').on('click', function () {
 
     $('#task_devtask1_details').hide();
 })
-$('#task_cr1').on('click', function(){
-    $('.Assinged_chagereq').show();
-    $('.Pending_chahge_req').hide();
-    $('.Completed_chagereq').hide();
 
-
-})
-$('#task_cr7').on('click', function(){
-    $('.Assinged_chagereq').hide();
-    $('.Pending_chahge_req').show();
-    $('.Completed_chagereq').hide();
-
-})
-$('#task_cr3').on('click', function(){
-    $('.Assinged_chagereq').hide();
-    $('.Pending_chahge_req').hide();
-    $('.Completed_chagereq').show();
-
-})
 $('#task_proj_tab2').on('click', function () {
     $('#tab3').get(0).click();
-    $('#task_cr7').get(0).click();
+    $('#task_cr1').get(0).click();
     $('#pm_tab_div').hide();
     $('#port_dev_view').hide();
-    $('.Assinged_chagereq').hide();
-
     $('#change_req_tbl').show();
 
     $('#pm_res_table').hide();
@@ -3697,29 +3677,6 @@ $('#tab5').on('click', function () {
     hide_all_details();
     task_hide_details();
 })
-$(document).find("[id^='update_btn_pmo']").on('click', function () {
-    var temp_id = this.id;
-    var splitArray = temp_id.split('_');
-    var id = splitArray[splitArray.length - 1];
-
-    $(`.priority_one_dropdown_${id}`).show();
-    $(`.priority_one_pmo_${id}`).hide();
-
-    $(`#save_btn_pmo_${id}`).show();
-    $(`#update_btn_pmo_${id}`).hide();
-});
-
-$(document).find("[id^='save_btn_pmo']").on('click', function () {
-    var temp_id = this.id;
-    var splitArray = temp_id.split('_');
-    var id = splitArray[splitArray.length - 1];
-
-    $(`.priority_one_dropdown_${id}`).hide();
-    $(`.priority_one_pmo_${id}`).show();
-
-    $(`#save_btn_pmo_${id}`).hide();
-    $(`#update_btn_pmo_${id}`).show();
-});
 
 
 $(document).find("[id^='revise_tab_btn_']").on('click', function () {
