@@ -89,16 +89,13 @@ let draggedItem;
 var $Task_menudiv = $('.Task_plus_drop_dwn');
 var $Task_plus_icon = $('#Task_Column_menus');
 
-$Task_plus_icon.on("click", function () {
-    if ($Task_plus_icon.css('transform') === "rotate(315deg)") {
-        $Task_plus_icon.css('transform', "rotate(0deg)");
-    } else {
-        $Task_plus_icon.css('transform', "rotate(315deg)");
-    }
+$Task_plus_icon.on("click", function () { 
     if ($Task_menudiv.css('display') === "none") {
         $Task_menudiv.css('display', "flex");
+        $Task_plus_icon.css('transform', "rotate(315deg)");
     } else {
         $Task_menudiv.css('display', "none");
+        $Task_plus_icon.css('transform', "rotate(0deg)");
     }
 });
 
@@ -106,16 +103,14 @@ $Task_plus_icon.on("click", function () {
 var $Project_menudiv = $('.Project_plus_drop_dwn');
 var $Project_plus_icon = $('#Project_Column_menus');
 
-$Project_plus_icon.on("click", function () {
-    if ($Project_plus_icon.css('transform') === "rotate(315deg)") {
-        $Project_plus_icon.css('transform', "rotate(0deg)");
-    } else {
-        $Project_plus_icon.css('transform', "rotate(315deg)");
-    }
+$Project_plus_icon.on("click", function () { 
     if ($Project_menudiv.css('display') === "none") {
         $Project_menudiv.css('display', "flex");
+        $Project_plus_icon.css('transform', "rotate(315deg)");
+
     } else {
         $Project_menudiv.css('display', "none");
+        $Project_plus_icon.css('transform', "rotate(0deg)");
     }
 });
 
@@ -123,16 +118,13 @@ $Project_plus_icon.on("click", function () {
 var $Portfolio_menudiv = $('.Portfolio_plus_drop_dwn');
 var $Portfolio_plus_icon = $('#Portfolio_Column_menus');
 
-$Portfolio_plus_icon.on("click", function () {
-    if ($Portfolio_plus_icon.css('transform') === "rotate(315deg)") {
-        $Portfolio_plus_icon.css('transform', "rotate(0deg)");
-    } else {
-        $Portfolio_plus_icon.css('transform', "rotate(315deg)");
-    }
+$Portfolio_plus_icon.on("click", function () { 
     if ($Portfolio_menudiv.css('display') === "none") {
         $Portfolio_menudiv.css('display', "flex");
+        $Portfolio_plus_icon.css('transform', "rotate(315deg)");
     } else {
         $Portfolio_menudiv.css('display', "none");
+        $Portfolio_plus_icon.css('transform', "rotate(0deg)");
     }
 });
 
@@ -140,16 +132,13 @@ $Portfolio_plus_icon.on("click", function () {
 var $BaManager_menudiv = $('.BAManager_plus_drop_dwn');
 var $BaManager_plus_icon = $('#BAManager_Column_menus');
 
-$BaManager_plus_icon.on("click", function () {
-    if ($BaManager_plus_icon.css('transform') === "rotate(315deg)") {
-        $BaManager_plus_icon.css('transform', "rotate(0deg)");
-    } else {
-        $BaManager_plus_icon.css('transform', "rotate(315deg)");
-    }
+$BaManager_plus_icon.on("click", function () { 
     if ($BaManager_menudiv.css('display') === "none") {
         $BaManager_menudiv.css('display', "flex");
+        $BaManager_plus_icon.css('transform', "rotate(315deg)");
     } else {
         $BaManager_menudiv.css('display', "none");
+        $BaManager_plus_icon.css('transform', "rotate(0deg)");
     }
 });
 
@@ -157,16 +146,13 @@ $BaManager_plus_icon.on("click", function () {
 var $PMManager_menudiv = $('.PMManager_plus_drop_dwn');
 var $PMManager_plus_icon = $('#PMManager_Column_menus');
 
-$PMManager_plus_icon.on("click", function () {
-    if ($PMManager_plus_icon.css('transform') === "rotate(315deg)") {
-        $PMManager_plus_icon.css('transform', "rotate(0deg)");
-    } else {
-        $PMManager_plus_icon.css('transform', "rotate(315deg)");
-    }
+$PMManager_plus_icon.on("click", function () { 
     if ($PMManager_menudiv.css('display') === "none") {
         $PMManager_menudiv.css('display', "flex");
+        $PMManager_plus_icon.css('transform', "rotate(315deg)");
     } else {
         $PMManager_menudiv.css('display', "none");
+        $PMManager_plus_icon.css('transform', "rotate(0deg)");
     }
 });
 
