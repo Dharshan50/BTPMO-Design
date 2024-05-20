@@ -162,15 +162,15 @@
 .self_assign{
     background-color: rgb(80, 101, 236);
     color: white;
-    padding: 3px 9px;
+    padding: 6px 9px;
     border-radius: 5px;
     font-size: 10px;
     border: none;
 }
 .bck_ass_queue{
     border: none;
-    padding: 2px 9px;
-    background-color: #969696;
+    padding: 5px 9px;
+    background-color: #71f46f;
     color: white;
     border-radius: 5px;
 
@@ -1003,7 +1003,7 @@ select.form-select.requ_priority_slt_ptg.rounded-0.boxes {
 label.pen_sm_ds {
     font-size: 10px;
     height: fit-content;
-    width: 125px;
+    width: 148px;
 }
 
 .proj_task_tab {
@@ -1096,10 +1096,19 @@ p.pro_hd_tab,
 .proj_task_tab:checked+label {
     background-color: #08305c;
     color: #fff;
-    /* box-shadow: 0 -1px 0 #fff inset; */
+ font-weight: 500;
     cursor: pointer;
 }
-
+.quarter_des{
+   
+    text-align: end;
+    font-size: 12px;
+    display: flex;
+    /* align-items: revert-layer; */
+    margin-bottom: 10px;
+    justify-content: space-between;
+    
+}
 /* Decrease opacity for hovered droppable area */
 .droppable.hover {
     opacity: 0.7;
@@ -1127,7 +1136,7 @@ p.pro_hd_tab,
     text-decoration: none;
     color: #000;
     font-size: 12px;
-    font-weight: 500;
+   
     border-right: 1px solid #b3b3b3;
     text-align: center;
     background-color: #f2f2f2;
@@ -2414,13 +2423,32 @@ table tbody tr td {
     background-color: #f6f6f6;
     padding: 4px 4px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 400;
 }
 .ba_name{
     margin-bottom: 0;
     border: 1px solid;
     padding: 1px 4px;
 
+}
+ul#bt_pro_taskdrp_3 {
+    left: 450px;
+}
+.current_stage_cls{
+    margin-left: 13px;
+    background-color: #0BB18F;
+    color: white;
+    padding: 4px 3px;
+    width: 92%;
+    font-size: 13px;
+    font-weight: 600;
+}
+.rag_status_cls{
+    background-color: #f6f6f6;
+    width: 92%;
+    margin-left: 15px;
+    font-weight: 600;
+    margin-top: 8px;
 }
 .pr_detail_name{
     display: flex;
@@ -2429,8 +2457,8 @@ table tbody tr td {
 }
 .project_details_cls{
     background-color: #f6f6f6;
-    padding: 4px 4px;
-    width: 106px;
+    padding: 1px 4px;
+    width: 147px;
     margin-bottom: -6px;
 }
 .in_cal_all{
@@ -2443,7 +2471,7 @@ table tbody tr td {
     display: block;
 }
 .ds_allocation{
-    background-color: #ededed;
+    
     padding: 4px 4px;
     width: 40px;
     text-align: left;
