@@ -199,8 +199,10 @@
                                 <th style="width: 20px;">No</th>
                                 <th class="sm_column_width">Project Year</th>
                                 <th class="bg_column_width">Project</th>
-                                <th class="bg_column_width">BA + PM Priority</th>
-                                <th class="bg_column_width">BA + PM</th>
+                                <th class="bg_column_width priority_ba_tab">BA + PM Priority</th>
+                                <th class="bg_column_width bapm_ba_tab">BA + PM</th>
+                                <th class="bg_column_width priority_dev_tab">Dev Priority</th>
+                                <th class="bg_column_width developer_dev_tab">Developer</th>
                                 <th class="bg_column_width">Current Stage</th>
                                 <th class="bg_column_width">Stage Status</th>
                            
@@ -209,13 +211,13 @@
                                     Task</th>
                                 <th class="bg_column_width">Assigned Status</th>
                                 <th class="bg_column_width">Assinged To</th>
-                                <th class="bg_column_width">Stage Signoff</th>
+                                <th class="bg_column_width stage_signoff_ba_dev_tab">Stage Signoff</th> 
 
-                                <th class=" hide_default_BaManger_Tab BA_TaskOwner_Column sm_column_width">Task Owner
+                                <th class="hide_default_BaManger_Tab BA_TaskOwner_Column sm_column_width">Task Owner
                                 </th>
-                                <th class=" hide_default_BaManger_Tab BA_Task_Status_Column sm_column_width">Task Status
+                                <th class="hide_default_BaManger_Tab BA_Task_Status_Column sm_column_width">Task Status
                                 </th>
-                                <th class=" hide_default_BaManger_Tab BA_RAG_Column sm_column_width">RAG</th>
+                                <th class="hide_default_BaManger_Tab BA_RAG_Column sm_column_width">RAG</th>
 
                                 <th class="hide_default_BaManger_Tab BA_Stage_start_Date_Column sm_column_width">Stage
                                     Start Date</th>
@@ -334,12 +336,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="ba_manager_tab">
+                            <tr class="ba_manager_tab"> 
                                 <td>1</td>
                                 <td>2023</td>
                                 <td><b>China Fronters</b></td>
-                                <td><span class="last_num" style="background-color: #f06060; color: #fff;">1</span></td>
-                                <td>Sample + sample</td>
+                                <td class="priority_ba_tab"><span class="last_num" style="background-color: #f06060; color: #fff;">1</span></td>
+                                <td class="bapm_ba_tab">Sandeep + Eboule</td>
+                                <td class="priority_dev_tab"><span class="last_num" style="background-color: #f06060; color: #fff;">1</span></td>
+                                <td class="developer_dev_tab">Thomas</td>
                                 <td>Functional Requirement</td>
                                 <td><mark style="background-color: #a7ffbe; width: 100% !important;"
                                         class="rag_status">Not Started</mark></td>
@@ -347,7 +351,7 @@
                                 <td><mark style="background-color: #f9bdb3;color: red; width: 100% !important;"
                                         class="rag_status">Re-assign Request</mark></td>
                                 <td>Test</td>
-                                <td>N/A</td>
+                                <td class="stage_signoff_ba_dev_tab">N/A</td>
                                 <td class="hide_default_BaManger_Tab BA_TaskOwner_Column">Chandana</td>
                                 <td class="hide_default_BaManger_Tab BA_Task_Status_Column"><mark
                                         style="background-color: #a7ffbe; width: 100% !important;"
@@ -1499,7 +1503,7 @@ color: red;">Re-assign Request</h1>
         </td>
 
     </tr>
-    <tr class="dev_manager_tab">
+    <tr class="dev_manager_tab"> 
         <td>
             <div class="delay_dropdwn">
 
@@ -1509,8 +1513,10 @@ color: red;">Re-assign Request</h1>
         <td>2023</td>
         <td><b>Test Project</b></td>
 
-        <td><span class="last_num" style="background-color: #bcef45; color: #fff;">3</span></td>
-        <td>Sample + sample</td>
+        <td class="priority_ba_tab"><span class="last_num" style="background-color: #bcef45; color: #fff;">3</span></td>
+        <td class="bapm_ba_tab">Sample + sample</td>
+        <td class="priority_dev_tab"><span class="last_num" style="background-color: #bcef45; color: #fff;">3</span></td>
+        <td class="developer_dev_tab">Thomas</td>
         <td>Developement</td>
         <td><mark style="background-color: #fdea07; width: 100% !important;" class="rag_status">Not Started
             </mark></td>
@@ -1518,7 +1524,7 @@ color: red;">Re-assign Request</h1>
         <td><mark style="background-color: #a7ffbe; width: 100% !important;" class="rag_status"> Pending
                 Assignment</mark></td>
         <td>Test</td>
-        <td><mark style="background-color: red;color: white; width: 100% !important;" class="rag_status">Pending
+        <td class="stage_signoff_ba_dev_tab"><mark style="background-color: red;color: white; width: 100% !important;" class="rag_status">Pending
         </mark></td>
         <td class="hide_default_BaManger_Tab BA_TaskOwner_Column">Chandana</td>
         <td class="hide_default_BaManger_Tab BA_Task_Status_Column"><mark
