@@ -13,7 +13,7 @@
 }
 
 .bg_column_width {
-    width: 130px;
+    width: 110px;
 }
 
 
@@ -160,24 +160,6 @@
     align-items: baseline;
 }
 
-.self_assign {
-    background-color: rgb(80, 101, 236);
-    color: white;
-    padding: 6px 9px;
-    border-radius: 5px;
-    font-size: 10px;
-    border: none;
-}
-
-.bck_ass_queue {
-    border: none;
-    padding: 5px 9px;
-    background-color: #71f46f;
-    color: white;
-    border-radius: 5px;
-
-}
-
 .Excel_upload {
     background-color: #03365f;
     color: #fff;
@@ -228,16 +210,6 @@ form.file_uplaod_ptg {
     background-color: #eaeaea;
 }
 
-.dev_name_section {
-
-    margin-top: 8px;
-    background-color: #0BB18F;
-    padding: 5px 8px;
-    width: 236px;
-    color: white;
-    margin-bottom: -15px;
-}
-
 /* Excel End */
 
 .Assign_button {
@@ -245,7 +217,7 @@ form.file_uplaod_ptg {
     color: white !important;
     width: 80px !important;
     border: none !important;
-    padding: 4px 0px;
+    padding: 4px 0px !important;
     border-radius: 4px !important;
 }
 
@@ -259,14 +231,13 @@ form.file_uplaod_ptg {
 }
 
 .Btn_style_close {
-    background-color: rgb(229 15 15);
-    ;
+    background-color: rgb(229 15 15);;
     color: white;
     width: 80px;
     border: none;
     padding: 4px 0px;
     border-radius: 4px;
-
+   
 }
 
 .E_Staff_Table {
@@ -597,25 +568,21 @@ i.fa-solid.fa-caret-down.fa_dwn {
     margin-left: -3.5rem;
     width: 120% !important;
 }
-
-.notification_bell {
-    margin-top: 5px;
-    font-size: 13px;
+.notification_bell{
+    margin-top: 9px;
+    font-size: 16px;
     color: #03365f;
-    margin-right: 4px;
-    margin-left: 6px;
+    margin-right: 6px;
 }
 
-.priority_one {
+.priority_one{
     background-color: #0BB18F;
     color: white;
 }
-
-.priority_two {
+.priority_two{
     background-color: rgb(113 219 212);
     color: white;
 }
-
 .pagination_cont_dv {
     margin-top: 21px;
     display: flex;
@@ -981,14 +948,14 @@ select.form-select.requ_priority_slt_ptg.rounded-0.boxes {
     border-radius: 50%;
 }
 
-.requ_priority_ptg p:nth-child(6) {
+.requ_priority_ptg p:nth-child(5) {
     background-color: #08305c;
     text-align: center;
     color: #fff;
     padding: 5px 20px;
 }
 
-.requ_priority_ptg p:nth-child(8) {
+.requ_priority_ptg p:nth-child(7) {
     background-color: #ffee32;
     text-align: center;
     color: red;
@@ -1010,7 +977,7 @@ select.form-select.requ_priority_slt_ptg.rounded-0.boxes {
 label.pen_sm_ds {
     font-size: 10px;
     height: fit-content;
-    width: 148px;
+    width: 125px;
 }
 
 .proj_task_tab {
@@ -1103,19 +1070,8 @@ p.pro_hd_tab,
 .proj_task_tab:checked+label {
     background-color: #08305c;
     color: #fff;
-    font-weight: 500;
+    /* box-shadow: 0 -1px 0 #fff inset; */
     cursor: pointer;
-}
-
-.quarter_des {
-
-    text-align: end;
-    font-size: 12px;
-    display: flex;
-    /* align-items: revert-layer; */
-    margin-bottom: 10px;
-    justify-content: space-between;
-
 }
 
 /* Decrease opacity for hovered droppable area */
@@ -1145,7 +1101,7 @@ p.pro_hd_tab,
     text-decoration: none;
     color: #000;
     font-size: 12px;
-
+    font-weight: 500;
     border-right: 1px solid #b3b3b3;
     text-align: center;
     background-color: #f2f2f2;
@@ -1591,18 +1547,15 @@ td.Style_tr_prot {
 body {
     overflow-x: hidden;
 }
-
-.imp_sec {
+.imp_sec{
     color: red;
     background-color: #dfdfdf;
     padding: 2px 6px;
 }
-
-.cal_time {
+.cal_time{
     margin-top: -23px;
     border-bottom: 1px solid #03365f;
 }
-
 .filter_Group_project {
     display: flex;
     align-items: center;
@@ -1612,28 +1565,25 @@ body {
 .BA_name_sel {
     background-color: #0BB18F;
     padding: 3px 15px;
-
+   
     color: white;
     font-size: 12px;
     width: 100px;
 }
-
-.req_sec {
+.req_sec{
     top: 14px;
-    margin-bottom: -8px;
-    position: relative;
+   margin-bottom: -8px;
+   position: relative;
     left: -30px;
 }
-
-.req_sec {
+.req_sec{
     position: relative;
     top: 18px;
     left: -31px;
     background-color: #f6f6f6;
-
+ 
     padding: 12px 0px 12px 21px;
 }
-
 .BA_name {
     border: 1px solid #03365f;
     padding: 2px 15px;
@@ -1642,24 +1592,21 @@ body {
     width: 100px;
     text-align: center;
 }
-
-.hr_ptg_line {
+.hr_ptg_line{
     position: relative;
     left: -15px;
     color: #03365f;
     width: 102%;
     border-top: 1px solid #03365f;
 }
-
-.align_cls {
+.align_cls{
     position: relative;
     left: -41px;
-    padding: 12px 24px 12px 21px;
+    padding: 12px 24px 12px 21px; 
     width: 103%;
     background-color: #f6f6f6;
 }
-
-.Summary_cls {
+.Summary_cls{
     position: relative;
     background-color: #f6f6f6;
     top: -16px;
@@ -1687,7 +1634,7 @@ body {
     margin-top: 19px;
     font-weight: 600;
     position: relative;
-    margin-bottom: 9px;
+margin-bottom: 9px;
 }
 
 .border_des {
@@ -1801,19 +1748,16 @@ button.btn_bot_div_save {
   //   display: flex;
   //   gap: 5px; */
 }
-
-.stye_tick {
+.stye_tick{
     position: relative;
     left: 786px;
     top: 9px;
     font-size: 19px;
     color: red;
 }
-
 p.rev_date.imp {
     display: block !important;
 }
-
 .card_label {
     text-align: left;
     color: #171717;
@@ -1897,13 +1841,7 @@ p.rev_date.imp {
     /* // box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11); */
     border-bottom: none;
 }
-.week_tasks_display{
-    background-color: #f6f6f6;
-    width: 21%;
-    padding: 2px 3px;
-    font-size: 12px;
-    border: 1px solid;
-}
+
 .pro_det_ptg_txt {
     border-bottom: 1px solid #03365f;
     width: 100%;
@@ -1922,7 +1860,7 @@ p.up_t_ptg {
     background-color: #00c1a9;
     margin-bottom: 0;
     border-radius: 0px;
-    padding: 2px 5px;
+    padding: 5px 20px;
     /* // border-bottom: 2px solid #9aa1a9; */
     display: -ms-flexbox;
     display: flex;
@@ -2446,98 +2384,31 @@ table tbody tr td {
 .fadeInup {
     animation: fadeinup 0.5s ease forwards;
 }
-
-.cal_des {
+.cal_des{
     background-color: #f6f6f6;
     padding: 4px 4px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
 }
-
-.ba_name {
-    margin-bottom: 0;
-    border: 1px solid;
-    padding: 1px 4px;
-
-}
-
-ul#bt_pro_taskdrp_3 {
-    left: 450px;
-}
-
-.current_stage_cls {
-    margin-left: 13px;
-    background-color: #0BB18F;
-    color: white;
-    padding: 4px 3px;
-    width: 92%;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.rag_status_cls {
-    background-color: #f6f6f6;
-    width: 92%;
-    margin-left: 15px;
-    font-weight: 600;
-    margin-top: 8px;
-}
-
-.pr_detail_name {
-    display: flex;
-    gap: 24px;
-    font-size: 13px;
-}
-
-.project_details_cls {
-    background-color: #f6f6f6;
-    padding: 1px 4px;
-    width: 147px;
-    margin-bottom: -6px;
-}
-
-.in_cal_all {
-    margin-bottom: 5px;
-    display: flex;
-    gap: 10px;
-}
-
-.span_class {
-    width: 140px !important;
-    display: block;
-}
-
-.ds_allocation {
-
-    padding: 4px 4px;
-    width: 40px;
-    text-align: left;
-
-}
-
-.summary_calcu {
+.summary_calcu{
     font-size: 14px;
     color: #08305c;
     font-weight: 600;
     background-color: #f6f6f6;
     padding: 4px 3px;
 }
-
-.cal_summary {
+.cal_summary{
+    border: 1px solid #03365f;
     padding: 10px 9px;
-    position: relative;
-    left: -10px;
-    margin-bottom: -18px;
+    font-weight: 600;
     font-size: 13px;
 
 }
-
 input:disabled {
     background-color: #e2e2e2 !important;
     color: black;
 }
-
-.calc_allocation {
+.calc_allocation{
     border: none;
     background-color: #0BB18F;
     color: white;
@@ -2545,15 +2416,13 @@ input:disabled {
     border-radius: 5px;
     padding: 5px 10px;
 }
-
-.Alloca_proj_name {
+.Alloca_proj_name{
     border: none;
     color: white;
     background-color: #03365f;
     padding: 3px 13px;
     font-size: 14px;
 }
-
 .big_column_width {
     min-width: 93px !important;
 }
@@ -2575,14 +2444,12 @@ p.rev_date_1.imp {
     font-size: 11px !important;
     padding: 5px 10px !important;
 }
-
-.comments_class {
+.comments_class{
     position: relative;
     top: 15px;
     color: #03365f;
     font-weight: 600;
 }
-
 .btn_create_proj_summ {
     background: #0BB18F !important;
     color: #fff;
@@ -2729,13 +2596,11 @@ button.accordion-button.acc_ptg_on_btn {
     padding: 3px 15px;
     border-radius: 4px;
 }
-
-.sts_td {
-
+.sts_td{
+   
     padding: 3px 6px;
 }
-
-.send_BA {
+.send_BA{
     font-size: 12px;
     /* text-align: center; */
     position: relative;
@@ -2980,14 +2845,12 @@ button#btn_pri_viw1 {
     margin-bottom: 10px;
     border-radius: 5px;
 }
-
-.task_des {
+.task_des{
     margin-top: 6px;
     font-weight: 600;
     color: #03365f;
     margin-left: 27px;
 }
-
 button#close_pri_viw1 {
     border: none;
     background-color: red;
@@ -3141,39 +3004,34 @@ button.accordion-button.acc_flsh_btn {
     width: 126px;
     margin-bottom: 0px;
 }
-
-.border_des_reass {
+.border_des_reass{
     border: 1px solid red;
     position: relative;
     top: 30px;
     left: -16px;
     width: 104%;
 }
-
-.reaa_req_approval {
+.reaa_req_approval{
     position: relative;
     top: 16px;
     left: -17px;
     /* bottom: 19px; */
     margin-bottom: 8px;
 }
-
-.reass_reason {
+.reass_reason{
     width: 51%;
     border: 1px solid #03365f;
     border-radius: 3px;
     padding: 8px 8px;
     background: #f6f6f6;
 }
-
-.reass_req {
+.reass_req{
     border: none;
     position: relative;
     top: -6px;
     left: -18px;
     color: red;
 }
-
 .add_btn_name div p:nth-child(4) {
     width: 126px;
     margin-bottom: 0px;
@@ -3197,29 +3055,25 @@ button.accordion-button.acc_flsh_btn {
     border-radius: 5px;
     margin-top: 12px;
 }
-
 .floating_tol {
     position: absolute;
     top: 52px;
     right: 80px;
-    display: flex;
+    display: flex ;
     flex-direction: column;
     padding: 10px;
     border: 1px solid #03365f;
 }
-
 .floating_tol div p {
     width: 110px !important;
 }
-
 .date_filt_btn {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 10px;
 }
-
-.date_filt_btn button:nth-child(1) {
+.date_filt_btn button:nth-child(1){
     border: none;
     background-color: #0BB18F;
     color: white;
@@ -3227,8 +3081,7 @@ button.accordion-button.acc_flsh_btn {
     padding: 2px 9px;
     margin-left: 31px;
 }
-
-.date_filt_btn button:nth-child(2) {
+.date_filt_btn button:nth-child(2){
     border: none;
     background-color: #0BB18F;
     color: white;
@@ -3236,7 +3089,6 @@ button.accordion-button.acc_flsh_btn {
     padding: 2px 9px;
     margin-right: 42px;
 }
-
 button.floating_btn {
     background-color: #03365f;
     border: none;
@@ -3244,11 +3096,9 @@ button.floating_btn {
     padding: 2px 15px;
     border-radius: 5px;
 }
-
 .arrow_flt i {
     font-size: 20px;
 }
-
 .arrow_flt {
     height: 12px;
     position: absolute;
@@ -3256,39 +3106,32 @@ button.floating_btn {
     left: -7px;
     z-index: -4;
 }
-
 .btn_dwn_new_nw div {
-
+  
     width: fit-content;
     padding: 10px;
 }
-
 .btn_dwn_new_nw div p {
     margin-bottom: 8px;
 }
-
 td.frs_dt i {
     position: absolute;
     left: -10px;
     font-size: 19px;
 }
-
 td.frs_dt {
     position: relative;
 }
-
 p.btn_dwn_new_nw_p {
     font-weight: 600;
     margin-bottom: 10px;
 }
-
 .btn_dwn_new_nw div select {
     margin-bottom: 10px;
     width: 75%;
     margin-left: 4px;
     padding: 3px 3px;
 }
-
 /* purushoth Ends */
 
 .curr_pri_btn {

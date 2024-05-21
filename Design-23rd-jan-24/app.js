@@ -1055,6 +1055,8 @@ $('#task_proj_tab2').on('click', function () {
     $('#task_tab1').get(0).click();
     $('#bt_dev_tasks').hide();
     $('#portfolio_sec_tab').hide();
+    $('#week_date_display').hide();
+
     $('#prot_BA_view').hide();
     $('#Func_Cancel_Ba_1').hide();
     $('#Func_Save_Ba_1').hide();
@@ -1338,10 +1340,11 @@ $('#slc_dashboard_filt').on('change', function () {
         $('#slc_filt_badev').show();
         $('#port_table_view').hide();
         $('#select_port_filter').hide();
+        $('#slc_filt_baname').hide();
 
         $('#task_tbl').hide();
         $('#port_dev_view').hide();
-        $('.ba_name_prot').show();
+        $('.ba_name_prot').hide();
         $('#task_proj_filter').show();
         $('#task_content_proj').show();
         $('#prot_BA_view').show();
@@ -1359,15 +1362,22 @@ $('#slc_dashboard_filt').on('change', function () {
         $('#prot_BA_view').show();
         $('pagination_container').show();
         $('.prot_ali_items').show();
+        $('#per_quater_filter').hide();
+
     }
     else if (val == 2) {
         $('#port_quarter_view').show();
+        $('#per_quater_filter').show();
+
+        $('#slc_filt_badev').hide();
+        $('#slc_filt_baname').hide();
+
         $('#port_tab_table').hide();
         $('#port_dev_view').hide();
         $('#port_table_view').hide();
         $('#task_tbl').hide();
-
-        $('.ba_name_prot').show();
+    
+        $('.ba_name_prot').hide();
         $('#task_proj_filter').hide();
         $('#task_content_proj').hide();
         $('#prot_BA_view').show();
@@ -1383,7 +1393,18 @@ $('#slc_dashboard_filt').on('change', function () {
     }
     else {
         $('#slc_filt_badev').hide();
+        $('#slc_filt_baname').hide();
+        $('.ba_name_prot').hide();
+        $('#per_quater_filter').hide();
 
+    }
+})
+$('#slc_filt_badev').on('change',function(){
+    var val = $('#slc_filt_badev').val();
+    if(val == 1){
+        $('#slc_filt_baname').show();
+        $('.ba_name_prot').hide();
+        
     }
 })
 
@@ -1524,6 +1545,7 @@ $('#port_all_tab2').on('click', function () {
     $('#port_proj_type_filter').hide();
     $('#port_proj_name_filter').show();
     $('#port_quarter_view').hide();
+    $('.ba_name_prot').hide();
 
     $('#port_BA_type_filter').show();
     $('.port_table_view').show();
@@ -2201,6 +2223,9 @@ $('#task_tab1').on('click', function () {
     $('.Current_task').show();
     $('#proj_namealltask_filter').hide();
     $('#delayed_tasks').hide();
+    $('#week_date_display').hide();
+    $('#nextweek_date_display').hide();
+
 
     $('.pending_tasks').hide();
     $('.completed_tasks').hide();
@@ -2224,6 +2249,9 @@ $('#task_tab2').on('click', function () {
     $('.action_needed_row').hide();
     $('.action_requested_row').hide();
     $('.Current_task').hide();
+    $('#week_date_display').hide();
+    $('#nextweek_date_display').hide();
+
     $('#proj_tsk_data_3').hide();
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
@@ -2254,6 +2282,9 @@ $('#task_tab2').on('click', function () {
 $('#task_tab3').on('click', function () {
     $('.action_needed_row').hide();
     $('.action_requested_row').show();
+    $('#week_date_display').show();
+    $('#nextweek_date_display').hide();
+
     $('#proj_tsk_data_3').hide();
     $('#proj_tsk_data_1').hide();
     $('#proj_tsk_data_10').hide();
@@ -2299,6 +2330,8 @@ $('#task_tab4').on('click', function () {
     $('.Next_week').show();
     $('.pending_tasks').hide();
     $('#not_started').hide();
+    $('#week_date_display').hide();
+    $('#nextweek_date_display').show();
 
     $('.completed_tasks').hide();
     $('#delayed_tasks').hide();
@@ -2364,6 +2397,7 @@ $('#task_tab6').on('click', function () {
     $('#proj_namealltask_filter').hide();
     $('#prot_BA_view').hide();
 
+
     $('#port_tab_table').hide();
     $('.ba_name_prot').hide();
 
@@ -2392,6 +2426,8 @@ $('#task_tab7').on('click', function () {
     $('.completed_tasks').show();
     $('#proj_namealltask_filter').show();
     $('#prot_BA_view').hide();
+    $('#week_date_display').hide();
+    $('#nextweek_date_display').hide();
 
     $('#port_tab_table').hide();
     $('.ba_name_prot').hide();
@@ -2421,6 +2457,8 @@ $('#task_tab8').on('click', function () {
     $('.pending_tasks').hide();
     $('.completed_tasks').hide();
     $('#prot_BA_view').show();
+    $('#week_date_display').hide();
+    $('#nextweek_date_display').hide();
 
     $('#port_tab_table').hide();
     $('.ba_name_prot').hide();
@@ -3736,7 +3774,9 @@ $('#cr_ba_tab10').on('click', function () {
 $('#cr_ba_tab6').on('click', function () {
     $('#cr_batab_tab7').get(0).click();
 
+    $('#change_req_btn').hide();
     $('#task_cont_changereq').hide();
+
     $('#task_batab_changereq').show();
     $('.pendingass_cr').hide();
     $('.assinged_cr').hide();
@@ -3821,6 +3861,7 @@ $('#chn_rq_tab').on('click', function () {
     task_hide_details();
 })
 $('#chn_dm_tab').on('click', function () {
+    $('#change_req_btn').hide();
     $('#tab7').get(0).click();
     $('#cr_dev_tab1').get(0).click();
     $('#task_content_devproj').hide();
@@ -3837,8 +3878,6 @@ $('#chn_dm_tab').on('click', function () {
     $('#change_req_dev').show();
     $('#change_request_div').hide();
     $('.nexkweek_cr').hide();
-
-
     $('#pmo_imp').hide();
     $('#change_request_dev').show();
     $('#pm_tab_div').hide();
@@ -3847,20 +3886,12 @@ $('#chn_dm_tab').on('click', function () {
     $('.imp_bamanager').show();
     $('.assinged_cr').hide();
     $('.pendingass_dev_cr').show();
-
     $('.pendingass_cr').hide();
-
     $('#ba_table_view').show();
     $('#Ba_man_table_section').hide();
     $('.task_Assenged_pending').hide();
-
     $('#task_content_baproj').hide();
     $('#task_cont_changereq').show();
-
-
-
-
-    $('#change_req_btn').show();
 
     $('#port_table_view').hide();
     $('#pm_res_table').hide();
@@ -3936,10 +3967,9 @@ $('#cr_ba_tab3').on('click', function () {
 
 })
 
-$(document).ready(function () {
-    $('#task_cont_changereq').on('change', function () {
+$(document).on('change', '#select_ba_filt', function () {
         var selectedValue = $(this).val();
-        alert(selectedValue)
+      
         if (selectedValue == '3') { // Next Week
             $('.assinged_cr').hide();
             $('.pendingass_cr').hide();
@@ -3948,15 +3978,21 @@ $(document).ready(function () {
             $('.BaAssigned_cr').hide();
             $('.assinged_dev_cr').hide();
             $('.nexkweek_cr').show();
+            $('#change_req_btn').hide();
+
         } else if (selectedValue == '2') { // Current Week
             $('.assinged_cr').show();
             $('.pendingass_cr').hide();
             $('#filter_cr_batab').show();
             $('.BaAssigned_cr').hide();
             $('.nexkweek_cr').hide();
+            $('#change_req_btn').hide();
+
         } else if (selectedValue == '1') { // All
             $('.assinged_cr').hide();
             $('.pendingass_cr').show();
+            $('#change_req_btn').show();
+
             $('.BaAssigned_cr').hide();
             $('.BApending_cr').hide();
             $('.BaCurrentweek_cr').hide();
@@ -3965,7 +4001,7 @@ $(document).ready(function () {
             $('.nexkweek_cr').hide();
         }
     });
-});
+
 
 
 // $('#tab7').on('click', function () {

@@ -133,15 +133,10 @@
             </div>
             <div class="task_Assenged_pending" id="task_Assenged_pending" style="margin-top: 10px; display: none;">
                 <div class="task_tabwrap" style="font-size: 13px; margin-right: 25px !important; ">
-                    <input type="radio" id="task_subdevtab1" name="task_subdev1" class="task_tab" checked>
-                    <label id="bt_task_tab" for="task_subdevtab1" style="border-left: none; font-size: 10px !important; padding: 7px 18px !important;
-                            width: 124px;">
-                        Pending</label>
-
-                    <input type="radio" id="task_subdevtab2" name="task_subdev1" class="task_tab">
-                    <label id="bt_task_tab" for="task_subdevtab2" style="border-right: none;border-left: none; font-size: 10px !important; padding: 7px 18px !important;
-                            width: 124px;">
-                        Assigned</label>
+                        <select class="form-select select_box" placeholder="Year" id="select_ba_filt" >
+                            <option Selected value="1">Pending</option>
+                            <option value="2">Assigned</option>
+                        </select>
                 </div>
 
 
@@ -193,16 +188,7 @@
 
             <div class="ba_table_view" id="ba_table_view">
                 <div class="ba_mana_table" id="ba_man_table">
-                    <div class="ba_name_prot" style=" margin-top: 17px;">
-                        <th class="lab_dwn">
-                            <label for="" class="BA_name">All</label>
-                            <label for="" class="BA_name_sel">Indumathi</label>
-                            <label for="" class="BA_name">Diwakar</label>
-                            <label for="" class="BA_name">Deva raj</label>
-                            <label for="" class="BA_name">Diwakar</label>
-                            <label for="" class="BA_name">Deva raj</label>
-                        </th>
-                    </div>
+                    
 
                     <table class="table tbl_all_proj" id="Ba_man_table_section" style="POSITION: relative;
                     top: 20px;
@@ -217,11 +203,14 @@
                                 <th class="bg_column_width">BA + PM</th>
                                 <th class="bg_column_width">Current Stage</th>
                                 <th class="bg_column_width">Stage Status</th>
+                           
 
                                 <th class=" hide_default_BaManger_Tab BA_CurrentTask_Column bg_column_width">Current
                                     Task</th>
                                 <th class="bg_column_width">Assigned Status</th>
                                 <th class="bg_column_width">Assinged To</th>
+                                <th class="bg_column_width">Stage Signoff</th>
+
                                 <th class=" hide_default_BaManger_Tab BA_TaskOwner_Column sm_column_width">Task Owner
                                 </th>
                                 <th class=" hide_default_BaManger_Tab BA_Task_Status_Column sm_column_width">Task Status
@@ -358,6 +347,7 @@
                                 <td><mark style="background-color: #f9bdb3;color: red; width: 100% !important;"
                                         class="rag_status">Re-assign Request</mark></td>
                                 <td>Test</td>
+                                <td>N/A</td>
                                 <td class="hide_default_BaManger_Tab BA_TaskOwner_Column">Chandana</td>
                                 <td class="hide_default_BaManger_Tab BA_Task_Status_Column"><mark
                                         style="background-color: #a7ffbe; width: 100% !important;"
@@ -1543,6 +1533,8 @@ color: red;">Re-assign Request</h1>
         <td><mark style="background-color: #a7ffbe; width: 100% !important;" class="rag_status"> Pending
                 Assignment</mark></td>
         <td>Test</td>
+        <td><mark style="background-color: red;color: white; width: 100% !important;" class="rag_status">Pending
+        </mark></td>
         <td class="hide_default_BaManger_Tab BA_TaskOwner_Column">Chandana</td>
         <td class="hide_default_BaManger_Tab BA_Task_Status_Column"><mark
                 style="background-color: #a7ffbe; width: 100% !important;" class="rag_status">Not Started</mark></td>
@@ -2978,15 +2970,17 @@ margin-top: 0px;" disabled>
             <label id="bt_task_tab" for="cr_ba_tab6" class="pen_sm_ds" style="border-right: none;width: 148px;">BA
                 tab</label>
         </div>
-
-        <div class="proj_task_tabwrap mt-2" id="task_cont_changereq" style="position: relative;justify-content: end;
-        top: -36px;">
-            <select class="form-select select_box" placeholder="Year">
+        <!-- <div style="display: none;">
+            <div class="proj_task_tabwrap mt-2" id="task_cont_changereq">
+            <select class="form-select select_box" placeholder="Year" id="select_ba_filt" >
                 <option Selected value="1">All</option>
                 <option value="2">Current Week</option>
                 <option value="3">Next Week</option>
             </select>
         </div>
+        </div> -->
+
+      
         <div class="proj_task_tabwrap mt-2" id="task_batab_changereq"
             style="font-size: 13px; margin-right: 25px !important;margin-bottom: -7px;">
             <input type="radio" id="cr_batab_tab7" name="proj_batask_cr" class="proj_task_tab" checked>
@@ -3003,10 +2997,19 @@ margin-top: 0px;" disabled>
             <label id="bt_task_tab_1" for="cr_ba_tab10" class="pen_sm_ds" style="border-right: none;width: 148px;">Next
                 Week</label>
         </div>
+        
         <button type="button" class="calc_allocation" id="change_req_btn" style="    margin-top: 14px;">
             <i class="fa-solid fa-plus"></i>
             <span>Add change request</span>
         </button>
+        <div >
+            <div class="proj_task_tabwrap mt-2" id="task_cont_changereq">
+            <select class="form-select select_box" placeholder="Year" id="select_ba_filt" >
+                <option Selected value="1">All</option>
+                <option value="2">Current Week</option>
+                <option value="3">Next Week</option>
+            </select>
+        </div>
         <div style="display: none;" id="filter_cr_batab">
             <div id="select_filtercr_bamanager" style="display: flex !important;
                                 gap: 20px;
@@ -3614,16 +3617,47 @@ margin-top: 0px;" disabled>
                                       margin-left: 0px;" value="Sandeep" disabled>
                                         <button class="bck_ass_queue" style="background-color: #ffd247;
                                    color: black;">Back Assingment queue</button>
-                                        <p style="margin-bottom: 0px;">Re assigned to <span
-                                                style="color:red; font-weight:500;">*</span></p>
-                                        <input type="text" class="form-control formtxt_box_chng rounded-0 boxes"
-                                            id="proj_function_lead" placeholder="Search" style="width: 134px !important;
-                                     margin-left: 0px;" value="Karman" disabled>
-                                        <p style="margin-bottom: 0px;">BA Manager Comments <span
-                                                style="color:red; font-weight:500;">*</span></p>
-                                        <input type="text" class="form-control formtxt_box_chng rounded-0 boxes"
-                                            id="proj_function_lead" style="width: 134px !important;
-                                             margin-left: 0px;" value="please pick one" disabled>
+                                        
+
+                                    </div>
+                                    <div>
+                                        <p style="    margin-left: 14px;
+                                        font-weight: 600;
+                                        border-bottom: 1px solid;">Re assign 1</p>
+                                        <div style="display: flex;
+                                        margin-left: 23px;
+                                        gap: 13px;">
+                                        <p style="margin-bottom: 0px;margin-top: 5px;">Re assigned to <span
+                                            style="color:red; font-weight:500;">*</span></p>
+                                    <input type="text" class="form-control formtxt_box_chng rounded-0 boxes"
+                                        id="proj_function_lead" placeholder="Search" style="width: 134px !important;
+                                 margin-left: 0px;" value="Karman" disabled>
+                                    <p style="margin-bottom: 0px;margin-top: 5px;">BA Manager Comments <span
+                                            style="color:red; font-weight:500;">*</span></p>
+                                    <input type="text" class="form-control formtxt_box_chng rounded-0 boxes"
+                                        id="proj_function_lead" style="width: 134px !important;
+                                         margin-left: 0px;" value="please pick one" disabled>
+                                         </div>
+
+                                    </div>
+                                    <div>
+                                        <p style="    margin-left: 14px;
+                                        font-weight: 600;margin-top: 11px;
+                                        border-bottom: 1px solid;">Re assign 2</p>
+                                        <div style="display: flex;
+                                        margin-left: 23px;
+                                        gap: 13px;">
+                                        <p style="margin-bottom: 0px;margin-top: 5px;">Re assigned to <span
+                                            style="color:red; font-weight:500;">*</span></p>
+                                    <input type="text" class="form-control formtxt_box_chng rounded-0 boxes"
+                                        id="proj_function_lead" placeholder="Search" style="width: 134px !important;
+                                 margin-left: 0px;">
+                                    <p style="margin-bottom: 0px;margin-top: 5px;">BA Manager Comments <span
+                                            style="color:red; font-weight:500;">*</span></p>
+                                    <input type="text" class="form-control formtxt_box_chng rounded-0 boxes"
+                                        id="proj_function_lead" style="width: 134px !important;
+                                         margin-left: 0px;" >
+                                         </div>
 
                                     </div>
                                     <div class="ssc_btn" style="        margin-bottom: 9px; margin-top: 27px; ">
@@ -6317,10 +6351,7 @@ margin-top: 0px;" disabled>
         </table>
     </div>
     <div style="display: none;" id="change_request_dev">
-        <button type="button" class="calc_allocation" id="change_req_btn" style="    margin-top: 4px;">
-            <i class="fa-solid fa-plus"></i>
-            <span>Add change request</span>
-        </button>
+        
 
         <div class="proj_task_tabwrap mt-2" id="task_dev_changereq"
             style="font-size: 13px; margin-right: 25px !important;margin-bottom: -7px;">
@@ -6328,11 +6359,9 @@ margin-top: 0px;" disabled>
             <label id="bt_proj_tab" for="cr_dev_tab1" class="pen_sm_ds">Pending Assignment</label>
             <input type="radio" id="cr_dev_tab2" name="proj_dev_cr" class="proj_task_tab">
             <label id="bt_task_tab" for="cr_dev_tab2" class="pen_sm_ds">Assigned</label>
-            <input type="radio" id="cr_dev_tab3" name="proj_dev_cr" class="proj_task_tab">
-            <label id="bt_task_tab_1" for="cr_dev_tab3" class="pen_sm_ds">Resource & Priority</label>
             <input type="radio" id="cr_dev_tab4" name="proj_dev_cr" class="proj_task_tab">
-            <label id="bt_task_tab_1" for="cr_dev_tab4" style="border-right: none;" class="pen_sm_ds">All
-                BTPMO tasks</label>
+            <label id="bt_task_tab_1" for="cr_dev_tab4" style="border-right: none; width: 14%;" class="pen_sm_ds">All
+                APR Change request</label>
 
         </div>
         <table class="table table-responsive tbl_all_proj" style="margin-top: 14px;">
@@ -6363,192 +6392,208 @@ margin-top: 0px;" disabled>
                     </td>
                 </tr>
                 <tr class="pending_Assignment_View_30" style="display: none;">
-                    <td colspan="9">
+                    <td colspan="18">
 
-                        <!-- Project Charter -->
-                        <div class="accordion" style="margin-bottom: 4px;" id="PROJECT_CHARTER_1">
+                        <div class="accordion" style="margin-bottom: 4px;" id="PRE_task_2">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed accordian_head" type="button"
+                                <button class="accordion-button  accordian_head" type="button"
                                     data-bs-toggle="collapse" style="background-color: #8f8f8f !important;"
-                                    data-bs-target="#pending_Assignment_Stage_1_1" aria-expanded="true"
-                                    aria-controls="pending_Assignment_Stage_1_1">
+                                    data-bs-target="#task_Assignment_pcr_1_0" aria-expanded="true"
+                                    aria-controls="task_Assignment_pcr_1_0">
                                     <div style="display : flex; gap:7px;">
                                         <span style="margin-left: 10px;">Change request charter</span>
                                     </div>
                                 </button>
                             </h2>
                         </div>
-                        <div id="pending_Assignment_Stage_1_1" class=" collapse droppable" style="font-size: 12px;">
+                        <div id="task_Assignment_pcr_1_0" class=" collapse droppable" style="font-size: 12px;">
                             <div class=" project_charter droppable" id="project_charter">
-                                <div id="project_details" class="card_main_box project_details show">
-                                    <div class="Head_Edit">
-                                        <div class="pro_det_ptg_txt"
-                                            style="font-size: 12px; font-weight: 600; color:#03365f;">
-                                            Project Details
-                                        </div>
 
-                                    </div>
-
-                                </div>
                                 <div class="wrap_acc_out_ptg">
-                                    <div class="card_cnt">
-                                        <div class="card_cnt_inner_odd">
-                                            <p class="card_label text_select_boxes"
-                                                style="margin-bottom:0rem !important;">Function
-                                            </p>
-                                            <p style=" text-align: left;" class="card_main_p_tag">
-
-                                                <label
-                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                    class="Proj_detail_label_1 text_select_boxes">Sami</label>
-                                            </p>
-                                        </div>
-                                        <div class="card_cnt_inner_even">
-                                            <p class="card_label text_select_boxes"
-                                                style="margin-bottom:0rem !important;">Sponser
-                                            </p>
-                                            <p class="card_main_p_tag">
-
-                                                <label class="Proj_detail_label_1 text_select_boxes"
-                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;">Yoko</label>
-                                            </p>
-                                        </div>
-                                        <div class="card_cnt_inner_odd">
-                                            <p class="card_label text_select_boxes"
-                                                style="margin-bottom:0rem !important;">Function
-                                                Lead(s)
-                                            </p>
-                                            <p class="card_main_p_tag">
-
-                                                <label class="Proj_detail_label_1 text_select_boxes"
-                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;">Karen</label>
-                                            </p>
-                                        </div>
-                                        <div class="card_cnt_inner_even">
-                                            <p class="card_label text_select_boxes"
-                                                style="margin-bottom:0rem !important;">Impacted
-                                                Function
-                                            </p>
-                                            <p class="card_main_p_tag">
-
-                                                <label
-                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                    class="Proj_detail_label_1 text_select_boxes">N/A</label>
-                                            </p>
-                                        </div>
+                                    <div style="margin-left: 14px; margin-bottom: 16px;     margin-top: 6px;   display: flex;
+                                    align-items: center;
+                                    gap: 10px;">
+                                        <p style="margin-bottom: 0px; font-weight: 600;    margin-left: 5px;">BA <span
+                                                style="color:red; font-weight:500;">*</span></p>
+                                        <p class="ba_name">Hameed</p>
+                                        <button class="bck_ass_queue" style="background-color: #71f46f;
+                                      color: black;">Back Assingment queue</button>
                                     </div>
-                                    <div class="card_cnt">
-                                        <div class="card_cnt_inner_even">
-                                            <p class="card_label text_select_boxes"
-                                                style="margin-bottom:0rem !important;">Business
-                                                Case</p>
-                                            <p class="card_main_p_tag">
 
-                                                <label
-                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                    class="Proj_detail_label_1 text_select_boxes">efficiency</label>
-                                            </p>
+                                    <p class="up_t_ptg">Task details & Timeline</p>
+
+                                    <div>
+
+                                        <div class="add_btn_name">
+                                            <div>
+                                                <p style="    width: 295px;"></p>
+                                                <p>Start Date</p>
+                                                <p>End Date</p>
+                                                <p style="    margin-left: 29px;">Status</p>
+                                            </div>
+
+                                            <div>
+                                                <p style="margin-bottom: 5px; width: 291px;"><span
+                                                        style="padding-right: 10px;"><i class="fa-solid fa-square-check"
+                                                            style="color: #03365f;
+                                                                font-size: 16px;"></i></span><span
+                                                        class="task_name">Charter Submission & Functional
+                                                        requirment</span>
+                                                </p>
+                                                <p><input type="text" class="border_des" style="padding: 3px 3px;"
+                                                        value="17-May-2024">
+                                                </p>
+                                                <p><input type="text" class="border_des" style="padding: 3px 3px;"
+                                                        value="17-May-2024">
+                                                </p>
+                                                <p> <mark style="background-color: #a7ffbe;    margin-left: 33px;"
+                                                        id="label_status_4" class="rag_status">Inprogress</mark></p>
+
+                                            </div>
+                                            <div>
+                                                <p style="margin-bottom: 5px; width: 291px;"><span
+                                                        style="padding-right: 10px;"><i class="fa-solid fa-square-check"
+                                                            style="color: #03365f;
+                                                                font-size: 16px;"></i></span><span
+                                                        class="task_name">Charter Signoff</span>
+                                                </p>
+                                                <p><input type="text" class="border_des" style="padding: 3px 3px;"
+                                                        value="17-May-2024">
+                                                </p>
+                                                <p><input type="text" class="border_des" style="padding: 3px 3px;"
+                                                        value="17-May-2024">
+                                                </p>
+                                                <p> <mark style="background-color: #a7ffbe;    margin-left: 33px;"
+                                                        id="label_status_4" class="rag_status">Inprogress</mark></p>
+
+                                            </div>
+
+
                                         </div>
-                                        <div class="card_cnt_inner_odd">
-                                            <p class="card_label text_select_boxes"
-                                                style="margin-bottom:0rem !important;">Project
-                                                Decision
-                                            </p>
-                                            <p class="card_main_p_tag">
-
-
-                                                <label
-                                                    style="color:#50b10b; font-weight: 600; width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                    class="Proj_detail_label_1 text_select_boxes">Accepted</label>
-                                            </p>
-                                        </div>
-                                        <div class="card_cnt_inner_even">
-                                            <p class="card_label text_select_boxes"
-                                                style="margin-bottom:0rem !important;">Project
-                                                Priority
-                                            </p>
-                                            <p class="card_main_p_tag">
-
-                                                <label
-                                                    style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
-                                                    class="Proj_detail_label_1">1</label>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <hr class="hr_ptg">
-                                    <p class="up_t_ptg">Update Task</p>
-
-                                    <div class="add_btn_name">
-
-
                                         <div>
-                                            <p style="margin-bottom: 5px; width: 210px;"><span
-                                                    style="padding-right: 10px;width: 0px;"><i
-                                                        class="fa-solid fa-square-check" style="color: #03365f;
-                                                font-size: 16px;" aria-hidden="true"></i></span><span
-                                                    class="task_name">Charter & Functional Requirment</span></p>
-                                            <p><label for="" style="margin-left: 32px;">BA<span
-                                                        style="color:red; font-weight:500;">*</span></label>
-                                            </p>
-                                            <p><input type="text" class="form-control formtxt_box_chng rounded-0 boxes"
-                                                    id="proj_dev1" placeholder="Search" value="sandeep" disabled>
-                                            </p>
-                                            <p class=""> <mark style="background-color: #c0c0c0; width: 87% !important;"
-                                                    class="rag_status">Completed</mark>
-                                            </p>
+                                            <h1 class="assgin_to_ptg" style="margin-left: 20px;">Summary</h1>
+                                        </div>
+                                        <div class="filter_body" id="task_batch1_details">
+                                            <button class="accordion-button collapsed acc_ptg_on_btn" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseOne_dev">
+                                                <!-- <span>Task 1: Requirement analysis & draft with Function</span> -->
+
+                                            </button>
+                                            <div class="acc_inn_cnt_ptg" style="margin-top: -16px;">
+
+                                                <div>
+                                                    <label for="" class="card_label text_select_boxes ">
+                                                        Start
+                                                        Date <span style="color:red; font-weight:500;">*</span></label>
+
+                                                    <input type="date" id="pm_sel_in"
+                                                        class="form-control acc_inn_inp_ptg " style="width: 158px;"
+                                                        disabled>
+                                                </div>
+                                                <div>
+                                                    <label for="" class="card_label text_select_boxes ">
+                                                        End
+                                                        Date <span style="color:red; font-weight:500;">*</span></label>
+
+                                                    <input type="date" id="pm_sel_in"
+                                                        class="form-control acc_inn_inp_ptg " style="width: 158px;"
+                                                        disabled>
+                                                </div>
+
+
+
+
+                                                <div>
+                                                    <label for="" class="card_label text_select_boxes">
+                                                        Estimated MD
+                                                        <span style="color:red; font-weight:500;">*</span></label>
+                                                    <input type="number" id="pm_sel_in"
+                                                        class="form-control acc_inn_inp_ptg " style="width: 158px;"
+                                                        disabled>
+                                                </div>
+                                                <div>
+                                                    <label for="" class="card_label text_select_boxes ">Allocation
+                                                        Perday
+                                                        <span style="color:red; font-weight:500;">*</span>
+                                                    </label>
+
+                                                    <select id="Proj_detail_field_"
+                                                        class="form-select acc_inn_sel_ptg  rounded-0 boxes"
+                                                        aria-label="Default select example" style="width: 158px;">
+                                                        <option selected="">Select</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <label for="" class="card_label text_select_boxes ">Status
+                                                    </label>
+
+                                                    <p> <mark style="background-color: #a7ffbe;" id="label_status_4"
+                                                            class="rag_status">Inprogress</mark></p>
+                                                </div>
+
+                                            </div>
+                                            <div class="ssc_btn">
+
+                                                <button
+                                                    title="Your datas will be in draft untill you submit">Save</button>
+                                                <button id="sub_batch">Submit</button>
+                                                <button>Cancel</button>
+
+                                            </div>
+
 
                                         </div>
-
-
                                     </div>
                                 </div>
+
                             </div>
                         </div>
 
 
-                        <!-- Development -->
                         <div class="accordion" style="margin-bottom: 4px;" id="PROJECT_CHARTER_1">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed accordian_head" type="button"
                                     data-bs-toggle="collapse" style="background-color: #0BB18F !important;"
-                                    data-bs-target="#pending_Assignment_Stage_1_3" aria-expanded="true"
-                                    aria-controls="pending_Assignment_Stage_1_3">
+                                    data-bs-target="#pending_ba_Stage_1_34" aria-expanded="true"
+                                    aria-controls="pending_ba_Stage_1_34">
                                     <div style="display : flex; gap:7px;">
                                         <span style="margin-left: 10px;">Developement</span>
                                     </div>
                                 </button>
                             </h2>
                         </div>
-                        <div id="pending_Assignment_Stage_1_3" class=" droppable"
+                        <div id="pending_ba_Stage_1_34" class=" "
                             style="overflow-y:auto;font-size: 12px;">
                             <div class=" project_charter droppable" id="project_charter">
                                 <div id="project_details" class=" project_details show">
 
-                                    <div class="Head_Edit" style="padding: 8px 33px;">
+                                    <div class="Head_Edit" style="padding: 6px 25px;">
                                         <div
                                             style="font-size: 12px; font-weight: 600; color:rgb(3, 54, 95);border-bottom: 1px solid rgb(3, 54, 95);width: 100%;">
-                                            Assigned To
+                                            Assinged To
                                         </div>
 
                                     </div>
                                     <div class="wrap_acc_out_ptg">
                                         <div class="card_bdy" id="Development_Detail_1">
-                                            <div class="card_cnt" style="margin: 0px 0px 0px 27px;">
-                                                <div>
-                                                    <label for="Ba_responsible"
-                                                        style="font-weight: 600 !important;">Internal/External
-                                                        <span style="color:red; font-weight:500;">*</span></label>
-                                                    <p style=" width :120px !important;margin-bottom: 0;">
-                                                        <select name="BA"
-                                                            class=" form-select field_style rounded-0 Ba_responsible "
-                                                            id="Ba_responsible" style="margin-top: 5px;">
-                                                            <option value="">Internal</option>
-                                                            <option selected value="Sandeep">
-                                                                External</option>
-
-                                                        </select>
-
+                                            <div class="card_cnt">
+                                                <div class="card_cnt_inner_odd">
+                                                    <p class="card_label text_select_boxes"
+                                                        style="margin-bottom:0rem !important;">
+                                                        Internal/External <span
+                                                            style="color:red; font-weight:500;">*</span>
                                                     </p>
+                                                    <select name="BA"
+                                                        class=" form-select field_style rounded-0 Ba_responsible " id=""
+                                                        disabled>
+                                                        <option value="">Select</option>
+                                                        <option selected value="Sandeep">Internel
+                                                        </option>
+                                                        <option value="Sami">External</option>
+                                                    </select>
                                                 </div>
                                                 <div>
                                                     <label for="Ba_responsible" style="font-weight: 600 !important;">Dev
@@ -6557,10 +6602,10 @@ margin-top: 0px;" disabled>
                                                     <p style=" width :120px !important;margin-bottom: 0;">
                                                         <select name="BA"
                                                             class=" form-select field_style rounded-0 Ba_responsible "
-                                                            id="Ba_responsible" style="margin-top: 5px;">
+                                                            id="Ba_responsible" style="margin-top: 5px;" disabled>
                                                             <option value="">Thomas</option>
-                                                            <option selected value="Sandeep">
-                                                                Sandeep</option>
+                                                            <option selected value="Sandeep">Sandeep
+                                                            </option>
                                                             <option value="Sami">Sami</option>
                                                         </select>
 
@@ -6580,17 +6625,167 @@ margin-top: 0px;" disabled>
                                                     </p>
                                                 </div>
 
-
                                             </div>
 
 
-                                        </div>
 
-                                    </div>
-                                </div>
-                            </div>
 
-                        </div>
+
+                                            <div>
+                                                <p class="up_t_ptg" style="margin-top: 12px;">
+                                                    Requirement
+                                                    Details</p>
+
+                                                <div class="acc_inn_cnt_ptg" style="margin-left: 13px;position: relative;
+                                                                            top: 14px;">
+
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Document
+                                                            ID
+                                                            <span style="color:red; font-weight:500;">*</span></label>
+
+                                                        <input type="text" id="pm_sel_in"
+                                                            class="form-control acc_inn_inp_ptg " style="width: 158px;"
+                                                            disabled>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Submission
+                                                            Date
+                                                            <span style="color:red; font-weight:500;">*</span></label>
+
+                                                        <input type="date" id="pm_sel_in"
+                                                            class="form-control acc_inn_inp_ptg " style="width: 158px;"
+                                                            disabled>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Requirement
+                                                            Doc
+                                                            <span style="color:red; font-weight:500;">*</span></label>
+
+                                                        <Span><i class="fa-solid fa-file-pdf" style="font-size: 16px;
+                                                    margin-left: 44px;
+                                                    /* margin-top: 5px; */
+                                                    color: #03365f;"></i></Span>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">
+                                                            Jira# <span
+                                                                style="color:red; font-weight:500;">*</span></label>
+
+                                                        <input type="text" id="pm_sel_in"
+                                                            class="form-control acc_inn_inp_ptg " style="width: 158px;"
+                                                            disabled>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Signoff
+                                                            Status
+                                                        </label>
+
+
+                                                        <p> <mark
+                                                                style="background-color: #f1a7ff; width: 87% !important;  margin-top: 5px;"
+                                                                class="rag_status">Not
+                                                                Started</mark></p>
+                                                    </div>
+
+
+
+
+                                                </div>
+                                                <div class="add_btn_name">
+
+                                                    <div>
+                                                        <p class="up_t_ptg"
+                                                            style="margin-left: -5px; width: 100%;margin-top: 9px;">
+                                                            Developement</p>
+                                                    </div>
+
+
+
+
+
+
+
+
+
+                                                    <div class="acc_inn_cnt_ptg " style="    background-color: #f6f6f6;
+                                                                            position: relative;
+                                                                            top: 24px;
+                                                                            left: -7px;
+                                                                            padding: 17px 5px 17px 20px;">
+
+
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">Start
+                                                                Date</label>
+
+
+                                                            <input type="date" id="pm_sel_in"
+                                                                class="form-control acc_inn_inp_ptg " disabled>
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">End
+                                                                Date</label>
+
+                                                            <input type="date" id="pm_sel_in"
+                                                                class="form-control acc_inn_inp_ptg  " disabled>
+                                                        </div>
+
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">Status
+                                                            </label>
+
+
+                                                            <select id="Proj_detail_field_" disabled
+                                                                class="form-select acc_inn_sel_ptg   rounded-0 boxes"
+                                                                aria-label="Default select example">
+                                                                <option selected="">Select</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div>
+                                                            <label for=""
+                                                                class="card_label text_select_boxes">Allocation
+                                                                Perday</label>
+
+
+                                                            <select id=" "
+                                                                class="form-select acc_inn_sel_ptg   rounded-0 boxes"
+                                                                disabled aria-label="Default select example">
+                                                                <option selected="">Select</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes">Estimated
+                                                                Mandays
+                                                                <span
+                                                                    style="color:red; font-weight:500;">*</span></label>
+
+
+                                                            <select id=" "
+                                                                class="form-select acc_inn_sel_ptg   rounded-0 boxes"
+                                                                disabled aria-label="Default select example" disabled>
+                                                                <option selected="">Select</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="ssc_btn" style="    margin-top: 43px;">
+                                                        <button>Save</button>
+                                                        <button>Submit</button>
+                                                        <button>Cancel</button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
                     </td>
                 </tr>
                 <tr class="assinged_dev_cr">
@@ -6897,6 +7092,7 @@ margin-top: 0px;" disabled>
             </div>
 
         </div>
+
         <div class="proj_summ_table" id="tbl_all_prj" style="margin-top: 5px;">
             <div class="table_div">
                 <table class="table  tbl_all_proj" id="tblprojsummary" cellspacing="0">
@@ -7100,8 +7296,7 @@ margin-top: 0px;" disabled>
                                 <div class="out_align_ptg">
                                     <p class="yes_no_align"><i class="fa-solid fa-circle"
                                             title="Action requested"></i><span>Yes</span></p>
-                                    <i class="fa-solid fa-circle-info" style="font-size: 10px !important;"
-                                        title="ROI Amount"></i>
+                                
                                 </div>
                             </td>
                             <td>Finance</td>
@@ -7147,8 +7342,7 @@ margin-top: 0px;" disabled>
                                 <div class="out_align_ptg">
                                     <p class="yes_no_align no"><i class="fa-solid fa-circle"
                                             title="Action requested"></i><span>No</span></p>
-                                    <i class="fa-solid fa-circle-info" style="font-size: 10px !important;"
-                                        title="ROI Amount"></i>
+                                 
                                 </div>
                             </td>
                             <td>Commercial</td>
@@ -7192,8 +7386,7 @@ margin-top: 0px;" disabled>
                                 <div class="out_align_ptg">
                                     <p class="yes_no_align"><i class="fa-solid fa-circle"
                                             title="Action requested"></i><span>Yes</span></p>
-                                    <i class="fa-solid fa-circle-info" style="font-size: 10px !important;"
-                                        title="ROI Amount"></i>
+                                  
                                 </div>
                             </td>
                             <td>Claims</td>
@@ -7240,8 +7433,7 @@ margin-top: 0px;" disabled>
                                 <div class="out_align_ptg">
                                     <p class="yes_no_align"><i class="fa-solid fa-circle"
                                             title="Action requested"></i><span>Yes</span></p>
-                                    <i class="fa-solid fa-circle-info" style="font-size: 10px !important;"
-                                        title="ROI Amount"></i>
+                                    
                                 </div>
                             </td>
                             <td class="hide_default_Projects_Tab Function_Column">BI</td>
@@ -7399,6 +7591,8 @@ margin-top: 0px;" disabled>
         </div>
 
 
+        <p id="week_date_display"class="week_tasks_display">Current Week : 20-May - 24-May</p>
+        <p id="nextweek_date_display"class="week_tasks_display">Next Week : 20-May - 24-May</p>
 
 
         <div class="tsk_proj_seperate E_Procurement_Table">
@@ -27235,7 +27429,7 @@ margin-top: 0px;" disabled>
                                                     <div style="margin-left: -16px;
                                                             margin-top: 9px;">
                                                         <h1 class="assgin_to_ptg " style="position: relative; border: none;
-                                                        left: -25px;">Signoff & Next stage</h1>
+                                                        left: -25px;">Requirment Details</h1>
                                                     </div>
                                                     <div class="acc_inn_cnt_ptg" style="    position: relative;
                                                     left: -17px;
@@ -27302,12 +27496,14 @@ margin-top: 0px;" disabled>
                                                                 Dev
                                                                 <span
                                                                     style="color:red; font-weight:500;">*</span></label>
-                                                            <span><input type="radio" style="position: relative; margin-top: 5px;
-                                top: 3px;
-                                left: -3px;" checked>Yes</span><span style="padding-left: 10px;"><input type="radio"
-                                                                    style="position: relative; top: 3px; left: -3px;  margin-top: 5px;">No</span>
+                                                            <p><button style="    border: none;
+                                                                background-color: #03365f;
+                                                                color: white;
+                                                                font-size: 10px;
+                                                                padding: 2px 7px;
+                                                                border-radius: 5px;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Assign</button></p>
                                                         </div>
-
+                                                      
                                                         <div>
                                                             <label for="" class="card_label text_select_boxes ">BA
                                                                 Comments
@@ -42746,6 +42942,7 @@ height: 126px;margin-top: 10px;">
                         <th>Task end date</th>
                         <th>Revise start date</th>
                         <th>Revise end date</th>
+                        <th>Action</th>
 
                     </tr>
                 </thead>
@@ -42759,11 +42956,1378 @@ height: 126px;margin-top: 10px;">
                         <td><mark style="background-color: #68f38d;" class="rag_status">Assigned</mark></td>
                         <td>Batch 1 Lcs setup</td>
                         <td>Charter Submission to Function</td>
-                        <td><mark style="background-color: #68f38d;" class="rag_status">InProgress</mark></td>
+                        <td><mark style="background-color: #68f38d;" class="rag_status">Not Started</mark></td>
                         <td>05-May-2024</td>
                         <td>06-May-2024</td>
                         <td>N/A</td>
                         <td>N/A</td>
+                        <td><button class="Assign_button" id="Expand_Pending_50">View</button><button
+                            id="Close_Pending_50" class="Btn_style_close">Close</button></td>
+                    </tr>
+                    <tr class="pending_Assignment_View_50">
+                        <td colspan="18">
+                            <div class="accordion" style="margin-bottom: 4px;" id="PRE_task_1">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed accordian_head" type="button"
+                                        data-bs-toggle="collapse" style="background-color: #8f8f8f !important;"
+                                        data-bs-target="#pending_Assignment_Stage_1_0" aria-expanded="true"
+                                        aria-controls="pending_Assignment_Stage_1_0">
+                                        <div style="display : flex; gap:7px;">
+                                            <span style="margin-left: 10px;">Pre Charter</span>
+                                        </div>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="accordion" style="margin-bottom: 4px;" id="PRE_task_2">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed accordian_head" type="button"
+                                        data-bs-toggle="collapse" style="background-color: #8f8f8f !important;"
+                                        data-bs-target="#task_Assignment_Stage_1_0" aria-expanded="true"
+                                        aria-controls="task_Assignment_Stage_1_0">
+                                        <div style="display : flex; gap:7px;">
+                                            <span style="margin-left: 10px;">Project Charter</span>
+                                        </div>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="task_Assignment_Stage_1_0" class="collapse droppable"
+                                style=" font-size: 12px;">
+                                <div class=" project_charter droppable" id="project_charter">
+                                    <div id="project_details" class="card_main_box project_details show">
+                                        <div class="Head_Edit">
+                                            <div class="pro_det_ptg_txt"
+                                                style="font-size: 12px; font-weight: 600; color:#03365f;">
+                                                Project Details
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="wrap_acc_out_ptg">
+                                        <div class="card_cnt">
+                                            <div class="card_cnt_inner_odd">
+                                                <p class="card_label text_select_boxes"
+                                                    style="margin-bottom:0rem !important;">Function
+                                                </p>
+                                                <p style=" text-align: left;" class="card_main_p_tag">
+                                                    <select class=" Proj_detail_field_1 form-select  field_style">
+                                                        <option value="">Select</option>
+                                                        <option value="Sami" selected>Sami</option>
+                                                    </select>
+                                                    <label
+                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                        class="Proj_detail_label_1 text_select_boxes">Sami</label>
+                                                </p>
+                                            </div>
+                                            <div class="card_cnt_inner_even">
+                                                <p class="card_label text_select_boxes"
+                                                    style="margin-bottom:0rem !important;">Sponser
+                                                </p>
+                                                <p class="card_main_p_tag">
+                                                    <input type="text" value='Yoko'
+                                                        class=" Proj_detail_field_1 form-control  field_style">
+                                                    <label class="Proj_detail_label_1 text_select_boxes"
+                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;">Yoko</label>
+                                                </p>
+                                            </div>
+                                            <div class="card_cnt_inner_odd">
+                                                <p class="card_label text_select_boxes"
+                                                    style="margin-bottom:0rem !important;">Function
+                                                    Lead(s)
+                                                </p>
+                                                <p class="card_main_p_tag">
+                                                    <input type="text" placeholder="DD-MM-YYYY" value='Karen'
+                                                        class=" Proj_detail_field_1 form-control  field_style"
+                                                        disabled>
+                                                    <label class="Proj_detail_label_1 text_select_boxes"
+                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;">Karen</label>
+                                                </p>
+                                            </div>
+                                            <div class="card_cnt_inner_even">
+                                                <p class="card_label text_select_boxes"
+                                                    style="margin-bottom:0rem !important;">Impacted
+                                                    Function
+                                                </p>
+                                                <p class="card_main_p_tag">
+                                                    <input type="text" placeholder="DD-MM-YYYY" value='BA'
+                                                        class=" Proj_detail_field_1 form-control field_style"
+                                                        disabled>
+                                                    <label
+                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                        class="Proj_detail_label_1 text_select_boxes">N/A</label>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="card_cnt">
+                                            <div class="card_cnt_inner_even">
+                                                <p class="card_label text_select_boxes"
+                                                    style="margin-bottom:0rem !important;">Business
+                                                    Case</p>
+                                                <p class="card_main_p_tag">
+                                                    <select name="" id=""
+                                                        class=" Proj_detail_field_1 form-select  field_style">
+                                                        <option value="">Select</option>
+                                                        <option value="efficiency" selected>
+                                                            efficiency
+                                                        </option>
+                                                        <option value="ROI">ROI</option>
+                                                    </select>
+                                                    <label
+                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                        class="Proj_detail_label_1 text_select_boxes">efficiency</label>
+                                                </p>
+                                            </div>
+                                            <div class="card_cnt_inner_odd">
+                                                <p class="card_label text_select_boxes"
+                                                    style="margin-bottom:0rem !important;">Project
+                                                    Decision
+                                                </p>
+                                                <p class="card_main_p_tag">
+
+                                                    <select name="" id=""
+                                                        class=" Proj_detail_field_1 form-select  field_style">
+                                                        <option value="">Select</option>
+                                                        <option value="Accepted" selected>Accepted
+                                                        </option>
+                                                        <option value="Not Accepted">Not Accepted
+                                                        </option>
+                                                    </select>
+                                                    <label
+                                                        style="color:#50b10b; font-weight: 600; width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                        class="Proj_detail_label_1 text_select_boxes">Accepted</label>
+                                                </p>
+                                            </div>
+                                            <div class="card_cnt_inner_even">
+                                                <p class="card_label text_select_boxes"
+                                                    style="margin-bottom:0rem !important;">Project
+                                                    Priority
+                                                </p>
+                                                <p class="card_main_p_tag">
+                                                    <select name="" id=""
+                                                        class=" Proj_detail_field_1 form-select  field_style">
+                                                        <option value="">Select</option>
+                                                        <option value="1" selected>1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
+                                                    <label
+                                                        style=" width: 100px; text-align: left; margin-bottom:0rem !important;"
+                                                        class="Proj_detail_label_1">1</label>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <hr class="hr_ptg">
+                                        <p class="up_t_ptg">Task details & Timeline</p>
+
+                                        <div>
+
+                                            <div class="add_btn_name">
+                                                <div>
+                                                    <p>Task</p>
+                                                    <p>Start Date</p>
+                                                    <p>End Date</p>
+                                                    <p>Status</p>
+                                                </div>
+
+                                                <div>
+                                                    <p style="margin-bottom: 5px;"><span
+                                                            style="padding-right: 10px;"><i
+                                                                class="fa-solid fa-square-check" style="color: #03365f;
+                                                            font-size: 16px;"></i></span><span
+                                                            class="task_name">Charter Submission to Function</span>
+                                                    </p>
+                                                    <p><input type="date" class="border_des"
+                                                            style="padding: 3px 3px;" value="2024-04-28">
+                                                    </p>
+                                                    <p><input type="date" class="border_des"
+                                                            style="padding: 3px 3px;" value="2024-04-28">
+                                                    </p>
+                                                    <p> <mark
+                                                            style="background-color: #c0c0c0; width: 87% !important;"
+                                                            class="rag_status">Completed</mark></p>
+
+                                                </div>
+                                                <div>
+                                                    <p style="margin-bottom: 5px;"><span
+                                                            style="padding-right: 10px;"><i
+                                                                class="fa-solid fa-square-check" style="color: #03365f;
+                                                            font-size: 16px;"></i></span><span
+                                                            class="task_name">Business requirment review &
+                                                            validation by BA</span>
+                                                    </p>
+                                                    <p><input type="date" class="border_des"
+                                                            style="padding: 3px 3px;" value="2024-04-29">
+                                                    </p>
+                                                    <p><input type="date" class="border_des"
+                                                            style="padding: 3px 3px;" value="2024-05-09">
+                                                    </p>
+                                                    <p> <mark
+                                                            style="background-color: #c0c0c0; width: 87% !important;"
+                                                            class="rag_status">Completed</mark></p>
+                                                </div>
+                                                <div>
+                                                    <p style="margin-bottom: 5px;"><span
+                                                            style="padding-right: 10px;"><i
+                                                                class="fa-solid fa-square-check" style="color: #03365f;
+                                                            font-size: 16px;"></i></span><span
+                                                            class="task_name">Charter submission to PMO</span></p>
+                                                    <p><input type="date" class="border_des"
+                                                            style="padding: 3px 3px;" value="2024-04-29">
+                                                    </p>
+                                                    <p><input type="date" class="border_des"
+                                                            style="padding: 3px 3px;" value="2024-04-30">
+                                                    </p>
+                                                    <p> <mark
+                                                            style="background-color: #c0c0c0; width: 87% !important;"
+                                                            class="rag_status">Completed</mark></p>
+                                                </div>
+                                                <div>
+                                                    <p style="margin-bottom: 5px;"><span
+                                                            style="padding-right: 10px;"><i
+                                                                class="fa-solid fa-square-check" style="color: #03365f;
+                                                                    font-size: 16px;"></i></span><span
+                                                            class="task_name">PMO review</span></p>
+                                                    <p><input type="date" class="border_des"
+                                                            style="padding: 3px 3px;" value="2024-04-30">
+                                                    </p>
+                                                    <p><input type="date" class="border_des"
+                                                            style="padding: 3px 3px;" value="2024-04-30">
+                                                    </p>
+                                                    <p> <mark
+                                                            style="background-color: #c0c0c0; width: 87% !important;"
+                                                            class="rag_status">Completed</mark></p>
+                                                </div>
+                                                <div>
+                                                    <p style="margin-bottom: 5px;"><span
+                                                            style="padding-right: 10px;"><i
+                                                                class="fa-solid fa-square-check" style="color: #03365f;
+                                                                    font-size: 16px;"></i></span><span
+                                                            class="task_name">Kickoff date</span></p>
+                                                    <p><input type="date" class="border_des"
+                                                            style="padding: 3px 3px;" value="2024-04-30">
+                                                    </p>
+                                                    <p><input type="date" class="border_des"
+                                                            style="padding: 3px 3px;" value="2024-04-30">
+                                                    </p>
+                                                    <p> <mark
+                                                            style="background-color: #c0c0c0; width: 87% !important;"
+                                                            class="rag_status">Completed</mark></p>
+                                                </div>
+                                                <div>
+                                                    <p style="margin-bottom: 5px;"><span
+                                                            style="padding-right: 10px;"><i
+                                                                class="fa-solid fa-square-check" style="color: #03365f;
+                                                                    font-size: 16px;"></i></span><span
+                                                            class="task_name">Charter submission in E-project</span>
+                                                    </p>
+                                                    <p><input type="date" class="border_des"
+                                                            style="padding: 3px 3px;" value="2024-04-30">
+                                                    </p>
+                                                    <p><input type="date" class="border_des"
+                                                            style="padding: 3px 3px;" value="2024-04-30">
+                                                    </p>
+                                                    <p> <mark
+                                                            style="background-color: #c0c0c0; width: 87% !important;"
+                                                            class="rag_status">Completed</mark></p>
+                                                </div>
+                                                <div>
+                                                    <p style="margin-bottom: 5px;"><span
+                                                            style="padding-right: 10px;"><i
+                                                                class="fa-solid fa-square-check" style="color: #03365f;
+                                                                    font-size: 16px;"></i></span><span
+                                                            class="task_name">Due date of signoff</span></p>
+                                                    <p><input type="date" class="border_des"
+                                                            style="padding: 3px 3px;" value="2024-04-30">
+                                                    </p>
+                                                    <p><input type="date" class="border_des"
+                                                            style="padding: 3px 3px;" value="2024-04-30">
+                                                    </p>
+                                                    <p> <mark
+                                                            style="background-color: #c0c0c0; width: 87% !important;"
+                                                            class="rag_status">Completed</mark></p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h1 class="assgin_to_ptg" style="margin-left: 20px;">Timeline</h1>
+                                            </div>
+                                            <div class="filter_body" id="task_batch1_details">
+                                                <button class="accordion-button collapsed acc_ptg_on_btn"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne_dev">
+                                                    <!-- <span>Task 1: Requirement analysis & draft with Function</span> -->
+
+                                                </button>
+                                                <div class="acc_inn_cnt_ptg" style="margin-top: -16px;">
+
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Charter
+                                                            Start
+                                                            Date <span
+                                                                style="color:red; font-weight:500;">*</span></label>
+
+                                                        <input type="date" id="pm_sel_in"
+                                                            class="form-control acc_inn_inp_ptg " value="2024-04-28"
+                                                            style="width: 158px;" disabled>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Charter
+                                                            End
+                                                            Date <span
+                                                                style="color:red; font-weight:500;">*</span></label>
+
+                                                        <input type="date" id="pm_sel_in"
+                                                            class="form-control acc_inn_inp_ptg " value="2024-04-30"
+                                                            style="width: 158px;" disabled>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Charter
+                                                            Signoff <span
+                                                                style="color:red; font-weight:500;">*</span></label>
+
+                                                        <input type="date" id="pm_sel_in"
+                                                            class="form-control acc_inn_inp_ptg "
+                                                            style="width: 158px;" value="2024-04-30">
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes "> Revised
+                                                            Start
+                                                            Date</label>
+
+
+                                                        <input type="date" id="pm_sel_in"
+                                                            class="form-control acc_inn_inp_ptg "
+                                                            style="width: 158px;">
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Revised
+                                                            End Date
+                                                        </label>
+
+
+                                                        <input type="date" id="pm_sel_in"
+                                                            class="form-control acc_inn_inp_ptg "
+                                                            style="width: 158px;">
+                                                    </div>
+
+
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes">
+                                                            Estimated MD
+                                                            <span
+                                                                style="color:red; font-weight:500;">*</span></label>
+                                                        <input type="number" id="pm_sel_in"
+                                                            class="form-control acc_inn_inp_ptg "
+                                                            style="width: 158px;" disabled value="2">
+                                                    </div>
+                                                    <div>
+                                                        <label for=""
+                                                            class="card_label text_select_boxes ">Allocation Perday
+                                                            <span style="color:red; font-weight:500;">*</span>
+                                                        </label>
+
+                                                        <select id="Proj_detail_field_"
+                                                            class="form-select acc_inn_sel_ptg  rounded-0 boxes"
+                                                            aria-label="Default select example"
+                                                            style="width: 158px;">
+                                                            <option selected="">Select</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2" selected>2</option>
+                                                            <option value="3">3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Status
+                                                        </label>
+
+                                                        <p> <mark
+                                                                style="background-color: #c0c0c0; width: 87% !important;"
+                                                                class="rag_status">Completed</mark></p>
+                                                    </div>
+
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="accordion" style="margin-bottom: 4px;" id="batch_dev_1">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed accordian_head" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#batch_tsk_data_2"
+                                        aria-expanded="false" aria-controls="batch_tsk_data_2"
+                                        style="background-color: #0BB18F !important;">
+                                        <div style="display : flex; gap:7px;">
+                                            <span style="margin-left: 10px;">Functional Requriement</span>
+                                        </div>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="batch_tsk_data_2" class=" droppable" style="font-size: 12px;">
+                                <div class=" project_charter droppable" id="PROJECT_CHARTER_1">
+                                    <div id="project_details" class="card_main_box project_details show"
+                                        style="margin-top: -2px !important;">
+
+
+                                    </div>
+
+                                    <div class="wrap_acc_out_ptg">
+                                        <div>
+                                            <h1 class="assgin_to_ptg">Assigned To</h1>
+                                        </div>
+                                        <div class="card_cnt">
+
+                                            <div class="Stage_Details">
+                                                <div class="Details">
+                                                    <div>
+                                                        <label for="Ba_responsible"
+                                                            style="font-weight: 600 !important;">BA
+                                                            Responsible <span
+                                                                style="color:red; font-weight:500;">*</span></label>
+                                                        <p style=" width :120px !important;margin-bottom: 0;">
+                                                            <select name="BA"
+                                                                class=" form-select field_style rounded-0 Ba_responsible "
+                                                                id="" disabled>
+                                                                <option value="">Select</option>
+                                                                <option selected value="Sandeep">Sandeep</option>
+                                                                <option value="Sami">Sami</option>
+                                                            </select>
+
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <label for="stage_closure"
+                                                            style="font-weight: 600 !important;">Assigned
+                                                            date</label>
+                                                        <p style="width: 100px !important; margin-bottom: 0;">
+                                                            <input type="text" id="stage_closure"
+                                                                value="30-Dec-2024" disabled
+                                                                class=" form-control field_style rounded-0" />
+                                                        </p>
+                                                    </div>
+
+                                                    <div>
+                                                        <label for="stage_clousre"
+                                                            style="font-weight: 600 !important;">Stage
+                                                            status</label>
+                                                        <p style=" width :100px !important;margin-bottom: 0;">
+                                                            <mark
+                                                                style="background-color: #a7ffbe; width: 100% !important;"
+                                                                class="rag_status">InProgress</mark>
+
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <label for="stage_clousre"
+                                                            style="font-weight: 600 !important;">Current
+                                                            Task</label>
+                                                        <p style=" width :107% !important;margin-bottom: 0;">
+                                                            <input type="text" id="stage_clousure"
+                                                                value="Requirement analysis & draft with function"
+                                                                class=" form-control field_style rounded-0" />
+
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <label for="stage_clousre"
+                                                            style="font-weight: 600 !important;">Start
+                                                            date</label>
+                                                        <p style=" width :100px !important;margin-bottom: 0;">
+                                                            <input type="date" id="stage_clousure"
+                                                                value="2024-04-30"
+                                                                class=" form-control field_style rounded-0" />
+                                                        </p>
+
+                                                    </div>
+                                                    <div>
+                                                        <label for="stage_clousre"
+                                                            style="font-weight: 600 !important;">End
+                                                            date</label>
+                                                        <p style=" width :100px !important;margin-bottom: 0;">
+                                                            <input type="date" id="stage_clousure"
+                                                                value="2024-05-04"
+                                                                class=" form-control field_style rounded-0" />
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <button class="viw_pri_btn_48" id="btn_pri_viw">View Current
+                                                            Priority</button>
+                                                        <button class="cls_pri_btn_48" id="close_pri_viw"
+                                                            style="display: none;   ">Close
+                                                            Current
+                                                            Priority</button>
+                                                    </div>
+                                                    <div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="requ_priority" id="viw_cur_48" style="display: none;">
+                                            <div class="requ_priority_ptg_sub_hed"
+                                                style="margin-left: 29px;margin-top: -23px;">
+                                                <h1 style="margin-bottom: -3px;">Current Priority</h1>
+
+                                            </div>
+                                            <div class="requ_priority_iner_div"
+                                                style="padding-left: 30px;padding-top: 20px;">
+                                                <div class="requ_priority_ptg">
+                                                    <p>1</p>
+                                                    <p>Priority</p>
+                                                    <select class="form-select requ_priority_slt_ptg"
+                                                        aria-label="Default select example">
+                                                        <option selected>Chinna Fronter</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    <p>Stage</p>
+                                                    <p>Requirement</p>
+                                                    <p>Status</p>
+                                                    <p>Pending assignment</p>
+                                                </div>
+
+
+
+                                            </div>
+                                            <div class="requ_priority_iner_div"
+                                                style="padding-left: 30px;padding-top: 20px;">
+                                                <div class="requ_priority_ptg">
+                                                    <p>1</p>
+                                                    <p>Priority</p>
+                                                    <select class="form-select requ_priority_slt_ptg"
+                                                        aria-label="Default select example">
+                                                        <option selected>Chinna Fronter</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    <p>Stage</p>
+                                                    <p>Requirement</p>
+                                                    <p>Status</p>
+                                                    <p>Pending assignment</p>
+                                                </div>
+
+
+
+                                            </div>
+                                            <div class="requ_priority_iner_div"
+                                                style="padding-left: 30px;padding-top: 20px;">
+                                                <div class="requ_priority_ptg">
+                                                    <p>2</p>
+                                                    <p>Priority</p>
+                                                    <select class="form-select requ_priority_slt_ptg"
+                                                        aria-label="Default select example">
+                                                        <option selected>Chinna Fronter</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    <p>Stage</p>
+                                                    <p>Requirement</p>
+                                                    <p>Status</p>
+                                                    <p>Pending assignment</p>
+                                                </div>
+
+
+
+                                            </div>
+                                            <div class="requ_priority_iner_div"
+                                                style="padding-left: 30px;padding-top: 20px;">
+                                                <div class="requ_priority_ptg">
+                                                    <p>3</p>
+                                                    <p>Priority</p>
+                                                    <select class="form-select requ_priority_slt_ptg"
+                                                        aria-label="Default select example">
+                                                        <option selected>Chinna Fronter</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    <p>Stage</p>
+                                                    <p>Requirement</p>
+                                                    <p>Status</p>
+                                                    <p>Pending assignment</p>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+
+                                        <!-- <hr class="hr_ptg"> -->
+
+                                        <div>
+                                            <h1 class="assgin_to_ptg"></h1>
+                                        </div>
+                                        <div class="batch_s">
+                                            <p style="font-weight: 400;
+                                        background-color: #03365f;
+                                        color: white;
+                                        padding: 2px 11px; margin: 12px 0px;">Add Batch</p>
+                                            <p><input type="radio" id="" name="" value="HTML" checked><label
+                                                    for="batch_ys">Yes</label><br></p>
+                                            <p><input type="radio" id="" name="Batch_option" value="CSS" disabled>
+                                                <label for="batch_no">No</label><br>
+                                            </p>
+
+
+                                        </div>
+                                        <div>
+                                            <h1 class="assgin_to_ptg"></h1>
+                                        </div>
+                                        <div class="add_btn_name" id="" style="background-color: #f6f6f6;
+                                        padding: 12px 24px 12px 21px;  width: 95%;">
+                                            <label for="">Batch Name <span
+                                                    style="color:red; font-weight:500;">*</span></label>
+                                            <input type="text" id="btch_name" class="border_des" value="Lcs Set up">
+                                            <label for="" style="margin-left: 5px;">Batch Order
+                                                <span style="color:red; font-weight:500;">*</span></label>
+                                            <input type="text" id="btch_order" class="border_des" value="1">
+
+                                            <i class="fa-solid fa-floppy-disk" style="color: #03365f;
+                                            font-size: 13px;
+                                            margin-left: 6px;"></i>
+                                        </div>
+                                        <div>
+                                            <p class="task_des" style="       margin-top: 10px;
+                                        margin-bottom: -8px;">Task Details & Timeline</p>
+                                        </div>
+                                        <div style="padding: 0px 27px;">
+                                            <div style="background-color: #f6f6f6;">
+                                                <div class="add_btn_name">
+                                                    <div style="      padding: 13px 14px 0px 3px;">
+                                                        <p></p>
+                                                        <p>Start Date</p>
+                                                        <p>End Date</p>
+                                                        <p>Status</p>
+                                                    </div>
+
+                                                    <div>
+                                                        <p style="margin-bottom: 5px;"><span
+                                                                style="padding-right: 10px;"><i
+                                                                    class="fa-solid fa-square-check" style="color: #03365f;
+                                                            font-size: 16px;"></i></span><span
+                                                                class="task_name">Requirement analysis & draft with
+                                                                function</span></p>
+                                                        <p><input type="date" class="border_des"
+                                                                style="padding: 3px 3px;" value="2024-04-05">
+                                                        </p>
+                                                        <p><input type="date" class="border_des"
+                                                                style="padding: 3px 3px;" value="2024-04-05">
+                                                        </p>
+                                                        <p><mark style="background-color: #f1a7ff; width: 87% !important;"
+                                                            class="rag_status">Not Started</mark></p>
+
+                                                    </div>
+                                                    <div>
+                                                        <p style="margin-bottom: 5px;"><span
+                                                                style="padding-right: 10px;"><i
+                                                                    class="fa-solid fa-square-check" style="color: #03365f;
+        font-size: 16px;"></i></span><span class="task_name">Rounds of review with function</span>
+                                                        </p>
+                                                        <p><input type="date" class="border_des"
+                                                                style="padding: 3px 3px;" value="2024-04-05">
+                                                        </p>
+                                                        <p><input type="date" class="border_des"
+                                                                style="padding: 3px 3px;" value="2024-04-05">
+                                                        </p>
+                                                        <p><mark style="background-color: #f1a7ff; width: 87% !important;"
+                                                                class="rag_status">Not Started</mark></p>
+                                                    </div>
+                                                    <div>
+                                                        <p style="margin-bottom: 5px;"><span
+                                                                style="padding-right: 10px;"><i
+                                                                    class="fa-solid fa-square-check" style="color: #03365f;
+        font-size: 16px;"></i></span><span class="task_name">Requirement Finalization</span></p>
+                                                        <p><input type="date" class="border_des"
+                                                                style="padding: 3px 3px;" value="2024-04-05">
+                                                        </p>
+                                                        <p><input type="date" class="border_des"
+                                                                style="padding: 3px 3px;" value="2024-04-05">
+                                                        </p>
+                                                        <p><mark style="background-color: #f1a7ff; width: 87% !important;"
+                                                                class="rag_status">Not Started</mark></p>
+                                                    </div>
+                                                    <div style="padding-bottom: 10px;">
+                                                        <p style="margin-bottom: 5px;"><span
+                                                                style="padding-right: 10px;"><i
+                                                                    class="fa-solid fa-square-check" style="color: #03365f;
+        font-size: 16px;"></i></span><span class="task_name">Requirement signoff</span></p>
+                                                        <p><input type="date" class="border_des"
+                                                                style="padding: 3px 3px;" value="2024-04-05">
+                                                        </p>
+                                                        <p><input type="date" class="border_des"
+                                                                style="padding: 3px 3px;" value="2024-04-05">
+                                                        </p>
+                                                        <p><mark style="background-color: #f1a7ff; width: 87% !important;"
+                                                                class="rag_status">Not Started</mark></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="    margin-left: -24px;">
+                                                <h1 class="assgin_to_ptg" style="border: none;">Summary</h1>
+                                            </div>
+                                            <div class="filter_body" id="task_batch1_details">
+                                                <button class="accordion-button collapsed acc_ptg_on_btn"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne_dev">
+                                                    <!-- <span>Task 1: Requirement analysis & draft with Function</span> -->
+
+                                                </button>
+                                                <div class="acc_inn_cnt_ptg" style="margin-top: -16px;    width: 104%;    background-color: #f6f6f6;
+                                            margin-left: -18px;
+                                            padding: 22px 13px;">
+
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Stage
+                                                            Start
+                                                            Date <span
+                                                                style="color:red; font-weight:500;">*</span></label>
+
+                                                        <input type="date" id="pm_sel_in"
+                                                            class="form-control acc_inn_inp_ptg "
+                                                            style="width: 158px;" value="2024-04-05" disabled>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Stage
+                                                            End
+                                                            Date <span
+                                                                style="color:red; font-weight:500;">*</span></label>
+
+                                                        <input type="date" id="pm_sel_in"
+                                                            class="form-control acc_inn_inp_ptg "
+                                                            style="width: 158px;" value="2024-05-05" disabled>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Stage
+                                                            Signoff
+                                                            <span
+                                                                style="color:red; font-weight:500;">*</span></label>
+
+                                                        <input type="date" id="pm_sel_in"
+                                                            class="form-control acc_inn_inp_ptg "
+                                                            style="width: 158px;" value="2024-04-05" disabled>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes "> Revised
+                                                            Start
+                                                            Date</label>
+
+
+                                                        <input type="date" id="pm_sel_in"
+                                                            class="form-control acc_inn_inp_ptg "
+                                                            style="width: 158px;" disabled>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Revised
+                                                            End Date
+                                                        </label>
+
+
+                                                        <input type="date" id="pm_sel_in"
+                                                            class="form-control acc_inn_inp_ptg "
+                                                            style="width: 158px;" disabled>
+                                                    </div>
+
+
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes">
+                                                            Estimated MD
+                                                            <span
+                                                                style="color:red; font-weight:500;">*</span></label>
+                                                        <input type="number" id="pm_sel_in"
+                                                            class="form-control acc_inn_inp_ptg "
+                                                            style="width: 158px;" value="2" disabled>
+                                                    </div>
+                                                    <div>
+                                                        <label for=""
+                                                            class="card_label text_select_boxes ">Allocation Perday
+                                                            <span style="color:red; font-weight:500;">*</span>
+                                                        </label>
+
+                                                        <select id="Proj_detail_field_"
+                                                            class="form-select acc_inn_sel_ptg  rounded-0 boxes"
+                                                            aria-label="Default select example"
+                                                            style="width: 158px;">
+                                                            <option selected="">Select</option>
+                                                            <option value="1" selected>1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="card_label text_select_boxes ">Status
+                                                        </label>
+
+                                                        <p><mark style="background-color: #a7ffbe; width: 100% !important;"
+                                                                class="rag_status">InProgress</mark></p>
+                                                    </div>
+
+                                                </div>
+                                                <div class="ssc_btn" style="    margin-top: 43px;">
+                                                    <button>Save</button>
+                                                    <button>Submit</button>
+                                                    <button>Cancel</button>
+
+                                                </div>
+                                                <div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion" style="margin-bottom: 4px;" id="PROJECT_CHARTER_1">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed accordian_head" type="button"
+                                        data-bs-toggle="collapse" style="background-color: #8f8f8f !important;"
+                                        data-bs-target="#pending_Assignment_Stage_1_34" aria-expanded="true"
+                                        aria-controls="pending_Assignment_Stage_1_34">
+                                        <div style="display : flex; gap:7px;">
+                                            <span style="margin-left: 10px;">Developement</span>
+                                        </div>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="pending_Assignment_Stage_1_34" class="collapse droppable"
+                                style="overflow-y:auto;font-size: 12px;">
+                                <div class=" project_charter droppable" id="project_charter">
+                                    <div id="project_details" class=" project_details show">
+
+                                        <div class="Head_Edit" style="padding: 6px 25px;">
+                                            <div
+                                                style="font-size: 12px; font-weight: 600; color:rgb(3, 54, 95);border-bottom: 1px solid rgb(3, 54, 95);width: 100%;">
+                                                Assinged To
+                                            </div>
+
+                                        </div>
+                                        <div class="wrap_acc_out_ptg">
+                                            <div class="card_bdy" id="Development_Detail_1">
+                                                <div class="card_cnt">
+                                                    <div class="card_cnt_inner_odd">
+                                                        <p class="card_label text_select_boxes"
+                                                            style="margin-bottom:0rem !important;">
+                                                            Internal/External <span
+                                                                style="color:red; font-weight:500;">*</span>
+                                                        </p>
+                                                        <select name="BA"
+                                                            class=" form-select field_style rounded-0 Ba_responsible "
+                                                            id="" disabled>
+                                                            <option value="">Select</option>
+                                                            <option selected value="Sandeep">Internel</option>
+                                                            <option value="Sami">External</option>
+                                                        </select>
+                                                    </div>
+                                                    <div>
+                                                        <label for="Ba_responsible"
+                                                            style="font-weight: 600 !important;">Dev
+                                                            Responsible <span
+                                                                style="color:red; font-weight:500;">*</span></label>
+                                                        <p style=" width :120px !important;margin-bottom: 0;">
+                                                            <select name="BA"
+                                                                class=" form-select field_style rounded-0 Ba_responsible "
+                                                                id="Ba_responsible" style="margin-top: 5px;"
+                                                                disabled>
+                                                                <option value="">Thomas</option>
+                                                                <option selected value="Sandeep">Sandeep</option>
+                                                                <option value="Sami">Sami</option>
+                                                            </select>
+
+                                                        </p>
+                                                    </div>
+                                                    <div class="card_cnt_inner_even">
+                                                        <p class="card_label text_select_boxes"
+                                                            style="margin-bottom:0rem !important;">
+                                                            Assinged Date
+                                                            <span style="color:red; font-weight:500;">*</span>
+                                                        </p>
+                                                        <p class="card_main_p_tag">
+                                                            <input type="text" id="stage_clousure"
+                                                                value="29-Apr-2024"
+                                                                class="form-control field_style rounded-0 boxes"
+                                                                style="width: 82px;margin-top: 5px;" disabled>
+
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <button class="viw_pri_btn_36" id="btn_pri_viw" style="position: relative;
+                                                                                top: 19px;
+                                                                                left: -165px;">View Current
+                                                            Priority</button>
+                                                        <button class="cls_pri_btn_36" id="close_pri_viw" style="display: none; position: relative;
+                                                                                top: 19px;
+                                                                                left: -165px;">Close
+                                                            Current
+                                                            Priority</button>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="requ_priority" style="display: none;" id="viw_cur_36">
+
+
+                                                    <div class="requ_priority_ptg_sub_hed"
+                                                        style="margin-left: 29px;margin-top: -23px;">
+                                                        <h1 style="margin-bottom: -3px;">Current Priority</h1>
+
+                                                    </div>
+                                                    <div class="requ_priority_iner_div"
+                                                        style="padding-left: 30px;padding-top: 20px;">
+                                                        <div class="requ_priority_ptg">
+                                                            <p>1</p>
+                                                            <p>Priority</p>
+                                                            <select class="form-select requ_priority_slt_ptg"
+                                                                aria-label="Default select example">
+                                                                <option selected>Chinna Fronter</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <p>Stage</p>
+                                                            <p>Requirement</p>
+                                                            <p>Status</p>
+                                                            <p>Pending assignment</p>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                    <div class="requ_priority_iner_div"
+                                                        style="padding-left: 30px;padding-top: 20px;">
+                                                        <div class="requ_priority_ptg">
+                                                            <p>1</p>
+                                                            <p>Priority</p>
+                                                            <select class="form-select requ_priority_slt_ptg"
+                                                                aria-label="Default select example">
+                                                                <option selected>Chinna Fronter</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <p>Stage</p>
+                                                            <p>Requirement</p>
+                                                            <p>Status</p>
+                                                            <p>Pending assignment</p>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                    <div class="requ_priority_iner_div"
+                                                        style="padding-left: 30px;padding-top: 20px;">
+                                                        <div class="requ_priority_ptg">
+                                                            <p>2</p>
+                                                            <p>Priority</p>
+                                                            <select class="form-select requ_priority_slt_ptg"
+                                                                aria-label="Default select example">
+                                                                <option selected>Chinna Fronter</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <p>Stage</p>
+                                                            <p>Requirement</p>
+                                                            <p>Status</p>
+                                                            <p>Pending assignment</p>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                    <div class="requ_priority_iner_div"
+                                                        style="padding-left: 30px;padding-top: 20px;">
+                                                        <div class="requ_priority_ptg">
+                                                            <p>3</p>
+                                                            <p>Priority</p>
+                                                            <select class="form-select requ_priority_slt_ptg"
+                                                                aria-label="Default select example">
+                                                                <option selected>Chinna Fronter</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <p>Stage</p>
+                                                            <p>Requirement</p>
+                                                            <p>Status</p>
+                                                            <p>Pending assignment</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div>
+                                                    <p class="up_t_ptg" style="margin-top: 12px;">Requirement
+                                                        Details</p>
+
+                                                    <div class="acc_inn_cnt_ptg" style="margin-left: 13px;position: relative;
+                                                                        top: 14px;">
+                                                        <div>
+                                                            <label for=""
+                                                                class="card_label text_select_boxes ">Batch Order
+                                                                <span
+                                                                    style="color:red; font-weight:500;">*</span></label>
+
+                                                            <input type="text" id="pm_sel_in"
+                                                                class="form-control acc_inn_inp_ptg "
+                                                                style="width: 158px;" value="1" disabled>
+                                                        </div>
+                                                        <div>
+                                                            <label for=""
+                                                                class="card_label text_select_boxes ">Batch Name
+                                                                <span
+                                                                    style="color:red; font-weight:500;">*</span></label>
+
+                                                            <input type="text" id="pm_sel_in"
+                                                                class="form-control acc_inn_inp_ptg "
+                                                                style="width: 158px;" value="Lcs Set up" disabled>
+                                                        </div>
+                                                        <div>
+                                                            <label for=""
+                                                                class="card_label text_select_boxes ">Document ID
+                                                                <span
+                                                                    style="color:red; font-weight:500;">*</span></label>
+
+                                                            <input type="text" id="pm_sel_in"
+                                                                class="form-control acc_inn_inp_ptg "
+                                                                style="width: 158px;">
+                                                        </div>
+                                                        <div>
+                                                            <label for=""
+                                                                class="card_label text_select_boxes ">Submission
+                                                                Date
+                                                                <span
+                                                                    style="color:red; font-weight:500;">*</span></label>
+
+                                                            <input type="date" id="pm_sel_in"
+                                                                class="form-control acc_inn_inp_ptg "
+                                                                style="width: 158px;" disabled>
+                                                        </div>
+                                                        <div>
+                                                            <label for=""
+                                                                class="card_label text_select_boxes ">Requirement
+                                                                Doc
+                                                                <span
+                                                                    style="color:red; font-weight:500;">*</span></label>
+
+                                                            <Span><i class="fa-solid fa-file-pdf" style="font-size: 16px;
+                                                margin-left: 44px;
+                                                /* margin-top: 5px; */
+                                                color: #03365f;"></i></Span>
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">
+                                                                Jira# <span
+                                                                    style="color:red; font-weight:500;">*</span></label>
+
+                                                            <input type="text" id="pm_sel_in"
+                                                                class="form-control acc_inn_inp_ptg "
+                                                                style="width: 158px;" disabled>
+                                                        </div>
+                                                        <div>
+                                                            <label for=""
+                                                                class="card_label text_select_boxes ">Signoff Status
+                                                            </label>
+
+
+                                                            <p> <mark
+                                                                    style="background-color: #f1a7ff; width: 87% !important;  margin-top: 5px;"
+                                                                    class="rag_status">Not Started</mark></p>
+                                                        </div>
+
+
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes"> Move
+                                                                to Dev
+                                                                <span
+                                                                    style="color:red; font-weight:500;">*</span></label>
+                                                            <span><input type="radio" style="position: relative; margin-top: 5px;
+                                            top: 3px;
+                                            left: -3px;">Yes</span><span style="padding-left: 10px;"><input
+                                                                    type="radio"
+                                                                    style="position: relative; top: 3px; left: -3px;  margin-top: 5px;">No</span>
+                                                        </div>
+
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">BA
+                                                                Comments <span
+                                                                    style="color:red; font-weight:500;">*</span>
+                                                            </label>
+                                                            <textarea name="" id="" cols="7" rows="1"
+                                                                class="form-control acc_inn_inp_ptg "
+                                                                style=" margin-top: 5px;"></textarea>
+
+
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="add_btn_name">
+
+                                                        <div>
+                                                            <p class="up_t_ptg"
+                                                                style="margin-left: -5px; width: 100%;margin-top: 9px;">
+                                                                Developement</p>
+                                                        </div>
+
+                                                        <div>
+                                                            <p class="task_des " style="    position: relative;
+                                                                                left: -28px;
+                                                                                top: 18px;">Requirment Review
+                                                                with BA</p>
+                                                        </div>
+                                                        <div class="batch_s req_sec">
+                                                            <input type="radio">
+                                                            <label for=""
+                                                                style="margin-left: -13px;margin-right: 16px;">Yes</label>
+                                                            <div>
+                                                                <label for="" class="card_label text_select_boxes ">
+                                                                    Date of review
+                                                                </label>
+
+                                                                <input type="date" id="pm_sel_in"
+                                                                    class="form-control acc_inn_inp_ptg " style="width: 166px;
+                                                                                         margin-left: -38px;"
+                                                                    disabled>
+                                                            </div>
+                                                            <div>
+                                                                <label for=""
+                                                                    class="card_label text_select_boxes ">BA
+                                                                    responsible<span
+                                                                        style="color:red; font-weight:500;">*</span>
+                                                                </label>
+
+                                                                <p
+                                                                    style=" width :120px !important;margin-bottom: 0;">
+                                                                    <select name="BA"
+                                                                        class=" form-select field_style rounded-0 Ba_responsible "
+                                                                        id="Ba_responsible" style="margin-top: 5px;margin-left: -31px;height: 28px;
+                                                        width: 80px;" disabled>
+                                                                        <option value="">Thomas</option>
+                                                                        <option selected value="Sandeep">Sandeep
+                                                                        </option>
+                                                                        <option value="Sami">Sami</option>
+                                                                    </select>
+
+                                                                </p>
+                                                            </div>
+
+
+                                                        </div>
+                                                        <p style="margin-left: auto;
+                                                                            margin-top: 33px; border: none;"
+                                                            class="up_t_ptg">Developement
+                                                            BreakDown</p>
+                                                        <div class="card_bdy" id="card_bdy_81" style="width:100%;">
+                                                            <div class="dev_break_down_content mb-2"
+                                                                style=" position: absolute;">
+
+                                                                <button type="button"
+                                                                    class="btn btn-success dev_break_btn"
+                                                                    data-bs-toggle="modal">Add</button>
+                                                            </div>
+
+
+                                                        </div>
+                                                        <div class=" mt-3" id=""
+                                                            style="width: 100% !important; margin-bottom: -29px; display: none;">
+                                                            <table class="table table-bordered table-responsive"
+                                                                style="margin-top: 35px;">
+                                                                <thead style="font-size: 15px;">
+                                                                    <tr>
+                                                                        <th>Order No</th>
+                                                                        <th>Item Name</th>
+                                                                        <th>Item Description</th>
+                                                                        <th>Start Date</th>
+                                                                        <th>End Date</th>
+                                                                        <th>Revised Start Date</th>
+                                                                        <th>Revised End Date</th>
+                                                                        <th>Status</th>
+                                                                        <th>Completion Date</th>
+                                                                        <th>Developer</th>
+                                                                        <th>Comment</th>
+                                                                        <th>Delete</th>
+                                                                        <th>UAT link</th>
+                                                                        <th>UAT env</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody style="font-size: 12px;">
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>Test</td>
+                                                                        <td>Sample Description</td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td>Not Started</td>
+                                                                        <td></td>
+                                                                        <td>Dharshan</td>
+                                                                        <td>Test Comment</td>
+                                                                        <td><i class="fa-solid fa-trash"
+                                                                                style="color: red; cursor: pointer;"></i>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>2</td>
+                                                                        <td>Test</td>
+                                                                        <td>Sample Description</td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td>Not Started</td>
+                                                                        <td></td>
+                                                                        <td>Dharshan</td>
+                                                                        <td>Test Comment</td>
+                                                                        <td><i class="fa-solid fa-trash"
+                                                                                style="color: red; cursor: pointer;"></i>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>3</td>
+                                                                        <td>Test</td>
+                                                                        <td>Sample Description</td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td style="background-color: #bdc3c7;">
+                                                                            <div
+                                                                                style="display: grid; width: 100% !important;">
+                                                                                <span style="font-weight: bold;">1.
+                                                                                    23-Apr-2024</span>
+                                                                                <span style="font-weight: bold;">2.
+                                                                                    27-Apr-2024</span>
+                                                                                <span style="font-weight: bold;">3.
+                                                                                    30-Apr-2024</span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td>Not Started</td>
+                                                                        <td></td>
+                                                                        <td>Dharshan</td>
+                                                                        <td>Test Comment</td>
+                                                                        <td><i class="fa-solid fa-trash"
+                                                                                style="color: red; cursor: pointer;"></i>
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="filter_body" id="task_devtask1_details">
+                                                    <button class="accordion-button collapsed acc_ptg_on_btn"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseOne_dev">
+                                                        <!-- <span>Requirement review with Developer</span> -->
+                                                        <!-- <span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Edit_71">Edit</span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Save_71"
+                                                                    style="display:none;">Save</span>
+                                                                <span class="edit_btn_ptg"
+                                                                    id="Project_Detail_Cancel_71"
+                                                                    style="display:none; background-color:red">Cancel</span>
+                                                            </span> -->
+                                                    </button>
+                                                    <p style="margin-left:6px;margin-top: 23px; border: none;"
+                                                        class="up_t_ptg ">
+                                                        Batch Summary</p>
+                                                    <div class="acc_inn_cnt_ptg " style="    background-color: #f6f6f6;
+                                                                        position: relative;
+                                                                        top: 24px;
+                                                                        left: 7px;
+                                                                        padding: 17px 5px 17px 20px;">
+
+
+                                                        <div>
+                                                            <label for=""
+                                                                class="card_label text_select_boxes ">Start
+                                                                Date</label>
+
+
+                                                            <input type="date" id="pm_sel_in"
+                                                                class="form-control acc_inn_inp_ptg ">
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="card_label text_select_boxes ">End
+                                                                Date</label>
+
+                                                            <input type="date" id="pm_sel_in"
+                                                                class="form-control acc_inn_inp_ptg  ">
+                                                        </div>
+
+                                                        <div>
+                                                            <label for=""
+                                                                class="card_label text_select_boxes ">Status
+                                                            </label>
+
+
+                                                            <select id="Proj_detail_field_"
+                                                                class="form-select acc_inn_sel_ptg   rounded-0 boxes"
+                                                                aria-label="Default select example">
+                                                                <option selected="">Select</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div>
+                                                            <label for=""
+                                                                class="card_label text_select_boxes">Allocation
+                                                                Perday</label>
+
+
+                                                            <select id=" "
+                                                                class="form-select acc_inn_sel_ptg   rounded-0 boxes"
+                                                                aria-label="Default select example">
+                                                                <option selected="">Select</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div>
+                                                            <label for=""
+                                                                class="card_label text_select_boxes">Estimated
+                                                                Mandays
+                                                                <span
+                                                                    style="color:red; font-weight:500;">*</span></label>
+
+
+                                                            <select id=" "
+                                                                class="form-select acc_inn_sel_ptg   rounded-0 boxes"
+                                                                aria-label="Default select example" disabled>
+                                                                <option selected="">Select</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="ssc_btn" style="    margin-top: 43px;">
+                                                        <button>Save</button>
+                                                        <button>Submit</button>
+                                                        <button>Cancel</button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                        </td>
                     </tr>
                 </tbody>
 
@@ -42791,20 +44355,36 @@ height: 126px;margin-top: 10px;">
             </div>
 
         </div>
-        <div style="display: none;
-        justify-content: end;
+        <div style="    display: flex;
+     
         gap: 10px;
-        margin-top: -29px; " id="dashboard_filter">
-
+        margin-top: 31px; " id="dashboard_filter">
+         
+       
+            <select class="form-select select_box" placeholder="Year" id="slc_dashboard_filt">
+                <option Selected value="0">Select</option>
+                <option value="1">Per Team</option>
+                <option value="2">Per Quater</option>
+            </select>
             <select class="form-select select_box" placeholder="Year" id="slc_filt_badev" style="display: none;">
                 <option Selected value="0">Select</option>
                 <option value="1">BA</option>
                 <option value="2">Dev</option>
             </select>
-            <select class="form-select select_box" placeholder="Year" id="slc_dashboard_filt">
-                <option Selected value="0">Select</option>
-                <option value="1">Per Team</option>
-                <option value="2">Per Quater</option>
+            <select class="form-select select_box" placeholder="Year" id="slc_filt_baname" style="display: none;">
+                <option Selected value="0">BA </option>
+                <option value="1">Test</option>
+                <option value="2">Test</option>
+            </select>
+            <select class="form-select select_box" placeholder="Year" id="per_quater_filter" style="display: none;">
+                <option Selected value="0">All</option>
+                <option value="1">CHA</option>
+                <option value="2">REQ</option>
+                <option value="3">DEV</option>
+                <option value="4">BAT</option>
+                <option value="5">UAT</option>
+                <option value="6">LIVE</option>
+
             </select>
         </div>
         <div class="filter_Group_project" style="    position: relative;
@@ -42961,8 +44541,27 @@ height: 126px;margin-top: 10px;">
                             </th>
                         </tr>
                     </thead>
-                    <!-- Button trigger modal -->
+<!-- Button trigger modal -->
 
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
@@ -43070,7 +44669,7 @@ height: 126px;margin-top: 10px;">
                                     <div class="card_main_box" id="card_main_box">
                                         <div class="card_heda">
                                             <div class="d-flex">
-                                                <p class="card_head_para me-5" style="color: white;">Functional
+                                                <p class="card_head_para me-5" style="color: white;">Next Stage - Functional
                                                     Requirment
                                                 <p>
                                             </div>
@@ -43080,7 +44679,7 @@ height: 126px;margin-top: 10px;">
                                     </div>
                                     <div class="total_box">
                                         <div class="top_div_tet">
-                                            <label for="">Action</label>
+                                 
 
                                             <label for="">Start Date</label>
                                             <label for="">End Date</label>
@@ -43090,12 +44689,7 @@ height: 126px;margin-top: 10px;">
                                             <label for=""> Status</label>
                                         </div>
                                         <div class="Bottom_div">
-                                            <label for="">
-                                                <button class="btn_bot_div" id="Update_revis_10"
-                                                    style="background-color: #0BB18F;">Update</button>
-                                                <button class="btn_bot_div_save" id="save_revis_10">Save </button>
-                                            </label>
-
+                                         
                                             <label for="">13-Apr-24</label>
                                             <label for="">15-Apr-24</label>
                                             <label class="prot_str">
@@ -43331,7 +44925,7 @@ height: 126px;margin-top: 10px;">
                                     <div class="card_main_box" id="card_main_box">
                                         <div class="card_heda">
                                             <div class="d-flex">
-                                                <p class="card_head_para me-5" style="color: white;">BA Testing</p>
+                                                <p class="card_head_para me-5" style="color: white;">Next Stage - BA Testing</p>
                                             </div>
 
                                         </div>
@@ -43339,7 +44933,7 @@ height: 126px;margin-top: 10px;">
                                     </div>
                                     <div class="total_box">
                                         <div class="top_div_tet">
-                                            <label for="">Action</label>
+                                     
 
                                             <label for="">Start Date</label>
                                             <label for="">End Date</label>
@@ -43349,11 +44943,7 @@ height: 126px;margin-top: 10px;">
                                             <label for="">Status</label>
                                         </div>
                                         <div class="Bottom_div">
-                                            <label for="">
-                                                <button class="btn_bot_div" id="Update_revis_3"
-                                                    style="background-color: #0BB18F;">Update</button>
-                                                <button class="btn_bot_div_save" id="save_revis_3">Save </button>
-                                            </label>
+                                           
 
                                             <label for="">13-Apr-24</label>
                                             <label for="">15-Apr-24</label>
@@ -43447,7 +45037,7 @@ height: 126px;margin-top: 10px;">
                                     <div class="card_main_box" id="card_main_box">
                                         <div class="card_heda">
                                             <div class="d-flex">
-                                                <p class="card_head_para me-5" style="color: white;">User Testing</p>
+                                                <p class="card_head_para me-5" style="color: white;">Next Stage - User Testing</p>
                                             </div>
 
                                         </div>
@@ -43455,7 +45045,7 @@ height: 126px;margin-top: 10px;">
                                     </div>
                                     <div class="total_box">
                                         <div class="top_div_tet">
-                                            <label for="">Action</label>
+                                          
 
                                             <label for="">Start Date</label>
                                             <label for="">End Date</label>
@@ -43465,10 +45055,7 @@ height: 126px;margin-top: 10px;">
                                             <label for="">Status</label>
                                         </div>
                                         <div class="Bottom_div">
-                                            <label for="">
-                                                <button class="btn_bot_div" id=""
-                                                    style="background-color: grey;">Update</button>
-                                            </label>
+                                          
 
                                             <label for="">13-Apr-24</label>
                                             <label for="">15-Apr-24</label>
@@ -43561,7 +45148,7 @@ height: 126px;margin-top: 10px;">
                                     <div class="card_main_box" id="card_main_box">
                                         <div class="card_heda">
                                             <div class="d-flex">
-                                                <p class="card_head_para me-5" style="color: white;">Development</p>
+                                                <p class="card_head_para me-5" style="color: white;">Next Stage - Development</p>
                                             </div>
 
                                         </div>
@@ -43569,7 +45156,7 @@ height: 126px;margin-top: 10px;">
                                     </div>
                                     <div class="total_box">
                                         <div class="top_div_tet">
-                                            <label for="">Action</label>
+                                       
                                             <label for="">Start Date</label>
                                             <label for="">End Date</label>
                                             <label for="">Revised Start Date</label>
@@ -43578,10 +45165,7 @@ height: 126px;margin-top: 10px;">
                                             <label for="">Status</label>
                                         </div>
                                         <div class="Bottom_div">
-                                            <label for="">
-                                                <button class="btn_bot_div" id="Update_revis_1">Revise</button>
-                                                <button class="btn_bot_div_save" id="save_revis_1">Save </button>
-                                            </label>
+                                            
 
                                             <label for="">13-Apr-24</label>
                                             <label for="">15-Apr-24</label>
@@ -43673,7 +45257,7 @@ height: 126px;margin-top: 10px;">
                                     <div class="card_main_box" id="card_main_box">
                                         <div class="card_heda">
                                             <div class="d-flex">
-                                                <p class="card_head_para me-5" style="color: white;">User Testing</p>
+                                                <p class="card_head_para me-5" style="color: white;">Next Stage - User Testing</p>
                                             </div>
 
                                         </div>
@@ -43681,8 +45265,7 @@ height: 126px;margin-top: 10px;">
                                     </div>
                                     <div class="total_box">
                                         <div class="top_div_tet">
-                                            <label for="">Action</label>
-
+                                           
                                             <label for="">Start Date</label>
                                             <label for="">End Date</label>
                                             <label for="">Revised Start Date</label>
@@ -43691,10 +45274,7 @@ height: 126px;margin-top: 10px;">
                                             <label for="">Status</label>
                                         </div>
                                         <div class="Bottom_div">
-                                            <label for="">
-                                                <button class="btn_bot_div" id=""
-                                                    style="background-color: grey;">Update</button>
-                                            </label>
+                                           
 
                                             <label for="">13-Apr-24</label>
                                             <label for="">15-Apr-24</label>
@@ -43787,7 +45367,7 @@ height: 126px;margin-top: 10px;">
                                     <div class="card_main_box" id="card_main_box">
                                         <div class="card_heda">
                                             <div class="d-flex">
-                                                <p class="card_head_para me-5" style="color: white;">Functional
+                                                <p class="card_head_para me-5" style="color: white;">Next Stage -Functional
                                                     Requirment</p>
                                             </div>
 
@@ -43796,7 +45376,7 @@ height: 126px;margin-top: 10px;">
                                     </div>
                                     <div class="total_box">
                                         <div class="top_div_tet">
-                                            <label for="">Action</label>
+                                        
                                             <label for="">Start Date</label>
                                             <label for="">End Date</label>
                                             <label for="">Revised Start Date</label>
@@ -43805,10 +45385,7 @@ height: 126px;margin-top: 10px;">
                                             <label for="">Status</label>
                                         </div>
                                         <div class="Bottom_div">
-                                            <label for="">
-                                                <button class="btn_bot_div" id=""
-                                                    style="background-color: grey;">Update</button>
-                                            </label>
+                                           
 
                                             <label for="">13-Apr-24</label>
                                             <label for="">15-Apr-24</label>
@@ -44086,9 +45663,10 @@ height: 126px;margin-top: 10px;">
                     </tr>
                 </thead>
                 <tbody>
-
-                    <tr>
-                        <td><label class="des_port_tab"><span class="num_port_des" style="background-color: #0BB18F;    padding: 0px 4px;
+                   
+                   <tr>
+                    <td  data-bs-toggle="offcanvas" data-bs-target="#offcanvas_projquarter" aria-controls="offcanvasRight" aria-hidden="true"><label class="des_port_tab"><span class="num_port_des"
+                        style="background-color: #0BB18F;    padding: 0px 4px;
                         font-size: 6px;
                         position: relative;
                         top: -2px;
@@ -45971,9 +47549,7 @@ height: 126px;margin-top: 10px;">
                                 <td class="hide_tr">Efficiency</td>
                                 <td class="hide_fr" style="color:#009500;">
                                     <p class="yes_no_align"><i class="fa-solid fa-circle"
-                                            title="Action requested"></i><span>Yes</span><i
-                                            class="fa-solid fa-circle-info" style="font-size: 10px !important;"
-                                            title="ROI Amount"></i></p>
+                                            title="Action requested"></i><span>Yes</span></p>
                                 </td>
                                 <td>Finance</td>
                                 <td>Yoko</td>
@@ -45994,9 +47570,7 @@ height: 126px;margin-top: 10px;">
                                 <td class="hide_tr">Efficiency</td>
                                 <td class="hide_fr" style="color:#009500;">
                                     <p class="yes_no_align"><i class="fa-solid fa-circle"
-                                            title="Action requested"></i><span>Yes</span><i
-                                            class="fa-solid fa-circle-info" style="font-size: 10px !important;"
-                                            title="ROI Amount"></i></p>
+                                            title="Action requested"></i><span>Yes</span></p>
                                 </td>
                                 <td>Finance</td>
                                 <td>Yoko</td>
@@ -46016,9 +47590,7 @@ height: 126px;margin-top: 10px;">
                                 <td class="hide_tr">Efficiency</td>
                                 <td class="hide_fr" style="color: #fff;">
                                     <p class="yes_no_align"><i class="fa-solid fa-circle"
-                                            title="Action requested"></i><span>Yes</span><i
-                                            class="fa-solid fa-circle-info" style="font-size: 10px !important;"
-                                            title="ROI Amount"></i></p>
+                                            title="Action requested"></i><span>Yes</span></p>
                                 </td>
                                 <td>Finance</td>
                                 <td>Yoko</td>
@@ -46951,6 +48523,42 @@ border-radius: 5px;">Edit</button>
                 </div>
             </div>
 
+    </div>
+    <div class="offcanvas offcanvas-end off_canvas_wid" tabindex="-1" id="offcanvas_projquarter"
+    aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header off_canvas_head">
+        <h5><b>Project Card</b> : China fronters</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+    </div>
+    <div class="accordion accordion-flush acc_flsh" id="accordionFlushExample">
+        <div class="accordion-item acc_flsh_item">
+            <p class="pr_detail_name"><span class="project_details_cls">Project Priority</span><span class="last_num" style="background-color: #f06060; color: #fff;">1</span></p>
+            <p class="pr_detail_name"><span class="project_details_cls">Current Stage</span><span>Project Charter</span></p>
+            <p class="pr_detail_name"><span class="project_details_cls">Project Size</span><span>Very large</span></p>
+
+            <p class="pr_detail_name"><span class="project_details_cls">Stage Start date</span><span>12-May-2024<span>
+
+            <p class="pr_detail_name"><span class="project_details_cls">Stage End date</span><span>15-May-2024</span></p>
+
+            <p class="pr_detail_name"><span class="project_details_cls">RAG</span><span>On Tarck</span></p>
+            <p class="pr_detail_name"><span class="project_details_cls">BA</span><span>Sandeeep</span></p>
+
+
+
+
+
+
+        </div>
+    </div>
+
+</div>
+    <div class="offcanvas offcanvas-end off_canvas_wid" tabindex="-1" id="offcanvas_projectportfolio"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header off_canvas_head" style="margin-bottom: 7px;    margin-top: 5px;">
+            <h5><b>Project Card</b> : China fronters</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
         </div>
         <div class="offcanvas offcanvas-end off_canvas_wid" tabindex="-1" id="offcanvas_projectportfolio"
             aria-labelledby="offcanvasRightLabel">
@@ -47003,6 +48611,7 @@ border-radius: 5px;">Edit</button>
         margin-bottom: 6px;"><span class="project_details_cls">Target go-live</span><span>Q4</span></p>
 
             </div>
+        </div>
         </div>
         <div class="offcanvas offcanvas-end off_canvas_wid" tabindex="-1" id="offcanvasRAG_rr"
             aria-labelledby="offcanvasRightLabel">
@@ -47175,7 +48784,7 @@ border-radius: 5px;">Edit</button>
 
 
         </div>
-
+</div>
 
         <div class="offcanvas offcanvas-end off_canvas_wid" tabindex="-1" id="offcanvascalculation_rw"
             aria-labelledby="offcanvasRightLabel">
@@ -47212,7 +48821,7 @@ border-radius: 5px;">Edit</button>
                 </div>
             </div>
 
-
+</div>
 
         </div>
         <div class="offcanvas offcanvas-end off_canvas_wid" tabindex="-1" id="offcanvascalculation_rw_pmo"
@@ -47244,16 +48853,17 @@ border-radius: 5px;">Edit</button>
                                          left: -4px;" id="task_dropdwn_10" aria-hidden="true"></i>Chandana</b></p>
                         <div class="accordion-body" style="padding-top: 0;     position: relative;
                     left: -14px;">
-                            <p style="color: #08305c;
-                    margin-bottom: 0px;    font-weight: 600;
-    font-size: 14px;">Projects</p>
+                  
 
                             <div class="cal_summary" id="task_tab_Drop_10">
-                                <p style="    margin-bottom: 5px;" class="in_cal_all"><span
-                                        class="ds_allocation span_class"> Allocation</span> <span> 25</span></p>
-                                <p style="    margin-bottom: 5px; " class="in_cal_all"><span
-                                        class="ds_allocation span_class">Allocated </span> <span
-                                        style="color: #ffbb00;"> 21</span>
+                                <p style="color: #08305c;
+                                margin-bottom: 0px;    font-weight: 600;
+                font-size: 14px;margin-top: -9px;">Projects</p>
+                <div style="background-color: #f6f6f6;
+                padding: 1px 8px;
+                margin-top: 8px;">
+                                <p style="    margin-bottom: 5px;" class="in_cal_all"><span class="ds_allocation span_class"> Allocation</span>   <span > 25</span></p>
+                                <p style="    margin-bottom: 5px; "class="in_cal_all"><span class="ds_allocation span_class">Allocated </span> <span style="color: #ffbb00;" > 21</span>
                                 </p>
                                 <p style="    margin-bottom: 5px;" class="in_cal_all"><span
                                         class="ds_allocation span_class">Remaining</span> <span> 4</span></p>
@@ -47261,31 +48871,34 @@ border-radius: 5px;">Edit</button>
                                         class="ds_allocation span_class">Deficit </span> <span style="color: #ffbb00;">
                                         0</span>
                                 </p>
+                            </div>
 
-
-
-
-                                <p style="color: #08305c;
+                        
+               
+<p style="color: #08305c;
 margin-bottom: 0px;    font-weight: 600;
-    font-size: 14px;">Change Request</p>
-                                <div class="cal_summary">
-                                    <p style="    margin-bottom: 5px;" class="in_cal_all"><span
-                                            class="ds_allocation span_class"> Allocation</span> <span> 25</span></p>
-                                    <p style="    margin-bottom: 5px; " class="in_cal_all"><span
-                                            class="ds_allocation span_class">Allocated </span> <span
-                                            style="color: #ffbb00;"> 21</span>
-                                    </p>
-                                    <p style="    margin-bottom: 5px;" class="in_cal_all"><span
-                                            class="ds_allocation span_class">Remaining</span> <span> 4</span></p>
-                                    <p style="    margin-bottom: 5px;" class="in_cal_all"><span
-                                            class="ds_allocation span_class">Deficit </span> <span
-                                            style="color: #ffbb00;"> 0</span>
-
-                                </div>
+    font-size: 14px;margin-top: 8px;">Change Request</p>
+         <div style="background-color: #f6f6f6;
+         padding: 1px 8px;
+         margin-top: 8px;    margin-bottom: 11px;
+">
+                            <div class="cal_summary">
+                              
+                                <p style="    margin-bottom: 5px;" class="in_cal_all"><span class="ds_allocation span_class"> Allocation</span>   <span  > 25</span></p>
+                                <p style="    margin-bottom: 5px; "class="in_cal_all"><span class="ds_allocation span_class">Allocated </span> <span style="color: #ffbb00;"> 21</span>
+                                </p>
+                                <p style="    margin-bottom: 5px;" class="in_cal_all"><span class="ds_allocation span_class">Remaining</span>   <span > 4</span></p>
+                                <p style="    margin-bottom: 5px;"class="in_cal_all"><span class="ds_allocation span_class">Deficit </span> <span style="color: #ffbb00;" > 0</span>
+                           
                             </div>
                         </div>
+                        </div>
+                            <hr class="hr_ptg" style="width: 116%;">
+</div>
+                   
+                        
                     </div>
-                    <hr class="hr_ptg">
+                
 
                     <div id="flush-collapseThree" class="accordion-collapse " aria-labelledby="flush-headingOne"
                         data-bs-parent="#accordionFlushExample">
@@ -47453,7 +49066,7 @@ font-size: 14px;">Change Request</p>
 
 
         </div>
-
+</div>
 
 
         <div id="pm_tab_div">
@@ -52479,6 +54092,7 @@ font-size: 14px;">Change Request</p>
 
 
         </div>
+
 
 
 
