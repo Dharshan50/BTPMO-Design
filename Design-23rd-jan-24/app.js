@@ -96,14 +96,14 @@ $(document).find('#DownloadExcelTemplate').on('click', async (e) => {
 	console.log(resultData);
 	if (resultData && resultData.status == "Success") {
 		var data = resultData.data;
-		console.log('data', data) 
-                    const link = document.createElement('a');
-                    link.download = data.fileName;
-                    link.href = data.href;
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                    URL.revokeObjectURL(link.href);
+		console.log('data', data)
+		const link = document.createElement('a');
+		link.download = data.fileName;
+		link.href = data.href;
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+		URL.revokeObjectURL(link.href);
 	}
 });
 
@@ -587,25 +587,25 @@ $(document).on("change", ".order_select", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-	var yesCheckbox = document.getElementById("batch_ys");
-	var noCheckbox = document.getElementById("batch_no");
-	var addBatchDiv = document.querySelector("#batch_nam_box");
+	var $yesCheckbox = $("#batch_ys");
+	var $noCheckbox = $("#batch_no");
+	var $addBatchDiv = $("#batch_nam_box");
 
 	// Event listener for 'Yes' checkbox
-	yesCheckbox.addEventListener("click", function () {
-		if (this.checked) {
-			addBatchDiv.style.display = "block";
-			noCheckbox.checked = false; // Uncheck the 'No' checkbox
+	$yesCheckbox.click(function () {
+		if ($(this).prop("checked")) {
+			$addBatchDiv.css("display", "block");
+			$noCheckbox.prop("checked", false); // Uncheck the 'No' checkbox
 		} else {
-			addBatchDiv.style.display = "none";
+			$addBatchDiv.css("display", "none");
 		}
 	});
 
 	// Event listener for 'No' checkbox
-	noCheckbox.addEventListener("click", function () {
-		if (this.checked) {
-			addBatchDiv.style.display = "none";
-			yesCheckbox.checked = false; // Uncheck the 'Yes' checkbox
+	$noCheckbox.click(function () {
+		if ($(this).prop("checked")) {
+			$addBatchDiv.css("display", "none");
+			$yesCheckbox.prop("checked", false); // Uncheck the 'Yes' checkbox
 		}
 	});
 });
@@ -3170,7 +3170,7 @@ $("#port_all_tab3").on("click", function () {
 	$("#task_tbl").show();
 	$(".ba_name_prot").show();
 	$("#portfolio_btpmo_tab").show();
-    
+
 	$("#task_proj_filter").hide();
 	$("#port_dev_view").hide();
 	$("#dashboard_filter").hide();
@@ -3424,13 +3424,13 @@ $("#proj_task_tab3").on("click", function () {
 });
 
 $("#proj_vw_id").on("click", function () {
-    $(".priority_ba_tab").show();
+	$(".priority_ba_tab").show();
 	$(".bapm_ba_tab").show();
 	$(".assignedTo_ba_tab").show();
 	$(".priority_dev_tab").hide();
 	$(".developer_dev_tab").hide();
 	$(".stage_signoff_ba_dev_tab").hide();
-    
+
 	$("#tab4").get(0).click();
 	$("#task_BAtab5").get(0).click();
 	$("#all_btpmo_taks").hide();
@@ -3911,39 +3911,39 @@ $(document).on("change", "#select_ba_filt", function () {
 		$(".nexkweek_cr").hide();
 	}
 });
-$(document).ready(function(){
-    $('#historical_data_show').on('click', function(){
-        $('.overlay_hiden').css('display', 'flex');
-        $('#offcanvas_hide').click(); 
-    });
-    $('.close_mrk').on('click', function(){
-        $('.overlay_hiden').hide();
-    });
+$(document).ready(function () {
+	$('#historical_data_show').on('click', function () {
+		$('.overlay_hiden').css('display', 'flex');
+		$('#offcanvas_hide').click();
+	});
+	$('.close_mrk').on('click', function () {
+		$('.overlay_hiden').hide();
+	});
 });
 
 
-$(document).ready(function(){
-    $('#Total_man_days').on('click', function(){
-        $('.totalmandayas_hiden').css('display', 'flex');
-        $('#offcanvas_hide').click(); 
-    });
-    $('.close_mrk').on('click', function(){
-        $('.totalmandayas_hiden').hide();
-    });
+$(document).ready(function () {
+	$('#Total_man_days').on('click', function () {
+		$('.totalmandayas_hiden').css('display', 'flex');
+		$('#offcanvas_hide').click();
+	});
+	$('.close_mrk').on('click', function () {
+		$('.totalmandayas_hiden').hide();
+	});
 });
 
 
 
-$(document).on('change', "#resource_pmo_tab", function(){
+$(document).on('change', "#resource_pmo_tab", function () {
 	var selectedValue = $(this).val();
-	if(selectedValue == "0"){
+	if (selectedValue == "0") {
 		$('#resource_ba_names').hide();
 	}
-    else if(selectedValue == "1"){
+	else if (selectedValue == "1") {
 		$('#resource_ba_names').show();
 
 	}
-	else if(selectedValue == "2"){
+	else if (selectedValue == "2") {
 		$('#resource_ba_names').show();
 
 	}
@@ -4179,8 +4179,8 @@ $("#proj_taskpri_tab3").on("change", function () {
 	$("pagination_container").hide();
 	$(".prot_ali_items").hide();
 });
-function view_button(){
-    setTimeout(() => {
-        document.getElementById('etho').click();
-    }, 3000);
+function view_button() {
+	setTimeout(() => {
+		document.getElementById('etho').click();
+	}, 3000);
 }
