@@ -244,9 +244,10 @@ form.file_uplaod_ptg {
     background-color: rgb(46, 171, 46) !important;
     color: white !important;
     width: 80px !important;
-    border: none !important;
+    border: 1px solid black;
     padding: 4px 0px;
     border-radius: 4px !important;
+
 }
 
 .icon_show_tsk {
@@ -260,10 +261,10 @@ form.file_uplaod_ptg {
 
 .Btn_style_close {
     background-color: rgb(229 15 15);
-    ;
+    
     color: white;
     width: 80px;
-    border: none;
+    border: 1px solid black;
     padding: 4px 0px;
     border-radius: 4px;
 
@@ -895,17 +896,16 @@ table.table thead tr th {
 }
 
 .task_tab:checked+label {
-    background-color: #03365f;
-    color: #fff;
-    /* box-shadow: 0 -1px 0 #fff inset; */
+    background-color: white;
     cursor: pointer;
+    border-top: 2px solid #08305c;
 }
 
 .task_tab:checked+label:hover {
-    /* box-shadow: 0 -1px 0 #fff inset; */
-    background-color: #045697;
-    color: white;
-    cursor: pointer;
+        
+        background-color: white;
+        
+        cursor: pointer;
 }
 
 .task_tab+label {
@@ -1101,10 +1101,16 @@ p.pro_hd_tab,
 }
 
 .proj_task_tab:checked+label {
-    background-color: #08305c;
-    color: #fff;
+    background-color: white;
     font-weight: 500;
     cursor: pointer;
+    border-top: 2px solid #08305c;
+}
+tbody.quarter_table_disp tr td {
+    text-align: center;
+}
+thead.quarter_table_head tr th {
+    text-align: center;
 }
 
 .quarter_des {
@@ -1112,10 +1118,12 @@ p.pro_hd_tab,
     text-align: end;
     font-size: 12px;
     display: flex;
-    /* align-items: revert-layer; */
+    align-items: baseline;
     margin-bottom: 10px;
     justify-content: space-between;
-
+    /* flex-direction: column; */
+    width: 7%;
+    flex-wrap: wrap;
 }
 
 /* Decrease opacity for hovered droppable area */
@@ -1126,8 +1134,7 @@ p.pro_hd_tab,
 
 .proj_task_tab:checked+label:hover {
     /* box-shadow: 0 -1px 0 #fff inset; */
-    background-color: #08305c;
-    color: #fff;
+    background-color: white;
     cursor: pointer;
 }
 
@@ -1144,8 +1151,8 @@ p.pro_hd_tab,
     display: block;
     text-decoration: none;
     color: #000;
-    font-size: 12px;
-
+    
+font-weight: 500;
     border-right: 1px solid #b3b3b3;
     text-align: center;
     background-color: #f2f2f2;
@@ -1159,7 +1166,7 @@ p.pro_hd_tab,
     height: 30px;
     box-sizing: border-box;
     padding: 7px 15px;
-    font-size: 11px;
+   
 }
 
 .inu_the_ms {
@@ -1500,9 +1507,11 @@ ul.bt_pro_taskdrp.sx {
     margin-top: -14px;
     justify-content: space-between;
 }
-
+.delay_main_body {
+    background-color: #f6f6f6;
+}
 .top_div_tet label {
-    background-color: #fff;
+  
     margin: 0px 10px;
     text-align: left;
     padding: 10px 0px;
@@ -1512,7 +1521,7 @@ ul.bt_pro_taskdrp.sx {
 }
 
 .Bottom_div label {
-    background-color: #fff;
+   
     margin: -9px 8px;
     text-align: left;
     padding: 10px 0px;
@@ -1580,7 +1589,7 @@ td.Style_tr_prot {
 }
 
 .prot_BA_view {
-    margin-top: 40px;
+    margin-top: 17px;
     display: flex;
     align-items: flex-start;
     gap: 20px;
@@ -1902,7 +1911,8 @@ p.rev_date.imp {
     width: 21%;
     padding: 2px 3px;
     font-size: 12px;
-    border: 1px solid;
+    margin-top: 14px;
+
 }
 .pro_det_ptg_txt {
     border-bottom: 1px solid #03365f;
@@ -1919,7 +1929,6 @@ p.up_t_ptg {
 }
 
 .card_heda {
-    background-color: #00c1a9;
     margin-bottom: 0;
     border-radius: 0px;
     padding: 2px 5px;
@@ -3027,7 +3036,7 @@ ul.bt_pro_taskdrp.fr {
 .offcanvas-header.off_canvas_head {
     background-color: #e9e9e994;
     font-size: 10px;
-    margin: 15px 10px 15px 10px;
+    margin: 8px 10px 8px 10px;
     padding: 10px 10px;
     border-radius: 5px;
 }
@@ -3329,5 +3338,68 @@ label.tabs_pgt_1 {
     width: fit-content;
     font-size: 10px;
 }
+.overlay_hiden {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000070;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1041;
+    display: none;
+}
+.model_content {
+    background-color: #ffffff;
+    width: 340px;
+    height: 400px;
+    font-size: 11px;
+    overflow-y: auto;
+}
+.model_content p {
+    margin-left: 9px;
+    /* margin-top: 5px; */
+}
+p.mdl_cnt_p span {
+    display: block;
+}
+p.mdl_cnt_p {
+    display: flex;
+    gap: 5px;
+}
+i.fa-solid.fa-circle.cir_g {
+    color: #0BB18F;
+    cursor: pointer;
+}
+.head_historical{
+    background-color: #0BB18F ;
+    color: white;
+    padding: 3px 5px;
+    width: 299px;
 
+}
+
+p.close_mrk {
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-right: 13px;
+    color: #636363;
+    margin-bottom: 2;
+    background-color: #f6f6f6;
+    padding: 5px;
+    margin-right: 13px;
+}
+p.close_mrk i {
+    font-size: 20px;
+    cursor: pointer;
+}
 /* sundar ends */

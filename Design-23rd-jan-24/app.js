@@ -1018,6 +1018,8 @@ $("#taskdevtsktab5").on("click", function () {
 $("#task_cr1").on("click", function () {
 	$(".Assinged_chagereq").show();
 	$(".Pending_chahge_req").hide();
+	$("#create_cr").hide();
+
 	$(".Completed_chagereq").hide();
 	$("[class^='pending_Assignment_View_']").hide();
 	$("[id^='Expand_Pending_']").get(0).click();
@@ -1026,11 +1028,15 @@ $("#task_cr7").on("click", function () {
 	$(".Assinged_chagereq").hide();
 	$(".Pending_chahge_req").show();
 	$(".Completed_chagereq").hide();
+	$("#create_cr").show();
+
 });
 $("#task_cr3").on("click", function () {
 	$(".Assinged_chagereq").hide();
 	$(".Pending_chahge_req").hide();
 	$(".Completed_chagereq").show();
+	$("#create_cr").hide();
+
 });
 $("#task_proj_tab2").on("click", function () {
 	$("#tab3").get(0).click();
@@ -1448,6 +1454,7 @@ $("#proj_namealltask_filter").on("change", function () {
 });
 $("#port_all_tab2").on("click", function () {
 	document.getElementById("dashboard_filter").style.display = "Flex";
+	$("#portfolio_btpmo_tab").hide();
 
 	$("#port_table_view").hide();
 	$("#select_port_filter").hide();
@@ -1483,6 +1490,7 @@ $("#port_mypro_tab1").on("click", function () {
 	$("#select_port_filter").hide();
 	$("#dashboard_filter").hide();
 	$("#port_quarter_view").hide();
+	$("#portfolio_btpmo_tab").hide();
 
 	$("#task_content_proj").hide();
 	$("#prot_BA_view").hide();
@@ -3124,9 +3132,11 @@ $(".dw_content_data").on("click", function () {
 });
 $("#port_all_tab3").on("click", function () {
 	$("#select_port_filter").show();
-	$("#port_table_view").show();
+	$("#port_table_view").hide();
 	$("#task_tbl").show();
 	$(".ba_name_prot").show();
+	$("#portfolio_btpmo_tab").show();
+    
 	$("#task_proj_filter").hide();
 	$("#port_dev_view").hide();
 	$("#dashboard_filter").hide();
@@ -3382,6 +3392,7 @@ $("#proj_task_tab3").on("click", function () {
 $("#proj_vw_id").on("click", function () {
     $(".priority_ba_tab").show();
 	$(".bapm_ba_tab").show();
+	$(".assignedTo_ba_tab").show();
 	$(".priority_dev_tab").hide();
 	$(".developer_dev_tab").hide();
 	$(".stage_signoff_ba_dev_tab").hide();
@@ -3415,6 +3426,59 @@ $("#proj_vw_id").on("click", function () {
 	$(".imp_bamanager").show();
 	$("#ba_table_view").show();
 	$("#Ba_man_table_section").show();
+
+	$("#port_table_view").hide();
+
+	$("#change_request_div").hide();
+	$("#change_req_btn").hide();
+
+	$("#pm_res_table").hide();
+
+	$(".important_section").hide();
+	$("#task_manage").hide();
+	$(".prot_ali_items").hide();
+	$("#proj_summary_tbl").hide();
+	$(".hide_default_BaManger_Tab").hide();
+	$("#bt_dev_tasks").show();
+	$("#portfolio_sec_tab").hide();
+	$("#ba_manag_view").show();
+	$("#prot_BA_view").hide();
+	doRestoreBaManagerColumns();
+	hideProjData();
+	hide_all_details();
+	task_hide_details();
+});
+$("#task_BAtab8").on("click", function () {
+	$(".ba_mana_table").show();
+	$("#task_Assenged_pending").show();
+
+	$("#port_tab_table").hide();
+	$("#prot_BA_view").hide();
+	$("#ba_res_table").hide();
+
+	$("#ba_pending_tb").hide();
+	$("#ba_pending").hide();
+	$("#Ba_man_table_section").show();
+
+	$("#all_btpmo_taks").hide();
+	$("#ba_pending_tb").hide();
+	$("#select_filter_bamanager").hide();
+	$(".important_section_ps").hide();
+	$("#pmo_imp").hide();
+	$("#task_content_baproj").hide();
+	$("#task_content_devproj").show();
+
+	$("#change_req_tbl").hide();
+	$("#task_content_changereq").hide();
+	$(".dev_manager_tab").show();
+	$(".ba_manager_tab").hide();
+	$("#pm_tab_div").hide();
+	$(".ba_name_prot").show();
+	$("#port_dev_view").hide();
+	$(".imp_bamanager").show();
+	$("#ba_table_view").show();
+	$("#Ba_man_table_section").show();
+	$("#change_request_dev").hide();
 
 	$("#port_table_view").hide();
 
@@ -3493,12 +3557,14 @@ $("#task_BAtab7").on("click", function () {
 $("#proj_dm_id").on("click", function () {
 	$(".priority_ba_tab").hide();
 	$(".bapm_ba_tab").hide();
+	$(".assignedTo_ba_tab").hide();
+
 	$(".priority_dev_tab").show();
 	$(".developer_dev_tab").show();
 	$(".stage_signoff_ba_dev_tab").show();
 
 	$("#tab7").get(0).click();
-	$("#task_BAtab7").get(0).click();
+	$("#task_BAtab8").get(0).click();
 	$("#port_quarter_view").hide();
 	$(".pro_hd_tab_chg").hide();
 	$(".pro_hd_tab").show();
@@ -3811,7 +3877,29 @@ $(document).on("change", "#select_ba_filt", function () {
 		$(".nexkweek_cr").hide();
 	}
 });
+$(document).ready(function(){
+    $('#historical_data_show').on('click', function(){
+        $('.overlay_hiden').css('display', 'flex');
+        $('#offcanvas_hide').click(); 
+    });
+    $('.close_mrk').on('click', function(){
+        $('.overlay_hiden').hide();
+    });
+});
+$(document).on('change', "#resource_pmo_tab", function(){
+	var selectedValue = $(this).val();
+	if(selectedValue == "0"){
+		$('#resource_ba_names').hide();
+	}
+    else if(selectedValue == "1"){
+		$('#resource_ba_names').show();
 
+	}
+	else if(selectedValue == "2"){
+		$('#resource_ba_names').show();
+
+	}
+})
 // $('#tab7').on('click', function () {
 //     $('#task_manage').hide();
 //     $('.prot_ali_items').hide();
@@ -3858,6 +3946,7 @@ $("#tab5").on("click", function () {
 	$("#port_dev_view").hide();
 	$(".important_section").hide();
 	$(".imp_bamanager").hide();
+	$("#portfolio_btpmo_tab").hide();
 
 	$("#all_btpmo_taks").hide();
 
@@ -4042,3 +4131,8 @@ $("#proj_taskpri_tab3").on("change", function () {
 	$("pagination_container").hide();
 	$(".prot_ali_items").hide();
 });
+function view_button(){
+    setTimeout(() => {
+        document.getElementById('etho').click();
+    }, 3000);
+}
