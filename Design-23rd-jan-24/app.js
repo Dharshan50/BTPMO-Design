@@ -2102,6 +2102,7 @@ $("#task_tab1").on("click", function () {
 	$("#proj_tsk_data_10").hide();
 	$("#todo_task").show();
 	$(".development_row").hide();
+	$(".CurrentTask_NW_All_Task").hide();
 	$(".All_tasks").hide();
 	$("#needs_help").hide();
 	$(".Next_week").hide();
@@ -2135,6 +2136,7 @@ $("#task_tab2").on("click", function () {
 	$(".Current_task").hide();
 	$("#week_date_display").hide();
 	$("#nextweek_date_display").hide();
+	$(".CurrentTask_NW_All_Task").hide();
 
 	$("#proj_tsk_data_3").hide();
 	$("#proj_tsk_data_1").hide();
@@ -2168,6 +2170,7 @@ $("#task_tab3").on("click", function () {
 	$(".action_requested_row").show();
 	$("#week_date_display").show();
 	$("#nextweek_date_display").hide();
+	$(".CurrentTask_NW_All_Task").show();
 
 	$("#proj_tsk_data_3").hide();
 	$("#proj_tsk_data_1").hide();
@@ -2216,6 +2219,7 @@ $("#task_tab4").on("click", function () {
 	$("#not_started").hide();
 	$("#week_date_display").hide();
 	$("#nextweek_date_display").show();
+	$(".CurrentTask_NW_All_Task").show();
 
 	$(".completed_tasks").hide();
 	$("#delayed_tasks").hide();
@@ -2243,6 +2247,8 @@ $("#task_tab5").on("click", function () {
 	$("#proj_tsk_data_1").hide();
 	$("#proj_tsk_data_10").hide();
 	$("#todo_task").hide();
+	$(".CurrentTask_NW_All_Task").hide();
+
 	$(".development_row").hide();
 	$(".completed_tasks").hide();
 	$(".pending_tasks").hide();
@@ -2280,6 +2286,7 @@ $("#task_tab6").on("click", function () {
 	$(".completed_tasks").hide();
 	$("#proj_namealltask_filter").hide();
 	$("#prot_BA_view").hide();
+	$(".CurrentTask_NW_All_Task").hide();
 
 	$("#port_tab_table").hide();
 	$(".ba_name_prot").hide();
@@ -2311,6 +2318,7 @@ $("#task_tab7").on("click", function () {
 	$("#prot_BA_view").hide();
 	$("#week_date_display").hide();
 	$("#nextweek_date_display").hide();
+	$(".CurrentTask_NW_All_Task").show();
 
 	$("#port_tab_table").hide();
 	$(".ba_name_prot").hide();
