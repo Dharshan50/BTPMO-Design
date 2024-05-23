@@ -3894,6 +3894,20 @@ $(document).ready(function(){
         $('.overlay_hiden').hide();
     });
 });
+
+
+$(document).ready(function(){
+    $('#Total_man_days').on('click', function(){
+        $('.totalmandayas_hiden').css('display', 'flex');
+        $('#offcanvas_hide').click(); 
+    });
+    $('.close_mrk').on('click', function(){
+        $('.totalmandayas_hiden').hide();
+    });
+});
+
+
+
 $(document).on('change', "#resource_pmo_tab", function(){
 	var selectedValue = $(this).val();
 	if(selectedValue == "0"){

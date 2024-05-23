@@ -3355,12 +3355,27 @@ label.tabs_pgt_1 {
     z-index: 1041;
     display: none;
 }
+.totalmandayas_hiden {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000070;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1041;
+    display: none;
+}
 .model_content {
     background-color: #ffffff;
     width: 340px;
     height: 400px;
     font-size: 11px;
     overflow-y: auto;
+    border-radius: 5px;
 }
 .model_content p {
     margin-left: 9px;
@@ -3404,5 +3419,34 @@ p.close_mrk {
 p.close_mrk i {
     font-size: 20px;
     cursor: pointer;
+}
+.model_content.total_cal_days {
+    width: 300px;
+
+}
+.mandays_calc p {
+    margin: 0px 0px 3px 0px;
+    font-weight: 500;
+}
+.mandays_calc {
+    padding: 0px 0px 0px 12px;
+}
+.mandays_calc input {
+    margin-bottom: 10px;
+}
+.ssc_btn.tot_mandays {
+    margin-top: 15px;
+    gap: 8px;
+}
+.model_content::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 5px;
+}
+.model_content::-webkit-scrollbar-thumb {
+    background: rgb(157, 156, 156);
+    border-radius: 5px;
+}
+.model_content::-webkit-scrollbar-track {
+    background: #b1b1b1;
 }
 /* sundar ends */
