@@ -1,3 +1,5 @@
+const HOST = "https://localhost:7280"
+
 var originalOrder = {};
 var lstOrder = [];
 
@@ -79,6 +81,30 @@ $(document).ready(function () {
 		dateFormat: "dd/mm/yy",
 	});
 	// sortElements();
+});
+
+$(document).find('#DownloadExcelTemplate').on('click', async (e) => {
+	e.preventDefault();
+
+	const response = await fetch(HOST + '/api/Projects/DoDownloadExcelTemplate', {
+		method: 'GET',
+		headers: {
+			'Content-Type': 'application/json',
+		}
+	})
+	const resultData = await response.json();
+	console.log(resultData);
+	if (resultData && resultData.status == "Success") {
+		var data = resultData.data;
+		console.log('data', data) 
+                    const link = document.createElement('a');
+                    link.download = data.fileName;
+                    link.href = data.href;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    URL.revokeObjectURL(link.href);
+	}
 });
 
 let draggedItem;
