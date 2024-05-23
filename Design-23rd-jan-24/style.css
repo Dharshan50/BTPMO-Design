@@ -1500,7 +1500,10 @@ ul.bt_pro_taskdrp.sx {
     border-right: 1px solid #dfdfdf;
     border-bottom: 1px solid #dfdfdf;
 }
-
+.fa-circle-info:before, .fa-info-circle:before {
+    content: "\f05a";
+    color: #979191;
+}
 .top_div_tet {
     margin-bottom: -5px;
     display: flex;
