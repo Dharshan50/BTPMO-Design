@@ -177,20 +177,9 @@
     border-radius: 5px;
 
 }
-
-.Excel_upload {
-    background-color: #03365f;
-    color: #fff;
-    font-size: 12px;
-    margin-left: 75px;
-}
-
-.Excel_upload span {
-    margin-left: 7px;
-}
-
 form.file_uplaod_ptg {
     margin-top: 20px;
+    align-items: start;
 }
 
 form.file_uplaod_ptg {
@@ -201,6 +190,7 @@ form.file_uplaod_ptg {
 .space_btn {
     padding: 4px 21px 8px 0px;
 }
+
 
 /* Excel */
 .excel-table {
@@ -261,7 +251,7 @@ form.file_uplaod_ptg {
 
 .Btn_style_close {
     background-color: rgb(229 15 15);
-    
+
     color: white;
     width: 80px;
     border: 1px solid black;
@@ -902,10 +892,10 @@ table.table thead tr th {
 }
 
 .task_tab:checked+label:hover {
-        
-        background-color: white;
-        
-        cursor: pointer;
+
+    background-color: white;
+
+    cursor: pointer;
 }
 
 .task_tab+label {
@@ -1106,9 +1096,11 @@ p.pro_hd_tab,
     cursor: pointer;
     border-top: 2px solid #08305c;
 }
+
 tbody.quarter_table_disp tr td {
     text-align: center;
 }
+
 thead.quarter_table_head tr th {
     text-align: center;
 }
@@ -1151,8 +1143,8 @@ thead.quarter_table_head tr th {
     display: block;
     text-decoration: none;
     color: #000;
-    
-font-weight: 500;
+
+    font-weight: 500;
     border-right: 1px solid #b3b3b3;
     text-align: center;
     background-color: #f2f2f2;
@@ -1166,7 +1158,7 @@ font-weight: 500;
     height: 30px;
     box-sizing: border-box;
     padding: 7px 15px;
-   
+
 }
 
 .inu_the_ms {
@@ -1500,21 +1492,26 @@ ul.bt_pro_taskdrp.sx {
     border-right: 1px solid #dfdfdf;
     border-bottom: 1px solid #dfdfdf;
 }
-.fa-circle-info:before, .fa-info-circle:before {
+
+.fa-circle-info:before,
+.fa-info-circle:before {
     content: "\f05a";
     color: #979191;
 }
+
 .top_div_tet {
     margin-bottom: -5px;
     display: flex;
     margin-top: -14px;
     justify-content: space-between;
 }
+
 .delay_main_body {
     background-color: #f6f6f6;
 }
+
 .top_div_tet label {
-  
+
     margin: 0px 10px;
     text-align: left;
     padding: 10px 0px;
@@ -1524,7 +1521,7 @@ ul.bt_pro_taskdrp.sx {
 }
 
 .Bottom_div label {
-   
+
     margin: -9px 8px;
     text-align: left;
     padding: 10px 0px;
@@ -1909,7 +1906,8 @@ p.rev_date.imp {
     /* // box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11); */
     border-bottom: none;
 }
-.week_tasks_display{
+
+.week_tasks_display {
     background-color: #f6f6f6;
     width: 21%;
     padding: 2px 3px;
@@ -1917,6 +1915,7 @@ p.rev_date.imp {
     margin-top: 14px;
 
 }
+
 .pro_det_ptg_txt {
     border-bottom: 1px solid #03365f;
     width: 100%;
@@ -2081,7 +2080,7 @@ p.up_t_ptg {
 }
 
 .file-upload {
-    display: inline-block;
+    /* display: inline-block; */
     font-family: Arial, sans-serif;
     font-size: 15px;
     margin: 20px 0px;
@@ -2479,11 +2478,12 @@ ul#bt_pro_taskdrp_3 {
 
 .current_stage_cls {
     margin-left: 13px;
-    background-color: #0BB18F;
-    color: white;
-    padding: 4px 3px;
-    width: 92%;
-    font-size: 13px;
+    background-color: #0BB18F !important;
+    color: white !important;
+    padding: 8px 21px !important;
+    margin-bottom: 5px;
+    width: 92% !important;
+    font-size: 13px !important;
     font-weight: 600;
 }
 
@@ -2567,7 +2567,7 @@ input:disabled {
 }
 
 .big_column_width {
-    min-width: 93px !important;
+    min-width: 75px !important;
 }
 
 .small_column_width {
@@ -3341,6 +3341,7 @@ label.tabs_pgt_1 {
     width: fit-content;
     font-size: 10px;
 }
+
 .overlay_hiden {
     position: fixed;
     height: 100vh;
@@ -3355,6 +3356,7 @@ label.tabs_pgt_1 {
     z-index: 1041;
     display: none;
 }
+
 .totalmandayas_hiden {
     position: fixed;
     height: 100vh;
@@ -3369,6 +3371,7 @@ label.tabs_pgt_1 {
     z-index: 1041;
     display: none;
 }
+
 .model_content {
     background-color: #ffffff;
     width: 340px;
@@ -3377,23 +3380,28 @@ label.tabs_pgt_1 {
     overflow-y: auto;
     border-radius: 5px;
 }
+
 .model_content p {
     margin-left: 9px;
     /* margin-top: 5px; */
 }
+
 p.mdl_cnt_p span {
     display: block;
 }
+
 p.mdl_cnt_p {
     display: flex;
     gap: 5px;
 }
+
 i.fa-solid.fa-circle.cir_g {
     color: #0BB18F;
     cursor: pointer;
 }
-.head_historical{
-    background-color: #0BB18F ;
+
+.head_historical {
+    background-color: #0BB18F;
     color: white;
     padding: 3px 5px;
     width: 299px;
@@ -3416,37 +3424,75 @@ p.close_mrk {
     padding: 5px;
     margin-right: 13px;
 }
+
 p.close_mrk i {
     font-size: 20px;
     cursor: pointer;
 }
+
 .model_content.total_cal_days {
     width: 300px;
 
 }
+
 .mandays_calc p {
     margin: 0px 0px 3px 0px;
     font-weight: 500;
 }
+
 .mandays_calc {
     padding: 0px 0px 0px 12px;
 }
+
 .mandays_calc input {
     margin-bottom: 10px;
 }
+
 .ssc_btn.tot_mandays {
     margin-top: 15px;
     gap: 8px;
 }
+
 .model_content::-webkit-scrollbar {
     width: 7px;
     border-radius: 5px;
 }
+
 .model_content::-webkit-scrollbar-thumb {
     background: rgb(157, 156, 156);
     border-radius: 5px;
 }
+
 .model_content::-webkit-scrollbar-track {
     background: #b1b1b1;
 }
+
 /* sundar ends */
+
+
+#Bluk_upload_template_view {
+    width: 100% !important;
+    overflow-x: scroll;
+}
+
+.bluk_fileName {
+    /* cursor: pointer; */
+    width: 25%;
+    margin: 0px 5px;
+    padding: 5px 10px;
+    border: 1px solid grey;
+}
+
+.chooseProject_file {
+    background-color: #00a740;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 9px;
+}
+
+.Excel_upload {
+    background-color: #03365f;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 9px;
+}

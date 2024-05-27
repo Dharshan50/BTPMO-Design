@@ -1831,17 +1831,20 @@ $("[id^='Cancel_Rec_']").on("click", function () {
 	// $(this).hide()
 });
 
+
 $(document)
 	.find("#upload_template")
 	.change(function (e) {
 		var file = e.target.files[0];
 		if (!file) {
 			$(".Excel_upload").prop("disabled", true).css("cursor", "not-allowed");
-			$(".Excel_Template_view").hide();
+			$(".bluk_fileName").html("No File Selected...");
+			$("#Bluk_upload_template_view").hide();
 			return;
 		} else {
 			$(".Excel_upload").prop("disabled", false).css("cursor", "pointer");
-			$(".Excel_Template_view").show();
+			$(".bluk_fileName").html(file.name);
+			$("#Bluk_upload_template_view").show();
 		}
 	});
 
@@ -4184,3 +4187,87 @@ function view_button() {
 		document.getElementById('etho').click();
 	}, 3000);
 }
+
+// new
+
+$(document).find('#DownloadExcelTemplate').on('click', async (e) => {
+	e.preventDefault();
+
+	const response = await fetch(HOST + '/api/Projects/DoDownloadExcelTemplate', {
+		method: 'GET',
+		headers: {
+			'Content-Type': 'application/json',
+		}
+	})
+	const resultData = await response.json();
+	console.log(resultData);
+	if (resultData && resultData.status == "Success") {
+		var data = resultData.data;
+		console.log('data', data)
+		const link = document.createElement('a');
+		link.download = data.fileName;
+		link.href = data.href;
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+		URL.revokeObjectURL(link.href);
+	}
+});
+$(document).find('#Excel_upload').on('click', async (e) => {
+	alert('hitted')
+	e.preventDefault();
+
+	var formData = new FormData();
+	formData.append("file", $('#upload_template')[0].files[0]);
+	formData.append("bulkType", "0");
+	formData.append("userIdentifer", "userIdentifier");
+
+	try {
+		const response = await fetch(HOST + '/api/Projects/DoBulkFileUpload', {
+			method: 'POST',
+			body: formData
+		});
+
+		if (!response.ok) {
+			throw new Error(`HTTP error! Status: ${response.status}`);
+		}
+
+		const resultData = await response.json();
+		console.log(resultData);
+
+		if (resultData && resultData.status == "Success") {
+			var data = resultData.data;
+			console.log('data', data);
+			generateTable(data)
+		}
+	} catch (error) {
+		console.error('Error:', error);
+	}
+});
+function generateTable(data) {
+	let table = '<table class="excel-table">';
+	table += '<thead><tr>';
+
+	// Add table headers
+	for (let key in data[0]) {
+		table += `<th>${key}</th>`;
+	}
+	table += '</tr></thead><tbody>';
+
+	// Add table rows
+	data.forEach(item => {
+		table += '<tr>';
+		for (let key in item) {
+			table += `<td>${item[key]}</td>`;
+		}
+		table += '</tr>';
+	});
+
+	table += '</tbody></table>';
+	$("#Bluk_upload_template_view").html(table);
+}
+
+$('.chooseProject_file').on('click', (event) => {
+	event.preventDefault();
+	$('#upload_template').trigger('click');
+})
